@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright (c) 2019 UAH Space Research Group.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v2.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v20.html
+ 
+ Contributors:
+     SRG Team - Initial API and implementation
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tdm -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/tdm"
+            class="es.uah.aut.srg.micobs.svm.tdm.tdmPackage"
+            genModel="model/tdm.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated vdm -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/vdm"
+            class="es.uah.aut.srg.micobs.svm.vdm.vdmPackage"
+            genModel="model/vdm.genmodel"/>
+   </extension>
+
+</plugin>
