@@ -72,7 +72,7 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VVerificationMethod VERIFICATION_METHOD_EDEFAULT = null;
+	protected static final VVerificationMethod VERIFICATION_METHOD_EDEFAULT = VVerificationMethod.ANALYSIS;
 
 	/**
 	 * The cached value of the '{@link #getVerificationMethod() <em>Verification Method</em>}' attribute.

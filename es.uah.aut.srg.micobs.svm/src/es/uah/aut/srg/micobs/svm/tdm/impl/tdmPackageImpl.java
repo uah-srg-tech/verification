@@ -299,6 +299,14 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 
 		// Initialize enums and add enum literals
 		initEEnum(vVerificationMethodEEnum, VVerificationMethod.class, "VVerificationMethod");
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.ANALYSIS);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.INSPECTION);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.TESTING);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.REVIEW);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.MODEL_SIMULATION);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.WALK_THROUGH);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.CROSS_READING);
+		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.DESK_CHECKING);
 
 		// Create resource
 		createResource(eNS_URI);
