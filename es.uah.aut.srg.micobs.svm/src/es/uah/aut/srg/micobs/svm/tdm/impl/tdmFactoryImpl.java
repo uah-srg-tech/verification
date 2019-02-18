@@ -66,6 +66,7 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case tdmPackage.VTRACEABLE_DOCUMENT: return createVTraceableDocument();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM_GROUP: return createVTraceableDocumentItemGroup();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM: return createVTraceableDocumentItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -110,6 +111,16 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	public VTraceableDocument createVTraceableDocument() {
 		VTraceableDocumentImpl vTraceableDocument = new VTraceableDocumentImpl();
 		return vTraceableDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTraceableDocumentItemGroup createVTraceableDocumentItemGroup() {
+		VTraceableDocumentItemGroupImpl vTraceableDocumentItemGroup = new VTraceableDocumentItemGroupImpl();
+		return vTraceableDocumentItemGroup;
 	}
 
 	/**

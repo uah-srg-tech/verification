@@ -12,8 +12,6 @@ package es.uah.aut.srg.micobs.svm.tdm;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VTraceable Document Item</b></em>'.
@@ -25,7 +23,6 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getVerificationMethod <em>Verification Method</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getParents <em>Parents</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentItem()
@@ -87,21 +84,5 @@ public interface VTraceableDocumentItem extends MCommonReferenceableObj {
 	 * @generated
 	 */
 	void setVerificationMethod(VVerificationMethod value);
-
-	/**
-	 * Returns the value of the '<em><b>Parents</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Parents</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Parents</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentItem_Parents()
-	 * @model
-	 * @generated
-	 */
-	EList<VTraceableDocumentItem> getParents();
 
 } // VTraceableDocumentItem

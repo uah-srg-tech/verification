@@ -15,18 +15,10 @@ import es.uah.aut.srg.micobs.common.impl.MCommonReferenceableObjImpl;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,7 +30,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getVerificationMethod <em>Verification Method</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getParents <em>Parents</em>}</li>
  * </ul>
  *
  * @generated
@@ -83,16 +74,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 	 * @ordered
 	 */
 	protected VVerificationMethod verificationMethod = VERIFICATION_METHOD_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getParents() <em>Parents</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getParents()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VTraceableDocumentItem> parents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -160,18 +141,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentItem> getParents() {
-		if (parents == null) {
-			parents = new EObjectResolvingEList<VTraceableDocumentItem>(VTraceableDocumentItem.class, this, tdmPackage.VTRACEABLE_DOCUMENT_ITEM__PARENTS);
-		}
-		return parents;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -179,8 +148,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 				return getId();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				return getVerificationMethod();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__PARENTS:
-				return getParents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -200,10 +167,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod((VVerificationMethod)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__PARENTS:
-				getParents().clear();
-				getParents().addAll((Collection<? extends VTraceableDocumentItem>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -222,9 +185,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__PARENTS:
-				getParents().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -241,8 +201,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				return verificationMethod != VERIFICATION_METHOD_EDEFAULT;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__PARENTS:
-				return parents != null && !parents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -13,6 +13,8 @@ package es.uah.aut.srg.micobs.svm.tdm.impl;
 import es.uah.aut.srg.micobs.common.impl.MCommonPackageElementImpl;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import java.util.Collection;
@@ -38,7 +40,8 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getItem <em>Item</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getItemGroup <em>Item Group</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getParents <em>Parents</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,14 +108,24 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	protected String date = DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getItem() <em>Item</em>}' reference list.
+	 * The cached value of the '{@link #getItemGroup() <em>Item Group</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItem()
+	 * @see #getItemGroup()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocument> item;
+	protected EList<VTraceableDocumentItemGroup> itemGroup;
+
+	/**
+	 * The cached value of the '{@link #getParents() <em>Parents</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParents()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VTraceableDocumentItem> parents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -201,11 +214,23 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocument> getItem() {
-		if (item == null) {
-			item = new EObjectResolvingEList<VTraceableDocument>(VTraceableDocument.class, this, tdmPackage.VTRACEABLE_DOCUMENT__ITEM);
+	public EList<VTraceableDocumentItemGroup> getItemGroup() {
+		if (itemGroup == null) {
+			itemGroup = new EObjectResolvingEList<VTraceableDocumentItemGroup>(VTraceableDocumentItemGroup.class, this, tdmPackage.VTRACEABLE_DOCUMENT__ITEM_GROUP);
 		}
-		return item;
+		return itemGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<VTraceableDocumentItem> getParents() {
+		if (parents == null) {
+			parents = new EObjectResolvingEList<VTraceableDocumentItem>(VTraceableDocumentItem.class, this, tdmPackage.VTRACEABLE_DOCUMENT__PARENTS);
+		}
+		return parents;
 	}
 
 	/**
@@ -222,8 +247,10 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 				return getIssue();
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return getDate();
-			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM:
-				return getItem();
+			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM_GROUP:
+				return getItemGroup();
+			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
+				return getParents();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -246,9 +273,13 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate((String)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM:
-				getItem().clear();
-				getItem().addAll((Collection<? extends VTraceableDocument>)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM_GROUP:
+				getItemGroup().clear();
+				getItemGroup().addAll((Collection<? extends VTraceableDocumentItemGroup>)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
+				getParents().clear();
+				getParents().addAll((Collection<? extends VTraceableDocumentItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,8 +302,11 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM:
-				getItem().clear();
+			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM_GROUP:
+				getItemGroup().clear();
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
+				getParents().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -292,8 +326,10 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM:
-				return item != null && !item.isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT__ITEM_GROUP:
+				return itemGroup != null && !itemGroup.isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
+				return parents != null && !parents.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -26,7 +26,8 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItem <em>Item</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItemGroup <em>Item Group</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument()
@@ -113,19 +114,35 @@ public interface VTraceableDocument extends MCommonPackageElement {
 	void setDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Item</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument}.
+	 * Returns the value of the '<em><b>Item Group</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Item</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Item Group</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Item()
+	 * @return the value of the '<em>Item Group</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_ItemGroup()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<VTraceableDocument> getItem();
+	EList<VTraceableDocumentItemGroup> getItemGroup();
+
+	/**
+	 * Returns the value of the '<em><b>Parents</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parents</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parents</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Parents()
+	 * @model
+	 * @generated
+	 */
+	EList<VTraceableDocumentItem> getParents();
 
 } // VTraceableDocument

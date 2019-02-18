@@ -39,6 +39,15 @@ public interface tdmFactory extends EFactory {
 	VTraceableDocument createVTraceableDocument();
 
 	/**
+	 * Returns a new object of class '<em>VTraceable Document Item Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Item Group</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentItemGroup createVTraceableDocumentItemGroup();
+
+	/**
 	 * Returns a new object of class '<em>VTraceable Document Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

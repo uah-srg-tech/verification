@@ -132,13 +132,22 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT__DATE = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Item</b></em>' reference list.
+	 * The feature id for the '<em><b>Item Group</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT__ITEM = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 3;
+	int VTRACEABLE_DOCUMENT__ITEM_GROUP = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Parents</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT__PARENTS = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document</em>' class.
@@ -147,7 +156,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_FEATURE_COUNT = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 4;
+	int VTRACEABLE_DOCUMENT_FEATURE_COUNT = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document</em>' class.
@@ -159,6 +168,61 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_OPERATION_COUNT = commonPackage.MCOMMON_PACKAGE_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemGroupImpl <em>VTraceable Document Item Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemGroupImpl
+	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVTraceableDocumentItemGroup()
+	 * @generated
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP = 1;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP__NAME = commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP__DESCRIPTION = commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Item</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP__ITEM = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>VTraceable Document Item Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP_FEATURE_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>VTraceable Document Item Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ITEM_GROUP_OPERATION_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl <em>VTraceable Document Item</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -166,7 +230,7 @@ public interface tdmPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVTraceableDocumentItem()
 	 * @generated
 	 */
-	int VTRACEABLE_DOCUMENT_ITEM = 1;
+	int VTRACEABLE_DOCUMENT_ITEM = 2;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -205,22 +269,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Parents</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ITEM__PARENTS = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>VTraceable Document Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ITEM_FEATURE_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 3;
+	int VTRACEABLE_DOCUMENT_ITEM_FEATURE_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Item</em>' class.
@@ -239,7 +294,7 @@ public interface tdmPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVVerificationMethod()
 	 * @generated
 	 */
-	int VVERIFICATION_METHOD = 2;
+	int VVERIFICATION_METHOD = 3;
 
 
 	/**
@@ -286,15 +341,47 @@ public interface tdmPackage extends EPackage {
 	EAttribute getVTraceableDocument_Date();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItem <em>Item</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItemGroup <em>Item Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Item</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItem()
+	 * @return the meta object for the reference list '<em>Item Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getItemGroup()
 	 * @see #getVTraceableDocument()
 	 * @generated
 	 */
-	EReference getVTraceableDocument_Item();
+	EReference getVTraceableDocument_ItemGroup();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parents</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents()
+	 * @see #getVTraceableDocument()
+	 * @generated
+	 */
+	EReference getVTraceableDocument_Parents();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup <em>VTraceable Document Item Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTraceable Document Item Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup
+	 * @generated
+	 */
+	EClass getVTraceableDocumentItemGroup();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup#getItem <em>Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Item</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup#getItem()
+	 * @see #getVTraceableDocumentItemGroup()
+	 * @generated
+	 */
+	EReference getVTraceableDocumentItemGroup_Item();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem <em>VTraceable Document Item</em>}'.
@@ -327,17 +414,6 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVTraceableDocumentItem_VerificationMethod();
-
-	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getParents <em>Parents</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Parents</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getParents()
-	 * @see #getVTraceableDocumentItem()
-	 * @generated
-	 */
-	EReference getVTraceableDocumentItem_Parents();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod <em>VVerification Method</em>}'.
@@ -407,12 +483,38 @@ public interface tdmPackage extends EPackage {
 		EAttribute VTRACEABLE_DOCUMENT__DATE = eINSTANCE.getVTraceableDocument_Date();
 
 		/**
+		 * The meta object literal for the '<em><b>Item Group</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTRACEABLE_DOCUMENT__ITEM_GROUP = eINSTANCE.getVTraceableDocument_ItemGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Parents</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTRACEABLE_DOCUMENT__PARENTS = eINSTANCE.getVTraceableDocument_Parents();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemGroupImpl <em>VTraceable Document Item Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemGroupImpl
+		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVTraceableDocumentItemGroup()
+		 * @generated
+		 */
+		EClass VTRACEABLE_DOCUMENT_ITEM_GROUP = eINSTANCE.getVTraceableDocumentItemGroup();
+
+		/**
 		 * The meta object literal for the '<em><b>Item</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTRACEABLE_DOCUMENT__ITEM = eINSTANCE.getVTraceableDocument_Item();
+		EReference VTRACEABLE_DOCUMENT_ITEM_GROUP__ITEM = eINSTANCE.getVTraceableDocumentItemGroup_Item();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl <em>VTraceable Document Item</em>}' class.
@@ -439,14 +541,6 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD = eINSTANCE.getVTraceableDocumentItem_VerificationMethod();
-
-		/**
-		 * The meta object literal for the '<em><b>Parents</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VTRACEABLE_DOCUMENT_ITEM__PARENTS = eINSTANCE.getVTraceableDocumentItem_Parents();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod <em>VVerification Method</em>}' enum.
