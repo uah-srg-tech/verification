@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sss" nsURI="http://srg.aut.uah.es/micobs/svm/sss" nsPrefix="svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSIntroduction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSPurpose" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSObjetive" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSContent" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSReason" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSApplicableDocuments">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSApplicableDocument"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSReferenceDocuments">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSReferenceDocument"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSTermsDefinitionsAbbreviations">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSTerm" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSDefinition" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSAbbreviation" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralDescription">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSProductPerspective"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSGeneralCapabilites"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSGeneralConstraints"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSOperationalEnvironment"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSAssumptionsDependencies"
+        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSpecificRequirements">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="requirement" lowerBound="1"
+        upperBound="-1" eType="#//VSSSSpecificRequirement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSpecificRequirement">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationMethod" lowerBound="1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationMethodVersion"
+        lowerBound="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSCapabilitiesRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemInterfaceRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSAdaptationMissionizationRequirement"
+      eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSComputerResourceRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSecurityRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSafetyRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSReliabiltyAvailabilityRequirement"
+      eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSQualityRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSDesignRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSoftwareOperationsRequirement" eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSoftwareMaintenanceRequirement"
+      eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemSoftwareObservabilityRequirement"
+      eSuperTypes="#//VSSSSpecificRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationIntegration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="processRequirement" lowerBound="1"
+        eType="#//VSSSVerificationValidationProcessRequirement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validationApproach" lowerBound="1"
+        eType="#//VSSSValidationApproach"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validationRequirement"
+        lowerBound="1" eType="#//VSSSValidationRequirement"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="verificationRequirement"
+        lowerBound="1" eType="#//VSSSVerificationRequirement"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationProcessRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationApproach"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationRequirement"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemModels">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="systemModel" lowerBound="1"
+        upperBound="-1"/>
+  </eClassifiers>
+</ecore:EPackage>
