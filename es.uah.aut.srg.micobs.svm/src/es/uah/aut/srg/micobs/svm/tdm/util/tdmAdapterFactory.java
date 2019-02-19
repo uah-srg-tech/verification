@@ -83,8 +83,28 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentAdapter();
 			}
 			@Override
-			public Adapter caseVTraceableDocumentItemGroup(VTraceableDocumentItemGroup object) {
-				return createVTraceableDocumentItemGroupAdapter();
+			public Adapter caseVTraceableDocumentAbstractSection(VTraceableDocumentAbstractSection object) {
+				return createVTraceableDocumentAbstractSectionAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentFixedSection(VTraceableDocumentFixedSection object) {
+				return createVTraceableDocumentFixedSectionAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentInstantiableSection(VTraceableDocumentInstantiableSection object) {
+				return createVTraceableDocumentInstantiableSectionAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
+				return createVTraceableDocumentAbstractGroupAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
+				return createVTraceableDocumentFixedGroupAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentInstantiableGroup(VTraceableDocumentInstantiableGroup object) {
+				return createVTraceableDocumentInstantiableGroupAdapter();
 			}
 			@Override
 			public Adapter caseVTraceableDocumentItem(VTraceableDocumentItem object) {
@@ -133,16 +153,86 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup <em>VTraceable Document Item Group</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection <em>VTraceable Document Abstract Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItemGroup
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection
 	 * @generated
 	 */
-	public Adapter createVTraceableDocumentItemGroupAdapter() {
+	public Adapter createVTraceableDocumentAbstractSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection <em>VTraceable Document Fixed Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentFixedSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableSection <em>VTraceable Document Instantiable Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableSection
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentInstantiableSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup <em>VTraceable Document Abstract Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentAbstractGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup <em>VTraceable Document Fixed Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentFixedGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup <em>VTraceable Document Instantiable Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentInstantiableGroupAdapter() {
 		return null;
 	}
 
