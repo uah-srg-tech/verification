@@ -15,7 +15,9 @@ import es.uah.aut.srg.micobs.common.impl.MCommonReferenceableObjImpl;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -157,7 +159,6 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {

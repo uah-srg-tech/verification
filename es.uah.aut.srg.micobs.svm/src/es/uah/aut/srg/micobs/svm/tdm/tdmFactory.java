@@ -39,13 +39,58 @@ public interface tdmFactory extends EFactory {
 	VTraceableDocument createVTraceableDocument();
 
 	/**
-	 * Returns a new object of class '<em>VTraceable Document Item Group</em>'.
+	 * Returns a new object of class '<em>VTraceable Document Abstract Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VTraceable Document Item Group</em>'.
+	 * @return a new object of class '<em>VTraceable Document Abstract Section</em>'.
 	 * @generated
 	 */
-	VTraceableDocumentItemGroup createVTraceableDocumentItemGroup();
+	VTraceableDocumentAbstractSection createVTraceableDocumentAbstractSection();
+
+	/**
+	 * Returns a new object of class '<em>VTraceable Document Fixed Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Fixed Section</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentFixedSection createVTraceableDocumentFixedSection();
+
+	/**
+	 * Returns a new object of class '<em>VTraceable Document Instantiable Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Instantiable Section</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentInstantiableSection createVTraceableDocumentInstantiableSection();
+
+	/**
+	 * Returns a new object of class '<em>VTraceable Document Abstract Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Abstract Group</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentAbstractGroup createVTraceableDocumentAbstractGroup();
+
+	/**
+	 * Returns a new object of class '<em>VTraceable Document Fixed Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Fixed Group</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentFixedGroup createVTraceableDocumentFixedGroup();
+
+	/**
+	 * Returns a new object of class '<em>VTraceable Document Instantiable Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Document Instantiable Group</em>'.
+	 * @generated
+	 */
+	VTraceableDocumentInstantiableGroup createVTraceableDocumentInstantiableGroup();
 
 	/**
 	 * Returns a new object of class '<em>VTraceable Document Item</em>'.

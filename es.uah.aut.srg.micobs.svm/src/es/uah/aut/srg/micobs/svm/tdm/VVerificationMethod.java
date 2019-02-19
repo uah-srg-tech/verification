@@ -34,7 +34,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ANALYSIS(0, "Analysis", "Analysis"), /**
+	ANALYSIS(0, "Analysis", "Analysis"),
+
+	/**
 	 * The '<em><b>Inspection</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -42,7 +44,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSPECTION(1, "Inspection", "Inspection"), /**
+	INSPECTION(1, "Inspection", "Inspection"),
+
+	/**
 	 * The '<em><b>Testing</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -50,7 +54,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TESTING(2, "Testing", "Testing"), /**
+	TESTING(2, "Testing", "Testing"),
+
+	/**
 	 * The '<em><b>Review</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -58,7 +64,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REVIEW(3, "Review", "Review"), /**
+	REVIEW(3, "Review", "Review"),
+
+	/**
 	 * The '<em><b>Model Simulation</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -66,7 +74,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MODEL_SIMULATION(4, "ModelSimulation", "ModelSimulation"), /**
+	MODEL_SIMULATION(4, "ModelSimulation", "ModelSimulation"),
+
+	/**
 	 * The '<em><b>Walk Through</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -74,7 +84,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WALK_THROUGH(5, "WalkThrough", "WalkThrough"), /**
+	WALK_THROUGH(5, "WalkThrough", "WalkThrough"),
+
+	/**
 	 * The '<em><b>Cross Reading</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,7 +94,9 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CROSS_READING(6, "CrossReading", "CrossReading"), /**
+	CROSS_READING(6, "CrossReading", "CrossReading"),
+
+	/**
 	 * The '<em><b>Desk Checking</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -90,8 +104,7 @@ public enum VVerificationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DESK_CHECKING(7, "DeskChecking", "DeskChecking")
-	;
+	DESK_CHECKING(7, "DeskChecking", "DeskChecking");
 
 	/**
 	 * The '<em><b>Analysis</b></em>' literal value.
@@ -108,7 +121,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int ANALYSIS_VALUE = 0;
 
-/**
+	/**
 	 * The '<em><b>Inspection</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -123,7 +136,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int INSPECTION_VALUE = 1;
 
-/**
+	/**
 	 * The '<em><b>Testing</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -138,7 +151,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int TESTING_VALUE = 2;
 
-/**
+	/**
 	 * The '<em><b>Review</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -153,7 +166,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int REVIEW_VALUE = 3;
 
-/**
+	/**
 	 * The '<em><b>Model Simulation</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -168,7 +181,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int MODEL_SIMULATION_VALUE = 4;
 
-/**
+	/**
 	 * The '<em><b>Walk Through</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -183,7 +196,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int WALK_THROUGH_VALUE = 5;
 
-/**
+	/**
 	 * The '<em><b>Cross Reading</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -198,7 +211,7 @@ public enum VVerificationMethod implements Enumerator {
 	 */
 	public static final int CROSS_READING_VALUE = 6;
 
-/**
+	/**
 	 * The '<em><b>Desk Checking</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>

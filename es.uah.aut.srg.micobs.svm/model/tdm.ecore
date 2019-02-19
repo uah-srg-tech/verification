@@ -11,14 +11,16 @@
         eType="#//VTraceableDocumentItem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="group" lowerBound="1" upperBound="-1"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" lowerBound="1" upperBound="-1"
+        eType="#//VTraceableDocumentAbstractGroup" volatile="true" transient="true"
+        derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentFixedSection" eSuperTypes="#//VTraceableDocumentAbstractSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentInstantiableSection"
       eSuperTypes="#//VTraceableDocumentAbstractSection ../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractGroup">
     <eStructuralFeatures xsi:type="ecore:EReference" name="item" lowerBound="1" upperBound="-1"
-        eType="#//VTraceableDocumentItem"/>
+        eType="#//VTraceableDocumentItem" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentFixedGroup" eSuperTypes="#//VTraceableDocumentAbstractGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentInstantiableGroup"
