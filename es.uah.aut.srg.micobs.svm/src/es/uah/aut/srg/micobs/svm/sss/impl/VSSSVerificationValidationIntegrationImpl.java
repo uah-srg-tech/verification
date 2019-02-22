@@ -21,11 +21,15 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedSectionImpl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -45,7 +49,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumentFixedSectionImpl implements VSSSVerificationValidationIntegration {
 	/**
-	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' reference list.
+	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVerificationValidationProcess()
@@ -55,7 +59,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	protected EList<VSSSVerificationValidationProcessRequirement> verificationValidationProcess;
 
 	/**
-	 * The cached value of the '{@link #getValidationApproach() <em>Validation Approach</em>}' reference list.
+	 * The cached value of the '{@link #getValidationApproach() <em>Validation Approach</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValidationApproach()
@@ -65,7 +69,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	protected EList<VSSSValidationApproach> validationApproach;
 
 	/**
-	 * The cached value of the '{@link #getValidation() <em>Validation</em>}' reference list.
+	 * The cached value of the '{@link #getValidation() <em>Validation</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValidation()
@@ -75,7 +79,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	protected EList<VSSSValidationRequirement> validation;
 
 	/**
-	 * The cached value of the '{@link #getVerification() <em>Verification</em>}' reference list.
+	 * The cached value of the '{@link #getVerification() <em>Verification</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVerification()
@@ -110,7 +114,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	 */
 	public EList<VSSSVerificationValidationProcessRequirement> getVerificationValidationProcess() {
 		if (verificationValidationProcess == null) {
-			verificationValidationProcess = new EObjectResolvingEList<VSSSVerificationValidationProcessRequirement>(VSSSVerificationValidationProcessRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION_VALIDATION_PROCESS);
+			verificationValidationProcess = new EObjectContainmentEList<VSSSVerificationValidationProcessRequirement>(VSSSVerificationValidationProcessRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION_VALIDATION_PROCESS);
 		}
 		return verificationValidationProcess;
 	}
@@ -122,7 +126,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	 */
 	public EList<VSSSValidationApproach> getValidationApproach() {
 		if (validationApproach == null) {
-			validationApproach = new EObjectResolvingEList<VSSSValidationApproach>(VSSSValidationApproach.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION_APPROACH);
+			validationApproach = new EObjectContainmentEList<VSSSValidationApproach>(VSSSValidationApproach.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION_APPROACH);
 		}
 		return validationApproach;
 	}
@@ -134,7 +138,7 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	 */
 	public EList<VSSSValidationRequirement> getValidation() {
 		if (validation == null) {
-			validation = new EObjectResolvingEList<VSSSValidationRequirement>(VSSSValidationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION);
+			validation = new EObjectContainmentEList<VSSSValidationRequirement>(VSSSValidationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION);
 		}
 		return validation;
 	}
@@ -146,9 +150,29 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 	 */
 	public EList<VSSSVerificationRequirement> getVerification() {
 		if (verification == null) {
-			verification = new EObjectResolvingEList<VSSSVerificationRequirement>(VSSSVerificationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION);
+			verification = new EObjectContainmentEList<VSSSVerificationRequirement>(VSSSVerificationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION);
 		}
 		return verification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION_VALIDATION_PROCESS:
+				return ((InternalEList<?>)getVerificationValidationProcess()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION_APPROACH:
+				return ((InternalEList<?>)getValidationApproach()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VALIDATION:
+				return ((InternalEList<?>)getValidation()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION:
+				return ((InternalEList<?>)getVerification()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments#getVSSSReferenceDocument <em>VSSS Reference Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments#getReferenceDocuments <em>Reference Documents</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSReferenceDocuments()
@@ -32,19 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VSSSReferenceDocuments extends EObject {
 	/**
-	 * Returns the value of the '<em><b>VSSS Reference Document</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Reference Documents</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS Reference Document</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Reference Documents</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS Reference Document</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSReferenceDocuments_VSSSReferenceDocument()
+	 * @return the value of the '<em>Reference Documents</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSReferenceDocuments_ReferenceDocuments()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getVSSSReferenceDocument();
+	EList<VSSSReferenceDocument> getReferenceDocuments();
 
 } // VSSSReferenceDocuments

@@ -13,15 +13,12 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,54 +28,94 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getVSSSPurpose <em>VSSS Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getVSSSObjetive <em>VSSS Objetive</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getVSSSContent <em>VSSS Content</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getVSSSReason <em>VSSS Reason</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getPurpose <em>Purpose</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getObjetive <em>Objetive</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getContent <em>Content</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getReason <em>Reason</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implements VSSSIntroduction {
 	/**
-	 * The cached value of the '{@link #getVSSSPurpose() <em>VSSS Purpose</em>}' attribute list.
+	 * The default value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSPurpose()
+	 * @see #getPurpose()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssPurpose;
+	protected static final String PURPOSE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVSSSObjetive() <em>VSSS Objetive</em>}' attribute list.
+	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSObjetive()
+	 * @see #getPurpose()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssObjetive;
+	protected String purpose = PURPOSE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVSSSContent() <em>VSSS Content</em>}' attribute list.
+	 * The default value of the '{@link #getObjetive() <em>Objetive</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSContent()
+	 * @see #getObjetive()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssContent;
+	protected static final String OBJETIVE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVSSSReason() <em>VSSS Reason</em>}' attribute list.
+	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSReason()
+	 * @see #getObjetive()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssReason;
+	protected String objetive = OBJETIVE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContent()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTENT_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContent()
+	 * @generated
+	 * @ordered
+	 */
+	protected String content = CONTENT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getReason() <em>Reason</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReason()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REASON_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getReason() <em>Reason</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getReason()
+	 * @generated
+	 * @ordered
+	 */
+	protected String reason = REASON_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -104,11 +141,8 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSPurpose() {
-		if (vsssPurpose == null) {
-			vsssPurpose = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_INTRODUCTION__VSSS_PURPOSE);
-		}
-		return vsssPurpose;
+	public String getPurpose() {
+		return purpose;
 	}
 
 	/**
@@ -116,11 +150,11 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSObjetive() {
-		if (vsssObjetive == null) {
-			vsssObjetive = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_INTRODUCTION__VSSS_OBJETIVE);
-		}
-		return vsssObjetive;
+	public void setPurpose(String newPurpose) {
+		String oldPurpose = purpose;
+		purpose = newPurpose;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, purpose));
 	}
 
 	/**
@@ -128,11 +162,8 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSContent() {
-		if (vsssContent == null) {
-			vsssContent = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_INTRODUCTION__VSSS_CONTENT);
-		}
-		return vsssContent;
+	public String getObjetive() {
+		return objetive;
 	}
 
 	/**
@@ -140,11 +171,53 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSReason() {
-		if (vsssReason == null) {
-			vsssReason = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_INTRODUCTION__VSSS_REASON);
-		}
-		return vsssReason;
+	public void setObjetive(String newObjetive) {
+		String oldObjetive = objetive;
+		objetive = newObjetive;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, objetive));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getContent() {
+		return content;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContent(String newContent) {
+		String oldContent = content;
+		content = newContent;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, content));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getReason() {
+		return reason;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReason(String newReason) {
+		String oldReason = reason;
+		reason = newReason;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, reason));
 	}
 
 	/**
@@ -155,14 +228,14 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__VSSS_PURPOSE:
-				return getVSSSPurpose();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_OBJETIVE:
-				return getVSSSObjetive();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_CONTENT:
-				return getVSSSContent();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_REASON:
-				return getVSSSReason();
+			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
+				return getPurpose();
+			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
+				return getObjetive();
+			case sssPackage.VSSS_INTRODUCTION__CONTENT:
+				return getContent();
+			case sssPackage.VSSS_INTRODUCTION__REASON:
+				return getReason();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -172,25 +245,20 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__VSSS_PURPOSE:
-				getVSSSPurpose().clear();
-				getVSSSPurpose().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
+				setPurpose((String)newValue);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_OBJETIVE:
-				getVSSSObjetive().clear();
-				getVSSSObjetive().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
+				setObjetive((String)newValue);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_CONTENT:
-				getVSSSContent().clear();
-				getVSSSContent().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_INTRODUCTION__CONTENT:
+				setContent((String)newValue);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_REASON:
-				getVSSSReason().clear();
-				getVSSSReason().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_INTRODUCTION__REASON:
+				setReason((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -204,17 +272,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__VSSS_PURPOSE:
-				getVSSSPurpose().clear();
+			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
+				setPurpose(PURPOSE_EDEFAULT);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_OBJETIVE:
-				getVSSSObjetive().clear();
+			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
+				setObjetive(OBJETIVE_EDEFAULT);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_CONTENT:
-				getVSSSContent().clear();
+			case sssPackage.VSSS_INTRODUCTION__CONTENT:
+				setContent(CONTENT_EDEFAULT);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__VSSS_REASON:
-				getVSSSReason().clear();
+			case sssPackage.VSSS_INTRODUCTION__REASON:
+				setReason(REASON_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -228,14 +296,14 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__VSSS_PURPOSE:
-				return vsssPurpose != null && !vsssPurpose.isEmpty();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_OBJETIVE:
-				return vsssObjetive != null && !vsssObjetive.isEmpty();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_CONTENT:
-				return vsssContent != null && !vsssContent.isEmpty();
-			case sssPackage.VSSS_INTRODUCTION__VSSS_REASON:
-				return vsssReason != null && !vsssReason.isEmpty();
+			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
+				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
+			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
+				return OBJETIVE_EDEFAULT == null ? objetive != null : !OBJETIVE_EDEFAULT.equals(objetive);
+			case sssPackage.VSSS_INTRODUCTION__CONTENT:
+				return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
+			case sssPackage.VSSS_INTRODUCTION__REASON:
+				return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -250,14 +318,14 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (VSSSPurpose: ");
-		result.append(vsssPurpose);
-		result.append(", VSSSObjetive: ");
-		result.append(vsssObjetive);
-		result.append(", VSSSContent: ");
-		result.append(vsssContent);
-		result.append(", VSSSReason: ");
-		result.append(vsssReason);
+		result.append(" (purpose: ");
+		result.append(purpose);
+		result.append(", objetive: ");
+		result.append(objetive);
+		result.append(", content: ");
+		result.append(content);
+		result.append(", reason: ");
+		result.append(reason);
 		result.append(')');
 		return result.toString();
 	}

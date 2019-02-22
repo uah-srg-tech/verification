@@ -48,6 +48,15 @@ public interface sssFactory extends EFactory {
 	VSSSApplicableDocuments createVSSSApplicableDocuments();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Applicable Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Applicable Document</em>'.
+	 * @generated
+	 */
+	VSSSApplicableDocument createVSSSApplicableDocument();
+
+	/**
 	 * Returns a new object of class '<em>VSSS Reference Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,6 +64,15 @@ public interface sssFactory extends EFactory {
 	 * @generated
 	 */
 	VSSSReferenceDocuments createVSSSReferenceDocuments();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Reference Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Reference Document</em>'.
+	 * @generated
+	 */
+	VSSSReferenceDocument createVSSSReferenceDocument();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Terms Definitions Abbreviations</em>'.

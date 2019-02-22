@@ -89,8 +89,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSApplicableDocumentsAdapter();
 			}
 			@Override
+			public Adapter caseVSSSApplicableDocument(VSSSApplicableDocument object) {
+				return createVSSSApplicableDocumentAdapter();
+			}
+			@Override
 			public Adapter caseVSSSReferenceDocuments(VSSSReferenceDocuments object) {
 				return createVSSSReferenceDocumentsAdapter();
+			}
+			@Override
+			public Adapter caseVSSSReferenceDocument(VSSSReferenceDocument object) {
+				return createVSSSReferenceDocumentAdapter();
 			}
 			@Override
 			public Adapter caseVSSSTermsDefinitionsAbbreviations(VSSSTermsDefinitionsAbbreviations object) {
@@ -245,6 +253,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocument <em>VSSS Applicable Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocument
+	 * @generated
+	 */
+	public Adapter createVSSSApplicableDocumentAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments <em>VSSS Reference Documents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -255,6 +277,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSSSReferenceDocumentsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocument <em>VSSS Reference Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocument
+	 * @generated
+	 */
+	public Adapter createVSSSReferenceDocumentAdapter() {
 		return null;
 	}
 

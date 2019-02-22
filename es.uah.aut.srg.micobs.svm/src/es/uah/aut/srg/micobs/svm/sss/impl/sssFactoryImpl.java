@@ -66,7 +66,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 		switch (eClass.getClassifierID()) {
 			case sssPackage.VSSS_INTRODUCTION: return createVSSSIntroduction();
 			case sssPackage.VSSS_APPLICABLE_DOCUMENTS: return createVSSSApplicableDocuments();
+			case sssPackage.VSSS_APPLICABLE_DOCUMENT: return createVSSSApplicableDocument();
 			case sssPackage.VSSS_REFERENCE_DOCUMENTS: return createVSSSReferenceDocuments();
+			case sssPackage.VSSS_REFERENCE_DOCUMENT: return createVSSSReferenceDocument();
 			case sssPackage.VSSS_TERMS_DEFINITIONS_ABBREVIATIONS: return createVSSSTermsDefinitionsAbbreviations();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: return createVSSSGeneralDescription();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: return createVSSSSpecificRequirements();
@@ -119,9 +121,29 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSSSApplicableDocument createVSSSApplicableDocument() {
+		VSSSApplicableDocumentImpl vsssApplicableDocument = new VSSSApplicableDocumentImpl();
+		return vsssApplicableDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSSSReferenceDocuments createVSSSReferenceDocuments() {
 		VSSSReferenceDocumentsImpl vsssReferenceDocuments = new VSSSReferenceDocumentsImpl();
 		return vsssReferenceDocuments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSReferenceDocument createVSSSReferenceDocument() {
+		VSSSReferenceDocumentImpl vsssReferenceDocument = new VSSSReferenceDocumentImpl();
+		return vsssReferenceDocument;
 	}
 
 	/**

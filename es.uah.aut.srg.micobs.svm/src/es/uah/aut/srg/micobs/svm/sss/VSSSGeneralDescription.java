@@ -23,11 +23,11 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getVSSSProductPerspective <em>VSSS Product Perspective</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getVSSSGeneralCapabilites <em>VSSS General Capabilites</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getVSSSGeneralConstraints <em>VSSS General Constraints</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getVSSSOperationalEnvironment <em>VSSS Operational Environment</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getVSSSAssumptionsDependencies <em>VSSS Assumptions Dependencies</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription()
@@ -36,83 +36,93 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VSSSGeneralDescription extends EObject {
 	/**
-	 * Returns the value of the '<em><b>VSSS Product Perspective</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Product Perspective</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS Product Perspective</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Product Perspective</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS Product Perspective</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_VSSSProductPerspective()
-	 * @model
+	 * @return the value of the '<em>Product Perspective</em>' attribute.
+	 * @see #setProductPerspective(String)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_ProductPerspective()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getVSSSProductPerspective();
+	String getProductPerspective();
 
 	/**
-	 * Returns the value of the '<em><b>VSSS General Capabilites</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' attribute.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>VSSS General Capabilites</em>' attribute list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS General Capabilites</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_VSSSGeneralCapabilites()
-	 * @model
+	 * @param value the new value of the '<em>Product Perspective</em>' attribute.
+	 * @see #getProductPerspective()
 	 * @generated
 	 */
-	EList<String> getVSSSGeneralCapabilites();
+	void setProductPerspective(String value);
 
 	/**
-	 * Returns the value of the '<em><b>VSSS General Constraints</b></em>' attribute list.
+	 * Returns the value of the '<em><b>General Capabilites</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS General Constraints</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>General Capabilites</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS General Constraints</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_VSSSGeneralConstraints()
+	 * @return the value of the '<em>General Capabilites</em>' attribute list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilites()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getVSSSGeneralConstraints();
+	EList<String> getGeneralCapabilites();
 
 	/**
-	 * Returns the value of the '<em><b>VSSS Operational Environment</b></em>' attribute list.
+	 * Returns the value of the '<em><b>General Constraints</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS Operational Environment</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>General Constraints</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS Operational Environment</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_VSSSOperationalEnvironment()
+	 * @return the value of the '<em>General Constraints</em>' attribute list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralConstraints()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getVSSSOperationalEnvironment();
+	EList<String> getGeneralConstraints();
 
 	/**
-	 * Returns the value of the '<em><b>VSSS Assumptions Dependencies</b></em>' attribute list.
+	 * Returns the value of the '<em><b>Operational Environment</b></em>' attribute list.
 	 * The list contents are of type {@link java.lang.String}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS Assumptions Dependencies</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Operational Environment</em>' attribute list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS Assumptions Dependencies</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_VSSSAssumptionsDependencies()
+	 * @return the value of the '<em>Operational Environment</em>' attribute list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_OperationalEnvironment()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getVSSSAssumptionsDependencies();
+	EList<String> getOperationalEnvironment();
+
+	/**
+	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' attribute list.
+	 * The list contents are of type {@link java.lang.String}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Assumptions Dependencies</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Assumptions Dependencies</em>' attribute list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_AssumptionsDependencies()
+	 * @model
+	 * @generated
+	 */
+	EList<String> getAssumptionsDependencies();
 
 } // VSSSGeneralDescription

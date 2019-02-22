@@ -2,70 +2,77 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sss" nsURI="http://srg.aut.uah.es/micobs/svm/sss" nsPrefix="svm">
   <eClassifiers xsi:type="ecore:EClass" name="VSSSIntroduction">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSPurpose" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="purpose" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSObjetive" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="objetive" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSContent" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="content" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSReason" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="reason" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSApplicableDocuments">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSApplicableDocument"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocument" upperBound="-1"
+        eType="#//VSSSApplicableDocument"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSApplicableDocument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSReferenceDocuments">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSReferenceDocument"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocuments" upperBound="-1"
+        eType="#//VSSSReferenceDocument"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSReferenceDocument">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSTermsDefinitionsAbbreviations">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSTerm" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="term" upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="definition" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSDefinition" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSAbbreviation" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="abbreviation" upperBound="-1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralDescription">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSProductPerspective"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="productPerspective" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generalCapabilites" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="generalConstraints" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="operationalEnvironment"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSGeneralCapabilites"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSGeneralConstraints"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSOperationalEnvironment"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="VSSSAssumptionsDependencies"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="assumptionsDependencies"
         upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSpecificRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="general" upperBound="-1"
-        eType="#//VSSSGeneralDescription"/>
+        eType="#//VSSSGeneralDescription" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" upperBound="-1"
-        eType="#//VSSSCapabilitiesRequirement"/>
+        eType="#//VSSSCapabilitiesRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemInterface" upperBound="-1"
-        eType="#//VSSSSystemInterfaceRequirement"/>
+        eType="#//VSSSSystemInterfaceRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="adaptationMissionization"
-        upperBound="-1" eType="#//VSSSAdaptationMissionizationRequirement"/>
+        upperBound="-1" eType="#//VSSSAdaptationMissionizationRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="computerResource" upperBound="-1"
-        eType="#//VSSSComputerResourceRequirement"/>
+        eType="#//VSSSComputerResourceRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="security" upperBound="-1"
-        eType="#//VSSSSecurityRequirement"/>
+        eType="#//VSSSSecurityRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="safety" upperBound="-1"
-        eType="#//VSSSSafetyRequirement"/>
+        eType="#//VSSSSafetyRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reliabiltyAvailability"
-        upperBound="-1" eType="#//VSSSReliabiltyAvailabilityRequirement"/>
+        upperBound="-1" eType="#//VSSSReliabiltyAvailabilityRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quality" upperBound="-1"
-        eType="#//VSSSQualityRequirement"/>
+        eType="#//VSSSQualityRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="design" upperBound="-1"
-        eType="#//VSSSDesignRequirement"/>
+        eType="#//VSSSDesignRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="softwareOperations" upperBound="-1"
-        eType="#//VSSSSoftwareOperationsRequirement"/>
+        eType="#//VSSSSoftwareOperationsRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="softwareMaintenance" upperBound="-1"
-        eType="#//VSSSSoftwareMaintenanceRequirement"/>
+        eType="#//VSSSSoftwareMaintenanceRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemSoftwareObservability"
-        upperBound="-1" eType="#//VSSSSystemSoftwareObservabilityRequirement"/>
+        upperBound="-1" eType="#//VSSSSystemSoftwareObservabilityRequirement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSCapabilitiesRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>
@@ -87,13 +94,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationIntegration"
       eSuperTypes="tdm.ecore#//VTraceableDocumentFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="verificationValidationProcess"
-        upperBound="-1" eType="#//VSSSVerificationValidationProcessRequirement"/>
+        upperBound="-1" eType="#//VSSSVerificationValidationProcessRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validationApproach" upperBound="-1"
-        eType="#//VSSSValidationApproach"/>
+        eType="#//VSSSValidationApproach" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validation" upperBound="-1"
-        eType="#//VSSSValidationRequirement"/>
+        eType="#//VSSSValidationRequirement" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verification" upperBound="-1"
-        eType="#//VSSSVerificationRequirement"/>
+        eType="#//VSSSVerificationRequirement" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationProcessRequirement"
       eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>

@@ -15,10 +15,13 @@ import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
@@ -31,65 +34,75 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getVSSSProductPerspective <em>VSSS Product Perspective</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getVSSSGeneralCapabilites <em>VSSS General Capabilites</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getVSSSGeneralConstraints <em>VSSS General Constraints</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getVSSSOperationalEnvironment <em>VSSS Operational Environment</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getVSSSAssumptionsDependencies <em>VSSS Assumptions Dependencies</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getProductPerspective <em>Product Perspective</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getGeneralCapabilites <em>General Capabilites</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getGeneralConstraints <em>General Constraints</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getOperationalEnvironment <em>Operational Environment</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getAssumptionsDependencies <em>Assumptions Dependencies</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container implements VSSSGeneralDescription {
 	/**
-	 * The cached value of the '{@link #getVSSSProductPerspective() <em>VSSS Product Perspective</em>}' attribute list.
+	 * The default value of the '{@link #getProductPerspective() <em>Product Perspective</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSProductPerspective()
+	 * @see #getProductPerspective()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssProductPerspective;
+	protected static final String PRODUCT_PERSPECTIVE_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVSSSGeneralCapabilites() <em>VSSS General Capabilites</em>}' attribute list.
+	 * The cached value of the '{@link #getProductPerspective() <em>Product Perspective</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSGeneralCapabilites()
+	 * @see #getProductPerspective()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssGeneralCapabilites;
+	protected String productPerspective = PRODUCT_PERSPECTIVE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getVSSSGeneralConstraints() <em>VSSS General Constraints</em>}' attribute list.
+	 * The cached value of the '{@link #getGeneralCapabilites() <em>General Capabilites</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSGeneralConstraints()
+	 * @see #getGeneralCapabilites()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssGeneralConstraints;
+	protected EList<String> generalCapabilites;
 
 	/**
-	 * The cached value of the '{@link #getVSSSOperationalEnvironment() <em>VSSS Operational Environment</em>}' attribute list.
+	 * The cached value of the '{@link #getGeneralConstraints() <em>General Constraints</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSOperationalEnvironment()
+	 * @see #getGeneralConstraints()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssOperationalEnvironment;
+	protected EList<String> generalConstraints;
 
 	/**
-	 * The cached value of the '{@link #getVSSSAssumptionsDependencies() <em>VSSS Assumptions Dependencies</em>}' attribute list.
+	 * The cached value of the '{@link #getOperationalEnvironment() <em>Operational Environment</em>}' attribute list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVSSSAssumptionsDependencies()
+	 * @see #getOperationalEnvironment()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> vsssAssumptionsDependencies;
+	protected EList<String> operationalEnvironment;
+
+	/**
+	 * The cached value of the '{@link #getAssumptionsDependencies() <em>Assumptions Dependencies</em>}' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAssumptionsDependencies()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<String> assumptionsDependencies;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -115,11 +128,8 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSProductPerspective() {
-		if (vsssProductPerspective == null) {
-			vsssProductPerspective = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE);
-		}
-		return vsssProductPerspective;
+	public String getProductPerspective() {
+		return productPerspective;
 	}
 
 	/**
@@ -127,11 +137,11 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSGeneralCapabilites() {
-		if (vsssGeneralCapabilites == null) {
-			vsssGeneralCapabilites = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES);
-		}
-		return vsssGeneralCapabilites;
+	public void setProductPerspective(String newProductPerspective) {
+		String oldProductPerspective = productPerspective;
+		productPerspective = newProductPerspective;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, oldProductPerspective, productPerspective));
 	}
 
 	/**
@@ -139,11 +149,11 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSGeneralConstraints() {
-		if (vsssGeneralConstraints == null) {
-			vsssGeneralConstraints = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS);
+	public EList<String> getGeneralCapabilites() {
+		if (generalCapabilites == null) {
+			generalCapabilites = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES);
 		}
-		return vsssGeneralConstraints;
+		return generalCapabilites;
 	}
 
 	/**
@@ -151,11 +161,11 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSOperationalEnvironment() {
-		if (vsssOperationalEnvironment == null) {
-			vsssOperationalEnvironment = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT);
+	public EList<String> getGeneralConstraints() {
+		if (generalConstraints == null) {
+			generalConstraints = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS);
 		}
-		return vsssOperationalEnvironment;
+		return generalConstraints;
 	}
 
 	/**
@@ -163,11 +173,23 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getVSSSAssumptionsDependencies() {
-		if (vsssAssumptionsDependencies == null) {
-			vsssAssumptionsDependencies = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES);
+	public EList<String> getOperationalEnvironment() {
+		if (operationalEnvironment == null) {
+			operationalEnvironment = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT);
 		}
-		return vsssAssumptionsDependencies;
+		return operationalEnvironment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<String> getAssumptionsDependencies() {
+		if (assumptionsDependencies == null) {
+			assumptionsDependencies = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES);
+		}
+		return assumptionsDependencies;
 	}
 
 	/**
@@ -178,16 +200,16 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE:
-				return getVSSSProductPerspective();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES:
-				return getVSSSGeneralCapabilites();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS:
-				return getVSSSGeneralConstraints();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT:
-				return getVSSSOperationalEnvironment();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES:
-				return getVSSSAssumptionsDependencies();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
+				return getProductPerspective();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
+				return getGeneralCapabilites();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
+				return getGeneralConstraints();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
+				return getOperationalEnvironment();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
+				return getAssumptionsDependencies();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -201,25 +223,24 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE:
-				getVSSSProductPerspective().clear();
-				getVSSSProductPerspective().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
+				setProductPerspective((String)newValue);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES:
-				getVSSSGeneralCapabilites().clear();
-				getVSSSGeneralCapabilites().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
+				getGeneralCapabilites().clear();
+				getGeneralCapabilites().addAll((Collection<? extends String>)newValue);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS:
-				getVSSSGeneralConstraints().clear();
-				getVSSSGeneralConstraints().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
+				getGeneralConstraints().clear();
+				getGeneralConstraints().addAll((Collection<? extends String>)newValue);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT:
-				getVSSSOperationalEnvironment().clear();
-				getVSSSOperationalEnvironment().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
+				getOperationalEnvironment().clear();
+				getOperationalEnvironment().addAll((Collection<? extends String>)newValue);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES:
-				getVSSSAssumptionsDependencies().clear();
-				getVSSSAssumptionsDependencies().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
+				getAssumptionsDependencies().clear();
+				getAssumptionsDependencies().addAll((Collection<? extends String>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,20 +254,20 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE:
-				getVSSSProductPerspective().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
+				setProductPerspective(PRODUCT_PERSPECTIVE_EDEFAULT);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES:
-				getVSSSGeneralCapabilites().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
+				getGeneralCapabilites().clear();
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS:
-				getVSSSGeneralConstraints().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
+				getGeneralConstraints().clear();
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT:
-				getVSSSOperationalEnvironment().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
+				getOperationalEnvironment().clear();
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES:
-				getVSSSAssumptionsDependencies().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
+				getAssumptionsDependencies().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -260,16 +281,16 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE:
-				return vsssProductPerspective != null && !vsssProductPerspective.isEmpty();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES:
-				return vsssGeneralCapabilites != null && !vsssGeneralCapabilites.isEmpty();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS:
-				return vsssGeneralConstraints != null && !vsssGeneralConstraints.isEmpty();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT:
-				return vsssOperationalEnvironment != null && !vsssOperationalEnvironment.isEmpty();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES:
-				return vsssAssumptionsDependencies != null && !vsssAssumptionsDependencies.isEmpty();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
+				return PRODUCT_PERSPECTIVE_EDEFAULT == null ? productPerspective != null : !PRODUCT_PERSPECTIVE_EDEFAULT.equals(productPerspective);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
+				return generalCapabilites != null && !generalCapabilites.isEmpty();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
+				return generalConstraints != null && !generalConstraints.isEmpty();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
+				return operationalEnvironment != null && !operationalEnvironment.isEmpty();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
+				return assumptionsDependencies != null && !assumptionsDependencies.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -284,16 +305,16 @@ public class VSSSGeneralDescriptionImpl extends MinimalEObjectImpl.Container imp
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (VSSSProductPerspective: ");
-		result.append(vsssProductPerspective);
-		result.append(", VSSSGeneralCapabilites: ");
-		result.append(vsssGeneralCapabilites);
-		result.append(", VSSSGeneralConstraints: ");
-		result.append(vsssGeneralConstraints);
-		result.append(", VSSSOperationalEnvironment: ");
-		result.append(vsssOperationalEnvironment);
-		result.append(", VSSSAssumptionsDependencies: ");
-		result.append(vsssAssumptionsDependencies);
+		result.append(" (productPerspective: ");
+		result.append(productPerspective);
+		result.append(", generalCapabilites: ");
+		result.append(generalCapabilites);
+		result.append(", generalConstraints: ");
+		result.append(generalConstraints);
+		result.append(", operationalEnvironment: ");
+		result.append(operationalEnvironment);
+		result.append(", assumptionsDependencies: ");
+		result.append(assumptionsDependencies);
 		result.append(')');
 		return result.toString();
 	}

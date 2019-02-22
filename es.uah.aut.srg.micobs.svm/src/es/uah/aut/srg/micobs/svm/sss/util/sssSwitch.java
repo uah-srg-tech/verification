@@ -91,9 +91,21 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case sssPackage.VSSS_APPLICABLE_DOCUMENT: {
+				VSSSApplicableDocument vsssApplicableDocument = (VSSSApplicableDocument)theEObject;
+				T result = caseVSSSApplicableDocument(vsssApplicableDocument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case sssPackage.VSSS_REFERENCE_DOCUMENTS: {
 				VSSSReferenceDocuments vsssReferenceDocuments = (VSSSReferenceDocuments)theEObject;
 				T result = caseVSSSReferenceDocuments(vsssReferenceDocuments);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_REFERENCE_DOCUMENT: {
+				VSSSReferenceDocument vsssReferenceDocument = (VSSSReferenceDocument)theEObject;
+				T result = caseVSSSReferenceDocument(vsssReferenceDocument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -302,6 +314,21 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Applicable Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Applicable Document</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSApplicableDocument(VSSSApplicableDocument object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reference Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -313,6 +340,21 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSSSReferenceDocuments(VSSSReferenceDocuments object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reference Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Reference Document</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSReferenceDocument(VSSSReferenceDocument object) {
 		return null;
 	}
 

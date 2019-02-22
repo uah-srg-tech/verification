@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments#getVSSSApplicableDocument <em>VSSS Applicable Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments#getApplicableDocument <em>Applicable Document</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSApplicableDocuments()
@@ -32,19 +32,19 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VSSSApplicableDocuments extends EObject {
 	/**
-	 * Returns the value of the '<em><b>VSSS Applicable Document</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Applicable Document</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>VSSS Applicable Document</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Applicable Document</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>VSSS Applicable Document</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSApplicableDocuments_VSSSApplicableDocument()
+	 * @return the value of the '<em>Applicable Document</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSApplicableDocuments_ApplicableDocument()
 	 * @model
 	 * @generated
 	 */
-	EList<String> getVSSSApplicableDocument();
+	EList<VSSSApplicableDocument> getApplicableDocument();
 
 } // VSSSApplicableDocuments

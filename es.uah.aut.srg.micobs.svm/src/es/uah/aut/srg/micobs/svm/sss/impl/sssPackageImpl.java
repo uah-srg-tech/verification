@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocument;
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
@@ -19,6 +20,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocument;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement;
@@ -73,7 +75,21 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass vsssApplicableDocumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass vsssReferenceDocumentsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsssReferenceDocumentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -307,7 +323,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSIntroduction_VSSSPurpose() {
+	public EAttribute getVSSSIntroduction_Purpose() {
 		return (EAttribute)vsssIntroductionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -316,7 +332,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSIntroduction_VSSSObjetive() {
+	public EAttribute getVSSSIntroduction_Objetive() {
 		return (EAttribute)vsssIntroductionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -325,7 +341,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSIntroduction_VSSSContent() {
+	public EAttribute getVSSSIntroduction_Content() {
 		return (EAttribute)vsssIntroductionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -334,7 +350,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSIntroduction_VSSSReason() {
+	public EAttribute getVSSSIntroduction_Reason() {
 		return (EAttribute)vsssIntroductionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -352,8 +368,35 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSApplicableDocuments_VSSSApplicableDocument() {
-		return (EAttribute)vsssApplicableDocumentsEClass.getEStructuralFeatures().get(0);
+	public EReference getVSSSApplicableDocuments_ApplicableDocument() {
+		return (EReference)vsssApplicableDocumentsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSSSApplicableDocument() {
+		return vsssApplicableDocumentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSSSApplicableDocument_Id() {
+		return (EAttribute)vsssApplicableDocumentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSSSApplicableDocument_Name() {
+		return (EAttribute)vsssApplicableDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -370,8 +413,35 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSReferenceDocuments_VSSSReferenceDocument() {
-		return (EAttribute)vsssReferenceDocumentsEClass.getEStructuralFeatures().get(0);
+	public EReference getVSSSReferenceDocuments_ReferenceDocuments() {
+		return (EReference)vsssReferenceDocumentsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSSSReferenceDocument() {
+		return vsssReferenceDocumentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSSSReferenceDocument_Id() {
+		return (EAttribute)vsssReferenceDocumentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSSSReferenceDocument_Name() {
+		return (EAttribute)vsssReferenceDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -388,7 +458,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSTermsDefinitionsAbbreviations_VSSSTerm() {
+	public EAttribute getVSSSTermsDefinitionsAbbreviations_Term() {
 		return (EAttribute)vsssTermsDefinitionsAbbreviationsEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -397,7 +467,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSTermsDefinitionsAbbreviations_VSSSDefinition() {
+	public EAttribute getVSSSTermsDefinitionsAbbreviations_Definition() {
 		return (EAttribute)vsssTermsDefinitionsAbbreviationsEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -406,7 +476,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSTermsDefinitionsAbbreviations_VSSSAbbreviation() {
+	public EAttribute getVSSSTermsDefinitionsAbbreviations_Abbreviation() {
 		return (EAttribute)vsssTermsDefinitionsAbbreviationsEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -424,7 +494,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSGeneralDescription_VSSSProductPerspective() {
+	public EAttribute getVSSSGeneralDescription_ProductPerspective() {
 		return (EAttribute)vsssGeneralDescriptionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -433,7 +503,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSGeneralDescription_VSSSGeneralCapabilites() {
+	public EAttribute getVSSSGeneralDescription_GeneralCapabilites() {
 		return (EAttribute)vsssGeneralDescriptionEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -442,7 +512,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSGeneralDescription_VSSSGeneralConstraints() {
+	public EAttribute getVSSSGeneralDescription_GeneralConstraints() {
 		return (EAttribute)vsssGeneralDescriptionEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -451,7 +521,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSGeneralDescription_VSSSOperationalEnvironment() {
+	public EAttribute getVSSSGeneralDescription_OperationalEnvironment() {
 		return (EAttribute)vsssGeneralDescriptionEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -460,7 +530,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSSSGeneralDescription_VSSSAssumptionsDependencies() {
+	public EAttribute getVSSSGeneralDescription_AssumptionsDependencies() {
 		return (EAttribute)vsssGeneralDescriptionEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -835,28 +905,36 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		// Create classes and their features
 		vsssIntroductionEClass = createEClass(VSSS_INTRODUCTION);
-		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__VSSS_PURPOSE);
-		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__VSSS_OBJETIVE);
-		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__VSSS_CONTENT);
-		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__VSSS_REASON);
+		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__PURPOSE);
+		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__OBJETIVE);
+		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__CONTENT);
+		createEAttribute(vsssIntroductionEClass, VSSS_INTRODUCTION__REASON);
 
 		vsssApplicableDocumentsEClass = createEClass(VSSS_APPLICABLE_DOCUMENTS);
-		createEAttribute(vsssApplicableDocumentsEClass, VSSS_APPLICABLE_DOCUMENTS__VSSS_APPLICABLE_DOCUMENT);
+		createEReference(vsssApplicableDocumentsEClass, VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENT);
+
+		vsssApplicableDocumentEClass = createEClass(VSSS_APPLICABLE_DOCUMENT);
+		createEAttribute(vsssApplicableDocumentEClass, VSSS_APPLICABLE_DOCUMENT__ID);
+		createEAttribute(vsssApplicableDocumentEClass, VSSS_APPLICABLE_DOCUMENT__NAME);
 
 		vsssReferenceDocumentsEClass = createEClass(VSSS_REFERENCE_DOCUMENTS);
-		createEAttribute(vsssReferenceDocumentsEClass, VSSS_REFERENCE_DOCUMENTS__VSSS_REFERENCE_DOCUMENT);
+		createEReference(vsssReferenceDocumentsEClass, VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
+
+		vsssReferenceDocumentEClass = createEClass(VSSS_REFERENCE_DOCUMENT);
+		createEAttribute(vsssReferenceDocumentEClass, VSSS_REFERENCE_DOCUMENT__ID);
+		createEAttribute(vsssReferenceDocumentEClass, VSSS_REFERENCE_DOCUMENT__NAME);
 
 		vsssTermsDefinitionsAbbreviationsEClass = createEClass(VSSS_TERMS_DEFINITIONS_ABBREVIATIONS);
-		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__VSSS_TERM);
-		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__VSSS_DEFINITION);
-		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__VSSS_ABBREVIATION);
+		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__TERM);
+		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITION);
+		createEAttribute(vsssTermsDefinitionsAbbreviationsEClass, VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATION);
 
 		vsssGeneralDescriptionEClass = createEClass(VSSS_GENERAL_DESCRIPTION);
-		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__VSSS_PRODUCT_PERSPECTIVE);
-		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CAPABILITES);
-		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__VSSS_GENERAL_CONSTRAINTS);
-		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__VSSS_OPERATIONAL_ENVIRONMENT);
-		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__VSSS_ASSUMPTIONS_DEPENDENCIES);
+		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE);
+		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES);
+		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS);
+		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT);
+		createEAttribute(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES);
 
 		vsssSpecificRequirementsEClass = createEClass(VSSS_SPECIFIC_REQUIREMENTS);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
@@ -970,43 +1048,51 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsssIntroductionEClass, VSSSIntroduction.class, "VSSSIntroduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSSSIntroduction_VSSSPurpose(), ecorePackage.getEString(), "VSSSPurpose", null, 0, -1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSIntroduction_VSSSObjetive(), ecorePackage.getEString(), "VSSSObjetive", null, 0, -1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSIntroduction_VSSSContent(), ecorePackage.getEString(), "VSSSContent", null, 0, -1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSIntroduction_VSSSReason(), ecorePackage.getEString(), "VSSSReason", null, 0, -1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSIntroduction_Purpose(), ecorePackage.getEString(), "purpose", null, 1, 1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSIntroduction_Objetive(), ecorePackage.getEString(), "objetive", null, 1, 1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSIntroduction_Content(), ecorePackage.getEString(), "content", null, 1, 1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSIntroduction_Reason(), ecorePackage.getEString(), "reason", null, 1, 1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssApplicableDocumentsEClass, VSSSApplicableDocuments.class, "VSSSApplicableDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSSSApplicableDocuments_VSSSApplicableDocument(), ecorePackage.getEString(), "VSSSApplicableDocument", null, 0, -1, VSSSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSApplicableDocuments_ApplicableDocument(), this.getVSSSApplicableDocument(), null, "applicableDocument", null, 0, -1, VSSSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsssApplicableDocumentEClass, VSSSApplicableDocument.class, "VSSSApplicableDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSSSApplicableDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSSSApplicableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSApplicableDocument_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSSSApplicableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssReferenceDocumentsEClass, VSSSReferenceDocuments.class, "VSSSReferenceDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSSSReferenceDocuments_VSSSReferenceDocument(), ecorePackage.getEString(), "VSSSReferenceDocument", null, 0, -1, VSSSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSReferenceDocuments_ReferenceDocuments(), this.getVSSSReferenceDocument(), null, "referenceDocuments", null, 0, -1, VSSSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsssReferenceDocumentEClass, VSSSReferenceDocument.class, "VSSSReferenceDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSSSReferenceDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSSSReferenceDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSReferenceDocument_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSSSReferenceDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssTermsDefinitionsAbbreviationsEClass, VSSSTermsDefinitionsAbbreviations.class, "VSSSTermsDefinitionsAbbreviations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSSSTermsDefinitionsAbbreviations_VSSSTerm(), ecorePackage.getEString(), "VSSSTerm", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSTermsDefinitionsAbbreviations_VSSSDefinition(), ecorePackage.getEString(), "VSSSDefinition", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSTermsDefinitionsAbbreviations_VSSSAbbreviation(), ecorePackage.getEString(), "VSSSAbbreviation", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSTermsDefinitionsAbbreviations_Term(), ecorePackage.getEString(), "term", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSTermsDefinitionsAbbreviations_Definition(), ecorePackage.getEString(), "definition", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSTermsDefinitionsAbbreviations_Abbreviation(), ecorePackage.getEString(), "abbreviation", null, 0, -1, VSSSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssGeneralDescriptionEClass, VSSSGeneralDescription.class, "VSSSGeneralDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSSSGeneralDescription_VSSSProductPerspective(), ecorePackage.getEString(), "VSSSProductPerspective", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSGeneralDescription_VSSSGeneralCapabilites(), ecorePackage.getEString(), "VSSSGeneralCapabilites", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSGeneralDescription_VSSSGeneralConstraints(), ecorePackage.getEString(), "VSSSGeneralConstraints", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSGeneralDescription_VSSSOperationalEnvironment(), ecorePackage.getEString(), "VSSSOperationalEnvironment", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSSSGeneralDescription_VSSSAssumptionsDependencies(), ecorePackage.getEString(), "VSSSAssumptionsDependencies", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSGeneralDescription_ProductPerspective(), ecorePackage.getEString(), "productPerspective", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSGeneralDescription_GeneralCapabilites(), ecorePackage.getEString(), "generalCapabilites", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSGeneralDescription_GeneralConstraints(), ecorePackage.getEString(), "generalConstraints", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSGeneralDescription_OperationalEnvironment(), ecorePackage.getEString(), "operationalEnvironment", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSSSGeneralDescription_AssumptionsDependencies(), ecorePackage.getEString(), "assumptionsDependencies", null, 0, -1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSpecificRequirementsEClass, VSSSSpecificRequirements.class, "VSSSSpecificRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSSpecificRequirements_General(), this.getVSSSGeneralDescription(), null, "general", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_Capabilities(), this.getVSSSCapabilitiesRequirement(), null, "capabilities", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_SystemInterface(), this.getVSSSSystemInterfaceRequirement(), null, "systemInterface", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_AdaptationMissionization(), this.getVSSSAdaptationMissionizationRequirement(), null, "adaptationMissionization", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_ComputerResource(), this.getVSSSComputerResourceRequirement(), null, "computerResource", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_Security(), this.getVSSSSecurityRequirement(), null, "security", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_Safety(), this.getVSSSSafetyRequirement(), null, "safety", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_ReliabiltyAvailability(), this.getVSSSReliabiltyAvailabilityRequirement(), null, "reliabiltyAvailability", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_Quality(), this.getVSSSQualityRequirement(), null, "quality", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_Design(), this.getVSSSDesignRequirement(), null, "design", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_SoftwareOperations(), this.getVSSSSoftwareOperationsRequirement(), null, "softwareOperations", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_SoftwareMaintenance(), this.getVSSSSoftwareMaintenanceRequirement(), null, "softwareMaintenance", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_SystemSoftwareObservability(), this.getVSSSSystemSoftwareObservabilityRequirement(), null, "systemSoftwareObservability", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_General(), this.getVSSSGeneralDescription(), null, "general", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_Capabilities(), this.getVSSSCapabilitiesRequirement(), null, "capabilities", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_SystemInterface(), this.getVSSSSystemInterfaceRequirement(), null, "systemInterface", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_AdaptationMissionization(), this.getVSSSAdaptationMissionizationRequirement(), null, "adaptationMissionization", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_ComputerResource(), this.getVSSSComputerResourceRequirement(), null, "computerResource", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_Security(), this.getVSSSSecurityRequirement(), null, "security", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_Safety(), this.getVSSSSafetyRequirement(), null, "safety", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_ReliabiltyAvailability(), this.getVSSSReliabiltyAvailabilityRequirement(), null, "reliabiltyAvailability", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_Quality(), this.getVSSSQualityRequirement(), null, "quality", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_Design(), this.getVSSSDesignRequirement(), null, "design", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_SoftwareOperations(), this.getVSSSSoftwareOperationsRequirement(), null, "softwareOperations", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_SoftwareMaintenance(), this.getVSSSSoftwareMaintenanceRequirement(), null, "softwareMaintenance", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_SystemSoftwareObservability(), this.getVSSSSystemSoftwareObservabilityRequirement(), null, "systemSoftwareObservability", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssGeneralRequirementEClass, VSSSGeneralRequirement.class, "VSSSGeneralRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1035,10 +1121,10 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEClass(vsssSystemSoftwareObservabilityRequirementEClass, VSSSSystemSoftwareObservabilityRequirement.class, "VSSSSystemSoftwareObservabilityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsssVerificationValidationIntegrationEClass, VSSSVerificationValidationIntegration.class, "VSSSVerificationValidationIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSVerificationValidationIntegration_VerificationValidationProcess(), this.getVSSSVerificationValidationProcessRequirement(), null, "verificationValidationProcess", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSVerificationValidationIntegration_ValidationApproach(), this.getVSSSValidationApproach(), null, "validationApproach", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSVerificationValidationIntegration_Validation(), this.getVSSSValidationRequirement(), null, "validation", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSVerificationValidationIntegration_Verification(), this.getVSSSVerificationRequirement(), null, "verification", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSVerificationValidationIntegration_VerificationValidationProcess(), this.getVSSSVerificationValidationProcessRequirement(), null, "verificationValidationProcess", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSVerificationValidationIntegration_ValidationApproach(), this.getVSSSValidationApproach(), null, "validationApproach", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSVerificationValidationIntegration_Validation(), this.getVSSSValidationRequirement(), null, "validation", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSVerificationValidationIntegration_Verification(), this.getVSSSVerificationRequirement(), null, "verification", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssVerificationValidationProcessRequirementEClass, VSSSVerificationValidationProcessRequirement.class, "VSSSVerificationValidationProcessRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -30,11 +30,15 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedSectionImpl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -63,7 +67,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSectionImpl implements VSSSSpecificRequirements {
 	/**
-	 * The cached value of the '{@link #getGeneral() <em>General</em>}' reference list.
+	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGeneral()
@@ -73,7 +77,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSGeneralDescription> general;
 
 	/**
-	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' reference list.
+	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCapabilities()
@@ -83,7 +87,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSCapabilitiesRequirement> capabilities;
 
 	/**
-	 * The cached value of the '{@link #getSystemInterface() <em>System Interface</em>}' reference list.
+	 * The cached value of the '{@link #getSystemInterface() <em>System Interface</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSystemInterface()
@@ -93,7 +97,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSSystemInterfaceRequirement> systemInterface;
 
 	/**
-	 * The cached value of the '{@link #getAdaptationMissionization() <em>Adaptation Missionization</em>}' reference list.
+	 * The cached value of the '{@link #getAdaptationMissionization() <em>Adaptation Missionization</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdaptationMissionization()
@@ -103,7 +107,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSAdaptationMissionizationRequirement> adaptationMissionization;
 
 	/**
-	 * The cached value of the '{@link #getComputerResource() <em>Computer Resource</em>}' reference list.
+	 * The cached value of the '{@link #getComputerResource() <em>Computer Resource</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComputerResource()
@@ -113,7 +117,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSComputerResourceRequirement> computerResource;
 
 	/**
-	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' reference list.
+	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSecurity()
@@ -123,7 +127,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSSecurityRequirement> security;
 
 	/**
-	 * The cached value of the '{@link #getSafety() <em>Safety</em>}' reference list.
+	 * The cached value of the '{@link #getSafety() <em>Safety</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSafety()
@@ -133,7 +137,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSSafetyRequirement> safety;
 
 	/**
-	 * The cached value of the '{@link #getReliabiltyAvailability() <em>Reliabilty Availability</em>}' reference list.
+	 * The cached value of the '{@link #getReliabiltyAvailability() <em>Reliabilty Availability</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReliabiltyAvailability()
@@ -143,7 +147,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSReliabiltyAvailabilityRequirement> reliabiltyAvailability;
 
 	/**
-	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' reference list.
+	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQuality()
@@ -153,7 +157,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSQualityRequirement> quality;
 
 	/**
-	 * The cached value of the '{@link #getDesign() <em>Design</em>}' reference list.
+	 * The cached value of the '{@link #getDesign() <em>Design</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDesign()
@@ -163,7 +167,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSDesignRequirement> design;
 
 	/**
-	 * The cached value of the '{@link #getSoftwareOperations() <em>Software Operations</em>}' reference list.
+	 * The cached value of the '{@link #getSoftwareOperations() <em>Software Operations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSoftwareOperations()
@@ -173,7 +177,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSSoftwareOperationsRequirement> softwareOperations;
 
 	/**
-	 * The cached value of the '{@link #getSoftwareMaintenance() <em>Software Maintenance</em>}' reference list.
+	 * The cached value of the '{@link #getSoftwareMaintenance() <em>Software Maintenance</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSoftwareMaintenance()
@@ -183,7 +187,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	protected EList<VSSSSoftwareMaintenanceRequirement> softwareMaintenance;
 
 	/**
-	 * The cached value of the '{@link #getSystemSoftwareObservability() <em>System Software Observability</em>}' reference list.
+	 * The cached value of the '{@link #getSystemSoftwareObservability() <em>System Software Observability</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSystemSoftwareObservability()
@@ -218,7 +222,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSGeneralDescription> getGeneral() {
 		if (general == null) {
-			general = new EObjectResolvingEList<VSSSGeneralDescription>(VSSSGeneralDescription.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
+			general = new EObjectContainmentEList<VSSSGeneralDescription>(VSSSGeneralDescription.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
 		}
 		return general;
 	}
@@ -230,7 +234,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSCapabilitiesRequirement> getCapabilities() {
 		if (capabilities == null) {
-			capabilities = new EObjectResolvingEList<VSSSCapabilitiesRequirement>(VSSSCapabilitiesRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES);
+			capabilities = new EObjectContainmentEList<VSSSCapabilitiesRequirement>(VSSSCapabilitiesRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES);
 		}
 		return capabilities;
 	}
@@ -242,7 +246,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSystemInterfaceRequirement> getSystemInterface() {
 		if (systemInterface == null) {
-			systemInterface = new EObjectResolvingEList<VSSSSystemInterfaceRequirement>(VSSSSystemInterfaceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE);
+			systemInterface = new EObjectContainmentEList<VSSSSystemInterfaceRequirement>(VSSSSystemInterfaceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE);
 		}
 		return systemInterface;
 	}
@@ -254,7 +258,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSAdaptationMissionizationRequirement> getAdaptationMissionization() {
 		if (adaptationMissionization == null) {
-			adaptationMissionization = new EObjectResolvingEList<VSSSAdaptationMissionizationRequirement>(VSSSAdaptationMissionizationRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION);
+			adaptationMissionization = new EObjectContainmentEList<VSSSAdaptationMissionizationRequirement>(VSSSAdaptationMissionizationRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION);
 		}
 		return adaptationMissionization;
 	}
@@ -266,7 +270,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSComputerResourceRequirement> getComputerResource() {
 		if (computerResource == null) {
-			computerResource = new EObjectResolvingEList<VSSSComputerResourceRequirement>(VSSSComputerResourceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE);
+			computerResource = new EObjectContainmentEList<VSSSComputerResourceRequirement>(VSSSComputerResourceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE);
 		}
 		return computerResource;
 	}
@@ -278,7 +282,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSecurityRequirement> getSecurity() {
 		if (security == null) {
-			security = new EObjectResolvingEList<VSSSSecurityRequirement>(VSSSSecurityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY);
+			security = new EObjectContainmentEList<VSSSSecurityRequirement>(VSSSSecurityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY);
 		}
 		return security;
 	}
@@ -290,7 +294,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSafetyRequirement> getSafety() {
 		if (safety == null) {
-			safety = new EObjectResolvingEList<VSSSSafetyRequirement>(VSSSSafetyRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY);
+			safety = new EObjectContainmentEList<VSSSSafetyRequirement>(VSSSSafetyRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY);
 		}
 		return safety;
 	}
@@ -302,7 +306,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSReliabiltyAvailabilityRequirement> getReliabiltyAvailability() {
 		if (reliabiltyAvailability == null) {
-			reliabiltyAvailability = new EObjectResolvingEList<VSSSReliabiltyAvailabilityRequirement>(VSSSReliabiltyAvailabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY);
+			reliabiltyAvailability = new EObjectContainmentEList<VSSSReliabiltyAvailabilityRequirement>(VSSSReliabiltyAvailabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY);
 		}
 		return reliabiltyAvailability;
 	}
@@ -314,7 +318,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSQualityRequirement> getQuality() {
 		if (quality == null) {
-			quality = new EObjectResolvingEList<VSSSQualityRequirement>(VSSSQualityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY);
+			quality = new EObjectContainmentEList<VSSSQualityRequirement>(VSSSQualityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY);
 		}
 		return quality;
 	}
@@ -326,7 +330,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSDesignRequirement> getDesign() {
 		if (design == null) {
-			design = new EObjectResolvingEList<VSSSDesignRequirement>(VSSSDesignRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN);
+			design = new EObjectContainmentEList<VSSSDesignRequirement>(VSSSDesignRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN);
 		}
 		return design;
 	}
@@ -338,7 +342,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSoftwareOperationsRequirement> getSoftwareOperations() {
 		if (softwareOperations == null) {
-			softwareOperations = new EObjectResolvingEList<VSSSSoftwareOperationsRequirement>(VSSSSoftwareOperationsRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS);
+			softwareOperations = new EObjectContainmentEList<VSSSSoftwareOperationsRequirement>(VSSSSoftwareOperationsRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS);
 		}
 		return softwareOperations;
 	}
@@ -350,7 +354,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSoftwareMaintenanceRequirement> getSoftwareMaintenance() {
 		if (softwareMaintenance == null) {
-			softwareMaintenance = new EObjectResolvingEList<VSSSSoftwareMaintenanceRequirement>(VSSSSoftwareMaintenanceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE);
+			softwareMaintenance = new EObjectContainmentEList<VSSSSoftwareMaintenanceRequirement>(VSSSSoftwareMaintenanceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE);
 		}
 		return softwareMaintenance;
 	}
@@ -362,9 +366,47 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 */
 	public EList<VSSSSystemSoftwareObservabilityRequirement> getSystemSoftwareObservability() {
 		if (systemSoftwareObservability == null) {
-			systemSoftwareObservability = new EObjectResolvingEList<VSSSSystemSoftwareObservabilityRequirement>(VSSSSystemSoftwareObservabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY);
+			systemSoftwareObservability = new EObjectContainmentEList<VSSSSystemSoftwareObservabilityRequirement>(VSSSSystemSoftwareObservabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY);
 		}
 		return systemSoftwareObservability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
+				return ((InternalEList<?>)getGeneral()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
+				return ((InternalEList<?>)getCapabilities()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE:
+				return ((InternalEList<?>)getSystemInterface()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION:
+				return ((InternalEList<?>)getAdaptationMissionization()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE:
+				return ((InternalEList<?>)getComputerResource()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY:
+				return ((InternalEList<?>)getSecurity()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY:
+				return ((InternalEList<?>)getSafety()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
+				return ((InternalEList<?>)getReliabiltyAvailability()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
+				return ((InternalEList<?>)getQuality()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN:
+				return ((InternalEList<?>)getDesign()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS:
+				return ((InternalEList<?>)getSoftwareOperations()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE:
+				return ((InternalEList<?>)getSoftwareMaintenance()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY:
+				return ((InternalEList<?>)getSystemSoftwareObservability()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
