@@ -10,27 +10,25 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
+import es.uah.aut.srg.micobs.svm.sss.VSSSDefinition;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
-import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Validation Approach</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Definition</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class VSSSValidationApproachImpl extends VTraceableDocumentFixedGroupImpl implements VSSSValidationApproach {
+public class VSSSDefinitionImpl extends VSSSBriefDescriptionImpl implements VSSSDefinition {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSValidationApproachImpl() {
+	protected VSSSDefinitionImpl() {
 		super();
 	}
 
@@ -41,7 +39,7 @@ public class VSSSValidationApproachImpl extends VTraceableDocumentFixedGroupImpl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_VALIDATION_APPROACH;
+		return sssPackage.Literals.VSSS_DEFINITION;
 	}
 
-} //VSSSValidationApproachImpl
+} //VSSSDefinitionImpl

@@ -26,12 +26,13 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getSection <em>Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getSections <em>Sections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getGroups <em>Groups</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VTraceableDocument extends MCommonPackageElement {
@@ -114,24 +115,24 @@ public interface VTraceableDocument extends MCommonPackageElement {
 	void setDate(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Section</b></em>' reference list.
+	 * Returns the value of the '<em><b>Sections</b></em>' reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Section</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Sections</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Section</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Section()
-	 * @model required="true"
+	 * @return the value of the '<em>Sections</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Sections()
+	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<VTraceableDocumentAbstractSection> getSection();
+	EList<VTraceableDocumentAbstractSection> getSections();
 
 	/**
 	 * Returns the value of the '<em><b>Parents</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parents</em>' reference list isn't clear,
@@ -143,6 +144,22 @@ public interface VTraceableDocument extends MCommonPackageElement {
 	 * @model
 	 * @generated
 	 */
-	EList<VTraceableDocumentItem> getParents();
+	EList<VTraceableDocument> getParents();
+
+	/**
+	 * Returns the value of the '<em><b>Groups</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Groups</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Groups</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Groups()
+	 * @model required="true" transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	EList<VTraceableDocumentAbstractGroup> getGroups();
 
 } // VTraceableDocument

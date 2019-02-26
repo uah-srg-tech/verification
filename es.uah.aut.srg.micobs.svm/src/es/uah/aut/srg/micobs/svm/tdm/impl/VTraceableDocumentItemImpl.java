@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.tdm.impl;
 
 import es.uah.aut.srg.micobs.common.impl.MCommonReferenceableObjImpl;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
@@ -19,6 +20,7 @@ import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -32,11 +34,12 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getVerificationMethod <em>Verification Method</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentItemImpl#getGroup <em>Group</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl implements VTraceableDocumentItem {
+public abstract class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl implements VTraceableDocumentItem {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -143,6 +146,39 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTraceableDocumentAbstractGroup getGroup() {
+		VTraceableDocumentAbstractGroup group = basicGetGroup();
+		return group != null && group.eIsProxy() ? (VTraceableDocumentAbstractGroup)eResolveProxy((InternalEObject)group) : group;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTraceableDocumentAbstractGroup basicGetGroup() {
+		// TODO: implement this method to return the 'Group' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGroup(VTraceableDocumentAbstractGroup newGroup) {
+		// TODO: implement this method to set the 'Group' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -150,6 +186,9 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 				return getId();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				return getVerificationMethod();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__GROUP:
+				if (resolve) return getGroup();
+				return basicGetGroup();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -167,6 +206,9 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod((VVerificationMethod)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__GROUP:
+				setGroup((VTraceableDocumentAbstractGroup)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -186,6 +228,9 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
 				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__GROUP:
+				setGroup((VTraceableDocumentAbstractGroup)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -202,6 +247,8 @@ public class VTraceableDocumentItemImpl extends MCommonReferenceableObjImpl impl
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__VERIFICATION_METHOD:
 				return verificationMethod != VERIFICATION_METHOD_EDEFAULT;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM__GROUP:
+				return basicGetGroup() != null;
 		}
 		return super.eIsSet(featureID);
 	}

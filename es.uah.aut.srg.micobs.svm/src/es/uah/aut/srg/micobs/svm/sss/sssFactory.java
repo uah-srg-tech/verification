@@ -39,15 +39,6 @@ public interface sssFactory extends EFactory {
 	VSSSIntroduction createVSSSIntroduction();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Applicable Documents</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Applicable Documents</em>'.
-	 * @generated
-	 */
-	VSSSApplicableDocuments createVSSSApplicableDocuments();
-
-	/**
 	 * Returns a new object of class '<em>VSSS Applicable Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -55,15 +46,6 @@ public interface sssFactory extends EFactory {
 	 * @generated
 	 */
 	VSSSApplicableDocument createVSSSApplicableDocument();
-
-	/**
-	 * Returns a new object of class '<em>VSSS Reference Documents</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Reference Documents</em>'.
-	 * @generated
-	 */
-	VSSSReferenceDocuments createVSSSReferenceDocuments();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Reference Document</em>'.
@@ -82,6 +64,33 @@ public interface sssFactory extends EFactory {
 	 * @generated
 	 */
 	VSSSTermsDefinitionsAbbreviations createVSSSTermsDefinitionsAbbreviations();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Term</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Term</em>'.
+	 * @generated
+	 */
+	VSSSTerm createVSSSTerm();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Definition</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Definition</em>'.
+	 * @generated
+	 */
+	VSSSDefinition createVSSSDefinition();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Abbreviation</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Abbreviation</em>'.
+	 * @generated
+	 */
+	VSSSAbbreviation createVSSSAbbreviation();
 
 	/**
 	 * Returns a new object of class '<em>VSSS General Description</em>'.
@@ -271,6 +280,15 @@ public interface sssFactory extends EFactory {
 	 * @generated
 	 */
 	VSSSSystemModels createVSSSSystemModels();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Document</em>'.
+	 * @generated
+	 */
+	VSSSDocument createVSSSDocument();
 
 	/**
 	 * Returns the package supported by this factory.

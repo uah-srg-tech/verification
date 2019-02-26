@@ -13,8 +13,8 @@ package es.uah.aut.srg.micobs.svm.tdm.impl;
 import es.uah.aut.srg.micobs.common.impl.MCommonPackageElementImpl;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import java.util.Collection;
@@ -40,13 +40,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getSection <em>Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getSections <em>Sections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getParents <em>Parents</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getGroups <em>Groups</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements VTraceableDocument {
+public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl implements VTraceableDocument {
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -108,16 +109,6 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	protected String date = DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getSection() <em>Section</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSection()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VTraceableDocumentAbstractSection> section;
-
-	/**
 	 * The cached value of the '{@link #getParents() <em>Parents</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -125,7 +116,7 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocumentItem> parents;
+	protected EList<VTraceableDocument> parents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,11 +205,12 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentAbstractSection> getSection() {
-		if (section == null) {
-			section = new EObjectResolvingEList<VTraceableDocumentAbstractSection>(VTraceableDocumentAbstractSection.class, this, tdmPackage.VTRACEABLE_DOCUMENT__SECTION);
-		}
-		return section;
+	public EList<VTraceableDocumentAbstractSection> getSections() {
+		// TODO: implement this method to return the 'Sections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -226,11 +218,24 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentItem> getParents() {
+	public EList<VTraceableDocument> getParents() {
 		if (parents == null) {
-			parents = new EObjectResolvingEList<VTraceableDocumentItem>(VTraceableDocumentItem.class, this, tdmPackage.VTRACEABLE_DOCUMENT__PARENTS);
+			parents = new EObjectResolvingEList<VTraceableDocument>(VTraceableDocument.class, this, tdmPackage.VTRACEABLE_DOCUMENT__PARENTS);
 		}
 		return parents;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<VTraceableDocumentAbstractGroup> getGroups() {
+		// TODO: implement this method to return the 'Groups' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -247,10 +252,12 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 				return getIssue();
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return getDate();
-			case tdmPackage.VTRACEABLE_DOCUMENT__SECTION:
-				return getSection();
+			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
+				return getSections();
 			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
 				return getParents();
+			case tdmPackage.VTRACEABLE_DOCUMENT__GROUPS:
+				return getGroups();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -273,13 +280,17 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate((String)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT__SECTION:
-				getSection().clear();
-				getSection().addAll((Collection<? extends VTraceableDocumentAbstractSection>)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
+				getSections().clear();
+				getSections().addAll((Collection<? extends VTraceableDocumentAbstractSection>)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
 				getParents().clear();
-				getParents().addAll((Collection<? extends VTraceableDocumentItem>)newValue);
+				getParents().addAll((Collection<? extends VTraceableDocument>)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__GROUPS:
+				getGroups().clear();
+				getGroups().addAll((Collection<? extends VTraceableDocumentAbstractGroup>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -302,11 +313,14 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT__SECTION:
-				getSection().clear();
+			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
+				getSections().clear();
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
 				getParents().clear();
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__GROUPS:
+				getGroups().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -326,10 +340,12 @@ public class VTraceableDocumentImpl extends MCommonPackageElementImpl implements
 				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
-			case tdmPackage.VTRACEABLE_DOCUMENT__SECTION:
-				return section != null && !section.isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
+				return !getSections().isEmpty();
 			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
 				return parents != null && !parents.isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT__GROUPS:
+				return !getGroups().isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

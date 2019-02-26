@@ -65,14 +65,6 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case tdmPackage.VTRACEABLE_DOCUMENT: return createVTraceableDocument();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION: return createVTraceableDocumentAbstractSection();
-			case tdmPackage.VTRACEABLE_DOCUMENT_FIXED_SECTION: return createVTraceableDocumentFixedSection();
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_SECTION: return createVTraceableDocumentInstantiableSection();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP: return createVTraceableDocumentAbstractGroup();
-			case tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP: return createVTraceableDocumentFixedGroup();
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP: return createVTraceableDocumentInstantiableGroup();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM: return createVTraceableDocumentItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -106,86 +98,6 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocument createVTraceableDocument() {
-		VTraceableDocumentImpl vTraceableDocument = new VTraceableDocumentImpl();
-		return vTraceableDocument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentAbstractSection createVTraceableDocumentAbstractSection() {
-		VTraceableDocumentAbstractSectionImpl vTraceableDocumentAbstractSection = new VTraceableDocumentAbstractSectionImpl();
-		return vTraceableDocumentAbstractSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentFixedSection createVTraceableDocumentFixedSection() {
-		VTraceableDocumentFixedSectionImpl vTraceableDocumentFixedSection = new VTraceableDocumentFixedSectionImpl();
-		return vTraceableDocumentFixedSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentInstantiableSection createVTraceableDocumentInstantiableSection() {
-		VTraceableDocumentInstantiableSectionImpl vTraceableDocumentInstantiableSection = new VTraceableDocumentInstantiableSectionImpl();
-		return vTraceableDocumentInstantiableSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentAbstractGroup createVTraceableDocumentAbstractGroup() {
-		VTraceableDocumentAbstractGroupImpl vTraceableDocumentAbstractGroup = new VTraceableDocumentAbstractGroupImpl();
-		return vTraceableDocumentAbstractGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentFixedGroup createVTraceableDocumentFixedGroup() {
-		VTraceableDocumentFixedGroupImpl vTraceableDocumentFixedGroup = new VTraceableDocumentFixedGroupImpl();
-		return vTraceableDocumentFixedGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentInstantiableGroup createVTraceableDocumentInstantiableGroup() {
-		VTraceableDocumentInstantiableGroupImpl vTraceableDocumentInstantiableGroup = new VTraceableDocumentInstantiableGroupImpl();
-		return vTraceableDocumentInstantiableGroup;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VTraceableDocumentItem createVTraceableDocumentItem() {
-		VTraceableDocumentItemImpl vTraceableDocumentItem = new VTraceableDocumentItemImpl();
-		return vTraceableDocumentItem;
 	}
 
 	/**

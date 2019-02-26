@@ -18,7 +18,7 @@ package es.uah.aut.srg.micobs.svm.tdm;
  *
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentFixedSection()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VTraceableDocumentFixedSection extends VTraceableDocumentAbstractSection {

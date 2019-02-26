@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm.impl;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
@@ -19,6 +20,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -30,12 +32,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractSectionImpl#getGroup <em>Group</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractSectionImpl#getGroups <em>Groups</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractSectionImpl#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Container implements VTraceableDocumentAbstractSection {
+public abstract class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Container implements VTraceableDocumentAbstractSection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -60,8 +63,8 @@ public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentAbstractGroup> getGroup() {
-		// TODO: implement this method to return the 'Group' reference list
+	public EList<VTraceableDocumentAbstractGroup> getGroups() {
+		// TODO: implement this method to return the 'Groups' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
@@ -73,11 +76,47 @@ public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Co
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTraceableDocument getDocument() {
+		VTraceableDocument document = basicGetDocument();
+		return document != null && document.eIsProxy() ? (VTraceableDocument)eResolveProxy((InternalEObject)document) : document;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTraceableDocument basicGetDocument() {
+		// TODO: implement this method to return the 'Document' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDocument(VTraceableDocument newDocument) {
+		// TODO: implement this method to set the 'Document' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUP:
-				return getGroup();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUPS:
+				return getGroups();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__DOCUMENT:
+				if (resolve) return getDocument();
+				return basicGetDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -91,9 +130,12 @@ public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Co
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUP:
-				getGroup().clear();
-				getGroup().addAll((Collection<? extends VTraceableDocumentAbstractGroup>)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUPS:
+				getGroups().clear();
+				getGroups().addAll((Collection<? extends VTraceableDocumentAbstractGroup>)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__DOCUMENT:
+				setDocument((VTraceableDocument)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -107,8 +149,11 @@ public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Co
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUP:
-				getGroup().clear();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUPS:
+				getGroups().clear();
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__DOCUMENT:
+				setDocument((VTraceableDocument)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -122,8 +167,10 @@ public class VTraceableDocumentAbstractSectionImpl extends MinimalEObjectImpl.Co
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUP:
-				return !getGroup().isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUPS:
+				return !getGroups().isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__DOCUMENT:
+				return basicGetDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}

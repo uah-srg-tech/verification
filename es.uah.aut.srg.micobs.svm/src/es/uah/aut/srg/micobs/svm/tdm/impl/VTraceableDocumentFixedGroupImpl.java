@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VTraceableDocumentFixedGroupImpl extends VTraceableDocumentAbstractGroupImpl implements VTraceableDocumentFixedGroup {
+public abstract class VTraceableDocumentFixedGroupImpl extends VTraceableDocumentAbstractGroupImpl implements VTraceableDocumentFixedGroup {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -18,7 +18,7 @@ package es.uah.aut.srg.micobs.svm.tdm;
  *
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentFixedGroup()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VTraceableDocumentFixedGroup extends VTraceableDocumentAbstractGroup {

@@ -8,35 +8,33 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.tdm.impl;
+package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-import es.uah.aut.srg.micobs.common.commonPackage;
-
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
-import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
+import es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription;
+import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VTraceable Document Instantiable Group</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Brief Description</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceableDocumentAbstractGroupImpl implements VTraceableDocumentInstantiableGroup {
+public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Container implements VSSSBriefDescription {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -82,7 +80,7 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VTraceableDocumentInstantiableGroupImpl() {
+	protected VSSSBriefDescriptionImpl() {
 		super();
 	}
 
@@ -93,7 +91,7 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return tdmPackage.Literals.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP;
+		return sssPackage.Literals.VSSS_BRIEF_DESCRIPTION;
 	}
 
 	/**
@@ -114,7 +112,7 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__NAME, oldName, name));
 	}
 
 	/**
@@ -135,7 +133,7 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 		String oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION, oldDescription, description));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -146,9 +144,9 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				return getName();
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -162,10 +160,10 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				setName((String)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
 				setDescription((String)newValue);
 				return;
 		}
@@ -180,10 +178,10 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
@@ -198,46 +196,12 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
+			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == MCommonReferenceableObj.class) {
-			switch (derivedFeatureID) {
-				case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME: return commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME;
-				case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION: return commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == MCommonReferenceableObj.class) {
-			switch (baseFeatureID) {
-				case commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME: return tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME;
-				case commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION: return tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
 	/**
@@ -258,4 +222,4 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 		return result.toString();
 	}
 
-} //VTraceableDocumentInstantiableGroupImpl
+} //VSSSBriefDescriptionImpl

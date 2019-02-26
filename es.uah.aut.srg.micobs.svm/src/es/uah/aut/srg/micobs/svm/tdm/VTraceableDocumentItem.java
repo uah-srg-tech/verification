@@ -23,10 +23,11 @@ import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getVerificationMethod <em>Verification Method</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getGroup <em>Group</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentItem()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VTraceableDocumentItem extends MCommonReferenceableObj {
@@ -84,5 +85,31 @@ public interface VTraceableDocumentItem extends MCommonReferenceableObj {
 	 * @generated
 	 */
 	void setVerificationMethod(VVerificationMethod value);
+
+	/**
+	 * Returns the value of the '<em><b>Group</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Group</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Group</em>' reference.
+	 * @see #setGroup(VTraceableDocumentAbstractGroup)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentItem_Group()
+	 * @model required="true" transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	VTraceableDocumentAbstractGroup getGroup();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem#getGroup <em>Group</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Group</em>' reference.
+	 * @see #getGroup()
+	 * @generated
+	 */
+	void setGroup(VTraceableDocumentAbstractGroup value);
 
 } // VTraceableDocumentItem

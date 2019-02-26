@@ -45,7 +45,7 @@ import org.eclipse.emf.common.util.EList;
 public interface VSSSSpecificRequirements extends VTraceableDocumentFixedSection {
 	/**
 	 * Returns the value of the '<em><b>General</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>General</em>' containment reference list isn't clear,
@@ -57,7 +57,7 @@ public interface VSSSSpecificRequirements extends VTraceableDocumentFixedSection
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<VSSSGeneralDescription> getGeneral();
+	EList<VSSSGeneralRequirement> getGeneral();
 
 	/**
 	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference list.

@@ -23,9 +23,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getTerm <em>Term</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getDefinition <em>Definition</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getAbbreviation <em>Abbreviation</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getTerms <em>Terms</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getDefinitions <em>Definitions</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations#getAbbreviations <em>Abbreviations</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations()
@@ -34,51 +34,51 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VSSSTermsDefinitionsAbbreviations extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Term</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Terms</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSTerm}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Term</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Terms</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Term</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Term()
-	 * @model
+	 * @return the value of the '<em>Terms</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Terms()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<String> getTerm();
+	EList<VSSSTerm> getTerms();
 
 	/**
-	 * Returns the value of the '<em><b>Definition</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Definitions</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSDefinition}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Definition</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Definitions</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Definition</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Definition()
-	 * @model
+	 * @return the value of the '<em>Definitions</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Definitions()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<String> getDefinition();
+	EList<VSSSDefinition> getDefinitions();
 
 	/**
-	 * Returns the value of the '<em><b>Abbreviation</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>Abbreviations</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSAbbreviation}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Abbreviation</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Abbreviations</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Abbreviation</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Abbreviation()
-	 * @model
+	 * @return the value of the '<em>Abbreviations</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTermsDefinitionsAbbreviations_Abbreviations()
+	 * @model containment="true"
 	 * @generated
 	 */
-	EList<String> getAbbreviation();
+	EList<VSSSAbbreviation> getAbbreviations();
 
 } // VSSSTermsDefinitionsAbbreviations

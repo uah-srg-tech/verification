@@ -14,7 +14,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement;
@@ -74,7 +74,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSGeneralDescription> general;
+	protected EList<VSSSGeneralRequirement> general;
 
 	/**
 	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference list.
@@ -220,9 +220,9 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSGeneralDescription> getGeneral() {
+	public EList<VSSSGeneralRequirement> getGeneral() {
 		if (general == null) {
-			general = new EObjectContainmentEList<VSSSGeneralDescription>(VSSSGeneralDescription.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
+			general = new EObjectContainmentEList<VSSSGeneralRequirement>(VSSSGeneralRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
 		}
 		return general;
 	}
@@ -458,7 +458,7 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				getGeneral().clear();
-				getGeneral().addAll((Collection<? extends VSSSGeneralDescription>)newValue);
+				getGeneral().addAll((Collection<? extends VSSSGeneralRequirement>)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
 				getCapabilities().clear();

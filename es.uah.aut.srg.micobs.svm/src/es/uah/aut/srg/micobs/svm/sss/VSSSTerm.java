@@ -10,17 +10,16 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSSS Verification Validation Process Requirement</b></em>'.
+ * A representation of the model object '<em><b>VSSS Term</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSVerificationValidationProcessRequirement()
+ * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSTerm()
  * @model
  * @generated
  */
-public interface VSSSVerificationValidationProcessRequirement extends VTraceableDocumentFixedGroup {
-} // VSSSVerificationValidationProcessRequirement
+public interface VSSSTerm extends VSSSBriefDescription {
+} // VSSSTerm

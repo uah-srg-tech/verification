@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VTraceableDocumentInstantiableSectionImpl extends VTraceableDocumentAbstractSectionImpl implements VTraceableDocumentInstantiableSection {
+public abstract class VTraceableDocumentInstantiableSectionImpl extends VTraceableDocumentAbstractSectionImpl implements VTraceableDocumentInstantiableSection {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

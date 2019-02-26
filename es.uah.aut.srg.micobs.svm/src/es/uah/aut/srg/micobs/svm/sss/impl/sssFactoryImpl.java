@@ -65,11 +65,12 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case sssPackage.VSSS_INTRODUCTION: return createVSSSIntroduction();
-			case sssPackage.VSSS_APPLICABLE_DOCUMENTS: return createVSSSApplicableDocuments();
 			case sssPackage.VSSS_APPLICABLE_DOCUMENT: return createVSSSApplicableDocument();
-			case sssPackage.VSSS_REFERENCE_DOCUMENTS: return createVSSSReferenceDocuments();
 			case sssPackage.VSSS_REFERENCE_DOCUMENT: return createVSSSReferenceDocument();
 			case sssPackage.VSSS_TERMS_DEFINITIONS_ABBREVIATIONS: return createVSSSTermsDefinitionsAbbreviations();
+			case sssPackage.VSSS_TERM: return createVSSSTerm();
+			case sssPackage.VSSS_DEFINITION: return createVSSSDefinition();
+			case sssPackage.VSSS_ABBREVIATION: return createVSSSAbbreviation();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: return createVSSSGeneralDescription();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: return createVSSSSpecificRequirements();
 			case sssPackage.VSSS_GENERAL_REQUIREMENT: return createVSSSGeneralRequirement();
@@ -91,6 +92,7 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_VERIFICATION_REQUIREMENT: return createVSSSVerificationRequirement();
 			case sssPackage.VSSS_VALIDATION_REQUIREMENT: return createVSSSValidationRequirement();
 			case sssPackage.VSSS_SYSTEM_MODELS: return createVSSSSystemModels();
+			case sssPackage.VSSS_DOCUMENT: return createVSSSDocument();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -111,29 +113,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSApplicableDocuments createVSSSApplicableDocuments() {
-		VSSSApplicableDocumentsImpl vsssApplicableDocuments = new VSSSApplicableDocumentsImpl();
-		return vsssApplicableDocuments;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public VSSSApplicableDocument createVSSSApplicableDocument() {
 		VSSSApplicableDocumentImpl vsssApplicableDocument = new VSSSApplicableDocumentImpl();
 		return vsssApplicableDocument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSSSReferenceDocuments createVSSSReferenceDocuments() {
-		VSSSReferenceDocumentsImpl vsssReferenceDocuments = new VSSSReferenceDocumentsImpl();
-		return vsssReferenceDocuments;
 	}
 
 	/**
@@ -154,6 +136,36 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public VSSSTermsDefinitionsAbbreviations createVSSSTermsDefinitionsAbbreviations() {
 		VSSSTermsDefinitionsAbbreviationsImpl vsssTermsDefinitionsAbbreviations = new VSSSTermsDefinitionsAbbreviationsImpl();
 		return vsssTermsDefinitionsAbbreviations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSTerm createVSSSTerm() {
+		VSSSTermImpl vsssTerm = new VSSSTermImpl();
+		return vsssTerm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSDefinition createVSSSDefinition() {
+		VSSSDefinitionImpl vsssDefinition = new VSSSDefinitionImpl();
+		return vsssDefinition;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSAbbreviation createVSSSAbbreviation() {
+		VSSSAbbreviationImpl vsssAbbreviation = new VSSSAbbreviationImpl();
+		return vsssAbbreviation;
 	}
 
 	/**
@@ -364,6 +376,16 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public VSSSSystemModels createVSSSSystemModels() {
 		VSSSSystemModelsImpl vsssSystemModels = new VSSSSystemModelsImpl();
 		return vsssSystemModels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSDocument createVSSSDocument() {
+		VSSSDocumentImpl vsssDocument = new VSSSDocumentImpl();
+		return vsssDocument;
 	}
 
 	/**

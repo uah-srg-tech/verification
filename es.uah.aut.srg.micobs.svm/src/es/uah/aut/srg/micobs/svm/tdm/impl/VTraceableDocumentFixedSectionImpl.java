@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VTraceableDocumentFixedSectionImpl extends VTraceableDocumentAbstractSectionImpl implements VTraceableDocumentFixedSection {
+public abstract class VTraceableDocumentFixedSectionImpl extends VTraceableDocumentAbstractSectionImpl implements VTraceableDocumentFixedSection {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
