@@ -12,7 +12,7 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -42,6 +42,11 @@ public class VSSSComputerResourceRequirementImpl extends VTraceableDocumentFixed
 	@Override
 	protected EClass eStaticClass() {
 		return sssPackage.Literals.VSSS_COMPUTER_RESOURCE_REQUIREMENT;
+	}
+	
+	@Override
+	public VTraceableDocumentAbstractSection getSection() {
+		return (VTraceableDocumentAbstractSection)eContainer();
 	}
 
 } //VSSSComputerResourceRequirementImpl

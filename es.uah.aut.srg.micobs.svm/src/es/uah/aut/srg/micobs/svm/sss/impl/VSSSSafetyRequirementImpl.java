@@ -12,7 +12,7 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 
 import org.eclipse.emf.ecore.EClass;
@@ -42,6 +42,11 @@ public class VSSSSafetyRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	protected EClass eStaticClass() {
 		return sssPackage.Literals.VSSS_SAFETY_REQUIREMENT;
+	}
+	
+	@Override
+	public VTraceableDocumentAbstractSection getSection() {
+		return (VTraceableDocumentAbstractSection)eContainer();
 	}
 
 } //VSSSSafetyRequirementImpl

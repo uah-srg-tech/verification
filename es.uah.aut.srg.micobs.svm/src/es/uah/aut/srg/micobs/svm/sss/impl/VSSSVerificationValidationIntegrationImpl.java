@@ -16,13 +16,14 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegration;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedSectionImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -266,6 +267,21 @@ public class VSSSVerificationValidationIntegrationImpl extends VTraceableDocumen
 				return verification != null && !verification.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<VTraceableDocumentAbstractGroup> getGroups() {
+		EList<VTraceableDocumentAbstractGroup> groupsList = new BasicEList<VTraceableDocumentAbstractGroup>();
+		groupsList.add((VTraceableDocumentAbstractGroup) getVerificationValidationProcess());
+		groupsList.add((VTraceableDocumentAbstractGroup) getValidationApproach());
+		groupsList.add((VTraceableDocumentAbstractGroup) getValidation());
+		groupsList.add((VTraceableDocumentAbstractGroup) getVerification());
+		return groupsList;
+	}
+	
+	@Override
+	public VTraceableDocument getDocument() {
+		return (VTraceableDocument)eContainer();
 	}
 
 } //VSSSVerificationValidationIntegrationImpl

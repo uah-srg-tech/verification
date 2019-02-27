@@ -25,13 +25,14 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedSectionImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -599,6 +600,30 @@ public class VSSSSpecificRequirementsImpl extends VTraceableDocumentFixedSection
 				return systemSoftwareObservability != null && !systemSoftwareObservability.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<VTraceableDocumentAbstractGroup> getGroups() {
+		EList<VTraceableDocumentAbstractGroup> groupsList = new BasicEList<VTraceableDocumentAbstractGroup>();
+		groupsList.add((VTraceableDocumentAbstractGroup) getGeneral());
+		groupsList.add((VTraceableDocumentAbstractGroup) getCapabilities());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSystemInterface());
+		groupsList.add((VTraceableDocumentAbstractGroup) getAdaptationMissionization());
+		groupsList.add((VTraceableDocumentAbstractGroup) getComputerResource());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSecurity());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSafety());
+		groupsList.add((VTraceableDocumentAbstractGroup) getReliabiltyAvailability());
+		groupsList.add((VTraceableDocumentAbstractGroup) getQuality());
+		groupsList.add((VTraceableDocumentAbstractGroup) getDesign());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSoftwareOperations());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSoftwareMaintenance());
+		groupsList.add((VTraceableDocumentAbstractGroup) getSystemSoftwareObservability());
+		return groupsList;
+	}
+	
+	@Override
+	public VTraceableDocument getDocument() {
+		return (VTraceableDocument)eContainer();
 	}
 
 } //VSSSSpecificRequirementsImpl
