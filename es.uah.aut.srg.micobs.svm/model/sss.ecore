@@ -75,7 +75,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemSoftwareObservability"
         upperBound="-1" eType="#//VSSSSystemSoftwareObservabilityRequirement" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" lowerBound="1"
+        upperBound="-1" eType="#//VSSSDocumentItem" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSCapabilitiesRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemInterfaceRequirement" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSAdaptationMissionizationRequirement"
@@ -130,4 +133,5 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemModels" eType="#//VSSSSystemModels"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSDocumentItem" eSuperTypes="tdm.ecore#//VTraceableDocumentItem"/>
 </ecore:EPackage>
