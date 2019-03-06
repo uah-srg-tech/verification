@@ -93,6 +93,7 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_VALIDATION_REQUIREMENT: return createVSSSValidationRequirement();
 			case sssPackage.VSSS_SYSTEM_MODELS: return createVSSSSystemModels();
 			case sssPackage.VSSS_DOCUMENT: return createVSSSDocument();
+			case sssPackage.VSSS_DOCUMENT_ITEM: return createVSSSDocumentItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -386,6 +387,16 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public VSSSDocument createVSSSDocument() {
 		VSSSDocumentImpl vsssDocument = new VSSSDocumentImpl();
 		return vsssDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSDocumentItem createVSSSDocumentItem() {
+		VSSSDocumentItemImpl vsssDocumentItem = new VSSSDocumentItemImpl();
+		return vsssDocumentItem;
 	}
 
 	/**

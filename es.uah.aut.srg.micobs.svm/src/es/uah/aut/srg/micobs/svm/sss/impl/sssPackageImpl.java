@@ -19,6 +19,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDefinition;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocument;
+import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
@@ -268,6 +269,13 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * @generated
 	 */
 	private EClass vsssDocumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsssDocumentItemEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -716,8 +724,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSGeneralRequirement_SssItems() {
+		return (EReference)vsssGeneralRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSCapabilitiesRequirement() {
 		return vsssCapabilitiesRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSCapabilitiesRequirement_SssItems() {
+		return (EReference)vsssCapabilitiesRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -734,8 +760,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSSystemInterfaceRequirement_SssItems() {
+		return (EReference)vsssSystemInterfaceRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSAdaptationMissionizationRequirement() {
 		return vsssAdaptationMissionizationRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSAdaptationMissionizationRequirement_SssItems() {
+		return (EReference)vsssAdaptationMissionizationRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -752,8 +796,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSComputerResourceRequirement_SssItems() {
+		return (EReference)vsssComputerResourceRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSSecurityRequirement() {
 		return vsssSecurityRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSSecurityRequirement_SssItems() {
+		return (EReference)vsssSecurityRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -770,8 +832,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSSafetyRequirement_SssItems() {
+		return (EReference)vsssSafetyRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSReliabiltyAvailabilityRequirement() {
 		return vsssReliabiltyAvailabilityRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSReliabiltyAvailabilityRequirement_SssItems() {
+		return (EReference)vsssReliabiltyAvailabilityRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -788,8 +868,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSQualityRequirement_SssItems() {
+		return (EReference)vsssQualityRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSDesignRequirement() {
 		return vsssDesignRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSDesignRequirement_SssItems() {
+		return (EReference)vsssDesignRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -806,6 +904,15 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSSoftwareOperationsRequirement_SssItems() {
+		return (EReference)vsssSoftwareOperationsRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSSoftwareMaintenanceRequirement() {
 		return vsssSoftwareMaintenanceRequirementEClass;
 	}
@@ -815,8 +922,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSSoftwareMaintenanceRequirement_SssItems() {
+		return (EReference)vsssSoftwareMaintenanceRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSSystemSoftwareObservabilityRequirement() {
 		return vsssSystemSoftwareObservabilityRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSSystemSoftwareObservabilityRequirement_SssItems() {
+		return (EReference)vsssSystemSoftwareObservabilityRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -878,8 +1003,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSVerificationValidationProcessRequirement_SssItems() {
+		return (EReference)vsssVerificationValidationProcessRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSValidationApproach() {
 		return vsssValidationApproachEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSValidationApproach_SssItems() {
+		return (EReference)vsssValidationApproachEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -896,8 +1039,26 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSVerificationRequirement_SssItems() {
+		return (EReference)vsssVerificationRequirementEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSValidationRequirement() {
 		return vsssValidationRequirementEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSValidationRequirement_SssItems() {
+		return (EReference)vsssValidationRequirementEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1004,6 +1165,15 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVSSSDocumentItem() {
+		return vsssDocumentItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public sssFactory getsssFactory() {
 		return (sssFactory)getEFactoryInstance();
 	}
@@ -1079,30 +1249,43 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY);
 
 		vsssGeneralRequirementEClass = createEClass(VSSS_GENERAL_REQUIREMENT);
+		createEReference(vsssGeneralRequirementEClass, VSSS_GENERAL_REQUIREMENT__SSS_ITEMS);
 
 		vsssCapabilitiesRequirementEClass = createEClass(VSSS_CAPABILITIES_REQUIREMENT);
+		createEReference(vsssCapabilitiesRequirementEClass, VSSS_CAPABILITIES_REQUIREMENT__SSS_ITEMS);
 
 		vsssSystemInterfaceRequirementEClass = createEClass(VSSS_SYSTEM_INTERFACE_REQUIREMENT);
+		createEReference(vsssSystemInterfaceRequirementEClass, VSSS_SYSTEM_INTERFACE_REQUIREMENT__SSS_ITEMS);
 
 		vsssAdaptationMissionizationRequirementEClass = createEClass(VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENT);
+		createEReference(vsssAdaptationMissionizationRequirementEClass, VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENT__SSS_ITEMS);
 
 		vsssComputerResourceRequirementEClass = createEClass(VSSS_COMPUTER_RESOURCE_REQUIREMENT);
+		createEReference(vsssComputerResourceRequirementEClass, VSSS_COMPUTER_RESOURCE_REQUIREMENT__SSS_ITEMS);
 
 		vsssSecurityRequirementEClass = createEClass(VSSS_SECURITY_REQUIREMENT);
+		createEReference(vsssSecurityRequirementEClass, VSSS_SECURITY_REQUIREMENT__SSS_ITEMS);
 
 		vsssSafetyRequirementEClass = createEClass(VSSS_SAFETY_REQUIREMENT);
+		createEReference(vsssSafetyRequirementEClass, VSSS_SAFETY_REQUIREMENT__SSS_ITEMS);
 
 		vsssReliabiltyAvailabilityRequirementEClass = createEClass(VSSS_RELIABILTY_AVAILABILITY_REQUIREMENT);
+		createEReference(vsssReliabiltyAvailabilityRequirementEClass, VSSS_RELIABILTY_AVAILABILITY_REQUIREMENT__SSS_ITEMS);
 
 		vsssQualityRequirementEClass = createEClass(VSSS_QUALITY_REQUIREMENT);
+		createEReference(vsssQualityRequirementEClass, VSSS_QUALITY_REQUIREMENT__SSS_ITEMS);
 
 		vsssDesignRequirementEClass = createEClass(VSSS_DESIGN_REQUIREMENT);
+		createEReference(vsssDesignRequirementEClass, VSSS_DESIGN_REQUIREMENT__SSS_ITEMS);
 
 		vsssSoftwareOperationsRequirementEClass = createEClass(VSSS_SOFTWARE_OPERATIONS_REQUIREMENT);
+		createEReference(vsssSoftwareOperationsRequirementEClass, VSSS_SOFTWARE_OPERATIONS_REQUIREMENT__SSS_ITEMS);
 
 		vsssSoftwareMaintenanceRequirementEClass = createEClass(VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT);
+		createEReference(vsssSoftwareMaintenanceRequirementEClass, VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS);
 
 		vsssSystemSoftwareObservabilityRequirementEClass = createEClass(VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT);
+		createEReference(vsssSystemSoftwareObservabilityRequirementEClass, VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS);
 
 		vsssVerificationValidationIntegrationEClass = createEClass(VSSS_VERIFICATION_VALIDATION_INTEGRATION);
 		createEReference(vsssVerificationValidationIntegrationEClass, VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION_VALIDATION_PROCESS);
@@ -1111,12 +1294,16 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssVerificationValidationIntegrationEClass, VSSS_VERIFICATION_VALIDATION_INTEGRATION__VERIFICATION);
 
 		vsssVerificationValidationProcessRequirementEClass = createEClass(VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENT);
+		createEReference(vsssVerificationValidationProcessRequirementEClass, VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENT__SSS_ITEMS);
 
 		vsssValidationApproachEClass = createEClass(VSSS_VALIDATION_APPROACH);
+		createEReference(vsssValidationApproachEClass, VSSS_VALIDATION_APPROACH__SSS_ITEMS);
 
 		vsssVerificationRequirementEClass = createEClass(VSSS_VERIFICATION_REQUIREMENT);
+		createEReference(vsssVerificationRequirementEClass, VSSS_VERIFICATION_REQUIREMENT__SSS_ITEMS);
 
 		vsssValidationRequirementEClass = createEClass(VSSS_VALIDATION_REQUIREMENT);
+		createEReference(vsssValidationRequirementEClass, VSSS_VALIDATION_REQUIREMENT__SSS_ITEMS);
 
 		vsssSystemModelsEClass = createEClass(VSSS_SYSTEM_MODELS);
 		createEAttribute(vsssSystemModelsEClass, VSSS_SYSTEM_MODELS__SYSTEM_MODEL);
@@ -1130,6 +1317,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS);
 		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION);
 		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SYSTEM_MODELS);
+
+		vsssDocumentItemEClass = createEClass(VSSS_DOCUMENT_ITEM);
 	}
 
 	/**
@@ -1186,6 +1375,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		vsssVerificationRequirementEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsssValidationRequirementEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsssDocumentEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocument());
+		vsssDocumentItemEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentItem());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsssIntroductionEClass, VSSSIntroduction.class, "VSSSIntroduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1240,30 +1430,43 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSSpecificRequirements_SystemSoftwareObservability(), this.getVSSSSystemSoftwareObservabilityRequirement(), null, "systemSoftwareObservability", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssGeneralRequirementEClass, VSSSGeneralRequirement.class, "VSSSGeneralRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSGeneralRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSGeneralRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssCapabilitiesRequirementEClass, VSSSCapabilitiesRequirement.class, "VSSSCapabilitiesRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSCapabilitiesRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSCapabilitiesRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSystemInterfaceRequirementEClass, VSSSSystemInterfaceRequirement.class, "VSSSSystemInterfaceRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSystemInterfaceRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSystemInterfaceRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssAdaptationMissionizationRequirementEClass, VSSSAdaptationMissionizationRequirement.class, "VSSSAdaptationMissionizationRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSAdaptationMissionizationRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSAdaptationMissionizationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssComputerResourceRequirementEClass, VSSSComputerResourceRequirement.class, "VSSSComputerResourceRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSComputerResourceRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSComputerResourceRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSecurityRequirementEClass, VSSSSecurityRequirement.class, "VSSSSecurityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSecurityRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSecurityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSafetyRequirementEClass, VSSSSafetyRequirement.class, "VSSSSafetyRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSafetyRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSafetyRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssReliabiltyAvailabilityRequirementEClass, VSSSReliabiltyAvailabilityRequirement.class, "VSSSReliabiltyAvailabilityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSReliabiltyAvailabilityRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSReliabiltyAvailabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssQualityRequirementEClass, VSSSQualityRequirement.class, "VSSSQualityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSQualityRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSQualityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssDesignRequirementEClass, VSSSDesignRequirement.class, "VSSSDesignRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSDesignRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSDesignRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSoftwareOperationsRequirementEClass, VSSSSoftwareOperationsRequirement.class, "VSSSSoftwareOperationsRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSoftwareOperationsRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSoftwareOperationsRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSoftwareMaintenanceRequirementEClass, VSSSSoftwareMaintenanceRequirement.class, "VSSSSoftwareMaintenanceRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSoftwareMaintenanceRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSoftwareMaintenanceRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSystemSoftwareObservabilityRequirementEClass, VSSSSystemSoftwareObservabilityRequirement.class, "VSSSSystemSoftwareObservabilityRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSSystemSoftwareObservabilityRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSSystemSoftwareObservabilityRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssVerificationValidationIntegrationEClass, VSSSVerificationValidationIntegration.class, "VSSSVerificationValidationIntegration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSSSVerificationValidationIntegration_VerificationValidationProcess(), this.getVSSSVerificationValidationProcessRequirement(), null, "verificationValidationProcess", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1272,12 +1475,16 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSVerificationValidationIntegration_Verification(), this.getVSSSVerificationRequirement(), null, "verification", null, 0, -1, VSSSVerificationValidationIntegration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssVerificationValidationProcessRequirementEClass, VSSSVerificationValidationProcessRequirement.class, "VSSSVerificationValidationProcessRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSVerificationValidationProcessRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSVerificationValidationProcessRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssValidationApproachEClass, VSSSValidationApproach.class, "VSSSValidationApproach", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSValidationApproach_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSValidationApproach.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssVerificationRequirementEClass, VSSSVerificationRequirement.class, "VSSSVerificationRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSVerificationRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSVerificationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssValidationRequirementEClass, VSSSValidationRequirement.class, "VSSSValidationRequirement", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSValidationRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSValidationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSystemModelsEClass, VSSSSystemModels.class, "VSSSSystemModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSSSSystemModels_SystemModel(), ecorePackage.getEString(), "systemModel", null, 0, -1, VSSSSystemModels.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1291,6 +1498,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSDocument_SpecificRequirements(), this.getVSSSSpecificRequirements(), null, "specificRequirements", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSDocument_VerificationValidationIntegration(), this.getVSSSVerificationValidationIntegration(), null, "verificationValidationIntegration", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSDocument_SystemModels(), this.getVSSSSystemModels(), null, "systemModels", null, 0, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsssDocumentItemEClass, VSSSDocumentItem.class, "VSSSDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.sss.util;
 
 import es.uah.aut.srg.micobs.common.MCommonPackageElement;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.svm.sss.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
@@ -20,6 +21,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -204,6 +206,10 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSDocumentAdapter();
 			}
 			@Override
+			public Adapter caseVSSSDocumentItem(VSSSDocumentItem object) {
+				return createVSSSDocumentItemAdapter();
+			}
+			@Override
 			public Adapter caseVTraceableDocumentAbstractSection(VTraceableDocumentAbstractSection object) {
 				return createVTraceableDocumentAbstractSectionAdapter();
 			}
@@ -226,6 +232,14 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVTraceableDocument(VTraceableDocument object) {
 				return createVTraceableDocumentAdapter();
+			}
+			@Override
+			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
+				return createMCommonReferenceableObjAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentItem(VTraceableDocumentItem object) {
+				return createVTraceableDocumentItemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -668,6 +682,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem <em>VSSS Document Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem
+	 * @generated
+	 */
+	public Adapter createVSSSDocumentItemAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection <em>VTraceable Document Abstract Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -748,6 +776,34 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonReferenceableObj <em>MCommon Referenceable Obj</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.common.MCommonReferenceableObj
+	 * @generated
+	 */
+	public Adapter createMCommonReferenceableObjAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem <em>VTraceable Document Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentItemAdapter() {
 		return null;
 	}
 

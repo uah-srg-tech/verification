@@ -291,6 +291,15 @@ public interface sssFactory extends EFactory {
 	VSSSDocument createVSSSDocument();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Document Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Document Item</em>'.
+	 * @generated
+	 */
+	VSSSDocumentItem createVSSSDocumentItem();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
