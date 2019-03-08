@@ -17,11 +17,13 @@ import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -32,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getItems <em>Items</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getSection <em>Section</em>}</li>
  * </ul>
@@ -39,6 +42,25 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * @generated
  */
 public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObjectImpl.Container implements VTraceableDocumentAbstractGroup {
+	/**
+	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PREFIX_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPrefix()
+	 * @generated
+	 * @ordered
+	 */
+	protected String prefix = PREFIX_EDEFAULT;
+
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -56,6 +78,27 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	@Override
 	protected EClass eStaticClass() {
 		return tdmPackage.Literals.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPrefix() {
+		return prefix;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrefix(String newPrefix) {
+		String oldPrefix = prefix;
+		prefix = newPrefix;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX, oldPrefix, prefix));
 	}
 
 	/**
@@ -112,6 +155,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX:
+				return getPrefix();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return getItems();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__SECTION:
@@ -130,6 +175,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX:
+				setPrefix((String)newValue);
+				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				getItems().clear();
 				getItems().addAll((Collection<? extends VTraceableDocumentItem>)newValue);
@@ -149,6 +197,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX:
+				setPrefix(PREFIX_EDEFAULT);
+				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				getItems().clear();
 				return;
@@ -167,12 +218,30 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX:
+				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return !getItems().isEmpty();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__SECTION:
 				return basicGetSection() != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (prefix: ");
+		result.append(prefix);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VTraceableDocumentAbstractGroupImpl

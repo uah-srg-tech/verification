@@ -39,6 +39,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getIssue <em>Issue</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getDate <em>Date</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getSections <em>Sections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl#getParents <em>Parents</em>}</li>
@@ -87,6 +88,26 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 	 * @ordered
 	 */
 	protected String issue = ISSUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRevision() <em>Revision</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevision()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REVISION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRevision() <em>Revision</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevision()
+	 * @generated
+	 * @ordered
+	 */
+	protected String revision = REVISION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
@@ -184,6 +205,27 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getRevision() {
+		return revision;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRevision(String newRevision) {
+		String oldRevision = revision;
+		revision = newRevision;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT__REVISION, oldRevision, revision));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public String getDate() {
 		return date;
 	}
@@ -250,6 +292,8 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 				return getId();
 			case tdmPackage.VTRACEABLE_DOCUMENT__ISSUE:
 				return getIssue();
+			case tdmPackage.VTRACEABLE_DOCUMENT__REVISION:
+				return getRevision();
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return getDate();
 			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
@@ -276,6 +320,9 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__ISSUE:
 				setIssue((String)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__REVISION:
+				setRevision((String)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate((String)newValue);
@@ -310,6 +357,9 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 			case tdmPackage.VTRACEABLE_DOCUMENT__ISSUE:
 				setIssue(ISSUE_EDEFAULT);
 				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT__REVISION:
+				setRevision(REVISION_EDEFAULT);
+				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				setDate(DATE_EDEFAULT);
 				return;
@@ -338,6 +388,8 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case tdmPackage.VTRACEABLE_DOCUMENT__ISSUE:
 				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
+			case tdmPackage.VTRACEABLE_DOCUMENT__REVISION:
+				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
 			case tdmPackage.VTRACEABLE_DOCUMENT__DATE:
 				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
 			case tdmPackage.VTRACEABLE_DOCUMENT__SECTIONS:
@@ -364,6 +416,8 @@ public abstract class VTraceableDocumentImpl extends MCommonPackageElementImpl i
 		result.append(id);
 		result.append(", issue: ");
 		result.append(issue);
+		result.append(", revision: ");
+		result.append(revision);
 		result.append(", date: ");
 		result.append(date);
 		result.append(')');

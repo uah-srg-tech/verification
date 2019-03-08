@@ -198,7 +198,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocument_Date() {
+	public EAttribute getVTraceableDocument_Revision() {
 		return (EAttribute)vTraceableDocumentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -207,8 +207,8 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTraceableDocument_Sections() {
-		return (EReference)vTraceableDocumentEClass.getEStructuralFeatures().get(3);
+	public EAttribute getVTraceableDocument_Date() {
+		return (EAttribute)vTraceableDocumentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -216,7 +216,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTraceableDocument_Parents() {
+	public EReference getVTraceableDocument_Sections() {
 		return (EReference)vTraceableDocumentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -225,8 +225,17 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTraceableDocument_Groups() {
+	public EReference getVTraceableDocument_Parents() {
 		return (EReference)vTraceableDocumentEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTraceableDocument_Groups() {
+		return (EReference)vTraceableDocumentEClass.getEStructuralFeatures().get(6);
 	}
 
 	/**
@@ -243,8 +252,17 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVTraceableDocumentAbstractSection_Prefix() {
+		return (EAttribute)vTraceableDocumentAbstractSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getVTraceableDocumentAbstractSection_Groups() {
-		return (EReference)vTraceableDocumentAbstractSectionEClass.getEStructuralFeatures().get(0);
+		return (EReference)vTraceableDocumentAbstractSectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -253,7 +271,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * @generated
 	 */
 	public EReference getVTraceableDocumentAbstractSection_Document() {
-		return (EReference)vTraceableDocumentAbstractSectionEClass.getEStructuralFeatures().get(1);
+		return (EReference)vTraceableDocumentAbstractSectionEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -263,6 +281,15 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 */
 	public EClass getVTraceableDocumentFixedSection() {
 		return vTraceableDocumentFixedSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVTraceableDocumentFixedSection_Name() {
+		return (EAttribute)vTraceableDocumentFixedSectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -288,8 +315,17 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVTraceableDocumentAbstractGroup_Prefix() {
+		return (EAttribute)vTraceableDocumentAbstractGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getVTraceableDocumentAbstractGroup_Items() {
-		return (EReference)vTraceableDocumentAbstractGroupEClass.getEStructuralFeatures().get(0);
+		return (EReference)vTraceableDocumentAbstractGroupEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -298,7 +334,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * @generated
 	 */
 	public EReference getVTraceableDocumentAbstractGroup_Section() {
-		return (EReference)vTraceableDocumentAbstractGroupEClass.getEStructuralFeatures().get(1);
+		return (EReference)vTraceableDocumentAbstractGroupEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -308,6 +344,15 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 */
 	public EClass getVTraceableDocumentFixedGroup() {
 		return vTraceableDocumentFixedGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVTraceableDocumentFixedGroup_Name() {
+		return (EAttribute)vTraceableDocumentFixedGroupEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -395,24 +440,29 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		vTraceableDocumentEClass = createEClass(VTRACEABLE_DOCUMENT);
 		createEAttribute(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__ID);
 		createEAttribute(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__ISSUE);
+		createEAttribute(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__REVISION);
 		createEAttribute(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__DATE);
 		createEReference(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__SECTIONS);
 		createEReference(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__PARENTS);
 		createEReference(vTraceableDocumentEClass, VTRACEABLE_DOCUMENT__GROUPS);
 
 		vTraceableDocumentAbstractSectionEClass = createEClass(VTRACEABLE_DOCUMENT_ABSTRACT_SECTION);
+		createEAttribute(vTraceableDocumentAbstractSectionEClass, VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__PREFIX);
 		createEReference(vTraceableDocumentAbstractSectionEClass, VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__GROUPS);
 		createEReference(vTraceableDocumentAbstractSectionEClass, VTRACEABLE_DOCUMENT_ABSTRACT_SECTION__DOCUMENT);
 
 		vTraceableDocumentFixedSectionEClass = createEClass(VTRACEABLE_DOCUMENT_FIXED_SECTION);
+		createEAttribute(vTraceableDocumentFixedSectionEClass, VTRACEABLE_DOCUMENT_FIXED_SECTION__NAME);
 
 		vTraceableDocumentInstantiableSectionEClass = createEClass(VTRACEABLE_DOCUMENT_INSTANTIABLE_SECTION);
 
 		vTraceableDocumentAbstractGroupEClass = createEClass(VTRACEABLE_DOCUMENT_ABSTRACT_GROUP);
+		createEAttribute(vTraceableDocumentAbstractGroupEClass, VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX);
 		createEReference(vTraceableDocumentAbstractGroupEClass, VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS);
 		createEReference(vTraceableDocumentAbstractGroupEClass, VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__SECTION);
 
 		vTraceableDocumentFixedGroupEClass = createEClass(VTRACEABLE_DOCUMENT_FIXED_GROUP);
+		createEAttribute(vTraceableDocumentFixedGroupEClass, VTRACEABLE_DOCUMENT_FIXED_GROUP__NAME);
 
 		vTraceableDocumentInstantiableGroupEClass = createEClass(VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP);
 
@@ -469,24 +519,29 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEClass(vTraceableDocumentEClass, VTraceableDocument.class, "VTraceableDocument", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTraceableDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVTraceableDocument_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocument_Sections(), this.getVTraceableDocumentAbstractSection(), null, "sections", null, 1, -1, VTraceableDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocument_Parents(), this.getVTraceableDocument(), null, "parents", null, 0, -1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocument_Groups(), this.getVTraceableDocumentAbstractGroup(), null, "groups", null, 1, -1, VTraceableDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentAbstractSectionEClass, VTraceableDocumentAbstractSection.class, "VTraceableDocumentAbstractSection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVTraceableDocumentAbstractSection_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VTraceableDocumentAbstractSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractSection_Groups(), this.getVTraceableDocumentAbstractGroup(), null, "groups", null, 1, -1, VTraceableDocumentAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractSection_Document(), this.getVTraceableDocument(), null, "document", null, 1, 1, VTraceableDocumentAbstractSection.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentFixedSectionEClass, VTraceableDocumentFixedSection.class, "VTraceableDocumentFixedSection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVTraceableDocumentFixedSection_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTraceableDocumentFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentInstantiableSectionEClass, VTraceableDocumentInstantiableSection.class, "VTraceableDocumentInstantiableSection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vTraceableDocumentAbstractGroupEClass, VTraceableDocumentAbstractGroup.class, "VTraceableDocumentAbstractGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVTraceableDocumentAbstractGroup_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VTraceableDocumentAbstractGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractGroup_Items(), this.getVTraceableDocumentItem(), null, "items", null, 1, -1, VTraceableDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractGroup_Section(), this.getVTraceableDocumentAbstractSection(), null, "section", null, 1, 1, VTraceableDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentFixedGroupEClass, VTraceableDocumentFixedGroup.class, "VTraceableDocumentFixedGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVTraceableDocumentFixedGroup_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTraceableDocumentFixedGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentInstantiableGroupEClass, VTraceableDocumentInstantiableGroup.class, "VTraceableDocumentInstantiableGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -5,6 +5,8 @@
       eSuperTypes="../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonPackageElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="issue" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revision" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sections" lowerBound="1"
         upperBound="-1" eType="#//VTraceableDocumentAbstractSection" volatile="true"
@@ -16,6 +18,8 @@
         transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractSection" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groups" lowerBound="1"
         upperBound="-1" eType="#//VTraceableDocumentAbstractGroup" volatile="true"
         transient="true" derived="true"/>
@@ -23,10 +27,14 @@
         eType="#//VTraceableDocument" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentFixedSection" abstract="true"
-      eSuperTypes="#//VTraceableDocumentAbstractSection"/>
+      eSuperTypes="#//VTraceableDocumentAbstractSection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentInstantiableSection"
       abstract="true" eSuperTypes="#//VTraceableDocumentAbstractSection ../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractGroup" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
         eType="#//VTraceableDocumentItem" volatile="true" transient="true" derived="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="section" lowerBound="1"
@@ -34,7 +42,9 @@
         derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentFixedGroup" abstract="true"
-      eSuperTypes="#//VTraceableDocumentAbstractGroup"/>
+      eSuperTypes="#//VTraceableDocumentAbstractGroup">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentInstantiableGroup"
       abstract="true" eSuperTypes="#//VTraceableDocumentAbstractGroup ../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentItem" abstract="true"
