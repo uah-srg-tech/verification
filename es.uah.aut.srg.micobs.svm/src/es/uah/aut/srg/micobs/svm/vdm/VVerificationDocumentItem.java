@@ -12,7 +12,7 @@ package es.uah.aut.srg.micobs.svm.vdm;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -62,7 +62,7 @@ public interface VVerificationDocumentItem extends MCommonReferenceableObj {
 
 	/**
 	 * Returns the value of the '<em><b>Evidence Of</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Evidence Of</em>' reference list isn't clear,
@@ -74,6 +74,6 @@ public interface VVerificationDocumentItem extends MCommonReferenceableObj {
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<VTraceableDocumentItem> getEvidenceOf();
+	EList<VTraceableDocumentAbstractItem> getEvidenceOf();
 
 } // VVerificationDocumentItem

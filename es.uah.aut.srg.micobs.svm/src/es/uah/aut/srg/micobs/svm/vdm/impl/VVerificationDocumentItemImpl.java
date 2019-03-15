@@ -12,7 +12,7 @@ package es.uah.aut.srg.micobs.svm.vdm.impl;
 
 import es.uah.aut.srg.micobs.common.impl.MCommonReferenceableObjImpl;
 
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 import es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
@@ -72,7 +72,7 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocumentItem> evidenceOf;
+	protected EList<VTraceableDocumentAbstractItem> evidenceOf;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -119,9 +119,9 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentItem> getEvidenceOf() {
+	public EList<VTraceableDocumentAbstractItem> getEvidenceOf() {
 		if (evidenceOf == null) {
-			evidenceOf = new EObjectResolvingEList<VTraceableDocumentItem>(VTraceableDocumentItem.class, this, vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF);
+			evidenceOf = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF);
 		}
 		return evidenceOf;
 	}
@@ -156,7 +156,7 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 				return;
 			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF:
 				getEvidenceOf().clear();
-				getEvidenceOf().addAll((Collection<? extends VTraceableDocumentItem>)newValue);
+				getEvidenceOf().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

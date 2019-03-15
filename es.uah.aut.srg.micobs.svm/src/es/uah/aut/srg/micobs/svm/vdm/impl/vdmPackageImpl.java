@@ -94,6 +94,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
+		commonPackage.eINSTANCE.eClass();
 		tdmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -266,7 +267,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 
 		initEClass(vVerificationDocumentItemEClass, VVerificationDocumentItem.class, "VVerificationDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVVerificationDocumentItem_Id(), ecorePackage.getEString(), "id", null, 1, 1, VVerificationDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVVerificationDocumentItem_EvidenceOf(), thetdmPackage.getVTraceableDocumentItem(), null, "evidenceOf", null, 1, -1, VVerificationDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVVerificationDocumentItem_EvidenceOf(), thetdmPackage.getVTraceableDocumentAbstractItem(), null, "evidenceOf", null, 1, -1, VVerificationDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

@@ -10,9 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
-
 import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,11 +23,11 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getIssue <em>Issue</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getRevision <em>Revision</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getDate <em>Date</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getSections <em>Sections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getGroups <em>Groups</em>}</li>
  * </ul>
@@ -36,7 +36,33 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface VTraceableDocument extends MCommonPackageElement {
+public interface VTraceableDocument extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -140,22 +166,6 @@ public interface VTraceableDocument extends MCommonPackageElement {
 	 * @generated
 	 */
 	void setDate(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Sections</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sections</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sections</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocument_Sections()
-	 * @model required="true" transient="true" volatile="true" derived="true"
-	 * @generated
-	 */
-	EList<VTraceableDocumentAbstractSection> getSections();
 
 	/**
 	 * Returns the value of the '<em><b>Parents</b></em>' reference list.

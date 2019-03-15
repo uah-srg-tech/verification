@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm.util;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
-import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-
 import es.uah.aut.srg.micobs.svm.tdm.*;
 
 import org.eclipse.emf.common.notify.Adapter;
@@ -83,18 +80,6 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentAdapter();
 			}
 			@Override
-			public Adapter caseVTraceableDocumentAbstractSection(VTraceableDocumentAbstractSection object) {
-				return createVTraceableDocumentAbstractSectionAdapter();
-			}
-			@Override
-			public Adapter caseVTraceableDocumentFixedSection(VTraceableDocumentFixedSection object) {
-				return createVTraceableDocumentFixedSectionAdapter();
-			}
-			@Override
-			public Adapter caseVTraceableDocumentInstantiableSection(VTraceableDocumentInstantiableSection object) {
-				return createVTraceableDocumentInstantiableSectionAdapter();
-			}
-			@Override
 			public Adapter caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
 				return createVTraceableDocumentAbstractGroupAdapter();
 			}
@@ -107,16 +92,8 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentInstantiableGroupAdapter();
 			}
 			@Override
-			public Adapter caseVTraceableDocumentItem(VTraceableDocumentItem object) {
-				return createVTraceableDocumentItemAdapter();
-			}
-			@Override
-			public Adapter caseMCommonPackageElement(MCommonPackageElement object) {
-				return createMCommonPackageElementAdapter();
-			}
-			@Override
-			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
-				return createMCommonReferenceableObjAdapter();
+			public Adapter caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
+				return createVTraceableDocumentAbstractItemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -149,48 +126,6 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection <em>VTraceable Document Abstract Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection
-	 * @generated
-	 */
-	public Adapter createVTraceableDocumentAbstractSectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection <em>VTraceable Document Fixed Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection
-	 * @generated
-	 */
-	public Adapter createVTraceableDocumentFixedSectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableSection <em>VTraceable Document Instantiable Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableSection
-	 * @generated
-	 */
-	public Adapter createVTraceableDocumentInstantiableSectionAdapter() {
 		return null;
 	}
 
@@ -237,44 +172,16 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem <em>VTraceable Document Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem <em>VTraceable Document Abstract Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem
 	 * @generated
 	 */
-	public Adapter createVTraceableDocumentItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonPackageElement <em>MCommon Package Element</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.common.MCommonPackageElement
-	 * @generated
-	 */
-	public Adapter createMCommonPackageElementAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonReferenceableObj <em>MCommon Referenceable Obj</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.common.MCommonReferenceableObj
-	 * @generated
-	 */
-	public Adapter createMCommonReferenceableObjAdapter() {
+	public Adapter createVTraceableDocumentAbstractItemAdapter() {
 		return null;
 	}
 

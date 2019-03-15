@@ -11,6 +11,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="VVerificationDocumentItem" eSuperTypes="../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="evidenceOf" lowerBound="1"
-        upperBound="-1" eType="ecore:EClass tdm.ecore#//VTraceableDocumentItem"/>
+        upperBound="-1" eType="ecore:EClass tdm.ecore#//VTraceableDocumentAbstractItem"/>
   </eClassifiers>
 </ecore:EPackage>

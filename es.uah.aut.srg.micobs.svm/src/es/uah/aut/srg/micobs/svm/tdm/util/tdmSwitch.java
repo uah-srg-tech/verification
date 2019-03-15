@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm.util;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
-import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-
 import es.uah.aut.srg.micobs.svm.tdm.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -80,28 +77,6 @@ public class tdmSwitch<T> extends Switch<T> {
 			case tdmPackage.VTRACEABLE_DOCUMENT: {
 				VTraceableDocument vTraceableDocument = (VTraceableDocument)theEObject;
 				T result = caseVTraceableDocument(vTraceableDocument);
-				if (result == null) result = caseMCommonPackageElement(vTraceableDocument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_SECTION: {
-				VTraceableDocumentAbstractSection vTraceableDocumentAbstractSection = (VTraceableDocumentAbstractSection)theEObject;
-				T result = caseVTraceableDocumentAbstractSection(vTraceableDocumentAbstractSection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tdmPackage.VTRACEABLE_DOCUMENT_FIXED_SECTION: {
-				VTraceableDocumentFixedSection vTraceableDocumentFixedSection = (VTraceableDocumentFixedSection)theEObject;
-				T result = caseVTraceableDocumentFixedSection(vTraceableDocumentFixedSection);
-				if (result == null) result = caseVTraceableDocumentAbstractSection(vTraceableDocumentFixedSection);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_SECTION: {
-				VTraceableDocumentInstantiableSection vTraceableDocumentInstantiableSection = (VTraceableDocumentInstantiableSection)theEObject;
-				T result = caseVTraceableDocumentInstantiableSection(vTraceableDocumentInstantiableSection);
-				if (result == null) result = caseVTraceableDocumentAbstractSection(vTraceableDocumentInstantiableSection);
-				if (result == null) result = caseMCommonReferenceableObj(vTraceableDocumentInstantiableSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -122,14 +97,12 @@ public class tdmSwitch<T> extends Switch<T> {
 				VTraceableDocumentInstantiableGroup vTraceableDocumentInstantiableGroup = (VTraceableDocumentInstantiableGroup)theEObject;
 				T result = caseVTraceableDocumentInstantiableGroup(vTraceableDocumentInstantiableGroup);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vTraceableDocumentInstantiableGroup);
-				if (result == null) result = caseMCommonReferenceableObj(vTraceableDocumentInstantiableGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case tdmPackage.VTRACEABLE_DOCUMENT_ITEM: {
-				VTraceableDocumentItem vTraceableDocumentItem = (VTraceableDocumentItem)theEObject;
-				T result = caseVTraceableDocumentItem(vTraceableDocumentItem);
-				if (result == null) result = caseMCommonReferenceableObj(vTraceableDocumentItem);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM: {
+				VTraceableDocumentAbstractItem vTraceableDocumentAbstractItem = (VTraceableDocumentAbstractItem)theEObject;
+				T result = caseVTraceableDocumentAbstractItem(vTraceableDocumentAbstractItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -149,51 +122,6 @@ public class tdmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocument(VTraceableDocument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Section</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVTraceableDocumentAbstractSection(VTraceableDocumentAbstractSection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Section</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVTraceableDocumentFixedSection(VTraceableDocumentFixedSection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Instantiable Section</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Instantiable Section</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVTraceableDocumentInstantiableSection(VTraceableDocumentInstantiableSection object) {
 		return null;
 	}
 
@@ -243,47 +171,17 @@ public class tdmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVTraceableDocumentItem(VTraceableDocumentItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMCommonPackageElement(MCommonPackageElement object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMCommonReferenceableObj(MCommonReferenceableObj object) {
+	public T caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
 		return null;
 	}
 

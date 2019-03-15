@@ -23,9 +23,10 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getItems <em>Items</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getSection <em>Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getDocument <em>Document</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup()
@@ -33,6 +34,32 @@ import org.eclipse.emf.ecore.EObject;
  * @generated
  */
 public interface VTraceableDocumentAbstractGroup extends EObject {
+	/**
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_Name()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getName();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getName <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
+	 * @generated
+	 */
+	void setName(String value);
+
 	/**
 	 * Returns the value of the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,7 +88,7 @@ public interface VTraceableDocumentAbstractGroup extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Items</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Items</em>' reference list isn't clear,
@@ -73,32 +100,32 @@ public interface VTraceableDocumentAbstractGroup extends EObject {
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<VTraceableDocumentItem> getItems();
+	EList<VTraceableDocumentAbstractItem> getItems();
 
 	/**
-	 * Returns the value of the '<em><b>Section</b></em>' reference.
+	 * Returns the value of the '<em><b>Document</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Section</em>' reference isn't clear,
+	 * If the meaning of the '<em>Document</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Section</em>' reference.
-	 * @see #setSection(VTraceableDocumentAbstractSection)
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_Section()
+	 * @return the value of the '<em>Document</em>' reference.
+	 * @see #setDocument(VTraceableDocument)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_Document()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	VTraceableDocumentAbstractSection getSection();
+	VTraceableDocument getDocument();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getSection <em>Section</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getDocument <em>Document</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Section</em>' reference.
-	 * @see #getSection()
+	 * @param value the new value of the '<em>Document</em>' reference.
+	 * @see #getDocument()
 	 * @generated
 	 */
-	void setSection(VTraceableDocumentAbstractSection value);
+	void setDocument(VTraceableDocument value);
 
 } // VTraceableDocumentAbstractGroup

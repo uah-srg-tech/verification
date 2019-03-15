@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm;
 
-import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,5 +21,5 @@ import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
  * @model abstract="true"
  * @generated
  */
-public interface VTraceableDocumentInstantiableGroup extends VTraceableDocumentAbstractGroup, MCommonReferenceableObj {
+public interface VTraceableDocumentInstantiableGroup extends VTraceableDocumentAbstractGroup {
 } // VTraceableDocumentInstantiableGroup
