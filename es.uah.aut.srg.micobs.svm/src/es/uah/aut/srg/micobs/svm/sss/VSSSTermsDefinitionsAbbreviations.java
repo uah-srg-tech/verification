@@ -10,9 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import org.eclipse.emf.common.util.EList;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,7 +32,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VSSSTermsDefinitionsAbbreviations extends EObject {
+public interface VSSSTermsDefinitionsAbbreviations extends DSection {
 	/**
 	 * Returns the value of the '<em><b>Terms</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSTerm}.

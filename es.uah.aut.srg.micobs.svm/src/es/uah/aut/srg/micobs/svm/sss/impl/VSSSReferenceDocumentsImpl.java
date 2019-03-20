@@ -10,11 +10,12 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
-import es.uah.aut.srg.micobs.svm.sss.sssPackage;
+import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 
-import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+
+import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
+import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import java.util.Collection;
 
@@ -30,34 +31,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Design Requirement</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Reference Documents</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDesignRequirementImpl#getSssItems <em>Sss Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReferenceDocumentsImpl#getReferenceDocuments <em>Reference Documents</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl implements VSSSDesignRequirement {
+public class VSSSReferenceDocumentsImpl extends DSectionImpl implements VSSSReferenceDocuments {
 	/**
-	 * The cached value of the '{@link #getSssItems() <em>Sss Items</em>}' containment reference list.
+	 * The cached value of the '{@link #getReferenceDocuments() <em>Reference Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSssItems()
+	 * @see #getReferenceDocuments()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSDocumentItem> sssItems;
+	protected EList<DReferenceDocument> referenceDocuments;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSDesignRequirementImpl() {
+	protected VSSSReferenceDocumentsImpl() {
 		super();
 	}
 
@@ -68,7 +69,7 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_DESIGN_REQUIREMENT;
+		return sssPackage.Literals.VSSS_REFERENCE_DOCUMENTS;
 	}
 
 	/**
@@ -76,11 +77,11 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSDocumentItem> getSssItems() {
-		if (sssItems == null) {
-			sssItems = new EObjectContainmentEList<VSSSDocumentItem>(VSSSDocumentItem.class, this, sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS);
+	public EList<DReferenceDocument> getReferenceDocuments() {
+		if (referenceDocuments == null) {
+			referenceDocuments = new EObjectContainmentEList<DReferenceDocument>(DReferenceDocument.class, this, sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
 		}
-		return sssItems;
+		return referenceDocuments;
 	}
 
 	/**
@@ -91,8 +92,8 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS:
-				return ((InternalEList<?>)getSssItems()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
+				return ((InternalEList<?>)getReferenceDocuments()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -105,8 +106,8 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS:
-				return getSssItems();
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
+				return getReferenceDocuments();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,9 +121,9 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS:
-				getSssItems().clear();
-				getSssItems().addAll((Collection<? extends VSSSDocumentItem>)newValue);
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
+				getReferenceDocuments().clear();
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +137,8 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS:
-				getSssItems().clear();
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
+				getReferenceDocuments().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,10 +152,10 @@ public class VSSSDesignRequirementImpl extends VTraceableDocumentFixedGroupImpl 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_DESIGN_REQUIREMENT__SSS_ITEMS:
-				return sssItems != null && !sssItems.isEmpty();
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
+				return referenceDocuments != null && !referenceDocuments.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //VSSSDesignRequirementImpl
+} //VSSSReferenceDocumentsImpl

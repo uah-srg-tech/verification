@@ -10,9 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import org.eclipse.emf.common.util.EList;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 
-import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,28 +23,28 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels#getSystemModel <em>System Model</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels#getSystemModels <em>System Models</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModels()
  * @model
  * @generated
  */
-public interface VSSSSystemModels extends EObject {
+public interface VSSSSystemModels extends DSection {
 	/**
-	 * Returns the value of the '<em><b>System Model</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>System Models</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>System Model</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>System Models</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>System Model</em>' attribute list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModels_SystemModel()
-	 * @model
+	 * @return the value of the '<em>System Models</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModels_SystemModels()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getSystemModel();
+	EList<VSSSSystemModel> getSystemModels();
 
 } // VSSSSystemModels

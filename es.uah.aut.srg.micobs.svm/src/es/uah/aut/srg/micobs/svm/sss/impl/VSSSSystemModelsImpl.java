@@ -10,6 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+
+import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
@@ -19,9 +22,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,21 +32,21 @@ import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemModelsImpl#getSystemModel <em>System Model</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemModelsImpl#getSystemModels <em>System Models</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implements VSSSSystemModels {
+public class VSSSSystemModelsImpl extends DSectionImpl implements VSSSSystemModels {
 	/**
-	 * The cached value of the '{@link #getSystemModel() <em>System Model</em>}' attribute list.
+	 * The cached value of the '{@link #getSystemModels() <em>System Models</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSystemModel()
+	 * @see #getSystemModels()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<String> systemModel;
+	protected EList<VSSSSystemModel> systemModels;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -71,11 +72,11 @@ public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<String> getSystemModel() {
-		if (systemModel == null) {
-			systemModel = new EDataTypeUniqueEList<String>(String.class, this, sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODEL);
+	public EList<VSSSSystemModel> getSystemModels() {
+		if (systemModels == null) {
+			systemModels = new EObjectResolvingEList<VSSSSystemModel>(VSSSSystemModel.class, this, sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS);
 		}
-		return systemModel;
+		return systemModels;
 	}
 
 	/**
@@ -86,8 +87,8 @@ public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODEL:
-				return getSystemModel();
+			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
+				return getSystemModels();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -101,9 +102,9 @@ public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODEL:
-				getSystemModel().clear();
-				getSystemModel().addAll((Collection<? extends String>)newValue);
+			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
+				getSystemModels().clear();
+				getSystemModels().addAll((Collection<? extends VSSSSystemModel>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -117,8 +118,8 @@ public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODEL:
-				getSystemModel().clear();
+			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
+				getSystemModels().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -132,26 +133,10 @@ public class VSSSSystemModelsImpl extends MinimalEObjectImpl.Container implement
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODEL:
-				return systemModel != null && !systemModel.isEmpty();
+			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
+				return systemModels != null && !systemModels.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (systemModel: ");
-		result.append(systemModel);
-		result.append(')');
-		return result.toString();
 	}
 
 } //VSSSSystemModelsImpl

@@ -10,9 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 
-import org.eclipse.emf.common.util.EList;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,8 +24,8 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getIntroduction <em>Introduction</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getApplicableDocuments <em>Applicable Documents</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getReferenceDocuments <em>Reference Documents</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getReferenceDocumentsSeciton <em>Reference Documents Seciton</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getTermsDefinitionsAbbreviations <em>Terms Definitions Abbreviations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getGeneralDescription <em>General Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirements <em>Specific Requirements</em>}</li>
@@ -37,7 +37,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSDocument extends VTraceableDocument {
+public interface VSSSDocument extends DDocumentTemplate, VTraceableDocument {
 	/**
 	 * Returns the value of the '<em><b>Introduction</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -65,36 +65,56 @@ public interface VSSSDocument extends VTraceableDocument {
 	void setIntroduction(VSSSIntroduction value);
 
 	/**
-	 * Returns the value of the '<em><b>Applicable Documents</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocument}.
+	 * Returns the value of the '<em><b>Applicable Documents Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Applicable Documents</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Applicable Documents Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Applicable Documents</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_ApplicableDocuments()
-	 * @model containment="true"
+	 * @return the value of the '<em>Applicable Documents Section</em>' containment reference.
+	 * @see #setApplicableDocumentsSection(VSSSApplicableDocuments)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_ApplicableDocumentsSection()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSApplicableDocument> getApplicableDocuments();
+	VSSSApplicableDocuments getApplicableDocumentsSection();
 
 	/**
-	 * Returns the value of the '<em><b>Reference Documents</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocument}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Applicable Documents Section</em>' containment reference.
+	 * @see #getApplicableDocumentsSection()
+	 * @generated
+	 */
+	void setApplicableDocumentsSection(VSSSApplicableDocuments value);
+
+	/**
+	 * Returns the value of the '<em><b>Reference Documents Seciton</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reference Documents</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Reference Documents Seciton</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reference Documents</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_ReferenceDocuments()
-	 * @model containment="true"
+	 * @return the value of the '<em>Reference Documents Seciton</em>' containment reference.
+	 * @see #setReferenceDocumentsSeciton(VSSSReferenceDocuments)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_ReferenceDocumentsSeciton()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSReferenceDocument> getReferenceDocuments();
+	VSSSReferenceDocuments getReferenceDocumentsSeciton();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getReferenceDocumentsSeciton <em>Reference Documents Seciton</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reference Documents Seciton</em>' containment reference.
+	 * @see #getReferenceDocumentsSeciton()
+	 * @generated
+	 */
+	void setReferenceDocumentsSeciton(VSSSReferenceDocuments value);
 
 	/**
 	 * Returns the value of the '<em><b>Terms Definitions Abbreviations</b></em>' containment reference.
@@ -183,12 +203,12 @@ public interface VSSSDocument extends VTraceableDocument {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Verification Validation Integration</em>' reference.
-	 * @see #setVerificationValidationIntegration(VSSSVerificationValidationIntegration)
+	 * @see #setVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_VerificationValidationIntegration()
 	 * @model required="true"
 	 * @generated
 	 */
-	VSSSVerificationValidationIntegration getVerificationValidationIntegration();
+	VSSSVerificationValidationIntegrationRequirements getVerificationValidationIntegration();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegration <em>Verification Validation Integration</em>}' reference.
@@ -198,7 +218,7 @@ public interface VSSSDocument extends VTraceableDocument {
 	 * @see #getVerificationValidationIntegration()
 	 * @generated
 	 */
-	void setVerificationValidationIntegration(VSSSVerificationValidationIntegration value);
+	void setVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements value);
 
 	/**
 	 * Returns the value of the '<em><b>System Models</b></em>' containment reference.

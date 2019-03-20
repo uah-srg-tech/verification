@@ -10,12 +10,15 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
+
 import es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -56,24 +59,14 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
+	protected DParagraph description;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -120,7 +113,15 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getDescription() {
+	public DParagraph getDescription() {
+		if (description != null && description.eIsProxy()) {
+			InternalEObject oldDescription = (InternalEObject)description;
+			description = (DParagraph)eResolveProxy(oldDescription);
+			if (description != oldDescription) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, description));
+			}
+		}
 		return description;
 	}
 
@@ -129,8 +130,17 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
+	public DParagraph basicGetDescription() {
+		return description;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDescription(DParagraph newDescription) {
+		DParagraph oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, description));
@@ -147,7 +157,8 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				return getName();
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
-				return getDescription();
+				if (resolve) return getDescription();
+				return basicGetDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -164,7 +175,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 				setName((String)newValue);
 				return;
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
-				setDescription((String)newValue);
+				setDescription((DParagraph)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,7 +193,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 				setName(NAME_EDEFAULT);
 				return;
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
+				setDescription((DParagraph)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -199,7 +210,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+				return description != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,8 +227,6 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", description: ");
-		result.append(description);
 		result.append(')');
 		return result.toString();
 	}

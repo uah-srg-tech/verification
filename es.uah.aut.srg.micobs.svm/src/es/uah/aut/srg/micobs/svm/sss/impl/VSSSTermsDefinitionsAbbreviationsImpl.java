@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.sss.VSSSAbbreviation;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDefinition;
 import es.uah.aut.srg.micobs.svm.sss.VSSSTerm;
@@ -24,8 +26,6 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
@@ -45,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSTermsDefinitionsAbbreviationsImpl extends MinimalEObjectImpl.Container implements VSSSTermsDefinitionsAbbreviations {
+public class VSSSTermsDefinitionsAbbreviationsImpl extends DSectionImpl implements VSSSTermsDefinitionsAbbreviations {
 	/**
 	 * The cached value of the '{@link #getTerms() <em>Terms</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

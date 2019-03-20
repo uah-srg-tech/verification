@@ -64,9 +64,10 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case sssPackage.VSSS_DOCUMENT: return createVSSSDocument();
 			case sssPackage.VSSS_INTRODUCTION: return createVSSSIntroduction();
-			case sssPackage.VSSS_APPLICABLE_DOCUMENT: return createVSSSApplicableDocument();
-			case sssPackage.VSSS_REFERENCE_DOCUMENT: return createVSSSReferenceDocument();
+			case sssPackage.VSSS_APPLICABLE_DOCUMENTS: return createVSSSApplicableDocuments();
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS: return createVSSSReferenceDocuments();
 			case sssPackage.VSSS_TERMS_DEFINITIONS_ABBREVIATIONS: return createVSSSTermsDefinitionsAbbreviations();
 			case sssPackage.VSSS_TERM: return createVSSSTerm();
 			case sssPackage.VSSS_DEFINITION: return createVSSSDefinition();
@@ -86,17 +87,27 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENT: return createVSSSSoftwareOperationsRequirement();
 			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT: return createVSSSSoftwareMaintenanceRequirement();
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT: return createVSSSSystemSoftwareObservabilityRequirement();
-			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION: return createVSSSVerificationValidationIntegration();
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS: return createVSSSVerificationValidationIntegrationRequirements();
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENT: return createVSSSVerificationValidationProcessRequirement();
 			case sssPackage.VSSS_VALIDATION_APPROACH: return createVSSSValidationApproach();
 			case sssPackage.VSSS_VERIFICATION_REQUIREMENT: return createVSSSVerificationRequirement();
 			case sssPackage.VSSS_VALIDATION_REQUIREMENT: return createVSSSValidationRequirement();
-			case sssPackage.VSSS_SYSTEM_MODELS: return createVSSSSystemModels();
-			case sssPackage.VSSS_DOCUMENT: return createVSSSDocument();
 			case sssPackage.VSSS_DOCUMENT_ITEM: return createVSSSDocumentItem();
+			case sssPackage.VSSS_SYSTEM_MODELS: return createVSSSSystemModels();
+			case sssPackage.VSSS_SYSTEM_MODEL: return createVSSSSystemModel();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSDocument createVSSSDocument() {
+		VSSSDocumentImpl vsssDocument = new VSSSDocumentImpl();
+		return vsssDocument;
 	}
 
 	/**
@@ -114,9 +125,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSApplicableDocument createVSSSApplicableDocument() {
-		VSSSApplicableDocumentImpl vsssApplicableDocument = new VSSSApplicableDocumentImpl();
-		return vsssApplicableDocument;
+	public VSSSApplicableDocuments createVSSSApplicableDocuments() {
+		VSSSApplicableDocumentsImpl vsssApplicableDocuments = new VSSSApplicableDocumentsImpl();
+		return vsssApplicableDocuments;
 	}
 
 	/**
@@ -124,9 +135,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSReferenceDocument createVSSSReferenceDocument() {
-		VSSSReferenceDocumentImpl vsssReferenceDocument = new VSSSReferenceDocumentImpl();
-		return vsssReferenceDocument;
+	public VSSSReferenceDocuments createVSSSReferenceDocuments() {
+		VSSSReferenceDocumentsImpl vsssReferenceDocuments = new VSSSReferenceDocumentsImpl();
+		return vsssReferenceDocuments;
 	}
 
 	/**
@@ -324,9 +335,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSVerificationValidationIntegration createVSSSVerificationValidationIntegration() {
-		VSSSVerificationValidationIntegrationImpl vsssVerificationValidationIntegration = new VSSSVerificationValidationIntegrationImpl();
-		return vsssVerificationValidationIntegration;
+	public VSSSVerificationValidationIntegrationRequirements createVSSSVerificationValidationIntegrationRequirements() {
+		VSSSVerificationValidationIntegrationRequirementsImpl vsssVerificationValidationIntegrationRequirements = new VSSSVerificationValidationIntegrationRequirementsImpl();
+		return vsssVerificationValidationIntegrationRequirements;
 	}
 
 	/**
@@ -374,6 +385,16 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSSSDocumentItem createVSSSDocumentItem() {
+		VSSSDocumentItemImpl vsssDocumentItem = new VSSSDocumentItemImpl();
+		return vsssDocumentItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSSSSystemModels createVSSSSystemModels() {
 		VSSSSystemModelsImpl vsssSystemModels = new VSSSSystemModelsImpl();
 		return vsssSystemModels;
@@ -384,19 +405,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSDocument createVSSSDocument() {
-		VSSSDocumentImpl vsssDocument = new VSSSDocumentImpl();
-		return vsssDocument;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSSSDocumentItem createVSSSDocumentItem() {
-		VSSSDocumentItemImpl vsssDocumentItem = new VSSSDocumentItemImpl();
-		return vsssDocumentItem;
+	public VSSSSystemModel createVSSSSystemModel() {
+		VSSSSystemModelImpl vsssSystemModel = new VSSSSystemModelImpl();
+		return vsssSystemModel;
 	}
 
 	/**

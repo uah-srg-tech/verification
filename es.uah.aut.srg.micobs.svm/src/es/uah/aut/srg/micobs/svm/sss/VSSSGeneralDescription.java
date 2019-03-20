@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 
 /**
  * <!-- begin-user-doc -->
@@ -34,95 +33,135 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VSSSGeneralDescription extends EObject {
+public interface VSSSGeneralDescription extends DSection {
 	/**
-	 * Returns the value of the '<em><b>Product Perspective</b></em>' attribute.
+	 * Returns the value of the '<em><b>Product Perspective</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Product Perspective</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Product Perspective</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Product Perspective</em>' attribute.
-	 * @see #setProductPerspective(String)
+	 * @return the value of the '<em>Product Perspective</em>' reference.
+	 * @see #setProductPerspective(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_ProductPerspective()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getProductPerspective();
+	DBody getProductPerspective();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Product Perspective</em>' attribute.
+	 * @param value the new value of the '<em>Product Perspective</em>' reference.
 	 * @see #getProductPerspective()
 	 * @generated
 	 */
-	void setProductPerspective(String value);
+	void setProductPerspective(DBody value);
 
 	/**
-	 * Returns the value of the '<em><b>General Capabilites</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Returns the value of the '<em><b>General Capabilites</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Capabilites</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>General Capabilites</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Capabilites</em>' attribute list.
+	 * @return the value of the '<em>General Capabilites</em>' reference.
+	 * @see #setGeneralCapabilites(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilites()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getGeneralCapabilites();
+	DBody getGeneralCapabilites();
 
 	/**
-	 * Returns the value of the '<em><b>General Constraints</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>General Capabilites</em>' reference.
+	 * @see #getGeneralCapabilites()
+	 * @generated
+	 */
+	void setGeneralCapabilites(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>General Constraints</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Constraints</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>General Constraints</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Constraints</em>' attribute list.
+	 * @return the value of the '<em>General Constraints</em>' reference.
+	 * @see #setGeneralConstraints(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralConstraints()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getGeneralConstraints();
+	DBody getGeneralConstraints();
 
 	/**
-	 * Returns the value of the '<em><b>Operational Environment</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>General Constraints</em>' reference.
+	 * @see #getGeneralConstraints()
+	 * @generated
+	 */
+	void setGeneralConstraints(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>Operational Environment</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Operational Environment</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Operational Environment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operational Environment</em>' attribute list.
+	 * @return the value of the '<em>Operational Environment</em>' reference.
+	 * @see #setOperationalEnvironment(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_OperationalEnvironment()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getOperationalEnvironment();
+	DBody getOperationalEnvironment();
 
 	/**
-	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.String}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Operational Environment</em>' reference.
+	 * @see #getOperationalEnvironment()
+	 * @generated
+	 */
+	void setOperationalEnvironment(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assumptions Dependencies</em>' attribute list isn't clear,
+	 * If the meaning of the '<em>Assumptions Dependencies</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assumptions Dependencies</em>' attribute list.
+	 * @return the value of the '<em>Assumptions Dependencies</em>' reference.
+	 * @see #setAssumptionsDependencies(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_AssumptionsDependencies()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<String> getAssumptionsDependencies();
+	DBody getAssumptionsDependencies();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Assumptions Dependencies</em>' reference.
+	 * @see #getAssumptionsDependencies()
+	 * @generated
+	 */
+	void setAssumptionsDependencies(DBody value);
 
 } // VSSSGeneralDescription

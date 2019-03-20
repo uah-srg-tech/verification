@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -57,29 +59,29 @@ public interface VSSSBriefDescription extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' attribute.
+	 * Returns the value of the '<em><b>Description</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' attribute.
-	 * @see #setDescription(String)
+	 * @return the value of the '<em>Description</em>' reference.
+	 * @see #setDescription(DParagraph)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSBriefDescription_Description()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getDescription();
+	DParagraph getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription <em>Description</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription <em>Description</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @param value the new value of the '<em>Description</em>' reference.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(String value);
+	void setDescription(DParagraph value);
 
 } // VSSSBriefDescription

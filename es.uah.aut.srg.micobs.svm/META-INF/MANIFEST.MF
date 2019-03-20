@@ -8,6 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ es.uah.aut.srg.micobs.doctpl;visibility:=reexport,
  es.uah.aut.srg.micobs;visibility:=reexport,
  es.uah.aut.srg.micobs.svm;visibility:=reexport
 Bundle-ActivationPolicy: lazy

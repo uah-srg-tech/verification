@@ -10,7 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import org.eclipse.emf.ecore.EObject;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,109 +32,109 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VSSSIntroduction extends EObject {
+public interface VSSSIntroduction extends DSection {
 	/**
-	 * Returns the value of the '<em><b>Purpose</b></em>' attribute.
+	 * Returns the value of the '<em><b>Purpose</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Purpose</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Purpose</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purpose</em>' attribute.
-	 * @see #setPurpose(String)
+	 * @return the value of the '<em>Purpose</em>' reference.
+	 * @see #setPurpose(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Purpose()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getPurpose();
+	DBody getPurpose();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purpose</em>' attribute.
+	 * @param value the new value of the '<em>Purpose</em>' reference.
 	 * @see #getPurpose()
 	 * @generated
 	 */
-	void setPurpose(String value);
+	void setPurpose(DBody value);
 
 	/**
-	 * Returns the value of the '<em><b>Objetive</b></em>' attribute.
+	 * Returns the value of the '<em><b>Objetive</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Objetive</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Objetive</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Objetive</em>' attribute.
-	 * @see #setObjetive(String)
+	 * @return the value of the '<em>Objetive</em>' reference.
+	 * @see #setObjetive(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Objetive()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getObjetive();
+	DBody getObjetive();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjetive <em>Objetive</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjetive <em>Objetive</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Objetive</em>' attribute.
+	 * @param value the new value of the '<em>Objetive</em>' reference.
 	 * @see #getObjetive()
 	 * @generated
 	 */
-	void setObjetive(String value);
+	void setObjetive(DBody value);
 
 	/**
-	 * Returns the value of the '<em><b>Content</b></em>' attribute.
+	 * Returns the value of the '<em><b>Content</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Content</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Content</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content</em>' attribute.
-	 * @see #setContent(String)
+	 * @return the value of the '<em>Content</em>' reference.
+	 * @see #setContent(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Content()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getContent();
+	DBody getContent();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content</em>' attribute.
+	 * @param value the new value of the '<em>Content</em>' reference.
 	 * @see #getContent()
 	 * @generated
 	 */
-	void setContent(String value);
+	void setContent(DBody value);
 
 	/**
-	 * Returns the value of the '<em><b>Reason</b></em>' attribute.
+	 * Returns the value of the '<em><b>Reason</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reason</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Reason</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reason</em>' attribute.
-	 * @see #setReason(String)
+	 * @return the value of the '<em>Reason</em>' reference.
+	 * @see #setReason(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Reason()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getReason();
+	DBody getReason();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reason</em>' attribute.
+	 * @param value the new value of the '<em>Reason</em>' reference.
 	 * @see #getReason()
 	 * @generated
 	 */
-	void setReason(String value);
+	void setReason(DBody value);
 
 } // VSSSIntroduction

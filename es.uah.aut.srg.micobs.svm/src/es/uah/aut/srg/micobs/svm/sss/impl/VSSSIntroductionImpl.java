@@ -10,15 +10,19 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,86 +40,46 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implements VSSSIntroduction {
+public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroduction {
 	/**
-	 * The default value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
+	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPurpose()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String PURPOSE_EDEFAULT = null;
+	protected DBody purpose;
 
 	/**
-	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPurpose()
-	 * @generated
-	 * @ordered
-	 */
-	protected String purpose = PURPOSE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getObjetive() <em>Objetive</em>}' attribute.
+	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getObjetive()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String OBJETIVE_EDEFAULT = null;
+	protected DBody objetive;
 
 	/**
-	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getObjetive()
-	 * @generated
-	 * @ordered
-	 */
-	protected String objetive = OBJETIVE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getContent() <em>Content</em>}' attribute.
+	 * The cached value of the '{@link #getContent() <em>Content</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContent()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String CONTENT_EDEFAULT = null;
+	protected DBody content;
 
 	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getContent()
-	 * @generated
-	 * @ordered
-	 */
-	protected String content = CONTENT_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getReason() <em>Reason</em>}' attribute.
+	 * The cached value of the '{@link #getReason() <em>Reason</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReason()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String REASON_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getReason() <em>Reason</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getReason()
-	 * @generated
-	 * @ordered
-	 */
-	protected String reason = REASON_EDEFAULT;
+	protected DBody reason;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,7 +105,15 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPurpose() {
+	public DBody getPurpose() {
+		if (purpose != null && purpose.eIsProxy()) {
+			InternalEObject oldPurpose = (InternalEObject)purpose;
+			purpose = (DBody)eResolveProxy(oldPurpose);
+			if (purpose != oldPurpose) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, purpose));
+			}
+		}
 		return purpose;
 	}
 
@@ -150,8 +122,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurpose(String newPurpose) {
-		String oldPurpose = purpose;
+	public DBody basicGetPurpose() {
+		return purpose;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPurpose(DBody newPurpose) {
+		DBody oldPurpose = purpose;
 		purpose = newPurpose;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, purpose));
@@ -162,7 +143,15 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getObjetive() {
+	public DBody getObjetive() {
+		if (objetive != null && objetive.eIsProxy()) {
+			InternalEObject oldObjetive = (InternalEObject)objetive;
+			objetive = (DBody)eResolveProxy(oldObjetive);
+			if (objetive != oldObjetive) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, objetive));
+			}
+		}
 		return objetive;
 	}
 
@@ -171,8 +160,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setObjetive(String newObjetive) {
-		String oldObjetive = objetive;
+	public DBody basicGetObjetive() {
+		return objetive;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setObjetive(DBody newObjetive) {
+		DBody oldObjetive = objetive;
 		objetive = newObjetive;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, objetive));
@@ -183,7 +181,15 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getContent() {
+	public DBody getContent() {
+		if (content != null && content.eIsProxy()) {
+			InternalEObject oldContent = (InternalEObject)content;
+			content = (DBody)eResolveProxy(oldContent);
+			if (content != oldContent) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, content));
+			}
+		}
 		return content;
 	}
 
@@ -192,8 +198,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setContent(String newContent) {
-		String oldContent = content;
+	public DBody basicGetContent() {
+		return content;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContent(DBody newContent) {
+		DBody oldContent = content;
 		content = newContent;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, content));
@@ -204,7 +219,15 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getReason() {
+	public DBody getReason() {
+		if (reason != null && reason.eIsProxy()) {
+			InternalEObject oldReason = (InternalEObject)reason;
+			reason = (DBody)eResolveProxy(oldReason);
+			if (reason != oldReason) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, reason));
+			}
+		}
 		return reason;
 	}
 
@@ -213,8 +236,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReason(String newReason) {
-		String oldReason = reason;
+	public DBody basicGetReason() {
+		return reason;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReason(DBody newReason) {
+		DBody oldReason = reason;
 		reason = newReason;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, reason));
@@ -229,13 +261,17 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
-				return getPurpose();
+				if (resolve) return getPurpose();
+				return basicGetPurpose();
 			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				return getObjetive();
+				if (resolve) return getObjetive();
+				return basicGetObjetive();
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
-				return getContent();
+				if (resolve) return getContent();
+				return basicGetContent();
 			case sssPackage.VSSS_INTRODUCTION__REASON:
-				return getReason();
+				if (resolve) return getReason();
+				return basicGetReason();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -249,16 +285,16 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
-				setPurpose((String)newValue);
+				setPurpose((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				setObjetive((String)newValue);
+				setObjetive((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
-				setContent((String)newValue);
+				setContent((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__REASON:
-				setReason((String)newValue);
+				setReason((DBody)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -273,16 +309,16 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
-				setPurpose(PURPOSE_EDEFAULT);
+				setPurpose((DBody)null);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				setObjetive(OBJETIVE_EDEFAULT);
+				setObjetive((DBody)null);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
-				setContent(CONTENT_EDEFAULT);
+				setContent((DBody)null);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__REASON:
-				setReason(REASON_EDEFAULT);
+				setReason((DBody)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -297,37 +333,15 @@ public class VSSSIntroductionImpl extends MinimalEObjectImpl.Container implement
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
-				return PURPOSE_EDEFAULT == null ? purpose != null : !PURPOSE_EDEFAULT.equals(purpose);
+				return purpose != null;
 			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				return OBJETIVE_EDEFAULT == null ? objetive != null : !OBJETIVE_EDEFAULT.equals(objetive);
+				return objetive != null;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
-				return CONTENT_EDEFAULT == null ? content != null : !CONTENT_EDEFAULT.equals(content);
+				return content != null;
 			case sssPackage.VSSS_INTRODUCTION__REASON:
-				return REASON_EDEFAULT == null ? reason != null : !REASON_EDEFAULT.equals(reason);
+				return reason != null;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
-
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (purpose: ");
-		result.append(purpose);
-		result.append(", objetive: ");
-		result.append(objetive);
-		result.append(", content: ");
-		result.append(content);
-		result.append(", reason: ");
-		result.append(reason);
-		result.append(')');
-		return result.toString();
 	}
 
 } //VSSSIntroductionImpl

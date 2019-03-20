@@ -30,6 +30,15 @@ public interface sssFactory extends EFactory {
 	sssFactory eINSTANCE = es.uah.aut.srg.micobs.svm.sss.impl.sssFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Document</em>'.
+	 * @generated
+	 */
+	VSSSDocument createVSSSDocument();
+
+	/**
 	 * Returns a new object of class '<em>VSSS Introduction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -39,22 +48,22 @@ public interface sssFactory extends EFactory {
 	VSSSIntroduction createVSSSIntroduction();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Applicable Document</em>'.
+	 * Returns a new object of class '<em>VSSS Applicable Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Applicable Document</em>'.
+	 * @return a new object of class '<em>VSSS Applicable Documents</em>'.
 	 * @generated
 	 */
-	VSSSApplicableDocument createVSSSApplicableDocument();
+	VSSSApplicableDocuments createVSSSApplicableDocuments();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Reference Document</em>'.
+	 * Returns a new object of class '<em>VSSS Reference Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Reference Document</em>'.
+	 * @return a new object of class '<em>VSSS Reference Documents</em>'.
 	 * @generated
 	 */
-	VSSSReferenceDocument createVSSSReferenceDocument();
+	VSSSReferenceDocuments createVSSSReferenceDocuments();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Terms Definitions Abbreviations</em>'.
@@ -228,13 +237,13 @@ public interface sssFactory extends EFactory {
 	VSSSSystemSoftwareObservabilityRequirement createVSSSSystemSoftwareObservabilityRequirement();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Verification Validation Integration</em>'.
+	 * Returns a new object of class '<em>VSSS Verification Validation Integration Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Verification Validation Integration</em>'.
+	 * @return a new object of class '<em>VSSS Verification Validation Integration Requirements</em>'.
 	 * @generated
 	 */
-	VSSSVerificationValidationIntegration createVSSSVerificationValidationIntegration();
+	VSSSVerificationValidationIntegrationRequirements createVSSSVerificationValidationIntegrationRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Verification Validation Process Requirement</em>'.
@@ -273,6 +282,15 @@ public interface sssFactory extends EFactory {
 	VSSSValidationRequirement createVSSSValidationRequirement();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Document Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Document Item</em>'.
+	 * @generated
+	 */
+	VSSSDocumentItem createVSSSDocumentItem();
+
+	/**
 	 * Returns a new object of class '<em>VSSS System Models</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -282,22 +300,13 @@ public interface sssFactory extends EFactory {
 	VSSSSystemModels createVSSSSystemModels();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Document</em>'.
+	 * Returns a new object of class '<em>VSSS System Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Document</em>'.
+	 * @return a new object of class '<em>VSSS System Model</em>'.
 	 * @generated
 	 */
-	VSSSDocument createVSSSDocument();
-
-	/**
-	 * Returns a new object of class '<em>VSSS Document Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Document Item</em>'.
-	 * @generated
-	 */
-	VSSSDocumentItem createVSSSDocumentItem();
+	VSSSSystemModel createVSSSSystemModel();
 
 	/**
 	 * Returns the package supported by this factory.

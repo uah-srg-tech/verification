@@ -10,18 +10,19 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.util;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+import es.uah.aut.srg.micobs.doctpl.doc.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
+import es.uah.aut.srg.micobs.doctpl.doc.DSection;
 
-import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.svm.sss.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractSection;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedSection;
 
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentItem;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -84,27 +85,47 @@ public class sssSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
+			case sssPackage.VSSS_DOCUMENT: {
+				VSSSDocument vsssDocument = (VSSSDocument)theEObject;
+				T result = caseVSSSDocument(vsssDocument);
+				if (result == null) result = caseDDocumentTemplate(vsssDocument);
+				if (result == null) result = caseVTraceableDocument(vsssDocument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case sssPackage.VSSS_INTRODUCTION: {
 				VSSSIntroduction vsssIntroduction = (VSSSIntroduction)theEObject;
 				T result = caseVSSSIntroduction(vsssIntroduction);
+				if (result == null) result = caseDSection(vsssIntroduction);
+				if (result == null) result = caseDParagraph(vsssIntroduction);
+				if (result == null) result = caseDBodyContent(vsssIntroduction);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_APPLICABLE_DOCUMENT: {
-				VSSSApplicableDocument vsssApplicableDocument = (VSSSApplicableDocument)theEObject;
-				T result = caseVSSSApplicableDocument(vsssApplicableDocument);
+			case sssPackage.VSSS_APPLICABLE_DOCUMENTS: {
+				VSSSApplicableDocuments vsssApplicableDocuments = (VSSSApplicableDocuments)theEObject;
+				T result = caseVSSSApplicableDocuments(vsssApplicableDocuments);
+				if (result == null) result = caseDSection(vsssApplicableDocuments);
+				if (result == null) result = caseDParagraph(vsssApplicableDocuments);
+				if (result == null) result = caseDBodyContent(vsssApplicableDocuments);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_REFERENCE_DOCUMENT: {
-				VSSSReferenceDocument vsssReferenceDocument = (VSSSReferenceDocument)theEObject;
-				T result = caseVSSSReferenceDocument(vsssReferenceDocument);
+			case sssPackage.VSSS_REFERENCE_DOCUMENTS: {
+				VSSSReferenceDocuments vsssReferenceDocuments = (VSSSReferenceDocuments)theEObject;
+				T result = caseVSSSReferenceDocuments(vsssReferenceDocuments);
+				if (result == null) result = caseDSection(vsssReferenceDocuments);
+				if (result == null) result = caseDParagraph(vsssReferenceDocuments);
+				if (result == null) result = caseDBodyContent(vsssReferenceDocuments);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case sssPackage.VSSS_TERMS_DEFINITIONS_ABBREVIATIONS: {
 				VSSSTermsDefinitionsAbbreviations vsssTermsDefinitionsAbbreviations = (VSSSTermsDefinitionsAbbreviations)theEObject;
 				T result = caseVSSSTermsDefinitionsAbbreviations(vsssTermsDefinitionsAbbreviations);
+				if (result == null) result = caseDSection(vsssTermsDefinitionsAbbreviations);
+				if (result == null) result = caseDParagraph(vsssTermsDefinitionsAbbreviations);
+				if (result == null) result = caseDBodyContent(vsssTermsDefinitionsAbbreviations);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -138,14 +159,18 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: {
 				VSSSGeneralDescription vsssGeneralDescription = (VSSSGeneralDescription)theEObject;
 				T result = caseVSSSGeneralDescription(vsssGeneralDescription);
+				if (result == null) result = caseDSection(vsssGeneralDescription);
+				if (result == null) result = caseDParagraph(vsssGeneralDescription);
+				if (result == null) result = caseDBodyContent(vsssGeneralDescription);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: {
 				VSSSSpecificRequirements vsssSpecificRequirements = (VSSSSpecificRequirements)theEObject;
 				T result = caseVSSSSpecificRequirements(vsssSpecificRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedSection(vsssSpecificRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractSection(vsssSpecificRequirements);
+				if (result == null) result = caseDSection(vsssSpecificRequirements);
+				if (result == null) result = caseDParagraph(vsssSpecificRequirements);
+				if (result == null) result = caseDBodyContent(vsssSpecificRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -253,11 +278,12 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION: {
-				VSSSVerificationValidationIntegration vsssVerificationValidationIntegration = (VSSSVerificationValidationIntegration)theEObject;
-				T result = caseVSSSVerificationValidationIntegration(vsssVerificationValidationIntegration);
-				if (result == null) result = caseVTraceableDocumentFixedSection(vsssVerificationValidationIntegration);
-				if (result == null) result = caseVTraceableDocumentAbstractSection(vsssVerificationValidationIntegration);
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS: {
+				VSSSVerificationValidationIntegrationRequirements vsssVerificationValidationIntegrationRequirements = (VSSSVerificationValidationIntegrationRequirements)theEObject;
+				T result = caseVSSSVerificationValidationIntegrationRequirements(vsssVerificationValidationIntegrationRequirements);
+				if (result == null) result = caseDSection(vsssVerificationValidationIntegrationRequirements);
+				if (result == null) result = caseDParagraph(vsssVerificationValidationIntegrationRequirements);
+				if (result == null) result = caseDBodyContent(vsssVerificationValidationIntegrationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -293,30 +319,46 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SYSTEM_MODELS: {
-				VSSSSystemModels vsssSystemModels = (VSSSSystemModels)theEObject;
-				T result = caseVSSSSystemModels(vsssSystemModels);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case sssPackage.VSSS_DOCUMENT: {
-				VSSSDocument vsssDocument = (VSSSDocument)theEObject;
-				T result = caseVSSSDocument(vsssDocument);
-				if (result == null) result = caseVTraceableDocument(vsssDocument);
-				if (result == null) result = caseMCommonPackageElement(vsssDocument);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case sssPackage.VSSS_DOCUMENT_ITEM: {
 				VSSSDocumentItem vsssDocumentItem = (VSSSDocumentItem)theEObject;
 				T result = caseVSSSDocumentItem(vsssDocumentItem);
-				if (result == null) result = caseVTraceableDocumentItem(vsssDocumentItem);
-				if (result == null) result = caseMCommonReferenceableObj(vsssDocumentItem);
+				if (result == null) result = caseVTraceableDocumentAbstractItem(vsssDocumentItem);
+				if (result == null) result = caseDBody(vsssDocumentItem);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_SYSTEM_MODELS: {
+				VSSSSystemModels vsssSystemModels = (VSSSSystemModels)theEObject;
+				T result = caseVSSSSystemModels(vsssSystemModels);
+				if (result == null) result = caseDSection(vsssSystemModels);
+				if (result == null) result = caseDParagraph(vsssSystemModels);
+				if (result == null) result = caseDBodyContent(vsssSystemModels);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_SYSTEM_MODEL: {
+				VSSSSystemModel vsssSystemModel = (VSSSSystemModel)theEObject;
+				T result = caseVSSSSystemModel(vsssSystemModel);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			default: return defaultCase(theEObject);
 		}
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Document</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSDocument(VSSSDocument object) {
+		return null;
 	}
 
 	/**
@@ -335,32 +377,32 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Applicable Document</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Applicable Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Applicable Document</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Applicable Documents</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSApplicableDocument(VSSSApplicableDocument object) {
+	public T caseVSSSApplicableDocuments(VSSSApplicableDocuments object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reference Document</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reference Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Reference Document</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Reference Documents</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSReferenceDocument(VSSSReferenceDocument object) {
+	public T caseVSSSReferenceDocuments(VSSSReferenceDocuments object) {
 		return null;
 	}
 
@@ -665,17 +707,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Validation Integration</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Validation Integration Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Validation Integration</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Validation Integration Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSVerificationValidationIntegration(VSSSVerificationValidationIntegration object) {
+	public T caseVSSSVerificationValidationIntegrationRequirements(VSSSVerificationValidationIntegrationRequirements object) {
 		return null;
 	}
 
@@ -740,36 +782,6 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Models</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS System Models</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSSystemModels(VSSSSystemModels object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Document</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Document</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSDocument(VSSSDocument object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSSS Document Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -785,32 +797,107 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Section</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Models</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Section</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS System Models</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVTraceableDocumentAbstractSection(VTraceableDocumentAbstractSection object) {
+	public T caseVSSSSystemModels(VSSSSystemModels object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Section</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Model</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Section</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS System Model</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVTraceableDocumentFixedSection(VTraceableDocumentFixedSection object) {
+	public T caseVSSSSystemModel(VSSSSystemModel object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDDocumentTemplate(DDocumentTemplate object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTraceableDocument(VTraceableDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DBody Content</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DBody Content</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDBodyContent(DBodyContent object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DParagraph</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DParagraph</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDParagraph(DParagraph object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DSection</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DSection</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDSection(DSection object) {
 		return null;
 	}
 
@@ -845,62 +932,32 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMCommonPackageElement(MCommonPackageElement object) {
+	public T caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>DBody</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>DBody</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVTraceableDocument(VTraceableDocument object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseMCommonReferenceableObj(MCommonReferenceableObj object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Item</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Item</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVTraceableDocumentItem(VTraceableDocumentItem object) {
+	public T caseDBody(DBody object) {
 		return null;
 	}
 

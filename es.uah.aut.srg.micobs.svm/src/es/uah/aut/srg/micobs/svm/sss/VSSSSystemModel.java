@@ -10,19 +10,17 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSSS Document Item</b></em>'.
+ * A representation of the model object '<em><b>VSSS System Model</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem()
+ * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModel()
  * @model
  * @generated
  */
-public interface VSSSDocumentItem extends VTraceableDocumentAbstractItem, DBody {
-} // VSSSDocumentItem
+public interface VSSSSystemModel extends EObject {
+} // VSSSSystemModel
