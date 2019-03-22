@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getItems <em>Items</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getDocument <em>Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getTDocument <em>TDocument</em>}</li>
  * </ul>
  *
  * @generated
@@ -163,9 +163,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTraceableDocument getDocument() {
-		VTraceableDocument document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (VTraceableDocument)eResolveProxy((InternalEObject)document) : document;
+	public VTraceableDocument getTDocument() {
+		VTraceableDocument tDocument = basicGetTDocument();
+		return tDocument != null && tDocument.eIsProxy() ? (VTraceableDocument)eResolveProxy((InternalEObject)tDocument) : tDocument;
 	}
 
 	/**
@@ -173,8 +173,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTraceableDocument basicGetDocument() {
-		// TODO: implement this method to return the 'Document' reference
+	public VTraceableDocument basicGetTDocument() {
+		// TODO: implement this method to return the 'TDocument' reference
 		// -> do not perform proxy resolution
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
@@ -185,8 +185,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDocument(VTraceableDocument newDocument) {
-		// TODO: implement this method to set the 'Document' reference
+	public void setTDocument(VTraceableDocument newTDocument) {
+		// TODO: implement this method to set the 'TDocument' reference
 		// Ensure that you remove @generated or mark it @generated NOT
 		throw new UnsupportedOperationException();
 	}
@@ -205,9 +205,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 				return getPrefix();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return getItems();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT:
+				if (resolve) return getTDocument();
+				return basicGetTDocument();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -231,8 +231,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 				getItems().clear();
 				getItems().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOCUMENT:
-				setDocument((VTraceableDocument)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT:
+				setTDocument((VTraceableDocument)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -255,8 +255,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				getItems().clear();
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOCUMENT:
-				setDocument((VTraceableDocument)null);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT:
+				setTDocument((VTraceableDocument)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -276,8 +276,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return !getItems().isEmpty();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOCUMENT:
-				return basicGetDocument() != null;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT:
+				return basicGetTDocument() != null;
 		}
 		return super.eIsSet(featureID);
 	}

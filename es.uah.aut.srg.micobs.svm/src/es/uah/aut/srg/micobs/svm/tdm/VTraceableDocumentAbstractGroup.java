@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getPrefix <em>Prefix</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getItems <em>Items</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getDocument <em>Document</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getTDocument <em>TDocument</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup()
@@ -103,29 +103,29 @@ public interface VTraceableDocumentAbstractGroup extends EObject {
 	EList<VTraceableDocumentAbstractItem> getItems();
 
 	/**
-	 * Returns the value of the '<em><b>Document</b></em>' reference.
+	 * Returns the value of the '<em><b>TDocument</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Document</em>' reference isn't clear,
+	 * If the meaning of the '<em>TDocument</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Document</em>' reference.
-	 * @see #setDocument(VTraceableDocument)
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_Document()
+	 * @return the value of the '<em>TDocument</em>' reference.
+	 * @see #setTDocument(VTraceableDocument)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_TDocument()
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	VTraceableDocument getDocument();
+	VTraceableDocument getTDocument();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getDocument <em>Document</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getTDocument <em>TDocument</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Document</em>' reference.
-	 * @see #getDocument()
+	 * @param value the new value of the '<em>TDocument</em>' reference.
+	 * @see #getTDocument()
 	 * @generated
 	 */
-	void setDocument(VTraceableDocument value);
+	void setTDocument(VTraceableDocument value);
 
 } // VTraceableDocumentAbstractGroup
