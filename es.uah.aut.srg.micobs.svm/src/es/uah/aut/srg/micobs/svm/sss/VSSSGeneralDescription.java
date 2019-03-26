@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,135 +32,135 @@ import es.uah.aut.srg.micobs.doctpl.doc.DSection;
  * @model
  * @generated
  */
-public interface VSSSGeneralDescription extends DSection {
+public interface VSSSGeneralDescription extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>Product Perspective</b></em>' reference.
+	 * Returns the value of the '<em><b>Product Perspective</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Product Perspective</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Product Perspective</em>' reference.
-	 * @see #setProductPerspective(DBody)
+	 * @return the value of the '<em>Product Perspective</em>' containment reference.
+	 * @see #setProductPerspective(VSSSProductPerspective)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_ProductPerspective()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getProductPerspective();
+	VSSSProductPerspective getProductPerspective();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Product Perspective</em>' reference.
+	 * @param value the new value of the '<em>Product Perspective</em>' containment reference.
 	 * @see #getProductPerspective()
 	 * @generated
 	 */
-	void setProductPerspective(DBody value);
+	void setProductPerspective(VSSSProductPerspective value);
 
 	/**
-	 * Returns the value of the '<em><b>General Capabilites</b></em>' reference.
+	 * Returns the value of the '<em><b>General Capabilites</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>General Capabilites</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Capabilites</em>' reference.
-	 * @see #setGeneralCapabilites(DBody)
+	 * @return the value of the '<em>General Capabilites</em>' containment reference.
+	 * @see #setGeneralCapabilites(VSSSGeneralCapabilites)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilites()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getGeneralCapabilites();
+	VSSSGeneralCapabilites getGeneralCapabilites();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>General Capabilites</em>' reference.
+	 * @param value the new value of the '<em>General Capabilites</em>' containment reference.
 	 * @see #getGeneralCapabilites()
 	 * @generated
 	 */
-	void setGeneralCapabilites(DBody value);
+	void setGeneralCapabilites(VSSSGeneralCapabilites value);
 
 	/**
-	 * Returns the value of the '<em><b>General Constraints</b></em>' reference.
+	 * Returns the value of the '<em><b>General Constraints</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>General Constraints</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Constraints</em>' reference.
-	 * @see #setGeneralConstraints(DBody)
+	 * @return the value of the '<em>General Constraints</em>' containment reference.
+	 * @see #setGeneralConstraints(VSSSGeneralConstraints)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralConstraints()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getGeneralConstraints();
+	VSSSGeneralConstraints getGeneralConstraints();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>General Constraints</em>' reference.
+	 * @param value the new value of the '<em>General Constraints</em>' containment reference.
 	 * @see #getGeneralConstraints()
 	 * @generated
 	 */
-	void setGeneralConstraints(DBody value);
+	void setGeneralConstraints(VSSSGeneralConstraints value);
 
 	/**
-	 * Returns the value of the '<em><b>Operational Environment</b></em>' reference.
+	 * Returns the value of the '<em><b>Operational Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Operational Environment</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Operational Environment</em>' reference.
-	 * @see #setOperationalEnvironment(DBody)
+	 * @return the value of the '<em>Operational Environment</em>' containment reference.
+	 * @see #setOperationalEnvironment(VSSSOperationalEnvironment)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_OperationalEnvironment()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getOperationalEnvironment();
+	VSSSOperationalEnvironment getOperationalEnvironment();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Operational Environment</em>' reference.
+	 * @param value the new value of the '<em>Operational Environment</em>' containment reference.
 	 * @see #getOperationalEnvironment()
 	 * @generated
 	 */
-	void setOperationalEnvironment(DBody value);
+	void setOperationalEnvironment(VSSSOperationalEnvironment value);
 
 	/**
-	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' reference.
+	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Assumptions Dependencies</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Assumptions Dependencies</em>' reference.
-	 * @see #setAssumptionsDependencies(DBody)
+	 * @return the value of the '<em>Assumptions Dependencies</em>' containment reference.
+	 * @see #setAssumptionsDependencies(VSSSAssumptionsDependencies)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_AssumptionsDependencies()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getAssumptionsDependencies();
+	VSSSAssumptionsDependencies getAssumptionsDependencies();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Assumptions Dependencies</em>' reference.
+	 * @param value the new value of the '<em>Assumptions Dependencies</em>' containment reference.
 	 * @see #getAssumptionsDependencies()
 	 * @generated
 	 */
-	void setAssumptionsDependencies(DBody value);
+	void setAssumptionsDependencies(VSSSAssumptionsDependencies value);
 
 } // VSSSGeneralDescription

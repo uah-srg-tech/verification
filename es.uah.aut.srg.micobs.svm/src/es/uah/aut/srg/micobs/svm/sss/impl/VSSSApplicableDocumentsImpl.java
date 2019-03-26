@@ -11,8 +11,8 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -42,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSApplicableDocumentsImpl extends DSectionImpl implements VSSSApplicableDocuments {
+public class VSSSApplicableDocumentsImpl extends DFixedSectionImpl implements VSSSApplicableDocuments {
 	/**
 	 * The cached value of the '{@link #getApplicableDocuments() <em>Applicable Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -156,6 +156,11 @@ public class VSSSApplicableDocumentsImpl extends DSectionImpl implements VSSSApp
 				return applicableDocuments != null && !applicableDocuments.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSApplicableDocumentsImpl

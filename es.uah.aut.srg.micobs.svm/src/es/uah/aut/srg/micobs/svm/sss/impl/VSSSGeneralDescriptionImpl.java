@@ -10,15 +10,22 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
-
+import es.uah.aut.srg.micobs.svm.sss.VSSSAssumptionsDependencies;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralCapabilites;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralConstraints;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
+import es.uah.aut.srg.micobs.svm.sss.VSSSOperationalEnvironment;
+import es.uah.aut.srg.micobs.svm.sss.VSSSProductPerspective;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -41,56 +48,56 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGeneralDescription {
+public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSSSGeneralDescription {
 	/**
-	 * The cached value of the '{@link #getProductPerspective() <em>Product Perspective</em>}' reference.
+	 * The cached value of the '{@link #getProductPerspective() <em>Product Perspective</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getProductPerspective()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody productPerspective;
+	protected VSSSProductPerspective productPerspective;
 
 	/**
-	 * The cached value of the '{@link #getGeneralCapabilites() <em>General Capabilites</em>}' reference.
+	 * The cached value of the '{@link #getGeneralCapabilites() <em>General Capabilites</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGeneralCapabilites()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody generalCapabilites;
+	protected VSSSGeneralCapabilites generalCapabilites;
 
 	/**
-	 * The cached value of the '{@link #getGeneralConstraints() <em>General Constraints</em>}' reference.
+	 * The cached value of the '{@link #getGeneralConstraints() <em>General Constraints</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGeneralConstraints()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody generalConstraints;
+	protected VSSSGeneralConstraints generalConstraints;
 
 	/**
-	 * The cached value of the '{@link #getOperationalEnvironment() <em>Operational Environment</em>}' reference.
+	 * The cached value of the '{@link #getOperationalEnvironment() <em>Operational Environment</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getOperationalEnvironment()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody operationalEnvironment;
+	protected VSSSOperationalEnvironment operationalEnvironment;
 
 	/**
-	 * The cached value of the '{@link #getAssumptionsDependencies() <em>Assumptions Dependencies</em>}' reference.
+	 * The cached value of the '{@link #getAssumptionsDependencies() <em>Assumptions Dependencies</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAssumptionsDependencies()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody assumptionsDependencies;
+	protected VSSSAssumptionsDependencies assumptionsDependencies;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -116,15 +123,7 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getProductPerspective() {
-		if (productPerspective != null && productPerspective.eIsProxy()) {
-			InternalEObject oldProductPerspective = (InternalEObject)productPerspective;
-			productPerspective = (DBody)eResolveProxy(oldProductPerspective);
-			if (productPerspective != oldProductPerspective) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, oldProductPerspective, productPerspective));
-			}
-		}
+	public VSSSProductPerspective getProductPerspective() {
 		return productPerspective;
 	}
 
@@ -133,36 +132,41 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetProductPerspective() {
-		return productPerspective;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setProductPerspective(DBody newProductPerspective) {
-		DBody oldProductPerspective = productPerspective;
+	public NotificationChain basicSetProductPerspective(VSSSProductPerspective newProductPerspective, NotificationChain msgs) {
+		VSSSProductPerspective oldProductPerspective = productPerspective;
 		productPerspective = newProductPerspective;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, oldProductPerspective, productPerspective));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DBody getGeneralCapabilites() {
-		if (generalCapabilites != null && generalCapabilites.eIsProxy()) {
-			InternalEObject oldGeneralCapabilites = (InternalEObject)generalCapabilites;
-			generalCapabilites = (DBody)eResolveProxy(oldGeneralCapabilites);
-			if (generalCapabilites != oldGeneralCapabilites) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, oldGeneralCapabilites, generalCapabilites));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, oldProductPerspective, newProductPerspective);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProductPerspective(VSSSProductPerspective newProductPerspective) {
+		if (newProductPerspective != productPerspective) {
+			NotificationChain msgs = null;
+			if (productPerspective != null)
+				msgs = ((InternalEObject)productPerspective).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, null, msgs);
+			if (newProductPerspective != null)
+				msgs = ((InternalEObject)newProductPerspective).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, null, msgs);
+			msgs = basicSetProductPerspective(newProductPerspective, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, newProductPerspective, newProductPerspective));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSGeneralCapabilites getGeneralCapabilites() {
 		return generalCapabilites;
 	}
 
@@ -171,36 +175,41 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetGeneralCapabilites() {
-		return generalCapabilites;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGeneralCapabilites(DBody newGeneralCapabilites) {
-		DBody oldGeneralCapabilites = generalCapabilites;
+	public NotificationChain basicSetGeneralCapabilites(VSSSGeneralCapabilites newGeneralCapabilites, NotificationChain msgs) {
+		VSSSGeneralCapabilites oldGeneralCapabilites = generalCapabilites;
 		generalCapabilites = newGeneralCapabilites;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, oldGeneralCapabilites, generalCapabilites));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DBody getGeneralConstraints() {
-		if (generalConstraints != null && generalConstraints.eIsProxy()) {
-			InternalEObject oldGeneralConstraints = (InternalEObject)generalConstraints;
-			generalConstraints = (DBody)eResolveProxy(oldGeneralConstraints);
-			if (generalConstraints != oldGeneralConstraints) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, oldGeneralConstraints, generalConstraints));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, oldGeneralCapabilites, newGeneralCapabilites);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGeneralCapabilites(VSSSGeneralCapabilites newGeneralCapabilites) {
+		if (newGeneralCapabilites != generalCapabilites) {
+			NotificationChain msgs = null;
+			if (generalCapabilites != null)
+				msgs = ((InternalEObject)generalCapabilites).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, null, msgs);
+			if (newGeneralCapabilites != null)
+				msgs = ((InternalEObject)newGeneralCapabilites).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, null, msgs);
+			msgs = basicSetGeneralCapabilites(newGeneralCapabilites, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, newGeneralCapabilites, newGeneralCapabilites));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSGeneralConstraints getGeneralConstraints() {
 		return generalConstraints;
 	}
 
@@ -209,36 +218,41 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetGeneralConstraints() {
-		return generalConstraints;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setGeneralConstraints(DBody newGeneralConstraints) {
-		DBody oldGeneralConstraints = generalConstraints;
+	public NotificationChain basicSetGeneralConstraints(VSSSGeneralConstraints newGeneralConstraints, NotificationChain msgs) {
+		VSSSGeneralConstraints oldGeneralConstraints = generalConstraints;
 		generalConstraints = newGeneralConstraints;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, oldGeneralConstraints, generalConstraints));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DBody getOperationalEnvironment() {
-		if (operationalEnvironment != null && operationalEnvironment.eIsProxy()) {
-			InternalEObject oldOperationalEnvironment = (InternalEObject)operationalEnvironment;
-			operationalEnvironment = (DBody)eResolveProxy(oldOperationalEnvironment);
-			if (operationalEnvironment != oldOperationalEnvironment) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, oldOperationalEnvironment, operationalEnvironment));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, oldGeneralConstraints, newGeneralConstraints);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGeneralConstraints(VSSSGeneralConstraints newGeneralConstraints) {
+		if (newGeneralConstraints != generalConstraints) {
+			NotificationChain msgs = null;
+			if (generalConstraints != null)
+				msgs = ((InternalEObject)generalConstraints).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, null, msgs);
+			if (newGeneralConstraints != null)
+				msgs = ((InternalEObject)newGeneralConstraints).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, null, msgs);
+			msgs = basicSetGeneralConstraints(newGeneralConstraints, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, newGeneralConstraints, newGeneralConstraints));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSOperationalEnvironment getOperationalEnvironment() {
 		return operationalEnvironment;
 	}
 
@@ -247,36 +261,41 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetOperationalEnvironment() {
-		return operationalEnvironment;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setOperationalEnvironment(DBody newOperationalEnvironment) {
-		DBody oldOperationalEnvironment = operationalEnvironment;
+	public NotificationChain basicSetOperationalEnvironment(VSSSOperationalEnvironment newOperationalEnvironment, NotificationChain msgs) {
+		VSSSOperationalEnvironment oldOperationalEnvironment = operationalEnvironment;
 		operationalEnvironment = newOperationalEnvironment;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, oldOperationalEnvironment, operationalEnvironment));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DBody getAssumptionsDependencies() {
-		if (assumptionsDependencies != null && assumptionsDependencies.eIsProxy()) {
-			InternalEObject oldAssumptionsDependencies = (InternalEObject)assumptionsDependencies;
-			assumptionsDependencies = (DBody)eResolveProxy(oldAssumptionsDependencies);
-			if (assumptionsDependencies != oldAssumptionsDependencies) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, oldAssumptionsDependencies, assumptionsDependencies));
-			}
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, oldOperationalEnvironment, newOperationalEnvironment);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setOperationalEnvironment(VSSSOperationalEnvironment newOperationalEnvironment) {
+		if (newOperationalEnvironment != operationalEnvironment) {
+			NotificationChain msgs = null;
+			if (operationalEnvironment != null)
+				msgs = ((InternalEObject)operationalEnvironment).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, null, msgs);
+			if (newOperationalEnvironment != null)
+				msgs = ((InternalEObject)newOperationalEnvironment).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, null, msgs);
+			msgs = basicSetOperationalEnvironment(newOperationalEnvironment, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, newOperationalEnvironment, newOperationalEnvironment));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSAssumptionsDependencies getAssumptionsDependencies() {
 		return assumptionsDependencies;
 	}
 
@@ -285,20 +304,55 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetAssumptionsDependencies() {
-		return assumptionsDependencies;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setAssumptionsDependencies(DBody newAssumptionsDependencies) {
-		DBody oldAssumptionsDependencies = assumptionsDependencies;
+	public NotificationChain basicSetAssumptionsDependencies(VSSSAssumptionsDependencies newAssumptionsDependencies, NotificationChain msgs) {
+		VSSSAssumptionsDependencies oldAssumptionsDependencies = assumptionsDependencies;
 		assumptionsDependencies = newAssumptionsDependencies;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, oldAssumptionsDependencies, assumptionsDependencies));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, oldAssumptionsDependencies, newAssumptionsDependencies);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAssumptionsDependencies(VSSSAssumptionsDependencies newAssumptionsDependencies) {
+		if (newAssumptionsDependencies != assumptionsDependencies) {
+			NotificationChain msgs = null;
+			if (assumptionsDependencies != null)
+				msgs = ((InternalEObject)assumptionsDependencies).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, null, msgs);
+			if (newAssumptionsDependencies != null)
+				msgs = ((InternalEObject)newAssumptionsDependencies).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, null, msgs);
+			msgs = basicSetAssumptionsDependencies(newAssumptionsDependencies, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, newAssumptionsDependencies, newAssumptionsDependencies));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
+				return basicSetProductPerspective(null, msgs);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
+				return basicSetGeneralCapabilites(null, msgs);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
+				return basicSetGeneralConstraints(null, msgs);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
+				return basicSetOperationalEnvironment(null, msgs);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
+				return basicSetAssumptionsDependencies(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -310,20 +364,15 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
-				if (resolve) return getProductPerspective();
-				return basicGetProductPerspective();
+				return getProductPerspective();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				if (resolve) return getGeneralCapabilites();
-				return basicGetGeneralCapabilites();
+				return getGeneralCapabilites();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
-				if (resolve) return getGeneralConstraints();
-				return basicGetGeneralConstraints();
+				return getGeneralConstraints();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
-				if (resolve) return getOperationalEnvironment();
-				return basicGetOperationalEnvironment();
+				return getOperationalEnvironment();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
-				if (resolve) return getAssumptionsDependencies();
-				return basicGetAssumptionsDependencies();
+				return getAssumptionsDependencies();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -337,19 +386,19 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
-				setProductPerspective((DBody)newValue);
+				setProductPerspective((VSSSProductPerspective)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				setGeneralCapabilites((DBody)newValue);
+				setGeneralCapabilites((VSSSGeneralCapabilites)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
-				setGeneralConstraints((DBody)newValue);
+				setGeneralConstraints((VSSSGeneralConstraints)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
-				setOperationalEnvironment((DBody)newValue);
+				setOperationalEnvironment((VSSSOperationalEnvironment)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
-				setAssumptionsDependencies((DBody)newValue);
+				setAssumptionsDependencies((VSSSAssumptionsDependencies)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -364,19 +413,19 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
-				setProductPerspective((DBody)null);
+				setProductPerspective((VSSSProductPerspective)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				setGeneralCapabilites((DBody)null);
+				setGeneralCapabilites((VSSSGeneralCapabilites)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
-				setGeneralConstraints((DBody)null);
+				setGeneralConstraints((VSSSGeneralConstraints)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
-				setOperationalEnvironment((DBody)null);
+				setOperationalEnvironment((VSSSOperationalEnvironment)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
-				setAssumptionsDependencies((DBody)null);
+				setAssumptionsDependencies((VSSSAssumptionsDependencies)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -402,6 +451,22 @@ public class VSSSGeneralDescriptionImpl extends DSectionImpl implements VSSSGene
 				return assumptionsDependencies != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getProductPerspective());
+		subsections.add((DAbstractSection) getGeneralCapabilites());
+		subsections.add((DAbstractSection) getGeneralConstraints());
+		subsections.add((DAbstractSection) getOperationalEnvironment());
+		subsections.add((DAbstractSection) getAssumptionsDependencies());
+		return subsections;
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSGeneralDescriptionImpl

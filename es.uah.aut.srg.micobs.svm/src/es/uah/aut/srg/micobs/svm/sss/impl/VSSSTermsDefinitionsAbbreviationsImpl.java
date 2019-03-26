@@ -10,7 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSAbbreviation;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDefinition;
@@ -45,7 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSTermsDefinitionsAbbreviationsImpl extends DSectionImpl implements VSSSTermsDefinitionsAbbreviations {
+public class VSSSTermsDefinitionsAbbreviationsImpl extends DFixedSectionImpl implements VSSSTermsDefinitionsAbbreviations {
 	/**
 	 * The cached value of the '{@link #getTerms() <em>Terms</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -229,6 +230,11 @@ public class VSSSTermsDefinitionsAbbreviationsImpl extends DSectionImpl implemen
 				return abbreviations != null && !abbreviations.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSTermsDefinitionsAbbreviationsImpl

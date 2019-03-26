@@ -10,9 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -42,7 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSReferenceDocumentsImpl extends DSectionImpl implements VSSSReferenceDocuments {
+public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSSSReferenceDocuments {
 	/**
 	 * The cached value of the '{@link #getReferenceDocuments() <em>Reference Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -156,6 +157,11 @@ public class VSSSReferenceDocumentsImpl extends DSectionImpl implements VSSSRefe
 				return referenceDocuments != null && !referenceDocuments.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSReferenceDocumentsImpl

@@ -111,6 +111,51 @@ public interface sssFactory extends EFactory {
 	VSSSGeneralDescription createVSSSGeneralDescription();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Product Perspective</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Product Perspective</em>'.
+	 * @generated
+	 */
+	VSSSProductPerspective createVSSSProductPerspective();
+
+	/**
+	 * Returns a new object of class '<em>VSSS General Capabilites</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS General Capabilites</em>'.
+	 * @generated
+	 */
+	VSSSGeneralCapabilites createVSSSGeneralCapabilites();
+
+	/**
+	 * Returns a new object of class '<em>VSSS General Constraints</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS General Constraints</em>'.
+	 * @generated
+	 */
+	VSSSGeneralConstraints createVSSSGeneralConstraints();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Operational Environment</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Operational Environment</em>'.
+	 * @generated
+	 */
+	VSSSOperationalEnvironment createVSSSOperationalEnvironment();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Assumptions Dependencies</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Assumptions Dependencies</em>'.
+	 * @generated
+	 */
+	VSSSAssumptionsDependencies createVSSSAssumptionsDependencies();
+
+	/**
 	 * Returns a new object of class '<em>VSSS Specific Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

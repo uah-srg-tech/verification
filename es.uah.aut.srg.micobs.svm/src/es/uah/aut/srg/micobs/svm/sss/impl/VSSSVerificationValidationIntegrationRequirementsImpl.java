@@ -10,7 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirement;
@@ -22,7 +24,7 @@ import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -47,7 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSVerificationValidationIntegrationRequirementsImpl extends DSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
+public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixedSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
 	/**
 	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -266,6 +268,21 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DSect
 				return verification != null && !verification.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getVerificationValidationProcess());
+		subsections.add((DAbstractSection) getValidationApproach());
+		subsections.add((DAbstractSection) getValidation());
+		subsections.add((DAbstractSection) getVerification());
+		return subsections;
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSVerificationValidationIntegrationRequirementsImpl

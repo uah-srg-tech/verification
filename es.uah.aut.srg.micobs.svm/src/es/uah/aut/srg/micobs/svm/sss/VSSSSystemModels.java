@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -30,9 +30,9 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSSystemModels extends DSection {
+public interface VSSSSystemModels extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>System Models</b></em>' reference list.
+	 * Returns the value of the '<em><b>System Models</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -40,9 +40,9 @@ public interface VSSSSystemModels extends DSection {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>System Models</em>' reference list.
+	 * @return the value of the '<em>System Models</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModels_SystemModels()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSSSSystemModel> getSystemModels();

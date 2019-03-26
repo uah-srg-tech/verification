@@ -11,14 +11,15 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -40,9 +41,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroduction {
+public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntroduction {
 	/**
-	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' reference.
+	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPurpose()
@@ -52,7 +53,7 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	protected DBody purpose;
 
 	/**
-	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' reference.
+	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getObjetive()
@@ -62,7 +63,7 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	protected DBody objetive;
 
 	/**
-	 * The cached value of the '{@link #getContent() <em>Content</em>}' reference.
+	 * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getContent()
@@ -72,7 +73,7 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	protected DBody content;
 
 	/**
-	 * The cached value of the '{@link #getReason() <em>Reason</em>}' reference.
+	 * The cached value of the '{@link #getReason() <em>Reason</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReason()
@@ -106,14 +107,6 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public DBody getPurpose() {
-		if (purpose != null && purpose.eIsProxy()) {
-			InternalEObject oldPurpose = (InternalEObject)purpose;
-			purpose = (DBody)eResolveProxy(oldPurpose);
-			if (purpose != oldPurpose) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, purpose));
-			}
-		}
 		return purpose;
 	}
 
@@ -122,8 +115,14 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetPurpose() {
-		return purpose;
+	public NotificationChain basicSetPurpose(DBody newPurpose, NotificationChain msgs) {
+		DBody oldPurpose = purpose;
+		purpose = newPurpose;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, newPurpose);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -132,10 +131,17 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public void setPurpose(DBody newPurpose) {
-		DBody oldPurpose = purpose;
-		purpose = newPurpose;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__PURPOSE, oldPurpose, purpose));
+		if (newPurpose != purpose) {
+			NotificationChain msgs = null;
+			if (purpose != null)
+				msgs = ((InternalEObject)purpose).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__PURPOSE, null, msgs);
+			if (newPurpose != null)
+				msgs = ((InternalEObject)newPurpose).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__PURPOSE, null, msgs);
+			msgs = basicSetPurpose(newPurpose, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__PURPOSE, newPurpose, newPurpose));
 	}
 
 	/**
@@ -144,14 +150,6 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public DBody getObjetive() {
-		if (objetive != null && objetive.eIsProxy()) {
-			InternalEObject oldObjetive = (InternalEObject)objetive;
-			objetive = (DBody)eResolveProxy(oldObjetive);
-			if (objetive != oldObjetive) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, objetive));
-			}
-		}
 		return objetive;
 	}
 
@@ -160,8 +158,14 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetObjetive() {
-		return objetive;
+	public NotificationChain basicSetObjetive(DBody newObjetive, NotificationChain msgs) {
+		DBody oldObjetive = objetive;
+		objetive = newObjetive;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, newObjetive);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -170,10 +174,17 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public void setObjetive(DBody newObjetive) {
-		DBody oldObjetive = objetive;
-		objetive = newObjetive;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, objetive));
+		if (newObjetive != objetive) {
+			NotificationChain msgs = null;
+			if (objetive != null)
+				msgs = ((InternalEObject)objetive).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJETIVE, null, msgs);
+			if (newObjetive != null)
+				msgs = ((InternalEObject)newObjetive).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJETIVE, null, msgs);
+			msgs = basicSetObjetive(newObjetive, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, newObjetive, newObjetive));
 	}
 
 	/**
@@ -182,14 +193,6 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public DBody getContent() {
-		if (content != null && content.eIsProxy()) {
-			InternalEObject oldContent = (InternalEObject)content;
-			content = (DBody)eResolveProxy(oldContent);
-			if (content != oldContent) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, content));
-			}
-		}
 		return content;
 	}
 
@@ -198,8 +201,14 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetContent() {
-		return content;
+	public NotificationChain basicSetContent(DBody newContent, NotificationChain msgs) {
+		DBody oldContent = content;
+		content = newContent;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, newContent);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -208,10 +217,17 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public void setContent(DBody newContent) {
-		DBody oldContent = content;
-		content = newContent;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__CONTENT, oldContent, content));
+		if (newContent != content) {
+			NotificationChain msgs = null;
+			if (content != null)
+				msgs = ((InternalEObject)content).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__CONTENT, null, msgs);
+			if (newContent != null)
+				msgs = ((InternalEObject)newContent).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__CONTENT, null, msgs);
+			msgs = basicSetContent(newContent, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__CONTENT, newContent, newContent));
 	}
 
 	/**
@@ -220,14 +236,6 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public DBody getReason() {
-		if (reason != null && reason.eIsProxy()) {
-			InternalEObject oldReason = (InternalEObject)reason;
-			reason = (DBody)eResolveProxy(oldReason);
-			if (reason != oldReason) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, reason));
-			}
-		}
 		return reason;
 	}
 
@@ -236,8 +244,14 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetReason() {
-		return reason;
+	public NotificationChain basicSetReason(DBody newReason, NotificationChain msgs) {
+		DBody oldReason = reason;
+		reason = newReason;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, newReason);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -246,10 +260,37 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	 * @generated
 	 */
 	public void setReason(DBody newReason) {
-		DBody oldReason = reason;
-		reason = newReason;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__REASON, oldReason, reason));
+		if (newReason != reason) {
+			NotificationChain msgs = null;
+			if (reason != null)
+				msgs = ((InternalEObject)reason).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__REASON, null, msgs);
+			if (newReason != null)
+				msgs = ((InternalEObject)newReason).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__REASON, null, msgs);
+			msgs = basicSetReason(newReason, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__REASON, newReason, newReason));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
+				return basicSetPurpose(null, msgs);
+			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
+				return basicSetObjetive(null, msgs);
+			case sssPackage.VSSS_INTRODUCTION__CONTENT:
+				return basicSetContent(null, msgs);
+			case sssPackage.VSSS_INTRODUCTION__REASON:
+				return basicSetReason(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -261,17 +302,13 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
-				if (resolve) return getPurpose();
-				return basicGetPurpose();
+				return getPurpose();
 			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				if (resolve) return getObjetive();
-				return basicGetObjetive();
+				return getObjetive();
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
-				if (resolve) return getContent();
-				return basicGetContent();
+				return getContent();
 			case sssPackage.VSSS_INTRODUCTION__REASON:
-				if (resolve) return getReason();
-				return basicGetReason();
+				return getReason();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -342,6 +379,11 @@ public class VSSSIntroductionImpl extends DSectionImpl implements VSSSIntroducti
 				return reason != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSIntroductionImpl

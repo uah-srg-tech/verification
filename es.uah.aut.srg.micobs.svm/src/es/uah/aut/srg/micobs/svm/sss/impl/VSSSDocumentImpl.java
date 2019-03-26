@@ -10,6 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DDocumentTemplateImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
@@ -31,7 +36,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -58,7 +63,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getGroups <em>Groups</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getIntroduction <em>Introduction</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getReferenceDocumentsSeciton <em>Reference Documents Seciton</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getTermsDefinitionsAbbreviations <em>Terms Definitions Abbreviations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getGeneralDescription <em>General Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSpecificRequirements <em>Specific Requirements</em>}</li>
@@ -200,14 +205,14 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	protected VSSSApplicableDocuments applicableDocumentsSection;
 
 	/**
-	 * The cached value of the '{@link #getReferenceDocumentsSeciton() <em>Reference Documents Seciton</em>}' containment reference.
+	 * The cached value of the '{@link #getReferenceDocumentsSection() <em>Reference Documents Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getReferenceDocumentsSeciton()
+	 * @see #getReferenceDocumentsSection()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSReferenceDocuments referenceDocumentsSeciton;
+	protected VSSSReferenceDocuments referenceDocumentsSection;
 
 	/**
 	 * The cached value of the '{@link #getTermsDefinitionsAbbreviations() <em>Terms Definitions Abbreviations</em>}' containment reference.
@@ -240,7 +245,7 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	protected VSSSSpecificRequirements specificRequirements;
 
 	/**
-	 * The cached value of the '{@link #getVerificationValidationIntegration() <em>Verification Validation Integration</em>}' reference.
+	 * The cached value of the '{@link #getVerificationValidationIntegration() <em>Verification Validation Integration</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVerificationValidationIntegration()
@@ -398,14 +403,28 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	public EList<VTraceableDocumentAbstractGroup> getGroups() {
-		// TODO: implement this method to return the 'Groups' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		EList<VTraceableDocumentAbstractGroup> groups = new BasicEList<VTraceableDocumentAbstractGroup>();
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getGeneral());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getCapabilities());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSystemInterface());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getAdaptationMissionization());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getComputerResource());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSecurity());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSafety());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getReliabiltyAvailability());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getQuality());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getDesign());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSoftwareOperations());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSoftwareMaintenance());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirements().getSystemSoftwareObservability());
+		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegration().getVerificationValidationProcess());
+		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegration().getValidationApproach());
+		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegration().getValidation());
+		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegration().getVerification());
+		return groups;
 	}
 
 	/**
@@ -499,8 +518,8 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSReferenceDocuments getReferenceDocumentsSeciton() {
-		return referenceDocumentsSeciton;
+	public VSSSReferenceDocuments getReferenceDocumentsSection() {
+		return referenceDocumentsSection;
 	}
 
 	/**
@@ -508,11 +527,11 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReferenceDocumentsSeciton(VSSSReferenceDocuments newReferenceDocumentsSeciton, NotificationChain msgs) {
-		VSSSReferenceDocuments oldReferenceDocumentsSeciton = referenceDocumentsSeciton;
-		referenceDocumentsSeciton = newReferenceDocumentsSeciton;
+	public NotificationChain basicSetReferenceDocumentsSection(VSSSReferenceDocuments newReferenceDocumentsSection, NotificationChain msgs) {
+		VSSSReferenceDocuments oldReferenceDocumentsSection = referenceDocumentsSection;
+		referenceDocumentsSection = newReferenceDocumentsSection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON, oldReferenceDocumentsSeciton, newReferenceDocumentsSeciton);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION, oldReferenceDocumentsSection, newReferenceDocumentsSection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -523,18 +542,18 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReferenceDocumentsSeciton(VSSSReferenceDocuments newReferenceDocumentsSeciton) {
-		if (newReferenceDocumentsSeciton != referenceDocumentsSeciton) {
+	public void setReferenceDocumentsSection(VSSSReferenceDocuments newReferenceDocumentsSection) {
+		if (newReferenceDocumentsSection != referenceDocumentsSection) {
 			NotificationChain msgs = null;
-			if (referenceDocumentsSeciton != null)
-				msgs = ((InternalEObject)referenceDocumentsSeciton).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON, null, msgs);
-			if (newReferenceDocumentsSeciton != null)
-				msgs = ((InternalEObject)newReferenceDocumentsSeciton).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON, null, msgs);
-			msgs = basicSetReferenceDocumentsSeciton(newReferenceDocumentsSeciton, msgs);
+			if (referenceDocumentsSection != null)
+				msgs = ((InternalEObject)referenceDocumentsSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION, null, msgs);
+			if (newReferenceDocumentsSection != null)
+				msgs = ((InternalEObject)newReferenceDocumentsSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION, null, msgs);
+			msgs = basicSetReferenceDocumentsSection(newReferenceDocumentsSection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON, newReferenceDocumentsSeciton, newReferenceDocumentsSeciton));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION, newReferenceDocumentsSection, newReferenceDocumentsSection));
 	}
 
 	/**
@@ -672,14 +691,6 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * @generated
 	 */
 	public VSSSVerificationValidationIntegrationRequirements getVerificationValidationIntegration() {
-		if (verificationValidationIntegration != null && verificationValidationIntegration.eIsProxy()) {
-			InternalEObject oldVerificationValidationIntegration = (InternalEObject)verificationValidationIntegration;
-			verificationValidationIntegration = (VSSSVerificationValidationIntegrationRequirements)eResolveProxy(oldVerificationValidationIntegration);
-			if (verificationValidationIntegration != oldVerificationValidationIntegration) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, oldVerificationValidationIntegration, verificationValidationIntegration));
-			}
-		}
 		return verificationValidationIntegration;
 	}
 
@@ -688,8 +699,14 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSVerificationValidationIntegrationRequirements basicGetVerificationValidationIntegration() {
-		return verificationValidationIntegration;
+	public NotificationChain basicSetVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements newVerificationValidationIntegration, NotificationChain msgs) {
+		VSSSVerificationValidationIntegrationRequirements oldVerificationValidationIntegration = verificationValidationIntegration;
+		verificationValidationIntegration = newVerificationValidationIntegration;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, oldVerificationValidationIntegration, newVerificationValidationIntegration);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -698,10 +715,17 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 	 * @generated
 	 */
 	public void setVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements newVerificationValidationIntegration) {
-		VSSSVerificationValidationIntegrationRequirements oldVerificationValidationIntegration = verificationValidationIntegration;
-		verificationValidationIntegration = newVerificationValidationIntegration;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, oldVerificationValidationIntegration, verificationValidationIntegration));
+		if (newVerificationValidationIntegration != verificationValidationIntegration) {
+			NotificationChain msgs = null;
+			if (verificationValidationIntegration != null)
+				msgs = ((InternalEObject)verificationValidationIntegration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, null, msgs);
+			if (newVerificationValidationIntegration != null)
+				msgs = ((InternalEObject)newVerificationValidationIntegration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, null, msgs);
+			msgs = basicSetVerificationValidationIntegration(newVerificationValidationIntegration, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION, newVerificationValidationIntegration, newVerificationValidationIntegration));
 	}
 
 	/**
@@ -759,14 +783,16 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 				return basicSetIntroduction(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return basicSetApplicableDocumentsSection(null, msgs);
-			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON:
-				return basicSetReferenceDocumentsSeciton(null, msgs);
+			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
+				return basicSetReferenceDocumentsSection(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS:
 				return basicSetTermsDefinitionsAbbreviations(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__GENERAL_DESCRIPTION:
 				return basicSetGeneralDescription(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS:
 				return basicSetSpecificRequirements(null, msgs);
+			case sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION:
+				return basicSetVerificationValidationIntegration(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS:
 				return basicSetSystemModels(null, msgs);
 		}
@@ -799,8 +825,8 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 				return getIntroduction();
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return getApplicableDocumentsSection();
-			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON:
-				return getReferenceDocumentsSeciton();
+			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
+				return getReferenceDocumentsSection();
 			case sssPackage.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS:
 				return getTermsDefinitionsAbbreviations();
 			case sssPackage.VSSS_DOCUMENT__GENERAL_DESCRIPTION:
@@ -808,8 +834,7 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 			case sssPackage.VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS:
 				return getSpecificRequirements();
 			case sssPackage.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION:
-				if (resolve) return getVerificationValidationIntegration();
-				return basicGetVerificationValidationIntegration();
+				return getVerificationValidationIntegration();
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS:
 				return getSystemModels();
 		}
@@ -854,8 +879,8 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				setApplicableDocumentsSection((VSSSApplicableDocuments)newValue);
 				return;
-			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON:
-				setReferenceDocumentsSeciton((VSSSReferenceDocuments)newValue);
+			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
+				setReferenceDocumentsSection((VSSSReferenceDocuments)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS:
 				setTermsDefinitionsAbbreviations((VSSSTermsDefinitionsAbbreviations)newValue);
@@ -911,8 +936,8 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				setApplicableDocumentsSection((VSSSApplicableDocuments)null);
 				return;
-			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON:
-				setReferenceDocumentsSeciton((VSSSReferenceDocuments)null);
+			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
+				setReferenceDocumentsSection((VSSSReferenceDocuments)null);
 				return;
 			case sssPackage.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS:
 				setTermsDefinitionsAbbreviations((VSSSTermsDefinitionsAbbreviations)null);
@@ -959,8 +984,8 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 				return introduction != null;
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return applicableDocumentsSection != null;
-			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECITON:
-				return referenceDocumentsSeciton != null;
+			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
+				return referenceDocumentsSection != null;
 			case sssPackage.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS:
 				return termsDefinitionsAbbreviations != null;
 			case sssPackage.VSSS_DOCUMENT__GENERAL_DESCRIPTION:
@@ -1041,6 +1066,45 @@ public class VSSSDocumentImpl extends DDocumentTemplateImpl implements VSSSDocum
 		result.append(date);
 		result.append(')');
 		return result.toString();
+	}
+	
+	@Override
+	public EList<DApplicableDocument> getApplicableDocuments() {
+		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
+		appdocs.add((DApplicableDocument) getApplicableDocumentsSection().getApplicableDocuments());
+		return appdocs;
+	}
+	
+	@Override
+	public EList<DReferenceDocument> getReferenceDocuments() {
+		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
+		refdocs.add((DReferenceDocument) getApplicableDocumentsSection().getApplicableDocuments());
+		return refdocs;
+	}
+	
+	@Override
+	public EList<DAbstractTable> getTables() {
+		// TODO Auto-generated method stub
+		return super.getTables();
+	}
+	
+	@Override
+	public EList<DAbstractFigure> getFigures() {
+		// TODO Auto-generated method stub
+		return super.getFigures();
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSections() {
+		EList<DAbstractSection> sections = new BasicEList<DAbstractSection>();
+		sections.add((DAbstractSection) getIntroduction());
+		sections.add((DAbstractSection) getApplicableDocumentsSection());
+		sections.add((DAbstractSection) getReferenceDocumentsSection());
+		sections.add((DAbstractSection) getTermsDefinitionsAbbreviations());
+		sections.add((DAbstractSection) getSpecificRequirements());
+		sections.add((DAbstractSection) getVerificationValidationIntegration());
+		sections.add((DAbstractSection) getSystemModels());
+		return sections;
 	}
 
 } //VSSSDocumentImpl

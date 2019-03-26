@@ -10,7 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement;
@@ -31,7 +33,7 @@ import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -65,7 +67,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSSpecificRequirementsImpl extends DSectionImpl implements VSSSSpecificRequirements {
+public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements VSSSSpecificRequirements {
 	/**
 	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -600,5 +602,29 @@ public class VSSSSpecificRequirementsImpl extends DSectionImpl implements VSSSSp
 		}
 		return super.eIsSet(featureID);
 	}
-
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getGeneral());
+		subsections.add((DAbstractSection) getCapabilities());
+		subsections.add((DAbstractSection) getSystemInterface());
+		subsections.add((DAbstractSection) getAdaptationMissionization());
+		subsections.add((DAbstractSection) getComputerResource());
+		subsections.add((DAbstractSection) getSecurity());
+		subsections.add((DAbstractSection) getSafety());
+		subsections.add((DAbstractSection) getReliabiltyAvailability());
+		subsections.add((DAbstractSection) getQuality());
+		subsections.add((DAbstractSection) getDesign());
+		subsections.add((DAbstractSection) getSoftwareOperations());
+		subsections.add((DAbstractSection) getSoftwareMaintenance());
+		subsections.add((DAbstractSection) getSystemSoftwareObservability());
+		return subsections;
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
+	}
+	
 } //VSSSSpecificRequirementsImpl

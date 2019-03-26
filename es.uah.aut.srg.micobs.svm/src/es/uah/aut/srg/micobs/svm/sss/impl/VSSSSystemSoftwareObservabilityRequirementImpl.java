@@ -10,16 +10,22 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -36,6 +42,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemSoftwareObservabilityRequirementImpl#getSubsections <em>Subsections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemSoftwareObservabilityRequirementImpl#getDocument <em>Document</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemSoftwareObservabilityRequirementImpl#getSssItems <em>Sss Items</em>}</li>
  * </ul>
  *
@@ -76,6 +84,49 @@ public class VSSSSystemSoftwareObservabilityRequirementImpl extends VTraceableDo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DAbstractSection> getSubsections() {
+		// TODO: implement this method to return the 'Subsections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DDocumentTemplate getDocument() {
+		DDocumentTemplate document = basicGetDocument();
+		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	public DDocumentTemplate basicGetDocument() {
+		return (DDocumentTemplate)eContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDocument(DDocumentTemplate newDocument) {
+		// TODO: implement this method to set the 'Document' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<VSSSDocumentItem> getSssItems() {
 		if (sssItems == null) {
 			sssItems = new EObjectContainmentEList<VSSSDocumentItem>(VSSSDocumentItem.class, this, sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS);
@@ -105,6 +156,11 @@ public class VSSSSystemSoftwareObservabilityRequirementImpl extends VTraceableDo
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS:
+				return getSubsections();
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT:
+				if (resolve) return getDocument();
+				return basicGetDocument();
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS:
 				return getSssItems();
 		}
@@ -120,6 +176,13 @@ public class VSSSSystemSoftwareObservabilityRequirementImpl extends VTraceableDo
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS:
+				getSubsections().clear();
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
+				return;
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT:
+				setDocument((DDocumentTemplate)newValue);
+				return;
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS:
 				getSssItems().clear();
 				getSssItems().addAll((Collection<? extends VSSSDocumentItem>)newValue);
@@ -136,6 +199,12 @@ public class VSSSSystemSoftwareObservabilityRequirementImpl extends VTraceableDo
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS:
+				getSubsections().clear();
+				return;
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT:
+				setDocument((DDocumentTemplate)null);
+				return;
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS:
 				getSssItems().clear();
 				return;
@@ -151,10 +220,71 @@ public class VSSSSystemSoftwareObservabilityRequirementImpl extends VTraceableDo
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS:
+				return !getSubsections().isEmpty();
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT:
+				return basicGetDocument() != null;
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SSS_ITEMS:
 				return sssItems != null && !sssItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DAbstractSection.class) {
+			switch (derivedFeatureID) {
+				case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
+				case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT: return docPackage.DABSTRACT_SECTION__DOCUMENT;
+				default: return -1;
+			}
+		}
+		if (baseClass == DFixedSection.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DAbstractSection.class) {
+			switch (baseFeatureID) {
+				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__SUBSECTIONS;
+				case docPackage.DABSTRACT_SECTION__DOCUMENT: return sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT__DOCUMENT;
+				default: return -1;
+			}
+		}
+		if (baseClass == DFixedSection.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+	
+	@Override
+	public EList<VTraceableDocumentAbstractItem> getItems() {
+		EList<VTraceableDocumentAbstractItem> items = new BasicEList<VTraceableDocumentAbstractItem>();
+		items.add((VTraceableDocumentAbstractItem) getSssItems());
+		return items;
+	}
+	
+	@Override
+	public VTraceableDocument getTDocument() {
+		return (VTraceableDocument)eContainer();
+	}
+	
 
 } //VSSSSystemSoftwareObservabilityRequirementImpl

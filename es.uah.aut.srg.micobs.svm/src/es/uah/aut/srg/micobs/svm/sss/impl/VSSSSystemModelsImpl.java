@@ -10,7 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels;
@@ -18,11 +19,14 @@ import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -37,9 +41,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *
  * @generated
  */
-public class VSSSSystemModelsImpl extends DSectionImpl implements VSSSSystemModels {
+public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSystemModels {
 	/**
-	 * The cached value of the '{@link #getSystemModels() <em>System Models</em>}' reference list.
+	 * The cached value of the '{@link #getSystemModels() <em>System Models</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSystemModels()
@@ -74,9 +78,23 @@ public class VSSSSystemModelsImpl extends DSectionImpl implements VSSSSystemMode
 	 */
 	public EList<VSSSSystemModel> getSystemModels() {
 		if (systemModels == null) {
-			systemModels = new EObjectResolvingEList<VSSSSystemModel>(VSSSSystemModel.class, this, sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS);
+			systemModels = new EObjectContainmentEList<VSSSSystemModel>(VSSSSystemModel.class, this, sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS);
 		}
 		return systemModels;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
+				return ((InternalEList<?>)getSystemModels()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -137,6 +155,11 @@ public class VSSSSystemModelsImpl extends DSectionImpl implements VSSSSystemMode
 				return systemModels != null && !systemModels.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public DDocumentTemplate getDocument() {
+		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSSystemModelsImpl

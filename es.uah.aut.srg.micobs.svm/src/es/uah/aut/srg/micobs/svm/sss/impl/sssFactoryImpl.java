@@ -73,6 +73,11 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_DEFINITION: return createVSSSDefinition();
 			case sssPackage.VSSS_ABBREVIATION: return createVSSSAbbreviation();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: return createVSSSGeneralDescription();
+			case sssPackage.VSSS_PRODUCT_PERSPECTIVE: return createVSSSProductPerspective();
+			case sssPackage.VSSS_GENERAL_CAPABILITES: return createVSSSGeneralCapabilites();
+			case sssPackage.VSSS_GENERAL_CONSTRAINTS: return createVSSSGeneralConstraints();
+			case sssPackage.VSSS_OPERATIONAL_ENVIRONMENT: return createVSSSOperationalEnvironment();
+			case sssPackage.VSSS_ASSUMPTIONS_DEPENDENCIES: return createVSSSAssumptionsDependencies();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: return createVSSSSpecificRequirements();
 			case sssPackage.VSSS_GENERAL_REQUIREMENT: return createVSSSGeneralRequirement();
 			case sssPackage.VSSS_CAPABILITIES_REQUIREMENT: return createVSSSCapabilitiesRequirement();
@@ -188,6 +193,56 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public VSSSGeneralDescription createVSSSGeneralDescription() {
 		VSSSGeneralDescriptionImpl vsssGeneralDescription = new VSSSGeneralDescriptionImpl();
 		return vsssGeneralDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSProductPerspective createVSSSProductPerspective() {
+		VSSSProductPerspectiveImpl vsssProductPerspective = new VSSSProductPerspectiveImpl();
+		return vsssProductPerspective;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSGeneralCapabilites createVSSSGeneralCapabilites() {
+		VSSSGeneralCapabilitesImpl vsssGeneralCapabilites = new VSSSGeneralCapabilitesImpl();
+		return vsssGeneralCapabilites;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSGeneralConstraints createVSSSGeneralConstraints() {
+		VSSSGeneralConstraintsImpl vsssGeneralConstraints = new VSSSGeneralConstraintsImpl();
+		return vsssGeneralConstraints;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSOperationalEnvironment createVSSSOperationalEnvironment() {
+		VSSSOperationalEnvironmentImpl vsssOperationalEnvironment = new VSSSOperationalEnvironmentImpl();
+		return vsssOperationalEnvironment;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSAssumptionsDependencies createVSSSAssumptionsDependencies() {
+		VSSSAssumptionsDependenciesImpl vsssAssumptionsDependencies = new VSSSAssumptionsDependenciesImpl();
+		return vsssAssumptionsDependencies;
 	}
 
 	/**
