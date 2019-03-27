@@ -167,40 +167,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX = 1;
-
-	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS = 2;
-
-	/**
-	 * The feature id for the '<em><b>TDocument</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT = 3;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS = 0;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Abstract Group</em>' class.
@@ -209,7 +182,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT = 4;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Abstract Group</em>' class.
@@ -231,24 +204,6 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_FIXED_GROUP = 2;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_FIXED_GROUP__NAME = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_FIXED_GROUP__PREFIX = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX;
-
-	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,15 +211,6 @@ public interface tdmPackage extends EPackage {
 	 * @ordered
 	 */
 	int VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS;
-
-	/**
-	 * The feature id for the '<em><b>TDocument</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_FIXED_GROUP__TDOCUMENT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Fixed Group</em>' class.
@@ -295,24 +241,6 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP = 3;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX;
-
-	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,13 +250,31 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__ITEMS = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS;
 
 	/**
-	 * The feature id for the '<em><b>TDocument</b></em>' reference.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__TDOCUMENT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT;
+	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Instantiable Group</em>' class.
@@ -337,7 +283,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
+	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Instantiable Group</em>' class.
@@ -368,22 +314,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Short Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION = 1;
-
-	/**
 	 * The feature id for the '<em><b>Verification Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD = 2;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD = 1;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' reference.
@@ -392,7 +329,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 3;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 2;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -401,7 +338,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 4;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -521,28 +458,6 @@ public interface tdmPackage extends EPackage {
 	EClass getVTraceableDocumentAbstractGroup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getName()
-	 * @see #getVTraceableDocumentAbstractGroup()
-	 * @generated
-	 */
-	EAttribute getVTraceableDocumentAbstractGroup_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getPrefix <em>Prefix</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Prefix</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getPrefix()
-	 * @see #getVTraceableDocumentAbstractGroup()
-	 * @generated
-	 */
-	EAttribute getVTraceableDocumentAbstractGroup_Prefix();
-
-	/**
 	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getItems <em>Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -552,17 +467,6 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVTraceableDocumentAbstractGroup_Items();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getTDocument <em>TDocument</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>TDocument</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup#getTDocument()
-	 * @see #getVTraceableDocumentAbstractGroup()
-	 * @generated
-	 */
-	EReference getVTraceableDocumentAbstractGroup_TDocument();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup <em>VTraceable Document Fixed Group</em>}'.
@@ -585,6 +489,17 @@ public interface tdmPackage extends EPackage {
 	EClass getVTraceableDocumentInstantiableGroup();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup#getPrefix <em>Prefix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prefix</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup#getPrefix()
+	 * @see #getVTraceableDocumentInstantiableGroup()
+	 * @generated
+	 */
+	EAttribute getVTraceableDocumentInstantiableGroup_Prefix();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem <em>VTraceable Document Abstract Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -604,17 +519,6 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVTraceableDocumentAbstractItem_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getShortDescription <em>Short Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Short Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getShortDescription()
-	 * @see #getVTraceableDocumentAbstractItem()
-	 * @generated
-	 */
-	EAttribute getVTraceableDocumentAbstractItem_ShortDescription();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod <em>Verification Method</em>}'.
@@ -748,36 +652,12 @@ public interface tdmPackage extends EPackage {
 		EClass VTRACEABLE_DOCUMENT_ABSTRACT_GROUP = eINSTANCE.getVTraceableDocumentAbstractGroup();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__NAME = eINSTANCE.getVTraceableDocumentAbstractGroup_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__PREFIX = eINSTANCE.getVTraceableDocumentAbstractGroup_Prefix();
-
-		/**
 		 * The meta object literal for the '<em><b>Items</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS = eINSTANCE.getVTraceableDocumentAbstractGroup_Items();
-
-		/**
-		 * The meta object literal for the '<em><b>TDocument</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__TDOCUMENT = eINSTANCE.getVTraceableDocumentAbstractGroup_TDocument();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl <em>VTraceable Document Fixed Group</em>}' class.
@@ -800,6 +680,14 @@ public interface tdmPackage extends EPackage {
 		EClass VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP = eINSTANCE.getVTraceableDocumentInstantiableGroup();
 
 		/**
+		 * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = eINSTANCE.getVTraceableDocumentInstantiableGroup_Prefix();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl <em>VTraceable Document Abstract Item</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -816,14 +704,6 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID = eINSTANCE.getVTraceableDocumentAbstractItem_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Short Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION = eINSTANCE.getVTraceableDocumentAbstractItem_ShortDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Verification Method</b></em>' attribute feature.

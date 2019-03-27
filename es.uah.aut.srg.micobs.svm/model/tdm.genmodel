@@ -4,7 +4,8 @@
     modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
     modelName="Tdm" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>tdm.ecore</foreignModel>
   <genPackages prefix="tdm" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
       ecorePackage="tdm.ecore#/">
@@ -28,16 +29,14 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tdm.ecore#//VTraceableDocument/groups"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tdm.ecore#//VTraceableDocumentAbstractGroup">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentAbstractGroup/name"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentAbstractGroup/prefix"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tdm.ecore#//VTraceableDocumentAbstractGroup/items"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tdm.ecore#//VTraceableDocumentAbstractGroup/document"/>
     </genClasses>
     <genClasses image="false" ecoreClass="tdm.ecore#//VTraceableDocumentFixedGroup"/>
-    <genClasses image="false" ecoreClass="tdm.ecore#//VTraceableDocumentInstantiableGroup"/>
+    <genClasses image="false" ecoreClass="tdm.ecore#//VTraceableDocumentInstantiableGroup">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentInstantiableGroup/prefix"/>
+    </genClasses>
     <genClasses image="false" ecoreClass="tdm.ecore#//VTraceableDocumentAbstractItem">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentAbstractItem/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentAbstractItem/shortDescription"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute tdm.ecore#//VTraceableDocumentAbstractItem/verificationMethod"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference tdm.ecore#//VTraceableDocumentAbstractItem/group"/>
     </genClasses>

@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm.util;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.svm.tdm.*;
 
 import org.eclipse.emf.ecore.EObject;
@@ -97,6 +98,7 @@ public class tdmSwitch<T> extends Switch<T> {
 				VTraceableDocumentInstantiableGroup vTraceableDocumentInstantiableGroup = (VTraceableDocumentInstantiableGroup)theEObject;
 				T result = caseVTraceableDocumentInstantiableGroup(vTraceableDocumentInstantiableGroup);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vTraceableDocumentInstantiableGroup);
+				if (result == null) result = caseMCommonReferenceableObj(vTraceableDocumentInstantiableGroup);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -182,6 +184,21 @@ public class tdmSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMCommonReferenceableObj(MCommonReferenceableObj object) {
 		return null;
 	}
 

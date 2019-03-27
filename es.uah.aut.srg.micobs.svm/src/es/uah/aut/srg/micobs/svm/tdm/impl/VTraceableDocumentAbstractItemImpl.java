@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getShortDescription <em>Short Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getVerificationMethod <em>Verification Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getGroup <em>Group</em>}</li>
  * </ul>
@@ -59,26 +58,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getShortDescription() <em>Short Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getShortDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String SHORT_DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getShortDescription() <em>Short Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getShortDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String shortDescription = SHORT_DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getVerificationMethod() <em>Verification Method</em>}' attribute.
@@ -145,27 +124,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getShortDescription() {
-		return shortDescription;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setShortDescription(String newShortDescription) {
-		String oldShortDescription = shortDescription;
-		shortDescription = newShortDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION, oldShortDescription, shortDescription));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public VVerificationMethod getVerificationMethod() {
 		return verificationMethod;
 	}
@@ -225,8 +183,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
 				return getId();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION:
-				return getShortDescription();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
 				return getVerificationMethod();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
@@ -246,9 +202,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
 				setId((String)newValue);
-				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION:
-				setShortDescription((String)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod((VVerificationMethod)newValue);
@@ -271,9 +224,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION:
-				setShortDescription(SHORT_DESCRIPTION_EDEFAULT);
-				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
 				setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
 				return;
@@ -294,8 +244,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__SHORT_DESCRIPTION:
-				return SHORT_DESCRIPTION_EDEFAULT == null ? shortDescription != null : !SHORT_DESCRIPTION_EDEFAULT.equals(shortDescription);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
 				return verificationMethod != VERIFICATION_METHOD_EDEFAULT;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
@@ -316,8 +264,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (id: ");
 		result.append(id);
-		result.append(", shortDescription: ");
-		result.append(shortDescription);
 		result.append(", verificationMethod: ");
 		result.append(verificationMethod);
 		result.append(')');

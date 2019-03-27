@@ -22,7 +22,6 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getShortDescription <em>Short Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod <em>Verification Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getGroup <em>Group</em>}</li>
  * </ul>
@@ -57,32 +56,6 @@ public interface VTraceableDocumentAbstractItem extends EObject {
 	 * @generated
 	 */
 	void setId(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Short Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Short Description</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Short Description</em>' attribute.
-	 * @see #setShortDescription(String)
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_ShortDescription()
-	 * @model required="true"
-	 * @generated
-	 */
-	String getShortDescription();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getShortDescription <em>Short Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Short Description</em>' attribute.
-	 * @see #getShortDescription()
-	 * @generated
-	 */
-	void setShortDescription(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Verification Method</b></em>' attribute.
