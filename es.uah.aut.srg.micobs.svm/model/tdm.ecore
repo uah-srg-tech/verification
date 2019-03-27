@@ -15,23 +15,19 @@
         transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractGroup" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" lowerBound="1" upperBound="-1"
         eType="#//VTraceableDocumentAbstractItem" volatile="true" transient="true"
         derived="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="TDocument" lowerBound="1"
-        eType="#//VTraceableDocument" volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentFixedGroup" abstract="true"
       eSuperTypes="#//VTraceableDocumentAbstractGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentInstantiableGroup"
-      abstract="true" eSuperTypes="#//VTraceableDocumentAbstractGroup"/>
+      abstract="true" eSuperTypes="#//VTraceableDocumentAbstractGroup ../../es.uah.aut.srg.micobs/model/common.ecore#//MCommonReferenceableObj">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="prefix" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractItem" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortDescription" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="verificationMethod" lowerBound="1"
         eType="#//VVerificationMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="group" lowerBound="1" eType="#//VTraceableDocumentAbstractGroup"
