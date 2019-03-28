@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.svm.sss.util;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
@@ -87,8 +86,8 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_DOCUMENT: {
 				VSSSDocument vsssDocument = (VSSSDocument)theEObject;
 				T result = caseVSSSDocument(vsssDocument);
-				if (result == null) result = caseDDocumentTemplate(vsssDocument);
 				if (result == null) result = caseVTraceableDocument(vsssDocument);
+				if (result == null) result = caseDDocumentTemplate(vsssDocument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -159,48 +158,11 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_PRODUCT_PERSPECTIVE: {
-				VSSSProductPerspective vsssProductPerspective = (VSSSProductPerspective)theEObject;
-				T result = caseVSSSProductPerspective(vsssProductPerspective);
-				if (result == null) result = caseDBody(vsssProductPerspective);
-				if (result == null) result = caseDFixedSection(vsssProductPerspective);
-				if (result == null) result = caseDAbstractSection(vsssProductPerspective);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case sssPackage.VSSS_GENERAL_CAPABILITES: {
-				VSSSGeneralCapabilites vsssGeneralCapabilites = (VSSSGeneralCapabilites)theEObject;
-				T result = caseVSSSGeneralCapabilites(vsssGeneralCapabilites);
-				if (result == null) result = caseDBody(vsssGeneralCapabilites);
-				if (result == null) result = caseDFixedSection(vsssGeneralCapabilites);
-				if (result == null) result = caseDAbstractSection(vsssGeneralCapabilites);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case sssPackage.VSSS_GENERAL_CONSTRAINTS: {
-				VSSSGeneralConstraints vsssGeneralConstraints = (VSSSGeneralConstraints)theEObject;
-				T result = caseVSSSGeneralConstraints(vsssGeneralConstraints);
-				if (result == null) result = caseDBody(vsssGeneralConstraints);
-				if (result == null) result = caseDFixedSection(vsssGeneralConstraints);
-				if (result == null) result = caseDAbstractSection(vsssGeneralConstraints);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case sssPackage.VSSS_OPERATIONAL_ENVIRONMENT: {
-				VSSSOperationalEnvironment vsssOperationalEnvironment = (VSSSOperationalEnvironment)theEObject;
-				T result = caseVSSSOperationalEnvironment(vsssOperationalEnvironment);
-				if (result == null) result = caseDBody(vsssOperationalEnvironment);
-				if (result == null) result = caseDFixedSection(vsssOperationalEnvironment);
-				if (result == null) result = caseDAbstractSection(vsssOperationalEnvironment);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
-			case sssPackage.VSSS_ASSUMPTIONS_DEPENDENCIES: {
-				VSSSAssumptionsDependencies vsssAssumptionsDependencies = (VSSSAssumptionsDependencies)theEObject;
-				T result = caseVSSSAssumptionsDependencies(vsssAssumptionsDependencies);
-				if (result == null) result = caseDBody(vsssAssumptionsDependencies);
-				if (result == null) result = caseDFixedSection(vsssAssumptionsDependencies);
-				if (result == null) result = caseDAbstractSection(vsssAssumptionsDependencies);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION: {
+				VSSSGeneralDescriptionSubsection vsssGeneralDescriptionSubsection = (VSSSGeneralDescriptionSubsection)theEObject;
+				T result = caseVSSSGeneralDescriptionSubsection(vsssGeneralDescriptionSubsection);
+				if (result == null) result = caseDFixedSection(vsssGeneralDescriptionSubsection);
+				if (result == null) result = caseDAbstractSection(vsssGeneralDescriptionSubsection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -394,7 +356,6 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSDocumentItem vsssDocumentItem = (VSSSDocumentItem)theEObject;
 				T result = caseVSSSDocumentItem(vsssDocumentItem);
 				if (result == null) result = caseVTraceableDocumentAbstractItem(vsssDocumentItem);
-				if (result == null) result = caseDBody(vsssDocumentItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -567,77 +528,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Product Perspective</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Description Subsection</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Product Perspective</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS General Description Subsection</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSProductPerspective(VSSSProductPerspective object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Capabilites</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS General Capabilites</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSGeneralCapabilites(VSSSGeneralCapabilites object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Constraints</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS General Constraints</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSGeneralConstraints(VSSSGeneralConstraints object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Operational Environment</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Operational Environment</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSOperationalEnvironment(VSSSOperationalEnvironment object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Assumptions Dependencies</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Assumptions Dependencies</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSSSAssumptionsDependencies(VSSSAssumptionsDependencies object) {
+	public T caseVSSSGeneralDescriptionSubsection(VSSSGeneralDescriptionSubsection object) {
 		return null;
 	}
 
@@ -1073,21 +974,6 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>DBody</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>DBody</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseDBody(DBody object) {
 		return null;
 	}
 

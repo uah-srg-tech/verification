@@ -18,10 +18,42 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * A representation of the model object '<em><b>VSSS General Description Subsection</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody <em>Body</em>}</li>
+ * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescriptionSubsection()
  * @model
  * @generated
  */
-public interface VSSSGeneralDescriptionSubsection extends DBody, DFixedSection {
+public interface VSSSGeneralDescriptionSubsection extends DFixedSection {
+	/**
+	 * Returns the value of the '<em><b>Body</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Body</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Body</em>' reference.
+	 * @see #setBody(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescriptionSubsection_Body()
+	 * @model required="true"
+	 * @generated
+	 */
+	DBody getBody();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody <em>Body</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Body</em>' reference.
+	 * @see #getBody()
+	 * @generated
+	 */
+	void setBody(DBody value);
+
 } // VSSSGeneralDescriptionSubsection

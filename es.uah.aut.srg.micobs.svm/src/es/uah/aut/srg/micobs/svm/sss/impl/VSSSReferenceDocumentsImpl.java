@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
 
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
@@ -21,7 +21,7 @@ import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -160,8 +160,8 @@ public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSS
 	}
 	
 	@Override
-	public DDocumentTemplate getDocument() {
-		return (DDocumentTemplate)eContainer();
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSSSReferenceDocumentsImpl

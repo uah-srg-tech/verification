@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
@@ -278,11 +277,6 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 		subsections.add((DAbstractSection) getValidation());
 		subsections.add((DAbstractSection) getVerification());
 		return subsections;
-	}
-	
-	@Override
-	public DDocumentTemplate getDocument() {
-		return (DDocumentTemplate)eContainer();
 	}
 
 } //VSSSVerificationValidationIntegrationRequirementsImpl

@@ -37,17 +37,17 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * Returns the value of the '<em><b>Product Perspective</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Product Perspective</em>' reference isn't clear,
+	 * If the meaning of the '<em>Product Perspective</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Product Perspective</em>' containment reference.
-	 * @see #setProductPerspective(VSSSProductPerspective)
+	 * @see #setProductPerspective(VSSSGeneralDescriptionSubsection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_ProductPerspective()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSProductPerspective getProductPerspective();
+	VSSSGeneralDescriptionSubsection getProductPerspective();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' containment reference.
@@ -57,23 +57,23 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getProductPerspective()
 	 * @generated
 	 */
-	void setProductPerspective(VSSSProductPerspective value);
+	void setProductPerspective(VSSSGeneralDescriptionSubsection value);
 
 	/**
 	 * Returns the value of the '<em><b>General Capabilites</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Capabilites</em>' reference isn't clear,
+	 * If the meaning of the '<em>General Capabilites</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>General Capabilites</em>' containment reference.
-	 * @see #setGeneralCapabilites(VSSSGeneralCapabilites)
+	 * @see #setGeneralCapabilites(VSSSGeneralDescriptionSubsection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilites()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralCapabilites getGeneralCapabilites();
+	VSSSGeneralDescriptionSubsection getGeneralCapabilites();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}' containment reference.
@@ -83,23 +83,23 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getGeneralCapabilites()
 	 * @generated
 	 */
-	void setGeneralCapabilites(VSSSGeneralCapabilites value);
+	void setGeneralCapabilites(VSSSGeneralDescriptionSubsection value);
 
 	/**
 	 * Returns the value of the '<em><b>General Constraints</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Constraints</em>' reference isn't clear,
+	 * If the meaning of the '<em>General Constraints</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>General Constraints</em>' containment reference.
-	 * @see #setGeneralConstraints(VSSSGeneralConstraints)
+	 * @see #setGeneralConstraints(VSSSGeneralDescriptionSubsection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralConstraints()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralConstraints getGeneralConstraints();
+	VSSSGeneralDescriptionSubsection getGeneralConstraints();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}' containment reference.
@@ -109,23 +109,23 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getGeneralConstraints()
 	 * @generated
 	 */
-	void setGeneralConstraints(VSSSGeneralConstraints value);
+	void setGeneralConstraints(VSSSGeneralDescriptionSubsection value);
 
 	/**
 	 * Returns the value of the '<em><b>Operational Environment</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Operational Environment</em>' reference isn't clear,
+	 * If the meaning of the '<em>Operational Environment</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operational Environment</em>' containment reference.
-	 * @see #setOperationalEnvironment(VSSSOperationalEnvironment)
+	 * @see #setOperationalEnvironment(VSSSGeneralDescriptionSubsection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_OperationalEnvironment()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSOperationalEnvironment getOperationalEnvironment();
+	VSSSGeneralDescriptionSubsection getOperationalEnvironment();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}' containment reference.
@@ -135,23 +135,23 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getOperationalEnvironment()
 	 * @generated
 	 */
-	void setOperationalEnvironment(VSSSOperationalEnvironment value);
+	void setOperationalEnvironment(VSSSGeneralDescriptionSubsection value);
 
 	/**
 	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Assumptions Dependencies</em>' reference isn't clear,
+	 * If the meaning of the '<em>Assumptions Dependencies</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assumptions Dependencies</em>' containment reference.
-	 * @see #setAssumptionsDependencies(VSSSAssumptionsDependencies)
+	 * @see #setAssumptionsDependencies(VSSSGeneralDescriptionSubsection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_AssumptionsDependencies()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSAssumptionsDependencies getAssumptionsDependencies();
+	VSSSGeneralDescriptionSubsection getAssumptionsDependencies();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}' containment reference.
@@ -161,6 +161,6 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getAssumptionsDependencies()
 	 * @generated
 	 */
-	void setAssumptionsDependencies(VSSSAssumptionsDependencies value);
+	void setAssumptionsDependencies(VSSSGeneralDescriptionSubsection value);
 
 } // VSSSGeneralDescription

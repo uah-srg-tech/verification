@@ -15,7 +15,6 @@ import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSAbbreviation;
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
-import es.uah.aut.srg.micobs.svm.sss.VSSSAssumptionsDependencies;
 import es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
@@ -23,13 +22,10 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSDefinition;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocument;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralCapabilites;
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralConstraints;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
-import es.uah.aut.srg.micobs.svm.sss.VSSSOperationalEnvironment;
-import es.uah.aut.srg.micobs.svm.sss.VSSSProductPerspective;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement;
@@ -143,35 +139,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsssProductPerspectiveEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsssGeneralCapabilitesEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsssGeneralConstraintsEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsssOperationalEnvironmentEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsssAssumptionsDependenciesEClass = null;
+	private EClass vsssGeneralDescriptionSubsectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -406,7 +374,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_Introduction() {
+	public EReference getVSSSDocument_IntroductionSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -433,7 +401,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_TermsDefinitionsAbbreviations() {
+	public EReference getVSSSDocument_TermsDefinitionsAbbreviationsSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -442,7 +410,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_GeneralDescription() {
+	public EReference getVSSSDocument_GeneralDescriptionSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -451,7 +419,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_SpecificRequirements() {
+	public EReference getVSSSDocument_SpecificRequirementsSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -460,7 +428,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_VerificationValidationIntegration() {
+	public EReference getVSSSDocument_VerificationValidationIntegrationSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -469,7 +437,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSDocument_SystemModels() {
+	public EReference getVSSSDocument_SystemModelsSection() {
 		return (EReference)vsssDocumentEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -703,8 +671,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSSSProductPerspective() {
-		return vsssProductPerspectiveEClass;
+	public EClass getVSSSGeneralDescriptionSubsection() {
+		return vsssGeneralDescriptionSubsectionEClass;
 	}
 
 	/**
@@ -712,35 +680,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSSSGeneralCapabilites() {
-		return vsssGeneralCapabilitesEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSSSGeneralConstraints() {
-		return vsssGeneralConstraintsEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSSSOperationalEnvironment() {
-		return vsssOperationalEnvironmentEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSSSAssumptionsDependencies() {
-		return vsssAssumptionsDependenciesEClass;
+	public EReference getVSSSGeneralDescriptionSubsection_Body() {
+		return (EReference)vsssGeneralDescriptionSubsectionEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -1234,6 +1175,15 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSDocumentItem_Body() {
+		return (EReference)vsssDocumentItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSSystemModels() {
 		return vsssSystemModelsEClass;
 	}
@@ -1285,14 +1235,14 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		// Create classes and their features
 		vsssDocumentEClass = createEClass(VSSS_DOCUMENT);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__INTRODUCTION);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__INTRODUCTION_SECTION);
 		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION);
 		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__GENERAL_DESCRIPTION);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION);
-		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SYSTEM_MODELS);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__GENERAL_DESCRIPTION_SECTION);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS_SECTION);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION_SECTION);
+		createEReference(vsssDocumentEClass, VSSS_DOCUMENT__SYSTEM_MODELS_SECTION);
 
 		vsssIntroductionEClass = createEClass(VSSS_INTRODUCTION);
 		createEReference(vsssIntroductionEClass, VSSS_INTRODUCTION__PURPOSE);
@@ -1328,15 +1278,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT);
 		createEReference(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES);
 
-		vsssProductPerspectiveEClass = createEClass(VSSS_PRODUCT_PERSPECTIVE);
-
-		vsssGeneralCapabilitesEClass = createEClass(VSSS_GENERAL_CAPABILITES);
-
-		vsssGeneralConstraintsEClass = createEClass(VSSS_GENERAL_CONSTRAINTS);
-
-		vsssOperationalEnvironmentEClass = createEClass(VSSS_OPERATIONAL_ENVIRONMENT);
-
-		vsssAssumptionsDependenciesEClass = createEClass(VSSS_ASSUMPTIONS_DEPENDENCIES);
+		vsssGeneralDescriptionSubsectionEClass = createEClass(VSSS_GENERAL_DESCRIPTION_SUBSECTION);
+		createEReference(vsssGeneralDescriptionSubsectionEClass, VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY);
 
 		vsssSpecificRequirementsEClass = createEClass(VSSS_SPECIFIC_REQUIREMENTS);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
@@ -1411,6 +1354,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssValidationRequirementEClass, VSSS_VALIDATION_REQUIREMENT__SSS_ITEMS);
 
 		vsssDocumentItemEClass = createEClass(VSSS_DOCUMENT_ITEM);
+		createEReference(vsssDocumentItemEClass, VSSS_DOCUMENT_ITEM__BODY);
 
 		vsssSystemModelsEClass = createEClass(VSSS_SYSTEM_MODELS);
 		createEReference(vsssSystemModelsEClass, VSSS_SYSTEM_MODELS__SYSTEM_MODELS);
@@ -1442,16 +1386,16 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		docPackage thedocPackage = (docPackage)EPackage.Registry.INSTANCE.getEPackage(docPackage.eNS_URI);
 		tdmPackage thetdmPackage = (tdmPackage)EPackage.Registry.INSTANCE.getEPackage(tdmPackage.eNS_URI);
+		docPackage thedocPackage = (docPackage)EPackage.Registry.INSTANCE.getEPackage(docPackage.eNS_URI);
 
 		// Create type parameters
 
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		vsssDocumentEClass.getESuperTypes().add(thedocPackage.getDDocumentTemplate());
 		vsssDocumentEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocument());
+		vsssDocumentEClass.getESuperTypes().add(thedocPackage.getDDocumentTemplate());
 		vsssIntroductionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssApplicableDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssReferenceDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
@@ -1460,16 +1404,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		vsssDefinitionEClass.getESuperTypes().add(this.getVSSSBriefDescription());
 		vsssAbbreviationEClass.getESuperTypes().add(this.getVSSSBriefDescription());
 		vsssGeneralDescriptionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsssProductPerspectiveEClass.getESuperTypes().add(thedocPackage.getDBody());
-		vsssProductPerspectiveEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsssGeneralCapabilitesEClass.getESuperTypes().add(thedocPackage.getDBody());
-		vsssGeneralCapabilitesEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsssGeneralConstraintsEClass.getESuperTypes().add(thedocPackage.getDBody());
-		vsssGeneralConstraintsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsssOperationalEnvironmentEClass.getESuperTypes().add(thedocPackage.getDBody());
-		vsssOperationalEnvironmentEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsssAssumptionsDependenciesEClass.getESuperTypes().add(thedocPackage.getDBody());
-		vsssAssumptionsDependenciesEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsssGeneralDescriptionSubsectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssSpecificRequirementsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssGeneralRequirementEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsssGeneralRequirementEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
@@ -1507,19 +1442,18 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		vsssValidationRequirementEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsssValidationRequirementEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssDocumentItemEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentAbstractItem());
-		vsssDocumentItemEClass.getESuperTypes().add(thedocPackage.getDBody());
 		vsssSystemModelsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsssDocumentEClass, VSSSDocument.class, "VSSSDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSDocument_Introduction(), this.getVSSSIntroduction(), null, "introduction", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_IntroductionSection(), this.getVSSSIntroduction(), null, "introductionSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSDocument_ApplicableDocumentsSection(), this.getVSSSApplicableDocuments(), null, "applicableDocumentsSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSDocument_ReferenceDocumentsSection(), this.getVSSSReferenceDocuments(), null, "referenceDocumentsSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSDocument_TermsDefinitionsAbbreviations(), this.getVSSSTermsDefinitionsAbbreviations(), null, "termsDefinitionsAbbreviations", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSDocument_GeneralDescription(), this.getVSSSGeneralDescription(), null, "generalDescription", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSDocument_SpecificRequirements(), this.getVSSSSpecificRequirements(), null, "specificRequirements", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSDocument_VerificationValidationIntegration(), this.getVSSSVerificationValidationIntegrationRequirements(), null, "verificationValidationIntegration", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSDocument_SystemModels(), this.getVSSSSystemModels(), null, "systemModels", null, 0, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_TermsDefinitionsAbbreviationsSection(), this.getVSSSTermsDefinitionsAbbreviations(), null, "termsDefinitionsAbbreviationsSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_GeneralDescriptionSection(), this.getVSSSGeneralDescription(), null, "generalDescriptionSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_SpecificRequirementsSection(), this.getVSSSSpecificRequirements(), null, "specificRequirementsSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_VerificationValidationIntegrationSection(), this.getVSSSVerificationValidationIntegrationRequirements(), null, "verificationValidationIntegrationSection", null, 1, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSDocument_SystemModelsSection(), this.getVSSSSystemModels(), null, "systemModelsSection", null, 0, 1, VSSSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssIntroductionEClass, VSSSIntroduction.class, "VSSSIntroduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSSSIntroduction_Purpose(), thedocPackage.getDBody(), null, "purpose", null, 1, 1, VSSSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1549,21 +1483,14 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEClass(vsssAbbreviationEClass, VSSSAbbreviation.class, "VSSSAbbreviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsssGeneralDescriptionEClass, VSSSGeneralDescription.class, "VSSSGeneralDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSGeneralDescription_ProductPerspective(), this.getVSSSProductPerspective(), null, "productPerspective", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSGeneralDescription_GeneralCapabilites(), this.getVSSSGeneralCapabilites(), null, "generalCapabilites", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSGeneralDescription_GeneralConstraints(), this.getVSSSGeneralConstraints(), null, "generalConstraints", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSGeneralDescription_OperationalEnvironment(), this.getVSSSOperationalEnvironment(), null, "operationalEnvironment", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSGeneralDescription_AssumptionsDependencies(), this.getVSSSAssumptionsDependencies(), null, "assumptionsDependencies", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSGeneralDescription_ProductPerspective(), this.getVSSSGeneralDescriptionSubsection(), null, "productPerspective", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSGeneralDescription_GeneralCapabilites(), this.getVSSSGeneralDescriptionSubsection(), null, "generalCapabilites", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSGeneralDescription_GeneralConstraints(), this.getVSSSGeneralDescriptionSubsection(), null, "generalConstraints", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSGeneralDescription_OperationalEnvironment(), this.getVSSSGeneralDescriptionSubsection(), null, "operationalEnvironment", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSGeneralDescription_AssumptionsDependencies(), this.getVSSSGeneralDescriptionSubsection(), null, "assumptionsDependencies", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(vsssProductPerspectiveEClass, VSSSProductPerspective.class, "VSSSProductPerspective", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(vsssGeneralCapabilitesEClass, VSSSGeneralCapabilites.class, "VSSSGeneralCapabilites", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(vsssGeneralConstraintsEClass, VSSSGeneralConstraints.class, "VSSSGeneralConstraints", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(vsssOperationalEnvironmentEClass, VSSSOperationalEnvironment.class, "VSSSOperationalEnvironment", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-
-		initEClass(vsssAssumptionsDependenciesEClass, VSSSAssumptionsDependencies.class, "VSSSAssumptionsDependencies", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vsssGeneralDescriptionSubsectionEClass, VSSSGeneralDescriptionSubsection.class, "VSSSGeneralDescriptionSubsection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSGeneralDescriptionSubsection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSSSGeneralDescriptionSubsection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSpecificRequirementsEClass, VSSSSpecificRequirements.class, "VSSSSpecificRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSSSSpecificRequirements_General(), this.getVSSSGeneralRequirement(), null, "general", null, 0, -1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1638,6 +1565,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSValidationRequirement_SssItems(), this.getVSSSDocumentItem(), null, "sssItems", null, 1, -1, VSSSValidationRequirement.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssDocumentItemEClass, VSSSDocumentItem.class, "VSSSDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSSSDocumentItem_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSSSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssSystemModelsEClass, VSSSSystemModels.class, "VSSSSystemModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSSSSystemModels_SystemModels(), this.getVSSSSystemModel(), null, "systemModels", null, 1, -1, VSSSSystemModels.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

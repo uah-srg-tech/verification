@@ -19,10 +19,42 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
  * A representation of the model object '<em><b>VSSS Document Item</b></em>'.
  * <!-- end-user-doc -->
  *
+ * <p>
+ * The following features are supported:
+ * </p>
+ * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody <em>Body</em>}</li>
+ * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem()
  * @model
  * @generated
  */
-public interface VSSSDocumentItem extends VTraceableDocumentAbstractItem, DBody {
+public interface VSSSDocumentItem extends VTraceableDocumentAbstractItem {
+	/**
+	 * Returns the value of the '<em><b>Body</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Body</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Body</em>' reference.
+	 * @see #setBody(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem_Body()
+	 * @model required="true"
+	 * @generated
+	 */
+	DBody getBody();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody <em>Body</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Body</em>' reference.
+	 * @see #getBody()
+	 * @generated
+	 */
+	void setBody(DBody value);
+
 } // VSSSDocumentItem

@@ -11,14 +11,12 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 
@@ -26,6 +24,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -43,7 +42,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementImpl#getSubsections <em>Subsections</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementImpl#getDocument <em>Document</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementImpl#getSssItems <em>Sss Items</em>}</li>
  * </ul>
  *
@@ -79,47 +77,16 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 		return sssPackage.Literals.VSSS_GENERAL_REQUIREMENT;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<DAbstractSection> getSubsections() {
-		// TODO: implement this method to return the 'Subsections' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		return ECollections.emptyEList();
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public DDocumentTemplate getDocument() {
-		DDocumentTemplate document = basicGetDocument();
-		return document != null && document.eIsProxy() ? (DDocumentTemplate)eResolveProxy((InternalEObject)document) : document;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated NOT
-	 */
-	public DDocumentTemplate basicGetDocument() {
-		return (DDocumentTemplate)eContainer();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDocument(DDocumentTemplate newDocument) {
-		// TODO: implement this method to set the 'Document' reference
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	@Override
+	public EList<VTraceableDocumentAbstractItem> getItems() {
+		EList<VTraceableDocumentAbstractItem> items = new BasicEList<VTraceableDocumentAbstractItem>();
+		items.add((VTraceableDocumentAbstractItem) getSssItems());
+		return items;
 	}
 
 	/**
@@ -158,9 +125,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS:
 				return getSubsections();
-			case sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT:
-				if (resolve) return getDocument();
-				return basicGetDocument();
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SSS_ITEMS:
 				return getSssItems();
 		}
@@ -179,9 +143,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS:
 				getSubsections().clear();
 				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
-				return;
-			case sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT:
-				setDocument((DDocumentTemplate)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SSS_ITEMS:
 				getSssItems().clear();
@@ -202,9 +163,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS:
 				getSubsections().clear();
 				return;
-			case sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT:
-				setDocument((DDocumentTemplate)null);
-				return;
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SSS_ITEMS:
 				getSssItems().clear();
 				return;
@@ -222,8 +180,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS:
 				return !getSubsections().isEmpty();
-			case sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT:
-				return basicGetDocument() != null;
 			case sssPackage.VSSS_GENERAL_REQUIREMENT__SSS_ITEMS:
 				return sssItems != null && !sssItems.isEmpty();
 		}
@@ -240,7 +196,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 		if (baseClass == DAbstractSection.class) {
 			switch (derivedFeatureID) {
 				case sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
-				case sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT: return docPackage.DABSTRACT_SECTION__DOCUMENT;
 				default: return -1;
 			}
 		}
@@ -262,7 +217,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 		if (baseClass == DAbstractSection.class) {
 			switch (baseFeatureID) {
 				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_GENERAL_REQUIREMENT__SUBSECTIONS;
-				case docPackage.DABSTRACT_SECTION__DOCUMENT: return sssPackage.VSSS_GENERAL_REQUIREMENT__DOCUMENT;
 				default: return -1;
 			}
 		}
@@ -272,18 +226,6 @@ public class VSSSGeneralRequirementImpl extends VTraceableDocumentFixedGroupImpl
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-	
-	@Override
-	public EList<VTraceableDocumentAbstractItem> getItems() {
-		EList<VTraceableDocumentAbstractItem> items = new BasicEList<VTraceableDocumentAbstractItem>();
-		items.add((VTraceableDocumentAbstractItem) getSssItems());
-		return items;
-	}
-	
-	@Override
-	public VTraceableDocument getTDocument() {
-		return (VTraceableDocument)eContainer();
 	}
 
 } //VSSSGeneralRequirementImpl

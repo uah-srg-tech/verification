@@ -10,16 +10,18 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
+
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -382,8 +384,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	}
 	
 	@Override
-	public DDocumentTemplate getDocument() {
-		return (DDocumentTemplate)eContainer();
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSSSIntroductionImpl

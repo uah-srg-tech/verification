@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.svm.sss.util;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
@@ -126,24 +125,8 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSGeneralDescriptionAdapter();
 			}
 			@Override
-			public Adapter caseVSSSProductPerspective(VSSSProductPerspective object) {
-				return createVSSSProductPerspectiveAdapter();
-			}
-			@Override
-			public Adapter caseVSSSGeneralCapabilites(VSSSGeneralCapabilites object) {
-				return createVSSSGeneralCapabilitesAdapter();
-			}
-			@Override
-			public Adapter caseVSSSGeneralConstraints(VSSSGeneralConstraints object) {
-				return createVSSSGeneralConstraintsAdapter();
-			}
-			@Override
-			public Adapter caseVSSSOperationalEnvironment(VSSSOperationalEnvironment object) {
-				return createVSSSOperationalEnvironmentAdapter();
-			}
-			@Override
-			public Adapter caseVSSSAssumptionsDependencies(VSSSAssumptionsDependencies object) {
-				return createVSSSAssumptionsDependenciesAdapter();
+			public Adapter caseVSSSGeneralDescriptionSubsection(VSSSGeneralDescriptionSubsection object) {
+				return createVSSSGeneralDescriptionSubsectionAdapter();
 			}
 			@Override
 			public Adapter caseVSSSSpecificRequirements(VSSSSpecificRequirements object) {
@@ -234,12 +217,12 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSSystemModelAdapter();
 			}
 			@Override
-			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
-				return createDDocumentTemplateAdapter();
-			}
-			@Override
 			public Adapter caseVTraceableDocument(VTraceableDocument object) {
 				return createVTraceableDocumentAdapter();
+			}
+			@Override
+			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
+				return createDDocumentTemplateAdapter();
 			}
 			@Override
 			public Adapter caseDAbstractSection(DAbstractSection object) {
@@ -248,10 +231,6 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseDFixedSection(DFixedSection object) {
 				return createDFixedSectionAdapter();
-			}
-			@Override
-			public Adapter caseDBody(DBody object) {
-				return createDBodyAdapter();
 			}
 			@Override
 			public Adapter caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
@@ -426,72 +405,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSProductPerspective <em>VSSS Product Perspective</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection <em>VSSS General Description Subsection</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSProductPerspective
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection
 	 * @generated
 	 */
-	public Adapter createVSSSProductPerspectiveAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralCapabilites <em>VSSS General Capabilites</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralCapabilites
-	 * @generated
-	 */
-	public Adapter createVSSSGeneralCapabilitesAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralConstraints <em>VSSS General Constraints</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralConstraints
-	 * @generated
-	 */
-	public Adapter createVSSSGeneralConstraintsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSOperationalEnvironment <em>VSSS Operational Environment</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSOperationalEnvironment
-	 * @generated
-	 */
-	public Adapter createVSSSOperationalEnvironmentAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAssumptionsDependencies <em>VSSS Assumptions Dependencies</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAssumptionsDependencies
-	 * @generated
-	 */
-	public Adapter createVSSSAssumptionsDependenciesAdapter() {
+	public Adapter createVSSSGeneralDescriptionSubsectionAdapter() {
 		return null;
 	}
 
@@ -898,20 +821,6 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentAbstractItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DBody <em>DBody</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DBody
-	 * @generated
-	 */
-	public Adapter createDBodyAdapter() {
 		return null;
 	}
 

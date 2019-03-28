@@ -11,54 +11,51 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS System Models</b></em>'.
+ * An implementation of the model object '<em><b>VSSS General Description Subsection</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemModelsImpl#getSystemModels <em>System Models</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSystemModels {
+public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl implements VSSSGeneralDescriptionSubsection {
 	/**
-	 * The cached value of the '{@link #getSystemModels() <em>System Models</em>}' containment reference list.
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSystemModels()
+	 * @see #getBody()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSystemModel> systemModels;
+	protected DBody body;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSSystemModelsImpl() {
+	protected VSSSGeneralDescriptionSubsectionImpl() {
 		super();
 	}
 
@@ -69,7 +66,7 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_SYSTEM_MODELS;
+		return sssPackage.Literals.VSSS_GENERAL_DESCRIPTION_SUBSECTION;
 	}
 
 	/**
@@ -77,11 +74,16 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSystemModel> getSystemModels() {
-		if (systemModels == null) {
-			systemModels = new EObjectContainmentEList<VSSSSystemModel>(VSSSSystemModel.class, this, sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS);
+	public DBody getBody() {
+		if (body != null && body.eIsProxy()) {
+			InternalEObject oldBody = (InternalEObject)body;
+			body = (DBody)eResolveProxy(oldBody);
+			if (body != oldBody) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, oldBody, body));
+			}
 		}
-		return systemModels;
+		return body;
 	}
 
 	/**
@@ -89,13 +91,20 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
-				return ((InternalEList<?>)getSystemModels()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public DBody basicGetBody() {
+		return body;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBody(DBody newBody) {
+		DBody oldBody = body;
+		body = newBody;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, oldBody, body));
 	}
 
 	/**
@@ -106,8 +115,9 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
-				return getSystemModels();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+				if (resolve) return getBody();
+				return basicGetBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -117,13 +127,11 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
-				getSystemModels().clear();
-				getSystemModels().addAll((Collection<? extends VSSSSystemModel>)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+				setBody((DBody)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,8 +145,8 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
-				getSystemModels().clear();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+				setBody((DBody)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -152,8 +160,8 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SYSTEM_MODELS__SYSTEM_MODELS:
-				return systemModels != null && !systemModels.isEmpty();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+				return body != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -163,4 +171,4 @@ public class VSSSSystemModelsImpl extends DFixedSectionImpl implements VSSSSyste
 		return ECollections.emptyEList();
 	}
 
-} //VSSSSystemModelsImpl
+} //VSSSGeneralDescriptionSubsectionImpl

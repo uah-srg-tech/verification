@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
@@ -621,10 +620,5 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 		subsections.add((DAbstractSection) getSystemSoftwareObservability());
 		return subsections;
 	}
-	
-	@Override
-	public DDocumentTemplate getDocument() {
-		return (DDocumentTemplate)eContainer();
-	}
-	
+
 } //VSSSSpecificRequirementsImpl

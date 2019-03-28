@@ -23,46 +23,46 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getIntroduction <em>Introduction</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getTermsDefinitionsAbbreviations <em>Terms Definitions Abbreviations</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getGeneralDescription <em>General Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirements <em>Specific Requirements</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegration <em>Verification Validation Integration</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSystemModels <em>System Models</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getGeneralDescriptionSection <em>General Description Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirementsSection <em>Specific Requirements Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegrationSection <em>Verification Validation Integration Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSystemModelsSection <em>System Models Section</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument()
  * @model
  * @generated
  */
-public interface VSSSDocument extends DDocumentTemplate, VTraceableDocument {
+public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	/**
-	 * Returns the value of the '<em><b>Introduction</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Introduction</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Introduction Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Introduction</em>' containment reference.
-	 * @see #setIntroduction(VSSSIntroduction)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_Introduction()
+	 * @return the value of the '<em>Introduction Section</em>' containment reference.
+	 * @see #setIntroductionSection(VSSSIntroduction)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_IntroductionSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSIntroduction getIntroduction();
+	VSSSIntroduction getIntroductionSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getIntroduction <em>Introduction</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getIntroductionSection <em>Introduction Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Introduction</em>' containment reference.
-	 * @see #getIntroduction()
+	 * @param value the new value of the '<em>Introduction Section</em>' containment reference.
+	 * @see #getIntroductionSection()
 	 * @generated
 	 */
-	void setIntroduction(VSSSIntroduction value);
+	void setIntroductionSection(VSSSIntroduction value);
 
 	/**
 	 * Returns the value of the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -117,133 +117,133 @@ public interface VSSSDocument extends DDocumentTemplate, VTraceableDocument {
 	void setReferenceDocumentsSection(VSSSReferenceDocuments value);
 
 	/**
-	 * Returns the value of the '<em><b>Terms Definitions Abbreviations</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Terms Definitions Abbreviations</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Terms Definitions Abbreviations Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Terms Definitions Abbreviations</em>' containment reference.
-	 * @see #setTermsDefinitionsAbbreviations(VSSSTermsDefinitionsAbbreviations)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_TermsDefinitionsAbbreviations()
+	 * @return the value of the '<em>Terms Definitions Abbreviations Section</em>' containment reference.
+	 * @see #setTermsDefinitionsAbbreviationsSection(VSSSTermsDefinitionsAbbreviations)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_TermsDefinitionsAbbreviationsSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSTermsDefinitionsAbbreviations getTermsDefinitionsAbbreviations();
+	VSSSTermsDefinitionsAbbreviations getTermsDefinitionsAbbreviationsSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getTermsDefinitionsAbbreviations <em>Terms Definitions Abbreviations</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Terms Definitions Abbreviations</em>' containment reference.
-	 * @see #getTermsDefinitionsAbbreviations()
+	 * @param value the new value of the '<em>Terms Definitions Abbreviations Section</em>' containment reference.
+	 * @see #getTermsDefinitionsAbbreviationsSection()
 	 * @generated
 	 */
-	void setTermsDefinitionsAbbreviations(VSSSTermsDefinitionsAbbreviations value);
+	void setTermsDefinitionsAbbreviationsSection(VSSSTermsDefinitionsAbbreviations value);
 
 	/**
-	 * Returns the value of the '<em><b>General Description</b></em>' containment reference.
+	 * Returns the value of the '<em><b>General Description Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Description</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>General Description Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Description</em>' containment reference.
-	 * @see #setGeneralDescription(VSSSGeneralDescription)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_GeneralDescription()
+	 * @return the value of the '<em>General Description Section</em>' containment reference.
+	 * @see #setGeneralDescriptionSection(VSSSGeneralDescription)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_GeneralDescriptionSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescription getGeneralDescription();
+	VSSSGeneralDescription getGeneralDescriptionSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getGeneralDescription <em>General Description</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getGeneralDescriptionSection <em>General Description Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>General Description</em>' containment reference.
-	 * @see #getGeneralDescription()
+	 * @param value the new value of the '<em>General Description Section</em>' containment reference.
+	 * @see #getGeneralDescriptionSection()
 	 * @generated
 	 */
-	void setGeneralDescription(VSSSGeneralDescription value);
+	void setGeneralDescriptionSection(VSSSGeneralDescription value);
 
 	/**
-	 * Returns the value of the '<em><b>Specific Requirements</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Specific Requirements Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Specific Requirements</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Specific Requirements Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Specific Requirements</em>' containment reference.
-	 * @see #setSpecificRequirements(VSSSSpecificRequirements)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SpecificRequirements()
+	 * @return the value of the '<em>Specific Requirements Section</em>' containment reference.
+	 * @see #setSpecificRequirementsSection(VSSSSpecificRequirements)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SpecificRequirementsSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSSpecificRequirements getSpecificRequirements();
+	VSSSSpecificRequirements getSpecificRequirementsSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirements <em>Specific Requirements</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirementsSection <em>Specific Requirements Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Specific Requirements</em>' containment reference.
-	 * @see #getSpecificRequirements()
+	 * @param value the new value of the '<em>Specific Requirements Section</em>' containment reference.
+	 * @see #getSpecificRequirementsSection()
 	 * @generated
 	 */
-	void setSpecificRequirements(VSSSSpecificRequirements value);
+	void setSpecificRequirementsSection(VSSSSpecificRequirements value);
 
 	/**
-	 * Returns the value of the '<em><b>Verification Validation Integration</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Verification Validation Integration Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Verification Validation Integration</em>' reference isn't clear,
+	 * If the meaning of the '<em>Verification Validation Integration Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Verification Validation Integration</em>' containment reference.
-	 * @see #setVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_VerificationValidationIntegration()
+	 * @return the value of the '<em>Verification Validation Integration Section</em>' containment reference.
+	 * @see #setVerificationValidationIntegrationSection(VSSSVerificationValidationIntegrationRequirements)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_VerificationValidationIntegrationSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSVerificationValidationIntegrationRequirements getVerificationValidationIntegration();
+	VSSSVerificationValidationIntegrationRequirements getVerificationValidationIntegrationSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegration <em>Verification Validation Integration</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegrationSection <em>Verification Validation Integration Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Verification Validation Integration</em>' containment reference.
-	 * @see #getVerificationValidationIntegration()
+	 * @param value the new value of the '<em>Verification Validation Integration Section</em>' containment reference.
+	 * @see #getVerificationValidationIntegrationSection()
 	 * @generated
 	 */
-	void setVerificationValidationIntegration(VSSSVerificationValidationIntegrationRequirements value);
+	void setVerificationValidationIntegrationSection(VSSSVerificationValidationIntegrationRequirements value);
 
 	/**
-	 * Returns the value of the '<em><b>System Models</b></em>' containment reference.
+	 * Returns the value of the '<em><b>System Models Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>System Models</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>System Models Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>System Models</em>' containment reference.
-	 * @see #setSystemModels(VSSSSystemModels)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SystemModels()
+	 * @return the value of the '<em>System Models Section</em>' containment reference.
+	 * @see #setSystemModelsSection(VSSSSystemModels)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SystemModelsSection()
 	 * @model containment="true"
 	 * @generated
 	 */
-	VSSSSystemModels getSystemModels();
+	VSSSSystemModels getSystemModelsSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSystemModels <em>System Models</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSystemModelsSection <em>System Models Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>System Models</em>' containment reference.
-	 * @see #getSystemModels()
+	 * @param value the new value of the '<em>System Models Section</em>' containment reference.
+	 * @see #getSystemModelsSection()
 	 * @generated
 	 */
-	void setSystemModels(VSSSSystemModels value);
+	void setSystemModelsSection(VSSSSystemModels value);
 
 } // VSSSDocument

@@ -36,7 +36,7 @@ public interface VSSSSystemModels extends DFixedSection {
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>System Models</em>' reference list isn't clear,
+	 * If the meaning of the '<em>System Models</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

@@ -11,25 +11,18 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DBodyContent;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,21 +32,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentItemImpl#getBContent <em>BContent</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentItemImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl implements VSSSDocumentItem {
 	/**
-	 * The cached value of the '{@link #getBContent() <em>BContent</em>}' containment reference list.
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBContent()
+	 * @see #getBody()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DBodyContent> bContent;
+	protected DBody body;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -79,11 +72,16 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DBodyContent> getBContent() {
-		if (bContent == null) {
-			bContent = new EObjectContainmentEList<DBodyContent>(DBodyContent.class, this, sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT);
+	public DBody getBody() {
+		if (body != null && body.eIsProxy()) {
+			InternalEObject oldBody = (InternalEObject)body;
+			body = (DBody)eResolveProxy(oldBody);
+			if (body != oldBody) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_DOCUMENT_ITEM__BODY, oldBody, body));
+			}
 		}
-		return bContent;
+		return body;
 	}
 
 	/**
@@ -91,13 +89,20 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT:
-				return ((InternalEList<?>)getBContent()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public DBody basicGetBody() {
+		return body;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBody(DBody newBody) {
+		DBody oldBody = body;
+		body = newBody;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__BODY, oldBody, body));
 	}
 
 	/**
@@ -108,8 +113,9 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT:
-				return getBContent();
+			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
+				if (resolve) return getBody();
+				return basicGetBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -119,13 +125,11 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT:
-				getBContent().clear();
-				getBContent().addAll((Collection<? extends DBodyContent>)newValue);
+			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
+				setBody((DBody)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,8 +143,8 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT:
-				getBContent().clear();
+			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
+				setBody((DBody)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -154,42 +158,15 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT:
-				return bContent != null && !bContent.isEmpty();
+			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
+				return body != null;
 		}
 		return super.eIsSet(featureID);
 	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	
 	@Override
-	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DBody.class) {
-			switch (derivedFeatureID) {
-				case sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT: return docPackage.DBODY__BCONTENT;
-				default: return -1;
-			}
-		}
-		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DBody.class) {
-			switch (baseFeatureID) {
-				case docPackage.DBODY__BCONTENT: return sssPackage.VSSS_DOCUMENT_ITEM__BCONTENT;
-				default: return -1;
-			}
-		}
-		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	public VTraceableDocumentAbstractGroup getGroup() {
+		return (VTraceableDocumentAbstractGroup)eContainer();
 	}
 
 } //VSSSDocumentItemImpl
