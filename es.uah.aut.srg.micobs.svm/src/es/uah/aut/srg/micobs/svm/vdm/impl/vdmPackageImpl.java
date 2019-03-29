@@ -94,7 +94,6 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		commonPackage.eINSTANCE.eClass();
 		tdmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

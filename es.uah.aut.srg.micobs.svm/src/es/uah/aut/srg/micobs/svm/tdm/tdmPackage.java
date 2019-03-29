@@ -55,7 +55,7 @@ public interface tdmPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "svm";
+	String eNS_PREFIX = "micobs.svm";
 
 	/**
 	 * The singleton instance of the package.
