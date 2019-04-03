@@ -13,33 +13,30 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -68,134 +65,134 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements VSSSSpecificRequirements {
 	/**
-	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference list.
+	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getGeneral()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSGeneralRequirement> general;
+	protected VSSSGeneralRequirements general;
 
 	/**
-	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference list.
+	 * The cached value of the '{@link #getCapabilities() <em>Capabilities</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSCapabilitiesRequirement> capabilities;
+	protected VSSSCapabilitiesRequirements capabilities;
 
 	/**
-	 * The cached value of the '{@link #getSystemInterface() <em>System Interface</em>}' containment reference list.
+	 * The cached value of the '{@link #getSystemInterface() <em>System Interface</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSystemInterface()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSystemInterfaceRequirement> systemInterface;
+	protected VSSSSystemInterfaceRequirements systemInterface;
 
 	/**
-	 * The cached value of the '{@link #getAdaptationMissionization() <em>Adaptation Missionization</em>}' containment reference list.
+	 * The cached value of the '{@link #getAdaptationMissionization() <em>Adaptation Missionization</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getAdaptationMissionization()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSAdaptationMissionizationRequirement> adaptationMissionization;
+	protected VSSSAdaptationMissionizationRequirements adaptationMissionization;
 
 	/**
-	 * The cached value of the '{@link #getComputerResource() <em>Computer Resource</em>}' containment reference list.
+	 * The cached value of the '{@link #getComputerResource() <em>Computer Resource</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getComputerResource()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSComputerResourceRequirement> computerResource;
+	protected VSSSComputerResourceRequirements computerResource;
 
 	/**
-	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' containment reference list.
+	 * The cached value of the '{@link #getSecurity() <em>Security</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSecurity()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSecurityRequirement> security;
+	protected VSSSSecurityRequirements security;
 
 	/**
-	 * The cached value of the '{@link #getSafety() <em>Safety</em>}' containment reference list.
+	 * The cached value of the '{@link #getSafety() <em>Safety</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSafety()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSafetyRequirement> safety;
+	protected VSSSSafetyRequirements safety;
 
 	/**
-	 * The cached value of the '{@link #getReliabiltyAvailability() <em>Reliabilty Availability</em>}' containment reference list.
+	 * The cached value of the '{@link #getReliabiltyAvailability() <em>Reliabilty Availability</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getReliabiltyAvailability()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSReliabiltyAvailabilityRequirement> reliabiltyAvailability;
+	protected VSSSReliabiltyAvailabilityRequirements reliabiltyAvailability;
 
 	/**
-	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' containment reference list.
+	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQuality()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSQualityRequirement> quality;
+	protected VSSSQualityRequirements quality;
 
 	/**
-	 * The cached value of the '{@link #getDesign() <em>Design</em>}' containment reference list.
+	 * The cached value of the '{@link #getDesign() <em>Design</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getDesign()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSDesignRequirement> design;
+	protected VSSSDesignRequirements design;
 
 	/**
-	 * The cached value of the '{@link #getSoftwareOperations() <em>Software Operations</em>}' containment reference list.
+	 * The cached value of the '{@link #getSoftwareOperations() <em>Software Operations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSoftwareOperations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSoftwareOperationsRequirement> softwareOperations;
+	protected VSSSSoftwareOperationsRequirements softwareOperations;
 
 	/**
-	 * The cached value of the '{@link #getSoftwareMaintenance() <em>Software Maintenance</em>}' containment reference list.
+	 * The cached value of the '{@link #getSoftwareMaintenance() <em>Software Maintenance</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSoftwareMaintenance()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSoftwareMaintenanceRequirement> softwareMaintenance;
+	protected VSSSSoftwareMaintenanceRequirements softwareMaintenance;
 
 	/**
-	 * The cached value of the '{@link #getSystemSoftwareObservability() <em>System Software Observability</em>}' containment reference list.
+	 * The cached value of the '{@link #getSystemSoftwareObservability() <em>System Software Observability</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSystemSoftwareObservability()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSSystemSoftwareObservabilityRequirement> systemSoftwareObservability;
+	protected VSSSSystemSoftwareObservabilityRequirements systemSoftwareObservability;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -221,10 +218,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSGeneralRequirement> getGeneral() {
-		if (general == null) {
-			general = new EObjectContainmentEList<VSSSGeneralRequirement>(VSSSGeneralRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL);
-		}
+	public VSSSGeneralRequirements getGeneral() {
 		return general;
 	}
 
@@ -233,10 +227,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSCapabilitiesRequirement> getCapabilities() {
-		if (capabilities == null) {
-			capabilities = new EObjectContainmentEList<VSSSCapabilitiesRequirement>(VSSSCapabilitiesRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES);
+	public NotificationChain basicSetGeneral(VSSSGeneralRequirements newGeneral, NotificationChain msgs) {
+		VSSSGeneralRequirements oldGeneral = general;
+		general = newGeneral;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL, oldGeneral, newGeneral);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGeneral(VSSSGeneralRequirements newGeneral) {
+		if (newGeneral != general) {
+			NotificationChain msgs = null;
+			if (general != null)
+				msgs = ((InternalEObject)general).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL, null, msgs);
+			if (newGeneral != null)
+				msgs = ((InternalEObject)newGeneral).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL, null, msgs);
+			msgs = basicSetGeneral(newGeneral, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL, newGeneral, newGeneral));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSCapabilitiesRequirements getCapabilities() {
 		return capabilities;
 	}
 
@@ -245,10 +270,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSystemInterfaceRequirement> getSystemInterface() {
-		if (systemInterface == null) {
-			systemInterface = new EObjectContainmentEList<VSSSSystemInterfaceRequirement>(VSSSSystemInterfaceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE);
+	public NotificationChain basicSetCapabilities(VSSSCapabilitiesRequirements newCapabilities, NotificationChain msgs) {
+		VSSSCapabilitiesRequirements oldCapabilities = capabilities;
+		capabilities = newCapabilities;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES, oldCapabilities, newCapabilities);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCapabilities(VSSSCapabilitiesRequirements newCapabilities) {
+		if (newCapabilities != capabilities) {
+			NotificationChain msgs = null;
+			if (capabilities != null)
+				msgs = ((InternalEObject)capabilities).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES, null, msgs);
+			if (newCapabilities != null)
+				msgs = ((InternalEObject)newCapabilities).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES, null, msgs);
+			msgs = basicSetCapabilities(newCapabilities, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES, newCapabilities, newCapabilities));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSystemInterfaceRequirements getSystemInterface() {
 		return systemInterface;
 	}
 
@@ -257,10 +313,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSAdaptationMissionizationRequirement> getAdaptationMissionization() {
-		if (adaptationMissionization == null) {
-			adaptationMissionization = new EObjectContainmentEList<VSSSAdaptationMissionizationRequirement>(VSSSAdaptationMissionizationRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION);
+	public NotificationChain basicSetSystemInterface(VSSSSystemInterfaceRequirements newSystemInterface, NotificationChain msgs) {
+		VSSSSystemInterfaceRequirements oldSystemInterface = systemInterface;
+		systemInterface = newSystemInterface;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE, oldSystemInterface, newSystemInterface);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSystemInterface(VSSSSystemInterfaceRequirements newSystemInterface) {
+		if (newSystemInterface != systemInterface) {
+			NotificationChain msgs = null;
+			if (systemInterface != null)
+				msgs = ((InternalEObject)systemInterface).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE, null, msgs);
+			if (newSystemInterface != null)
+				msgs = ((InternalEObject)newSystemInterface).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE, null, msgs);
+			msgs = basicSetSystemInterface(newSystemInterface, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE, newSystemInterface, newSystemInterface));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSAdaptationMissionizationRequirements getAdaptationMissionization() {
 		return adaptationMissionization;
 	}
 
@@ -269,10 +356,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSComputerResourceRequirement> getComputerResource() {
-		if (computerResource == null) {
-			computerResource = new EObjectContainmentEList<VSSSComputerResourceRequirement>(VSSSComputerResourceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE);
+	public NotificationChain basicSetAdaptationMissionization(VSSSAdaptationMissionizationRequirements newAdaptationMissionization, NotificationChain msgs) {
+		VSSSAdaptationMissionizationRequirements oldAdaptationMissionization = adaptationMissionization;
+		adaptationMissionization = newAdaptationMissionization;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION, oldAdaptationMissionization, newAdaptationMissionization);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAdaptationMissionization(VSSSAdaptationMissionizationRequirements newAdaptationMissionization) {
+		if (newAdaptationMissionization != adaptationMissionization) {
+			NotificationChain msgs = null;
+			if (adaptationMissionization != null)
+				msgs = ((InternalEObject)adaptationMissionization).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION, null, msgs);
+			if (newAdaptationMissionization != null)
+				msgs = ((InternalEObject)newAdaptationMissionization).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION, null, msgs);
+			msgs = basicSetAdaptationMissionization(newAdaptationMissionization, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION, newAdaptationMissionization, newAdaptationMissionization));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSComputerResourceRequirements getComputerResource() {
 		return computerResource;
 	}
 
@@ -281,10 +399,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSecurityRequirement> getSecurity() {
-		if (security == null) {
-			security = new EObjectContainmentEList<VSSSSecurityRequirement>(VSSSSecurityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY);
+	public NotificationChain basicSetComputerResource(VSSSComputerResourceRequirements newComputerResource, NotificationChain msgs) {
+		VSSSComputerResourceRequirements oldComputerResource = computerResource;
+		computerResource = newComputerResource;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE, oldComputerResource, newComputerResource);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setComputerResource(VSSSComputerResourceRequirements newComputerResource) {
+		if (newComputerResource != computerResource) {
+			NotificationChain msgs = null;
+			if (computerResource != null)
+				msgs = ((InternalEObject)computerResource).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE, null, msgs);
+			if (newComputerResource != null)
+				msgs = ((InternalEObject)newComputerResource).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE, null, msgs);
+			msgs = basicSetComputerResource(newComputerResource, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE, newComputerResource, newComputerResource));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSecurityRequirements getSecurity() {
 		return security;
 	}
 
@@ -293,10 +442,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSafetyRequirement> getSafety() {
-		if (safety == null) {
-			safety = new EObjectContainmentEList<VSSSSafetyRequirement>(VSSSSafetyRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY);
+	public NotificationChain basicSetSecurity(VSSSSecurityRequirements newSecurity, NotificationChain msgs) {
+		VSSSSecurityRequirements oldSecurity = security;
+		security = newSecurity;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY, oldSecurity, newSecurity);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSecurity(VSSSSecurityRequirements newSecurity) {
+		if (newSecurity != security) {
+			NotificationChain msgs = null;
+			if (security != null)
+				msgs = ((InternalEObject)security).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY, null, msgs);
+			if (newSecurity != null)
+				msgs = ((InternalEObject)newSecurity).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY, null, msgs);
+			msgs = basicSetSecurity(newSecurity, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY, newSecurity, newSecurity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSafetyRequirements getSafety() {
 		return safety;
 	}
 
@@ -305,10 +485,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSReliabiltyAvailabilityRequirement> getReliabiltyAvailability() {
-		if (reliabiltyAvailability == null) {
-			reliabiltyAvailability = new EObjectContainmentEList<VSSSReliabiltyAvailabilityRequirement>(VSSSReliabiltyAvailabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY);
+	public NotificationChain basicSetSafety(VSSSSafetyRequirements newSafety, NotificationChain msgs) {
+		VSSSSafetyRequirements oldSafety = safety;
+		safety = newSafety;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY, oldSafety, newSafety);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSafety(VSSSSafetyRequirements newSafety) {
+		if (newSafety != safety) {
+			NotificationChain msgs = null;
+			if (safety != null)
+				msgs = ((InternalEObject)safety).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY, null, msgs);
+			if (newSafety != null)
+				msgs = ((InternalEObject)newSafety).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY, null, msgs);
+			msgs = basicSetSafety(newSafety, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY, newSafety, newSafety));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSReliabiltyAvailabilityRequirements getReliabiltyAvailability() {
 		return reliabiltyAvailability;
 	}
 
@@ -317,10 +528,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSQualityRequirement> getQuality() {
-		if (quality == null) {
-			quality = new EObjectContainmentEList<VSSSQualityRequirement>(VSSSQualityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY);
+	public NotificationChain basicSetReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements newReliabiltyAvailability, NotificationChain msgs) {
+		VSSSReliabiltyAvailabilityRequirements oldReliabiltyAvailability = reliabiltyAvailability;
+		reliabiltyAvailability = newReliabiltyAvailability;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY, oldReliabiltyAvailability, newReliabiltyAvailability);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements newReliabiltyAvailability) {
+		if (newReliabiltyAvailability != reliabiltyAvailability) {
+			NotificationChain msgs = null;
+			if (reliabiltyAvailability != null)
+				msgs = ((InternalEObject)reliabiltyAvailability).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY, null, msgs);
+			if (newReliabiltyAvailability != null)
+				msgs = ((InternalEObject)newReliabiltyAvailability).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY, null, msgs);
+			msgs = basicSetReliabiltyAvailability(newReliabiltyAvailability, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY, newReliabiltyAvailability, newReliabiltyAvailability));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSQualityRequirements getQuality() {
 		return quality;
 	}
 
@@ -329,10 +571,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSDesignRequirement> getDesign() {
-		if (design == null) {
-			design = new EObjectContainmentEList<VSSSDesignRequirement>(VSSSDesignRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN);
+	public NotificationChain basicSetQuality(VSSSQualityRequirements newQuality, NotificationChain msgs) {
+		VSSSQualityRequirements oldQuality = quality;
+		quality = newQuality;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY, oldQuality, newQuality);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setQuality(VSSSQualityRequirements newQuality) {
+		if (newQuality != quality) {
+			NotificationChain msgs = null;
+			if (quality != null)
+				msgs = ((InternalEObject)quality).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY, null, msgs);
+			if (newQuality != null)
+				msgs = ((InternalEObject)newQuality).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY, null, msgs);
+			msgs = basicSetQuality(newQuality, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY, newQuality, newQuality));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSDesignRequirements getDesign() {
 		return design;
 	}
 
@@ -341,10 +614,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSoftwareOperationsRequirement> getSoftwareOperations() {
-		if (softwareOperations == null) {
-			softwareOperations = new EObjectContainmentEList<VSSSSoftwareOperationsRequirement>(VSSSSoftwareOperationsRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS);
+	public NotificationChain basicSetDesign(VSSSDesignRequirements newDesign, NotificationChain msgs) {
+		VSSSDesignRequirements oldDesign = design;
+		design = newDesign;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN, oldDesign, newDesign);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDesign(VSSSDesignRequirements newDesign) {
+		if (newDesign != design) {
+			NotificationChain msgs = null;
+			if (design != null)
+				msgs = ((InternalEObject)design).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN, null, msgs);
+			if (newDesign != null)
+				msgs = ((InternalEObject)newDesign).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN, null, msgs);
+			msgs = basicSetDesign(newDesign, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN, newDesign, newDesign));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSoftwareOperationsRequirements getSoftwareOperations() {
 		return softwareOperations;
 	}
 
@@ -353,10 +657,41 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSoftwareMaintenanceRequirement> getSoftwareMaintenance() {
-		if (softwareMaintenance == null) {
-			softwareMaintenance = new EObjectContainmentEList<VSSSSoftwareMaintenanceRequirement>(VSSSSoftwareMaintenanceRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE);
+	public NotificationChain basicSetSoftwareOperations(VSSSSoftwareOperationsRequirements newSoftwareOperations, NotificationChain msgs) {
+		VSSSSoftwareOperationsRequirements oldSoftwareOperations = softwareOperations;
+		softwareOperations = newSoftwareOperations;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS, oldSoftwareOperations, newSoftwareOperations);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSoftwareOperations(VSSSSoftwareOperationsRequirements newSoftwareOperations) {
+		if (newSoftwareOperations != softwareOperations) {
+			NotificationChain msgs = null;
+			if (softwareOperations != null)
+				msgs = ((InternalEObject)softwareOperations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS, null, msgs);
+			if (newSoftwareOperations != null)
+				msgs = ((InternalEObject)newSoftwareOperations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS, null, msgs);
+			msgs = basicSetSoftwareOperations(newSoftwareOperations, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS, newSoftwareOperations, newSoftwareOperations));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSoftwareMaintenanceRequirements getSoftwareMaintenance() {
 		return softwareMaintenance;
 	}
 
@@ -365,11 +700,76 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSSystemSoftwareObservabilityRequirement> getSystemSoftwareObservability() {
-		if (systemSoftwareObservability == null) {
-			systemSoftwareObservability = new EObjectContainmentEList<VSSSSystemSoftwareObservabilityRequirement>(VSSSSystemSoftwareObservabilityRequirement.class, this, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY);
+	public NotificationChain basicSetSoftwareMaintenance(VSSSSoftwareMaintenanceRequirements newSoftwareMaintenance, NotificationChain msgs) {
+		VSSSSoftwareMaintenanceRequirements oldSoftwareMaintenance = softwareMaintenance;
+		softwareMaintenance = newSoftwareMaintenance;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE, oldSoftwareMaintenance, newSoftwareMaintenance);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSoftwareMaintenance(VSSSSoftwareMaintenanceRequirements newSoftwareMaintenance) {
+		if (newSoftwareMaintenance != softwareMaintenance) {
+			NotificationChain msgs = null;
+			if (softwareMaintenance != null)
+				msgs = ((InternalEObject)softwareMaintenance).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE, null, msgs);
+			if (newSoftwareMaintenance != null)
+				msgs = ((InternalEObject)newSoftwareMaintenance).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE, null, msgs);
+			msgs = basicSetSoftwareMaintenance(newSoftwareMaintenance, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE, newSoftwareMaintenance, newSoftwareMaintenance));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSSystemSoftwareObservabilityRequirements getSystemSoftwareObservability() {
 		return systemSoftwareObservability;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSystemSoftwareObservability(VSSSSystemSoftwareObservabilityRequirements newSystemSoftwareObservability, NotificationChain msgs) {
+		VSSSSystemSoftwareObservabilityRequirements oldSystemSoftwareObservability = systemSoftwareObservability;
+		systemSoftwareObservability = newSystemSoftwareObservability;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY, oldSystemSoftwareObservability, newSystemSoftwareObservability);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSystemSoftwareObservability(VSSSSystemSoftwareObservabilityRequirements newSystemSoftwareObservability) {
+		if (newSystemSoftwareObservability != systemSoftwareObservability) {
+			NotificationChain msgs = null;
+			if (systemSoftwareObservability != null)
+				msgs = ((InternalEObject)systemSoftwareObservability).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY, null, msgs);
+			if (newSystemSoftwareObservability != null)
+				msgs = ((InternalEObject)newSystemSoftwareObservability).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY, null, msgs);
+			msgs = basicSetSystemSoftwareObservability(newSystemSoftwareObservability, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY, newSystemSoftwareObservability, newSystemSoftwareObservability));
 	}
 
 	/**
@@ -381,31 +781,31 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
-				return ((InternalEList<?>)getGeneral()).basicRemove(otherEnd, msgs);
+				return basicSetGeneral(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
-				return ((InternalEList<?>)getCapabilities()).basicRemove(otherEnd, msgs);
+				return basicSetCapabilities(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE:
-				return ((InternalEList<?>)getSystemInterface()).basicRemove(otherEnd, msgs);
+				return basicSetSystemInterface(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION:
-				return ((InternalEList<?>)getAdaptationMissionization()).basicRemove(otherEnd, msgs);
+				return basicSetAdaptationMissionization(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE:
-				return ((InternalEList<?>)getComputerResource()).basicRemove(otherEnd, msgs);
+				return basicSetComputerResource(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY:
-				return ((InternalEList<?>)getSecurity()).basicRemove(otherEnd, msgs);
+				return basicSetSecurity(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY:
-				return ((InternalEList<?>)getSafety()).basicRemove(otherEnd, msgs);
+				return basicSetSafety(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				return ((InternalEList<?>)getReliabiltyAvailability()).basicRemove(otherEnd, msgs);
+				return basicSetReliabiltyAvailability(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
-				return ((InternalEList<?>)getQuality()).basicRemove(otherEnd, msgs);
+				return basicSetQuality(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN:
-				return ((InternalEList<?>)getDesign()).basicRemove(otherEnd, msgs);
+				return basicSetDesign(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS:
-				return ((InternalEList<?>)getSoftwareOperations()).basicRemove(otherEnd, msgs);
+				return basicSetSoftwareOperations(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE:
-				return ((InternalEList<?>)getSoftwareMaintenance()).basicRemove(otherEnd, msgs);
+				return basicSetSoftwareMaintenance(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY:
-				return ((InternalEList<?>)getSystemSoftwareObservability()).basicRemove(otherEnd, msgs);
+				return basicSetSystemSoftwareObservability(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -453,61 +853,47 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
-				getGeneral().clear();
-				getGeneral().addAll((Collection<? extends VSSSGeneralRequirement>)newValue);
+				setGeneral((VSSSGeneralRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
-				getCapabilities().clear();
-				getCapabilities().addAll((Collection<? extends VSSSCapabilitiesRequirement>)newValue);
+				setCapabilities((VSSSCapabilitiesRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE:
-				getSystemInterface().clear();
-				getSystemInterface().addAll((Collection<? extends VSSSSystemInterfaceRequirement>)newValue);
+				setSystemInterface((VSSSSystemInterfaceRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION:
-				getAdaptationMissionization().clear();
-				getAdaptationMissionization().addAll((Collection<? extends VSSSAdaptationMissionizationRequirement>)newValue);
+				setAdaptationMissionization((VSSSAdaptationMissionizationRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE:
-				getComputerResource().clear();
-				getComputerResource().addAll((Collection<? extends VSSSComputerResourceRequirement>)newValue);
+				setComputerResource((VSSSComputerResourceRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY:
-				getSecurity().clear();
-				getSecurity().addAll((Collection<? extends VSSSSecurityRequirement>)newValue);
+				setSecurity((VSSSSecurityRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY:
-				getSafety().clear();
-				getSafety().addAll((Collection<? extends VSSSSafetyRequirement>)newValue);
+				setSafety((VSSSSafetyRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				getReliabiltyAvailability().clear();
-				getReliabiltyAvailability().addAll((Collection<? extends VSSSReliabiltyAvailabilityRequirement>)newValue);
+				setReliabiltyAvailability((VSSSReliabiltyAvailabilityRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
-				getQuality().clear();
-				getQuality().addAll((Collection<? extends VSSSQualityRequirement>)newValue);
+				setQuality((VSSSQualityRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN:
-				getDesign().clear();
-				getDesign().addAll((Collection<? extends VSSSDesignRequirement>)newValue);
+				setDesign((VSSSDesignRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS:
-				getSoftwareOperations().clear();
-				getSoftwareOperations().addAll((Collection<? extends VSSSSoftwareOperationsRequirement>)newValue);
+				setSoftwareOperations((VSSSSoftwareOperationsRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE:
-				getSoftwareMaintenance().clear();
-				getSoftwareMaintenance().addAll((Collection<? extends VSSSSoftwareMaintenanceRequirement>)newValue);
+				setSoftwareMaintenance((VSSSSoftwareMaintenanceRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY:
-				getSystemSoftwareObservability().clear();
-				getSystemSoftwareObservability().addAll((Collection<? extends VSSSSystemSoftwareObservabilityRequirement>)newValue);
+				setSystemSoftwareObservability((VSSSSystemSoftwareObservabilityRequirements)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -522,43 +908,43 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
-				getGeneral().clear();
+				setGeneral((VSSSGeneralRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
-				getCapabilities().clear();
+				setCapabilities((VSSSCapabilitiesRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE:
-				getSystemInterface().clear();
+				setSystemInterface((VSSSSystemInterfaceRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION:
-				getAdaptationMissionization().clear();
+				setAdaptationMissionization((VSSSAdaptationMissionizationRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE:
-				getComputerResource().clear();
+				setComputerResource((VSSSComputerResourceRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY:
-				getSecurity().clear();
+				setSecurity((VSSSSecurityRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY:
-				getSafety().clear();
+				setSafety((VSSSSafetyRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				getReliabiltyAvailability().clear();
+				setReliabiltyAvailability((VSSSReliabiltyAvailabilityRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
-				getQuality().clear();
+				setQuality((VSSSQualityRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN:
-				getDesign().clear();
+				setDesign((VSSSDesignRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS:
-				getSoftwareOperations().clear();
+				setSoftwareOperations((VSSSSoftwareOperationsRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE:
-				getSoftwareMaintenance().clear();
+				setSoftwareMaintenance((VSSSSoftwareMaintenanceRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY:
-				getSystemSoftwareObservability().clear();
+				setSystemSoftwareObservability((VSSSSystemSoftwareObservabilityRequirements)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -573,35 +959,35 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
-				return general != null && !general.isEmpty();
+				return general != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
-				return capabilities != null && !capabilities.isEmpty();
+				return capabilities != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE:
-				return systemInterface != null && !systemInterface.isEmpty();
+				return systemInterface != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION:
-				return adaptationMissionization != null && !adaptationMissionization.isEmpty();
+				return adaptationMissionization != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE:
-				return computerResource != null && !computerResource.isEmpty();
+				return computerResource != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECURITY:
-				return security != null && !security.isEmpty();
+				return security != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SAFETY:
-				return safety != null && !safety.isEmpty();
+				return safety != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				return reliabiltyAvailability != null && !reliabiltyAvailability.isEmpty();
+				return reliabiltyAvailability != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
-				return quality != null && !quality.isEmpty();
+				return quality != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__DESIGN:
-				return design != null && !design.isEmpty();
+				return design != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS:
-				return softwareOperations != null && !softwareOperations.isEmpty();
+				return softwareOperations != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE:
-				return softwareMaintenance != null && !softwareMaintenance.isEmpty();
+				return softwareMaintenance != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY:
-				return systemSoftwareObservability != null && !systemSoftwareObservability.isEmpty();
+				return systemSoftwareObservability != null;
 		}
 		return super.eIsSet(featureID);
 	}
-	
+
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
@@ -620,5 +1006,5 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 		subsections.add((DAbstractSection) getSystemSoftwareObservability());
 		return subsections;
 	}
-
+	
 } //VSSSSpecificRequirementsImpl

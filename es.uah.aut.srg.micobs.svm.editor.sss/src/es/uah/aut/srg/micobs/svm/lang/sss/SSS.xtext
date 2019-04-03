@@ -7,383 +7,343 @@ import "http://srg.aut.uah.es/micobs/svm/tdm" as tdm
 import "http://srg.aut.uah.es/micobs/doctpl/doc" as doc
 
 VSSSDocument returns VSSSDocument:
-	'VSSSDocument'
-	name=EString
-	'{'
-		'id' id=EString
-		'issue' issue=EString
-		'revision' revision=EString
-		'date' date=EString
-		('parents' '(' parents+=[tdm::VTraceableDocument|EString] ( "," parents+=[tdm::VTraceableDocument|EString])* ')' )?
-		'introductionSection' introductionSection=VSSSIntroduction
-		'applicableDocumentsSection' applicableDocumentsSection=VSSSApplicableDocuments
-		'referenceDocumentsSection' referenceDocumentsSection=VSSSReferenceDocuments
-		'termsDefinitionsAbbreviationsSection' termsDefinitionsAbbreviationsSection=VSSSTermsDefinitionsAbbreviations
-		'generalDescriptionSection' generalDescriptionSection=VSSSGeneralDescription
-		'specificRequirementsSection' specificRequirementsSection=VSSSSpecificRequirements
-		'verificationValidationIntegrationSection' verificationValidationIntegrationSection=VSSSVerificationValidationIntegrationRequirements
-		('systemModelsSection' systemModelsSection=VSSSSystemModels)?
-	'}';
+	'<SSS'
+		'name=' name=STRING
+		'id=' id=STRING
+		'issue=' issue=STRING
+		'revision=' revision=STRING
+		'date=' date=STRING
+		'>'
+		introductionSection=VSSSIntroduction
+		applicableDocumentsSection=VSSSApplicableDocuments
+		referenceDocumentsSection=VSSSReferenceDocuments
+		termsDefinitionsAbbreviationsSection=VSSSTermsDefinitionsAbbreviations
+		generalDescriptionSection=VSSSGeneralDescription
+		specificRequirementsSection=VSSSSpecificRequirements
+		verificationValidationIntegrationSection=VSSSVerificationValidationIntegrationRequirements
+		systemModelsSection=VSSSSystemModels
+	'</SSS>';
 
 DBody returns doc::DBody:
-	DBody_Impl | DCell;
+	'<body>'
+		(bodyContent+=DBodyContent)+
+	'</body>';
 
 DBodyContent returns doc::DBodyContent:
-	DParagraph | DItemize | DEnumerate;
+	DParagraph | DItemize | DEnumerate | DFigure | DPictureAsTable | DBasicTable;
+
+DParagraph returns doc::DParagraph:
+	'<paragraph>'
+		(paragraphContent+=DParagraphContent)+ 
+	'</paragraph>';
+
+DListItem returns doc::DListItem:
+	'<listItem>'
+		(paragraph+=DParagraph)+ 
+		('<sublist>' sublist=DListContent '</sublist>')?
+	'</listItem>';
+
+DListContent returns doc::DListContent:
+	DItemize | DEnumerate;
+
+DItemize returns doc::DItemize:
+	'<itemize>'
+		(items+=DListItem)+ 
+	'</itemize>';
+
+DEnumerate returns doc::DEnumerate:
+	'<enumerate>'
+		(items+=DListItem)+ 
+	'</enumerate>';
 
 DParagraphContent returns doc::DParagraphContent:
 	DRun | DHyperlink;
 
-DReferenceableObject returns doc::DReferenceableObject:
-	DReferenceableObject_Impl | DApplicableDocument | DReferenceDocument;
+DRun returns doc::DRun:
+	'<run'
+		('bold')?
+		('italic')?
+		('underscore')?
+	'>'
+		text=DText
+	'</run>';
 
-DListContent returns doc::DListContent:
-	DItemize | DEnumerate;
+DHyperlink returns doc::DHyperlink:
+	'<hyperlink'
+		'reference=' reference=[doc::DReferenceableObject|STRING]
+		//'reference=' reference=DReferenceableObject
+	'>'
+		run=DRun
+	'</hyperlink>';
+
+DReferenceableObject returns doc::DReferenceableObject:
+	DApplicableDocument | DReferenceDocument | DFigure | DPictureAsTable | DBasicTable ;
+	
+DText returns doc::DText:
+	content=RUNTEXT;
+
+terminal RUNTEXT returns ecore::EString:
+    '<text>' -> '</text>';
+
+DFigure returns doc::DFigure:
+	'<figure'
+		'reference=' reference=STRING
+		'caption=' caption=STRING
+	'/>';
+
+DPictureAsTable returns doc::DPictureAsTable:
+	'<pictureAsTable'
+		'reference=' reference=STRING
+		'caption=' caption=STRING
+	'/>';
+
+DBasicTable returns doc::DBasicTable: 
+	'<basicTable'
+		'caption=' caption=STRING
+	'>'
+		(rows+=DRow)+
+	'</basicTable>';
+
+DRow returns doc::DRow:
+	'<row'
+		'span=' span=STRING
+	'>'
+		(columns+=DColumn)+ 
+	'</row>';
+
+DColumn returns doc::DColumn:
+	'<column'
+		'span=' span=STRING
+	'>'
+		(cells+=DCell)+
+	'</column>';
+
+DCell returns doc::DCell:
+	'<cell>'
+		(bodyContent+=DBodyContent)+
+	'</cell>';
+
+DApplicableDocument returns doc::DApplicableDocument:
+	'<ApplicableDocument'
+		'title=' title=STRING
+		'issue=' issue=STRING
+		'revision=' revision=STRING
+	'/>';
+
+DReferenceDocument returns doc::DReferenceDocument:
+	'<ReferenceDocument'
+		'title=' title=STRING
+		'issue=' issue=STRING
+		'revision=' revision=STRING
+	'/>';
 
 EString returns ecore::EString:
 	STRING | ID;
 
 VSSSIntroduction returns VSSSIntroduction:
-	'VSSSIntroduction'
-	'{'
-		'purpose' purpose=DBody
-		'objetive' objetive=DBody
-		'content' content=DBody
-		'reason' reason=DBody
-	'}';
+	'<Introduction>'
+		'<purpose>' purpose=DBody '</purpose>'
+		'<objective>' objective=DBody '</objective>'
+		'<content>' content=DBody '</content>'
+		'<reason>' reason=DBody '</reason>'
+	'</Introduction>';
 
 VSSSApplicableDocuments returns VSSSApplicableDocuments:
 	{VSSSApplicableDocuments}
-	'VSSSApplicableDocuments'
-	'{'
-		('applicableDocuments' '{' applicableDocuments+=DApplicableDocument ( "," applicableDocuments+=DApplicableDocument)* '}' )?
-	'}';
+	'<ApplicableDocuments>'
+		(applicableDocuments+=DApplicableDocument)*
+	'</ApplicableDocuments>';
 
 VSSSReferenceDocuments returns VSSSReferenceDocuments:
 	{VSSSReferenceDocuments}
-	'VSSSReferenceDocuments'
-	'{'
-		('referenceDocuments' '{' referenceDocuments+=DReferenceDocument ( "," referenceDocuments+=DReferenceDocument)* '}' )?
-	'}';
+	'<ReferenceDocuments>'
+		(referenceDocuments+=DReferenceDocument)*
+	'</ReferenceDocuments>';
 
 VSSSTermsDefinitionsAbbreviations returns VSSSTermsDefinitionsAbbreviations:
 	{VSSSTermsDefinitionsAbbreviations}
-	'VSSSTermsDefinitionsAbbreviations'
-	'{'
-		('terms' '{' terms+=VSSSTerm ( "," terms+=VSSSTerm)* '}' )?
-		('definitions' '{' definitions+=VSSSDefinition ( "," definitions+=VSSSDefinition)* '}' )?
-		('abbreviations' '{' abbreviations+=VSSSAbbreviation ( "," abbreviations+=VSSSAbbreviation)* '}' )?
-	'}';
+	'<TermsDefinitionsAbbreviations>'
+		(terms+=VSSSTerm)*
+		(definitions+=VSSSDefinition)*
+		(abbreviations+=VSSSAbbreviation)*
+	'</TermsDefinitionsAbbreviations>';
 
 VSSSGeneralDescription returns VSSSGeneralDescription:
-	'VSSSGeneralDescription'
-	'{'
-		'productPerspective' productPerspective=VSSSGeneralDescriptionSubsection
-		'generalCapabilites' generalCapabilites=VSSSGeneralDescriptionSubsection
-		'generalConstraints' generalConstraints=VSSSGeneralDescriptionSubsection
-		'operationalEnvironment' operationalEnvironment=VSSSGeneralDescriptionSubsection
-		'assumptionsDependencies' assumptionsDependencies=VSSSGeneralDescriptionSubsection
-	'}';
+	'<GeneralDescription>'
+		'<productPerspective>' productPerspective=VSSSGeneralDescriptionSubsection '</productPerspective>'
+		'<generalCapabilities>' generalCapabilities=VSSSGeneralDescriptionSubsection '</generalCapabilities>'
+		'<generalConstraints>' generalConstraints=VSSSGeneralDescriptionSubsection '</generalConstraints>'
+		'<operationalEnvironment>' operationalEnvironment=VSSSGeneralDescriptionSubsection '</operationalEnvironment>'
+		'<assumptionsDependencies>' assumptionsDependencies=VSSSGeneralDescriptionSubsection '</assumptionsDependencies>'
+	'</GeneralDescription>';
 
 VSSSSpecificRequirements returns VSSSSpecificRequirements:
-	{VSSSSpecificRequirements}
-	'VSSSSpecificRequirements'
-	'{'
-		('general' '{' general+=VSSSGeneralRequirement ( "," general+=VSSSGeneralRequirement)* '}' )?
-		('capabilities' '{' capabilities+=VSSSCapabilitiesRequirement ( "," capabilities+=VSSSCapabilitiesRequirement)* '}' )?
-		('systemInterface' '{' systemInterface+=VSSSSystemInterfaceRequirement ( "," systemInterface+=VSSSSystemInterfaceRequirement)* '}' )?
-		('adaptationMissionization' '{' adaptationMissionization+=VSSSAdaptationMissionizationRequirement ( "," adaptationMissionization+=VSSSAdaptationMissionizationRequirement)* '}' )?
-		('computerResource' '{' computerResource+=VSSSComputerResourceRequirement ( "," computerResource+=VSSSComputerResourceRequirement)* '}' )?
-		('security' '{' security+=VSSSSecurityRequirement ( "," security+=VSSSSecurityRequirement)* '}' )?
-		('safety' '{' safety+=VSSSSafetyRequirement ( "," safety+=VSSSSafetyRequirement)* '}' )?
-		('reliabiltyAvailability' '{' reliabiltyAvailability+=VSSSReliabiltyAvailabilityRequirement ( "," reliabiltyAvailability+=VSSSReliabiltyAvailabilityRequirement)* '}' )?
-		('quality' '{' quality+=VSSSQualityRequirement ( "," quality+=VSSSQualityRequirement)* '}' )?
-		('design' '{' design+=VSSSDesignRequirement ( "," design+=VSSSDesignRequirement)* '}' )?
-		('softwareOperations' '{' softwareOperations+=VSSSSoftwareOperationsRequirement ( "," softwareOperations+=VSSSSoftwareOperationsRequirement)* '}' )?
-		('softwareMaintenance' '{' softwareMaintenance+=VSSSSoftwareMaintenanceRequirement ( "," softwareMaintenance+=VSSSSoftwareMaintenanceRequirement)* '}' )?
-		('systemSoftwareObservability' '{' systemSoftwareObservability+=VSSSSystemSoftwareObservabilityRequirement ( "," systemSoftwareObservability+=VSSSSystemSoftwareObservabilityRequirement)* '}' )?
-	'}';
+	'<SpecificRequirements>'
+		general=VSSSGeneralRequirements
+		capabilities=VSSSCapabilitiesRequirements
+		systemInterface=VSSSSystemInterfaceRequirements
+		adaptationMissionization=VSSSAdaptationMissionizationRequirements
+		computerResource=VSSSComputerResourceRequirements
+		security=VSSSSecurityRequirements
+		safety=VSSSSafetyRequirements
+		reliabiltyAvailability=VSSSReliabiltyAvailabilityRequirements
+		quality=VSSSQualityRequirements
+		design=VSSSDesignRequirements
+		softwareOperations=VSSSSoftwareOperationsRequirements
+		softwareMaintenance=VSSSSoftwareMaintenanceRequirements
+		systemSoftwareObservability=VSSSSystemSoftwareObservabilityRequirements
+	'</SpecificRequirements>';
 
 VSSSVerificationValidationIntegrationRequirements returns VSSSVerificationValidationIntegrationRequirements:
-	{VSSSVerificationValidationIntegrationRequirements}
-	'VSSSVerificationValidationIntegrationRequirements'
-	'{'
-		('verificationValidationProcess' '{' verificationValidationProcess+=VSSSVerificationValidationProcessRequirement ( "," verificationValidationProcess+=VSSSVerificationValidationProcessRequirement)* '}' )?
-		('validationApproach' '{' validationApproach+=VSSSValidationApproach ( "," validationApproach+=VSSSValidationApproach)* '}' )?
-		('validation' '{' validation+=VSSSValidationRequirement ( "," validation+=VSSSValidationRequirement)* '}' )?
-		('verification' '{' verification+=VSSSVerificationRequirement ( "," verification+=VSSSVerificationRequirement)* '}' )?
-	'}';
+	'<VerificationValidationIntegrationRequirements>'
+		verificationValidationProcess=VSSSVerificationValidationProcessRequirements
+		validationApproach=VSSSValidationApproach
+		validation=VSSSValidationRequirements
+		verification=VSSSVerificationRequirements
+	'</VerificationValidationIntegrationRequirements>';
 
 VSSSSystemModels returns VSSSSystemModels:
-	'VSSSSystemModels'
-	'{'
-		'systemModels' '{' systemModels+=VSSSSystemModel ( "," systemModels+=VSSSSystemModel)* '}' 
-	'}';
-
-DBody_Impl returns doc::DBody:
-	'DBody'
-	'{'
-		'bodyContent' '{' bodyContent+=DBodyContent ( "," bodyContent+=DBodyContent)* '}' 
-	'}';
-
-DCell returns doc::DCell:
-	'DCell'
-	'{'
-		'bodyContent' '{' bodyContent+=DBodyContent ( "," bodyContent+=DBodyContent)* '}' 
-	'}';
-
-DParagraph returns doc::DParagraph:
-	'DParagraph'
-	'{'
-		'paragraphContent' '{' paragraphContent+=DParagraphContent ( "," paragraphContent+=DParagraphContent)* '}' 
-	'}';
-
-DItemize returns doc::DItemize:
-	'DItemize'
-	'{'
-		'items' '{' items+=DListItem ( "," items+=DListItem)* '}' 
-	'}';
-
-DEnumerate returns doc::DEnumerate:
-	'DEnumerate'
-	'{'
-		'items' '{' items+=DListItem ( "," items+=DListItem)* '}' 
-	'}';
-
-DRow returns doc::DRow:
-	'DRow'
-	'{'
-		'span' span=EString
-		'columns' '{' columns+=DColumn ( "," columns+=DColumn)* '}' 
-	'}';
-
-DColumn returns doc::DColumn:
-	'DColumn'
-	'{'
-		'span' span=EString
-		'cells' '{' cells+=DCell ( "," cells+=DCell)* '}' 
-	'}';
-
-DRun returns doc::DRun:
-	'DRun'
-	'{'
-		'bold' bold=DRunFormatEnableDisable
-		'italic' italic=DRunFormatEnableDisable
-		'underscore' underscore=DRunFormatEnableDisable
-		'text' text=DText
-	'}';
-
-DHyperlink returns doc::DHyperlink:
-	'DHyperlink'
-	'{'
-		'reference' reference=[doc::DReferenceableObject|EString]
-		'run' run=DRun
-	'}';
-
-DText returns doc::DText:
-	'DText'
-	'{'
-		'content' content=EString
-	'}';
-
-enum DRunFormatEnableDisable returns doc::DRunFormatEnableDisable:
-				disabled = 'disabled' | enabled = 'enabled';
-
-DReferenceableObject_Impl returns doc::DReferenceableObject:
-	{doc::DReferenceableObject}
-	'DReferenceableObject'
-	;
-
-DApplicableDocument returns doc::DApplicableDocument:
-	'DApplicableDocument'
-	'{'
-		'title' title=EString
-		'issue' issue=EString
-		'revision' revision=EString
-	'}';
-
-DReferenceDocument returns doc::DReferenceDocument:
-	'DReferenceDocument'
-	'{'
-		'title' title=EString
-		'issue' issue=EString
-		'revision' revision=EString
-	'}';
-
-DListItem returns doc::DListItem:
-	'DListItem'
-	'{'
-		'paragraph' '{' paragraph+=DParagraph ( "," paragraph+=DParagraph)* '}' 
-		('sublist' sublist=DListContent)?
-	'}';
+	{VSSSSystemModels}
+	'<SystemModels>'
+		(systemModels+=VSSSSystemModel)*
+	'</SystemModels>';
 
 VSSSTerm returns VSSSTerm:
-	'VSSSTerm'
-	name=EString
-	'{'
-		'description' description=[doc::DParagraph|EString]
-	'}';
+	'<Term'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Term>';
 
 VSSSDefinition returns VSSSDefinition:
-	'VSSSDefinition'
-	name=EString
-	'{'
-		'description' description=[doc::DParagraph|EString]
-	'}';
+	'<Definition'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Definition>';
 
 VSSSAbbreviation returns VSSSAbbreviation:
-	'VSSSAbbreviation'
-	name=EString
-	'{'
-		'description' description=[doc::DParagraph|EString]
-	'}';
+	'<Abbreviation'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Abbreviation>';
 
 VSSSGeneralDescriptionSubsection returns VSSSGeneralDescriptionSubsection:
-	'VSSSGeneralDescriptionSubsection'
-	'{'
-		'body' body=[doc::DBody|EString]
-	'}';
+	body=DBody;
 
-VSSSGeneralRequirement returns VSSSGeneralRequirement:
-	'VSSSGeneralRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSGeneralRequirements returns VSSSGeneralRequirements:
+	{VSSSGeneralRequirements}
+	'<GeneralRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</GeneralRequirements>';
 
-VSSSCapabilitiesRequirement returns VSSSCapabilitiesRequirement:
-	'VSSSCapabilitiesRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSCapabilitiesRequirements returns VSSSCapabilitiesRequirements:
+	{VSSSCapabilitiesRequirements}
+	'<CapabilitiesRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</CapabilitiesRequirements>';
 
-VSSSSystemInterfaceRequirement returns VSSSSystemInterfaceRequirement:
-	'VSSSSystemInterfaceRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSystemInterfaceRequirements returns VSSSSystemInterfaceRequirements:
+	{VSSSSystemInterfaceRequirements}
+	'<SystemInterfaceRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SystemInterfaceRequirements>';
 
-VSSSAdaptationMissionizationRequirement returns VSSSAdaptationMissionizationRequirement:
-	'VSSSAdaptationMissionizationRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSAdaptationMissionizationRequirements returns VSSSAdaptationMissionizationRequirements:
+	{VSSSAdaptationMissionizationRequirements}
+	'<VSSSAdaptationMissionizationRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</VSSSAdaptationMissionizationRequirements>';
 
-VSSSComputerResourceRequirement returns VSSSComputerResourceRequirement:
-	'VSSSComputerResourceRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSComputerResourceRequirements returns VSSSComputerResourceRequirements:
+	{VSSSComputerResourceRequirements}
+	'<ComputerResourceRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</ComputerResourceRequirements>';
 
-VSSSSecurityRequirement returns VSSSSecurityRequirement:
-	'VSSSSecurityRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSecurityRequirements returns VSSSSecurityRequirements:
+	{VSSSSecurityRequirements}
+	'<SecurityRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SecurityRequirements>';
 
-VSSSSafetyRequirement returns VSSSSafetyRequirement:
-	'VSSSSafetyRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSafetyRequirements returns VSSSSafetyRequirements:
+	{VSSSSafetyRequirements}
+	'<SafetyRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SafetyRequirements>';
 
-VSSSReliabiltyAvailabilityRequirement returns VSSSReliabiltyAvailabilityRequirement:
-	'VSSSReliabiltyAvailabilityRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSReliabiltyAvailabilityRequirements returns VSSSReliabiltyAvailabilityRequirements:
+	{VSSSReliabiltyAvailabilityRequirements}
+	'<ReliabiltyAvailabilityRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</ReliabiltyAvailabilityRequirements>';
 
-VSSSQualityRequirement returns VSSSQualityRequirement:
-	'VSSSQualityRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSQualityRequirements returns VSSSQualityRequirements:
+	{VSSSQualityRequirements}
+	'<QualityRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</QualityRequirements>';
 
-VSSSDesignRequirement returns VSSSDesignRequirement:
-	'VSSSDesignRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSDesignRequirements returns VSSSDesignRequirements:
+	{VSSSDesignRequirements}
+	'<DesignRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</DesignRequirements>';
 
-VSSSSoftwareOperationsRequirement returns VSSSSoftwareOperationsRequirement:
-	'VSSSSoftwareOperationsRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSoftwareOperationsRequirements returns VSSSSoftwareOperationsRequirements:
+	{VSSSSoftwareOperationsRequirements}
+	'<SoftwareOperationsRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SoftwareOperationsRequirements>';
 
-VSSSSoftwareMaintenanceRequirement returns VSSSSoftwareMaintenanceRequirement:
-	'VSSSSoftwareMaintenanceRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSoftwareMaintenanceRequirements returns VSSSSoftwareMaintenanceRequirements:
+	{VSSSSoftwareMaintenanceRequirements}
+	'<SoftwareMaintenanceRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SoftwareMaintenanceRequirements>';
 
-VSSSSystemSoftwareObservabilityRequirement returns VSSSSystemSoftwareObservabilityRequirement:
-	'VSSSSystemSoftwareObservabilityRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSSystemSoftwareObservabilityRequirements returns VSSSSystemSoftwareObservabilityRequirements:
+	{VSSSSystemSoftwareObservabilityRequirements}
+	'<SystemSoftwareObservabilityRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</SystemSoftwareObservabilityRequirements>';
 
 VSSSDocumentItem returns VSSSDocumentItem:
-	'VSSSDocumentItem'
-	'{'
-		'id' id=EString
-		'verificationMethod' verificationMethod=VVerificationMethod
-		'body' body=[doc::DBody|EString]
-	'}';
+	'<Item'
+		'id=' id=STRING
+		'verificationMethod=' verificationMethod=VVerificationMethod
+		'>'
+		body=DBody
+	'</Item>';
 
 enum VVerificationMethod returns tdm::VVerificationMethod:
-				Analysis = 'Analysis' | Inspection = 'Inspection' | Testing = 'Testing' | Review = 'Review' | ModelSimulation = 'ModelSimulation' | WalkThrough = 'WalkThrough' | CrossReading = 'CrossReading' | DeskChecking = 'DeskChecking';
+	Analysis = '"Analysis"' | Inspection = '"Inspection"' | Testing = '"Testing"' |
+	Review = '"Review"' | ModelSimulation = '"ModelSimulation"' | WalkThrough = '"WalkThrough"' |
+	CrossReading = '"CrossReading"' | DeskChecking = '"DeskChecking"';
 
-VSSSVerificationValidationProcessRequirement returns VSSSVerificationValidationProcessRequirement:
-	'VSSSVerificationValidationProcessRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSVerificationValidationProcessRequirements returns VSSSVerificationValidationProcessRequirements:
+	{VSSSVerificationValidationProcessRequirements}	
+	'<VerificationValidationProcessRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</VerificationValidationProcessRequirements>';
 
 VSSSValidationApproach returns VSSSValidationApproach:
-	'VSSSValidationApproach'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+	{VSSSValidationApproach}
+	'<ValidationApproach>'
+		(sssItems+=VSSSDocumentItem)*
+	'</ValidationApproach>';
 
-VSSSValidationRequirement returns VSSSValidationRequirement:
-	'VSSSValidationRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSValidationRequirements returns VSSSValidationRequirements:
+	{VSSSValidationRequirements}
+	'<ValidationRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</ValidationRequirements>';
 
-VSSSVerificationRequirement returns VSSSVerificationRequirement:
-	'VSSSVerificationRequirement'
-	'{'
-		'sssItems' '{' sssItems+=VSSSDocumentItem ( "," sssItems+=VSSSDocumentItem)* '}' 
-	'}';
+VSSSVerificationRequirements returns VSSSVerificationRequirements:
+	{VSSSVerificationRequirements}
+	'<VerificationRequirements>'
+		(sssItems+=VSSSDocumentItem)*
+	'</VerificationRequirements>';
 
 VSSSSystemModel returns VSSSSystemModel:
 	{VSSSSystemModel}
-	'VSSSSystemModel'
-	;
-
-QualifiedName returns ecore::EString:
-	ID ('.' ID)*;
-
-Version returns ecore::EString:
-	(INT | ((INT)? ID)) ('.' (INT | ((INT)? ID)))*
-	;
-
-VersionedQualifiedName returns ecore::EString:
-	QualifiedName '(' Version ')'
-	;
-
-VersionedQualifiedReferenceName returns ecore::EString:
-	(VersionedQualifiedName '::')? ID ('::' ID)*;
-
-terminal HEXADECIMAL returns ecore::EString:
-	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);
-
-INTEGER returns ecore::EString:
-	('-'? INT | HEXADECIMAL);
-
-EBoolean returns ecore::EBoolean:
-	'true' | 'false';
-	
-REAL returns ecore::EString:
-	'-'? (INT '.' ':=' INT) ('e' ('-')? INT)?;
+	'<SystemModel/>';

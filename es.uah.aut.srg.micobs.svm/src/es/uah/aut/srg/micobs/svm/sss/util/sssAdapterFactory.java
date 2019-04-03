@@ -133,76 +133,76 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSSpecificRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSGeneralRequirement(VSSSGeneralRequirement object) {
-				return createVSSSGeneralRequirementAdapter();
+			public Adapter caseVSSSGeneralRequirements(VSSSGeneralRequirements object) {
+				return createVSSSGeneralRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSCapabilitiesRequirement(VSSSCapabilitiesRequirement object) {
-				return createVSSSCapabilitiesRequirementAdapter();
+			public Adapter caseVSSSCapabilitiesRequirements(VSSSCapabilitiesRequirements object) {
+				return createVSSSCapabilitiesRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSystemInterfaceRequirement(VSSSSystemInterfaceRequirement object) {
-				return createVSSSSystemInterfaceRequirementAdapter();
+			public Adapter caseVSSSSystemInterfaceRequirements(VSSSSystemInterfaceRequirements object) {
+				return createVSSSSystemInterfaceRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSAdaptationMissionizationRequirement(VSSSAdaptationMissionizationRequirement object) {
-				return createVSSSAdaptationMissionizationRequirementAdapter();
+			public Adapter caseVSSSAdaptationMissionizationRequirements(VSSSAdaptationMissionizationRequirements object) {
+				return createVSSSAdaptationMissionizationRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSComputerResourceRequirement(VSSSComputerResourceRequirement object) {
-				return createVSSSComputerResourceRequirementAdapter();
+			public Adapter caseVSSSComputerResourceRequirements(VSSSComputerResourceRequirements object) {
+				return createVSSSComputerResourceRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSecurityRequirement(VSSSSecurityRequirement object) {
-				return createVSSSSecurityRequirementAdapter();
+			public Adapter caseVSSSSecurityRequirements(VSSSSecurityRequirements object) {
+				return createVSSSSecurityRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSafetyRequirement(VSSSSafetyRequirement object) {
-				return createVSSSSafetyRequirementAdapter();
+			public Adapter caseVSSSSafetyRequirements(VSSSSafetyRequirements object) {
+				return createVSSSSafetyRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSReliabiltyAvailabilityRequirement(VSSSReliabiltyAvailabilityRequirement object) {
-				return createVSSSReliabiltyAvailabilityRequirementAdapter();
+			public Adapter caseVSSSReliabiltyAvailabilityRequirements(VSSSReliabiltyAvailabilityRequirements object) {
+				return createVSSSReliabiltyAvailabilityRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSQualityRequirement(VSSSQualityRequirement object) {
-				return createVSSSQualityRequirementAdapter();
+			public Adapter caseVSSSQualityRequirements(VSSSQualityRequirements object) {
+				return createVSSSQualityRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSDesignRequirement(VSSSDesignRequirement object) {
-				return createVSSSDesignRequirementAdapter();
+			public Adapter caseVSSSDesignRequirements(VSSSDesignRequirements object) {
+				return createVSSSDesignRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSoftwareOperationsRequirement(VSSSSoftwareOperationsRequirement object) {
-				return createVSSSSoftwareOperationsRequirementAdapter();
+			public Adapter caseVSSSSoftwareOperationsRequirements(VSSSSoftwareOperationsRequirements object) {
+				return createVSSSSoftwareOperationsRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSoftwareMaintenanceRequirement(VSSSSoftwareMaintenanceRequirement object) {
-				return createVSSSSoftwareMaintenanceRequirementAdapter();
+			public Adapter caseVSSSSoftwareMaintenanceRequirements(VSSSSoftwareMaintenanceRequirements object) {
+				return createVSSSSoftwareMaintenanceRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSSystemSoftwareObservabilityRequirement(VSSSSystemSoftwareObservabilityRequirement object) {
-				return createVSSSSystemSoftwareObservabilityRequirementAdapter();
+			public Adapter caseVSSSSystemSoftwareObservabilityRequirements(VSSSSystemSoftwareObservabilityRequirements object) {
+				return createVSSSSystemSoftwareObservabilityRequirementsAdapter();
 			}
 			@Override
 			public Adapter caseVSSSVerificationValidationIntegrationRequirements(VSSSVerificationValidationIntegrationRequirements object) {
 				return createVSSSVerificationValidationIntegrationRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSVerificationValidationProcessRequirement(VSSSVerificationValidationProcessRequirement object) {
-				return createVSSSVerificationValidationProcessRequirementAdapter();
+			public Adapter caseVSSSVerificationValidationProcessRequirements(VSSSVerificationValidationProcessRequirements object) {
+				return createVSSSVerificationValidationProcessRequirementsAdapter();
 			}
 			@Override
 			public Adapter caseVSSSValidationApproach(VSSSValidationApproach object) {
 				return createVSSSValidationApproachAdapter();
 			}
 			@Override
-			public Adapter caseVSSSVerificationRequirement(VSSSVerificationRequirement object) {
-				return createVSSSVerificationRequirementAdapter();
+			public Adapter caseVSSSVerificationRequirements(VSSSVerificationRequirements object) {
+				return createVSSSVerificationRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSValidationRequirement(VSSSValidationRequirement object) {
-				return createVSSSValidationRequirementAdapter();
+			public Adapter caseVSSSValidationRequirements(VSSSValidationRequirements object) {
+				return createVSSSValidationRequirementsAdapter();
 			}
 			@Override
 			public Adapter caseVSSSDocumentItem(VSSSDocumentItem object) {
@@ -433,184 +433,184 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement <em>VSSS General Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements <em>VSSS General Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSGeneralRequirementAdapter() {
+	public Adapter createVSSSGeneralRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement <em>VSSS Capabilities Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements <em>VSSS Capabilities Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSCapabilitiesRequirementAdapter() {
+	public Adapter createVSSSCapabilitiesRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirement <em>VSSS System Interface Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements <em>VSSS System Interface Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSystemInterfaceRequirementAdapter() {
+	public Adapter createVSSSSystemInterfaceRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement <em>VSSS Adaptation Missionization Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements <em>VSSS Adaptation Missionization Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSAdaptationMissionizationRequirementAdapter() {
+	public Adapter createVSSSAdaptationMissionizationRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement <em>VSSS Computer Resource Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements <em>VSSS Computer Resource Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSComputerResourceRequirementAdapter() {
+	public Adapter createVSSSComputerResourceRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirement <em>VSSS Security Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements <em>VSSS Security Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSecurityRequirementAdapter() {
+	public Adapter createVSSSSecurityRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement <em>VSSS Safety Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements <em>VSSS Safety Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSafetyRequirementAdapter() {
+	public Adapter createVSSSSafetyRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement <em>VSSS Reliabilty Availability Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements <em>VSSS Reliabilty Availability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSReliabiltyAvailabilityRequirementAdapter() {
+	public Adapter createVSSSReliabiltyAvailabilityRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement <em>VSSS Quality Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements <em>VSSS Quality Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSQualityRequirementAdapter() {
+	public Adapter createVSSSQualityRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement <em>VSSS Design Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements <em>VSSS Design Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSDesignRequirementAdapter() {
+	public Adapter createVSSSDesignRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirement <em>VSSS Software Operations Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements <em>VSSS Software Operations Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSoftwareOperationsRequirementAdapter() {
+	public Adapter createVSSSSoftwareOperationsRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirement <em>VSSS Software Maintenance Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements <em>VSSS Software Maintenance Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSoftwareMaintenanceRequirementAdapter() {
+	public Adapter createVSSSSoftwareMaintenanceRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement <em>VSSS System Software Observability Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements <em>VSSS System Software Observability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSSystemSoftwareObservabilityRequirementAdapter() {
+	public Adapter createVSSSSystemSoftwareObservabilityRequirementsAdapter() {
 		return null;
 	}
 
@@ -629,16 +629,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirement <em>VSSS Verification Validation Process Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements <em>VSSS Verification Validation Process Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSVerificationValidationProcessRequirementAdapter() {
+	public Adapter createVSSSVerificationValidationProcessRequirementsAdapter() {
 		return null;
 	}
 
@@ -657,30 +657,30 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirement <em>VSSS Verification Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements <em>VSSS Verification Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSVerificationRequirementAdapter() {
+	public Adapter createVSSSVerificationRequirementsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirement <em>VSSS Validation Requirement</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements <em>VSSS Validation Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirement
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSValidationRequirementAdapter() {
+	public Adapter createVSSSValidationRequirementsAdapter() {
 		return null;
 	}
 

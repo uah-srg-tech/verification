@@ -129,121 +129,121 @@ public interface sssFactory extends EFactory {
 	VSSSSpecificRequirements createVSSSSpecificRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS General Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS General Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS General Requirement</em>'.
+	 * @return a new object of class '<em>VSSS General Requirements</em>'.
 	 * @generated
 	 */
-	VSSSGeneralRequirement createVSSSGeneralRequirement();
+	VSSSGeneralRequirements createVSSSGeneralRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Capabilities Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Capabilities Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Capabilities Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Capabilities Requirements</em>'.
 	 * @generated
 	 */
-	VSSSCapabilitiesRequirement createVSSSCapabilitiesRequirement();
+	VSSSCapabilitiesRequirements createVSSSCapabilitiesRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS System Interface Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS System Interface Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS System Interface Requirement</em>'.
+	 * @return a new object of class '<em>VSSS System Interface Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSystemInterfaceRequirement createVSSSSystemInterfaceRequirement();
+	VSSSSystemInterfaceRequirements createVSSSSystemInterfaceRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Adaptation Missionization Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Adaptation Missionization Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Adaptation Missionization Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Adaptation Missionization Requirements</em>'.
 	 * @generated
 	 */
-	VSSSAdaptationMissionizationRequirement createVSSSAdaptationMissionizationRequirement();
+	VSSSAdaptationMissionizationRequirements createVSSSAdaptationMissionizationRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Computer Resource Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Computer Resource Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Computer Resource Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Computer Resource Requirements</em>'.
 	 * @generated
 	 */
-	VSSSComputerResourceRequirement createVSSSComputerResourceRequirement();
+	VSSSComputerResourceRequirements createVSSSComputerResourceRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Security Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Security Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Security Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Security Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSecurityRequirement createVSSSSecurityRequirement();
+	VSSSSecurityRequirements createVSSSSecurityRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Safety Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Safety Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Safety Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Safety Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSafetyRequirement createVSSSSafetyRequirement();
+	VSSSSafetyRequirements createVSSSSafetyRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Reliabilty Availability Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Reliabilty Availability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Reliabilty Availability Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Reliabilty Availability Requirements</em>'.
 	 * @generated
 	 */
-	VSSSReliabiltyAvailabilityRequirement createVSSSReliabiltyAvailabilityRequirement();
+	VSSSReliabiltyAvailabilityRequirements createVSSSReliabiltyAvailabilityRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Quality Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Quality Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Quality Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Quality Requirements</em>'.
 	 * @generated
 	 */
-	VSSSQualityRequirement createVSSSQualityRequirement();
+	VSSSQualityRequirements createVSSSQualityRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Design Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Design Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Design Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Design Requirements</em>'.
 	 * @generated
 	 */
-	VSSSDesignRequirement createVSSSDesignRequirement();
+	VSSSDesignRequirements createVSSSDesignRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Software Operations Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Software Operations Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Software Operations Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Software Operations Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSoftwareOperationsRequirement createVSSSSoftwareOperationsRequirement();
+	VSSSSoftwareOperationsRequirements createVSSSSoftwareOperationsRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Software Maintenance Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Software Maintenance Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Software Maintenance Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Software Maintenance Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSoftwareMaintenanceRequirement createVSSSSoftwareMaintenanceRequirement();
+	VSSSSoftwareMaintenanceRequirements createVSSSSoftwareMaintenanceRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS System Software Observability Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS System Software Observability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS System Software Observability Requirement</em>'.
+	 * @return a new object of class '<em>VSSS System Software Observability Requirements</em>'.
 	 * @generated
 	 */
-	VSSSSystemSoftwareObservabilityRequirement createVSSSSystemSoftwareObservabilityRequirement();
+	VSSSSystemSoftwareObservabilityRequirements createVSSSSystemSoftwareObservabilityRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Verification Validation Integration Requirements</em>'.
@@ -255,13 +255,13 @@ public interface sssFactory extends EFactory {
 	VSSSVerificationValidationIntegrationRequirements createVSSSVerificationValidationIntegrationRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Verification Validation Process Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Verification Validation Process Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Verification Validation Process Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Verification Validation Process Requirements</em>'.
 	 * @generated
 	 */
-	VSSSVerificationValidationProcessRequirement createVSSSVerificationValidationProcessRequirement();
+	VSSSVerificationValidationProcessRequirements createVSSSVerificationValidationProcessRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Validation Approach</em>'.
@@ -273,22 +273,22 @@ public interface sssFactory extends EFactory {
 	VSSSValidationApproach createVSSSValidationApproach();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Verification Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Verification Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Verification Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Verification Requirements</em>'.
 	 * @generated
 	 */
-	VSSSVerificationRequirement createVSSSVerificationRequirement();
+	VSSSVerificationRequirements createVSSSVerificationRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Validation Requirement</em>'.
+	 * Returns a new object of class '<em>VSSS Validation Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Validation Requirement</em>'.
+	 * @return a new object of class '<em>VSSS Validation Requirements</em>'.
 	 * @generated
 	 */
-	VSSSValidationRequirement createVSSSValidationRequirement();
+	VSSSValidationRequirements createVSSSValidationRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Document Item</em>'.

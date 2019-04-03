@@ -15,7 +15,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
-import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
@@ -35,19 +35,19 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Software Maintenance Requirement</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Validation Requirements</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareMaintenanceRequirementImpl#getSubsections <em>Subsections</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareMaintenanceRequirementImpl#getSssItems <em>Sss Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationRequirementsImpl#getSubsections <em>Subsections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationRequirementsImpl#getSssItems <em>Sss Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFixedGroupImpl implements VSSSSoftwareMaintenanceRequirement {
+public class VSSSValidationRequirementsImpl extends VTraceableDocumentFixedGroupImpl implements VSSSValidationRequirements {
 	/**
 	 * The cached value of the '{@link #getSssItems() <em>Sss Items</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSSoftwareMaintenanceRequirementImpl() {
+	protected VSSSValidationRequirementsImpl() {
 		super();
 	}
 
@@ -74,7 +74,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT;
+		return sssPackage.Literals.VSSS_VALIDATION_REQUIREMENTS;
 	}
 
 	@Override
@@ -96,7 +96,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	 */
 	public EList<VSSSDocumentItem> getSssItems() {
 		if (sssItems == null) {
-			sssItems = new EObjectContainmentEList<VSSSDocumentItem>(VSSSDocumentItem.class, this, sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS);
+			sssItems = new EObjectContainmentEList<VSSSDocumentItem>(VSSSDocumentItem.class, this, sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS);
 		}
 		return sssItems;
 	}
@@ -109,7 +109,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS:
 				return ((InternalEList<?>)getSssItems()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -123,9 +123,9 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS:
 				return getSubsections();
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS:
 				return getSssItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -140,11 +140,11 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS:
 				getSubsections().clear();
 				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS:
 				getSssItems().clear();
 				getSssItems().addAll((Collection<? extends VSSSDocumentItem>)newValue);
 				return;
@@ -160,10 +160,10 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS:
 				getSubsections().clear();
 				return;
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS:
 				getSssItems().clear();
 				return;
 		}
@@ -178,9 +178,9 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS:
 				return !getSubsections().isEmpty();
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SSS_ITEMS:
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS:
 				return sssItems != null && !sssItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -195,7 +195,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == DAbstractSection.class) {
 			switch (derivedFeatureID) {
-				case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
+				case sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
@@ -216,7 +216,7 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == DAbstractSection.class) {
 			switch (baseFeatureID) {
-				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT__SUBSECTIONS;
+				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS;
 				default: return -1;
 			}
 		}
@@ -228,4 +228,4 @@ public class VSSSSoftwareMaintenanceRequirementImpl extends VTraceableDocumentFi
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
-} //VSSSSoftwareMaintenanceRequirementImpl
+} //VSSSValidationRequirementsImpl

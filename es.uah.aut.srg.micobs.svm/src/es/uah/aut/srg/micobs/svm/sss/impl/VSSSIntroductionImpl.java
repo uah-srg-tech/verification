@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getPurpose <em>Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getObjetive <em>Objetive</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getObjective <em>Objective</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getContent <em>Content</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getReason <em>Reason</em>}</li>
  * </ul>
@@ -55,14 +55,14 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	protected DBody purpose;
 
 	/**
-	 * The cached value of the '{@link #getObjetive() <em>Objetive</em>}' containment reference.
+	 * The cached value of the '{@link #getObjective() <em>Objective</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getObjetive()
+	 * @see #getObjective()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody objetive;
+	protected DBody objective;
 
 	/**
 	 * The cached value of the '{@link #getContent() <em>Content</em>}' containment reference.
@@ -151,8 +151,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getObjetive() {
-		return objetive;
+	public DBody getObjective() {
+		return objective;
 	}
 
 	/**
@@ -160,11 +160,11 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetObjetive(DBody newObjetive, NotificationChain msgs) {
-		DBody oldObjetive = objetive;
-		objetive = newObjetive;
+	public NotificationChain basicSetObjective(DBody newObjective, NotificationChain msgs) {
+		DBody oldObjective = objective;
+		objective = newObjective;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, oldObjetive, newObjetive);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJECTIVE, oldObjective, newObjective);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -175,18 +175,18 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setObjetive(DBody newObjetive) {
-		if (newObjetive != objetive) {
+	public void setObjective(DBody newObjective) {
+		if (newObjective != objective) {
 			NotificationChain msgs = null;
-			if (objetive != null)
-				msgs = ((InternalEObject)objetive).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJETIVE, null, msgs);
-			if (newObjetive != null)
-				msgs = ((InternalEObject)newObjetive).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJETIVE, null, msgs);
-			msgs = basicSetObjetive(newObjetive, msgs);
+			if (objective != null)
+				msgs = ((InternalEObject)objective).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJECTIVE, null, msgs);
+			if (newObjective != null)
+				msgs = ((InternalEObject)newObjective).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INTRODUCTION__OBJECTIVE, null, msgs);
+			msgs = basicSetObjective(newObjective, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJETIVE, newObjetive, newObjetive));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INTRODUCTION__OBJECTIVE, newObjective, newObjective));
 	}
 
 	/**
@@ -285,8 +285,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
 				return basicSetPurpose(null, msgs);
-			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				return basicSetObjetive(null, msgs);
+			case sssPackage.VSSS_INTRODUCTION__OBJECTIVE:
+				return basicSetObjective(null, msgs);
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
 				return basicSetContent(null, msgs);
 			case sssPackage.VSSS_INTRODUCTION__REASON:
@@ -305,8 +305,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
 				return getPurpose();
-			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				return getObjetive();
+			case sssPackage.VSSS_INTRODUCTION__OBJECTIVE:
+				return getObjective();
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
 				return getContent();
 			case sssPackage.VSSS_INTRODUCTION__REASON:
@@ -326,8 +326,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
 				setPurpose((DBody)newValue);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				setObjetive((DBody)newValue);
+			case sssPackage.VSSS_INTRODUCTION__OBJECTIVE:
+				setObjective((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
 				setContent((DBody)newValue);
@@ -350,8 +350,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
 				setPurpose((DBody)null);
 				return;
-			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				setObjetive((DBody)null);
+			case sssPackage.VSSS_INTRODUCTION__OBJECTIVE:
+				setObjective((DBody)null);
 				return;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
 				setContent((DBody)null);
@@ -373,8 +373,8 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 		switch (featureID) {
 			case sssPackage.VSSS_INTRODUCTION__PURPOSE:
 				return purpose != null;
-			case sssPackage.VSSS_INTRODUCTION__OBJETIVE:
-				return objetive != null;
+			case sssPackage.VSSS_INTRODUCTION__OBJECTIVE:
+				return objective != null;
 			case sssPackage.VSSS_INTRODUCTION__CONTENT:
 				return content != null;
 			case sssPackage.VSSS_INTRODUCTION__REASON:

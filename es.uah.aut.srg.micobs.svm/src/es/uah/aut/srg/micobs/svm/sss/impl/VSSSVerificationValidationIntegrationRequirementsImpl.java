@@ -14,23 +14,20 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
-import es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirement;
-import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements;
-import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirement;
+import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
-import java.util.Collection;
-
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -50,44 +47,44 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixedSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
 	/**
-	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference list.
+	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVerificationValidationProcess()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSVerificationValidationProcessRequirement> verificationValidationProcess;
+	protected VSSSVerificationValidationProcessRequirements verificationValidationProcess;
 
 	/**
-	 * The cached value of the '{@link #getValidationApproach() <em>Validation Approach</em>}' containment reference list.
+	 * The cached value of the '{@link #getValidationApproach() <em>Validation Approach</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValidationApproach()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSValidationApproach> validationApproach;
+	protected VSSSValidationApproach validationApproach;
 
 	/**
-	 * The cached value of the '{@link #getValidation() <em>Validation</em>}' containment reference list.
+	 * The cached value of the '{@link #getValidation() <em>Validation</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getValidation()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSValidationRequirement> validation;
+	protected VSSSValidationRequirements validation;
 
 	/**
-	 * The cached value of the '{@link #getVerification() <em>Verification</em>}' containment reference list.
+	 * The cached value of the '{@link #getVerification() <em>Verification</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getVerification()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSSSVerificationRequirement> verification;
+	protected VSSSVerificationRequirements verification;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -113,10 +110,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSVerificationValidationProcessRequirement> getVerificationValidationProcess() {
-		if (verificationValidationProcess == null) {
-			verificationValidationProcess = new EObjectContainmentEList<VSSSVerificationValidationProcessRequirement>(VSSSVerificationValidationProcessRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS);
-		}
+	public VSSSVerificationValidationProcessRequirements getVerificationValidationProcess() {
 		return verificationValidationProcess;
 	}
 
@@ -125,10 +119,41 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSValidationApproach> getValidationApproach() {
-		if (validationApproach == null) {
-			validationApproach = new EObjectContainmentEList<VSSSValidationApproach>(VSSSValidationApproach.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH);
+	public NotificationChain basicSetVerificationValidationProcess(VSSSVerificationValidationProcessRequirements newVerificationValidationProcess, NotificationChain msgs) {
+		VSSSVerificationValidationProcessRequirements oldVerificationValidationProcess = verificationValidationProcess;
+		verificationValidationProcess = newVerificationValidationProcess;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS, oldVerificationValidationProcess, newVerificationValidationProcess);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVerificationValidationProcess(VSSSVerificationValidationProcessRequirements newVerificationValidationProcess) {
+		if (newVerificationValidationProcess != verificationValidationProcess) {
+			NotificationChain msgs = null;
+			if (verificationValidationProcess != null)
+				msgs = ((InternalEObject)verificationValidationProcess).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS, null, msgs);
+			if (newVerificationValidationProcess != null)
+				msgs = ((InternalEObject)newVerificationValidationProcess).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS, null, msgs);
+			msgs = basicSetVerificationValidationProcess(newVerificationValidationProcess, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS, newVerificationValidationProcess, newVerificationValidationProcess));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSValidationApproach getValidationApproach() {
 		return validationApproach;
 	}
 
@@ -137,10 +162,41 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSValidationRequirement> getValidation() {
-		if (validation == null) {
-			validation = new EObjectContainmentEList<VSSSValidationRequirement>(VSSSValidationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION);
+	public NotificationChain basicSetValidationApproach(VSSSValidationApproach newValidationApproach, NotificationChain msgs) {
+		VSSSValidationApproach oldValidationApproach = validationApproach;
+		validationApproach = newValidationApproach;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH, oldValidationApproach, newValidationApproach);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValidationApproach(VSSSValidationApproach newValidationApproach) {
+		if (newValidationApproach != validationApproach) {
+			NotificationChain msgs = null;
+			if (validationApproach != null)
+				msgs = ((InternalEObject)validationApproach).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH, null, msgs);
+			if (newValidationApproach != null)
+				msgs = ((InternalEObject)newValidationApproach).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH, null, msgs);
+			msgs = basicSetValidationApproach(newValidationApproach, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH, newValidationApproach, newValidationApproach));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSValidationRequirements getValidation() {
 		return validation;
 	}
 
@@ -149,11 +205,76 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSSSVerificationRequirement> getVerification() {
-		if (verification == null) {
-			verification = new EObjectContainmentEList<VSSSVerificationRequirement>(VSSSVerificationRequirement.class, this, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION);
+	public NotificationChain basicSetValidation(VSSSValidationRequirements newValidation, NotificationChain msgs) {
+		VSSSValidationRequirements oldValidation = validation;
+		validation = newValidation;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION, oldValidation, newValidation);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValidation(VSSSValidationRequirements newValidation) {
+		if (newValidation != validation) {
+			NotificationChain msgs = null;
+			if (validation != null)
+				msgs = ((InternalEObject)validation).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION, null, msgs);
+			if (newValidation != null)
+				msgs = ((InternalEObject)newValidation).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION, null, msgs);
+			msgs = basicSetValidation(newValidation, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION, newValidation, newValidation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSVerificationRequirements getVerification() {
 		return verification;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetVerification(VSSSVerificationRequirements newVerification, NotificationChain msgs) {
+		VSSSVerificationRequirements oldVerification = verification;
+		verification = newVerification;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION, oldVerification, newVerification);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setVerification(VSSSVerificationRequirements newVerification) {
+		if (newVerification != verification) {
+			NotificationChain msgs = null;
+			if (verification != null)
+				msgs = ((InternalEObject)verification).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION, null, msgs);
+			if (newVerification != null)
+				msgs = ((InternalEObject)newVerification).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION, null, msgs);
+			msgs = basicSetVerification(newVerification, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION, newVerification, newVerification));
 	}
 
 	/**
@@ -165,13 +286,13 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
-				return ((InternalEList<?>)getVerificationValidationProcess()).basicRemove(otherEnd, msgs);
+				return basicSetVerificationValidationProcess(null, msgs);
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
-				return ((InternalEList<?>)getValidationApproach()).basicRemove(otherEnd, msgs);
+				return basicSetValidationApproach(null, msgs);
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION:
-				return ((InternalEList<?>)getValidation()).basicRemove(otherEnd, msgs);
+				return basicSetValidation(null, msgs);
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION:
-				return ((InternalEList<?>)getVerification()).basicRemove(otherEnd, msgs);
+				return basicSetVerification(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -201,25 +322,20 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
-				getVerificationValidationProcess().clear();
-				getVerificationValidationProcess().addAll((Collection<? extends VSSSVerificationValidationProcessRequirement>)newValue);
+				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)newValue);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
-				getValidationApproach().clear();
-				getValidationApproach().addAll((Collection<? extends VSSSValidationApproach>)newValue);
+				setValidationApproach((VSSSValidationApproach)newValue);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION:
-				getValidation().clear();
-				getValidation().addAll((Collection<? extends VSSSValidationRequirement>)newValue);
+				setValidation((VSSSValidationRequirements)newValue);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION:
-				getVerification().clear();
-				getVerification().addAll((Collection<? extends VSSSVerificationRequirement>)newValue);
+				setVerification((VSSSVerificationRequirements)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -234,16 +350,16 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
-				getVerificationValidationProcess().clear();
+				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)null);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
-				getValidationApproach().clear();
+				setValidationApproach((VSSSValidationApproach)null);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION:
-				getValidation().clear();
+				setValidation((VSSSValidationRequirements)null);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION:
-				getVerification().clear();
+				setVerification((VSSSVerificationRequirements)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -258,13 +374,13 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
-				return verificationValidationProcess != null && !verificationValidationProcess.isEmpty();
+				return verificationValidationProcess != null;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
-				return validationApproach != null && !validationApproach.isEmpty();
+				return validationApproach != null;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION:
-				return validation != null && !validation.isEmpty();
+				return validation != null;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION:
-				return verification != null && !verification.isEmpty();
+				return verification != null;
 		}
 		return super.eIsSet(featureID);
 	}

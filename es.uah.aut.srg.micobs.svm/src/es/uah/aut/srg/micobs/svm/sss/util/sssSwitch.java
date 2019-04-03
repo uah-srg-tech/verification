@@ -174,133 +174,133 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_GENERAL_REQUIREMENT: {
-				VSSSGeneralRequirement vsssGeneralRequirement = (VSSSGeneralRequirement)theEObject;
-				T result = caseVSSSGeneralRequirement(vsssGeneralRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssGeneralRequirement);
-				if (result == null) result = caseDFixedSection(vsssGeneralRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssGeneralRequirement);
-				if (result == null) result = caseDAbstractSection(vsssGeneralRequirement);
+			case sssPackage.VSSS_GENERAL_REQUIREMENTS: {
+				VSSSGeneralRequirements vsssGeneralRequirements = (VSSSGeneralRequirements)theEObject;
+				T result = caseVSSSGeneralRequirements(vsssGeneralRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssGeneralRequirements);
+				if (result == null) result = caseDFixedSection(vsssGeneralRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssGeneralRequirements);
+				if (result == null) result = caseDAbstractSection(vsssGeneralRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_CAPABILITIES_REQUIREMENT: {
-				VSSSCapabilitiesRequirement vsssCapabilitiesRequirement = (VSSSCapabilitiesRequirement)theEObject;
-				T result = caseVSSSCapabilitiesRequirement(vsssCapabilitiesRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssCapabilitiesRequirement);
-				if (result == null) result = caseDFixedSection(vsssCapabilitiesRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssCapabilitiesRequirement);
-				if (result == null) result = caseDAbstractSection(vsssCapabilitiesRequirement);
+			case sssPackage.VSSS_CAPABILITIES_REQUIREMENTS: {
+				VSSSCapabilitiesRequirements vsssCapabilitiesRequirements = (VSSSCapabilitiesRequirements)theEObject;
+				T result = caseVSSSCapabilitiesRequirements(vsssCapabilitiesRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssCapabilitiesRequirements);
+				if (result == null) result = caseDFixedSection(vsssCapabilitiesRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssCapabilitiesRequirements);
+				if (result == null) result = caseDAbstractSection(vsssCapabilitiesRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SYSTEM_INTERFACE_REQUIREMENT: {
-				VSSSSystemInterfaceRequirement vsssSystemInterfaceRequirement = (VSSSSystemInterfaceRequirement)theEObject;
-				T result = caseVSSSSystemInterfaceRequirement(vsssSystemInterfaceRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemInterfaceRequirement);
-				if (result == null) result = caseDFixedSection(vsssSystemInterfaceRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemInterfaceRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSystemInterfaceRequirement);
+			case sssPackage.VSSS_SYSTEM_INTERFACE_REQUIREMENTS: {
+				VSSSSystemInterfaceRequirements vsssSystemInterfaceRequirements = (VSSSSystemInterfaceRequirements)theEObject;
+				T result = caseVSSSSystemInterfaceRequirements(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseDFixedSection(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSystemInterfaceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENT: {
-				VSSSAdaptationMissionizationRequirement vsssAdaptationMissionizationRequirement = (VSSSAdaptationMissionizationRequirement)theEObject;
-				T result = caseVSSSAdaptationMissionizationRequirement(vsssAdaptationMissionizationRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssAdaptationMissionizationRequirement);
-				if (result == null) result = caseDFixedSection(vsssAdaptationMissionizationRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAdaptationMissionizationRequirement);
-				if (result == null) result = caseDAbstractSection(vsssAdaptationMissionizationRequirement);
+			case sssPackage.VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS: {
+				VSSSAdaptationMissionizationRequirements vsssAdaptationMissionizationRequirements = (VSSSAdaptationMissionizationRequirements)theEObject;
+				T result = caseVSSSAdaptationMissionizationRequirements(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseDFixedSection(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseDAbstractSection(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENT: {
-				VSSSComputerResourceRequirement vsssComputerResourceRequirement = (VSSSComputerResourceRequirement)theEObject;
-				T result = caseVSSSComputerResourceRequirement(vsssComputerResourceRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssComputerResourceRequirement);
-				if (result == null) result = caseDFixedSection(vsssComputerResourceRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssComputerResourceRequirement);
-				if (result == null) result = caseDAbstractSection(vsssComputerResourceRequirement);
+			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENTS: {
+				VSSSComputerResourceRequirements vsssComputerResourceRequirements = (VSSSComputerResourceRequirements)theEObject;
+				T result = caseVSSSComputerResourceRequirements(vsssComputerResourceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssComputerResourceRequirements);
+				if (result == null) result = caseDFixedSection(vsssComputerResourceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssComputerResourceRequirements);
+				if (result == null) result = caseDAbstractSection(vsssComputerResourceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SECURITY_REQUIREMENT: {
-				VSSSSecurityRequirement vsssSecurityRequirement = (VSSSSecurityRequirement)theEObject;
-				T result = caseVSSSSecurityRequirement(vsssSecurityRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSecurityRequirement);
-				if (result == null) result = caseDFixedSection(vsssSecurityRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSecurityRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSecurityRequirement);
+			case sssPackage.VSSS_SECURITY_REQUIREMENTS: {
+				VSSSSecurityRequirements vsssSecurityRequirements = (VSSSSecurityRequirements)theEObject;
+				T result = caseVSSSSecurityRequirements(vsssSecurityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSecurityRequirements);
+				if (result == null) result = caseDFixedSection(vsssSecurityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSecurityRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSecurityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SAFETY_REQUIREMENT: {
-				VSSSSafetyRequirement vsssSafetyRequirement = (VSSSSafetyRequirement)theEObject;
-				T result = caseVSSSSafetyRequirement(vsssSafetyRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSafetyRequirement);
-				if (result == null) result = caseDFixedSection(vsssSafetyRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSafetyRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSafetyRequirement);
+			case sssPackage.VSSS_SAFETY_REQUIREMENTS: {
+				VSSSSafetyRequirements vsssSafetyRequirements = (VSSSSafetyRequirements)theEObject;
+				T result = caseVSSSSafetyRequirements(vsssSafetyRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSafetyRequirements);
+				if (result == null) result = caseDFixedSection(vsssSafetyRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSafetyRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSafetyRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENT: {
-				VSSSReliabiltyAvailabilityRequirement vsssReliabiltyAvailabilityRequirement = (VSSSReliabiltyAvailabilityRequirement)theEObject;
-				T result = caseVSSSReliabiltyAvailabilityRequirement(vsssReliabiltyAvailabilityRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabiltyAvailabilityRequirement);
-				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirement);
-				if (result == null) result = caseDAbstractSection(vsssReliabiltyAvailabilityRequirement);
+			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS: {
+				VSSSReliabiltyAvailabilityRequirements vsssReliabiltyAvailabilityRequirements = (VSSSReliabiltyAvailabilityRequirements)theEObject;
+				T result = caseVSSSReliabiltyAvailabilityRequirements(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseDAbstractSection(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_QUALITY_REQUIREMENT: {
-				VSSSQualityRequirement vsssQualityRequirement = (VSSSQualityRequirement)theEObject;
-				T result = caseVSSSQualityRequirement(vsssQualityRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssQualityRequirement);
-				if (result == null) result = caseDFixedSection(vsssQualityRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssQualityRequirement);
-				if (result == null) result = caseDAbstractSection(vsssQualityRequirement);
+			case sssPackage.VSSS_QUALITY_REQUIREMENTS: {
+				VSSSQualityRequirements vsssQualityRequirements = (VSSSQualityRequirements)theEObject;
+				T result = caseVSSSQualityRequirements(vsssQualityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssQualityRequirements);
+				if (result == null) result = caseDFixedSection(vsssQualityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssQualityRequirements);
+				if (result == null) result = caseDAbstractSection(vsssQualityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_DESIGN_REQUIREMENT: {
-				VSSSDesignRequirement vsssDesignRequirement = (VSSSDesignRequirement)theEObject;
-				T result = caseVSSSDesignRequirement(vsssDesignRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssDesignRequirement);
-				if (result == null) result = caseDFixedSection(vsssDesignRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssDesignRequirement);
-				if (result == null) result = caseDAbstractSection(vsssDesignRequirement);
+			case sssPackage.VSSS_DESIGN_REQUIREMENTS: {
+				VSSSDesignRequirements vsssDesignRequirements = (VSSSDesignRequirements)theEObject;
+				T result = caseVSSSDesignRequirements(vsssDesignRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssDesignRequirements);
+				if (result == null) result = caseDFixedSection(vsssDesignRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssDesignRequirements);
+				if (result == null) result = caseDAbstractSection(vsssDesignRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENT: {
-				VSSSSoftwareOperationsRequirement vsssSoftwareOperationsRequirement = (VSSSSoftwareOperationsRequirement)theEObject;
-				T result = caseVSSSSoftwareOperationsRequirement(vsssSoftwareOperationsRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareOperationsRequirement);
-				if (result == null) result = caseDFixedSection(vsssSoftwareOperationsRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareOperationsRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSoftwareOperationsRequirement);
+			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS: {
+				VSSSSoftwareOperationsRequirements vsssSoftwareOperationsRequirements = (VSSSSoftwareOperationsRequirements)theEObject;
+				T result = caseVSSSSoftwareOperationsRequirements(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseDFixedSection(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSoftwareOperationsRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT: {
-				VSSSSoftwareMaintenanceRequirement vsssSoftwareMaintenanceRequirement = (VSSSSoftwareMaintenanceRequirement)theEObject;
-				T result = caseVSSSSoftwareMaintenanceRequirement(vsssSoftwareMaintenanceRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareMaintenanceRequirement);
-				if (result == null) result = caseDFixedSection(vsssSoftwareMaintenanceRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareMaintenanceRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSoftwareMaintenanceRequirement);
+			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS: {
+				VSSSSoftwareMaintenanceRequirements vsssSoftwareMaintenanceRequirements = (VSSSSoftwareMaintenanceRequirements)theEObject;
+				T result = caseVSSSSoftwareMaintenanceRequirements(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseDFixedSection(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT: {
-				VSSSSystemSoftwareObservabilityRequirement vsssSystemSoftwareObservabilityRequirement = (VSSSSystemSoftwareObservabilityRequirement)theEObject;
-				T result = caseVSSSSystemSoftwareObservabilityRequirement(vsssSystemSoftwareObservabilityRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemSoftwareObservabilityRequirement);
-				if (result == null) result = caseDFixedSection(vsssSystemSoftwareObservabilityRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemSoftwareObservabilityRequirement);
-				if (result == null) result = caseDAbstractSection(vsssSystemSoftwareObservabilityRequirement);
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS: {
+				VSSSSystemSoftwareObservabilityRequirements vsssSystemSoftwareObservabilityRequirements = (VSSSSystemSoftwareObservabilityRequirements)theEObject;
+				T result = caseVSSSSystemSoftwareObservabilityRequirements(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseDAbstractSection(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -312,13 +312,13 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENT: {
-				VSSSVerificationValidationProcessRequirement vsssVerificationValidationProcessRequirement = (VSSSVerificationValidationProcessRequirement)theEObject;
-				T result = caseVSSSVerificationValidationProcessRequirement(vsssVerificationValidationProcessRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationValidationProcessRequirement);
-				if (result == null) result = caseDFixedSection(vsssVerificationValidationProcessRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationValidationProcessRequirement);
-				if (result == null) result = caseDAbstractSection(vsssVerificationValidationProcessRequirement);
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS: {
+				VSSSVerificationValidationProcessRequirements vsssVerificationValidationProcessRequirements = (VSSSVerificationValidationProcessRequirements)theEObject;
+				T result = caseVSSSVerificationValidationProcessRequirements(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseDFixedSection(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseDAbstractSection(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -332,23 +332,23 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_VERIFICATION_REQUIREMENT: {
-				VSSSVerificationRequirement vsssVerificationRequirement = (VSSSVerificationRequirement)theEObject;
-				T result = caseVSSSVerificationRequirement(vsssVerificationRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationRequirement);
-				if (result == null) result = caseDFixedSection(vsssVerificationRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationRequirement);
-				if (result == null) result = caseDAbstractSection(vsssVerificationRequirement);
+			case sssPackage.VSSS_VERIFICATION_REQUIREMENTS: {
+				VSSSVerificationRequirements vsssVerificationRequirements = (VSSSVerificationRequirements)theEObject;
+				T result = caseVSSSVerificationRequirements(vsssVerificationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationRequirements);
+				if (result == null) result = caseDFixedSection(vsssVerificationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationRequirements);
+				if (result == null) result = caseDAbstractSection(vsssVerificationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_VALIDATION_REQUIREMENT: {
-				VSSSValidationRequirement vsssValidationRequirement = (VSSSValidationRequirement)theEObject;
-				T result = caseVSSSValidationRequirement(vsssValidationRequirement);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationRequirement);
-				if (result == null) result = caseDFixedSection(vsssValidationRequirement);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationRequirement);
-				if (result == null) result = caseDAbstractSection(vsssValidationRequirement);
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS: {
+				VSSSValidationRequirements vsssValidationRequirements = (VSSSValidationRequirements)theEObject;
+				T result = caseVSSSValidationRequirements(vsssValidationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationRequirements);
+				if (result == null) result = caseDFixedSection(vsssValidationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationRequirements);
+				if (result == null) result = caseDAbstractSection(vsssValidationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -558,197 +558,197 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS General Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS General Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSGeneralRequirement(VSSSGeneralRequirement object) {
+	public T caseVSSSGeneralRequirements(VSSSGeneralRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Capabilities Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Capabilities Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Capabilities Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Capabilities Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSCapabilitiesRequirement(VSSSCapabilitiesRequirement object) {
+	public T caseVSSSCapabilitiesRequirements(VSSSCapabilitiesRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Interface Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Interface Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS System Interface Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS System Interface Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSystemInterfaceRequirement(VSSSSystemInterfaceRequirement object) {
+	public T caseVSSSSystemInterfaceRequirements(VSSSSystemInterfaceRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Adaptation Missionization Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Adaptation Missionization Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Adaptation Missionization Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Adaptation Missionization Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSAdaptationMissionizationRequirement(VSSSAdaptationMissionizationRequirement object) {
+	public T caseVSSSAdaptationMissionizationRequirements(VSSSAdaptationMissionizationRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Computer Resource Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Computer Resource Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Computer Resource Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Computer Resource Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSComputerResourceRequirement(VSSSComputerResourceRequirement object) {
+	public T caseVSSSComputerResourceRequirements(VSSSComputerResourceRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Security Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Security Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Security Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Security Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSecurityRequirement(VSSSSecurityRequirement object) {
+	public T caseVSSSSecurityRequirements(VSSSSecurityRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Safety Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Safety Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Safety Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Safety Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSafetyRequirement(VSSSSafetyRequirement object) {
+	public T caseVSSSSafetyRequirements(VSSSSafetyRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSReliabiltyAvailabilityRequirement(VSSSReliabiltyAvailabilityRequirement object) {
+	public T caseVSSSReliabiltyAvailabilityRequirements(VSSSReliabiltyAvailabilityRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Quality Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Quality Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Quality Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Quality Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSQualityRequirement(VSSSQualityRequirement object) {
+	public T caseVSSSQualityRequirements(VSSSQualityRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Design Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Design Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Design Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Design Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSDesignRequirement(VSSSDesignRequirement object) {
+	public T caseVSSSDesignRequirements(VSSSDesignRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Software Operations Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Software Operations Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Software Operations Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Software Operations Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSoftwareOperationsRequirement(VSSSSoftwareOperationsRequirement object) {
+	public T caseVSSSSoftwareOperationsRequirements(VSSSSoftwareOperationsRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Software Maintenance Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Software Maintenance Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Software Maintenance Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Software Maintenance Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSoftwareMaintenanceRequirement(VSSSSoftwareMaintenanceRequirement object) {
+	public T caseVSSSSoftwareMaintenanceRequirements(VSSSSoftwareMaintenanceRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Software Observability Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS System Software Observability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS System Software Observability Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS System Software Observability Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSSystemSoftwareObservabilityRequirement(VSSSSystemSoftwareObservabilityRequirement object) {
+	public T caseVSSSSystemSoftwareObservabilityRequirements(VSSSSystemSoftwareObservabilityRequirements object) {
 		return null;
 	}
 
@@ -768,17 +768,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Validation Process Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Validation Process Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Validation Process Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Validation Process Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSVerificationValidationProcessRequirement(VSSSVerificationValidationProcessRequirement object) {
+	public T caseVSSSVerificationValidationProcessRequirements(VSSSVerificationValidationProcessRequirements object) {
 		return null;
 	}
 
@@ -798,32 +798,32 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Verification Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Verification Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSVerificationRequirement(VSSSVerificationRequirement object) {
+	public T caseVSSSVerificationRequirements(VSSSVerificationRequirements object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Validation Requirement</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Validation Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Validation Requirement</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Validation Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSValidationRequirement(VSSSValidationRequirement object) {
+	public T caseVSSSValidationRequirements(VSSSValidationRequirements object) {
 		return null;
 	}
 

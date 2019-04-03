@@ -231,7 +231,7 @@ public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @return the value of the '<em>System Models Section</em>' containment reference.
 	 * @see #setSystemModelsSection(VSSSSystemModels)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SystemModelsSection()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	VSSSSystemModels getSystemModelsSection();

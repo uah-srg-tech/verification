@@ -42,7 +42,7 @@ public interface VSSSSystemModels extends DFixedSection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>System Models</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSystemModels_SystemModels()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<VSSSSystemModel> getSystemModels();

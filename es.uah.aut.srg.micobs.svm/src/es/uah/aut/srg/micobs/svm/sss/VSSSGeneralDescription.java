@@ -22,7 +22,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilities <em>General Capabilities</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}</li>
@@ -60,30 +60,30 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	void setProductPerspective(VSSSGeneralDescriptionSubsection value);
 
 	/**
-	 * Returns the value of the '<em><b>General Capabilites</b></em>' containment reference.
+	 * Returns the value of the '<em><b>General Capabilities</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Capabilites</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>General Capabilities</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Capabilites</em>' containment reference.
-	 * @see #setGeneralCapabilites(VSSSGeneralDescriptionSubsection)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilites()
+	 * @return the value of the '<em>General Capabilities</em>' containment reference.
+	 * @see #setGeneralCapabilities(VSSSGeneralDescriptionSubsection)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilities()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getGeneralCapabilites();
+	VSSSGeneralDescriptionSubsection getGeneralCapabilities();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilites <em>General Capabilites</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilities <em>General Capabilities</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>General Capabilites</em>' containment reference.
-	 * @see #getGeneralCapabilites()
+	 * @param value the new value of the '<em>General Capabilities</em>' containment reference.
+	 * @see #getGeneralCapabilities()
 	 * @generated
 	 */
-	void setGeneralCapabilites(VSSSGeneralDescriptionSubsection value);
+	void setGeneralCapabilities(VSSSGeneralDescriptionSubsection value);
 
 	/**
 	 * Returns the value of the '<em><b>General Constraints</b></em>' containment reference.

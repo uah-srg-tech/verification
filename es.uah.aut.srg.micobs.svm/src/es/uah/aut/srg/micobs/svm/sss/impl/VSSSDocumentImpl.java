@@ -27,7 +27,6 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels;
 import es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl;
 import java.util.Collection;
@@ -35,7 +34,6 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -282,11 +280,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegrationSection().getValidation());
 		groups.add((VTraceableDocumentAbstractGroup) getVerificationValidationIntegrationSection().getVerification());
 		return groups;
-	}
-	
-	@Override
-	public EList<VTraceableDocument> getParents() {
-		return ECollections.emptyEList();
 	}
 
 	/**

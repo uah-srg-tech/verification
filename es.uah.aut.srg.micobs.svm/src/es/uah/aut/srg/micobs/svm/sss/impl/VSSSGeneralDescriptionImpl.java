@@ -35,7 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getProductPerspective <em>Product Perspective</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getGeneralCapabilites <em>General Capabilites</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getGeneralCapabilities <em>General Capabilities</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getGeneralConstraints <em>General Constraints</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getOperationalEnvironment <em>Operational Environment</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl#getAssumptionsDependencies <em>Assumptions Dependencies</em>}</li>
@@ -55,14 +55,14 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	protected VSSSGeneralDescriptionSubsection productPerspective;
 
 	/**
-	 * The cached value of the '{@link #getGeneralCapabilites() <em>General Capabilites</em>}' containment reference.
+	 * The cached value of the '{@link #getGeneralCapabilities() <em>General Capabilities</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeneralCapabilites()
+	 * @see #getGeneralCapabilities()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection generalCapabilites;
+	protected VSSSGeneralDescriptionSubsection generalCapabilities;
 
 	/**
 	 * The cached value of the '{@link #getGeneralConstraints() <em>General Constraints</em>}' containment reference.
@@ -161,8 +161,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getGeneralCapabilites() {
-		return generalCapabilites;
+	public VSSSGeneralDescriptionSubsection getGeneralCapabilities() {
+		return generalCapabilities;
 	}
 
 	/**
@@ -170,11 +170,11 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGeneralCapabilites(VSSSGeneralDescriptionSubsection newGeneralCapabilites, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldGeneralCapabilites = generalCapabilites;
-		generalCapabilites = newGeneralCapabilites;
+	public NotificationChain basicSetGeneralCapabilities(VSSSGeneralDescriptionSubsection newGeneralCapabilities, NotificationChain msgs) {
+		VSSSGeneralDescriptionSubsection oldGeneralCapabilities = generalCapabilities;
+		generalCapabilities = newGeneralCapabilities;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, oldGeneralCapabilites, newGeneralCapabilites);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES, oldGeneralCapabilities, newGeneralCapabilities);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -185,18 +185,18 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneralCapabilites(VSSSGeneralDescriptionSubsection newGeneralCapabilites) {
-		if (newGeneralCapabilites != generalCapabilites) {
+	public void setGeneralCapabilities(VSSSGeneralDescriptionSubsection newGeneralCapabilities) {
+		if (newGeneralCapabilities != generalCapabilities) {
 			NotificationChain msgs = null;
-			if (generalCapabilites != null)
-				msgs = ((InternalEObject)generalCapabilites).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, null, msgs);
-			if (newGeneralCapabilites != null)
-				msgs = ((InternalEObject)newGeneralCapabilites).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, null, msgs);
-			msgs = basicSetGeneralCapabilites(newGeneralCapabilites, msgs);
+			if (generalCapabilities != null)
+				msgs = ((InternalEObject)generalCapabilities).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES, null, msgs);
+			if (newGeneralCapabilities != null)
+				msgs = ((InternalEObject)newGeneralCapabilities).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES, null, msgs);
+			msgs = basicSetGeneralCapabilities(newGeneralCapabilities, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES, newGeneralCapabilites, newGeneralCapabilites));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES, newGeneralCapabilities, newGeneralCapabilities));
 	}
 
 	/**
@@ -338,8 +338,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
 				return basicSetProductPerspective(null, msgs);
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				return basicSetGeneralCapabilites(null, msgs);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
+				return basicSetGeneralCapabilities(null, msgs);
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
 				return basicSetGeneralConstraints(null, msgs);
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
@@ -360,8 +360,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
 				return getProductPerspective();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				return getGeneralCapabilites();
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
+				return getGeneralCapabilities();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
 				return getGeneralConstraints();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
@@ -383,8 +383,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
 				setProductPerspective((VSSSGeneralDescriptionSubsection)newValue);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				setGeneralCapabilites((VSSSGeneralDescriptionSubsection)newValue);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
+				setGeneralCapabilities((VSSSGeneralDescriptionSubsection)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
 				setGeneralConstraints((VSSSGeneralDescriptionSubsection)newValue);
@@ -410,8 +410,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
 				setProductPerspective((VSSSGeneralDescriptionSubsection)null);
 				return;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				setGeneralCapabilites((VSSSGeneralDescriptionSubsection)null);
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
+				setGeneralCapabilities((VSSSGeneralDescriptionSubsection)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
 				setGeneralConstraints((VSSSGeneralDescriptionSubsection)null);
@@ -436,8 +436,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
 				return productPerspective != null;
-			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITES:
-				return generalCapabilites != null;
+			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
+				return generalCapabilities != null;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
 				return generalConstraints != null;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
@@ -452,7 +452,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getProductPerspective());
-		subsections.add((DAbstractSection) getGeneralCapabilites());
+		subsections.add((DAbstractSection) getGeneralCapabilities());
 		subsections.add((DAbstractSection) getGeneralConstraints());
 		subsections.add((DAbstractSection) getOperationalEnvironment());
 		subsections.add((DAbstractSection) getAssumptionsDependencies());

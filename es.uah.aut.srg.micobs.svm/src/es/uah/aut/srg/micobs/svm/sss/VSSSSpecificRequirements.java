@@ -12,8 +12,6 @@ package es.uah.aut.srg.micobs.svm.sss;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS Specific Requirements</b></em>'.
@@ -44,211 +42,341 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface VSSSSpecificRequirements extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>General</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirement}.
+	 * Returns the value of the '<em><b>General</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>General</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General</em>' containment reference list.
+	 * @return the value of the '<em>General</em>' containment reference.
+	 * @see #setGeneral(VSSSGeneralRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_General()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSGeneralRequirement> getGeneral();
+	VSSSGeneralRequirements getGeneral();
 
 	/**
-	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getGeneral <em>General</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>General</em>' containment reference.
+	 * @see #getGeneral()
+	 * @generated
+	 */
+	void setGeneral(VSSSGeneralRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Capabilities</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Capabilities</em>' containment reference list.
+	 * @return the value of the '<em>Capabilities</em>' containment reference.
+	 * @see #setCapabilities(VSSSCapabilitiesRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_Capabilities()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSCapabilitiesRequirement> getCapabilities();
+	VSSSCapabilitiesRequirements getCapabilities();
 
 	/**
-	 * Returns the value of the '<em><b>System Interface</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getCapabilities <em>Capabilities</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Capabilities</em>' containment reference.
+	 * @see #getCapabilities()
+	 * @generated
+	 */
+	void setCapabilities(VSSSCapabilitiesRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>System Interface</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>System Interface</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>System Interface</em>' containment reference list.
+	 * @return the value of the '<em>System Interface</em>' containment reference.
+	 * @see #setSystemInterface(VSSSSystemInterfaceRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_SystemInterface()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSystemInterfaceRequirement> getSystemInterface();
+	VSSSSystemInterfaceRequirements getSystemInterface();
 
 	/**
-	 * Returns the value of the '<em><b>Adaptation Missionization</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSystemInterface <em>System Interface</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>System Interface</em>' containment reference.
+	 * @see #getSystemInterface()
+	 * @generated
+	 */
+	void setSystemInterface(VSSSSystemInterfaceRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Adaptation Missionization</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Adaptation Missionization</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Adaptation Missionization</em>' containment reference list.
+	 * @return the value of the '<em>Adaptation Missionization</em>' containment reference.
+	 * @see #setAdaptationMissionization(VSSSAdaptationMissionizationRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_AdaptationMissionization()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSAdaptationMissionizationRequirement> getAdaptationMissionization();
+	VSSSAdaptationMissionizationRequirements getAdaptationMissionization();
 
 	/**
-	 * Returns the value of the '<em><b>Computer Resource</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getAdaptationMissionization <em>Adaptation Missionization</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Adaptation Missionization</em>' containment reference.
+	 * @see #getAdaptationMissionization()
+	 * @generated
+	 */
+	void setAdaptationMissionization(VSSSAdaptationMissionizationRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Computer Resource</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Computer Resource</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Computer Resource</em>' containment reference list.
+	 * @return the value of the '<em>Computer Resource</em>' containment reference.
+	 * @see #setComputerResource(VSSSComputerResourceRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_ComputerResource()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSComputerResourceRequirement> getComputerResource();
+	VSSSComputerResourceRequirements getComputerResource();
 
 	/**
-	 * Returns the value of the '<em><b>Security</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getComputerResource <em>Computer Resource</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Computer Resource</em>' containment reference.
+	 * @see #getComputerResource()
+	 * @generated
+	 */
+	void setComputerResource(VSSSComputerResourceRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Security</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Security</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Security</em>' containment reference list.
+	 * @return the value of the '<em>Security</em>' containment reference.
+	 * @see #setSecurity(VSSSSecurityRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_Security()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSecurityRequirement> getSecurity();
+	VSSSSecurityRequirements getSecurity();
 
 	/**
-	 * Returns the value of the '<em><b>Safety</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSecurity <em>Security</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Security</em>' containment reference.
+	 * @see #getSecurity()
+	 * @generated
+	 */
+	void setSecurity(VSSSSecurityRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Safety</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Safety</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Safety</em>' containment reference list.
+	 * @return the value of the '<em>Safety</em>' containment reference.
+	 * @see #setSafety(VSSSSafetyRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_Safety()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSafetyRequirement> getSafety();
+	VSSSSafetyRequirements getSafety();
 
 	/**
-	 * Returns the value of the '<em><b>Reliabilty Availability</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSafety <em>Safety</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Safety</em>' containment reference.
+	 * @see #getSafety()
+	 * @generated
+	 */
+	void setSafety(VSSSSafetyRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Reliabilty Availability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reliabilty Availability</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reliabilty Availability</em>' containment reference list.
+	 * @return the value of the '<em>Reliabilty Availability</em>' containment reference.
+	 * @see #setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_ReliabiltyAvailability()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSReliabiltyAvailabilityRequirement> getReliabiltyAvailability();
+	VSSSReliabiltyAvailabilityRequirements getReliabiltyAvailability();
 
 	/**
-	 * Returns the value of the '<em><b>Quality</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability <em>Reliabilty Availability</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Reliabilty Availability</em>' containment reference.
+	 * @see #getReliabiltyAvailability()
+	 * @generated
+	 */
+	void setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Quality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Quality</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quality</em>' containment reference list.
+	 * @return the value of the '<em>Quality</em>' containment reference.
+	 * @see #setQuality(VSSSQualityRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_Quality()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSQualityRequirement> getQuality();
+	VSSSQualityRequirements getQuality();
 
 	/**
-	 * Returns the value of the '<em><b>Design</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getQuality <em>Quality</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quality</em>' containment reference.
+	 * @see #getQuality()
+	 * @generated
+	 */
+	void setQuality(VSSSQualityRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Design</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Design</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Design</em>' containment reference list.
+	 * @return the value of the '<em>Design</em>' containment reference.
+	 * @see #setDesign(VSSSDesignRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_Design()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSDesignRequirement> getDesign();
+	VSSSDesignRequirements getDesign();
 
 	/**
-	 * Returns the value of the '<em><b>Software Operations</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getDesign <em>Design</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Design</em>' containment reference.
+	 * @see #getDesign()
+	 * @generated
+	 */
+	void setDesign(VSSSDesignRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Software Operations</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Software Operations</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software Operations</em>' containment reference list.
+	 * @return the value of the '<em>Software Operations</em>' containment reference.
+	 * @see #setSoftwareOperations(VSSSSoftwareOperationsRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_SoftwareOperations()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSoftwareOperationsRequirement> getSoftwareOperations();
+	VSSSSoftwareOperationsRequirements getSoftwareOperations();
 
 	/**
-	 * Returns the value of the '<em><b>Software Maintenance</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSoftwareOperations <em>Software Operations</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Software Operations</em>' containment reference.
+	 * @see #getSoftwareOperations()
+	 * @generated
+	 */
+	void setSoftwareOperations(VSSSSoftwareOperationsRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>Software Maintenance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Software Maintenance</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Software Maintenance</em>' containment reference list.
+	 * @return the value of the '<em>Software Maintenance</em>' containment reference.
+	 * @see #setSoftwareMaintenance(VSSSSoftwareMaintenanceRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_SoftwareMaintenance()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSoftwareMaintenanceRequirement> getSoftwareMaintenance();
+	VSSSSoftwareMaintenanceRequirements getSoftwareMaintenance();
 
 	/**
-	 * Returns the value of the '<em><b>System Software Observability</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirement}.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSoftwareMaintenance <em>Software Maintenance</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Software Maintenance</em>' containment reference.
+	 * @see #getSoftwareMaintenance()
+	 * @generated
+	 */
+	void setSoftwareMaintenance(VSSSSoftwareMaintenanceRequirements value);
+
+	/**
+	 * Returns the value of the '<em><b>System Software Observability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>System Software Observability</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>System Software Observability</em>' containment reference list.
+	 * @return the value of the '<em>System Software Observability</em>' containment reference.
+	 * @see #setSystemSoftwareObservability(VSSSSystemSoftwareObservabilityRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_SystemSoftwareObservability()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VSSSSystemSoftwareObservabilityRequirement> getSystemSoftwareObservability();
+	VSSSSystemSoftwareObservabilityRequirements getSystemSoftwareObservability();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSystemSoftwareObservability <em>System Software Observability</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>System Software Observability</em>' containment reference.
+	 * @see #getSystemSoftwareObservability()
+	 * @generated
+	 */
+	void setSystemSoftwareObservability(VSSSSystemSoftwareObservabilityRequirements value);
 
 } // VSSSSpecificRequirements

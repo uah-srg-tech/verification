@@ -23,7 +23,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjetive <em>Objetive</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective <em>Objective</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}</li>
  * </ul>
@@ -60,30 +60,30 @@ public interface VSSSIntroduction extends DFixedSection {
 	void setPurpose(DBody value);
 
 	/**
-	 * Returns the value of the '<em><b>Objetive</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Objective</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Objetive</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Objective</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Objetive</em>' containment reference.
-	 * @see #setObjetive(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Objetive()
+	 * @return the value of the '<em>Objective</em>' containment reference.
+	 * @see #setObjective(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Objective()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getObjetive();
+	DBody getObjective();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjetive <em>Objetive</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective <em>Objective</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Objetive</em>' containment reference.
-	 * @see #getObjetive()
+	 * @param value the new value of the '<em>Objective</em>' containment reference.
+	 * @see #getObjective()
 	 * @generated
 	 */
-	void setObjetive(DBody value);
+	void setObjective(DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Content</b></em>' containment reference.

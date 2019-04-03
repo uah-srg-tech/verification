@@ -19,6 +19,7 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -39,7 +40,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl implements VSSSDocumentItem {
 	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' reference.
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getBody()
@@ -73,14 +74,6 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * @generated
 	 */
 	public DBody getBody() {
-		if (body != null && body.eIsProxy()) {
-			InternalEObject oldBody = (InternalEObject)body;
-			body = (DBody)eResolveProxy(oldBody);
-			if (body != oldBody) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, sssPackage.VSSS_DOCUMENT_ITEM__BODY, oldBody, body));
-			}
-		}
 		return body;
 	}
 
@@ -89,8 +82,14 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody basicGetBody() {
-		return body;
+	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
+		DBody oldBody = body;
+		body = newBody;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__BODY, oldBody, newBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -99,10 +98,31 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * @generated
 	 */
 	public void setBody(DBody newBody) {
-		DBody oldBody = body;
-		body = newBody;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__BODY, oldBody, body));
+		if (newBody != body) {
+			NotificationChain msgs = null;
+			if (body != null)
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT_ITEM__BODY, null, msgs);
+			if (newBody != null)
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_DOCUMENT_ITEM__BODY, null, msgs);
+			msgs = basicSetBody(newBody, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__BODY, newBody, newBody));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
+				return basicSetBody(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -114,8 +134,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case sssPackage.VSSS_DOCUMENT_ITEM__BODY:
-				if (resolve) return getBody();
-				return basicGetBody();
+				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}

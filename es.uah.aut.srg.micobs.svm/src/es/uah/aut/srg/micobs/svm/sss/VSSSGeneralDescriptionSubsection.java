@@ -31,26 +31,26 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  */
 public interface VSSSGeneralDescriptionSubsection extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>Body</b></em>' reference.
+	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Body</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Body</em>' reference.
+	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescriptionSubsection_Body()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	DBody getBody();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody <em>Body</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Body</em>' reference.
+	 * @param value the new value of the '<em>Body</em>' containment reference.
 	 * @see #getBody()
 	 * @generated
 	 */

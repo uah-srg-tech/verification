@@ -75,24 +75,24 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: return createVSSSGeneralDescription();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION: return createVSSSGeneralDescriptionSubsection();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: return createVSSSSpecificRequirements();
-			case sssPackage.VSSS_GENERAL_REQUIREMENT: return createVSSSGeneralRequirement();
-			case sssPackage.VSSS_CAPABILITIES_REQUIREMENT: return createVSSSCapabilitiesRequirement();
-			case sssPackage.VSSS_SYSTEM_INTERFACE_REQUIREMENT: return createVSSSSystemInterfaceRequirement();
-			case sssPackage.VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENT: return createVSSSAdaptationMissionizationRequirement();
-			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENT: return createVSSSComputerResourceRequirement();
-			case sssPackage.VSSS_SECURITY_REQUIREMENT: return createVSSSSecurityRequirement();
-			case sssPackage.VSSS_SAFETY_REQUIREMENT: return createVSSSSafetyRequirement();
-			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENT: return createVSSSReliabiltyAvailabilityRequirement();
-			case sssPackage.VSSS_QUALITY_REQUIREMENT: return createVSSSQualityRequirement();
-			case sssPackage.VSSS_DESIGN_REQUIREMENT: return createVSSSDesignRequirement();
-			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENT: return createVSSSSoftwareOperationsRequirement();
-			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENT: return createVSSSSoftwareMaintenanceRequirement();
-			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENT: return createVSSSSystemSoftwareObservabilityRequirement();
+			case sssPackage.VSSS_GENERAL_REQUIREMENTS: return createVSSSGeneralRequirements();
+			case sssPackage.VSSS_CAPABILITIES_REQUIREMENTS: return createVSSSCapabilitiesRequirements();
+			case sssPackage.VSSS_SYSTEM_INTERFACE_REQUIREMENTS: return createVSSSSystemInterfaceRequirements();
+			case sssPackage.VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS: return createVSSSAdaptationMissionizationRequirements();
+			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENTS: return createVSSSComputerResourceRequirements();
+			case sssPackage.VSSS_SECURITY_REQUIREMENTS: return createVSSSSecurityRequirements();
+			case sssPackage.VSSS_SAFETY_REQUIREMENTS: return createVSSSSafetyRequirements();
+			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS: return createVSSSReliabiltyAvailabilityRequirements();
+			case sssPackage.VSSS_QUALITY_REQUIREMENTS: return createVSSSQualityRequirements();
+			case sssPackage.VSSS_DESIGN_REQUIREMENTS: return createVSSSDesignRequirements();
+			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS: return createVSSSSoftwareOperationsRequirements();
+			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS: return createVSSSSoftwareMaintenanceRequirements();
+			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS: return createVSSSSystemSoftwareObservabilityRequirements();
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS: return createVSSSVerificationValidationIntegrationRequirements();
-			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENT: return createVSSSVerificationValidationProcessRequirement();
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS: return createVSSSVerificationValidationProcessRequirements();
 			case sssPackage.VSSS_VALIDATION_APPROACH: return createVSSSValidationApproach();
-			case sssPackage.VSSS_VERIFICATION_REQUIREMENT: return createVSSSVerificationRequirement();
-			case sssPackage.VSSS_VALIDATION_REQUIREMENT: return createVSSSValidationRequirement();
+			case sssPackage.VSSS_VERIFICATION_REQUIREMENTS: return createVSSSVerificationRequirements();
+			case sssPackage.VSSS_VALIDATION_REQUIREMENTS: return createVSSSValidationRequirements();
 			case sssPackage.VSSS_DOCUMENT_ITEM: return createVSSSDocumentItem();
 			case sssPackage.VSSS_SYSTEM_MODELS: return createVSSSSystemModels();
 			case sssPackage.VSSS_SYSTEM_MODEL: return createVSSSSystemModel();
@@ -216,9 +216,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralRequirement createVSSSGeneralRequirement() {
-		VSSSGeneralRequirementImpl vsssGeneralRequirement = new VSSSGeneralRequirementImpl();
-		return vsssGeneralRequirement;
+	public VSSSGeneralRequirements createVSSSGeneralRequirements() {
+		VSSSGeneralRequirementsImpl vsssGeneralRequirements = new VSSSGeneralRequirementsImpl();
+		return vsssGeneralRequirements;
 	}
 
 	/**
@@ -226,9 +226,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSCapabilitiesRequirement createVSSSCapabilitiesRequirement() {
-		VSSSCapabilitiesRequirementImpl vsssCapabilitiesRequirement = new VSSSCapabilitiesRequirementImpl();
-		return vsssCapabilitiesRequirement;
+	public VSSSCapabilitiesRequirements createVSSSCapabilitiesRequirements() {
+		VSSSCapabilitiesRequirementsImpl vsssCapabilitiesRequirements = new VSSSCapabilitiesRequirementsImpl();
+		return vsssCapabilitiesRequirements;
 	}
 
 	/**
@@ -236,9 +236,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSystemInterfaceRequirement createVSSSSystemInterfaceRequirement() {
-		VSSSSystemInterfaceRequirementImpl vsssSystemInterfaceRequirement = new VSSSSystemInterfaceRequirementImpl();
-		return vsssSystemInterfaceRequirement;
+	public VSSSSystemInterfaceRequirements createVSSSSystemInterfaceRequirements() {
+		VSSSSystemInterfaceRequirementsImpl vsssSystemInterfaceRequirements = new VSSSSystemInterfaceRequirementsImpl();
+		return vsssSystemInterfaceRequirements;
 	}
 
 	/**
@@ -246,9 +246,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSAdaptationMissionizationRequirement createVSSSAdaptationMissionizationRequirement() {
-		VSSSAdaptationMissionizationRequirementImpl vsssAdaptationMissionizationRequirement = new VSSSAdaptationMissionizationRequirementImpl();
-		return vsssAdaptationMissionizationRequirement;
+	public VSSSAdaptationMissionizationRequirements createVSSSAdaptationMissionizationRequirements() {
+		VSSSAdaptationMissionizationRequirementsImpl vsssAdaptationMissionizationRequirements = new VSSSAdaptationMissionizationRequirementsImpl();
+		return vsssAdaptationMissionizationRequirements;
 	}
 
 	/**
@@ -256,9 +256,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSComputerResourceRequirement createVSSSComputerResourceRequirement() {
-		VSSSComputerResourceRequirementImpl vsssComputerResourceRequirement = new VSSSComputerResourceRequirementImpl();
-		return vsssComputerResourceRequirement;
+	public VSSSComputerResourceRequirements createVSSSComputerResourceRequirements() {
+		VSSSComputerResourceRequirementsImpl vsssComputerResourceRequirements = new VSSSComputerResourceRequirementsImpl();
+		return vsssComputerResourceRequirements;
 	}
 
 	/**
@@ -266,9 +266,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSecurityRequirement createVSSSSecurityRequirement() {
-		VSSSSecurityRequirementImpl vsssSecurityRequirement = new VSSSSecurityRequirementImpl();
-		return vsssSecurityRequirement;
+	public VSSSSecurityRequirements createVSSSSecurityRequirements() {
+		VSSSSecurityRequirementsImpl vsssSecurityRequirements = new VSSSSecurityRequirementsImpl();
+		return vsssSecurityRequirements;
 	}
 
 	/**
@@ -276,9 +276,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSafetyRequirement createVSSSSafetyRequirement() {
-		VSSSSafetyRequirementImpl vsssSafetyRequirement = new VSSSSafetyRequirementImpl();
-		return vsssSafetyRequirement;
+	public VSSSSafetyRequirements createVSSSSafetyRequirements() {
+		VSSSSafetyRequirementsImpl vsssSafetyRequirements = new VSSSSafetyRequirementsImpl();
+		return vsssSafetyRequirements;
 	}
 
 	/**
@@ -286,9 +286,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSReliabiltyAvailabilityRequirement createVSSSReliabiltyAvailabilityRequirement() {
-		VSSSReliabiltyAvailabilityRequirementImpl vsssReliabiltyAvailabilityRequirement = new VSSSReliabiltyAvailabilityRequirementImpl();
-		return vsssReliabiltyAvailabilityRequirement;
+	public VSSSReliabiltyAvailabilityRequirements createVSSSReliabiltyAvailabilityRequirements() {
+		VSSSReliabiltyAvailabilityRequirementsImpl vsssReliabiltyAvailabilityRequirements = new VSSSReliabiltyAvailabilityRequirementsImpl();
+		return vsssReliabiltyAvailabilityRequirements;
 	}
 
 	/**
@@ -296,9 +296,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSQualityRequirement createVSSSQualityRequirement() {
-		VSSSQualityRequirementImpl vsssQualityRequirement = new VSSSQualityRequirementImpl();
-		return vsssQualityRequirement;
+	public VSSSQualityRequirements createVSSSQualityRequirements() {
+		VSSSQualityRequirementsImpl vsssQualityRequirements = new VSSSQualityRequirementsImpl();
+		return vsssQualityRequirements;
 	}
 
 	/**
@@ -306,9 +306,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSDesignRequirement createVSSSDesignRequirement() {
-		VSSSDesignRequirementImpl vsssDesignRequirement = new VSSSDesignRequirementImpl();
-		return vsssDesignRequirement;
+	public VSSSDesignRequirements createVSSSDesignRequirements() {
+		VSSSDesignRequirementsImpl vsssDesignRequirements = new VSSSDesignRequirementsImpl();
+		return vsssDesignRequirements;
 	}
 
 	/**
@@ -316,9 +316,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSoftwareOperationsRequirement createVSSSSoftwareOperationsRequirement() {
-		VSSSSoftwareOperationsRequirementImpl vsssSoftwareOperationsRequirement = new VSSSSoftwareOperationsRequirementImpl();
-		return vsssSoftwareOperationsRequirement;
+	public VSSSSoftwareOperationsRequirements createVSSSSoftwareOperationsRequirements() {
+		VSSSSoftwareOperationsRequirementsImpl vsssSoftwareOperationsRequirements = new VSSSSoftwareOperationsRequirementsImpl();
+		return vsssSoftwareOperationsRequirements;
 	}
 
 	/**
@@ -326,9 +326,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSoftwareMaintenanceRequirement createVSSSSoftwareMaintenanceRequirement() {
-		VSSSSoftwareMaintenanceRequirementImpl vsssSoftwareMaintenanceRequirement = new VSSSSoftwareMaintenanceRequirementImpl();
-		return vsssSoftwareMaintenanceRequirement;
+	public VSSSSoftwareMaintenanceRequirements createVSSSSoftwareMaintenanceRequirements() {
+		VSSSSoftwareMaintenanceRequirementsImpl vsssSoftwareMaintenanceRequirements = new VSSSSoftwareMaintenanceRequirementsImpl();
+		return vsssSoftwareMaintenanceRequirements;
 	}
 
 	/**
@@ -336,9 +336,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSystemSoftwareObservabilityRequirement createVSSSSystemSoftwareObservabilityRequirement() {
-		VSSSSystemSoftwareObservabilityRequirementImpl vsssSystemSoftwareObservabilityRequirement = new VSSSSystemSoftwareObservabilityRequirementImpl();
-		return vsssSystemSoftwareObservabilityRequirement;
+	public VSSSSystemSoftwareObservabilityRequirements createVSSSSystemSoftwareObservabilityRequirements() {
+		VSSSSystemSoftwareObservabilityRequirementsImpl vsssSystemSoftwareObservabilityRequirements = new VSSSSystemSoftwareObservabilityRequirementsImpl();
+		return vsssSystemSoftwareObservabilityRequirements;
 	}
 
 	/**
@@ -356,9 +356,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSVerificationValidationProcessRequirement createVSSSVerificationValidationProcessRequirement() {
-		VSSSVerificationValidationProcessRequirementImpl vsssVerificationValidationProcessRequirement = new VSSSVerificationValidationProcessRequirementImpl();
-		return vsssVerificationValidationProcessRequirement;
+	public VSSSVerificationValidationProcessRequirements createVSSSVerificationValidationProcessRequirements() {
+		VSSSVerificationValidationProcessRequirementsImpl vsssVerificationValidationProcessRequirements = new VSSSVerificationValidationProcessRequirementsImpl();
+		return vsssVerificationValidationProcessRequirements;
 	}
 
 	/**
@@ -376,9 +376,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSVerificationRequirement createVSSSVerificationRequirement() {
-		VSSSVerificationRequirementImpl vsssVerificationRequirement = new VSSSVerificationRequirementImpl();
-		return vsssVerificationRequirement;
+	public VSSSVerificationRequirements createVSSSVerificationRequirements() {
+		VSSSVerificationRequirementsImpl vsssVerificationRequirements = new VSSSVerificationRequirementsImpl();
+		return vsssVerificationRequirements;
 	}
 
 	/**
@@ -386,9 +386,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSValidationRequirement createVSSSValidationRequirement() {
-		VSSSValidationRequirementImpl vsssValidationRequirement = new VSSSValidationRequirementImpl();
-		return vsssValidationRequirement;
+	public VSSSValidationRequirements createVSSSValidationRequirements() {
+		VSSSValidationRequirementsImpl vsssValidationRequirements = new VSSSValidationRequirementsImpl();
+		return vsssValidationRequirements;
 	}
 
 	/**

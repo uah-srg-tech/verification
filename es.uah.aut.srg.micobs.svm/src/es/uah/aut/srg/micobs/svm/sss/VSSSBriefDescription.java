@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
-
+import es.uah.aut.srg.micobs.doctpl.doc.DRun;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -59,29 +58,29 @@ public interface VSSSBriefDescription extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Description</b></em>' reference.
+	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Description</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Description</em>' reference.
-	 * @see #setDescription(DParagraph)
+	 * @return the value of the '<em>Description</em>' containment reference.
+	 * @see #setDescription(DRun)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSBriefDescription_Description()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DParagraph getDescription();
+	DRun getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription <em>Description</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Description</em>' reference.
+	 * @param value the new value of the '<em>Description</em>' containment reference.
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(DParagraph value);
+	void setDescription(DRun value);
 
 } // VSSSBriefDescription
