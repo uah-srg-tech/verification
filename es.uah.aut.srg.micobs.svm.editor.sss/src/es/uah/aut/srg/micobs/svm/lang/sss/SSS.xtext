@@ -71,13 +71,9 @@ DRun returns doc::DRun:
 DHyperlink returns doc::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doc::DReferenceableObject|STRING]
-		//'reference=' reference=DReferenceableObject
 	'>'
 		run=DRun
 	'</hyperlink>';
-
-DReferenceableObject returns doc::DReferenceableObject:
-	DApplicableDocument | DReferenceDocument | DFigure | DPictureAsTable | DBasicTable ;
 	
 DText returns doc::DText:
 	content=RUNTEXT;
@@ -87,18 +83,21 @@ terminal RUNTEXT returns ecore::EString:
 
 DFigure returns doc::DFigure:
 	'<figure'
+		'name=' name=STRING
 		'reference=' reference=STRING
 		'caption=' caption=STRING
 	'/>';
 
 DPictureAsTable returns doc::DPictureAsTable:
 	'<pictureAsTable'
+		'name=' name=STRING
 		'reference=' reference=STRING
 		'caption=' caption=STRING
 	'/>';
 
 DBasicTable returns doc::DBasicTable: 
 	'<basicTable'
+		'name=' name=STRING
 		'caption=' caption=STRING
 	'>'
 		(rows+=DRow)+
@@ -125,6 +124,7 @@ DCell returns doc::DCell:
 
 DApplicableDocument returns doc::DApplicableDocument:
 	'<ApplicableDocument'
+		'name=' name=STRING
 		'title=' title=STRING
 		'issue=' issue=STRING
 		'revision=' revision=STRING
@@ -132,13 +132,11 @@ DApplicableDocument returns doc::DApplicableDocument:
 
 DReferenceDocument returns doc::DReferenceDocument:
 	'<ReferenceDocument'
+		'name=' name=STRING
 		'title=' title=STRING
 		'issue=' issue=STRING
 		'revision=' revision=STRING
 	'/>';
-
-EString returns ecore::EString:
-	STRING | ID;
 
 VSSSIntroduction returns VSSSIntroduction:
 	'<Introduction>'
