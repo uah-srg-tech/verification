@@ -245,25 +245,10 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING issue=STRING revision=STRING)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__TITLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__TITLE));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__ISSUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__ISSUE));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__REVISION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__REVISION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDApplicableDocumentAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getDApplicableDocumentAccess().getTitleSTRINGTerminalRuleCall_4_0(), semanticObject.getTitle());
-		feeder.accept(grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0(), semanticObject.getIssue());
-		feeder.accept(grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0(), semanticObject.getRevision());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -446,25 +431,10 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING issue=STRING revision=STRING)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__TITLE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__TITLE));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__ISSUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__ISSUE));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__REVISION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DABSTRACT_RELATED_DOCUMENT__REVISION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDReferenceDocumentAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getDReferenceDocumentAccess().getTitleSTRINGTerminalRuleCall_4_0(), semanticObject.getTitle());
-		feeder.accept(grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0(), semanticObject.getIssue());
-		feeder.accept(grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0(), semanticObject.getRevision());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

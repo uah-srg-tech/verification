@@ -1507,15 +1507,15 @@ ruleDApplicableDocument returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_5='issue='
+		otherlv_5='id='
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDApplicableDocumentAccess().getIssueKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getDApplicableDocumentAccess().getIdKeyword_5());
 		}
 		(
 			(
-				lv_issue_6_0=RULE_STRING
+				lv_id_6_0=RULE_STRING
 				{
-					newLeafNode(lv_issue_6_0, grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0());
+					newLeafNode(lv_id_6_0, grammarAccess.getDApplicableDocumentAccess().getIdSTRINGTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -1523,37 +1523,85 @@ ruleDApplicableDocument returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"issue",
-						lv_issue_6_0,
+						"id",
+						lv_id_6_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_7='revision='
-		{
-			newLeafNode(otherlv_7, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7());
-		}
 		(
+			otherlv_7='issue='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDApplicableDocumentAccess().getIssueKeyword_7_0());
+			}
 			(
-				lv_revision_8_0=RULE_STRING
-				{
-					newLeafNode(lv_revision_8_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+				(
+					lv_issue_8_0=RULE_STRING
+					{
+						newLeafNode(lv_issue_8_0, grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"revision",
-						lv_revision_8_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"issue",
+							lv_issue_8_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
-		otherlv_9='/>'
+			otherlv_9='revision='
+			{
+				newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7_2());
+			}
+			(
+				(
+					lv_revision_10_0=RULE_STRING
+					{
+						newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"revision",
+							lv_revision_10_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_11='date='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getDApplicableDocumentAccess().getDateKeyword_8_0());
+			}
+			(
+				(
+					lv_date_12_0=RULE_STRING
+					{
+						newLeafNode(lv_date_12_0, grammarAccess.getDApplicableDocumentAccess().getDateSTRINGTerminalRuleCall_8_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"date",
+							lv_date_12_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_13='/>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getSolidusGreaterThanSignKeyword_9());
+			newLeafNode(otherlv_13, grammarAccess.getDApplicableDocumentAccess().getSolidusGreaterThanSignKeyword_9());
 		}
 	)
 ;
@@ -1622,15 +1670,15 @@ ruleDReferenceDocument returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_5='issue='
+		otherlv_5='id='
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDReferenceDocumentAccess().getIssueKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getDReferenceDocumentAccess().getIdKeyword_5());
 		}
 		(
 			(
-				lv_issue_6_0=RULE_STRING
+				lv_id_6_0=RULE_STRING
 				{
-					newLeafNode(lv_issue_6_0, grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0());
+					newLeafNode(lv_id_6_0, grammarAccess.getDReferenceDocumentAccess().getIdSTRINGTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -1638,37 +1686,85 @@ ruleDReferenceDocument returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"issue",
-						lv_issue_6_0,
+						"id",
+						lv_id_6_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_7='revision='
-		{
-			newLeafNode(otherlv_7, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7());
-		}
 		(
+			otherlv_7='issue='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDReferenceDocumentAccess().getIssueKeyword_7_0());
+			}
 			(
-				lv_revision_8_0=RULE_STRING
-				{
-					newLeafNode(lv_revision_8_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+				(
+					lv_issue_8_0=RULE_STRING
+					{
+						newLeafNode(lv_issue_8_0, grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"revision",
-						lv_revision_8_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"issue",
+							lv_issue_8_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
-		otherlv_9='/>'
+			otherlv_9='revision='
+			{
+				newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7_2());
+			}
+			(
+				(
+					lv_revision_10_0=RULE_STRING
+					{
+						newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"revision",
+							lv_revision_10_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_11='date='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getDReferenceDocumentAccess().getDateKeyword_8_0());
+			}
+			(
+				(
+					lv_date_12_0=RULE_STRING
+					{
+						newLeafNode(lv_date_12_0, grammarAccess.getDReferenceDocumentAccess().getDateSTRINGTerminalRuleCall_8_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"date",
+							lv_date_12_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_13='/>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getSolidusGreaterThanSignKeyword_9());
+			newLeafNode(otherlv_13, grammarAccess.getDReferenceDocumentAccess().getSolidusGreaterThanSignKeyword_9());
 		}
 	)
 ;

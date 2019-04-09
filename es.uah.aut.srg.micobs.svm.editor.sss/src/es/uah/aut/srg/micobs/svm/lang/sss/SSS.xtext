@@ -126,16 +126,20 @@ DApplicableDocument returns doc::DApplicableDocument:
 	'<ApplicableDocument'
 		'name=' name=STRING
 		'title=' title=STRING
-		'issue=' issue=STRING
-		'revision=' revision=STRING
+		'id=' id=STRING
+		('issue=' issue=STRING
+		'revision=' revision=STRING)?
+		('date=' date=STRING)?
 	'/>';
 
 DReferenceDocument returns doc::DReferenceDocument:
 	'<ReferenceDocument'
 		'name=' name=STRING
 		'title=' title=STRING
-		'issue=' issue=STRING
-		'revision=' revision=STRING
+		'id=' id=STRING
+		('issue=' issue=STRING
+		'revision=' revision=STRING)?
+		('date=' date=STRING)?
 	'/>';
 
 VSSSIntroduction returns VSSSIntroduction:
