@@ -12,7 +12,7 @@ package es.uah.aut.srg.micobs.svm.tdm.impl;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-import es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod;
+import es.uah.aut.srg.micobs.svm.tdm.VValidationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -31,8 +31,9 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getVerificationMethod <em>Verification Method</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getValidationMethod <em>Validation Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getGroup <em>Group</em>}</li>
  * </ul>
  *
@@ -40,44 +41,64 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectImpl.Container implements VTraceableDocumentAbstractItem {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getVerificationMethod() <em>Verification Method</em>}' attribute.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerificationMethod()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VVerificationMethod VERIFICATION_METHOD_EDEFAULT = VVerificationMethod.ANALYSIS;
+	protected static final String DESCRIPTION_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getVerificationMethod() <em>Verification Method</em>}' attribute.
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getVerificationMethod()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected VVerificationMethod verificationMethod = VERIFICATION_METHOD_EDEFAULT;
+	protected String description = DESCRIPTION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getValidationMethod() <em>Validation Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValidationMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final VValidationMethod VALIDATION_METHOD_EDEFAULT = VValidationMethod.ANALYSIS;
+
+	/**
+	 * The cached value of the '{@link #getValidationMethod() <em>Validation Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getValidationMethod()
+	 * @generated
+	 * @ordered
+	 */
+	protected VValidationMethod validationMethod = VALIDATION_METHOD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -103,8 +124,8 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -112,11 +133,11 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -124,8 +145,8 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VVerificationMethod getVerificationMethod() {
-		return verificationMethod;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
@@ -133,11 +154,32 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setVerificationMethod(VVerificationMethod newVerificationMethod) {
-		VVerificationMethod oldVerificationMethod = verificationMethod;
-		verificationMethod = newVerificationMethod == null ? VERIFICATION_METHOD_EDEFAULT : newVerificationMethod;
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD, oldVerificationMethod, verificationMethod));
+			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION, oldDescription, description));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VValidationMethod getValidationMethod() {
+		return validationMethod;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setValidationMethod(VValidationMethod newValidationMethod) {
+		VValidationMethod oldValidationMethod = validationMethod;
+		validationMethod = newValidationMethod == null ? VALIDATION_METHOD_EDEFAULT : newValidationMethod;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD, oldValidationMethod, validationMethod));
 	}
 
 	/**
@@ -181,10 +223,12 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
-				return getId();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
-				return getVerificationMethod();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
+				return getName();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
+				return getDescription();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
+				return getValidationMethod();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				if (resolve) return getGroup();
 				return basicGetGroup();
@@ -200,11 +244,14 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
-				setId((String)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
+				setName((String)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
-				setVerificationMethod((VVerificationMethod)newValue);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
+				setDescription((String)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
+				setValidationMethod((VValidationMethod)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VTraceableDocumentAbstractGroup)newValue);
@@ -221,11 +268,14 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
-				setId(ID_EDEFAULT);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
-				setVerificationMethod(VERIFICATION_METHOD_EDEFAULT);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
+				setValidationMethod(VALIDATION_METHOD_EDEFAULT);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VTraceableDocumentAbstractGroup)null);
@@ -242,10 +292,12 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD:
-				return verificationMethod != VERIFICATION_METHOD_EDEFAULT;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
+				return validationMethod != VALIDATION_METHOD_EDEFAULT;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				return basicGetGroup() != null;
 		}
@@ -262,10 +314,12 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
-		result.append(", verificationMethod: ");
-		result.append(verificationMethod);
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", description: ");
+		result.append(description);
+		result.append(", validationMethod: ");
+		result.append(validationMethod);
 		result.append(')');
 		return result.toString();
 	}

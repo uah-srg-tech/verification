@@ -21,8 +21,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod <em>Verification Method</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod <em>Validation Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getGroup <em>Group</em>}</li>
  * </ul>
  *
@@ -32,59 +33,85 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface VTraceableDocumentAbstractItem extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Id</em>' attribute.
-	 * @see #setId(String)
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_Id()
+	 * @return the value of the '<em>Name</em>' attribute.
+	 * @see #setName(String)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_Name()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getId();
+	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Id</em>' attribute.
-	 * @see #getId()
+	 * @param value the new value of the '<em>Name</em>' attribute.
+	 * @see #getName()
 	 * @generated
 	 */
-	void setId(String value);
+	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Verification Method</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod}.
+	 * Returns the value of the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Verification Method</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Description</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Verification Method</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod
-	 * @see #setVerificationMethod(VVerificationMethod)
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_VerificationMethod()
+	 * @return the value of the '<em>Description</em>' attribute.
+	 * @see #setDescription(String)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_Description()
 	 * @model required="true"
 	 * @generated
 	 */
-	VVerificationMethod getVerificationMethod();
+	String getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod <em>Verification Method</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Verification Method</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod
-	 * @see #getVerificationMethod()
+	 * @param value the new value of the '<em>Description</em>' attribute.
+	 * @see #getDescription()
 	 * @generated
 	 */
-	void setVerificationMethod(VVerificationMethod value);
+	void setDescription(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Validation Method</b></em>' attribute.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Validation Method</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Validation Method</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VValidationMethod
+	 * @see #setValidationMethod(VValidationMethod)
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_ValidationMethod()
+	 * @model required="true"
+	 * @generated
+	 */
+	VValidationMethod getValidationMethod();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod <em>Validation Method</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Validation Method</em>' attribute.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VValidationMethod
+	 * @see #getValidationMethod()
+	 * @generated
+	 */
+	void setValidationMethod(VValidationMethod value);
 
 	/**
 	 * Returns the value of the '<em><b>Group</b></em>' reference.

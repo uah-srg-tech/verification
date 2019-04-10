@@ -27,13 +27,15 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableDocumentAbstractItem" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="verificationMethod" lowerBound="1"
-        eType="#//VVerificationMethod"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="validationMethod" lowerBound="1"
+        eType="#//VValidationMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="group" lowerBound="1" eType="#//VTraceableDocumentAbstractGroup"
         volatile="true" transient="true" derived="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="VVerificationMethod">
+  <eClassifiers xsi:type="ecore:EEnum" name="VValidationMethod">
     <eLiterals name="Analysis"/>
     <eLiterals name="Inspection" value="1"/>
     <eLiterals name="Testing" value="2"/>

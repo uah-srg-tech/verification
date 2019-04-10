@@ -305,22 +305,31 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM = 4;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID = 0;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Verification Method</b></em>' attribute.
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD = 1;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Validation Method</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD = 2;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' reference.
@@ -329,7 +338,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 2;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 3;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -338,7 +347,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 3;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -350,15 +359,14 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod <em>VVerification Method</em>}' enum.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod
-	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVVerificationMethod()
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VValidationMethod
+	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVValidationMethod()
 	 * @generated
 	 */
-	int VVERIFICATION_METHOD = 5;
-
+	int VVALIDATION_METHOD = 5;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument <em>VTraceable Document</em>}'.
@@ -510,26 +518,37 @@ public interface tdmPackage extends EPackage {
 	EClass getVTraceableDocumentAbstractItem();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getId()
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getName()
 	 * @see #getVTraceableDocumentAbstractItem()
 	 * @generated
 	 */
-	EAttribute getVTraceableDocumentAbstractItem_Id();
+	EAttribute getVTraceableDocumentAbstractItem_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod <em>Verification Method</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Verification Method</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getVerificationMethod()
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription()
 	 * @see #getVTraceableDocumentAbstractItem()
 	 * @generated
 	 */
-	EAttribute getVTraceableDocumentAbstractItem_VerificationMethod();
+	EAttribute getVTraceableDocumentAbstractItem_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod <em>Validation Method</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Validation Method</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod()
+	 * @see #getVTraceableDocumentAbstractItem()
+	 * @generated
+	 */
+	EAttribute getVTraceableDocumentAbstractItem_ValidationMethod();
 
 	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getGroup <em>Group</em>}'.
@@ -543,14 +562,14 @@ public interface tdmPackage extends EPackage {
 	EReference getVTraceableDocumentAbstractItem_Group();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod <em>VVerification Method</em>}'.
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>VVerification Method</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod
+	 * @return the meta object for enum '<em>VValidation Method</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VValidationMethod
 	 * @generated
 	 */
-	EEnum getVVerificationMethod();
+	EEnum getVValidationMethod();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -698,20 +717,28 @@ public interface tdmPackage extends EPackage {
 		EClass VTRACEABLE_DOCUMENT_ABSTRACT_ITEM = eINSTANCE.getVTraceableDocumentAbstractItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID = eINSTANCE.getVTraceableDocumentAbstractItem_Id();
+		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME = eINSTANCE.getVTraceableDocumentAbstractItem_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Verification Method</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD = eINSTANCE.getVTraceableDocumentAbstractItem_VerificationMethod();
+		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION = eINSTANCE.getVTraceableDocumentAbstractItem_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Validation Method</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD = eINSTANCE.getVTraceableDocumentAbstractItem_ValidationMethod();
 
 		/**
 		 * The meta object literal for the '<em><b>Group</b></em>' reference feature.
@@ -722,14 +749,14 @@ public interface tdmPackage extends EPackage {
 		EReference VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = eINSTANCE.getVTraceableDocumentAbstractItem_Group();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod <em>VVerification Method</em>}' enum.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod
-		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVVerificationMethod()
+		 * @see es.uah.aut.srg.micobs.svm.tdm.VValidationMethod
+		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVValidationMethod()
 		 * @generated
 		 */
-		EEnum VVERIFICATION_METHOD = eINSTANCE.getVVerificationMethod();
+		EEnum VVALIDATION_METHOD = eINSTANCE.getVValidationMethod();
 
 	}
 

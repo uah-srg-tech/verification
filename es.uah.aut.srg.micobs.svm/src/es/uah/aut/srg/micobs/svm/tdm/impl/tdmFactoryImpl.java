@@ -78,8 +78,8 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case tdmPackage.VVERIFICATION_METHOD:
-				return createVVerificationMethodFromString(eDataType, initialValue);
+			case tdmPackage.VVALIDATION_METHOD:
+				return createVValidationMethodFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -93,8 +93,8 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case tdmPackage.VVERIFICATION_METHOD:
-				return convertVVerificationMethodToString(eDataType, instanceValue);
+			case tdmPackage.VVALIDATION_METHOD:
+				return convertVValidationMethodToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -105,8 +105,8 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VVerificationMethod createVVerificationMethodFromString(EDataType eDataType, String initialValue) {
-		VVerificationMethod result = VVerificationMethod.get(initialValue);
+	public VValidationMethod createVValidationMethodFromString(EDataType eDataType, String initialValue) {
+		VValidationMethod result = VValidationMethod.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -116,7 +116,7 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertVVerificationMethodToString(EDataType eDataType, Object instanceValue) {
+	public String convertVValidationMethodToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

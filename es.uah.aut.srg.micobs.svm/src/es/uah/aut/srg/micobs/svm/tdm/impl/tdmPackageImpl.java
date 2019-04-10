@@ -16,7 +16,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
-import es.uah.aut.srg.micobs.svm.tdm.VVerificationMethod;
+import es.uah.aut.srg.micobs.svm.tdm.VValidationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmFactory;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
@@ -75,7 +75,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum vVerificationMethodEEnum = null;
+	private EEnum vValidationMethodEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -272,7 +272,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocumentAbstractItem_Id() {
+	public EAttribute getVTraceableDocumentAbstractItem_Name() {
 		return (EAttribute)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -281,7 +281,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocumentAbstractItem_VerificationMethod() {
+	public EAttribute getVTraceableDocumentAbstractItem_Description() {
 		return (EAttribute)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -290,8 +290,8 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTraceableDocumentAbstractItem_Group() {
-		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(2);
+	public EAttribute getVTraceableDocumentAbstractItem_ValidationMethod() {
+		return (EAttribute)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -299,8 +299,17 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getVVerificationMethod() {
-		return vVerificationMethodEEnum;
+	public EReference getVTraceableDocumentAbstractItem_Group() {
+		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVValidationMethod() {
+		return vValidationMethodEEnum;
 	}
 
 	/**
@@ -349,12 +358,13 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		createEAttribute(vTraceableDocumentInstantiableGroupEClass, VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX);
 
 		vTraceableDocumentAbstractItemEClass = createEClass(VTRACEABLE_DOCUMENT_ABSTRACT_ITEM);
-		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID);
-		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD);
+		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME);
+		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION);
+		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD);
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP);
 
 		// Create enums
-		vVerificationMethodEEnum = createEEnum(VVERIFICATION_METHOD);
+		vValidationMethodEEnum = createEEnum(VVALIDATION_METHOD);
 	}
 
 	/**
@@ -411,20 +421,21 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEAttribute(getVTraceableDocumentInstantiableGroup_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VTraceableDocumentInstantiableGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentAbstractItemEClass, VTraceableDocumentAbstractItem.class, "VTraceableDocumentAbstractItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVTraceableDocumentAbstractItem_Id(), ecorePackage.getEString(), "id", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTraceableDocumentAbstractItem_VerificationMethod(), this.getVVerificationMethod(), "verificationMethod", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVTraceableDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVTraceableDocumentAbstractItem_Description(), ecorePackage.getEString(), "description", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVTraceableDocumentAbstractItem_ValidationMethod(), this.getVValidationMethod(), "validationMethod", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_Group(), this.getVTraceableDocumentAbstractGroup(), null, "group", null, 1, 1, VTraceableDocumentAbstractItem.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
-		initEEnum(vVerificationMethodEEnum, VVerificationMethod.class, "VVerificationMethod");
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.ANALYSIS);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.INSPECTION);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.TESTING);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.REVIEW);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.MODEL_SIMULATION);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.WALK_THROUGH);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.CROSS_READING);
-		addEEnumLiteral(vVerificationMethodEEnum, VVerificationMethod.DESK_CHECKING);
+		initEEnum(vValidationMethodEEnum, VValidationMethod.class, "VValidationMethod");
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.ANALYSIS);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.INSPECTION);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.TESTING);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.REVIEW);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.MODEL_SIMULATION);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.WALK_THROUGH);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.CROSS_READING);
+		addEEnumLiteral(vValidationMethodEEnum, VValidationMethod.DESK_CHECKING);
 
 		// Create resource
 		createResource(eNS_URI);
