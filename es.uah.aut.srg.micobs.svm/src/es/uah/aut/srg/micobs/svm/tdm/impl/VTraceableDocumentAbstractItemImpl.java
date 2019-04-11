@@ -35,7 +35,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getValidationMethod <em>Validation Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getGroup <em>Group</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getParentItem <em>Parent Item</em>}</li>
@@ -63,26 +62,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DESCRIPTION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDescription()
-	 * @generated
-	 * @ordered
-	 */
-	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getValidationMethod() <em>Validation Method</em>}' attribute.
@@ -152,27 +131,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDescription() {
-		return description;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDescription(String newDescription) {
-		String oldDescription = description;
-		description = newDescription;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -251,8 +209,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
 				return getName();
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
-				return getDescription();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
 				return getValidationMethod();
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
@@ -275,9 +231,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
 				setName((String)newValue);
-				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
-				setDescription((String)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
 				setValidationMethod((VValidationMethod)newValue);
@@ -304,9 +257,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
-				setDescription(DESCRIPTION_EDEFAULT);
-				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
 				setValidationMethod(VALIDATION_METHOD_EDEFAULT);
 				return;
@@ -330,8 +280,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION:
-				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD:
 				return validationMethod != VALIDATION_METHOD_EDEFAULT;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
@@ -354,8 +302,6 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", description: ");
-		result.append(description);
 		result.append(", validationMethod: ");
 		result.append(validationMethod);
 		result.append(')');

@@ -281,7 +281,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocumentAbstractItem_Description() {
+	public EAttribute getVTraceableDocumentAbstractItem_ValidationMethod() {
 		return (EAttribute)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -290,17 +290,8 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocumentAbstractItem_ValidationMethod() {
-		return (EAttribute)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getVTraceableDocumentAbstractItem_Group() {
-		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(3);
+		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -309,7 +300,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * @generated
 	 */
 	public EReference getVTraceableDocumentAbstractItem_ParentItem() {
-		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(4);
+		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -368,7 +359,6 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 
 		vTraceableDocumentAbstractItemEClass = createEClass(VTRACEABLE_DOCUMENT_ABSTRACT_ITEM);
 		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME);
-		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION);
 		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD);
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP);
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM);
@@ -432,7 +422,6 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 
 		initEClass(vTraceableDocumentAbstractItemEClass, VTraceableDocumentAbstractItem.class, "VTraceableDocumentAbstractItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTraceableDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTraceableDocumentAbstractItem_Description(), ecorePackage.getEString(), "description", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocumentAbstractItem_ValidationMethod(), this.getVValidationMethod(), "validationMethod", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_Group(), this.getVTraceableDocumentAbstractGroup(), null, "group", null, 1, 1, VTraceableDocumentAbstractItem.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_ParentItem(), this.getVTraceableDocumentAbstractItem(), null, "parentItem", null, 0, -1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

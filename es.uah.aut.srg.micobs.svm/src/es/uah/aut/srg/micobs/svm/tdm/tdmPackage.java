@@ -314,22 +314,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION = 1;
-
-	/**
 	 * The feature id for the '<em><b>Validation Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD = 2;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD = 1;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' reference.
@@ -338,7 +329,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 3;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 2;
 
 	/**
 	 * The feature id for the '<em><b>Parent Item</b></em>' reference list.
@@ -347,7 +338,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM = 4;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM = 3;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -356,7 +347,7 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 5;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -536,17 +527,6 @@ public interface tdmPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVTraceableDocumentAbstractItem_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription()
-	 * @see #getVTraceableDocumentAbstractItem()
-	 * @generated
-	 */
-	EAttribute getVTraceableDocumentAbstractItem_Description();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod <em>Validation Method</em>}'.
@@ -743,14 +723,6 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME = eINSTANCE.getVTraceableDocumentAbstractItem_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION = eINSTANCE.getVTraceableDocumentAbstractItem_Description();
 
 		/**
 		 * The meta object literal for the '<em><b>Validation Method</b></em>' attribute feature.
