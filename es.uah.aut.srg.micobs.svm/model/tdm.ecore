@@ -34,6 +34,8 @@
         eType="#//VValidationMethod"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="group" lowerBound="1" eType="#//VTraceableDocumentAbstractGroup"
         volatile="true" transient="true" derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parentItem" upperBound="-1"
+        eType="#//VTraceableDocumentAbstractItem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VValidationMethod">
     <eLiterals name="Analysis"/>

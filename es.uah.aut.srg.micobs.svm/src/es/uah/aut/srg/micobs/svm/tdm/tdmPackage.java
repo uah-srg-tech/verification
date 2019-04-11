@@ -341,13 +341,22 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = 3;
 
 	/**
+	 * The feature id for the '<em><b>Parent Item</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM = 4;
+
+	/**
 	 * The number of structural features of the '<em>VTraceable Document Abstract Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 4;
+	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Abstract Item</em>' class.
@@ -562,6 +571,17 @@ public interface tdmPackage extends EPackage {
 	EReference getVTraceableDocumentAbstractItem_Group();
 
 	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getParentItem <em>Parent Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Parent Item</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getParentItem()
+	 * @see #getVTraceableDocumentAbstractItem()
+	 * @generated
+	 */
+	EReference getVTraceableDocumentAbstractItem_ParentItem();
+
+	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -747,6 +767,14 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP = eINSTANCE.getVTraceableDocumentAbstractItem_Group();
+
+		/**
+		 * The meta object literal for the '<em><b>Parent Item</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM = eINSTANCE.getVTraceableDocumentAbstractItem_ParentItem();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.

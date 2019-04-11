@@ -308,6 +308,15 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVTraceableDocumentAbstractItem_ParentItem() {
+		return (EReference)vTraceableDocumentAbstractItemEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVValidationMethod() {
 		return vValidationMethodEEnum;
 	}
@@ -362,6 +371,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__DESCRIPTION);
 		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD);
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP);
+		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM);
 
 		// Create enums
 		vValidationMethodEEnum = createEEnum(VVALIDATION_METHOD);
@@ -425,6 +435,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEAttribute(getVTraceableDocumentAbstractItem_Description(), ecorePackage.getEString(), "description", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocumentAbstractItem_ValidationMethod(), this.getVValidationMethod(), "validationMethod", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_Group(), this.getVTraceableDocumentAbstractGroup(), null, "group", null, 1, 1, VTraceableDocumentAbstractItem.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getVTraceableDocumentAbstractItem_ParentItem(), this.getVTraceableDocumentAbstractItem(), null, "parentItem", null, 0, -1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(vValidationMethodEEnum, VValidationMethod.class, "VValidationMethod");

@@ -15,13 +15,16 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VValidationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,6 +38,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getValidationMethod <em>Validation Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getGroup <em>Group</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl#getParentItem <em>Parent Item</em>}</li>
  * </ul>
  *
  * @generated
@@ -99,6 +103,16 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * @ordered
 	 */
 	protected VValidationMethod validationMethod = VALIDATION_METHOD_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getParentItem() <em>Parent Item</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getParentItem()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VTraceableDocumentAbstractItem> parentItem;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -220,6 +234,18 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VTraceableDocumentAbstractItem> getParentItem() {
+		if (parentItem == null) {
+			parentItem = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM);
+		}
+		return parentItem;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -232,6 +258,8 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				if (resolve) return getGroup();
 				return basicGetGroup();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM:
+				return getParentItem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -241,6 +269,7 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -255,6 +284,10 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VTraceableDocumentAbstractGroup)newValue);
+				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM:
+				getParentItem().clear();
+				getParentItem().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -280,6 +313,9 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VTraceableDocumentAbstractGroup)null);
 				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM:
+				getParentItem().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -300,6 +336,8 @@ public abstract class VTraceableDocumentAbstractItemImpl extends MinimalEObjectI
 				return validationMethod != VALIDATION_METHOD_EDEFAULT;
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				return basicGetGroup() != null;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM:
+				return parentItem != null && !parentItem.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

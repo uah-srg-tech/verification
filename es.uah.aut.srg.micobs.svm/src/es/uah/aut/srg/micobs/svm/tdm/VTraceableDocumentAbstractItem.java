@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm;
 
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -25,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getValidationMethod <em>Validation Method</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getGroup <em>Group</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem#getParentItem <em>Parent Item</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem()
@@ -138,5 +140,21 @@ public interface VTraceableDocumentAbstractItem extends EObject {
 	 * @generated
 	 */
 	void setGroup(VTraceableDocumentAbstractGroup value);
+
+	/**
+	 * Returns the value of the '<em><b>Parent Item</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Parent Item</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Parent Item</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractItem_ParentItem()
+	 * @model
+	 * @generated
+	 */
+	EList<VTraceableDocumentAbstractItem> getParentItem();
 
 } // VTraceableDocumentAbstractItem
