@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
+    modelName="Srs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doc.genmodel#//doc tdm.genmodel#//tdm"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>srs.ecore</foreignModel>
+  <genPackages prefix="srs" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
+      ecorePackage="srs.ecore#/">
+    <genClasses ecoreClass="srs.ecore#//VSRSDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/introductionSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/applicableDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/referenceDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/termsDefinitionsAbbreviationsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/generalDescriptionSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/specificRequirementsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/traceabilty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/systemModelsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/srsFigures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocument/srsTables"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSIntroduction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSIntroduction/srsInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSApplicableDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSApplicableDocuments/applicableDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSReferenceDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSReferenceDocuments/referenceDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSTermsDefinitionsAbbreviations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTermsDefinitionsAbbreviations/terms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTermsDefinitionsAbbreviations/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTermsDefinitionsAbbreviations/abbreviations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="srs.ecore#//VSRSAbstractBriefDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute srs.ecore#//VSRSAbstractBriefDescription/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSAbstractBriefDescription/description"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSTerm"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSDefinition"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSAbbreviation"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSFixedSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSFixedSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSFixedSection/srsInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSInstantiableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSInstantiableSection/body"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSSoftwareOverview">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSSoftwareOverview/functionPurpose"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSSoftwareOverview/environmentalConsideration"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSSoftwareOverview/relationOtherSystems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSSoftwareOverview/constraints"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="srs.ecore#//VSRSAbstractRequirementSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSAbstractRequirementSection/sectionDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSAbstractRequirementSection/srsItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSAbstractRequirementSection/srsRequirementSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSInstantiableRequirementSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSInstantiableRequirementSection/sectionDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSInstantiableRequirementSection/srsItems"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/sectionDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/general"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/functional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/performance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/operational"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/design"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/securityPrivacy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/portability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/swQuality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/swReliabilty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/swMaintainability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/swSafety"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/swConfigurationDelivery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/dataDefinitionDB"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/humanFactors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSRequirements/adaptationInstallation"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSGeneralRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSFunctionalRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSPerformanceRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSInterfaceRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSOperationalRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSResourcesRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSDesignRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSecurityPrivacyRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSPortabilityRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSWQualityRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSWReliabiltyRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSWMaintainabilityRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSWSafetyRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSSWConfigurationDeliveryRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSDataDefinitionDBRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSHumanFactorsRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSAdaptationInstallationRequirements"/>
+    <genClasses ecoreClass="srs.ecore#//VSRSDocumentItem">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocumentItem/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSDocumentItem/extendedDescription"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSTraceabilty">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/sectionDescription"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/general"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/functional"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/performance"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/interface"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/operational"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/resources"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/design"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/securityPrivacy"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/portability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/swQuality"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/swReliabilty"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/swMaintainability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/swSafety"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/swConfigurationDelivery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/dataDefinitionDB"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/humanFactors"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSTraceabilty/adaptationInstallation"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSLogicalModels">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference srs.ecore#//VSRSLogicalModels/logicalModels"/>
+    </genClasses>
+    <genClasses ecoreClass="srs.ecore#//VSRSLogicalModel"/>
+  </genPackages>
+</genmodel:GenModel>
