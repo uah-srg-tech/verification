@@ -237,15 +237,15 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDParagraphParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDItemizeParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		private final RuleCall cDEnumerateParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cDFigureParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		private final RuleCall cDPictureAsTableParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
+		private final RuleCall cDFigureFromFileParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		private final RuleCall cDTableFromFileParserRuleCall_4 = (RuleCall)cAlternatives.eContents().get(4);
 		private final RuleCall cDBasicTableParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		
 		//DBodyContent doc::DBodyContent:
-		//	DParagraph | DItemize | DEnumerate | DFigure | DPictureAsTable | DBasicTable
+		//	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable
 		@Override public ParserRule getRule() { return rule; }
 		
-		//DParagraph | DItemize | DEnumerate | DFigure | DPictureAsTable | DBasicTable
+		//DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//DParagraph
@@ -257,11 +257,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//DEnumerate
 		public RuleCall getDEnumerateParserRuleCall_2() { return cDEnumerateParserRuleCall_2; }
 		
-		//DFigure
-		public RuleCall getDFigureParserRuleCall_3() { return cDFigureParserRuleCall_3; }
+		//DFigureFromFile
+		public RuleCall getDFigureFromFileParserRuleCall_3() { return cDFigureFromFileParserRuleCall_3; }
 		
-		//DPictureAsTable
-		public RuleCall getDPictureAsTableParserRuleCall_4() { return cDPictureAsTableParserRuleCall_4; }
+		//DTableFromFile
+		public RuleCall getDTableFromFileParserRuleCall_4() { return cDTableFromFileParserRuleCall_4; }
 		
 		//DBasicTable
 		public RuleCall getDBasicTableParserRuleCall_5() { return cDBasicTableParserRuleCall_5; }
@@ -555,30 +555,30 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//RUNTEXT
 		public RuleCall getContentRUNTEXTTerminalRuleCall_0() { return cContentRUNTEXTTerminalRuleCall_0; }
 	}
-	public class DFigureElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DFigure");
+	public class DFigureFromFileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DFigureFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFigureKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cReferenceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cReferenceAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cReferenceSTRINGTerminalRuleCall_4_0 = (RuleCall)cReferenceAssignment_4.eContents().get(0);
-		private final Keyword cCaptionKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cCaptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_6_0 = (RuleCall)cCaptionAssignment_6.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cReferenceFileKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cReferenceFileAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReferenceFileSTRINGTerminalRuleCall_4_0 = (RuleCall)cReferenceFileAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCaptionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cCaptionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cCaptionAssignment_5_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//DFigure doc::DFigure:
+		//DFigureFromFile doc::DFigureFromFile:
 		//	'<figure'
 		//	'name=' name=STRING
-		//	'reference=' reference=STRING
-		//	'caption=' caption=STRING
+		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<figure' 'name=' name=STRING 'reference=' reference=STRING 'caption=' caption=STRING '/>'
+		//'<figure' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<figure'
@@ -593,51 +593,54 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'reference='
-		public Keyword getReferenceKeyword_3() { return cReferenceKeyword_3; }
+		//'referenceFile='
+		public Keyword getReferenceFileKeyword_3() { return cReferenceFileKeyword_3; }
 		
-		//reference=STRING
-		public Assignment getReferenceAssignment_4() { return cReferenceAssignment_4; }
+		//referenceFile=STRING
+		public Assignment getReferenceFileAssignment_4() { return cReferenceFileAssignment_4; }
 		
 		//STRING
-		public RuleCall getReferenceSTRINGTerminalRuleCall_4_0() { return cReferenceSTRINGTerminalRuleCall_4_0; }
+		public RuleCall getReferenceFileSTRINGTerminalRuleCall_4_0() { return cReferenceFileSTRINGTerminalRuleCall_4_0; }
+		
+		//('caption=' caption=STRING)?
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'caption='
-		public Keyword getCaptionKeyword_5() { return cCaptionKeyword_5; }
+		public Keyword getCaptionKeyword_5_0() { return cCaptionKeyword_5_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_6() { return cCaptionAssignment_6; }
+		public Assignment getCaptionAssignment_5_1() { return cCaptionAssignment_5_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_6_0() { return cCaptionSTRINGTerminalRuleCall_6_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_5_1_0() { return cCaptionSTRINGTerminalRuleCall_5_1_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
+		public Keyword getSolidusGreaterThanSignKeyword_6() { return cSolidusGreaterThanSignKeyword_6; }
 	}
-	public class DPictureAsTableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DPictureAsTable");
+	public class DTableFromFileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DTableFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPictureAsTableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cReferenceKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cReferenceAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cReferenceSTRINGTerminalRuleCall_4_0 = (RuleCall)cReferenceAssignment_4.eContents().get(0);
-		private final Keyword cCaptionKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cCaptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_6_0 = (RuleCall)cCaptionAssignment_6.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cReferenceFileKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cReferenceFileAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cReferenceFileSTRINGTerminalRuleCall_4_0 = (RuleCall)cReferenceFileAssignment_4.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCaptionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cCaptionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cCaptionAssignment_5_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//DPictureAsTable doc::DPictureAsTable:
+		//DTableFromFile doc::DTableFromFile:
 		//	'<pictureAsTable'
 		//	'name=' name=STRING
-		//	'reference=' reference=STRING
-		//	'caption=' caption=STRING
+		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<pictureAsTable' 'name=' name=STRING 'reference=' reference=STRING 'caption=' caption=STRING '/>'
+		//'<pictureAsTable' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<pictureAsTable'
@@ -652,26 +655,29 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'reference='
-		public Keyword getReferenceKeyword_3() { return cReferenceKeyword_3; }
+		//'referenceFile='
+		public Keyword getReferenceFileKeyword_3() { return cReferenceFileKeyword_3; }
 		
-		//reference=STRING
-		public Assignment getReferenceAssignment_4() { return cReferenceAssignment_4; }
+		//referenceFile=STRING
+		public Assignment getReferenceFileAssignment_4() { return cReferenceFileAssignment_4; }
 		
 		//STRING
-		public RuleCall getReferenceSTRINGTerminalRuleCall_4_0() { return cReferenceSTRINGTerminalRuleCall_4_0; }
+		public RuleCall getReferenceFileSTRINGTerminalRuleCall_4_0() { return cReferenceFileSTRINGTerminalRuleCall_4_0; }
+		
+		//('caption=' caption=STRING)?
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'caption='
-		public Keyword getCaptionKeyword_5() { return cCaptionKeyword_5; }
+		public Keyword getCaptionKeyword_5_0() { return cCaptionKeyword_5_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_6() { return cCaptionAssignment_6; }
+		public Assignment getCaptionAssignment_5_1() { return cCaptionAssignment_5_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_6_0() { return cCaptionSTRINGTerminalRuleCall_6_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_5_1_0() { return cCaptionSTRINGTerminalRuleCall_5_1_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
+		public Keyword getSolidusGreaterThanSignKeyword_6() { return cSolidusGreaterThanSignKeyword_6; }
 	}
 	public class DBasicTableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBasicTable");
@@ -680,24 +686,24 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cCaptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cCaptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cCaptionAssignment_4.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cRowsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cRowsDRowParserRuleCall_6_0 = (RuleCall)cRowsAssignment_6.eContents().get(0);
-		private final Keyword cBasicTableKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cCaptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cCaptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cCaptionAssignment_3_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cRowsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cRowsDRowParserRuleCall_5_0 = (RuleCall)cRowsAssignment_5.eContents().get(0);
+		private final Keyword cBasicTableKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DBasicTable doc::DBasicTable:
 		//	'<basicTable'
-		//	'name=' name=STRING
-		//	'caption=' caption=STRING
+		//	'name=' name=STRING ('caption=' caption=STRING)?
 		//	'>'
 		//	rows+=DRow+
 		//	'</basicTable>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<basicTable' 'name=' name=STRING 'caption=' caption=STRING '>' rows+=DRow+ '</basicTable>'
+		//'<basicTable' 'name=' name=STRING ('caption=' caption=STRING)? '>' rows+=DRow+ '</basicTable>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<basicTable'
@@ -712,26 +718,29 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
+		//('caption=' caption=STRING)?
+		public Group getGroup_3() { return cGroup_3; }
+		
 		//'caption='
-		public Keyword getCaptionKeyword_3() { return cCaptionKeyword_3; }
+		public Keyword getCaptionKeyword_3_0() { return cCaptionKeyword_3_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_4() { return cCaptionAssignment_4; }
+		public Assignment getCaptionAssignment_3_1() { return cCaptionAssignment_3_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_4_0() { return cCaptionSTRINGTerminalRuleCall_4_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_3_1_0() { return cCaptionSTRINGTerminalRuleCall_3_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
 		
 		//rows+=DRow+
-		public Assignment getRowsAssignment_6() { return cRowsAssignment_6; }
+		public Assignment getRowsAssignment_5() { return cRowsAssignment_5; }
 		
 		//DRow
-		public RuleCall getRowsDRowParserRuleCall_6_0() { return cRowsDRowParserRuleCall_6_0; }
+		public RuleCall getRowsDRowParserRuleCall_5_0() { return cRowsDRowParserRuleCall_5_0; }
 		
 		//'</basicTable>'
-		public Keyword getBasicTableKeyword_7() { return cBasicTableKeyword_7; }
+		public Keyword getBasicTableKeyword_6() { return cBasicTableKeyword_6; }
 	}
 	public class DRowElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DRow");
@@ -1066,94 +1075,109 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
 	}
+	public class VSSSFixedSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cBodyAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cBodyDBodyParserRuleCall_0_0 = (RuleCall)cBodyAssignment_0.eContents().get(0);
+		private final Assignment cSssInstatiableSubsectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0 = (RuleCall)cSssInstatiableSubsectionsAssignment_1.eContents().get(0);
+		
+		//VSSSFixedSection:
+		//	body=DBody
+		//	sssInstatiableSubsections+=VSSSInstatiableSection*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//body=DBody sssInstatiableSubsections+=VSSSInstatiableSection*
+		public Group getGroup() { return cGroup; }
+		
+		//body=DBody
+		public Assignment getBodyAssignment_0() { return cBodyAssignment_0; }
+		
+		//DBody
+		public RuleCall getBodyDBodyParserRuleCall_0_0() { return cBodyDBodyParserRuleCall_0_0; }
+		
+		//sssInstatiableSubsections+=VSSSInstatiableSection*
+		public Assignment getSssInstatiableSubsectionsAssignment_1() { return cSssInstatiableSubsectionsAssignment_1; }
+		
+		//VSSSInstatiableSection
+		public RuleCall getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0() { return cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0; }
+	}
+	public class VSSSInstatiableSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSubsectionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cBodyDBodyParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
+		private final Keyword cSubsectionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSSSInstatiableSection VSSSInstantiableSection:
+		//	'<subsection'
+		//	'name=' name=STRING
+		//	'>'
+		//	body=DBody
+		//	'</subsection>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<subsection' 'name=' name=STRING '>' body=DBody '</subsection>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<subsection'
+		public Keyword getSubsectionKeyword_0() { return cSubsectionKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//body=DBody
+		public Assignment getBodyAssignment_4() { return cBodyAssignment_4; }
+		
+		//DBody
+		public RuleCall getBodyDBodyParserRuleCall_4_0() { return cBodyDBodyParserRuleCall_4_0; }
+		
+		//'</subsection>'
+		public Keyword getSubsectionKeyword_5() { return cSubsectionKeyword_5; }
+	}
 	public class VSSSIntroductionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSIntroduction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cIntroductionKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cPurposeKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cPurposeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cPurposeDBodyParserRuleCall_2_0 = (RuleCall)cPurposeAssignment_2.eContents().get(0);
-		private final Keyword cPurposeKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cObjectiveKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cObjectiveAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cObjectiveDBodyParserRuleCall_5_0 = (RuleCall)cObjectiveAssignment_5.eContents().get(0);
-		private final Keyword cObjectiveKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cContentKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cContentAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cContentDBodyParserRuleCall_8_0 = (RuleCall)cContentAssignment_8.eContents().get(0);
-		private final Keyword cContentKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Keyword cReasonKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cReasonAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cReasonDBodyParserRuleCall_11_0 = (RuleCall)cReasonAssignment_11.eContents().get(0);
-		private final Keyword cReasonKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Keyword cIntroductionKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cSssInstatiableSubsectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0 = (RuleCall)cSssInstatiableSubsectionsAssignment_1.eContents().get(0);
+		private final Keyword cIntroductionKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//VSSSIntroduction:
 		//	'<Introduction>'
-		//	'<purpose>' purpose=DBody '</purpose>'
-		//	'<objective>' objective=DBody '</objective>'
-		//	'<content>' content=DBody '</content>'
-		//	'<reason>' reason=DBody '</reason>'
+		//	sssInstatiableSubsections+=VSSSInstatiableSection+
 		//	'</Introduction>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Introduction>' '<purpose>' purpose=DBody '</purpose>' '<objective>' objective=DBody '</objective>' '<content>'
-		//content=DBody '</content>' '<reason>' reason=DBody '</reason>' '</Introduction>'
+		//'<Introduction>' sssInstatiableSubsections+=VSSSInstatiableSection+ '</Introduction>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Introduction>'
 		public Keyword getIntroductionKeyword_0() { return cIntroductionKeyword_0; }
 		
-		//'<purpose>'
-		public Keyword getPurposeKeyword_1() { return cPurposeKeyword_1; }
+		//sssInstatiableSubsections+=VSSSInstatiableSection+
+		public Assignment getSssInstatiableSubsectionsAssignment_1() { return cSssInstatiableSubsectionsAssignment_1; }
 		
-		//purpose=DBody
-		public Assignment getPurposeAssignment_2() { return cPurposeAssignment_2; }
-		
-		//DBody
-		public RuleCall getPurposeDBodyParserRuleCall_2_0() { return cPurposeDBodyParserRuleCall_2_0; }
-		
-		//'</purpose>'
-		public Keyword getPurposeKeyword_3() { return cPurposeKeyword_3; }
-		
-		//'<objective>'
-		public Keyword getObjectiveKeyword_4() { return cObjectiveKeyword_4; }
-		
-		//objective=DBody
-		public Assignment getObjectiveAssignment_5() { return cObjectiveAssignment_5; }
-		
-		//DBody
-		public RuleCall getObjectiveDBodyParserRuleCall_5_0() { return cObjectiveDBodyParserRuleCall_5_0; }
-		
-		//'</objective>'
-		public Keyword getObjectiveKeyword_6() { return cObjectiveKeyword_6; }
-		
-		//'<content>'
-		public Keyword getContentKeyword_7() { return cContentKeyword_7; }
-		
-		//content=DBody
-		public Assignment getContentAssignment_8() { return cContentAssignment_8; }
-		
-		//DBody
-		public RuleCall getContentDBodyParserRuleCall_8_0() { return cContentDBodyParserRuleCall_8_0; }
-		
-		//'</content>'
-		public Keyword getContentKeyword_9() { return cContentKeyword_9; }
-		
-		//'<reason>'
-		public Keyword getReasonKeyword_10() { return cReasonKeyword_10; }
-		
-		//reason=DBody
-		public Assignment getReasonAssignment_11() { return cReasonAssignment_11; }
-		
-		//DBody
-		public RuleCall getReasonDBodyParserRuleCall_11_0() { return cReasonDBodyParserRuleCall_11_0; }
-		
-		//'</reason>'
-		public Keyword getReasonKeyword_12() { return cReasonKeyword_12; }
+		//VSSSInstatiableSection
+		public RuleCall getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0() { return cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0; }
 		
 		//'</Introduction>'
-		public Keyword getIntroductionKeyword_13() { return cIntroductionKeyword_13; }
+		public Keyword getIntroductionKeyword_2() { return cIntroductionKeyword_2; }
 	}
 	public class VSSSApplicableDocumentsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSApplicableDocuments");
@@ -1282,42 +1306,41 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGeneralDescriptionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cProductPerspectiveKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cProductPerspectiveAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cProductPerspectiveVSSSGeneralDescriptionSubsectionParserRuleCall_2_0 = (RuleCall)cProductPerspectiveAssignment_2.eContents().get(0);
+		private final RuleCall cProductPerspectiveVSSSFixedSectionParserRuleCall_2_0 = (RuleCall)cProductPerspectiveAssignment_2.eContents().get(0);
 		private final Keyword cProductPerspectiveKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cGeneralCapabilitiesKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cGeneralCapabilitiesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cGeneralCapabilitiesVSSSGeneralDescriptionSubsectionParserRuleCall_5_0 = (RuleCall)cGeneralCapabilitiesAssignment_5.eContents().get(0);
+		private final RuleCall cGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0 = (RuleCall)cGeneralCapabilitiesAssignment_5.eContents().get(0);
 		private final Keyword cGeneralCapabilitiesKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cGeneralConstraintsKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cGeneralConstraintsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cGeneralConstraintsVSSSGeneralDescriptionSubsectionParserRuleCall_8_0 = (RuleCall)cGeneralConstraintsAssignment_8.eContents().get(0);
+		private final RuleCall cGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0 = (RuleCall)cGeneralConstraintsAssignment_8.eContents().get(0);
 		private final Keyword cGeneralConstraintsKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cOperationalEnvironmentKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Assignment cOperationalEnvironmentAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cOperationalEnvironmentVSSSGeneralDescriptionSubsectionParserRuleCall_11_0 = (RuleCall)cOperationalEnvironmentAssignment_11.eContents().get(0);
+		private final RuleCall cOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0 = (RuleCall)cOperationalEnvironmentAssignment_11.eContents().get(0);
 		private final Keyword cOperationalEnvironmentKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cAssumptionsDependenciesKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cAssumptionsDependenciesAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cAssumptionsDependenciesVSSSGeneralDescriptionSubsectionParserRuleCall_14_0 = (RuleCall)cAssumptionsDependenciesAssignment_14.eContents().get(0);
+		private final RuleCall cAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0 = (RuleCall)cAssumptionsDependenciesAssignment_14.eContents().get(0);
 		private final Keyword cAssumptionsDependenciesKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cGeneralDescriptionKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//VSSSGeneralDescription:
 		//	'<GeneralDescription>'
-		//	'<productPerspective>' productPerspective=VSSSGeneralDescriptionSubsection '</productPerspective>'
-		//	'<generalCapabilities>' generalCapabilities=VSSSGeneralDescriptionSubsection '</generalCapabilities>'
-		//	'<generalConstraints>' generalConstraints=VSSSGeneralDescriptionSubsection '</generalConstraints>'
-		//	'<operationalEnvironment>' operationalEnvironment=VSSSGeneralDescriptionSubsection '</operationalEnvironment>'
-		//	'<assumptionsDependencies>' assumptionsDependencies=VSSSGeneralDescriptionSubsection '</assumptionsDependencies>'
+		//	'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
+		//	'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
+		//	'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
+		//	'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
+		//	'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
 		//	'</GeneralDescription>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<GeneralDescription>' '<productPerspective>' productPerspective=VSSSGeneralDescriptionSubsection
-		//'</productPerspective>' '<generalCapabilities>' generalCapabilities=VSSSGeneralDescriptionSubsection
-		//'</generalCapabilities>' '<generalConstraints>' generalConstraints=VSSSGeneralDescriptionSubsection
-		//'</generalConstraints>' '<operationalEnvironment>' operationalEnvironment=VSSSGeneralDescriptionSubsection
-		//'</operationalEnvironment>' '<assumptionsDependencies>' assumptionsDependencies=VSSSGeneralDescriptionSubsection
-		//'</assumptionsDependencies>' '</GeneralDescription>'
+		//'<GeneralDescription>' '<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
+		//'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>' '<generalConstraints>'
+		//generalConstraints=VSSSFixedSection '</generalConstraints>' '<operationalEnvironment>'
+		//operationalEnvironment=VSSSFixedSection '</operationalEnvironment>' '<assumptionsDependencies>'
+		//assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>' '</GeneralDescription>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GeneralDescription>'
@@ -1326,11 +1349,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<productPerspective>'
 		public Keyword getProductPerspectiveKeyword_1() { return cProductPerspectiveKeyword_1; }
 		
-		//productPerspective=VSSSGeneralDescriptionSubsection
+		//productPerspective=VSSSFixedSection
 		public Assignment getProductPerspectiveAssignment_2() { return cProductPerspectiveAssignment_2; }
 		
-		//VSSSGeneralDescriptionSubsection
-		public RuleCall getProductPerspectiveVSSSGeneralDescriptionSubsectionParserRuleCall_2_0() { return cProductPerspectiveVSSSGeneralDescriptionSubsectionParserRuleCall_2_0; }
+		//VSSSFixedSection
+		public RuleCall getProductPerspectiveVSSSFixedSectionParserRuleCall_2_0() { return cProductPerspectiveVSSSFixedSectionParserRuleCall_2_0; }
 		
 		//'</productPerspective>'
 		public Keyword getProductPerspectiveKeyword_3() { return cProductPerspectiveKeyword_3; }
@@ -1338,11 +1361,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<generalCapabilities>'
 		public Keyword getGeneralCapabilitiesKeyword_4() { return cGeneralCapabilitiesKeyword_4; }
 		
-		//generalCapabilities=VSSSGeneralDescriptionSubsection
+		//generalCapabilities=VSSSFixedSection
 		public Assignment getGeneralCapabilitiesAssignment_5() { return cGeneralCapabilitiesAssignment_5; }
 		
-		//VSSSGeneralDescriptionSubsection
-		public RuleCall getGeneralCapabilitiesVSSSGeneralDescriptionSubsectionParserRuleCall_5_0() { return cGeneralCapabilitiesVSSSGeneralDescriptionSubsectionParserRuleCall_5_0; }
+		//VSSSFixedSection
+		public RuleCall getGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0() { return cGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0; }
 		
 		//'</generalCapabilities>'
 		public Keyword getGeneralCapabilitiesKeyword_6() { return cGeneralCapabilitiesKeyword_6; }
@@ -1350,11 +1373,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<generalConstraints>'
 		public Keyword getGeneralConstraintsKeyword_7() { return cGeneralConstraintsKeyword_7; }
 		
-		//generalConstraints=VSSSGeneralDescriptionSubsection
+		//generalConstraints=VSSSFixedSection
 		public Assignment getGeneralConstraintsAssignment_8() { return cGeneralConstraintsAssignment_8; }
 		
-		//VSSSGeneralDescriptionSubsection
-		public RuleCall getGeneralConstraintsVSSSGeneralDescriptionSubsectionParserRuleCall_8_0() { return cGeneralConstraintsVSSSGeneralDescriptionSubsectionParserRuleCall_8_0; }
+		//VSSSFixedSection
+		public RuleCall getGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0() { return cGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0; }
 		
 		//'</generalConstraints>'
 		public Keyword getGeneralConstraintsKeyword_9() { return cGeneralConstraintsKeyword_9; }
@@ -1362,11 +1385,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<operationalEnvironment>'
 		public Keyword getOperationalEnvironmentKeyword_10() { return cOperationalEnvironmentKeyword_10; }
 		
-		//operationalEnvironment=VSSSGeneralDescriptionSubsection
+		//operationalEnvironment=VSSSFixedSection
 		public Assignment getOperationalEnvironmentAssignment_11() { return cOperationalEnvironmentAssignment_11; }
 		
-		//VSSSGeneralDescriptionSubsection
-		public RuleCall getOperationalEnvironmentVSSSGeneralDescriptionSubsectionParserRuleCall_11_0() { return cOperationalEnvironmentVSSSGeneralDescriptionSubsectionParserRuleCall_11_0; }
+		//VSSSFixedSection
+		public RuleCall getOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0() { return cOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0; }
 		
 		//'</operationalEnvironment>'
 		public Keyword getOperationalEnvironmentKeyword_12() { return cOperationalEnvironmentKeyword_12; }
@@ -1374,11 +1397,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<assumptionsDependencies>'
 		public Keyword getAssumptionsDependenciesKeyword_13() { return cAssumptionsDependenciesKeyword_13; }
 		
-		//assumptionsDependencies=VSSSGeneralDescriptionSubsection
+		//assumptionsDependencies=VSSSFixedSection
 		public Assignment getAssumptionsDependenciesAssignment_14() { return cAssumptionsDependenciesAssignment_14; }
 		
-		//VSSSGeneralDescriptionSubsection
-		public RuleCall getAssumptionsDependenciesVSSSGeneralDescriptionSubsectionParserRuleCall_14_0() { return cAssumptionsDependenciesVSSSGeneralDescriptionSubsectionParserRuleCall_14_0; }
+		//VSSSFixedSection
+		public RuleCall getAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0() { return cAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0; }
 		
 		//'</assumptionsDependencies>'
 		public Keyword getAssumptionsDependenciesKeyword_15() { return cAssumptionsDependenciesKeyword_15; }
@@ -1390,36 +1413,39 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSpecificRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cSpecificRequirementsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cGeneralAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cGeneralVSSSGeneralRequirementsParserRuleCall_1_0 = (RuleCall)cGeneralAssignment_1.eContents().get(0);
-		private final Assignment cCapabilitiesAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_2_0 = (RuleCall)cCapabilitiesAssignment_2.eContents().get(0);
-		private final Assignment cSystemInterfaceAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_3_0 = (RuleCall)cSystemInterfaceAssignment_3.eContents().get(0);
-		private final Assignment cAdaptationMissionizationAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_4_0 = (RuleCall)cAdaptationMissionizationAssignment_4.eContents().get(0);
-		private final Assignment cComputerResourceAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cComputerResourceVSSSComputerResourceRequirementsParserRuleCall_5_0 = (RuleCall)cComputerResourceAssignment_5.eContents().get(0);
-		private final Assignment cSecurityAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cSecurityVSSSSecurityRequirementsParserRuleCall_6_0 = (RuleCall)cSecurityAssignment_6.eContents().get(0);
-		private final Assignment cSafetyAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cSafetyVSSSSafetyRequirementsParserRuleCall_7_0 = (RuleCall)cSafetyAssignment_7.eContents().get(0);
-		private final Assignment cReliabiltyAvailabilityAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_8_0 = (RuleCall)cReliabiltyAvailabilityAssignment_8.eContents().get(0);
-		private final Assignment cQualityAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cQualityVSSSQualityRequirementsParserRuleCall_9_0 = (RuleCall)cQualityAssignment_9.eContents().get(0);
-		private final Assignment cDesignAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cDesignVSSSDesignRequirementsParserRuleCall_10_0 = (RuleCall)cDesignAssignment_10.eContents().get(0);
-		private final Assignment cSoftwareOperationsAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_11_0 = (RuleCall)cSoftwareOperationsAssignment_11.eContents().get(0);
-		private final Assignment cSoftwareMaintenanceAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_12_0 = (RuleCall)cSoftwareMaintenanceAssignment_12.eContents().get(0);
-		private final Assignment cSystemSoftwareObservabilityAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_13_0 = (RuleCall)cSystemSoftwareObservabilityAssignment_13.eContents().get(0);
-		private final Keyword cSpecificRequirementsKeyword_14 = (Keyword)cGroup.eContents().get(14);
+		private final Assignment cSectionDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_1_0 = (RuleCall)cSectionDescriptionAssignment_1.eContents().get(0);
+		private final Assignment cGeneralAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cGeneralVSSSGeneralRequirementsParserRuleCall_2_0 = (RuleCall)cGeneralAssignment_2.eContents().get(0);
+		private final Assignment cCapabilitiesAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_3_0 = (RuleCall)cCapabilitiesAssignment_3.eContents().get(0);
+		private final Assignment cSystemInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_4_0 = (RuleCall)cSystemInterfaceAssignment_4.eContents().get(0);
+		private final Assignment cAdaptationMissionizationAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_5_0 = (RuleCall)cAdaptationMissionizationAssignment_5.eContents().get(0);
+		private final Assignment cComputerResourceAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cComputerResourceVSSSComputerResourceRequirementsParserRuleCall_6_0 = (RuleCall)cComputerResourceAssignment_6.eContents().get(0);
+		private final Assignment cSecurityAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cSecurityVSSSSecurityRequirementsParserRuleCall_7_0 = (RuleCall)cSecurityAssignment_7.eContents().get(0);
+		private final Assignment cSafetyAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cSafetyVSSSSafetyRequirementsParserRuleCall_8_0 = (RuleCall)cSafetyAssignment_8.eContents().get(0);
+		private final Assignment cReliabiltyAvailabilityAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0 = (RuleCall)cReliabiltyAvailabilityAssignment_9.eContents().get(0);
+		private final Assignment cQualityAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cQualityVSSSQualityRequirementsParserRuleCall_10_0 = (RuleCall)cQualityAssignment_10.eContents().get(0);
+		private final Assignment cDesignAssignment_11 = (Assignment)cGroup.eContents().get(11);
+		private final RuleCall cDesignVSSSDesignRequirementsParserRuleCall_11_0 = (RuleCall)cDesignAssignment_11.eContents().get(0);
+		private final Assignment cSoftwareOperationsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_12_0 = (RuleCall)cSoftwareOperationsAssignment_12.eContents().get(0);
+		private final Assignment cSoftwareMaintenanceAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_13_0 = (RuleCall)cSoftwareMaintenanceAssignment_13.eContents().get(0);
+		private final Assignment cSystemSoftwareObservabilityAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_14_0 = (RuleCall)cSystemSoftwareObservabilityAssignment_14.eContents().get(0);
+		private final Keyword cSpecificRequirementsKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
 		//VSSSSpecificRequirements:
 		//	'<SpecificRequirements>'
+		//	sectionDescription=DBody?
 		//	general=VSSSGeneralRequirements
 		//	capabilities=VSSSCapabilitiesRequirements
 		//	systemInterface=VSSSSystemInterfaceRequirements
@@ -1436,9 +1462,10 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</SpecificRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<SpecificRequirements>' general=VSSSGeneralRequirements capabilities=VSSSCapabilitiesRequirements
-		//systemInterface=VSSSSystemInterfaceRequirements adaptationMissionization=VSSSAdaptationMissionizationRequirements
-		//computerResource=VSSSComputerResourceRequirements security=VSSSSecurityRequirements safety=VSSSSafetyRequirements
+		//'<SpecificRequirements>' sectionDescription=DBody? general=VSSSGeneralRequirements
+		//capabilities=VSSSCapabilitiesRequirements systemInterface=VSSSSystemInterfaceRequirements
+		//adaptationMissionization=VSSSAdaptationMissionizationRequirements computerResource=VSSSComputerResourceRequirements
+		//security=VSSSSecurityRequirements safety=VSSSSafetyRequirements
 		//reliabiltyAvailability=VSSSReliabiltyAvailabilityRequirements quality=VSSSQualityRequirements
 		//design=VSSSDesignRequirements softwareOperations=VSSSSoftwareOperationsRequirements
 		//softwareMaintenance=VSSSSoftwareMaintenanceRequirements
@@ -1448,103 +1475,112 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SpecificRequirements>'
 		public Keyword getSpecificRequirementsKeyword_0() { return cSpecificRequirementsKeyword_0; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_1() { return cSectionDescriptionAssignment_1; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_1_0() { return cSectionDescriptionDBodyParserRuleCall_1_0; }
+		
 		//general=VSSSGeneralRequirements
-		public Assignment getGeneralAssignment_1() { return cGeneralAssignment_1; }
+		public Assignment getGeneralAssignment_2() { return cGeneralAssignment_2; }
 		
 		//VSSSGeneralRequirements
-		public RuleCall getGeneralVSSSGeneralRequirementsParserRuleCall_1_0() { return cGeneralVSSSGeneralRequirementsParserRuleCall_1_0; }
+		public RuleCall getGeneralVSSSGeneralRequirementsParserRuleCall_2_0() { return cGeneralVSSSGeneralRequirementsParserRuleCall_2_0; }
 		
 		//capabilities=VSSSCapabilitiesRequirements
-		public Assignment getCapabilitiesAssignment_2() { return cCapabilitiesAssignment_2; }
+		public Assignment getCapabilitiesAssignment_3() { return cCapabilitiesAssignment_3; }
 		
 		//VSSSCapabilitiesRequirements
-		public RuleCall getCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_2_0() { return cCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_2_0; }
+		public RuleCall getCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_3_0() { return cCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_3_0; }
 		
 		//systemInterface=VSSSSystemInterfaceRequirements
-		public Assignment getSystemInterfaceAssignment_3() { return cSystemInterfaceAssignment_3; }
+		public Assignment getSystemInterfaceAssignment_4() { return cSystemInterfaceAssignment_4; }
 		
 		//VSSSSystemInterfaceRequirements
-		public RuleCall getSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_3_0() { return cSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_3_0; }
+		public RuleCall getSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_4_0() { return cSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_4_0; }
 		
 		//adaptationMissionization=VSSSAdaptationMissionizationRequirements
-		public Assignment getAdaptationMissionizationAssignment_4() { return cAdaptationMissionizationAssignment_4; }
+		public Assignment getAdaptationMissionizationAssignment_5() { return cAdaptationMissionizationAssignment_5; }
 		
 		//VSSSAdaptationMissionizationRequirements
-		public RuleCall getAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_4_0() { return cAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_4_0; }
+		public RuleCall getAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_5_0() { return cAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_5_0; }
 		
 		//computerResource=VSSSComputerResourceRequirements
-		public Assignment getComputerResourceAssignment_5() { return cComputerResourceAssignment_5; }
+		public Assignment getComputerResourceAssignment_6() { return cComputerResourceAssignment_6; }
 		
 		//VSSSComputerResourceRequirements
-		public RuleCall getComputerResourceVSSSComputerResourceRequirementsParserRuleCall_5_0() { return cComputerResourceVSSSComputerResourceRequirementsParserRuleCall_5_0; }
+		public RuleCall getComputerResourceVSSSComputerResourceRequirementsParserRuleCall_6_0() { return cComputerResourceVSSSComputerResourceRequirementsParserRuleCall_6_0; }
 		
 		//security=VSSSSecurityRequirements
-		public Assignment getSecurityAssignment_6() { return cSecurityAssignment_6; }
+		public Assignment getSecurityAssignment_7() { return cSecurityAssignment_7; }
 		
 		//VSSSSecurityRequirements
-		public RuleCall getSecurityVSSSSecurityRequirementsParserRuleCall_6_0() { return cSecurityVSSSSecurityRequirementsParserRuleCall_6_0; }
+		public RuleCall getSecurityVSSSSecurityRequirementsParserRuleCall_7_0() { return cSecurityVSSSSecurityRequirementsParserRuleCall_7_0; }
 		
 		//safety=VSSSSafetyRequirements
-		public Assignment getSafetyAssignment_7() { return cSafetyAssignment_7; }
+		public Assignment getSafetyAssignment_8() { return cSafetyAssignment_8; }
 		
 		//VSSSSafetyRequirements
-		public RuleCall getSafetyVSSSSafetyRequirementsParserRuleCall_7_0() { return cSafetyVSSSSafetyRequirementsParserRuleCall_7_0; }
+		public RuleCall getSafetyVSSSSafetyRequirementsParserRuleCall_8_0() { return cSafetyVSSSSafetyRequirementsParserRuleCall_8_0; }
 		
 		//reliabiltyAvailability=VSSSReliabiltyAvailabilityRequirements
-		public Assignment getReliabiltyAvailabilityAssignment_8() { return cReliabiltyAvailabilityAssignment_8; }
+		public Assignment getReliabiltyAvailabilityAssignment_9() { return cReliabiltyAvailabilityAssignment_9; }
 		
 		//VSSSReliabiltyAvailabilityRequirements
-		public RuleCall getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_8_0() { return cReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_8_0; }
+		public RuleCall getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0() { return cReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0; }
 		
 		//quality=VSSSQualityRequirements
-		public Assignment getQualityAssignment_9() { return cQualityAssignment_9; }
+		public Assignment getQualityAssignment_10() { return cQualityAssignment_10; }
 		
 		//VSSSQualityRequirements
-		public RuleCall getQualityVSSSQualityRequirementsParserRuleCall_9_0() { return cQualityVSSSQualityRequirementsParserRuleCall_9_0; }
+		public RuleCall getQualityVSSSQualityRequirementsParserRuleCall_10_0() { return cQualityVSSSQualityRequirementsParserRuleCall_10_0; }
 		
 		//design=VSSSDesignRequirements
-		public Assignment getDesignAssignment_10() { return cDesignAssignment_10; }
+		public Assignment getDesignAssignment_11() { return cDesignAssignment_11; }
 		
 		//VSSSDesignRequirements
-		public RuleCall getDesignVSSSDesignRequirementsParserRuleCall_10_0() { return cDesignVSSSDesignRequirementsParserRuleCall_10_0; }
+		public RuleCall getDesignVSSSDesignRequirementsParserRuleCall_11_0() { return cDesignVSSSDesignRequirementsParserRuleCall_11_0; }
 		
 		//softwareOperations=VSSSSoftwareOperationsRequirements
-		public Assignment getSoftwareOperationsAssignment_11() { return cSoftwareOperationsAssignment_11; }
+		public Assignment getSoftwareOperationsAssignment_12() { return cSoftwareOperationsAssignment_12; }
 		
 		//VSSSSoftwareOperationsRequirements
-		public RuleCall getSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_11_0() { return cSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_11_0; }
+		public RuleCall getSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_12_0() { return cSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_12_0; }
 		
 		//softwareMaintenance=VSSSSoftwareMaintenanceRequirements
-		public Assignment getSoftwareMaintenanceAssignment_12() { return cSoftwareMaintenanceAssignment_12; }
+		public Assignment getSoftwareMaintenanceAssignment_13() { return cSoftwareMaintenanceAssignment_13; }
 		
 		//VSSSSoftwareMaintenanceRequirements
-		public RuleCall getSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_12_0() { return cSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_12_0; }
+		public RuleCall getSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_13_0() { return cSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_13_0; }
 		
 		//systemSoftwareObservability=VSSSSystemSoftwareObservabilityRequirements
-		public Assignment getSystemSoftwareObservabilityAssignment_13() { return cSystemSoftwareObservabilityAssignment_13; }
+		public Assignment getSystemSoftwareObservabilityAssignment_14() { return cSystemSoftwareObservabilityAssignment_14; }
 		
 		//VSSSSystemSoftwareObservabilityRequirements
-		public RuleCall getSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_13_0() { return cSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_13_0; }
+		public RuleCall getSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_14_0() { return cSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_14_0; }
 		
 		//'</SpecificRequirements>'
-		public Keyword getSpecificRequirementsKeyword_14() { return cSpecificRequirementsKeyword_14; }
+		public Keyword getSpecificRequirementsKeyword_15() { return cSpecificRequirementsKeyword_15; }
 	}
 	public class VSSSVerificationValidationIntegrationRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSVerificationValidationIntegrationRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cVerificationValidationIntegrationRequirementsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cVerificationValidationProcessAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_1_0 = (RuleCall)cVerificationValidationProcessAssignment_1.eContents().get(0);
-		private final Assignment cValidationApproachAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cValidationApproachVSSSValidationApproachParserRuleCall_2_0 = (RuleCall)cValidationApproachAssignment_2.eContents().get(0);
-		private final Assignment cValidationAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cValidationVSSSValidationRequirementsParserRuleCall_3_0 = (RuleCall)cValidationAssignment_3.eContents().get(0);
-		private final Assignment cVerificationAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cVerificationVSSSVerificationRequirementsParserRuleCall_4_0 = (RuleCall)cVerificationAssignment_4.eContents().get(0);
-		private final Keyword cVerificationValidationIntegrationRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSectionDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_1_0 = (RuleCall)cSectionDescriptionAssignment_1.eContents().get(0);
+		private final Assignment cVerificationValidationProcessAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_2_0 = (RuleCall)cVerificationValidationProcessAssignment_2.eContents().get(0);
+		private final Assignment cValidationApproachAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cValidationApproachVSSSValidationApproachParserRuleCall_3_0 = (RuleCall)cValidationApproachAssignment_3.eContents().get(0);
+		private final Assignment cValidationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValidationVSSSValidationRequirementsParserRuleCall_4_0 = (RuleCall)cValidationAssignment_4.eContents().get(0);
+		private final Assignment cVerificationAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cVerificationVSSSVerificationRequirementsParserRuleCall_5_0 = (RuleCall)cVerificationAssignment_5.eContents().get(0);
+		private final Keyword cVerificationValidationIntegrationRequirementsKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSSSVerificationValidationIntegrationRequirements:
 		//	'<VerificationValidationIntegrationRequirements>'
+		//	sectionDescription=DBody?
 		//	verificationValidationProcess=VSSSVerificationValidationProcessRequirements
 		//	validationApproach=VSSSValidationApproach
 		//	validation=VSSSValidationRequirements
@@ -1552,7 +1588,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</VerificationValidationIntegrationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<VerificationValidationIntegrationRequirements>'
+		//'<VerificationValidationIntegrationRequirements>' sectionDescription=DBody?
 		//verificationValidationProcess=VSSSVerificationValidationProcessRequirements validationApproach=VSSSValidationApproach
 		//validation=VSSSValidationRequirements verification=VSSSVerificationRequirements
 		//'</VerificationValidationIntegrationRequirements>'
@@ -1561,32 +1597,38 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<VerificationValidationIntegrationRequirements>'
 		public Keyword getVerificationValidationIntegrationRequirementsKeyword_0() { return cVerificationValidationIntegrationRequirementsKeyword_0; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_1() { return cSectionDescriptionAssignment_1; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_1_0() { return cSectionDescriptionDBodyParserRuleCall_1_0; }
+		
 		//verificationValidationProcess=VSSSVerificationValidationProcessRequirements
-		public Assignment getVerificationValidationProcessAssignment_1() { return cVerificationValidationProcessAssignment_1; }
+		public Assignment getVerificationValidationProcessAssignment_2() { return cVerificationValidationProcessAssignment_2; }
 		
 		//VSSSVerificationValidationProcessRequirements
-		public RuleCall getVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_1_0() { return cVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_1_0; }
+		public RuleCall getVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_2_0() { return cVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_2_0; }
 		
 		//validationApproach=VSSSValidationApproach
-		public Assignment getValidationApproachAssignment_2() { return cValidationApproachAssignment_2; }
+		public Assignment getValidationApproachAssignment_3() { return cValidationApproachAssignment_3; }
 		
 		//VSSSValidationApproach
-		public RuleCall getValidationApproachVSSSValidationApproachParserRuleCall_2_0() { return cValidationApproachVSSSValidationApproachParserRuleCall_2_0; }
+		public RuleCall getValidationApproachVSSSValidationApproachParserRuleCall_3_0() { return cValidationApproachVSSSValidationApproachParserRuleCall_3_0; }
 		
 		//validation=VSSSValidationRequirements
-		public Assignment getValidationAssignment_3() { return cValidationAssignment_3; }
+		public Assignment getValidationAssignment_4() { return cValidationAssignment_4; }
 		
 		//VSSSValidationRequirements
-		public RuleCall getValidationVSSSValidationRequirementsParserRuleCall_3_0() { return cValidationVSSSValidationRequirementsParserRuleCall_3_0; }
+		public RuleCall getValidationVSSSValidationRequirementsParserRuleCall_4_0() { return cValidationVSSSValidationRequirementsParserRuleCall_4_0; }
 		
 		//verification=VSSSVerificationRequirements
-		public Assignment getVerificationAssignment_4() { return cVerificationAssignment_4; }
+		public Assignment getVerificationAssignment_5() { return cVerificationAssignment_5; }
 		
 		//VSSSVerificationRequirements
-		public RuleCall getVerificationVSSSVerificationRequirementsParserRuleCall_4_0() { return cVerificationVSSSVerificationRequirementsParserRuleCall_4_0; }
+		public RuleCall getVerificationVSSSVerificationRequirementsParserRuleCall_5_0() { return cVerificationVSSSVerificationRequirementsParserRuleCall_5_0; }
 		
 		//'</VerificationValidationIntegrationRequirements>'
-		public Keyword getVerificationValidationIntegrationRequirementsKeyword_5() { return cVerificationValidationIntegrationRequirementsKeyword_5; }
+		public Keyword getVerificationValidationIntegrationRequirementsKeyword_6() { return cVerificationValidationIntegrationRequirementsKeyword_6; }
 	}
 	public class VSSSSystemModelsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemModels");
@@ -1760,38 +1802,86 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Abbreviation>'
 		public Keyword getAbbreviationKeyword_5() { return cAbbreviationKeyword_5; }
 	}
-	public class VSSSGeneralDescriptionSubsectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
-		private final Assignment cBodyAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cBodyDBodyParserRuleCall_0 = (RuleCall)cBodyAssignment.eContents().get(0);
+	public class VSSSInstantiableRequirementSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cSubsectionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_4_0 = (RuleCall)cSectionDescriptionAssignment_4.eContents().get(0);
+		private final Assignment cSssItemsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_5_0 = (RuleCall)cSssItemsAssignment_5.eContents().get(0);
+		private final Keyword cSubsectionKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
-		//VSSSGeneralDescriptionSubsection:
-		//	body=DBody;
+		//VSSSInstantiableRequirementSection:
+		//	'<subsection'
+		//	'name=' name=STRING
+		//	'>'
+		//	sectionDescription=DBody?
+		//	sssItems+=VSSSDocumentItem*
+		//	'</subsection>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//body=DBody
-		public Assignment getBodyAssignment() { return cBodyAssignment; }
+		//'<subsection' 'name=' name=STRING '>' sectionDescription=DBody? sssItems+=VSSSDocumentItem* '</subsection>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<subsection'
+		public Keyword getSubsectionKeyword_0() { return cSubsectionKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_4() { return cSectionDescriptionAssignment_4; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_0() { return cBodyDBodyParserRuleCall_0; }
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_4_0() { return cSectionDescriptionDBodyParserRuleCall_4_0; }
+		
+		//sssItems+=VSSSDocumentItem*
+		public Assignment getSssItemsAssignment_5() { return cSssItemsAssignment_5; }
+		
+		//VSSSDocumentItem
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_5_0() { return cSssItemsVSSSDocumentItemParserRuleCall_5_0; }
+		
+		//'</subsection>'
+		public Keyword getSubsectionKeyword_6() { return cSubsectionKeyword_6; }
 	}
 	public class VSSSGeneralRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSGeneralRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cGeneralRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cGeneralRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cGeneralRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSGeneralRequirements:
 		//	{VSSSGeneralRequirements}
 		//	'<GeneralRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</GeneralRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSGeneralRequirements} '<GeneralRequirements>' sssItems+=VSSSDocumentItem* '</GeneralRequirements>'
+		//{VSSSGeneralRequirements} '<GeneralRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</GeneralRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSGeneralRequirements}
@@ -1800,32 +1890,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<GeneralRequirements>'
 		public Keyword getGeneralRequirementsKeyword_1() { return cGeneralRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</GeneralRequirements>'
-		public Keyword getGeneralRequirementsKeyword_3() { return cGeneralRequirementsKeyword_3; }
+		public Keyword getGeneralRequirementsKeyword_5() { return cGeneralRequirementsKeyword_5; }
 	}
 	public class VSSSCapabilitiesRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSCapabilitiesRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSCapabilitiesRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cCapabilitiesRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cCapabilitiesRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cCapabilitiesRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSCapabilitiesRequirements:
 		//	{VSSSCapabilitiesRequirements}
 		//	'<CapabilitiesRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</CapabilitiesRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSCapabilitiesRequirements} '<CapabilitiesRequirements>' sssItems+=VSSSDocumentItem* '</CapabilitiesRequirements>'
+		//{VSSSCapabilitiesRequirements} '<CapabilitiesRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</CapabilitiesRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSCapabilitiesRequirements}
@@ -1834,33 +1943,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<CapabilitiesRequirements>'
 		public Keyword getCapabilitiesRequirementsKeyword_1() { return cCapabilitiesRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</CapabilitiesRequirements>'
-		public Keyword getCapabilitiesRequirementsKeyword_3() { return cCapabilitiesRequirementsKeyword_3; }
+		public Keyword getCapabilitiesRequirementsKeyword_5() { return cCapabilitiesRequirementsKeyword_5; }
 	}
 	public class VSSSSystemInterfaceRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemInterfaceRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSystemInterfaceRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSystemInterfaceRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSystemInterfaceRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSystemInterfaceRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSystemInterfaceRequirements:
 		//	{VSSSSystemInterfaceRequirements}
 		//	'<SystemInterfaceRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SystemInterfaceRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSystemInterfaceRequirements} '<SystemInterfaceRequirements>' sssItems+=VSSSDocumentItem*
-		//'</SystemInterfaceRequirements>'
+		//{VSSSSystemInterfaceRequirements} '<SystemInterfaceRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</SystemInterfaceRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSSystemInterfaceRequirements}
@@ -1869,32 +1996,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SystemInterfaceRequirements>'
 		public Keyword getSystemInterfaceRequirementsKeyword_1() { return cSystemInterfaceRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SystemInterfaceRequirements>'
-		public Keyword getSystemInterfaceRequirementsKeyword_3() { return cSystemInterfaceRequirementsKeyword_3; }
+		public Keyword getSystemInterfaceRequirementsKeyword_5() { return cSystemInterfaceRequirementsKeyword_5; }
 	}
 	public class VSSSAdaptationMissionizationRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSAdaptationMissionizationRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSAdaptationMissionizationRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cVSSSAdaptationMissionizationRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cVSSSAdaptationMissionizationRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cVSSSAdaptationMissionizationRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSAdaptationMissionizationRequirements:
 		//	{VSSSAdaptationMissionizationRequirements}
 		//	'<VSSSAdaptationMissionizationRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</VSSSAdaptationMissionizationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSAdaptationMissionizationRequirements} '<VSSSAdaptationMissionizationRequirements>' sssItems+=VSSSDocumentItem*
+		//{VSSSAdaptationMissionizationRequirements} '<VSSSAdaptationMissionizationRequirements>' sectionDescription=DBody?
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</VSSSAdaptationMissionizationRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -1904,32 +2050,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<VSSSAdaptationMissionizationRequirements>'
 		public Keyword getVSSSAdaptationMissionizationRequirementsKeyword_1() { return cVSSSAdaptationMissionizationRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</VSSSAdaptationMissionizationRequirements>'
-		public Keyword getVSSSAdaptationMissionizationRequirementsKeyword_3() { return cVSSSAdaptationMissionizationRequirementsKeyword_3; }
+		public Keyword getVSSSAdaptationMissionizationRequirementsKeyword_5() { return cVSSSAdaptationMissionizationRequirementsKeyword_5; }
 	}
 	public class VSSSComputerResourceRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSComputerResourceRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSComputerResourceRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cComputerResourceRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cComputerResourceRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cComputerResourceRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSComputerResourceRequirements:
 		//	{VSSSComputerResourceRequirements}
 		//	'<ComputerResourceRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</ComputerResourceRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSComputerResourceRequirements} '<ComputerResourceRequirements>' sssItems+=VSSSDocumentItem*
+		//{VSSSComputerResourceRequirements} '<ComputerResourceRequirements>' sectionDescription=DBody?
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</ComputerResourceRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -1939,32 +2104,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<ComputerResourceRequirements>'
 		public Keyword getComputerResourceRequirementsKeyword_1() { return cComputerResourceRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</ComputerResourceRequirements>'
-		public Keyword getComputerResourceRequirementsKeyword_3() { return cComputerResourceRequirementsKeyword_3; }
+		public Keyword getComputerResourceRequirementsKeyword_5() { return cComputerResourceRequirementsKeyword_5; }
 	}
 	public class VSSSSecurityRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSecurityRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSecurityRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSecurityRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSecurityRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSecurityRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSecurityRequirements:
 		//	{VSSSSecurityRequirements}
 		//	'<SecurityRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SecurityRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSecurityRequirements} '<SecurityRequirements>' sssItems+=VSSSDocumentItem* '</SecurityRequirements>'
+		//{VSSSSecurityRequirements} '<SecurityRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</SecurityRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSSecurityRequirements}
@@ -1973,32 +2157,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SecurityRequirements>'
 		public Keyword getSecurityRequirementsKeyword_1() { return cSecurityRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SecurityRequirements>'
-		public Keyword getSecurityRequirementsKeyword_3() { return cSecurityRequirementsKeyword_3; }
+		public Keyword getSecurityRequirementsKeyword_5() { return cSecurityRequirementsKeyword_5; }
 	}
 	public class VSSSSafetyRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSafetyRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSafetyRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSafetyRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSafetyRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSafetyRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSafetyRequirements:
 		//	{VSSSSafetyRequirements}
 		//	'<SafetyRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SafetyRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSafetyRequirements} '<SafetyRequirements>' sssItems+=VSSSDocumentItem* '</SafetyRequirements>'
+		//{VSSSSafetyRequirements} '<SafetyRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</SafetyRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSSafetyRequirements}
@@ -2007,14 +2210,26 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SafetyRequirements>'
 		public Keyword getSafetyRequirementsKeyword_1() { return cSafetyRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SafetyRequirements>'
-		public Keyword getSafetyRequirementsKeyword_3() { return cSafetyRequirementsKeyword_3; }
+		public Keyword getSafetyRequirementsKeyword_5() { return cSafetyRequirementsKeyword_5; }
 	}
 	public class VSSSReliabiltyAvailabilityRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSReliabiltyAvailabilityRequirements");
@@ -2023,16 +2238,23 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cReliabiltyAvailabilityRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cReliabiltyAvailabilityRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_3_0 = (RuleCall)cSectionDescriptionAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cReliabiltyAvailabilityRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSReliabiltyAvailabilityRequirements:
 		//	{VSSSReliabiltyAvailabilityRequirements}
 		//	'<ReliabiltyAvailabilityRequirements>'
 		//	sssItems+=VSSSDocumentItem*
+		//	sectionDescription=DBody?
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</ReliabiltyAvailabilityRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{VSSSReliabiltyAvailabilityRequirements} '<ReliabiltyAvailabilityRequirements>' sssItems+=VSSSDocumentItem*
+		//sectionDescription=DBody? sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</ReliabiltyAvailabilityRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2048,26 +2270,45 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSDocumentItem
 		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_3() { return cSectionDescriptionAssignment_3; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_3_0() { return cSectionDescriptionDBodyParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
+		
 		//'</ReliabiltyAvailabilityRequirements>'
-		public Keyword getReliabiltyAvailabilityRequirementsKeyword_3() { return cReliabiltyAvailabilityRequirementsKeyword_3; }
+		public Keyword getReliabiltyAvailabilityRequirementsKeyword_5() { return cReliabiltyAvailabilityRequirementsKeyword_5; }
 	}
 	public class VSSSQualityRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSQualityRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSQualityRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cQualityRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cQualityRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cQualityRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSQualityRequirements:
 		//	{VSSSQualityRequirements}
 		//	'<QualityRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</QualityRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSQualityRequirements} '<QualityRequirements>' sssItems+=VSSSDocumentItem* '</QualityRequirements>'
+		//{VSSSQualityRequirements} '<QualityRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</QualityRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSQualityRequirements}
@@ -2076,32 +2317,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<QualityRequirements>'
 		public Keyword getQualityRequirementsKeyword_1() { return cQualityRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</QualityRequirements>'
-		public Keyword getQualityRequirementsKeyword_3() { return cQualityRequirementsKeyword_3; }
+		public Keyword getQualityRequirementsKeyword_5() { return cQualityRequirementsKeyword_5; }
 	}
 	public class VSSSDesignRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDesignRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSDesignRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cDesignRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cDesignRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cDesignRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSDesignRequirements:
 		//	{VSSSDesignRequirements}
 		//	'<DesignRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</DesignRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSDesignRequirements} '<DesignRequirements>' sssItems+=VSSSDocumentItem* '</DesignRequirements>'
+		//{VSSSDesignRequirements} '<DesignRequirements>' sectionDescription=DBody? sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</DesignRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSDesignRequirements}
@@ -2110,32 +2370,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<DesignRequirements>'
 		public Keyword getDesignRequirementsKeyword_1() { return cDesignRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</DesignRequirements>'
-		public Keyword getDesignRequirementsKeyword_3() { return cDesignRequirementsKeyword_3; }
+		public Keyword getDesignRequirementsKeyword_5() { return cDesignRequirementsKeyword_5; }
 	}
 	public class VSSSSoftwareOperationsRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSoftwareOperationsRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSoftwareOperationsRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSoftwareOperationsRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSoftwareOperationsRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSoftwareOperationsRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSoftwareOperationsRequirements:
 		//	{VSSSSoftwareOperationsRequirements}
 		//	'<SoftwareOperationsRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SoftwareOperationsRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSoftwareOperationsRequirements} '<SoftwareOperationsRequirements>' sssItems+=VSSSDocumentItem*
+		//{VSSSSoftwareOperationsRequirements} '<SoftwareOperationsRequirements>' sectionDescription=DBody?
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</SoftwareOperationsRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2145,32 +2424,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SoftwareOperationsRequirements>'
 		public Keyword getSoftwareOperationsRequirementsKeyword_1() { return cSoftwareOperationsRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SoftwareOperationsRequirements>'
-		public Keyword getSoftwareOperationsRequirementsKeyword_3() { return cSoftwareOperationsRequirementsKeyword_3; }
+		public Keyword getSoftwareOperationsRequirementsKeyword_5() { return cSoftwareOperationsRequirementsKeyword_5; }
 	}
 	public class VSSSSoftwareMaintenanceRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSoftwareMaintenanceRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSoftwareMaintenanceRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSoftwareMaintenanceRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSoftwareMaintenanceRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSoftwareMaintenanceRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSoftwareMaintenanceRequirements:
 		//	{VSSSSoftwareMaintenanceRequirements}
 		//	'<SoftwareMaintenanceRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SoftwareMaintenanceRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSoftwareMaintenanceRequirements} '<SoftwareMaintenanceRequirements>' sssItems+=VSSSDocumentItem*
+		//{VSSSSoftwareMaintenanceRequirements} '<SoftwareMaintenanceRequirements>' sectionDescription=DBody?
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</SoftwareMaintenanceRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2180,32 +2478,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SoftwareMaintenanceRequirements>'
 		public Keyword getSoftwareMaintenanceRequirementsKeyword_1() { return cSoftwareMaintenanceRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SoftwareMaintenanceRequirements>'
-		public Keyword getSoftwareMaintenanceRequirementsKeyword_3() { return cSoftwareMaintenanceRequirementsKeyword_3; }
+		public Keyword getSoftwareMaintenanceRequirementsKeyword_5() { return cSoftwareMaintenanceRequirementsKeyword_5; }
 	}
 	public class VSSSSystemSoftwareObservabilityRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemSoftwareObservabilityRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSSystemSoftwareObservabilityRequirementsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cSystemSoftwareObservabilityRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cSystemSoftwareObservabilityRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
+		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
+		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
+		private final Keyword cSystemSoftwareObservabilityRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSSystemSoftwareObservabilityRequirements:
 		//	{VSSSSystemSoftwareObservabilityRequirements}
 		//	'<SystemSoftwareObservabilityRequirements>'
+		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</SystemSoftwareObservabilityRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSSystemSoftwareObservabilityRequirements} '<SystemSoftwareObservabilityRequirements>' sssItems+=VSSSDocumentItem*
+		//{VSSSSystemSoftwareObservabilityRequirements} '<SystemSoftwareObservabilityRequirements>' sectionDescription=DBody?
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//'</SystemSoftwareObservabilityRequirements>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2215,74 +2532,106 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SystemSoftwareObservabilityRequirements>'
 		public Keyword getSystemSoftwareObservabilityRequirementsKeyword_1() { return cSystemSoftwareObservabilityRequirementsKeyword_1; }
 		
+		//sectionDescription=DBody?
+		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
+		
+		//DBody
+		public RuleCall getSectionDescriptionDBodyParserRuleCall_2_0() { return cSectionDescriptionDBodyParserRuleCall_2_0; }
+		
 		//sssItems+=VSSSDocumentItem*
-		public Assignment getSssItemsAssignment_2() { return cSssItemsAssignment_2; }
+		public Assignment getSssItemsAssignment_3() { return cSssItemsAssignment_3; }
 		
 		//VSSSDocumentItem
-		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
+		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_3_0() { return cSssItemsVSSSDocumentItemParserRuleCall_3_0; }
+		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_4() { return cSssRequirementSubsectionsAssignment_4; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
 		//'</SystemSoftwareObservabilityRequirements>'
-		public Keyword getSystemSoftwareObservabilityRequirementsKeyword_3() { return cSystemSoftwareObservabilityRequirementsKeyword_3; }
+		public Keyword getSystemSoftwareObservabilityRequirementsKeyword_5() { return cSystemSoftwareObservabilityRequirementsKeyword_5; }
 	}
 	public class VSSSDocumentItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cItemKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdSTRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cVerificationMethodKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cVerificationMethodAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cVerificationMethodVVerificationMethodEnumRuleCall_4_0 = (RuleCall)cVerificationMethodAssignment_4.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cValidationMethodKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValidationMethodAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValidationMethodVValidationMethodEnumRuleCall_4_0 = (RuleCall)cValidationMethodAssignment_4.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cBodyDBodyParserRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
-		private final Keyword cItemKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cDescriptionKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cDescriptionAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cDescriptionDBodyParserRuleCall_7_0 = (RuleCall)cDescriptionAssignment_7.eContents().get(0);
+		private final Keyword cDescriptionKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cExtendedDescriptionAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_9_0 = (RuleCall)cExtendedDescriptionAssignment_9.eContents().get(0);
+		private final Keyword cItemKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//VSSSDocumentItem:
 		//	'<Item'
-		//	'id=' id=STRING
-		//	'verificationMethod=' verificationMethod=VVerificationMethod
+		//	'name=' name=STRING
+		//	'validationMethod=' validationMethod=VValidationMethod
 		//	'>'
-		//	body=DBody
+		//	'<description>'
+		//	description=DBody
+		//	'</description>'
+		//	extendedDescription=DBody?
 		//	'</Item>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Item' 'id=' id=STRING 'verificationMethod=' verificationMethod=VVerificationMethod '>' body=DBody '</Item>'
+		//'<Item' 'name=' name=STRING 'validationMethod=' validationMethod=VValidationMethod '>' '<description>' description=DBody
+		//'</description>' extendedDescription=DBody? '</Item>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Item'
 		public Keyword getItemKeyword_0() { return cItemKeyword_0; }
 		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
 		
-		//id=STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//STRING
-		public RuleCall getIdSTRINGTerminalRuleCall_2_0() { return cIdSTRINGTerminalRuleCall_2_0; }
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'verificationMethod='
-		public Keyword getVerificationMethodKeyword_3() { return cVerificationMethodKeyword_3; }
+		//'validationMethod='
+		public Keyword getValidationMethodKeyword_3() { return cValidationMethodKeyword_3; }
 		
-		//verificationMethod=VVerificationMethod
-		public Assignment getVerificationMethodAssignment_4() { return cVerificationMethodAssignment_4; }
+		//validationMethod=VValidationMethod
+		public Assignment getValidationMethodAssignment_4() { return cValidationMethodAssignment_4; }
 		
-		//VVerificationMethod
-		public RuleCall getVerificationMethodVVerificationMethodEnumRuleCall_4_0() { return cVerificationMethodVVerificationMethodEnumRuleCall_4_0; }
+		//VValidationMethod
+		public RuleCall getValidationMethodVValidationMethodEnumRuleCall_4_0() { return cValidationMethodVValidationMethodEnumRuleCall_4_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
-		//body=DBody
-		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
+		//'<description>'
+		public Keyword getDescriptionKeyword_6() { return cDescriptionKeyword_6; }
+		
+		//description=DBody
+		public Assignment getDescriptionAssignment_7() { return cDescriptionAssignment_7; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_6_0() { return cBodyDBodyParserRuleCall_6_0; }
+		public RuleCall getDescriptionDBodyParserRuleCall_7_0() { return cDescriptionDBodyParserRuleCall_7_0; }
+		
+		//'</description>'
+		public Keyword getDescriptionKeyword_8() { return cDescriptionKeyword_8; }
+		
+		//extendedDescription=DBody?
+		public Assignment getExtendedDescriptionAssignment_9() { return cExtendedDescriptionAssignment_9; }
+		
+		//DBody
+		public RuleCall getExtendedDescriptionDBodyParserRuleCall_9_0() { return cExtendedDescriptionDBodyParserRuleCall_9_0; }
 		
 		//'</Item>'
-		public Keyword getItemKeyword_7() { return cItemKeyword_7; }
+		public Keyword getItemKeyword_10() { return cItemKeyword_10; }
 	}
 	public class VSSSVerificationValidationProcessRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSVerificationValidationProcessRequirements");
@@ -2291,17 +2640,21 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVerificationValidationProcessRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cVerificationValidationProcessRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSssRequirementSubsectionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0 = (RuleCall)cSssRequirementSubsectionsAssignment_3.eContents().get(0);
+		private final Keyword cVerificationValidationProcessRequirementsKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSSSVerificationValidationProcessRequirements:
 		//	{VSSSVerificationValidationProcessRequirements}
 		//	'<VerificationValidationProcessRequirements>'
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</VerificationValidationProcessRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{VSSSVerificationValidationProcessRequirements} '<VerificationValidationProcessRequirements>'
-		//sssItems+=VSSSDocumentItem* '</VerificationValidationProcessRequirements>'
+		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		//'</VerificationValidationProcessRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSVerificationValidationProcessRequirements}
@@ -2316,8 +2669,14 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSDocumentItem
 		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
 		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_3() { return cSssRequirementSubsectionsAssignment_3; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0; }
+		
 		//'</VerificationValidationProcessRequirements>'
-		public Keyword getVerificationValidationProcessRequirementsKeyword_3() { return cVerificationValidationProcessRequirementsKeyword_3; }
+		public Keyword getVerificationValidationProcessRequirementsKeyword_4() { return cVerificationValidationProcessRequirementsKeyword_4; }
 	}
 	public class VSSSValidationApproachElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSValidationApproach");
@@ -2326,16 +2685,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValidationApproachKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cValidationApproachKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSssRequirementSubsectionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0 = (RuleCall)cSssRequirementSubsectionsAssignment_3.eContents().get(0);
+		private final Keyword cValidationApproachKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSSSValidationApproach:
 		//	{VSSSValidationApproach}
 		//	'<ValidationApproach>'
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</ValidationApproach>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSValidationApproach} '<ValidationApproach>' sssItems+=VSSSDocumentItem* '</ValidationApproach>'
+		//{VSSSValidationApproach} '<ValidationApproach>' sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</ValidationApproach>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSValidationApproach}
@@ -2350,8 +2713,14 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSDocumentItem
 		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
 		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_3() { return cSssRequirementSubsectionsAssignment_3; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0; }
+		
 		//'</ValidationApproach>'
-		public Keyword getValidationApproachKeyword_3() { return cValidationApproachKeyword_3; }
+		public Keyword getValidationApproachKeyword_4() { return cValidationApproachKeyword_4; }
 	}
 	public class VSSSValidationRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSValidationRequirements");
@@ -2360,16 +2729,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cValidationRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cValidationRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSssRequirementSubsectionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0 = (RuleCall)cSssRequirementSubsectionsAssignment_3.eContents().get(0);
+		private final Keyword cValidationRequirementsKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSSSValidationRequirements:
 		//	{VSSSValidationRequirements}
 		//	'<ValidationRequirements>'
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</ValidationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSValidationRequirements} '<ValidationRequirements>' sssItems+=VSSSDocumentItem* '</ValidationRequirements>'
+		//{VSSSValidationRequirements} '<ValidationRequirements>' sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</ValidationRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSValidationRequirements}
@@ -2384,8 +2757,14 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSDocumentItem
 		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
 		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_3() { return cSssRequirementSubsectionsAssignment_3; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0; }
+		
 		//'</ValidationRequirements>'
-		public Keyword getValidationRequirementsKeyword_3() { return cValidationRequirementsKeyword_3; }
+		public Keyword getValidationRequirementsKeyword_4() { return cValidationRequirementsKeyword_4; }
 	}
 	public class VSSSVerificationRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSVerificationRequirements");
@@ -2394,16 +2773,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVerificationRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSssItemsAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_2_0 = (RuleCall)cSssItemsAssignment_2.eContents().get(0);
-		private final Keyword cVerificationRequirementsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cSssRequirementSubsectionsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0 = (RuleCall)cSssRequirementSubsectionsAssignment_3.eContents().get(0);
+		private final Keyword cVerificationRequirementsKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSSSVerificationRequirements:
 		//	{VSSSVerificationRequirements}
 		//	'<VerificationRequirements>'
 		//	sssItems+=VSSSDocumentItem*
+		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 		//	'</VerificationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSVerificationRequirements} '<VerificationRequirements>' sssItems+=VSSSDocumentItem* '</VerificationRequirements>'
+		//{VSSSVerificationRequirements} '<VerificationRequirements>' sssItems+=VSSSDocumentItem*
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection* '</VerificationRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSVerificationRequirements}
@@ -2418,8 +2801,14 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSDocumentItem
 		public RuleCall getSssItemsVSSSDocumentItemParserRuleCall_2_0() { return cSssItemsVSSSDocumentItemParserRuleCall_2_0; }
 		
+		//sssRequirementSubsections+=VSSSInstantiableRequirementSection*
+		public Assignment getSssRequirementSubsectionsAssignment_3() { return cSssRequirementSubsectionsAssignment_3; }
+		
+		//VSSSInstantiableRequirementSection
+		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0; }
+		
 		//'</VerificationRequirements>'
-		public Keyword getVerificationRequirementsKeyword_3() { return cVerificationRequirementsKeyword_3; }
+		public Keyword getVerificationRequirementsKeyword_4() { return cVerificationRequirementsKeyword_4; }
 	}
 	public class VSSSSystemModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemModel");
@@ -2442,8 +2831,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getSystemModelKeyword_1() { return cSystemModelKeyword_1; }
 	}
 	
-	public class VVerificationMethodElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VVerificationMethod");
+	public class VValidationMethodElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VValidationMethod");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cAnalysisEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cAnalysisAnalysisKeyword_0_0 = (Keyword)cAnalysisEnumLiteralDeclaration_0.eContents().get(0);
@@ -2462,7 +2851,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cDeskCheckingEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
 		private final Keyword cDeskCheckingDeskCheckingKeyword_7_0 = (Keyword)cDeskCheckingEnumLiteralDeclaration_7.eContents().get(0);
 		
-		//enum VVerificationMethod returns tdm::VVerificationMethod:
+		//enum VValidationMethod returns tdm::VValidationMethod:
 		//	Analysis='"Analysis"' | Inspection='"Inspection"' | Testing='"Testing"' |
 		//	Review='"Review"' | ModelSimulation='"ModelSimulation"' | WalkThrough='"WalkThrough"' |
 		//	CrossReading='"CrossReading"' | DeskChecking='"DeskChecking"';
@@ -2535,14 +2924,16 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DHyperlinkElements pDHyperlink;
 	private final DTextElements pDText;
 	private final TerminalRule tRUNTEXT;
-	private final DFigureElements pDFigure;
-	private final DPictureAsTableElements pDPictureAsTable;
+	private final DFigureFromFileElements pDFigureFromFile;
+	private final DTableFromFileElements pDTableFromFile;
 	private final DBasicTableElements pDBasicTable;
 	private final DRowElements pDRow;
 	private final DColumnElements pDColumn;
 	private final DCellElements pDCell;
 	private final DApplicableDocumentElements pDApplicableDocument;
 	private final DReferenceDocumentElements pDReferenceDocument;
+	private final VSSSFixedSectionElements pVSSSFixedSection;
+	private final VSSSInstatiableSectionElements pVSSSInstatiableSection;
 	private final VSSSIntroductionElements pVSSSIntroduction;
 	private final VSSSApplicableDocumentsElements pVSSSApplicableDocuments;
 	private final VSSSReferenceDocumentsElements pVSSSReferenceDocuments;
@@ -2554,7 +2945,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSSSTermElements pVSSSTerm;
 	private final VSSSDefinitionElements pVSSSDefinition;
 	private final VSSSAbbreviationElements pVSSSAbbreviation;
-	private final VSSSGeneralDescriptionSubsectionElements pVSSSGeneralDescriptionSubsection;
+	private final VSSSInstantiableRequirementSectionElements pVSSSInstantiableRequirementSection;
 	private final VSSSGeneralRequirementsElements pVSSSGeneralRequirements;
 	private final VSSSCapabilitiesRequirementsElements pVSSSCapabilitiesRequirements;
 	private final VSSSSystemInterfaceRequirementsElements pVSSSSystemInterfaceRequirements;
@@ -2569,7 +2960,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSSSSoftwareMaintenanceRequirementsElements pVSSSSoftwareMaintenanceRequirements;
 	private final VSSSSystemSoftwareObservabilityRequirementsElements pVSSSSystemSoftwareObservabilityRequirements;
 	private final VSSSDocumentItemElements pVSSSDocumentItem;
-	private final VVerificationMethodElements eVVerificationMethod;
+	private final VValidationMethodElements eVValidationMethod;
 	private final VSSSVerificationValidationProcessRequirementsElements pVSSSVerificationValidationProcessRequirements;
 	private final VSSSValidationApproachElements pVSSSValidationApproach;
 	private final VSSSValidationRequirementsElements pVSSSValidationRequirements;
@@ -2598,14 +2989,16 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDHyperlink = new DHyperlinkElements();
 		this.pDText = new DTextElements();
 		this.tRUNTEXT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.RUNTEXT");
-		this.pDFigure = new DFigureElements();
-		this.pDPictureAsTable = new DPictureAsTableElements();
+		this.pDFigureFromFile = new DFigureFromFileElements();
+		this.pDTableFromFile = new DTableFromFileElements();
 		this.pDBasicTable = new DBasicTableElements();
 		this.pDRow = new DRowElements();
 		this.pDColumn = new DColumnElements();
 		this.pDCell = new DCellElements();
 		this.pDApplicableDocument = new DApplicableDocumentElements();
 		this.pDReferenceDocument = new DReferenceDocumentElements();
+		this.pVSSSFixedSection = new VSSSFixedSectionElements();
+		this.pVSSSInstatiableSection = new VSSSInstatiableSectionElements();
 		this.pVSSSIntroduction = new VSSSIntroductionElements();
 		this.pVSSSApplicableDocuments = new VSSSApplicableDocumentsElements();
 		this.pVSSSReferenceDocuments = new VSSSReferenceDocumentsElements();
@@ -2617,7 +3010,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSSSTerm = new VSSSTermElements();
 		this.pVSSSDefinition = new VSSSDefinitionElements();
 		this.pVSSSAbbreviation = new VSSSAbbreviationElements();
-		this.pVSSSGeneralDescriptionSubsection = new VSSSGeneralDescriptionSubsectionElements();
+		this.pVSSSInstantiableRequirementSection = new VSSSInstantiableRequirementSectionElements();
 		this.pVSSSGeneralRequirements = new VSSSGeneralRequirementsElements();
 		this.pVSSSCapabilitiesRequirements = new VSSSCapabilitiesRequirementsElements();
 		this.pVSSSSystemInterfaceRequirements = new VSSSSystemInterfaceRequirementsElements();
@@ -2632,7 +3025,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSSSSoftwareMaintenanceRequirements = new VSSSSoftwareMaintenanceRequirementsElements();
 		this.pVSSSSystemSoftwareObservabilityRequirements = new VSSSSystemSoftwareObservabilityRequirementsElements();
 		this.pVSSSDocumentItem = new VSSSDocumentItemElements();
-		this.eVVerificationMethod = new VVerificationMethodElements();
+		this.eVValidationMethod = new VValidationMethodElements();
 		this.pVSSSVerificationValidationProcessRequirements = new VSSSVerificationValidationProcessRequirementsElements();
 		this.pVSSSValidationApproach = new VSSSValidationApproachElements();
 		this.pVSSSValidationRequirements = new VSSSValidationRequirementsElements();
@@ -2705,7 +3098,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DBodyContent doc::DBodyContent:
-	//	DParagraph | DItemize | DEnumerate | DFigure | DPictureAsTable | DBasicTable
+	//	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable
 	public DBodyContentElements getDBodyContentAccess() {
 		return pDBodyContent;
 	}
@@ -2828,38 +3221,35 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		return tRUNTEXT;
 	}
 	
-	//DFigure doc::DFigure:
+	//DFigureFromFile doc::DFigureFromFile:
 	//	'<figure'
 	//	'name=' name=STRING
-	//	'reference=' reference=STRING
-	//	'caption=' caption=STRING
+	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
-	public DFigureElements getDFigureAccess() {
-		return pDFigure;
+	public DFigureFromFileElements getDFigureFromFileAccess() {
+		return pDFigureFromFile;
 	}
 	
-	public ParserRule getDFigureRule() {
-		return getDFigureAccess().getRule();
+	public ParserRule getDFigureFromFileRule() {
+		return getDFigureFromFileAccess().getRule();
 	}
 	
-	//DPictureAsTable doc::DPictureAsTable:
+	//DTableFromFile doc::DTableFromFile:
 	//	'<pictureAsTable'
 	//	'name=' name=STRING
-	//	'reference=' reference=STRING
-	//	'caption=' caption=STRING
+	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
-	public DPictureAsTableElements getDPictureAsTableAccess() {
-		return pDPictureAsTable;
+	public DTableFromFileElements getDTableFromFileAccess() {
+		return pDTableFromFile;
 	}
 	
-	public ParserRule getDPictureAsTableRule() {
-		return getDPictureAsTableAccess().getRule();
+	public ParserRule getDTableFromFileRule() {
+		return getDTableFromFileAccess().getRule();
 	}
 	
 	//DBasicTable doc::DBasicTable:
 	//	'<basicTable'
-	//	'name=' name=STRING
-	//	'caption=' caption=STRING
+	//	'name=' name=STRING ('caption=' caption=STRING)?
 	//	'>'
 	//	rows+=DRow+
 	//	'</basicTable>'
@@ -2941,12 +3331,34 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDReferenceDocumentAccess().getRule();
 	}
 	
+	//VSSSFixedSection:
+	//	body=DBody
+	//	sssInstatiableSubsections+=VSSSInstatiableSection*;
+	public VSSSFixedSectionElements getVSSSFixedSectionAccess() {
+		return pVSSSFixedSection;
+	}
+	
+	public ParserRule getVSSSFixedSectionRule() {
+		return getVSSSFixedSectionAccess().getRule();
+	}
+	
+	//VSSSInstatiableSection VSSSInstantiableSection:
+	//	'<subsection'
+	//	'name=' name=STRING
+	//	'>'
+	//	body=DBody
+	//	'</subsection>'
+	public VSSSInstatiableSectionElements getVSSSInstatiableSectionAccess() {
+		return pVSSSInstatiableSection;
+	}
+	
+	public ParserRule getVSSSInstatiableSectionRule() {
+		return getVSSSInstatiableSectionAccess().getRule();
+	}
+	
 	//VSSSIntroduction:
 	//	'<Introduction>'
-	//	'<purpose>' purpose=DBody '</purpose>'
-	//	'<objective>' objective=DBody '</objective>'
-	//	'<content>' content=DBody '</content>'
-	//	'<reason>' reason=DBody '</reason>'
+	//	sssInstatiableSubsections+=VSSSInstatiableSection+
 	//	'</Introduction>';
 	public VSSSIntroductionElements getVSSSIntroductionAccess() {
 		return pVSSSIntroduction;
@@ -2999,11 +3411,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSGeneralDescription:
 	//	'<GeneralDescription>'
-	//	'<productPerspective>' productPerspective=VSSSGeneralDescriptionSubsection '</productPerspective>'
-	//	'<generalCapabilities>' generalCapabilities=VSSSGeneralDescriptionSubsection '</generalCapabilities>'
-	//	'<generalConstraints>' generalConstraints=VSSSGeneralDescriptionSubsection '</generalConstraints>'
-	//	'<operationalEnvironment>' operationalEnvironment=VSSSGeneralDescriptionSubsection '</operationalEnvironment>'
-	//	'<assumptionsDependencies>' assumptionsDependencies=VSSSGeneralDescriptionSubsection '</assumptionsDependencies>'
+	//	'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
+	//	'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
+	//	'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
+	//	'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
+	//	'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
 	//	'</GeneralDescription>';
 	public VSSSGeneralDescriptionElements getVSSSGeneralDescriptionAccess() {
 		return pVSSSGeneralDescription;
@@ -3015,6 +3427,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSSpecificRequirements:
 	//	'<SpecificRequirements>'
+	//	sectionDescription=DBody?
 	//	general=VSSSGeneralRequirements
 	//	capabilities=VSSSCapabilitiesRequirements
 	//	systemInterface=VSSSSystemInterfaceRequirements
@@ -3039,6 +3452,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSVerificationValidationIntegrationRequirements:
 	//	'<VerificationValidationIntegrationRequirements>'
+	//	sectionDescription=DBody?
 	//	verificationValidationProcess=VSSSVerificationValidationProcessRequirements
 	//	validationApproach=VSSSValidationApproach
 	//	validation=VSSSValidationRequirements
@@ -3104,20 +3518,27 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSSSAbbreviationAccess().getRule();
 	}
 	
-	//VSSSGeneralDescriptionSubsection:
-	//	body=DBody;
-	public VSSSGeneralDescriptionSubsectionElements getVSSSGeneralDescriptionSubsectionAccess() {
-		return pVSSSGeneralDescriptionSubsection;
+	//VSSSInstantiableRequirementSection:
+	//	'<subsection'
+	//	'name=' name=STRING
+	//	'>'
+	//	sectionDescription=DBody?
+	//	sssItems+=VSSSDocumentItem*
+	//	'</subsection>';
+	public VSSSInstantiableRequirementSectionElements getVSSSInstantiableRequirementSectionAccess() {
+		return pVSSSInstantiableRequirementSection;
 	}
 	
-	public ParserRule getVSSSGeneralDescriptionSubsectionRule() {
-		return getVSSSGeneralDescriptionSubsectionAccess().getRule();
+	public ParserRule getVSSSInstantiableRequirementSectionRule() {
+		return getVSSSInstantiableRequirementSectionAccess().getRule();
 	}
 	
 	//VSSSGeneralRequirements:
 	//	{VSSSGeneralRequirements}
 	//	'<GeneralRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</GeneralRequirements>';
 	public VSSSGeneralRequirementsElements getVSSSGeneralRequirementsAccess() {
 		return pVSSSGeneralRequirements;
@@ -3130,7 +3551,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSCapabilitiesRequirements:
 	//	{VSSSCapabilitiesRequirements}
 	//	'<CapabilitiesRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</CapabilitiesRequirements>';
 	public VSSSCapabilitiesRequirementsElements getVSSSCapabilitiesRequirementsAccess() {
 		return pVSSSCapabilitiesRequirements;
@@ -3143,7 +3566,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSystemInterfaceRequirements:
 	//	{VSSSSystemInterfaceRequirements}
 	//	'<SystemInterfaceRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SystemInterfaceRequirements>';
 	public VSSSSystemInterfaceRequirementsElements getVSSSSystemInterfaceRequirementsAccess() {
 		return pVSSSSystemInterfaceRequirements;
@@ -3156,7 +3581,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSAdaptationMissionizationRequirements:
 	//	{VSSSAdaptationMissionizationRequirements}
 	//	'<VSSSAdaptationMissionizationRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</VSSSAdaptationMissionizationRequirements>';
 	public VSSSAdaptationMissionizationRequirementsElements getVSSSAdaptationMissionizationRequirementsAccess() {
 		return pVSSSAdaptationMissionizationRequirements;
@@ -3169,7 +3596,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSComputerResourceRequirements:
 	//	{VSSSComputerResourceRequirements}
 	//	'<ComputerResourceRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</ComputerResourceRequirements>';
 	public VSSSComputerResourceRequirementsElements getVSSSComputerResourceRequirementsAccess() {
 		return pVSSSComputerResourceRequirements;
@@ -3182,7 +3611,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSecurityRequirements:
 	//	{VSSSSecurityRequirements}
 	//	'<SecurityRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SecurityRequirements>';
 	public VSSSSecurityRequirementsElements getVSSSSecurityRequirementsAccess() {
 		return pVSSSSecurityRequirements;
@@ -3195,7 +3626,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSafetyRequirements:
 	//	{VSSSSafetyRequirements}
 	//	'<SafetyRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SafetyRequirements>';
 	public VSSSSafetyRequirementsElements getVSSSSafetyRequirementsAccess() {
 		return pVSSSSafetyRequirements;
@@ -3209,6 +3642,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	{VSSSReliabiltyAvailabilityRequirements}
 	//	'<ReliabiltyAvailabilityRequirements>'
 	//	sssItems+=VSSSDocumentItem*
+	//	sectionDescription=DBody?
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</ReliabiltyAvailabilityRequirements>';
 	public VSSSReliabiltyAvailabilityRequirementsElements getVSSSReliabiltyAvailabilityRequirementsAccess() {
 		return pVSSSReliabiltyAvailabilityRequirements;
@@ -3221,7 +3656,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSQualityRequirements:
 	//	{VSSSQualityRequirements}
 	//	'<QualityRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</QualityRequirements>';
 	public VSSSQualityRequirementsElements getVSSSQualityRequirementsAccess() {
 		return pVSSSQualityRequirements;
@@ -3234,7 +3671,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSDesignRequirements:
 	//	{VSSSDesignRequirements}
 	//	'<DesignRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</DesignRequirements>';
 	public VSSSDesignRequirementsElements getVSSSDesignRequirementsAccess() {
 		return pVSSSDesignRequirements;
@@ -3247,7 +3686,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSoftwareOperationsRequirements:
 	//	{VSSSSoftwareOperationsRequirements}
 	//	'<SoftwareOperationsRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SoftwareOperationsRequirements>';
 	public VSSSSoftwareOperationsRequirementsElements getVSSSSoftwareOperationsRequirementsAccess() {
 		return pVSSSSoftwareOperationsRequirements;
@@ -3260,7 +3701,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSoftwareMaintenanceRequirements:
 	//	{VSSSSoftwareMaintenanceRequirements}
 	//	'<SoftwareMaintenanceRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SoftwareMaintenanceRequirements>';
 	public VSSSSoftwareMaintenanceRequirementsElements getVSSSSoftwareMaintenanceRequirementsAccess() {
 		return pVSSSSoftwareMaintenanceRequirements;
@@ -3273,7 +3716,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSSSSystemSoftwareObservabilityRequirements:
 	//	{VSSSSystemSoftwareObservabilityRequirements}
 	//	'<SystemSoftwareObservabilityRequirements>'
+	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</SystemSoftwareObservabilityRequirements>';
 	public VSSSSystemSoftwareObservabilityRequirementsElements getVSSSSystemSoftwareObservabilityRequirementsAccess() {
 		return pVSSSSystemSoftwareObservabilityRequirements;
@@ -3285,10 +3730,13 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSDocumentItem:
 	//	'<Item'
-	//	'id=' id=STRING
-	//	'verificationMethod=' verificationMethod=VVerificationMethod
+	//	'name=' name=STRING
+	//	'validationMethod=' validationMethod=VValidationMethod
 	//	'>'
-	//	body=DBody
+	//	'<description>'
+	//	description=DBody
+	//	'</description>'
+	//	extendedDescription=DBody?
 	//	'</Item>';
 	public VSSSDocumentItemElements getVSSSDocumentItemAccess() {
 		return pVSSSDocumentItem;
@@ -3298,22 +3746,23 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSSSDocumentItemAccess().getRule();
 	}
 	
-	//enum VVerificationMethod returns tdm::VVerificationMethod:
+	//enum VValidationMethod returns tdm::VValidationMethod:
 	//	Analysis='"Analysis"' | Inspection='"Inspection"' | Testing='"Testing"' |
 	//	Review='"Review"' | ModelSimulation='"ModelSimulation"' | WalkThrough='"WalkThrough"' |
 	//	CrossReading='"CrossReading"' | DeskChecking='"DeskChecking"';
-	public VVerificationMethodElements getVVerificationMethodAccess() {
-		return eVVerificationMethod;
+	public VValidationMethodElements getVValidationMethodAccess() {
+		return eVValidationMethod;
 	}
 	
-	public EnumRule getVVerificationMethodRule() {
-		return getVVerificationMethodAccess().getRule();
+	public EnumRule getVValidationMethodRule() {
+		return getVValidationMethodAccess().getRule();
 	}
 	
 	//VSSSVerificationValidationProcessRequirements:
 	//	{VSSSVerificationValidationProcessRequirements}
 	//	'<VerificationValidationProcessRequirements>'
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</VerificationValidationProcessRequirements>';
 	public VSSSVerificationValidationProcessRequirementsElements getVSSSVerificationValidationProcessRequirementsAccess() {
 		return pVSSSVerificationValidationProcessRequirements;
@@ -3327,6 +3776,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	{VSSSValidationApproach}
 	//	'<ValidationApproach>'
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</ValidationApproach>';
 	public VSSSValidationApproachElements getVSSSValidationApproachAccess() {
 		return pVSSSValidationApproach;
@@ -3340,6 +3790,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	{VSSSValidationRequirements}
 	//	'<ValidationRequirements>'
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</ValidationRequirements>';
 	public VSSSValidationRequirementsElements getVSSSValidationRequirementsAccess() {
 		return pVSSSValidationRequirements;
@@ -3353,6 +3804,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	{VSSSVerificationRequirements}
 	//	'<VerificationRequirements>'
 	//	sssItems+=VSSSDocumentItem*
+	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
 	//	'</VerificationRequirements>';
 	public VSSSVerificationRequirementsElements getVSSSVerificationRequirementsAccess() {
 		return pVSSSVerificationRequirements;

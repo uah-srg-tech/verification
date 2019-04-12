@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
 /**
@@ -21,6 +22,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getSectionDescription <em>Section Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getVerificationValidationProcess <em>Verification Validation Process</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getValidationApproach <em>Validation Approach</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getValidation <em>Validation</em>}</li>
@@ -32,6 +34,32 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * @generated
  */
 public interface VSSSVerificationValidationIntegrationRequirements extends DFixedSection {
+	/**
+	 * Returns the value of the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Section Description</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Section Description</em>' containment reference.
+	 * @see #setSectionDescription(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSVerificationValidationIntegrationRequirements_SectionDescription()
+	 * @model containment="true"
+	 * @generated
+	 */
+	DBody getSectionDescription();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getSectionDescription <em>Section Description</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Section Description</em>' containment reference.
+	 * @see #getSectionDescription()
+	 * @generated
+	 */
+	void setSectionDescription(DBody value);
+
 	/**
 	 * Returns the value of the '<em><b>Verification Validation Process</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

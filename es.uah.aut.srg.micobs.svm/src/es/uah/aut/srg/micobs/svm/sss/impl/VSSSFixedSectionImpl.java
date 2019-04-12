@@ -11,35 +11,54 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
+
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
+import es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
-import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import java.util.Collection;
+
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Introduction</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Fixed Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntroduction {
+public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixedSection {
+	/**
+	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getBody()
+	 * @generated
+	 * @ordered
+	 */
+	protected DBody body;
+
 	/**
 	 * The cached value of the '{@link #getSssInstatiableSubsections() <em>Sss Instatiable Subsections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -55,7 +74,7 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSIntroductionImpl() {
+	protected VSSSFixedSectionImpl() {
 		super();
 	}
 
@@ -66,7 +85,50 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_INTRODUCTION;
+		return sssPackage.Literals.VSSS_FIXED_SECTION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DBody getBody() {
+		return body;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
+		DBody oldBody = body;
+		body = newBody;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_FIXED_SECTION__BODY, oldBody, newBody);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setBody(DBody newBody) {
+		if (newBody != body) {
+			NotificationChain msgs = null;
+			if (body != null)
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_FIXED_SECTION__BODY, null, msgs);
+			if (newBody != null)
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_FIXED_SECTION__BODY, null, msgs);
+			msgs = basicSetBody(newBody, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_FIXED_SECTION__BODY, newBody, newBody));
 	}
 
 	/**
@@ -76,7 +138,7 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	 */
 	public EList<VSSSInstantiableSection> getSssInstatiableSubsections() {
 		if (sssInstatiableSubsections == null) {
-			sssInstatiableSubsections = new EObjectContainmentEList<VSSSInstantiableSection>(VSSSInstantiableSection.class, this, sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS);
+			sssInstatiableSubsections = new EObjectContainmentEList<VSSSInstantiableSection>(VSSSInstantiableSection.class, this, sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS);
 		}
 		return sssInstatiableSubsections;
 	}
@@ -89,7 +151,9 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS:
+			case sssPackage.VSSS_FIXED_SECTION__BODY:
+				return basicSetBody(null, msgs);
+			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				return ((InternalEList<?>)getSssInstatiableSubsections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -103,7 +167,9 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS:
+			case sssPackage.VSSS_FIXED_SECTION__BODY:
+				return getBody();
+			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				return getSssInstatiableSubsections();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -118,7 +184,10 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS:
+			case sssPackage.VSSS_FIXED_SECTION__BODY:
+				setBody((DBody)newValue);
+				return;
+			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();
 				getSssInstatiableSubsections().addAll((Collection<? extends VSSSInstantiableSection>)newValue);
 				return;
@@ -134,7 +203,10 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS:
+			case sssPackage.VSSS_FIXED_SECTION__BODY:
+				setBody((DBody)null);
+				return;
+			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();
 				return;
 		}
@@ -149,7 +221,9 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS:
+			case sssPackage.VSSS_FIXED_SECTION__BODY:
+				return body != null;
+			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				return sssInstatiableSubsections != null && !sssInstatiableSubsections.isEmpty();
 		}
 		return super.eIsSet(featureID);
@@ -162,4 +236,4 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 		return subsections;
 	}
 
-} //VSSSIntroductionImpl
+} //VSSSFixedSectionImpl

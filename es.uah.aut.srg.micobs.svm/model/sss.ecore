@@ -19,20 +19,16 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemModelsSection" lowerBound="1"
         eType="#//VSSSSystemModels" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssFigures" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DAbstractFigure"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssTables" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DAbstractTable"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSIntroduction" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="purpose" lowerBound="1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="objective" lowerBound="1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="content" lowerBound="1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reason" lowerBound="1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssInstatiableSubsections"
+        lowerBound="1" upperBound="-1" eType="#//VSSSInstantiableSection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSApplicableDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"
@@ -52,32 +48,56 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="abbreviations" upperBound="-1"
         eType="#//VSSSAbbreviation" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSBriefDescription" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSAbstractBriefDescription" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DRun"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSTerm" eSuperTypes="#//VSSSBriefDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSDefinition" eSuperTypes="#//VSSSBriefDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSAbbreviation" eSuperTypes="#//VSSSBriefDescription"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralDescription" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="productPerspective" lowerBound="1"
-        eType="#//VSSSGeneralDescriptionSubsection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generalCapabilities" lowerBound="1"
-        eType="#//VSSSGeneralDescriptionSubsection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generalConstraints" lowerBound="1"
-        eType="#//VSSSGeneralDescriptionSubsection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalEnvironment"
-        lowerBound="1" eType="#//VSSSGeneralDescriptionSubsection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="assumptionsDependencies"
-        lowerBound="1" eType="#//VSSSGeneralDescriptionSubsection" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSTerm" eSuperTypes="#//VSSSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSDefinition" eSuperTypes="#//VSSSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSAbbreviation" eSuperTypes="#//VSSSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSFixedSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssInstatiableSubsections"
+        upperBound="-1" eType="#//VSSSInstantiableSection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralDescriptionSubsection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSInstantiableSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DInstantiableSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralDescription" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="productPerspective" lowerBound="1"
+        eType="#//VSSSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generalCapabilities" lowerBound="1"
+        eType="#//VSSSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="generalConstraints" lowerBound="1"
+        eType="#//VSSSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="operationalEnvironment"
+        lowerBound="1" eType="#//VSSSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="assumptionsDependencies"
+        lowerBound="1" eType="#//VSSSFixedSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSAbstractRequirementSection" abstract="true"
+      eSuperTypes="tdm.ecore#//VTraceableDocumentAbstractGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
+        eType="#//VSSSDocumentItem" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssRequirementSubsections"
+        upperBound="-1" eType="#//VSSSInstantiableRequirementSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSInstantiableRequirementSection"
+      eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DInstantiableSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
+        eType="#//VSSSDocumentItem" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSpecificRequirements" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
         eType="#//VSSSGeneralRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="capabilities" lowerBound="1"
@@ -105,65 +125,28 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemSoftwareObservability"
         lowerBound="1" eType="#//VSSSSystemSoftwareObservabilityRequirements" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSCapabilitiesRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemInterfaceRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSGeneralRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSCapabilitiesRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemInterfaceRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSAdaptationMissionizationRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSComputerResourceRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSSecurityRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSSafetyRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSComputerResourceRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSecurityRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSSafetyRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSReliabiltyAvailabilityRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSQualityRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSDesignRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSQualityRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSDesignRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSoftwareOperationsRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSoftwareMaintenanceRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemSoftwareObservabilityRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationIntegrationRequirements"
       eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="verificationValidationProcess"
         lowerBound="1" eType="#//VSSSVerificationValidationProcessRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validationApproach" lowerBound="1"
@@ -174,24 +157,14 @@
         eType="#//VSSSVerificationRequirements" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationValidationProcessRequirements"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationApproach" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationRequirements" eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"
-        eType="#//VSSSDocumentItem" containment="true"/>
-  </eClassifiers>
+      eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationApproach" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSVerificationRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSValidationRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSDocumentItem" eSuperTypes="tdm.ecore#//VTraceableDocumentAbstractItem">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="extendedDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSystemModels" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">

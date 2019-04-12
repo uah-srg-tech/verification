@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,10 +22,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective <em>Objective</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction()
@@ -34,107 +31,19 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  */
 public interface VSSSIntroduction extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>Purpose</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Purpose</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Sss Instatiable Subsections</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Purpose</em>' containment reference.
-	 * @see #setPurpose(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Purpose()
+	 * @return the value of the '<em>Sss Instatiable Subsections</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_SssInstatiableSubsections()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DBody getPurpose();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Purpose</em>' containment reference.
-	 * @see #getPurpose()
-	 * @generated
-	 */
-	void setPurpose(DBody value);
-
-	/**
-	 * Returns the value of the '<em><b>Objective</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Objective</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Objective</em>' containment reference.
-	 * @see #setObjective(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Objective()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	DBody getObjective();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective <em>Objective</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Objective</em>' containment reference.
-	 * @see #getObjective()
-	 * @generated
-	 */
-	void setObjective(DBody value);
-
-	/**
-	 * Returns the value of the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Content</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Content</em>' containment reference.
-	 * @see #setContent(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Content()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	DBody getContent();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Content</em>' containment reference.
-	 * @see #getContent()
-	 * @generated
-	 */
-	void setContent(DBody value);
-
-	/**
-	 * Returns the value of the '<em><b>Reason</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Reason</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reason</em>' containment reference.
-	 * @see #setReason(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSIntroduction_Reason()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	DBody getReason();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reason</em>' containment reference.
-	 * @see #getReason()
-	 * @generated
-	 */
-	void setReason(DBody value);
+	EList<VSSSInstantiableSection> getSssInstatiableSubsections();
 
 } // VSSSIntroduction

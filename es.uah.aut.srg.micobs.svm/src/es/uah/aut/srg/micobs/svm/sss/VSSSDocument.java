@@ -10,9 +10,12 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,6 +34,8 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSpecificRequirementsSection <em>Specific Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getVerificationValidationIntegrationSection <em>Verification Validation Integration Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSystemModelsSection <em>System Models Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssFigures <em>Sss Figures</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssTables <em>Sss Tables</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument()
@@ -245,5 +250,37 @@ public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @generated
 	 */
 	void setSystemModelsSection(VSSSSystemModels value);
+
+	/**
+	 * Returns the value of the '<em><b>Sss Figures</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sss Figures</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sss Figures</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SssFigures()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DAbstractFigure> getSssFigures();
+
+	/**
+	 * Returns the value of the '<em><b>Sss Tables</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sss Tables</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sss Tables</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocument_SssTables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<DAbstractTable> getSssTables();
 
 } // VSSSDocument

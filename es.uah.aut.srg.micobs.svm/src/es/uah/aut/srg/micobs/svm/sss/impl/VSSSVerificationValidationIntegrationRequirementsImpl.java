@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
@@ -37,6 +38,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl#getSectionDescription <em>Section Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl#getVerificationValidationProcess <em>Verification Validation Process</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl#getValidationApproach <em>Validation Approach</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl#getValidation <em>Validation</em>}</li>
@@ -46,6 +48,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixedSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
+	/**
+	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSectionDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected DBody sectionDescription;
+
 	/**
 	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -103,6 +115,49 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	protected EClass eStaticClass() {
 		return sssPackage.Literals.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DBody getSectionDescription() {
+		return sectionDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
+		sectionDescription = newSectionDescription;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSectionDescription(DBody newSectionDescription) {
+		if (newSectionDescription != sectionDescription) {
+			NotificationChain msgs = null;
+			if (sectionDescription != null)
+				msgs = ((InternalEObject)sectionDescription).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION, null, msgs);
+			if (newSectionDescription != null)
+				msgs = ((InternalEObject)newSectionDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION, null, msgs);
+			msgs = basicSetSectionDescription(newSectionDescription, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION, newSectionDescription, newSectionDescription));
 	}
 
 	/**
@@ -285,6 +340,8 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
+				return basicSetSectionDescription(null, msgs);
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				return basicSetVerificationValidationProcess(null, msgs);
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
@@ -305,6 +362,8 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
+				return getSectionDescription();
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				return getVerificationValidationProcess();
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:
@@ -325,6 +384,9 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
+				setSectionDescription((DBody)newValue);
+				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)newValue);
 				return;
@@ -349,6 +411,9 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
+				setSectionDescription((DBody)null);
+				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)null);
 				return;
@@ -373,6 +438,8 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
+				return sectionDescription != null;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				return verificationValidationProcess != null;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH:

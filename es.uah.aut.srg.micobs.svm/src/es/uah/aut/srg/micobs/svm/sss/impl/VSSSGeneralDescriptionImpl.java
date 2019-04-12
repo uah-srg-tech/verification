@@ -13,8 +13,8 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
+import es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -52,7 +52,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection productPerspective;
+	protected VSSSFixedSection productPerspective;
 
 	/**
 	 * The cached value of the '{@link #getGeneralCapabilities() <em>General Capabilities</em>}' containment reference.
@@ -62,7 +62,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection generalCapabilities;
+	protected VSSSFixedSection generalCapabilities;
 
 	/**
 	 * The cached value of the '{@link #getGeneralConstraints() <em>General Constraints</em>}' containment reference.
@@ -72,7 +72,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection generalConstraints;
+	protected VSSSFixedSection generalConstraints;
 
 	/**
 	 * The cached value of the '{@link #getOperationalEnvironment() <em>Operational Environment</em>}' containment reference.
@@ -82,7 +82,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection operationalEnvironment;
+	protected VSSSFixedSection operationalEnvironment;
 
 	/**
 	 * The cached value of the '{@link #getAssumptionsDependencies() <em>Assumptions Dependencies</em>}' containment reference.
@@ -92,7 +92,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSGeneralDescriptionSubsection assumptionsDependencies;
+	protected VSSSFixedSection assumptionsDependencies;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,7 +118,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getProductPerspective() {
+	public VSSSFixedSection getProductPerspective() {
 		return productPerspective;
 	}
 
@@ -127,8 +127,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetProductPerspective(VSSSGeneralDescriptionSubsection newProductPerspective, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldProductPerspective = productPerspective;
+	public NotificationChain basicSetProductPerspective(VSSSFixedSection newProductPerspective, NotificationChain msgs) {
+		VSSSFixedSection oldProductPerspective = productPerspective;
 		productPerspective = newProductPerspective;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE, oldProductPerspective, newProductPerspective);
@@ -142,7 +142,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setProductPerspective(VSSSGeneralDescriptionSubsection newProductPerspective) {
+	public void setProductPerspective(VSSSFixedSection newProductPerspective) {
 		if (newProductPerspective != productPerspective) {
 			NotificationChain msgs = null;
 			if (productPerspective != null)
@@ -161,7 +161,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getGeneralCapabilities() {
+	public VSSSFixedSection getGeneralCapabilities() {
 		return generalCapabilities;
 	}
 
@@ -170,8 +170,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGeneralCapabilities(VSSSGeneralDescriptionSubsection newGeneralCapabilities, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldGeneralCapabilities = generalCapabilities;
+	public NotificationChain basicSetGeneralCapabilities(VSSSFixedSection newGeneralCapabilities, NotificationChain msgs) {
+		VSSSFixedSection oldGeneralCapabilities = generalCapabilities;
 		generalCapabilities = newGeneralCapabilities;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES, oldGeneralCapabilities, newGeneralCapabilities);
@@ -185,7 +185,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneralCapabilities(VSSSGeneralDescriptionSubsection newGeneralCapabilities) {
+	public void setGeneralCapabilities(VSSSFixedSection newGeneralCapabilities) {
 		if (newGeneralCapabilities != generalCapabilities) {
 			NotificationChain msgs = null;
 			if (generalCapabilities != null)
@@ -204,7 +204,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getGeneralConstraints() {
+	public VSSSFixedSection getGeneralConstraints() {
 		return generalConstraints;
 	}
 
@@ -213,8 +213,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGeneralConstraints(VSSSGeneralDescriptionSubsection newGeneralConstraints, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldGeneralConstraints = generalConstraints;
+	public NotificationChain basicSetGeneralConstraints(VSSSFixedSection newGeneralConstraints, NotificationChain msgs) {
+		VSSSFixedSection oldGeneralConstraints = generalConstraints;
 		generalConstraints = newGeneralConstraints;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS, oldGeneralConstraints, newGeneralConstraints);
@@ -228,7 +228,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneralConstraints(VSSSGeneralDescriptionSubsection newGeneralConstraints) {
+	public void setGeneralConstraints(VSSSFixedSection newGeneralConstraints) {
 		if (newGeneralConstraints != generalConstraints) {
 			NotificationChain msgs = null;
 			if (generalConstraints != null)
@@ -247,7 +247,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getOperationalEnvironment() {
+	public VSSSFixedSection getOperationalEnvironment() {
 		return operationalEnvironment;
 	}
 
@@ -256,8 +256,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOperationalEnvironment(VSSSGeneralDescriptionSubsection newOperationalEnvironment, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldOperationalEnvironment = operationalEnvironment;
+	public NotificationChain basicSetOperationalEnvironment(VSSSFixedSection newOperationalEnvironment, NotificationChain msgs) {
+		VSSSFixedSection oldOperationalEnvironment = operationalEnvironment;
 		operationalEnvironment = newOperationalEnvironment;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT, oldOperationalEnvironment, newOperationalEnvironment);
@@ -271,7 +271,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOperationalEnvironment(VSSSGeneralDescriptionSubsection newOperationalEnvironment) {
+	public void setOperationalEnvironment(VSSSFixedSection newOperationalEnvironment) {
 		if (newOperationalEnvironment != operationalEnvironment) {
 			NotificationChain msgs = null;
 			if (operationalEnvironment != null)
@@ -290,7 +290,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection getAssumptionsDependencies() {
+	public VSSSFixedSection getAssumptionsDependencies() {
 		return assumptionsDependencies;
 	}
 
@@ -299,8 +299,8 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetAssumptionsDependencies(VSSSGeneralDescriptionSubsection newAssumptionsDependencies, NotificationChain msgs) {
-		VSSSGeneralDescriptionSubsection oldAssumptionsDependencies = assumptionsDependencies;
+	public NotificationChain basicSetAssumptionsDependencies(VSSSFixedSection newAssumptionsDependencies, NotificationChain msgs) {
+		VSSSFixedSection oldAssumptionsDependencies = assumptionsDependencies;
 		assumptionsDependencies = newAssumptionsDependencies;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES, oldAssumptionsDependencies, newAssumptionsDependencies);
@@ -314,7 +314,7 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setAssumptionsDependencies(VSSSGeneralDescriptionSubsection newAssumptionsDependencies) {
+	public void setAssumptionsDependencies(VSSSFixedSection newAssumptionsDependencies) {
 		if (newAssumptionsDependencies != assumptionsDependencies) {
 			NotificationChain msgs = null;
 			if (assumptionsDependencies != null)
@@ -381,19 +381,19 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
-				setProductPerspective((VSSSGeneralDescriptionSubsection)newValue);
+				setProductPerspective((VSSSFixedSection)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
-				setGeneralCapabilities((VSSSGeneralDescriptionSubsection)newValue);
+				setGeneralCapabilities((VSSSFixedSection)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
-				setGeneralConstraints((VSSSGeneralDescriptionSubsection)newValue);
+				setGeneralConstraints((VSSSFixedSection)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
-				setOperationalEnvironment((VSSSGeneralDescriptionSubsection)newValue);
+				setOperationalEnvironment((VSSSFixedSection)newValue);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
-				setAssumptionsDependencies((VSSSGeneralDescriptionSubsection)newValue);
+				setAssumptionsDependencies((VSSSFixedSection)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -408,19 +408,19 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE:
-				setProductPerspective((VSSSGeneralDescriptionSubsection)null);
+				setProductPerspective((VSSSFixedSection)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES:
-				setGeneralCapabilities((VSSSGeneralDescriptionSubsection)null);
+				setGeneralCapabilities((VSSSFixedSection)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS:
-				setGeneralConstraints((VSSSGeneralDescriptionSubsection)null);
+				setGeneralConstraints((VSSSFixedSection)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT:
-				setOperationalEnvironment((VSSSGeneralDescriptionSubsection)null);
+				setOperationalEnvironment((VSSSFixedSection)null);
 				return;
 			case sssPackage.VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES:
-				setAssumptionsDependencies((VSSSGeneralDescriptionSubsection)null);
+				setAssumptionsDependencies((VSSSFixedSection)null);
 				return;
 		}
 		super.eUnset(featureID);

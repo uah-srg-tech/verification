@@ -21,5 +21,5 @@ package es.uah.aut.srg.micobs.svm.sss;
  * @model
  * @generated
  */
-public interface VSSSDefinition extends VSSSBriefDescription {
+public interface VSSSDefinition extends VSSSAbstractBriefDescription {
 } // VSSSDefinition

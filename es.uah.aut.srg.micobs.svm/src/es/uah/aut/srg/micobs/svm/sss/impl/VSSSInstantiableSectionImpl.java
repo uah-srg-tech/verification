@@ -13,9 +13,9 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection;
+import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -29,18 +29,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS General Description Subsection</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Instantiable Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl implements VSSSGeneralDescriptionSubsection {
+public class VSSSInstantiableSectionImpl extends DInstantiableSectionImpl implements VSSSInstantiableSection {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +56,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSGeneralDescriptionSubsectionImpl() {
+	protected VSSSInstantiableSectionImpl() {
 		super();
 	}
 
@@ -67,7 +67,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_GENERAL_DESCRIPTION_SUBSECTION;
+		return sssPackage.Literals.VSSS_INSTANTIABLE_SECTION;
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 		DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, oldBody, newBody);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INSTANTIABLE_SECTION__BODY, oldBody, newBody);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -103,14 +103,14 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
-				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, null, msgs);
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INSTANTIABLE_SECTION__BODY, null, msgs);
 			if (newBody != null)
-				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, null, msgs);
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_INSTANTIABLE_SECTION__BODY, null, msgs);
 			msgs = basicSetBody(newBody, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY, newBody, newBody));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INSTANTIABLE_SECTION__BODY, newBody, newBody));
 	}
 
 	/**
@@ -121,7 +121,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
 				return basicSetBody(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -135,7 +135,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -149,7 +149,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
 				setBody((DBody)newValue);
 				return;
 		}
@@ -164,7 +164,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
 				setBody((DBody)null);
 				return;
 		}
@@ -179,7 +179,7 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY:
+			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
 				return body != null;
 		}
 		return super.eIsSet(featureID);
@@ -190,4 +190,4 @@ public class VSSSGeneralDescriptionSubsectionImpl extends DFixedSectionImpl impl
 		return ECollections.emptyEList();
 	}
 
-} //VSSSGeneralDescriptionSubsectionImpl
+} //VSSSInstantiableSectionImpl

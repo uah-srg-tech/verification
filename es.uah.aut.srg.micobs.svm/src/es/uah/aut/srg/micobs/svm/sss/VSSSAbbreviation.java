@@ -21,5 +21,5 @@ package es.uah.aut.srg.micobs.svm.sss;
  * @model
  * @generated
  */
-public interface VSSSAbbreviation extends VSSSBriefDescription {
+public interface VSSSAbbreviation extends VSSSAbstractBriefDescription {
 } // VSSSAbbreviation

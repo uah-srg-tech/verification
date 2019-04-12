@@ -40,6 +40,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,6 +64,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSpecificRequirementsSection <em>Specific Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getVerificationValidationIntegrationSection <em>Verification Validation Integration Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSystemModelsSection <em>System Models Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSssFigures <em>Sss Figures</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSssTables <em>Sss Tables</em>}</li>
  * </ul>
  *
  * @generated
@@ -148,6 +152,26 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	protected VSSSSystemModels systemModelsSection;
 
 	/**
+	 * The cached value of the '{@link #getSssFigures() <em>Sss Figures</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSssFigures()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DAbstractFigure> sssFigures;
+
+	/**
+	 * The cached value of the '{@link #getSssTables() <em>Sss Tables</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSssTables()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<DAbstractTable> sssTables;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -179,18 +203,18 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 		refdocs.add((DReferenceDocument) getApplicableDocumentsSection().getApplicableDocuments());
 		return refdocs;
 	}
-	
+
 	@Override
 	public EList<DAbstractFigure> getFigures() {
 		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
-		figures.add((DAbstractFigure) getFigures());
+		figures.add((DAbstractFigure) getSssFigures());
 		return figures;
 	}
-	
+
 	@Override
 	public EList<DAbstractTable> getTables() {
 		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
-		tables.add((DAbstractTable) getTables());
+		tables.add((DAbstractTable) getSssTables());
 		return tables;
 	}
 
@@ -579,6 +603,30 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<DAbstractFigure> getSssFigures() {
+		if (sssFigures == null) {
+			sssFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, sssPackage.VSSS_DOCUMENT__SSS_FIGURES);
+		}
+		return sssFigures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<DAbstractTable> getSssTables() {
+		if (sssTables == null) {
+			sssTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, sssPackage.VSSS_DOCUMENT__SSS_TABLES);
+		}
+		return sssTables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -598,6 +646,10 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return basicSetVerificationValidationIntegrationSection(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return basicSetSystemModelsSection(null, msgs);
+			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
+				return ((InternalEList<?>)getSssFigures()).basicRemove(otherEnd, msgs);
+			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
+				return ((InternalEList<?>)getSssTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -636,6 +688,10 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return getVerificationValidationIntegrationSection();
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return getSystemModelsSection();
+			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
+				return getSssFigures();
+			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
+				return getSssTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -693,6 +749,14 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				setSystemModelsSection((VSSSSystemModels)newValue);
 				return;
+			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
+				getSssFigures().clear();
+				getSssFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
+				return;
+			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
+				getSssTables().clear();
+				getSssTables().addAll((Collection<? extends DAbstractTable>)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -744,6 +808,12 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				setSystemModelsSection((VSSSSystemModels)null);
 				return;
+			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
+				getSssFigures().clear();
+				return;
+			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
+				getSssTables().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -782,6 +852,10 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return verificationValidationIntegrationSection != null;
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return systemModelsSection != null;
+			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
+				return sssFigures != null && !sssFigures.isEmpty();
+			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
+				return sssTables != null && !sssTables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

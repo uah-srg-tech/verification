@@ -20,10 +20,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDocument/systemModelsSection"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSIntroduction">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSIntroduction/purpose"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSIntroduction/objetive"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSIntroduction/content"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSIntroduction/reason"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSIntroduction/sssInstatiableSubsections"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSApplicableDocuments">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSApplicableDocuments/applicableDocuments"/>
@@ -43,17 +40,25 @@
     <genClasses ecoreClass="sss.ecore#//VSSSTerm"/>
     <genClasses ecoreClass="sss.ecore#//VSSSDefinition"/>
     <genClasses ecoreClass="sss.ecore#//VSSSAbbreviation"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSFixedSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSFixedSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSFixedSection/sssInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="sss.ecore#//VSSSInstantiableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSInstantiableSection/body"/>
+    </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSGeneralDescription">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/productPerspective"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/generalCapabilites"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/generalCapabilities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/generalConstraints"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/operationalEnvironment"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescription/assumptionsDependencies"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSGeneralDescriptionSubsection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralDescriptionSubsection/body"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSInstantiableRequirementSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSInstantiableRequirementSection/sssItems"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSSpecificRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/header"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/general"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/capabilities"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/systemInterface"/>
@@ -68,65 +73,84 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/softwareMaintenance"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSpecificRequirements/systemSoftwareObservability"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSGeneralRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSGeneralRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSGeneralRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSCapabilitiesRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSCapabilitiesRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSCapabilitiesRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSCapabilitiesRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSCapabilitiesRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSystemInterfaceRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemInterfaceRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSystemInterfaceRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemInterfaceRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemInterfaceRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSAdaptationMissionizationRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSAdaptationMissionizationRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSAdaptationMissionizationRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSAdaptationMissionizationRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSAdaptationMissionizationRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSComputerResourceRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSComputerResourceRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSComputerResourceRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSComputerResourceRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSComputerResourceRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSecurityRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSecurityRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSecurityRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSecurityRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSecurityRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSafetyRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSafetyRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSafetyRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSafetyRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSafetyRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSReliabiltyAvailabilityRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSReliabiltyAvailabilityRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSReliabiltyAvailabilityRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSReliabiltyAvailabilityRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSReliabiltyAvailabilityRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSQualityRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSQualityRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSQualityRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSQualityRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSQualityRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSDesignRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDesignRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSDesignRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDesignRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDesignRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSoftwareOperationsRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareOperationsRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSoftwareOperationsRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareOperationsRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareOperationsRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSoftwareMaintenanceRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareMaintenanceRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSoftwareMaintenanceRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareMaintenanceRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSoftwareMaintenanceRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSSystemSoftwareObservabilityRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemSoftwareObservabilityRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSSystemSoftwareObservabilityRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemSoftwareObservabilityRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemSoftwareObservabilityRequirements/sssIRequirementSubsections"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSVerificationValidationIntegrationRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationIntegrationRequirements/header"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationIntegrationRequirements/verificationValidationProcess"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationIntegrationRequirements/validationApproach"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationIntegrationRequirements/validation"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationIntegrationRequirements/verification"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSVerificationValidationProcessRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationProcessRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSVerificationValidationProcessRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationProcessRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationValidationProcessRequirements/sssIRequirementSubsections"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSValidationApproach">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSValidationApproach/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSValidationApproach/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSVerificationRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSVerificationRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSVerificationRequirements/sssIRequirementSubsections"/>
     </genClasses>
-    <genClasses ecoreClass="sss.ecore#//VSSSValidationRequirement">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSValidationRequirement/sssItems"/>
+    <genClasses ecoreClass="sss.ecore#//VSSSValidationRequirements">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSValidationRequirements/sssItems"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSValidationRequirements/sssIRequirementSubsections"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSDocumentItem">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDocumentItem/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDocumentItem/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSDocumentItem/extendedDescription"/>
     </genClasses>
     <genClasses ecoreClass="sss.ecore#//VSSSSystemModels">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference sss.ecore#//VSSSSystemModels/systemModels"/>

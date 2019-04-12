@@ -42,12 +42,12 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Product Perspective</em>' containment reference.
-	 * @see #setProductPerspective(VSSSGeneralDescriptionSubsection)
+	 * @see #setProductPerspective(VSSSFixedSection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_ProductPerspective()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getProductPerspective();
+	VSSSFixedSection getProductPerspective();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getProductPerspective <em>Product Perspective</em>}' containment reference.
@@ -57,7 +57,7 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getProductPerspective()
 	 * @generated
 	 */
-	void setProductPerspective(VSSSGeneralDescriptionSubsection value);
+	void setProductPerspective(VSSSFixedSection value);
 
 	/**
 	 * Returns the value of the '<em><b>General Capabilities</b></em>' containment reference.
@@ -68,12 +68,12 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>General Capabilities</em>' containment reference.
-	 * @see #setGeneralCapabilities(VSSSGeneralDescriptionSubsection)
+	 * @see #setGeneralCapabilities(VSSSFixedSection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralCapabilities()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getGeneralCapabilities();
+	VSSSFixedSection getGeneralCapabilities();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralCapabilities <em>General Capabilities</em>}' containment reference.
@@ -83,7 +83,7 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getGeneralCapabilities()
 	 * @generated
 	 */
-	void setGeneralCapabilities(VSSSGeneralDescriptionSubsection value);
+	void setGeneralCapabilities(VSSSFixedSection value);
 
 	/**
 	 * Returns the value of the '<em><b>General Constraints</b></em>' containment reference.
@@ -94,12 +94,12 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>General Constraints</em>' containment reference.
-	 * @see #setGeneralConstraints(VSSSGeneralDescriptionSubsection)
+	 * @see #setGeneralConstraints(VSSSFixedSection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_GeneralConstraints()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getGeneralConstraints();
+	VSSSFixedSection getGeneralConstraints();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getGeneralConstraints <em>General Constraints</em>}' containment reference.
@@ -109,7 +109,7 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getGeneralConstraints()
 	 * @generated
 	 */
-	void setGeneralConstraints(VSSSGeneralDescriptionSubsection value);
+	void setGeneralConstraints(VSSSFixedSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Operational Environment</b></em>' containment reference.
@@ -120,12 +120,12 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Operational Environment</em>' containment reference.
-	 * @see #setOperationalEnvironment(VSSSGeneralDescriptionSubsection)
+	 * @see #setOperationalEnvironment(VSSSFixedSection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_OperationalEnvironment()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getOperationalEnvironment();
+	VSSSFixedSection getOperationalEnvironment();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getOperationalEnvironment <em>Operational Environment</em>}' containment reference.
@@ -135,7 +135,7 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getOperationalEnvironment()
 	 * @generated
 	 */
-	void setOperationalEnvironment(VSSSGeneralDescriptionSubsection value);
+	void setOperationalEnvironment(VSSSFixedSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Assumptions Dependencies</b></em>' containment reference.
@@ -146,12 +146,12 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Assumptions Dependencies</em>' containment reference.
-	 * @see #setAssumptionsDependencies(VSSSGeneralDescriptionSubsection)
+	 * @see #setAssumptionsDependencies(VSSSFixedSection)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralDescription_AssumptionsDependencies()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSGeneralDescriptionSubsection getAssumptionsDependencies();
+	VSSSFixedSection getAssumptionsDependencies();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription#getAssumptionsDependencies <em>Assumptions Dependencies</em>}' containment reference.
@@ -161,6 +161,6 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @see #getAssumptionsDependencies()
 	 * @generated
 	 */
-	void setAssumptionsDependencies(VSSSGeneralDescriptionSubsection value);
+	void setAssumptionsDependencies(VSSSFixedSection value);
 
 } // VSSSGeneralDescription

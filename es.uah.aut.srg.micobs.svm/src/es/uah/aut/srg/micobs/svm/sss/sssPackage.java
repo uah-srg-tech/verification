@@ -259,13 +259,31 @@ public interface sssPackage extends EPackage {
 	int VSSS_DOCUMENT__SYSTEM_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
+	 * The feature id for the '<em><b>Sss Figures</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DOCUMENT__SSS_FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
+
+	/**
+	 * The feature id for the '<em><b>Sss Tables</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DOCUMENT__SSS_TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
+
+	/**
 	 * The number of structural features of the '<em>VSSS Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
+	int VSSS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The number of operations of the '<em>VSSS Document</em>' class.
@@ -296,40 +314,13 @@ public interface sssPackage extends EPackage {
 	int VSSS_INTRODUCTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Purpose</b></em>' containment reference.
+	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Objective</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSSS_INTRODUCTION__OBJECTIVE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Content</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSSS_INTRODUCTION__CONTENT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Reason</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSSS_INTRODUCTION__REASON = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Introduction</em>' class.
@@ -338,7 +329,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_INTRODUCTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSSS Introduction</em>' class.
@@ -506,14 +497,14 @@ public interface sssPackage extends EPackage {
 	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl <em>VSSS Brief Description</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl <em>VSSS Abstract Brief Description</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSBriefDescription()
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSAbstractBriefDescription()
 	 * @generated
 	 */
-	int VSSS_BRIEF_DESCRIPTION = 5;
+	int VSSS_ABSTRACT_BRIEF_DESCRIPTION = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -522,7 +513,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_BRIEF_DESCRIPTION__NAME = 0;
+	int VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -531,25 +522,25 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_BRIEF_DESCRIPTION__DESCRIPTION = 1;
+	int VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION = 1;
 
 	/**
-	 * The number of structural features of the '<em>VSSS Brief Description</em>' class.
+	 * The number of structural features of the '<em>VSSS Abstract Brief Description</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_BRIEF_DESCRIPTION_FEATURE_COUNT = 2;
+	int VSSS_ABSTRACT_BRIEF_DESCRIPTION_FEATURE_COUNT = 2;
 
 	/**
-	 * The number of operations of the '<em>VSSS Brief Description</em>' class.
+	 * The number of operations of the '<em>VSSS Abstract Brief Description</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_BRIEF_DESCRIPTION_OPERATION_COUNT = 0;
+	int VSSS_ABSTRACT_BRIEF_DESCRIPTION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSTermImpl <em>VSSS Term</em>}' class.
@@ -568,7 +559,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERM__NAME = VSSS_BRIEF_DESCRIPTION__NAME;
+	int VSSS_TERM__NAME = VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -577,7 +568,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERM__DESCRIPTION = VSSS_BRIEF_DESCRIPTION__DESCRIPTION;
+	int VSSS_TERM__DESCRIPTION = VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Term</em>' class.
@@ -586,7 +577,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERM_FEATURE_COUNT = VSSS_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
+	int VSSS_TERM_FEATURE_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Term</em>' class.
@@ -595,7 +586,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERM_OPERATION_COUNT = VSSS_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
+	int VSSS_TERM_OPERATION_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDefinitionImpl <em>VSSS Definition</em>}' class.
@@ -614,7 +605,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DEFINITION__NAME = VSSS_BRIEF_DESCRIPTION__NAME;
+	int VSSS_DEFINITION__NAME = VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -623,7 +614,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DEFINITION__DESCRIPTION = VSSS_BRIEF_DESCRIPTION__DESCRIPTION;
+	int VSSS_DEFINITION__DESCRIPTION = VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Definition</em>' class.
@@ -632,7 +623,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DEFINITION_FEATURE_COUNT = VSSS_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
+	int VSSS_DEFINITION_FEATURE_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Definition</em>' class.
@@ -641,7 +632,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DEFINITION_OPERATION_COUNT = VSSS_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
+	int VSSS_DEFINITION_OPERATION_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbbreviationImpl <em>VSSS Abbreviation</em>}' class.
@@ -660,7 +651,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABBREVIATION__NAME = VSSS_BRIEF_DESCRIPTION__NAME;
+	int VSSS_ABBREVIATION__NAME = VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' containment reference.
@@ -669,7 +660,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABBREVIATION__DESCRIPTION = VSSS_BRIEF_DESCRIPTION__DESCRIPTION;
+	int VSSS_ABBREVIATION__DESCRIPTION = VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Abbreviation</em>' class.
@@ -678,7 +669,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABBREVIATION_FEATURE_COUNT = VSSS_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
+	int VSSS_ABBREVIATION_FEATURE_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Abbreviation</em>' class.
@@ -687,7 +678,126 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABBREVIATION_OPERATION_COUNT = VSSS_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
+	int VSSS_ABBREVIATION_OPERATION_COUNT = VSSS_ABSTRACT_BRIEF_DESCRIPTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl <em>VSSS Fixed Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSFixedSection()
+	 * @generated
+	 */
+	int VSSS_FIXED_SECTION = 9;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_FIXED_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_FIXED_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSSS Fixed Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_FIXED_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSSS Fixed Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_FIXED_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl <em>VSSS Instantiable Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableSection()
+	 * @generated
+	 */
+	int VSSS_INSTANTIABLE_SECTION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>VSSS Instantiable Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>VSSS Instantiable Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl <em>VSSS General Description</em>}' class.
@@ -697,7 +807,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSGeneralDescription()
 	 * @generated
 	 */
-	int VSSS_GENERAL_DESCRIPTION = 9;
+	int VSSS_GENERAL_DESCRIPTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -772,14 +882,23 @@ public interface sssPackage extends EPackage {
 	int VSSS_GENERAL_DESCRIPTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl <em>VSSS General Description Subsection</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractRequirementSectionImpl <em>VSSS Abstract Requirement Section</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSGeneralDescriptionSubsection()
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractRequirementSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSAbstractRequirementSection()
 	 * @generated
 	 */
-	int VSSS_GENERAL_DESCRIPTION_SUBSECTION = 10;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION = 12;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -788,34 +907,52 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_SUBSECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>VSSS General Description Subsection</em>' class.
+	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_SUBSECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>VSSS General Description Subsection</em>' class.
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_SUBSECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>VSSS Abstract Requirement Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>VSSS Abstract Requirement Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.
@@ -825,7 +962,80 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSpecificRequirements()
 	 * @generated
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS = 11;
+	int VSSS_SPECIFIC_REQUIREMENTS = 14;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl <em>VSSS Instantiable Requirement Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableRequirementSection()
+	 * @generated
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION = 13;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSSS Instantiable Requirement Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSSS Instantiable Requirement Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -837,13 +1047,22 @@ public interface sssPackage extends EPackage {
 	int VSSS_SPECIFIC_REQUIREMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_SPECIFIC_REQUIREMENTS__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference.
@@ -852,7 +1071,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>System Interface</b></em>' containment reference.
@@ -861,7 +1080,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Adaptation Missionization</b></em>' containment reference.
@@ -870,7 +1089,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Computer Resource</b></em>' containment reference.
@@ -879,7 +1098,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Security</b></em>' containment reference.
@@ -888,7 +1107,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SECURITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSSS_SPECIFIC_REQUIREMENTS__SECURITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Safety</b></em>' containment reference.
@@ -897,7 +1116,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SAFETY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSSS_SPECIFIC_REQUIREMENTS__SAFETY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reliabilty Availability</b></em>' containment reference.
@@ -906,7 +1125,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
+	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Quality</b></em>' containment reference.
@@ -915,7 +1134,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__QUALITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
+	int VSSS_SPECIFIC_REQUIREMENTS__QUALITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Design</b></em>' containment reference.
@@ -924,7 +1143,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__DESIGN = docPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
+	int VSSS_SPECIFIC_REQUIREMENTS__DESIGN = docPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Software Operations</b></em>' containment reference.
@@ -933,7 +1152,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
+	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Software Maintenance</b></em>' containment reference.
@@ -942,7 +1161,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
+	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>System Software Observability</b></em>' containment reference.
@@ -951,7 +1170,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
+	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Specific Requirements</em>' class.
@@ -960,7 +1179,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
+	int VSSS_SPECIFIC_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>VSSS Specific Requirements</em>' class.
@@ -979,7 +1198,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSGeneralRequirements()
 	 * @generated
 	 */
-	int VSSS_GENERAL_REQUIREMENTS = 12;
+	int VSSS_GENERAL_REQUIREMENTS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -988,7 +1207,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_GENERAL_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -997,7 +1216,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_GENERAL_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_GENERAL_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1006,7 +1234,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_GENERAL_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_GENERAL_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS General Requirements</em>' class.
@@ -1015,7 +1252,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_GENERAL_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS General Requirements</em>' class.
@@ -1024,7 +1261,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_GENERAL_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSCapabilitiesRequirementsImpl <em>VSSS Capabilities Requirements</em>}' class.
@@ -1034,7 +1271,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSCapabilitiesRequirements()
 	 * @generated
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS = 13;
+	int VSSS_CAPABILITIES_REQUIREMENTS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1043,7 +1280,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_CAPABILITIES_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1052,7 +1289,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_CAPABILITIES_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_CAPABILITIES_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1061,7 +1307,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_CAPABILITIES_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_CAPABILITIES_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Capabilities Requirements</em>' class.
@@ -1070,7 +1325,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_CAPABILITIES_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Capabilities Requirements</em>' class.
@@ -1079,7 +1334,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_CAPABILITIES_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_CAPABILITIES_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemInterfaceRequirementsImpl <em>VSSS System Interface Requirements</em>}' class.
@@ -1089,7 +1344,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSystemInterfaceRequirements()
 	 * @generated
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS = 14;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1098,7 +1353,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1107,7 +1362,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1116,7 +1380,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS System Interface Requirements</em>' class.
@@ -1125,7 +1398,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS System Interface Requirements</em>' class.
@@ -1134,7 +1407,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAdaptationMissionizationRequirementsImpl <em>VSSS Adaptation Missionization Requirements</em>}' class.
@@ -1144,7 +1417,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSAdaptationMissionizationRequirements()
 	 * @generated
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS = 15;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1153,7 +1426,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1162,7 +1435,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1171,7 +1453,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Adaptation Missionization Requirements</em>' class.
@@ -1180,7 +1471,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Adaptation Missionization Requirements</em>' class.
@@ -1189,7 +1480,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSComputerResourceRequirementsImpl <em>VSSS Computer Resource Requirements</em>}' class.
@@ -1199,7 +1490,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSComputerResourceRequirements()
 	 * @generated
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS = 16;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1208,7 +1499,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1217,7 +1508,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1226,7 +1526,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Computer Resource Requirements</em>' class.
@@ -1235,7 +1544,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Computer Resource Requirements</em>' class.
@@ -1244,7 +1553,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSecurityRequirementsImpl <em>VSSS Security Requirements</em>}' class.
@@ -1254,7 +1563,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSecurityRequirements()
 	 * @generated
 	 */
-	int VSSS_SECURITY_REQUIREMENTS = 17;
+	int VSSS_SECURITY_REQUIREMENTS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1263,7 +1572,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SECURITY_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SECURITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1272,7 +1581,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SECURITY_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SECURITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SECURITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1281,7 +1599,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SECURITY_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SECURITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SECURITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Security Requirements</em>' class.
@@ -1290,7 +1617,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SECURITY_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SECURITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Security Requirements</em>' class.
@@ -1299,7 +1626,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SECURITY_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SECURITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSafetyRequirementsImpl <em>VSSS Safety Requirements</em>}' class.
@@ -1309,7 +1636,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSafetyRequirements()
 	 * @generated
 	 */
-	int VSSS_SAFETY_REQUIREMENTS = 18;
+	int VSSS_SAFETY_REQUIREMENTS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1318,7 +1645,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SAFETY_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SAFETY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1327,7 +1654,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SAFETY_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SAFETY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SAFETY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1336,7 +1672,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SAFETY_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SAFETY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SAFETY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Safety Requirements</em>' class.
@@ -1345,7 +1690,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SAFETY_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SAFETY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Safety Requirements</em>' class.
@@ -1354,7 +1699,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SAFETY_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SAFETY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl <em>VSSS Reliabilty Availability Requirements</em>}' class.
@@ -1364,7 +1709,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSReliabiltyAvailabilityRequirements()
 	 * @generated
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS = 19;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1373,7 +1718,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1382,7 +1727,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1391,7 +1745,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Reliabilty Availability Requirements</em>' class.
@@ -1400,7 +1763,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Reliabilty Availability Requirements</em>' class.
@@ -1409,7 +1772,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSQualityRequirementsImpl <em>VSSS Quality Requirements</em>}' class.
@@ -1419,7 +1782,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSQualityRequirements()
 	 * @generated
 	 */
-	int VSSS_QUALITY_REQUIREMENTS = 20;
+	int VSSS_QUALITY_REQUIREMENTS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1428,7 +1791,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_QUALITY_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_QUALITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1437,7 +1800,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_QUALITY_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_QUALITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_QUALITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1446,7 +1818,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_QUALITY_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_QUALITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_QUALITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Quality Requirements</em>' class.
@@ -1455,7 +1836,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_QUALITY_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_QUALITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Quality Requirements</em>' class.
@@ -1464,7 +1845,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_QUALITY_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_QUALITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDesignRequirementsImpl <em>VSSS Design Requirements</em>}' class.
@@ -1474,7 +1855,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSDesignRequirements()
 	 * @generated
 	 */
-	int VSSS_DESIGN_REQUIREMENTS = 21;
+	int VSSS_DESIGN_REQUIREMENTS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1483,7 +1864,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DESIGN_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_DESIGN_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1492,7 +1873,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DESIGN_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_DESIGN_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DESIGN_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1501,7 +1891,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DESIGN_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_DESIGN_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DESIGN_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Design Requirements</em>' class.
@@ -1510,7 +1909,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DESIGN_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_DESIGN_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Design Requirements</em>' class.
@@ -1519,7 +1918,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DESIGN_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_DESIGN_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareOperationsRequirementsImpl <em>VSSS Software Operations Requirements</em>}' class.
@@ -1529,7 +1928,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSoftwareOperationsRequirements()
 	 * @generated
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS = 22;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1538,7 +1937,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1547,7 +1946,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1556,7 +1964,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Software Operations Requirements</em>' class.
@@ -1565,7 +1982,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Software Operations Requirements</em>' class.
@@ -1574,7 +1991,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareMaintenanceRequirementsImpl <em>VSSS Software Maintenance Requirements</em>}' class.
@@ -1584,7 +2001,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSoftwareMaintenanceRequirements()
 	 * @generated
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS = 23;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1593,7 +2010,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1602,7 +2019,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1611,7 +2037,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Software Maintenance Requirements</em>' class.
@@ -1620,7 +2055,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Software Maintenance Requirements</em>' class.
@@ -1629,7 +2064,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemSoftwareObservabilityRequirementsImpl <em>VSSS System Software Observability Requirements</em>}' class.
@@ -1639,7 +2074,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSystemSoftwareObservabilityRequirements()
 	 * @generated
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS = 24;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1648,7 +2083,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1657,7 +2092,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1666,7 +2110,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS System Software Observability Requirements</em>' class.
@@ -1675,7 +2128,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS System Software Observability Requirements</em>' class.
@@ -1684,7 +2137,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl <em>VSSS Verification Validation Integration Requirements</em>}' class.
@@ -1694,7 +2147,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSVerificationValidationIntegrationRequirements()
 	 * @generated
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS = 25;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1706,13 +2159,22 @@ public interface sssPackage extends EPackage {
 	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Verification Validation Process</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Validation Approach</b></em>' containment reference.
@@ -1721,7 +2183,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Validation</b></em>' containment reference.
@@ -1730,7 +2192,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Verification</b></em>' containment reference.
@@ -1739,7 +2201,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Verification Validation Integration Requirements</em>' class.
@@ -1748,7 +2210,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>VSSS Verification Validation Integration Requirements</em>' class.
@@ -1767,7 +2229,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSVerificationValidationProcessRequirements()
 	 * @generated
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS = 26;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS = 29;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1776,7 +2238,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1785,7 +2247,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1794,7 +2265,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Verification Validation Process Requirements</em>' class.
@@ -1803,7 +2283,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Verification Validation Process Requirements</em>' class.
@@ -1812,7 +2292,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationApproachImpl <em>VSSS Validation Approach</em>}' class.
@@ -1822,7 +2302,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSValidationApproach()
 	 * @generated
 	 */
-	int VSSS_VALIDATION_APPROACH = 27;
+	int VSSS_VALIDATION_APPROACH = 30;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1831,7 +2311,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_APPROACH__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_VALIDATION_APPROACH__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1840,7 +2320,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_APPROACH__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_VALIDATION_APPROACH__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_APPROACH__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1849,7 +2338,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_APPROACH__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_VALIDATION_APPROACH__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_APPROACH__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Validation Approach</em>' class.
@@ -1858,7 +2356,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_APPROACH_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_VALIDATION_APPROACH_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Validation Approach</em>' class.
@@ -1867,7 +2365,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_APPROACH_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_VALIDATION_APPROACH_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationRequirementsImpl <em>VSSS Verification Requirements</em>}' class.
@@ -1877,7 +2375,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSVerificationRequirements()
 	 * @generated
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS = 28;
+	int VSSS_VERIFICATION_REQUIREMENTS = 31;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1886,7 +2384,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_VERIFICATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1895,7 +2393,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_VERIFICATION_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1904,7 +2411,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_VERIFICATION_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Verification Requirements</em>' class.
@@ -1913,7 +2429,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_VERIFICATION_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Verification Requirements</em>' class.
@@ -1922,7 +2438,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_VERIFICATION_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationRequirementsImpl <em>VSSS Validation Requirements</em>}' class.
@@ -1932,7 +2448,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSValidationRequirements()
 	 * @generated
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS = 29;
+	int VSSS_VALIDATION_REQUIREMENTS = 32;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1941,7 +2457,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+	int VSSS_VALIDATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1950,7 +2466,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
+	int VSSS_VALIDATION_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1959,7 +2484,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
+	int VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Validation Requirements</em>' class.
@@ -1968,7 +2502,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
+	int VSSS_VALIDATION_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSSS Validation Requirements</em>' class.
@@ -1977,7 +2511,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VALIDATION_REQUIREMENTS_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
+	int VSSS_VALIDATION_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentItemImpl <em>VSSS Document Item</em>}' class.
@@ -1987,25 +2521,25 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSDocumentItem()
 	 * @generated
 	 */
-	int VSSS_DOCUMENT_ITEM = 30;
+	int VSSS_DOCUMENT_ITEM = 33;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_ITEM__ID = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__ID;
+	int VSSS_DOCUMENT_ITEM__NAME = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Verification Method</b></em>' attribute.
+	 * The feature id for the '<em><b>Validation Method</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_ITEM__VERIFICATION_METHOD = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VERIFICATION_METHOD;
+	int VSSS_DOCUMENT_ITEM__VALIDATION_METHOD = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__VALIDATION_METHOD;
 
 	/**
 	 * The feature id for the '<em><b>Group</b></em>' reference.
@@ -2017,13 +2551,31 @@ public interface sssPackage extends EPackage {
 	int VSSS_DOCUMENT_ITEM__GROUP = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * The feature id for the '<em><b>Parent Item</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_ITEM__BODY = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 0;
+	int VSSS_DOCUMENT_ITEM__PARENT_ITEM = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DOCUMENT_ITEM__DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Extended Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Document Item</em>' class.
@@ -2032,7 +2584,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_ITEM_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 1;
+	int VSSS_DOCUMENT_ITEM_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSSS Document Item</em>' class.
@@ -2051,7 +2603,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSystemModels()
 	 * @generated
 	 */
-	int VSSS_SYSTEM_MODELS = 31;
+	int VSSS_SYSTEM_MODELS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2097,7 +2649,7 @@ public interface sssPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSystemModel()
 	 * @generated
 	 */
-	int VSSS_SYSTEM_MODEL = 32;
+	int VSSS_SYSTEM_MODEL = 35;
 
 	/**
 	 * The number of structural features of the '<em>VSSS System Model</em>' class.
@@ -2217,6 +2769,28 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSDocument_SystemModelsSection();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssFigures <em>Sss Figures</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Figures</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssFigures()
+	 * @see #getVSSSDocument()
+	 * @generated
+	 */
+	EReference getVSSSDocument_SssFigures();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssTables <em>Sss Tables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Tables</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssTables()
+	 * @see #getVSSSDocument()
+	 * @generated
+	 */
+	EReference getVSSSDocument_SssTables();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction <em>VSSS Introduction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2227,48 +2801,15 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSIntroduction();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose <em>Purpose</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Purpose</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getPurpose()
+	 * @return the meta object for the containment reference list '<em>Sss Instatiable Subsections</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getSssInstatiableSubsections()
 	 * @see #getVSSSIntroduction()
 	 * @generated
 	 */
-	EReference getVSSSIntroduction_Purpose();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective <em>Objective</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Objective</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getObjective()
-	 * @see #getVSSSIntroduction()
-	 * @generated
-	 */
-	EReference getVSSSIntroduction_Objective();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent <em>Content</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Content</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getContent()
-	 * @see #getVSSSIntroduction()
-	 * @generated
-	 */
-	EReference getVSSSIntroduction_Content();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason <em>Reason</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reason</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction#getReason()
-	 * @see #getVSSSIntroduction()
-	 * @generated
-	 */
-	EReference getVSSSIntroduction_Reason();
+	EReference getVSSSIntroduction_SssInstatiableSubsections();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments <em>VSSS Applicable Documents</em>}'.
@@ -2356,36 +2897,36 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSTermsDefinitionsAbbreviations_Abbreviations();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription <em>VSSS Brief Description</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription <em>VSSS Abstract Brief Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSSS Brief Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription
+	 * @return the meta object for class '<em>VSSS Abstract Brief Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription
 	 * @generated
 	 */
-	EClass getVSSSBriefDescription();
+	EClass getVSSSAbstractBriefDescription();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getName()
-	 * @see #getVSSSBriefDescription()
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription#getName()
+	 * @see #getVSSSAbstractBriefDescription()
 	 * @generated
 	 */
-	EAttribute getVSSSBriefDescription_Name();
+	EAttribute getVSSSAbstractBriefDescription_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription <em>Description</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription#getDescription()
-	 * @see #getVSSSBriefDescription()
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription#getDescription()
+	 * @see #getVSSSAbstractBriefDescription()
 	 * @generated
 	 */
-	EReference getVSSSBriefDescription_Description();
+	EReference getVSSSAbstractBriefDescription_Description();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSTerm <em>VSSS Term</em>}'.
@@ -2416,6 +2957,59 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSAbbreviation();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection <em>VSSS Fixed Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSSS Fixed Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection
+	 * @generated
+	 */
+	EClass getVSSSFixedSection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection#getBody()
+	 * @see #getVSSSFixedSection()
+	 * @generated
+	 */
+	EReference getVSSSFixedSection_Body();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Instatiable Subsections</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection#getSssInstatiableSubsections()
+	 * @see #getVSSSFixedSection()
+	 * @generated
+	 */
+	EReference getVSSSFixedSection_SssInstatiableSubsections();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection <em>VSSS Instantiable Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSSS Instantiable Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection
+	 * @generated
+	 */
+	EClass getVSSSInstantiableSection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getBody()
+	 * @see #getVSSSInstantiableSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableSection_Body();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription <em>VSSS General Description</em>}'.
@@ -2483,25 +3077,47 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSGeneralDescription_AssumptionsDependencies();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection <em>VSSS General Description Subsection</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection <em>VSSS Abstract Requirement Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSSS General Description Subsection</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection
+	 * @return the meta object for class '<em>VSSS Abstract Requirement Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection
 	 * @generated
 	 */
-	EClass getVSSSGeneralDescriptionSubsection();
+	EClass getVSSSAbstractRequirementSection();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSectionDescription <em>Section Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection#getBody()
-	 * @see #getVSSSGeneralDescriptionSubsection()
+	 * @return the meta object for the containment reference '<em>Section Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSectionDescription()
+	 * @see #getVSSSAbstractRequirementSection()
 	 * @generated
 	 */
-	EReference getVSSSGeneralDescriptionSubsection_Body();
+	EReference getVSSSAbstractRequirementSection_SectionDescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSssItems <em>Sss Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSssItems()
+	 * @see #getVSSSAbstractRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSAbstractRequirementSection_SssItems();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSssRequirementSubsections <em>Sss Requirement Subsections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Requirement Subsections</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection#getSssRequirementSubsections()
+	 * @see #getVSSSAbstractRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSAbstractRequirementSection_SssRequirementSubsections();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements <em>VSSS Specific Requirements</em>}'.
@@ -2512,6 +3128,17 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSSpecificRequirements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSectionDescription <em>Section Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Section Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSectionDescription()
+	 * @see #getVSSSSpecificRequirements()
+	 * @generated
+	 */
+	EReference getVSSSSpecificRequirements_SectionDescription();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getGeneral <em>General</em>}'.
@@ -2657,6 +3284,38 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSSpecificRequirements_SystemSoftwareObservability();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection <em>VSSS Instantiable Requirement Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSSS Instantiable Requirement Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection
+	 * @generated
+	 */
+	EClass getVSSSInstantiableRequirementSection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription <em>Section Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Section Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription()
+	 * @see #getVSSSInstantiableRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableRequirementSection_SectionDescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems <em>Sss Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems()
+	 * @see #getVSSSInstantiableRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableRequirementSection_SssItems();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements <em>VSSS General Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2665,17 +3324,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSGeneralRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements#getSssItems()
-	 * @see #getVSSSGeneralRequirements()
-	 * @generated
-	 */
-	EReference getVSSSGeneralRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements <em>VSSS Capabilities Requirements</em>}'.
@@ -2688,17 +3336,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSCapabilitiesRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements#getSssItems()
-	 * @see #getVSSSCapabilitiesRequirements()
-	 * @generated
-	 */
-	EReference getVSSSCapabilitiesRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements <em>VSSS System Interface Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2707,17 +3344,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSSystemInterfaceRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements#getSssItems()
-	 * @see #getVSSSSystemInterfaceRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSystemInterfaceRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements <em>VSSS Adaptation Missionization Requirements</em>}'.
@@ -2730,17 +3356,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSAdaptationMissionizationRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements#getSssItems()
-	 * @see #getVSSSAdaptationMissionizationRequirements()
-	 * @generated
-	 */
-	EReference getVSSSAdaptationMissionizationRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements <em>VSSS Computer Resource Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2749,17 +3364,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSComputerResourceRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements#getSssItems()
-	 * @see #getVSSSComputerResourceRequirements()
-	 * @generated
-	 */
-	EReference getVSSSComputerResourceRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements <em>VSSS Security Requirements</em>}'.
@@ -2772,17 +3376,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSSecurityRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements#getSssItems()
-	 * @see #getVSSSSecurityRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSecurityRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements <em>VSSS Safety Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2791,17 +3384,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSSafetyRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements#getSssItems()
-	 * @see #getVSSSSafetyRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSafetyRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements <em>VSSS Reliabilty Availability Requirements</em>}'.
@@ -2814,17 +3396,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSReliabiltyAvailabilityRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements#getSssItems()
-	 * @see #getVSSSReliabiltyAvailabilityRequirements()
-	 * @generated
-	 */
-	EReference getVSSSReliabiltyAvailabilityRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements <em>VSSS Quality Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2833,17 +3404,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSQualityRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements#getSssItems()
-	 * @see #getVSSSQualityRequirements()
-	 * @generated
-	 */
-	EReference getVSSSQualityRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements <em>VSSS Design Requirements</em>}'.
@@ -2856,17 +3416,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSDesignRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements#getSssItems()
-	 * @see #getVSSSDesignRequirements()
-	 * @generated
-	 */
-	EReference getVSSSDesignRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements <em>VSSS Software Operations Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2875,17 +3424,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSSoftwareOperationsRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareOperationsRequirements#getSssItems()
-	 * @see #getVSSSSoftwareOperationsRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSoftwareOperationsRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements <em>VSSS Software Maintenance Requirements</em>}'.
@@ -2898,17 +3436,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSSoftwareMaintenanceRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements#getSssItems()
-	 * @see #getVSSSSoftwareMaintenanceRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSoftwareMaintenanceRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements <em>VSSS System Software Observability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2919,17 +3446,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSSystemSoftwareObservabilityRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements#getSssItems()
-	 * @see #getVSSSSystemSoftwareObservabilityRequirements()
-	 * @generated
-	 */
-	EReference getVSSSSystemSoftwareObservabilityRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements <em>VSSS Verification Validation Integration Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2938,6 +3454,17 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSVerificationValidationIntegrationRequirements();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getSectionDescription <em>Section Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Section Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getSectionDescription()
+	 * @see #getVSSSVerificationValidationIntegrationRequirements()
+	 * @generated
+	 */
+	EReference getVSSSVerificationValidationIntegrationRequirements_SectionDescription();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getVerificationValidationProcess <em>Verification Validation Process</em>}'.
@@ -2994,17 +3521,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSVerificationValidationProcessRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements#getSssItems()
-	 * @see #getVSSSVerificationValidationProcessRequirements()
-	 * @generated
-	 */
-	EReference getVSSSVerificationValidationProcessRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach <em>VSSS Validation Approach</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3013,17 +3529,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSValidationApproach();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach#getSssItems()
-	 * @see #getVSSSValidationApproach()
-	 * @generated
-	 */
-	EReference getVSSSValidationApproach_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements <em>VSSS Verification Requirements</em>}'.
@@ -3036,17 +3541,6 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSVerificationRequirements();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements#getSssItems()
-	 * @see #getVSSSVerificationRequirements()
-	 * @generated
-	 */
-	EReference getVSSSVerificationRequirements_SssItems();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements <em>VSSS Validation Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3055,17 +3549,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSSSValidationRequirements();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements#getSssItems()
-	 * @see #getVSSSValidationRequirements()
-	 * @generated
-	 */
-	EReference getVSSSValidationRequirements_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem <em>VSSS Document Item</em>}'.
@@ -3078,15 +3561,26 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSDocumentItem();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody <em>Body</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody()
+	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getDescription()
 	 * @see #getVSSSDocumentItem()
 	 * @generated
 	 */
-	EReference getVSSSDocumentItem_Body();
+	EReference getVSSSDocumentItem_Description();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getExtendedDescription <em>Extended Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Extended Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getExtendedDescription()
+	 * @see #getVSSSDocumentItem()
+	 * @generated
+	 */
+	EReference getVSSSDocumentItem_ExtendedDescription();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels <em>VSSS System Models</em>}'.
@@ -3217,6 +3711,22 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_DOCUMENT__SYSTEM_MODELS_SECTION = eINSTANCE.getVSSSDocument_SystemModelsSection();
 
 		/**
+		 * The meta object literal for the '<em><b>Sss Figures</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_DOCUMENT__SSS_FIGURES = eINSTANCE.getVSSSDocument_SssFigures();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Tables</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_DOCUMENT__SSS_TABLES = eINSTANCE.getVSSSDocument_SssTables();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl <em>VSSS Introduction</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3227,36 +3737,12 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_INTRODUCTION = eINSTANCE.getVSSSIntroduction();
 
 		/**
-		 * The meta object literal for the '<em><b>Purpose</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSSS_INTRODUCTION__PURPOSE = eINSTANCE.getVSSSIntroduction_Purpose();
-
-		/**
-		 * The meta object literal for the '<em><b>Objective</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_INTRODUCTION__OBJECTIVE = eINSTANCE.getVSSSIntroduction_Objective();
-
-		/**
-		 * The meta object literal for the '<em><b>Content</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_INTRODUCTION__CONTENT = eINSTANCE.getVSSSIntroduction_Content();
-
-		/**
-		 * The meta object literal for the '<em><b>Reason</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_INTRODUCTION__REASON = eINSTANCE.getVSSSIntroduction_Reason();
+		EReference VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSSSIntroduction_SssInstatiableSubsections();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSApplicableDocumentsImpl <em>VSSS Applicable Documents</em>}' class.
@@ -3329,14 +3815,14 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = eINSTANCE.getVSSSTermsDefinitionsAbbreviations_Abbreviations();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl <em>VSSS Brief Description</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl <em>VSSS Abstract Brief Description</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSBriefDescription()
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSAbstractBriefDescription()
 		 * @generated
 		 */
-		EClass VSSS_BRIEF_DESCRIPTION = eINSTANCE.getVSSSBriefDescription();
+		EClass VSSS_ABSTRACT_BRIEF_DESCRIPTION = eINSTANCE.getVSSSAbstractBriefDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -3344,7 +3830,7 @@ public interface sssPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VSSS_BRIEF_DESCRIPTION__NAME = eINSTANCE.getVSSSBriefDescription_Name();
+		EAttribute VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME = eINSTANCE.getVSSSAbstractBriefDescription_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
@@ -3352,7 +3838,7 @@ public interface sssPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSSS_BRIEF_DESCRIPTION__DESCRIPTION = eINSTANCE.getVSSSBriefDescription_Description();
+		EReference VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION = eINSTANCE.getVSSSAbstractBriefDescription_Description();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSTermImpl <em>VSSS Term</em>}' class.
@@ -3383,6 +3869,50 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_ABBREVIATION = eINSTANCE.getVSSSAbbreviation();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl <em>VSSS Fixed Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSFixedSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSFixedSection()
+		 * @generated
+		 */
+		EClass VSSS_FIXED_SECTION = eINSTANCE.getVSSSFixedSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_FIXED_SECTION__BODY = eINSTANCE.getVSSSFixedSection_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSSSFixedSection_SssInstatiableSubsections();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl <em>VSSS Instantiable Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableSection()
+		 * @generated
+		 */
+		EClass VSSS_INSTANTIABLE_SECTION = eINSTANCE.getVSSSInstantiableSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_SECTION__BODY = eINSTANCE.getVSSSInstantiableSection_Body();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl <em>VSSS General Description</em>}' class.
@@ -3435,22 +3965,38 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES = eINSTANCE.getVSSSGeneralDescription_AssumptionsDependencies();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl <em>VSSS General Description Subsection</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractRequirementSectionImpl <em>VSSS Abstract Requirement Section</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionSubsectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSGeneralDescriptionSubsection()
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractRequirementSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSAbstractRequirementSection()
 		 * @generated
 		 */
-		EClass VSSS_GENERAL_DESCRIPTION_SUBSECTION = eINSTANCE.getVSSSGeneralDescriptionSubsection();
+		EClass VSSS_ABSTRACT_REQUIREMENT_SECTION = eINSTANCE.getVSSSAbstractRequirementSection();
 
 		/**
-		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSSS_GENERAL_DESCRIPTION_SUBSECTION__BODY = eINSTANCE.getVSSSGeneralDescriptionSubsection_Body();
+		EReference VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION = eINSTANCE.getVSSSAbstractRequirementSection_SectionDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS = eINSTANCE.getVSSSAbstractRequirementSection_SssItems();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS = eINSTANCE.getVSSSAbstractRequirementSection_SssRequirementSubsections();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.
@@ -3461,6 +4007,14 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_SPECIFIC_REQUIREMENTS = eINSTANCE.getVSSSSpecificRequirements();
+
+		/**
+		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION = eINSTANCE.getVSSSSpecificRequirements_SectionDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>General</b></em>' containment reference feature.
@@ -3567,6 +4121,32 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = eINSTANCE.getVSSSSpecificRequirements_SystemSoftwareObservability();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl <em>VSSS Instantiable Requirement Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableRequirementSection()
+		 * @generated
+		 */
+		EClass VSSS_INSTANTIABLE_REQUIREMENT_SECTION = eINSTANCE.getVSSSInstantiableRequirementSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = eINSTANCE.getVSSSInstantiableRequirementSection_SectionDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = eINSTANCE.getVSSSInstantiableRequirementSection_SssItems();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementsImpl <em>VSSS General Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3575,14 +4155,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_GENERAL_REQUIREMENTS = eINSTANCE.getVSSSGeneralRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_GENERAL_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSGeneralRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSCapabilitiesRequirementsImpl <em>VSSS Capabilities Requirements</em>}' class.
@@ -3595,14 +4167,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_CAPABILITIES_REQUIREMENTS = eINSTANCE.getVSSSCapabilitiesRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_CAPABILITIES_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSCapabilitiesRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemInterfaceRequirementsImpl <em>VSSS System Interface Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3611,14 +4175,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_SYSTEM_INTERFACE_REQUIREMENTS = eINSTANCE.getVSSSSystemInterfaceRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SYSTEM_INTERFACE_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSystemInterfaceRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAdaptationMissionizationRequirementsImpl <em>VSSS Adaptation Missionization Requirements</em>}' class.
@@ -3631,14 +4187,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS = eINSTANCE.getVSSSAdaptationMissionizationRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSAdaptationMissionizationRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSComputerResourceRequirementsImpl <em>VSSS Computer Resource Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3647,14 +4195,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_COMPUTER_RESOURCE_REQUIREMENTS = eINSTANCE.getVSSSComputerResourceRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_COMPUTER_RESOURCE_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSComputerResourceRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSecurityRequirementsImpl <em>VSSS Security Requirements</em>}' class.
@@ -3667,14 +4207,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_SECURITY_REQUIREMENTS = eINSTANCE.getVSSSSecurityRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SECURITY_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSecurityRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSafetyRequirementsImpl <em>VSSS Safety Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3683,14 +4215,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_SAFETY_REQUIREMENTS = eINSTANCE.getVSSSSafetyRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SAFETY_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSafetyRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl <em>VSSS Reliabilty Availability Requirements</em>}' class.
@@ -3703,14 +4227,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS = eINSTANCE.getVSSSReliabiltyAvailabilityRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSReliabiltyAvailabilityRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSQualityRequirementsImpl <em>VSSS Quality Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3719,14 +4235,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_QUALITY_REQUIREMENTS = eINSTANCE.getVSSSQualityRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_QUALITY_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSQualityRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDesignRequirementsImpl <em>VSSS Design Requirements</em>}' class.
@@ -3739,14 +4247,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_DESIGN_REQUIREMENTS = eINSTANCE.getVSSSDesignRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_DESIGN_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSDesignRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareOperationsRequirementsImpl <em>VSSS Software Operations Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3755,14 +4255,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS = eINSTANCE.getVSSSSoftwareOperationsRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSoftwareOperationsRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSoftwareMaintenanceRequirementsImpl <em>VSSS Software Maintenance Requirements</em>}' class.
@@ -3775,14 +4267,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS = eINSTANCE.getVSSSSoftwareMaintenanceRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSoftwareMaintenanceRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemSoftwareObservabilityRequirementsImpl <em>VSSS System Software Observability Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3793,14 +4277,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS = eINSTANCE.getVSSSSystemSoftwareObservabilityRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSSystemSoftwareObservabilityRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationIntegrationRequirementsImpl <em>VSSS Verification Validation Integration Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3809,6 +4285,14 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS = eINSTANCE.getVSSSVerificationValidationIntegrationRequirements();
+
+		/**
+		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION = eINSTANCE.getVSSSVerificationValidationIntegrationRequirements_SectionDescription();
 
 		/**
 		 * The meta object literal for the '<em><b>Verification Validation Process</b></em>' containment reference feature.
@@ -3853,14 +4337,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS = eINSTANCE.getVSSSVerificationValidationProcessRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSVerificationValidationProcessRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationApproachImpl <em>VSSS Validation Approach</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3869,14 +4345,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_VALIDATION_APPROACH = eINSTANCE.getVSSSValidationApproach();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_VALIDATION_APPROACH__SSS_ITEMS = eINSTANCE.getVSSSValidationApproach_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationRequirementsImpl <em>VSSS Verification Requirements</em>}' class.
@@ -3889,14 +4357,6 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_VERIFICATION_REQUIREMENTS = eINSTANCE.getVSSSVerificationRequirements();
 
 		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_VERIFICATION_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSVerificationRequirements_SssItems();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSValidationRequirementsImpl <em>VSSS Validation Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3905,14 +4365,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSSS_VALIDATION_REQUIREMENTS = eINSTANCE.getVSSSValidationRequirements();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_VALIDATION_REQUIREMENTS__SSS_ITEMS = eINSTANCE.getVSSSValidationRequirements_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentItemImpl <em>VSSS Document Item</em>}' class.
@@ -3925,12 +4377,20 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_DOCUMENT_ITEM = eINSTANCE.getVSSSDocumentItem();
 
 		/**
-		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSSS_DOCUMENT_ITEM__BODY = eINSTANCE.getVSSSDocumentItem_Body();
+		EReference VSSS_DOCUMENT_ITEM__DESCRIPTION = eINSTANCE.getVSSSDocumentItem_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Extended Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION = eINSTANCE.getVSSSDocumentItem_ExtendedDescription();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemModelsImpl <em>VSSS System Models</em>}' class.

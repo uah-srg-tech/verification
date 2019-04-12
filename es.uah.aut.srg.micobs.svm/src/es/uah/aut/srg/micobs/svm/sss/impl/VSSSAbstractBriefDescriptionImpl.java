@@ -11,12 +11,13 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-import es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription;
+
+import es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -25,19 +26,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Brief Description</b></em>'.
+ * An implementation of the model object '<em><b>VSSS Abstract Brief Description</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSBriefDescriptionImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Container implements VSSSBriefDescription {
+public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImpl.Container implements VSSSAbstractBriefDescription {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -73,7 +74,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSBriefDescriptionImpl() {
+	protected VSSSAbstractBriefDescriptionImpl() {
 		super();
 	}
 
@@ -84,7 +85,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_BRIEF_DESCRIPTION;
+		return sssPackage.Literals.VSSS_ABSTRACT_BRIEF_DESCRIPTION;
 	}
 
 	/**
@@ -105,7 +106,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME, oldName, name));
 	}
 
 	/**
@@ -126,7 +127,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 		DRun oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, newDescription);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, newDescription);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -141,14 +142,14 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 		if (newDescription != description) {
 			NotificationChain msgs = null;
 			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION, null, msgs);
 			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION, null, msgs);
 			msgs = basicSetDescription(newDescription, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION, newDescription, newDescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION, newDescription, newDescription));
 	}
 
 	/**
@@ -159,7 +160,7 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
 				return basicSetDescription(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -173,9 +174,9 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME:
 				return getName();
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
 				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -189,10 +190,10 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME:
 				setName((String)newValue);
 				return;
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
 				setDescription((DRun)newValue);
 				return;
 		}
@@ -207,10 +208,10 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
 				setDescription((DRun)null);
 				return;
 		}
@@ -225,9 +226,9 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__NAME:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case sssPackage.VSSS_BRIEF_DESCRIPTION__DESCRIPTION:
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
 				return description != null;
 		}
 		return super.eIsSet(featureID);
@@ -249,4 +250,4 @@ public abstract class VSSSBriefDescriptionImpl extends MinimalEObjectImpl.Contai
 		return result.toString();
 	}
 
-} //VSSSBriefDescriptionImpl
+} //VSSSAbstractBriefDescriptionImpl

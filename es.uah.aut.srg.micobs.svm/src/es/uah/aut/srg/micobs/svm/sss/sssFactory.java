@@ -102,6 +102,24 @@ public interface sssFactory extends EFactory {
 	VSSSAbbreviation createVSSSAbbreviation();
 
 	/**
+	 * Returns a new object of class '<em>VSSS Fixed Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Fixed Section</em>'.
+	 * @generated
+	 */
+	VSSSFixedSection createVSSSFixedSection();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Instantiable Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Instantiable Section</em>'.
+	 * @generated
+	 */
+	VSSSInstantiableSection createVSSSInstantiableSection();
+
+	/**
 	 * Returns a new object of class '<em>VSSS General Description</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -111,15 +129,6 @@ public interface sssFactory extends EFactory {
 	VSSSGeneralDescription createVSSSGeneralDescription();
 
 	/**
-	 * Returns a new object of class '<em>VSSS General Description Subsection</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS General Description Subsection</em>'.
-	 * @generated
-	 */
-	VSSSGeneralDescriptionSubsection createVSSSGeneralDescriptionSubsection();
-
-	/**
 	 * Returns a new object of class '<em>VSSS Specific Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -127,6 +136,15 @@ public interface sssFactory extends EFactory {
 	 * @generated
 	 */
 	VSSSSpecificRequirements createVSSSSpecificRequirements();
+
+	/**
+	 * Returns a new object of class '<em>VSSS Instantiable Requirement Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSS Instantiable Requirement Section</em>'.
+	 * @generated
+	 */
+	VSSSInstantiableRequirementSection createVSSSInstantiableRequirementSection();
 
 	/**
 	 * Returns a new object of class '<em>VSSS General Requirements</em>'.

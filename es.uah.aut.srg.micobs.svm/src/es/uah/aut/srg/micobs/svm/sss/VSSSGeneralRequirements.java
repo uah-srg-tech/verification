@@ -10,43 +10,16 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
-
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS General Requirements</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements#getSssItems <em>Sss Items</em>}</li>
- * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralRequirements()
  * @model
  * @generated
  */
-public interface VSSSGeneralRequirements extends VTraceableDocumentFixedGroup, DFixedSection {
-	/**
-	 * Returns the value of the '<em><b>Sss Items</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sss Items</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sss Items</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSGeneralRequirements_SssItems()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<VSSSDocumentItem> getSssItems();
+public interface VSSSGeneralRequirements extends VSSSAbstractRequirementSection {
 
 } // VSSSGeneralRequirements

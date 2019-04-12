@@ -30,7 +30,7 @@ DBody returns doc::DBody:
 	'</body>';
 
 DBodyContent returns doc::DBodyContent:
-	DParagraph | DItemize | DEnumerate | DFigure | DPictureAsTable | DBasicTable;
+	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable;
 
 DParagraph returns doc::DParagraph:
 	'<paragraph>'
@@ -81,24 +81,24 @@ DText returns doc::DText:
 terminal RUNTEXT returns ecore::EString:
     '<text>' -> '</text>';
 
-DFigure returns doc::DFigure:
+DFigureFromFile returns doc::DFigureFromFile:
 	'<figure'
 		'name=' name=STRING
-		'reference=' reference=STRING
-		'caption=' caption=STRING
+		'referenceFile=' referenceFile=STRING
+		('caption=' caption=STRING)?
 	'/>';
 
-DPictureAsTable returns doc::DPictureAsTable:
+DTableFromFile returns doc::DTableFromFile:
 	'<pictureAsTable'
 		'name=' name=STRING
-		'reference=' reference=STRING
-		'caption=' caption=STRING
+		'referenceFile=' referenceFile=STRING
+		('caption=' caption=STRING)?
 	'/>';
 
 DBasicTable returns doc::DBasicTable: 
 	'<basicTable'
 		'name=' name=STRING
-		'caption=' caption=STRING
+		('caption=' caption=STRING)?
 	'>'
 		(rows+=DRow)+
 	'</basicTable>';
@@ -142,12 +142,20 @@ DReferenceDocument returns doc::DReferenceDocument:
 		('date=' date=STRING)?
 	'/>';
 
+VSSSFixedSection returns VSSSFixedSection:
+	body=DBody
+	(sssInstatiableSubsections+=VSSSInstatiableSection)*;
+
+VSSSInstatiableSection returns VSSSInstantiableSection:
+	'<subsection'
+		'name=' name=STRING
+		'>'
+		body=DBody
+	'</subsection>';
+
 VSSSIntroduction returns VSSSIntroduction:
 	'<Introduction>'
-		'<purpose>' purpose=DBody '</purpose>'
-		'<objective>' objective=DBody '</objective>'
-		'<content>' content=DBody '</content>'
-		'<reason>' reason=DBody '</reason>'
+		(sssInstatiableSubsections+=VSSSInstatiableSection)+
 	'</Introduction>';
 
 VSSSApplicableDocuments returns VSSSApplicableDocuments:
@@ -172,15 +180,16 @@ VSSSTermsDefinitionsAbbreviations returns VSSSTermsDefinitionsAbbreviations:
 
 VSSSGeneralDescription returns VSSSGeneralDescription:
 	'<GeneralDescription>'
-		'<productPerspective>' productPerspective=VSSSGeneralDescriptionSubsection '</productPerspective>'
-		'<generalCapabilities>' generalCapabilities=VSSSGeneralDescriptionSubsection '</generalCapabilities>'
-		'<generalConstraints>' generalConstraints=VSSSGeneralDescriptionSubsection '</generalConstraints>'
-		'<operationalEnvironment>' operationalEnvironment=VSSSGeneralDescriptionSubsection '</operationalEnvironment>'
-		'<assumptionsDependencies>' assumptionsDependencies=VSSSGeneralDescriptionSubsection '</assumptionsDependencies>'
+		'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
+		'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
+		'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
+		'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
+		'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
 	'</GeneralDescription>';
 
 VSSSSpecificRequirements returns VSSSSpecificRequirements:
 	'<SpecificRequirements>'
+		(sectionDescription=DBody)?
 		general=VSSSGeneralRequirements
 		capabilities=VSSSCapabilitiesRequirements
 		systemInterface=VSSSSystemInterfaceRequirements
@@ -198,6 +207,7 @@ VSSSSpecificRequirements returns VSSSSpecificRequirements:
 
 VSSSVerificationValidationIntegrationRequirements returns VSSSVerificationValidationIntegrationRequirements:
 	'<VerificationValidationIntegrationRequirements>'
+		(sectionDescription=DBody)?
 		verificationValidationProcess=VSSSVerificationValidationProcessRequirements
 		validationApproach=VSSSValidationApproach
 		validation=VSSSValidationRequirements
@@ -228,96 +238,130 @@ VSSSAbbreviation returns VSSSAbbreviation:
 		description=DRun
 	'</Abbreviation>';
 
-VSSSGeneralDescriptionSubsection returns VSSSGeneralDescriptionSubsection:
-	body=DBody;
+VSSSInstantiableRequirementSection returns VSSSInstantiableRequirementSection:
+	'<subsection'
+		'name=' name=STRING
+		'>'
+		(sectionDescription=DBody)?
+		(sssItems+=VSSSDocumentItem)*
+	'</subsection>';
 
 VSSSGeneralRequirements returns VSSSGeneralRequirements:
 	{VSSSGeneralRequirements}
 	'<GeneralRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</GeneralRequirements>';
-
+	
 VSSSCapabilitiesRequirements returns VSSSCapabilitiesRequirements:
 	{VSSSCapabilitiesRequirements}
 	'<CapabilitiesRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</CapabilitiesRequirements>';
 
 VSSSSystemInterfaceRequirements returns VSSSSystemInterfaceRequirements:
 	{VSSSSystemInterfaceRequirements}
 	'<SystemInterfaceRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SystemInterfaceRequirements>';
 
 VSSSAdaptationMissionizationRequirements returns VSSSAdaptationMissionizationRequirements:
 	{VSSSAdaptationMissionizationRequirements}
 	'<VSSSAdaptationMissionizationRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</VSSSAdaptationMissionizationRequirements>';
 
 VSSSComputerResourceRequirements returns VSSSComputerResourceRequirements:
 	{VSSSComputerResourceRequirements}
 	'<ComputerResourceRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</ComputerResourceRequirements>';
 
 VSSSSecurityRequirements returns VSSSSecurityRequirements:
 	{VSSSSecurityRequirements}
 	'<SecurityRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SecurityRequirements>';
 
 VSSSSafetyRequirements returns VSSSSafetyRequirements:
 	{VSSSSafetyRequirements}
 	'<SafetyRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SafetyRequirements>';
 
 VSSSReliabiltyAvailabilityRequirements returns VSSSReliabiltyAvailabilityRequirements:
 	{VSSSReliabiltyAvailabilityRequirements}
 	'<ReliabiltyAvailabilityRequirements>'
 		(sssItems+=VSSSDocumentItem)*
+		(sectionDescription=DBody)?
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</ReliabiltyAvailabilityRequirements>';
 
 VSSSQualityRequirements returns VSSSQualityRequirements:
 	{VSSSQualityRequirements}
 	'<QualityRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</QualityRequirements>';
 
 VSSSDesignRequirements returns VSSSDesignRequirements:
 	{VSSSDesignRequirements}
 	'<DesignRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</DesignRequirements>';
 
 VSSSSoftwareOperationsRequirements returns VSSSSoftwareOperationsRequirements:
 	{VSSSSoftwareOperationsRequirements}
 	'<SoftwareOperationsRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SoftwareOperationsRequirements>';
 
 VSSSSoftwareMaintenanceRequirements returns VSSSSoftwareMaintenanceRequirements:
 	{VSSSSoftwareMaintenanceRequirements}
 	'<SoftwareMaintenanceRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SoftwareMaintenanceRequirements>';
 
 VSSSSystemSoftwareObservabilityRequirements returns VSSSSystemSoftwareObservabilityRequirements:
 	{VSSSSystemSoftwareObservabilityRequirements}
 	'<SystemSoftwareObservabilityRequirements>'
+		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SystemSoftwareObservabilityRequirements>';
 
 VSSSDocumentItem returns VSSSDocumentItem:
 	'<Item'
-		'id=' id=STRING
-		'verificationMethod=' verificationMethod=VVerificationMethod
+		'name=' name=STRING
+		'validationMethod=' validationMethod=VValidationMethod
 		'>'
-		body=DBody
+			'<description>'
+				description=DBody
+			'</description>'
+			(extendedDescription=DBody)?
 	'</Item>';
-
-enum VVerificationMethod returns tdm::VVerificationMethod:
+    
+enum VValidationMethod returns tdm::VValidationMethod:
 	Analysis = '"Analysis"' | Inspection = '"Inspection"' | Testing = '"Testing"' |
 	Review = '"Review"' | ModelSimulation = '"ModelSimulation"' | WalkThrough = '"WalkThrough"' |
 	CrossReading = '"CrossReading"' | DeskChecking = '"DeskChecking"';
@@ -326,24 +370,28 @@ VSSSVerificationValidationProcessRequirements returns VSSSVerificationValidation
 	{VSSSVerificationValidationProcessRequirements}	
 	'<VerificationValidationProcessRequirements>'
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</VerificationValidationProcessRequirements>';
 
 VSSSValidationApproach returns VSSSValidationApproach:
 	{VSSSValidationApproach}
 	'<ValidationApproach>'
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</ValidationApproach>';
 
 VSSSValidationRequirements returns VSSSValidationRequirements:
 	{VSSSValidationRequirements}
 	'<ValidationRequirements>'
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</ValidationRequirements>';
 
 VSSSVerificationRequirements returns VSSSVerificationRequirements:
 	{VSSSVerificationRequirements}
 	'<VerificationRequirements>'
 		(sssItems+=VSSSDocumentItem)*
+		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</VerificationRequirements>';
 
 VSSSSystemModel returns VSSSSystemModel:

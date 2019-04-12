@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements;
@@ -46,6 +47,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl#getSectionDescription <em>Section Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl#getGeneral <em>General</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl#getCapabilities <em>Capabilities</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl#getSystemInterface <em>System Interface</em>}</li>
@@ -64,6 +66,16 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements VSSSSpecificRequirements {
+	/**
+	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSectionDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected DBody sectionDescription;
+
 	/**
 	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -211,6 +223,49 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	protected EClass eStaticClass() {
 		return sssPackage.Literals.VSSS_SPECIFIC_REQUIREMENTS;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public DBody getSectionDescription() {
+		return sectionDescription;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
+		sectionDescription = newSectionDescription;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setSectionDescription(DBody newSectionDescription) {
+		if (newSectionDescription != sectionDescription) {
+			NotificationChain msgs = null;
+			if (sectionDescription != null)
+				msgs = ((InternalEObject)sectionDescription).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION, null, msgs);
+			if (newSectionDescription != null)
+				msgs = ((InternalEObject)newSectionDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION, null, msgs);
+			msgs = basicSetSectionDescription(newSectionDescription, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION, newSectionDescription, newSectionDescription));
 	}
 
 	/**
@@ -780,6 +835,8 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
+				return basicSetSectionDescription(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				return basicSetGeneral(null, msgs);
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
@@ -818,6 +875,8 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
+				return getSectionDescription();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				return getGeneral();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:
@@ -856,6 +915,9 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
+				setSectionDescription((DBody)newValue);
+				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				setGeneral((VSSSGeneralRequirements)newValue);
 				return;
@@ -907,6 +969,9 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
+				setSectionDescription((DBody)null);
+				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				setGeneral((VSSSGeneralRequirements)null);
 				return;
@@ -958,6 +1023,8 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
+				return sectionDescription != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				return general != null;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES:

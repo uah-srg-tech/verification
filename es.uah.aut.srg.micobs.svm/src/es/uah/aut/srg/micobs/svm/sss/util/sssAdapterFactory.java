@@ -10,17 +10,17 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.util;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
-
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -105,8 +105,8 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSTermsDefinitionsAbbreviationsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSBriefDescription(VSSSBriefDescription object) {
-				return createVSSSBriefDescriptionAdapter();
+			public Adapter caseVSSSAbstractBriefDescription(VSSSAbstractBriefDescription object) {
+				return createVSSSAbstractBriefDescriptionAdapter();
 			}
 			@Override
 			public Adapter caseVSSSTerm(VSSSTerm object) {
@@ -121,12 +121,24 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSAbbreviationAdapter();
 			}
 			@Override
+			public Adapter caseVSSSFixedSection(VSSSFixedSection object) {
+				return createVSSSFixedSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSSSInstantiableSection(VSSSInstantiableSection object) {
+				return createVSSSInstantiableSectionAdapter();
+			}
+			@Override
 			public Adapter caseVSSSGeneralDescription(VSSSGeneralDescription object) {
 				return createVSSSGeneralDescriptionAdapter();
 			}
 			@Override
-			public Adapter caseVSSSGeneralDescriptionSubsection(VSSSGeneralDescriptionSubsection object) {
-				return createVSSSGeneralDescriptionSubsectionAdapter();
+			public Adapter caseVSSSAbstractRequirementSection(VSSSAbstractRequirementSection object) {
+				return createVSSSAbstractRequirementSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSSSInstantiableRequirementSection(VSSSInstantiableRequirementSection object) {
+				return createVSSSInstantiableRequirementSectionAdapter();
 			}
 			@Override
 			public Adapter caseVSSSSpecificRequirements(VSSSSpecificRequirements object) {
@@ -233,12 +245,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createDFixedSectionAdapter();
 			}
 			@Override
-			public Adapter caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
-				return createVTraceableDocumentAbstractGroupAdapter();
+			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
+				return createMCommonReferenceableObjAdapter();
 			}
 			@Override
-			public Adapter caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
-				return createVTraceableDocumentFixedGroupAdapter();
+			public Adapter caseDInstantiableSection(DInstantiableSection object) {
+				return createDInstantiableSectionAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
+				return createVTraceableDocumentAbstractGroupAdapter();
 			}
 			@Override
 			public Adapter caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
@@ -335,16 +351,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription <em>VSSS Brief Description</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription <em>VSSS Abstract Brief Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSBriefDescription
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription
 	 * @generated
 	 */
-	public Adapter createVSSSBriefDescriptionAdapter() {
+	public Adapter createVSSSAbstractBriefDescriptionAdapter() {
 		return null;
 	}
 
@@ -391,6 +407,34 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection <em>VSSS Fixed Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection
+	 * @generated
+	 */
+	public Adapter createVSSSFixedSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection <em>VSSS Instantiable Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection
+	 * @generated
+	 */
+	public Adapter createVSSSInstantiableSectionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription <em>VSSS General Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -405,16 +449,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection <em>VSSS General Description Subsection</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection <em>VSSS Abstract Requirement Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescriptionSubsection
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection
 	 * @generated
 	 */
-	public Adapter createVSSSGeneralDescriptionSubsectionAdapter() {
+	public Adapter createVSSSAbstractRequirementSectionAdapter() {
 		return null;
 	}
 
@@ -429,6 +473,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSSSSpecificRequirementsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection <em>VSSS Instantiable Requirement Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection
+	 * @generated
+	 */
+	public Adapter createVSSSInstantiableRequirementSectionAdapter() {
 		return null;
 	}
 
@@ -783,6 +841,34 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonReferenceableObj <em>MCommon Referenceable Obj</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.common.MCommonReferenceableObj
+	 * @generated
+	 */
+	public Adapter createMCommonReferenceableObjAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection <em>DInstantiable Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection
+	 * @generated
+	 */
+	public Adapter createDInstantiableSectionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup <em>VTraceable Document Abstract Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -793,20 +879,6 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentAbstractGroupAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup <em>VTraceable Document Fixed Group</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup
-	 * @generated
-	 */
-	public Adapter createVTraceableDocumentFixedGroupAdapter() {
 		return null;
 	}
 

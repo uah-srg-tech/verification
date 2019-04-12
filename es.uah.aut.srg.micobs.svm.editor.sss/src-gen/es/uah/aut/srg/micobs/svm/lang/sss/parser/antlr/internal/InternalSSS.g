@@ -469,11 +469,11 @@ ruleDBodyContent returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getDBodyContentAccess().getDFigureParserRuleCall_3());
+			newCompositeNode(grammarAccess.getDBodyContentAccess().getDFigureFromFileParserRuleCall_3());
 		}
-		this_DFigure_3=ruleDFigure
+		this_DFigureFromFile_3=ruleDFigureFromFile
 		{
-			$current = $this_DFigure_3.current;
+			$current = $this_DFigureFromFile_3.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -481,11 +481,11 @@ ruleDBodyContent returns [EObject current=null]
 			/* */
 		}
 		{
-			newCompositeNode(grammarAccess.getDBodyContentAccess().getDPictureAsTableParserRuleCall_4());
+			newCompositeNode(grammarAccess.getDBodyContentAccess().getDTableFromFileParserRuleCall_4());
 		}
-		this_DPictureAsTable_4=ruleDPictureAsTable
+		this_DTableFromFile_4=ruleDTableFromFile
 		{
-			$current = $this_DPictureAsTable_4.current;
+			$current = $this_DTableFromFile_4.current;
 			afterParserOrEnumRuleCall();
 		}
 		    |
@@ -973,15 +973,15 @@ ruleDText returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleDFigure
-entryRuleDFigure returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDFigureRule()); }
-	iv_ruleDFigure=ruleDFigure
-	{ $current=$iv_ruleDFigure.current; }
+// Entry rule entryRuleDFigureFromFile
+entryRuleDFigureFromFile returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDFigureFromFileRule()); }
+	iv_ruleDFigureFromFile=ruleDFigureFromFile
+	{ $current=$iv_ruleDFigureFromFile.current; }
 	EOF;
 
-// Rule DFigure
-ruleDFigure returns [EObject current=null]
+// Rule DFigureFromFile
+ruleDFigureFromFile returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -991,21 +991,21 @@ ruleDFigure returns [EObject current=null]
 	(
 		otherlv_0='<figure'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDFigureAccess().getFigureKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getDFigureFromFileAccess().getFigureKeyword_0());
 		}
 		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDFigureAccess().getNameKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getDFigureFromFileAccess().getNameKeyword_1());
 		}
 		(
 			(
 				lv_name_2_0=RULE_STRING
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getDFigureAccess().getNameSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getDFigureFromFileAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDFigureRule());
+						$current = createModelElement(grammarAccess.getDFigureFromFileRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -1015,66 +1015,68 @@ ruleDFigure returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='reference='
+		otherlv_3='referenceFile='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDFigureAccess().getReferenceKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getDFigureFromFileAccess().getReferenceFileKeyword_3());
 		}
 		(
 			(
-				lv_reference_4_0=RULE_STRING
+				lv_referenceFile_4_0=RULE_STRING
 				{
-					newLeafNode(lv_reference_4_0, grammarAccess.getDFigureAccess().getReferenceSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_referenceFile_4_0, grammarAccess.getDFigureFromFileAccess().getReferenceFileSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDFigureRule());
+						$current = createModelElement(grammarAccess.getDFigureFromFileRule());
 					}
 					setWithLastConsumed(
 						$current,
-						"reference",
-						lv_reference_4_0,
+						"referenceFile",
+						lv_referenceFile_4_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_5='caption='
-		{
-			newLeafNode(otherlv_5, grammarAccess.getDFigureAccess().getCaptionKeyword_5());
-		}
 		(
+			otherlv_5='caption='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_5_0());
+			}
 			(
-				lv_caption_6_0=RULE_STRING
-				{
-					newLeafNode(lv_caption_6_0, grammarAccess.getDFigureAccess().getCaptionSTRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDFigureRule());
+				(
+					lv_caption_6_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_6_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_5_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"caption",
-						lv_caption_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDFigureFromFileRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"caption",
+							lv_caption_6_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
+		)?
 		otherlv_7='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDFigureAccess().getSolidusGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_6());
 		}
 	)
 ;
 
-// Entry rule entryRuleDPictureAsTable
-entryRuleDPictureAsTable returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDPictureAsTableRule()); }
-	iv_ruleDPictureAsTable=ruleDPictureAsTable
-	{ $current=$iv_ruleDPictureAsTable.current; }
+// Entry rule entryRuleDTableFromFile
+entryRuleDTableFromFile returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTableFromFileRule()); }
+	iv_ruleDTableFromFile=ruleDTableFromFile
+	{ $current=$iv_ruleDTableFromFile.current; }
 	EOF;
 
-// Rule DPictureAsTable
-ruleDPictureAsTable returns [EObject current=null]
+// Rule DTableFromFile
+ruleDTableFromFile returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -1084,21 +1086,21 @@ ruleDPictureAsTable returns [EObject current=null]
 	(
 		otherlv_0='<pictureAsTable'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDPictureAsTableAccess().getPictureAsTableKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getDTableFromFileAccess().getPictureAsTableKeyword_0());
 		}
 		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getDPictureAsTableAccess().getNameKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getDTableFromFileAccess().getNameKeyword_1());
 		}
 		(
 			(
 				lv_name_2_0=RULE_STRING
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getDPictureAsTableAccess().getNameSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getDTableFromFileAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDPictureAsTableRule());
+						$current = createModelElement(grammarAccess.getDTableFromFileRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -1108,53 +1110,55 @@ ruleDPictureAsTable returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='reference='
+		otherlv_3='referenceFile='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDPictureAsTableAccess().getReferenceKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getDTableFromFileAccess().getReferenceFileKeyword_3());
 		}
 		(
 			(
-				lv_reference_4_0=RULE_STRING
+				lv_referenceFile_4_0=RULE_STRING
 				{
-					newLeafNode(lv_reference_4_0, grammarAccess.getDPictureAsTableAccess().getReferenceSTRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_referenceFile_4_0, grammarAccess.getDTableFromFileAccess().getReferenceFileSTRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDPictureAsTableRule());
+						$current = createModelElement(grammarAccess.getDTableFromFileRule());
 					}
 					setWithLastConsumed(
 						$current,
-						"reference",
-						lv_reference_4_0,
+						"referenceFile",
+						lv_referenceFile_4_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_5='caption='
-		{
-			newLeafNode(otherlv_5, grammarAccess.getDPictureAsTableAccess().getCaptionKeyword_5());
-		}
 		(
+			otherlv_5='caption='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_5_0());
+			}
 			(
-				lv_caption_6_0=RULE_STRING
-				{
-					newLeafNode(lv_caption_6_0, grammarAccess.getDPictureAsTableAccess().getCaptionSTRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDPictureAsTableRule());
+				(
+					lv_caption_6_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_6_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_5_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"caption",
-						lv_caption_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDTableFromFileRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"caption",
+							lv_caption_6_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
+		)?
 		otherlv_7='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDPictureAsTableAccess().getSolidusGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_6());
 		}
 	)
 ;
@@ -1201,36 +1205,38 @@ ruleDBasicTable returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='caption='
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDBasicTableAccess().getCaptionKeyword_3());
-		}
 		(
+			otherlv_3='caption='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDBasicTableAccess().getCaptionKeyword_3_0());
+			}
 			(
-				lv_caption_4_0=RULE_STRING
-				{
-					newLeafNode(lv_caption_4_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDBasicTableRule());
+				(
+					lv_caption_4_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_4_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_3_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"caption",
-						lv_caption_4_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDBasicTableRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"caption",
+							lv_caption_4_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
 			)
-		)
+		)?
 		otherlv_5='>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_4());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_5_0());
 				}
 				lv_rows_6_0=ruleDRow
 				{
@@ -1248,7 +1254,7 @@ ruleDBasicTable returns [EObject current=null]
 		)+
 		otherlv_7='</basicTable>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_6());
 		}
 	)
 ;
@@ -1769,6 +1775,135 @@ ruleDReferenceDocument returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleVSSSFixedSection
+entryRuleVSSSFixedSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSSSFixedSectionRule()); }
+	iv_ruleVSSSFixedSection=ruleVSSSFixedSection
+	{ $current=$iv_ruleVSSSFixedSection.current; }
+	EOF;
+
+// Rule VSSSFixedSection
+ruleVSSSFixedSection returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getBodyDBodyParserRuleCall_0_0());
+				}
+				lv_body_0_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSFixedSectionRule());
+					}
+					set(
+						$current,
+						"body",
+						lv_body_0_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0());
+				}
+				lv_sssInstatiableSubsections_1_0=ruleVSSSInstatiableSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSFixedSectionRule());
+					}
+					add(
+						$current,
+						"sssInstatiableSubsections",
+						lv_sssInstatiableSubsections_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+	)
+;
+
+// Entry rule entryRuleVSSSInstatiableSection
+entryRuleVSSSInstatiableSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSSSInstatiableSectionRule()); }
+	iv_ruleVSSSInstatiableSection=ruleVSSSInstatiableSection
+	{ $current=$iv_ruleVSSSInstatiableSection.current; }
+	EOF;
+
+// Rule VSSSInstatiableSection
+ruleVSSSInstatiableSection returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<subsection'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSSSInstatiableSectionAccess().getSubsectionKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSSSInstatiableSectionAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSSSInstatiableSectionAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSSSInstatiableSectionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSSSInstatiableSectionAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSInstatiableSectionAccess().getBodyDBodyParserRuleCall_4_0());
+				}
+				lv_body_4_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSInstatiableSectionRule());
+					}
+					set(
+						$current,
+						"body",
+						lv_body_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='</subsection>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSSSInstatiableSectionAccess().getSubsectionKeyword_5());
+		}
+	)
+;
+
 // Entry rule entryRuleVSSSIntroduction
 entryRuleVSSSIntroduction returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getVSSSIntroductionRule()); }
@@ -1789,117 +1924,28 @@ ruleVSSSIntroduction returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSSSIntroductionAccess().getIntroductionKeyword_0());
 		}
-		otherlv_1='<purpose>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getVSSSIntroductionAccess().getPurposeKeyword_1());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSIntroductionAccess().getPurposeDBodyParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSIntroductionAccess().getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0());
 				}
-				lv_purpose_2_0=ruleDBody
+				lv_sssInstatiableSubsections_1_0=ruleVSSSInstatiableSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSIntroductionRule());
 					}
-					set(
+					add(
 						$current,
-						"purpose",
-						lv_purpose_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+						"sssInstatiableSubsections",
+						lv_sssInstatiableSubsections_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
-		otherlv_3='</purpose>'
+		)+
+		otherlv_2='</Introduction>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSIntroductionAccess().getPurposeKeyword_3());
-		}
-		otherlv_4='<objective>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSSSIntroductionAccess().getObjectiveKeyword_4());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSSSIntroductionAccess().getObjectiveDBodyParserRuleCall_5_0());
-				}
-				lv_objective_5_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSSSIntroductionRule());
-					}
-					set(
-						$current,
-						"objective",
-						lv_objective_5_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_6='</objective>'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getVSSSIntroductionAccess().getObjectiveKeyword_6());
-		}
-		otherlv_7='<content>'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getVSSSIntroductionAccess().getContentKeyword_7());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSSSIntroductionAccess().getContentDBodyParserRuleCall_8_0());
-				}
-				lv_content_8_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSSSIntroductionRule());
-					}
-					set(
-						$current,
-						"content",
-						lv_content_8_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_9='</content>'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getVSSSIntroductionAccess().getContentKeyword_9());
-		}
-		otherlv_10='<reason>'
-		{
-			newLeafNode(otherlv_10, grammarAccess.getVSSSIntroductionAccess().getReasonKeyword_10());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSSSIntroductionAccess().getReasonDBodyParserRuleCall_11_0());
-				}
-				lv_reason_11_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSSSIntroductionRule());
-					}
-					set(
-						$current,
-						"reason",
-						lv_reason_11_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_12='</reason>'
-		{
-			newLeafNode(otherlv_12, grammarAccess.getVSSSIntroductionAccess().getReasonKeyword_12());
-		}
-		otherlv_13='</Introduction>'
-		{
-			newLeafNode(otherlv_13, grammarAccess.getVSSSIntroductionAccess().getIntroductionKeyword_13());
+			newLeafNode(otherlv_2, grammarAccess.getVSSSIntroductionAccess().getIntroductionKeyword_2());
 		}
 	)
 ;
@@ -2137,9 +2183,9 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getProductPerspectiveVSSSGeneralDescriptionSubsectionParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getProductPerspectiveVSSSFixedSectionParserRuleCall_2_0());
 				}
-				lv_productPerspective_2_0=ruleVSSSGeneralDescriptionSubsection
+				lv_productPerspective_2_0=ruleVSSSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionRule());
@@ -2148,7 +2194,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 						$current,
 						"productPerspective",
 						lv_productPerspective_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2164,9 +2210,9 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralCapabilitiesVSSSGeneralDescriptionSubsectionParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0());
 				}
-				lv_generalCapabilities_5_0=ruleVSSSGeneralDescriptionSubsection
+				lv_generalCapabilities_5_0=ruleVSSSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionRule());
@@ -2175,7 +2221,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 						$current,
 						"generalCapabilities",
 						lv_generalCapabilities_5_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2191,9 +2237,9 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralConstraintsVSSSGeneralDescriptionSubsectionParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0());
 				}
-				lv_generalConstraints_8_0=ruleVSSSGeneralDescriptionSubsection
+				lv_generalConstraints_8_0=ruleVSSSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionRule());
@@ -2202,7 +2248,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 						$current,
 						"generalConstraints",
 						lv_generalConstraints_8_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2218,9 +2264,9 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getOperationalEnvironmentVSSSGeneralDescriptionSubsectionParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0());
 				}
-				lv_operationalEnvironment_11_0=ruleVSSSGeneralDescriptionSubsection
+				lv_operationalEnvironment_11_0=ruleVSSSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionRule());
@@ -2229,7 +2275,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 						$current,
 						"operationalEnvironment",
 						lv_operationalEnvironment_11_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2245,9 +2291,9 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getAssumptionsDependenciesVSSSGeneralDescriptionSubsectionParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralDescriptionAccess().getAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0());
 				}
-				lv_assumptionsDependencies_14_0=ruleVSSSGeneralDescriptionSubsection
+				lv_assumptionsDependencies_14_0=ruleVSSSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionRule());
@@ -2256,7 +2302,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 						$current,
 						"assumptionsDependencies",
 						lv_assumptionsDependencies_14_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralDescriptionSubsection");
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -2295,9 +2341,28 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getGeneralVSSSGeneralRequirementsParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_1_0());
 				}
-				lv_general_1_0=ruleVSSSGeneralRequirements
+				lv_sectionDescription_1_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getGeneralVSSSGeneralRequirementsParserRuleCall_2_0());
+				}
+				lv_general_2_0=ruleVSSSGeneralRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2305,7 +2370,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"general",
-						lv_general_1_0,
+						lv_general_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSGeneralRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2314,9 +2379,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getCapabilitiesVSSSCapabilitiesRequirementsParserRuleCall_3_0());
 				}
-				lv_capabilities_2_0=ruleVSSSCapabilitiesRequirements
+				lv_capabilities_3_0=ruleVSSSCapabilitiesRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2324,7 +2389,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"capabilities",
-						lv_capabilities_2_0,
+						lv_capabilities_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSCapabilitiesRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2333,9 +2398,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSystemInterfaceVSSSSystemInterfaceRequirementsParserRuleCall_4_0());
 				}
-				lv_systemInterface_3_0=ruleVSSSSystemInterfaceRequirements
+				lv_systemInterface_4_0=ruleVSSSSystemInterfaceRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2343,7 +2408,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"systemInterface",
-						lv_systemInterface_3_0,
+						lv_systemInterface_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemInterfaceRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2352,9 +2417,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getAdaptationMissionizationVSSSAdaptationMissionizationRequirementsParserRuleCall_5_0());
 				}
-				lv_adaptationMissionization_4_0=ruleVSSSAdaptationMissionizationRequirements
+				lv_adaptationMissionization_5_0=ruleVSSSAdaptationMissionizationRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2362,7 +2427,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"adaptationMissionization",
-						lv_adaptationMissionization_4_0,
+						lv_adaptationMissionization_5_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSAdaptationMissionizationRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2371,9 +2436,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getComputerResourceVSSSComputerResourceRequirementsParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getComputerResourceVSSSComputerResourceRequirementsParserRuleCall_6_0());
 				}
-				lv_computerResource_5_0=ruleVSSSComputerResourceRequirements
+				lv_computerResource_6_0=ruleVSSSComputerResourceRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2381,7 +2446,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"computerResource",
-						lv_computerResource_5_0,
+						lv_computerResource_6_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSComputerResourceRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2390,9 +2455,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSecurityVSSSSecurityRequirementsParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSecurityVSSSSecurityRequirementsParserRuleCall_7_0());
 				}
-				lv_security_6_0=ruleVSSSSecurityRequirements
+				lv_security_7_0=ruleVSSSSecurityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2400,7 +2465,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"security",
-						lv_security_6_0,
+						lv_security_7_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSecurityRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2409,9 +2474,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSafetyVSSSSafetyRequirementsParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSafetyVSSSSafetyRequirementsParserRuleCall_8_0());
 				}
-				lv_safety_7_0=ruleVSSSSafetyRequirements
+				lv_safety_8_0=ruleVSSSSafetyRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2419,7 +2484,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"safety",
-						lv_safety_7_0,
+						lv_safety_8_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSafetyRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2428,9 +2493,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0());
 				}
-				lv_reliabiltyAvailability_8_0=ruleVSSSReliabiltyAvailabilityRequirements
+				lv_reliabiltyAvailability_9_0=ruleVSSSReliabiltyAvailabilityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2438,7 +2503,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"reliabiltyAvailability",
-						lv_reliabiltyAvailability_8_0,
+						lv_reliabiltyAvailability_9_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSReliabiltyAvailabilityRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2447,9 +2512,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getQualityVSSSQualityRequirementsParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getQualityVSSSQualityRequirementsParserRuleCall_10_0());
 				}
-				lv_quality_9_0=ruleVSSSQualityRequirements
+				lv_quality_10_0=ruleVSSSQualityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2457,7 +2522,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"quality",
-						lv_quality_9_0,
+						lv_quality_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSQualityRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2466,9 +2531,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getDesignVSSSDesignRequirementsParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getDesignVSSSDesignRequirementsParserRuleCall_11_0());
 				}
-				lv_design_10_0=ruleVSSSDesignRequirements
+				lv_design_11_0=ruleVSSSDesignRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2476,7 +2541,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"design",
-						lv_design_10_0,
+						lv_design_11_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDesignRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2485,9 +2550,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSoftwareOperationsVSSSSoftwareOperationsRequirementsParserRuleCall_12_0());
 				}
-				lv_softwareOperations_11_0=ruleVSSSSoftwareOperationsRequirements
+				lv_softwareOperations_12_0=ruleVSSSSoftwareOperationsRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2495,7 +2560,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"softwareOperations",
-						lv_softwareOperations_11_0,
+						lv_softwareOperations_12_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSoftwareOperationsRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2504,9 +2569,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSoftwareMaintenanceVSSSSoftwareMaintenanceRequirementsParserRuleCall_13_0());
 				}
-				lv_softwareMaintenance_12_0=ruleVSSSSoftwareMaintenanceRequirements
+				lv_softwareMaintenance_13_0=ruleVSSSSoftwareMaintenanceRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2514,7 +2579,7 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"softwareMaintenance",
-						lv_softwareMaintenance_12_0,
+						lv_softwareMaintenance_13_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSoftwareMaintenanceRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2523,9 +2588,9 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getSystemSoftwareObservabilityVSSSSystemSoftwareObservabilityRequirementsParserRuleCall_14_0());
 				}
-				lv_systemSoftwareObservability_13_0=ruleVSSSSystemSoftwareObservabilityRequirements
+				lv_systemSoftwareObservability_14_0=ruleVSSSSystemSoftwareObservabilityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
@@ -2533,15 +2598,15 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 					set(
 						$current,
 						"systemSoftwareObservability",
-						lv_systemSoftwareObservability_13_0,
+						lv_systemSoftwareObservability_14_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSSystemSoftwareObservabilityRequirements");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_14='</SpecificRequirements>'
+		otherlv_15='</SpecificRequirements>'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getVSSSSpecificRequirementsAccess().getSpecificRequirementsKeyword_14());
+			newLeafNode(otherlv_15, grammarAccess.getVSSSSpecificRequirementsAccess().getSpecificRequirementsKeyword_15());
 		}
 	)
 ;
@@ -2569,9 +2634,28 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_1_0());
 				}
-				lv_verificationValidationProcess_1_0=ruleVSSSVerificationValidationProcessRequirements
+				lv_sectionDescription_1_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationValidationProcessVSSSVerificationValidationProcessRequirementsParserRuleCall_2_0());
+				}
+				lv_verificationValidationProcess_2_0=ruleVSSSVerificationValidationProcessRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsRule());
@@ -2579,7 +2663,7 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 					set(
 						$current,
 						"verificationValidationProcess",
-						lv_verificationValidationProcess_1_0,
+						lv_verificationValidationProcess_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSVerificationValidationProcessRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2588,9 +2672,9 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getValidationApproachVSSSValidationApproachParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getValidationApproachVSSSValidationApproachParserRuleCall_3_0());
 				}
-				lv_validationApproach_2_0=ruleVSSSValidationApproach
+				lv_validationApproach_3_0=ruleVSSSValidationApproach
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsRule());
@@ -2598,7 +2682,7 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 					set(
 						$current,
 						"validationApproach",
-						lv_validationApproach_2_0,
+						lv_validationApproach_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSValidationApproach");
 					afterParserOrEnumRuleCall();
 				}
@@ -2607,9 +2691,9 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getValidationVSSSValidationRequirementsParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getValidationVSSSValidationRequirementsParserRuleCall_4_0());
 				}
-				lv_validation_3_0=ruleVSSSValidationRequirements
+				lv_validation_4_0=ruleVSSSValidationRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsRule());
@@ -2617,7 +2701,7 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 					set(
 						$current,
 						"validation",
-						lv_validation_3_0,
+						lv_validation_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSValidationRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -2626,9 +2710,9 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationVSSSVerificationRequirementsParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationVSSSVerificationRequirementsParserRuleCall_5_0());
 				}
-				lv_verification_4_0=ruleVSSSVerificationRequirements
+				lv_verification_5_0=ruleVSSSVerificationRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationIntegrationRequirementsRule());
@@ -2636,15 +2720,15 @@ ruleVSSSVerificationValidationIntegrationRequirements returns [EObject current=n
 					set(
 						$current,
 						"verification",
-						lv_verification_4_0,
+						lv_verification_5_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSVerificationRequirements");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='</VerificationValidationIntegrationRequirements>'
+		otherlv_6='</VerificationValidationIntegrationRequirements>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationValidationIntegrationRequirementsKeyword_5());
+			newLeafNode(otherlv_6, grammarAccess.getVSSSVerificationValidationIntegrationRequirementsAccess().getVerificationValidationIntegrationRequirementsKeyword_6());
 		}
 	)
 ;
@@ -2921,15 +3005,15 @@ ruleVSSSAbbreviation returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleVSSSGeneralDescriptionSubsection
-entryRuleVSSSGeneralDescriptionSubsection returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSSSGeneralDescriptionSubsectionRule()); }
-	iv_ruleVSSSGeneralDescriptionSubsection=ruleVSSSGeneralDescriptionSubsection
-	{ $current=$iv_ruleVSSSGeneralDescriptionSubsection.current; }
+// Entry rule entryRuleVSSSInstantiableRequirementSection
+entryRuleVSSSInstantiableRequirementSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSSSInstantiableRequirementSectionRule()); }
+	iv_ruleVSSSInstantiableRequirementSection=ruleVSSSInstantiableRequirementSection
+	{ $current=$iv_ruleVSSSInstantiableRequirementSection.current; }
 	EOF;
 
-// Rule VSSSGeneralDescriptionSubsection
-ruleVSSSGeneralDescriptionSubsection returns [EObject current=null]
+// Rule VSSSInstantiableRequirementSection
+ruleVSSSInstantiableRequirementSection returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -2937,23 +3021,78 @@ ruleVSSSGeneralDescriptionSubsection returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='<subsection'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSSSInstantiableRequirementSectionAccess().getSubsectionKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSSSInstantiableRequirementSectionAccess().getNameKeyword_1());
+		}
 		(
-			{
-				newCompositeNode(grammarAccess.getVSSSGeneralDescriptionSubsectionAccess().getBodyDBodyParserRuleCall_0());
-			}
-			lv_body_0_0=ruleDBody
-			{
-				if ($current==null) {
-					$current = createModelElementForParent(grammarAccess.getVSSSGeneralDescriptionSubsectionRule());
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSSSInstantiableRequirementSectionAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
-				set(
-					$current,
-					"body",
-					lv_body_0_0,
-					"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
-				afterParserOrEnumRuleCall();
-			}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSSSInstantiableRequirementSectionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
 		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSSSInstantiableRequirementSectionAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSInstantiableRequirementSectionAccess().getSectionDescriptionDBodyParserRuleCall_4_0());
+				}
+				lv_sectionDescription_4_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSInstantiableRequirementSectionRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSInstantiableRequirementSectionAccess().getSssItemsVSSSDocumentItemParserRuleCall_5_0());
+				}
+				lv_sssItems_5_0=ruleVSSSDocumentItem
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSInstantiableRequirementSectionRule());
+					}
+					add(
+						$current,
+						"sssItems",
+						lv_sssItems_5_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_6='</subsection>'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getVSSSInstantiableRequirementSectionAccess().getSubsectionKeyword_6());
+		}
 	)
 ;
 
@@ -2990,9 +3129,28 @@ ruleVSSSGeneralRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSGeneralRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSGeneralRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSGeneralRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSGeneralRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSGeneralRequirementsRule());
@@ -3000,15 +3158,34 @@ ruleVSSSGeneralRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</GeneralRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSGeneralRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSGeneralRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</GeneralRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSGeneralRequirementsAccess().getGeneralRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSGeneralRequirementsAccess().getGeneralRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3046,9 +3223,28 @@ ruleVSSSCapabilitiesRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSCapabilitiesRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSCapabilitiesRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSCapabilitiesRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSCapabilitiesRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSCapabilitiesRequirementsRule());
@@ -3056,15 +3252,34 @@ ruleVSSSCapabilitiesRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</CapabilitiesRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSCapabilitiesRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSCapabilitiesRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</CapabilitiesRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSCapabilitiesRequirementsAccess().getCapabilitiesRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSCapabilitiesRequirementsAccess().getCapabilitiesRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3102,9 +3317,28 @@ ruleVSSSSystemInterfaceRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSystemInterfaceRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSystemInterfaceRequirementsRule());
@@ -3112,15 +3346,34 @@ ruleVSSSSystemInterfaceRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SystemInterfaceRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSystemInterfaceRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SystemInterfaceRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSystemInterfaceRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSystemInterfaceRequirementsAccess().getSystemInterfaceRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3158,9 +3411,28 @@ ruleVSSSAdaptationMissionizationRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSAdaptationMissionizationRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSAdaptationMissionizationRequirementsRule());
@@ -3168,15 +3440,34 @@ ruleVSSSAdaptationMissionizationRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</VSSSAdaptationMissionizationRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSAdaptationMissionizationRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</VSSSAdaptationMissionizationRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3214,9 +3505,28 @@ ruleVSSSComputerResourceRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSComputerResourceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSComputerResourceRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSComputerResourceRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSComputerResourceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSComputerResourceRequirementsRule());
@@ -3224,15 +3534,34 @@ ruleVSSSComputerResourceRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</ComputerResourceRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSComputerResourceRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSComputerResourceRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</ComputerResourceRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSComputerResourceRequirementsAccess().getComputerResourceRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSComputerResourceRequirementsAccess().getComputerResourceRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3270,9 +3599,28 @@ ruleVSSSSecurityRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSecurityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSecurityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSecurityRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSecurityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSecurityRequirementsRule());
@@ -3280,15 +3628,34 @@ ruleVSSSSecurityRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SecurityRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSecurityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSecurityRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SecurityRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSecurityRequirementsAccess().getSecurityRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSecurityRequirementsAccess().getSecurityRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3326,9 +3693,28 @@ ruleVSSSSafetyRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSafetyRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSafetyRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSafetyRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSafetyRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSafetyRequirementsRule());
@@ -3336,15 +3722,34 @@ ruleVSSSSafetyRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SafetyRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSafetyRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSafetyRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SafetyRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSafetyRequirementsAccess().getSafetyRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSafetyRequirementsAccess().getSafetyRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3398,9 +3803,47 @@ ruleVSSSReliabiltyAvailabilityRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_3='</ReliabiltyAvailabilityRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_3_0());
+				}
+				lv_sectionDescription_3_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</ReliabiltyAvailabilityRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3438,9 +3881,28 @@ ruleVSSSQualityRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSQualityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSQualityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSQualityRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSQualityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSQualityRequirementsRule());
@@ -3448,15 +3910,34 @@ ruleVSSSQualityRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</QualityRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSQualityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSQualityRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</QualityRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSQualityRequirementsAccess().getQualityRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSQualityRequirementsAccess().getQualityRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3494,9 +3975,28 @@ ruleVSSSDesignRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSDesignRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSDesignRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSDesignRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSDesignRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSDesignRequirementsRule());
@@ -3504,15 +4004,34 @@ ruleVSSSDesignRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</DesignRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSDesignRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSDesignRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</DesignRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSDesignRequirementsAccess().getDesignRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSDesignRequirementsAccess().getDesignRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3550,9 +4069,28 @@ ruleVSSSSoftwareOperationsRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareOperationsRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareOperationsRequirementsRule());
@@ -3560,15 +4098,34 @@ ruleVSSSSoftwareOperationsRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SoftwareOperationsRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareOperationsRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SoftwareOperationsRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSoftwareOperationsRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getSoftwareOperationsRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3606,9 +4163,28 @@ ruleVSSSSoftwareMaintenanceRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareMaintenanceRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareMaintenanceRequirementsRule());
@@ -3616,15 +4192,34 @@ ruleVSSSSoftwareMaintenanceRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SoftwareMaintenanceRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSoftwareMaintenanceRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SoftwareMaintenanceRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSoftwareMaintenanceRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getSoftwareMaintenanceRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3662,9 +4257,28 @@ ruleVSSSSystemSoftwareObservabilityRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
-				lv_sssItems_2_0=ruleVSSSDocumentItem
+				lv_sectionDescription_2_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsRule());
+					}
+					set(
+						$current,
+						"sectionDescription",
+						lv_sectionDescription_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_3_0());
+				}
+				lv_sssItems_3_0=ruleVSSSDocumentItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsRule());
@@ -3672,15 +4286,34 @@ ruleVSSSSystemSoftwareObservabilityRequirements returns [EObject current=null]
 					add(
 						$current,
 						"sssItems",
-						lv_sssItems_2_0,
+						lv_sssItems_3_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSDocumentItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_3='</SystemSoftwareObservabilityRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0());
+				}
+				lv_sssRequirementSubsections_4_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_5='</SystemSoftwareObservabilityRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSystemSoftwareObservabilityRequirementsKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getSystemSoftwareObservabilityRequirementsKeyword_5());
 		}
 	)
 ;
@@ -3705,15 +4338,15 @@ ruleVSSSDocumentItem returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSSSDocumentItemAccess().getItemKeyword_0());
 		}
-		otherlv_1='id='
+		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSSSDocumentItemAccess().getIdKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSSSDocumentItemAccess().getNameKeyword_1());
 		}
 		(
 			(
-				lv_id_2_0=RULE_STRING
+				lv_name_2_0=RULE_STRING
 				{
-					newLeafNode(lv_id_2_0, grammarAccess.getVSSSDocumentItemAccess().getIdSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getVSSSDocumentItemAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -3721,31 +4354,31 @@ ruleVSSSDocumentItem returns [EObject current=null]
 					}
 					setWithLastConsumed(
 						$current,
-						"id",
-						lv_id_2_0,
+						"name",
+						lv_name_2_0,
 						"org.eclipse.xtext.common.Terminals.STRING");
 				}
 			)
 		)
-		otherlv_3='verificationMethod='
+		otherlv_3='validationMethod='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSDocumentItemAccess().getVerificationMethodKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVSSSDocumentItemAccess().getValidationMethodKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getVerificationMethodVVerificationMethodEnumRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getValidationMethodVValidationMethodEnumRuleCall_4_0());
 				}
-				lv_verificationMethod_4_0=ruleVVerificationMethod
+				lv_validationMethod_4_0=ruleVValidationMethod
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSDocumentItemRule());
 					}
 					set(
 						$current,
-						"verificationMethod",
-						lv_verificationMethod_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VVerificationMethod");
+						"validationMethod",
+						lv_validationMethod_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VValidationMethod");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3754,28 +4387,55 @@ ruleVSSSDocumentItem returns [EObject current=null]
 		{
 			newLeafNode(otherlv_5, grammarAccess.getVSSSDocumentItemAccess().getGreaterThanSignKeyword_5());
 		}
+		otherlv_6='<description>'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getVSSSDocumentItemAccess().getDescriptionKeyword_6());
+		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getBodyDBodyParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getDescriptionDBodyParserRuleCall_7_0());
 				}
-				lv_body_6_0=ruleDBody
+				lv_description_7_0=ruleDBody
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSDocumentItemRule());
 					}
 					set(
 						$current,
-						"body",
-						lv_body_6_0,
+						"description",
+						lv_description_7_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='</Item>'
+		otherlv_8='</description>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSSSDocumentItemAccess().getItemKeyword_7());
+			newLeafNode(otherlv_8, grammarAccess.getVSSSDocumentItemAccess().getDescriptionKeyword_8());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_9_0());
+				}
+				lv_extendedDescription_9_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSDocumentItemRule());
+					}
+					set(
+						$current,
+						"extendedDescription",
+						lv_extendedDescription_9_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_10='</Item>'
+		{
+			newLeafNode(otherlv_10, grammarAccess.getVSSSDocumentItemAccess().getItemKeyword_10());
 		}
 	)
 ;
@@ -3829,9 +4489,28 @@ ruleVSSSVerificationValidationProcessRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_3='</VerificationValidationProcessRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0());
+				}
+				lv_sssRequirementSubsections_3_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSVerificationValidationProcessRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='</VerificationValidationProcessRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getVerificationValidationProcessRequirementsKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getVerificationValidationProcessRequirementsKeyword_4());
 		}
 	)
 ;
@@ -3885,9 +4564,28 @@ ruleVSSSValidationApproach returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_3='</ValidationApproach>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSValidationApproachAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0());
+				}
+				lv_sssRequirementSubsections_3_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSValidationApproachRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='</ValidationApproach>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSValidationApproachAccess().getValidationApproachKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVSSSValidationApproachAccess().getValidationApproachKeyword_4());
 		}
 	)
 ;
@@ -3941,9 +4639,28 @@ ruleVSSSValidationRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_3='</ValidationRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSValidationRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0());
+				}
+				lv_sssRequirementSubsections_3_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSValidationRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='</ValidationRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSValidationRequirementsAccess().getValidationRequirementsKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVSSSValidationRequirementsAccess().getValidationRequirementsKeyword_4());
 		}
 	)
 ;
@@ -3997,9 +4714,28 @@ ruleVSSSVerificationRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_3='</VerificationRequirements>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSVerificationRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_3_0());
+				}
+				lv_sssRequirementSubsections_3_0=ruleVSSSInstantiableRequirementSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSVerificationRequirementsRule());
+					}
+					add(
+						$current,
+						"sssRequirementSubsections",
+						lv_sssRequirementSubsections_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstantiableRequirementSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='</VerificationRequirements>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSSSVerificationRequirementsAccess().getVerificationRequirementsKeyword_3());
+			newLeafNode(otherlv_4, grammarAccess.getVSSSVerificationRequirementsAccess().getVerificationRequirementsKeyword_4());
 		}
 	)
 ;
@@ -4037,8 +4773,8 @@ ruleVSSSSystemModel returns [EObject current=null]
 	)
 ;
 
-// Rule VVerificationMethod
-ruleVVerificationMethod returns [Enumerator current=null]
+// Rule VValidationMethod
+ruleVValidationMethod returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -4049,64 +4785,64 @@ ruleVVerificationMethod returns [Enumerator current=null]
 		(
 			enumLiteral_0='"Analysis"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getAnalysisEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getVVerificationMethodAccess().getAnalysisEnumLiteralDeclaration_0());
+				$current = grammarAccess.getVValidationMethodAccess().getAnalysisEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVValidationMethodAccess().getAnalysisEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='"Inspection"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getInspectionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getVVerificationMethodAccess().getInspectionEnumLiteralDeclaration_1());
+				$current = grammarAccess.getVValidationMethodAccess().getInspectionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVValidationMethodAccess().getInspectionEnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
 			enumLiteral_2='"Testing"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getTestingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getVVerificationMethodAccess().getTestingEnumLiteralDeclaration_2());
+				$current = grammarAccess.getVValidationMethodAccess().getTestingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getVValidationMethodAccess().getTestingEnumLiteralDeclaration_2());
 			}
 		)
 		    |
 		(
 			enumLiteral_3='"Review"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getReviewEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_3, grammarAccess.getVVerificationMethodAccess().getReviewEnumLiteralDeclaration_3());
+				$current = grammarAccess.getVValidationMethodAccess().getReviewEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getVValidationMethodAccess().getReviewEnumLiteralDeclaration_3());
 			}
 		)
 		    |
 		(
 			enumLiteral_4='"ModelSimulation"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getModelSimulationEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_4, grammarAccess.getVVerificationMethodAccess().getModelSimulationEnumLiteralDeclaration_4());
+				$current = grammarAccess.getVValidationMethodAccess().getModelSimulationEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_4, grammarAccess.getVValidationMethodAccess().getModelSimulationEnumLiteralDeclaration_4());
 			}
 		)
 		    |
 		(
 			enumLiteral_5='"WalkThrough"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getWalkThroughEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_5, grammarAccess.getVVerificationMethodAccess().getWalkThroughEnumLiteralDeclaration_5());
+				$current = grammarAccess.getVValidationMethodAccess().getWalkThroughEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_5, grammarAccess.getVValidationMethodAccess().getWalkThroughEnumLiteralDeclaration_5());
 			}
 		)
 		    |
 		(
 			enumLiteral_6='"CrossReading"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getCrossReadingEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_6, grammarAccess.getVVerificationMethodAccess().getCrossReadingEnumLiteralDeclaration_6());
+				$current = grammarAccess.getVValidationMethodAccess().getCrossReadingEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_6, grammarAccess.getVValidationMethodAccess().getCrossReadingEnumLiteralDeclaration_6());
 			}
 		)
 		    |
 		(
 			enumLiteral_7='"DeskChecking"'
 			{
-				$current = grammarAccess.getVVerificationMethodAccess().getDeskCheckingEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_7, grammarAccess.getVVerificationMethodAccess().getDeskCheckingEnumLiteralDeclaration_7());
+				$current = grammarAccess.getVValidationMethodAccess().getDeskCheckingEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_7, grammarAccess.getVValidationMethodAccess().getDeskCheckingEnumLiteralDeclaration_7());
 			}
 		)
 	)

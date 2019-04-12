@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VSSSAbbreviationImpl extends VSSSBriefDescriptionImpl implements VSSSAbbreviation {
+public class VSSSAbbreviationImpl extends VSSSAbstractBriefDescriptionImpl implements VSSSAbbreviation {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

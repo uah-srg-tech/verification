@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class VSSSTermImpl extends VSSSBriefDescriptionImpl implements VSSSTerm {
+public class VSSSTermImpl extends VSSSAbstractBriefDescriptionImpl implements VSSSTerm {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

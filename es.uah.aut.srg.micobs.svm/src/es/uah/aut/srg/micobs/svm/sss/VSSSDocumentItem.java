@@ -23,7 +23,8 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getExtendedDescription <em>Extended Description</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem()
@@ -32,29 +33,55 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
  */
 public interface VSSSDocumentItem extends VTraceableDocumentAbstractItem {
 	/**
-	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Body</em>' reference isn't clear,
+	 * If the meaning of the '<em>Description</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Body</em>' containment reference.
-	 * @see #setBody(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem_Body()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Description</em>' containment reference.
+	 * @see #setDescription(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem_Description()
+	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getBody();
+	DBody getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Body</em>' containment reference.
-	 * @see #getBody()
+	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @see #getDescription()
 	 * @generated
 	 */
-	void setBody(DBody value);
+	void setDescription(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>Extended Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Extended Description</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Extended Description</em>' containment reference.
+	 * @see #setExtendedDescription(DBody)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSDocumentItem_ExtendedDescription()
+	 * @model containment="true"
+	 * @generated
+	 */
+	DBody getExtendedDescription();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem#getExtendedDescription <em>Extended Description</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Extended Description</em>' containment reference.
+	 * @see #getExtendedDescription()
+	 * @generated
+	 */
+	void setExtendedDescription(DBody value);
 
 } // VSSSDocumentItem

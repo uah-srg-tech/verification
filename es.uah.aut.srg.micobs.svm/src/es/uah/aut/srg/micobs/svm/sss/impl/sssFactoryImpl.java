@@ -72,8 +72,10 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_TERM: return createVSSSTerm();
 			case sssPackage.VSSS_DEFINITION: return createVSSSDefinition();
 			case sssPackage.VSSS_ABBREVIATION: return createVSSSAbbreviation();
+			case sssPackage.VSSS_FIXED_SECTION: return createVSSSFixedSection();
+			case sssPackage.VSSS_INSTANTIABLE_SECTION: return createVSSSInstantiableSection();
 			case sssPackage.VSSS_GENERAL_DESCRIPTION: return createVSSSGeneralDescription();
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION: return createVSSSGeneralDescriptionSubsection();
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION: return createVSSSInstantiableRequirementSection();
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS: return createVSSSSpecificRequirements();
 			case sssPackage.VSSS_GENERAL_REQUIREMENTS: return createVSSSGeneralRequirements();
 			case sssPackage.VSSS_CAPABILITIES_REQUIREMENTS: return createVSSSCapabilitiesRequirements();
@@ -186,6 +188,26 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSSSFixedSection createVSSSFixedSection() {
+		VSSSFixedSectionImpl vsssFixedSection = new VSSSFixedSectionImpl();
+		return vsssFixedSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSInstantiableSection createVSSSInstantiableSection() {
+		VSSSInstantiableSectionImpl vsssInstantiableSection = new VSSSInstantiableSectionImpl();
+		return vsssInstantiableSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSSSGeneralDescription createVSSSGeneralDescription() {
 		VSSSGeneralDescriptionImpl vsssGeneralDescription = new VSSSGeneralDescriptionImpl();
 		return vsssGeneralDescription;
@@ -196,9 +218,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSGeneralDescriptionSubsection createVSSSGeneralDescriptionSubsection() {
-		VSSSGeneralDescriptionSubsectionImpl vsssGeneralDescriptionSubsection = new VSSSGeneralDescriptionSubsectionImpl();
-		return vsssGeneralDescriptionSubsection;
+	public VSSSSpecificRequirements createVSSSSpecificRequirements() {
+		VSSSSpecificRequirementsImpl vsssSpecificRequirements = new VSSSSpecificRequirementsImpl();
+		return vsssSpecificRequirements;
 	}
 
 	/**
@@ -206,9 +228,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSpecificRequirements createVSSSSpecificRequirements() {
-		VSSSSpecificRequirementsImpl vsssSpecificRequirements = new VSSSSpecificRequirementsImpl();
-		return vsssSpecificRequirements;
+	public VSSSInstantiableRequirementSection createVSSSInstantiableRequirementSection() {
+		VSSSInstantiableRequirementSectionImpl vsssInstantiableRequirementSection = new VSSSInstantiableRequirementSectionImpl();
+		return vsssInstantiableRequirementSection;
 	}
 
 	/**

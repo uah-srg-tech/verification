@@ -10,17 +10,17 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.util;
 
+import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
-
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -123,30 +123,47 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_BRIEF_DESCRIPTION: {
-				VSSSBriefDescription vsssBriefDescription = (VSSSBriefDescription)theEObject;
-				T result = caseVSSSBriefDescription(vsssBriefDescription);
+			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION: {
+				VSSSAbstractBriefDescription vsssAbstractBriefDescription = (VSSSAbstractBriefDescription)theEObject;
+				T result = caseVSSSAbstractBriefDescription(vsssAbstractBriefDescription);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case sssPackage.VSSS_TERM: {
 				VSSSTerm vsssTerm = (VSSSTerm)theEObject;
 				T result = caseVSSSTerm(vsssTerm);
-				if (result == null) result = caseVSSSBriefDescription(vsssTerm);
+				if (result == null) result = caseVSSSAbstractBriefDescription(vsssTerm);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case sssPackage.VSSS_DEFINITION: {
 				VSSSDefinition vsssDefinition = (VSSSDefinition)theEObject;
 				T result = caseVSSSDefinition(vsssDefinition);
-				if (result == null) result = caseVSSSBriefDescription(vsssDefinition);
+				if (result == null) result = caseVSSSAbstractBriefDescription(vsssDefinition);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
 			case sssPackage.VSSS_ABBREVIATION: {
 				VSSSAbbreviation vsssAbbreviation = (VSSSAbbreviation)theEObject;
 				T result = caseVSSSAbbreviation(vsssAbbreviation);
-				if (result == null) result = caseVSSSBriefDescription(vsssAbbreviation);
+				if (result == null) result = caseVSSSAbstractBriefDescription(vsssAbbreviation);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_FIXED_SECTION: {
+				VSSSFixedSection vsssFixedSection = (VSSSFixedSection)theEObject;
+				T result = caseVSSSFixedSection(vsssFixedSection);
+				if (result == null) result = caseDFixedSection(vsssFixedSection);
+				if (result == null) result = caseDAbstractSection(vsssFixedSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_INSTANTIABLE_SECTION: {
+				VSSSInstantiableSection vsssInstantiableSection = (VSSSInstantiableSection)theEObject;
+				T result = caseVSSSInstantiableSection(vsssInstantiableSection);
+				if (result == null) result = caseDInstantiableSection(vsssInstantiableSection);
+				if (result == null) result = caseDAbstractSection(vsssInstantiableSection);
+				if (result == null) result = caseMCommonReferenceableObj(vsssInstantiableSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -158,11 +175,21 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_GENERAL_DESCRIPTION_SUBSECTION: {
-				VSSSGeneralDescriptionSubsection vsssGeneralDescriptionSubsection = (VSSSGeneralDescriptionSubsection)theEObject;
-				T result = caseVSSSGeneralDescriptionSubsection(vsssGeneralDescriptionSubsection);
-				if (result == null) result = caseDFixedSection(vsssGeneralDescriptionSubsection);
-				if (result == null) result = caseDAbstractSection(vsssGeneralDescriptionSubsection);
+			case sssPackage.VSSS_ABSTRACT_REQUIREMENT_SECTION: {
+				VSSSAbstractRequirementSection vsssAbstractRequirementSection = (VSSSAbstractRequirementSection)theEObject;
+				T result = caseVSSSAbstractRequirementSection(vsssAbstractRequirementSection);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAbstractRequirementSection);
+				if (result == null) result = caseDFixedSection(vsssAbstractRequirementSection);
+				if (result == null) result = caseDAbstractSection(vsssAbstractRequirementSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION: {
+				VSSSInstantiableRequirementSection vsssInstantiableRequirementSection = (VSSSInstantiableRequirementSection)theEObject;
+				T result = caseVSSSInstantiableRequirementSection(vsssInstantiableRequirementSection);
+				if (result == null) result = caseDInstantiableSection(vsssInstantiableRequirementSection);
+				if (result == null) result = caseDAbstractSection(vsssInstantiableRequirementSection);
+				if (result == null) result = caseMCommonReferenceableObj(vsssInstantiableRequirementSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -177,9 +204,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_GENERAL_REQUIREMENTS: {
 				VSSSGeneralRequirements vsssGeneralRequirements = (VSSSGeneralRequirements)theEObject;
 				T result = caseVSSSGeneralRequirements(vsssGeneralRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssGeneralRequirements);
-				if (result == null) result = caseDFixedSection(vsssGeneralRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssGeneralRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssGeneralRequirements);
+				if (result == null) result = caseDFixedSection(vsssGeneralRequirements);
 				if (result == null) result = caseDAbstractSection(vsssGeneralRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -187,9 +214,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_CAPABILITIES_REQUIREMENTS: {
 				VSSSCapabilitiesRequirements vsssCapabilitiesRequirements = (VSSSCapabilitiesRequirements)theEObject;
 				T result = caseVSSSCapabilitiesRequirements(vsssCapabilitiesRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssCapabilitiesRequirements);
-				if (result == null) result = caseDFixedSection(vsssCapabilitiesRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssCapabilitiesRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssCapabilitiesRequirements);
+				if (result == null) result = caseDFixedSection(vsssCapabilitiesRequirements);
 				if (result == null) result = caseDAbstractSection(vsssCapabilitiesRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -197,9 +224,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SYSTEM_INTERFACE_REQUIREMENTS: {
 				VSSSSystemInterfaceRequirements vsssSystemInterfaceRequirements = (VSSSSystemInterfaceRequirements)theEObject;
 				T result = caseVSSSSystemInterfaceRequirements(vsssSystemInterfaceRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemInterfaceRequirements);
-				if (result == null) result = caseDFixedSection(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSystemInterfaceRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseDFixedSection(vsssSystemInterfaceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSystemInterfaceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -207,9 +234,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS: {
 				VSSSAdaptationMissionizationRequirements vsssAdaptationMissionizationRequirements = (VSSSAdaptationMissionizationRequirements)theEObject;
 				T result = caseVSSSAdaptationMissionizationRequirements(vsssAdaptationMissionizationRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssAdaptationMissionizationRequirements);
-				if (result == null) result = caseDFixedSection(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseDFixedSection(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -217,9 +244,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENTS: {
 				VSSSComputerResourceRequirements vsssComputerResourceRequirements = (VSSSComputerResourceRequirements)theEObject;
 				T result = caseVSSSComputerResourceRequirements(vsssComputerResourceRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssComputerResourceRequirements);
-				if (result == null) result = caseDFixedSection(vsssComputerResourceRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssComputerResourceRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssComputerResourceRequirements);
+				if (result == null) result = caseDFixedSection(vsssComputerResourceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssComputerResourceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -227,9 +254,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SECURITY_REQUIREMENTS: {
 				VSSSSecurityRequirements vsssSecurityRequirements = (VSSSSecurityRequirements)theEObject;
 				T result = caseVSSSSecurityRequirements(vsssSecurityRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSecurityRequirements);
-				if (result == null) result = caseDFixedSection(vsssSecurityRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSecurityRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSecurityRequirements);
+				if (result == null) result = caseDFixedSection(vsssSecurityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSecurityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -237,9 +264,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SAFETY_REQUIREMENTS: {
 				VSSSSafetyRequirements vsssSafetyRequirements = (VSSSSafetyRequirements)theEObject;
 				T result = caseVSSSSafetyRequirements(vsssSafetyRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSafetyRequirements);
-				if (result == null) result = caseDFixedSection(vsssSafetyRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSafetyRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSafetyRequirements);
+				if (result == null) result = caseDFixedSection(vsssSafetyRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSafetyRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -247,9 +274,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS: {
 				VSSSReliabiltyAvailabilityRequirements vsssReliabiltyAvailabilityRequirements = (VSSSReliabiltyAvailabilityRequirements)theEObject;
 				T result = caseVSSSReliabiltyAvailabilityRequirements(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -257,9 +284,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_QUALITY_REQUIREMENTS: {
 				VSSSQualityRequirements vsssQualityRequirements = (VSSSQualityRequirements)theEObject;
 				T result = caseVSSSQualityRequirements(vsssQualityRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssQualityRequirements);
-				if (result == null) result = caseDFixedSection(vsssQualityRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssQualityRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssQualityRequirements);
+				if (result == null) result = caseDFixedSection(vsssQualityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssQualityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -267,9 +294,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_DESIGN_REQUIREMENTS: {
 				VSSSDesignRequirements vsssDesignRequirements = (VSSSDesignRequirements)theEObject;
 				T result = caseVSSSDesignRequirements(vsssDesignRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssDesignRequirements);
-				if (result == null) result = caseDFixedSection(vsssDesignRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssDesignRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssDesignRequirements);
+				if (result == null) result = caseDFixedSection(vsssDesignRequirements);
 				if (result == null) result = caseDAbstractSection(vsssDesignRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -277,9 +304,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS: {
 				VSSSSoftwareOperationsRequirements vsssSoftwareOperationsRequirements = (VSSSSoftwareOperationsRequirements)theEObject;
 				T result = caseVSSSSoftwareOperationsRequirements(vsssSoftwareOperationsRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareOperationsRequirements);
-				if (result == null) result = caseDFixedSection(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSoftwareOperationsRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseDFixedSection(vsssSoftwareOperationsRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSoftwareOperationsRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -287,9 +314,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS: {
 				VSSSSoftwareMaintenanceRequirements vsssSoftwareMaintenanceRequirements = (VSSSSoftwareMaintenanceRequirements)theEObject;
 				T result = caseVSSSSoftwareMaintenanceRequirements(vsssSoftwareMaintenanceRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareMaintenanceRequirements);
-				if (result == null) result = caseDFixedSection(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseDFixedSection(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -297,9 +324,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS: {
 				VSSSSystemSoftwareObservabilityRequirements vsssSystemSoftwareObservabilityRequirements = (VSSSSystemSoftwareObservabilityRequirements)theEObject;
 				T result = caseVSSSSystemSoftwareObservabilityRequirements(vsssSystemSoftwareObservabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemSoftwareObservabilityRequirements);
-				if (result == null) result = caseDFixedSection(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -315,9 +342,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS: {
 				VSSSVerificationValidationProcessRequirements vsssVerificationValidationProcessRequirements = (VSSSVerificationValidationProcessRequirements)theEObject;
 				T result = caseVSSSVerificationValidationProcessRequirements(vsssVerificationValidationProcessRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationValidationProcessRequirements);
-				if (result == null) result = caseDFixedSection(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseDFixedSection(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = caseDAbstractSection(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -325,9 +352,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_VALIDATION_APPROACH: {
 				VSSSValidationApproach vsssValidationApproach = (VSSSValidationApproach)theEObject;
 				T result = caseVSSSValidationApproach(vsssValidationApproach);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationApproach);
-				if (result == null) result = caseDFixedSection(vsssValidationApproach);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssValidationApproach);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationApproach);
+				if (result == null) result = caseDFixedSection(vsssValidationApproach);
 				if (result == null) result = caseDAbstractSection(vsssValidationApproach);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -335,9 +362,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_VERIFICATION_REQUIREMENTS: {
 				VSSSVerificationRequirements vsssVerificationRequirements = (VSSSVerificationRequirements)theEObject;
 				T result = caseVSSSVerificationRequirements(vsssVerificationRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationRequirements);
-				if (result == null) result = caseDFixedSection(vsssVerificationRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssVerificationRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationRequirements);
+				if (result == null) result = caseDFixedSection(vsssVerificationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssVerificationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -345,9 +372,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_VALIDATION_REQUIREMENTS: {
 				VSSSValidationRequirements vsssValidationRequirements = (VSSSValidationRequirements)theEObject;
 				T result = caseVSSSValidationRequirements(vsssValidationRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationRequirements);
-				if (result == null) result = caseDFixedSection(vsssValidationRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssValidationRequirements);
 				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationRequirements);
+				if (result == null) result = caseDFixedSection(vsssValidationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssValidationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -453,17 +480,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Brief Description</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Abstract Brief Description</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Brief Description</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Abstract Brief Description</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSBriefDescription(VSSSBriefDescription object) {
+	public T caseVSSSAbstractBriefDescription(VSSSAbstractBriefDescription object) {
 		return null;
 	}
 
@@ -513,6 +540,36 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Fixed Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Fixed Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSFixedSection(VSSSFixedSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Instantiable Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Instantiable Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSInstantiableSection(VSSSInstantiableSection object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Description</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -528,17 +585,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS General Description Subsection</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Abstract Requirement Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS General Description Subsection</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Abstract Requirement Section</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSGeneralDescriptionSubsection(VSSSGeneralDescriptionSubsection object) {
+	public T caseVSSSAbstractRequirementSection(VSSSAbstractRequirementSection object) {
 		return null;
 	}
 
@@ -554,6 +611,21 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSSSSpecificRequirements(VSSSSpecificRequirements object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Instantiable Requirement Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Instantiable Requirement Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSInstantiableRequirementSection(VSSSInstantiableRequirementSection object) {
 		return null;
 	}
 
@@ -933,6 +1005,36 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>MCommon Referenceable Obj</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseMCommonReferenceableObj(MCommonReferenceableObj object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DInstantiable Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DInstantiable Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDInstantiableSection(DInstantiableSection object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Abstract Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -944,21 +1046,6 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Group</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Group</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
 		return null;
 	}
 
