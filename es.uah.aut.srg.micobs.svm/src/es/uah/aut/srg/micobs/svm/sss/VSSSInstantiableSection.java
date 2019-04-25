@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.sss;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +24,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSInstantiableSection()
@@ -41,7 +43,7 @@ public interface VSSSInstantiableSection extends DInstantiableSection {
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSInstantiableSection_Body()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	DBody getBody();
@@ -55,5 +57,21 @@ public interface VSSSInstantiableSection extends DInstantiableSection {
 	 * @generated
 	 */
 	void setBody(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Sss Instatiable Subsections</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Sss Instatiable Subsections</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSInstantiableSection_SssInstatiableSubsections()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VSSSInstantiableSection> getSssInstatiableSubsections();
 
 } // VSSSInstantiableSection

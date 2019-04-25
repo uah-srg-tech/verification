@@ -11,7 +11,6 @@
 package es.uah.aut.srg.micobs.svm.lang.sss.serializer;
 
 import com.google.inject.Inject;
-import es.uah.aut.srg.micobs.common.commonPackage;
 import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
@@ -343,19 +342,10 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DHyperlink returns DHyperlink
 	 *
 	 * Constraint:
-	 *     (reference=[DReferenceableObject|STRING] run=DRun)
+	 *     (reference=[DReferenceableObject|STRING] run=DRun?)
 	 */
 	protected void sequence_DHyperlink(ISerializationContext context, DHyperlink semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DHYPERLINK__REFERENCE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DHYPERLINK__REFERENCE));
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DHYPERLINK__RUN) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DHYPERLINK__RUN));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDHyperlinkAccess().getReferenceDReferenceableObjectSTRINGTerminalRuleCall_2_0_1(), semanticObject.getReference());
-		feeder.accept(grammarAccess.getDHyperlinkAccess().getRunDRunParserRuleCall_4_0(), semanticObject.getRun());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -659,7 +649,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSSSFixedSection returns VSSSFixedSection
 	 *
 	 * Constraint:
-	 *     (body=DBody sssInstatiableSubsections+=VSSSInstatiableSection*)
+	 *     (body=DBody? sssInstatiableSubsections+=VSSSInstatiableSection*)
 	 */
 	protected void sequence_VSSSFixedSection(ISerializationContext context, VSSSFixedSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -731,19 +721,10 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSSSInstatiableSection returns VSSSInstantiableSection
 	 *
 	 * Constraint:
-	 *     (name=STRING body=DBody)
+	 *     (name=STRING body=DBody? sssInstatiableSubsections+=VSSSInstatiableSection*)
 	 */
 	protected void sequence_VSSSInstatiableSection(ISerializationContext context, VSSSInstantiableSection semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, commonPackage.Literals.MCOMMON_REFERENCEABLE_OBJ__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, commonPackage.Literals.MCOMMON_REFERENCEABLE_OBJ__NAME));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_INSTANTIABLE_SECTION__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_INSTANTIABLE_SECTION__BODY));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSSSInstatiableSectionAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVSSSInstatiableSectionAccess().getBodyDBodyParserRuleCall_4_0(), semanticObject.getBody());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

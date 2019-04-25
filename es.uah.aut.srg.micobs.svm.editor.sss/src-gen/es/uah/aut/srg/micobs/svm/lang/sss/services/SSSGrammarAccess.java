@@ -506,11 +506,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<hyperlink'
 		//	'reference=' reference=[doc::DReferenceableObject|STRING]
 		//	'>'
-		//	run=DRun
+		//	run=DRun?
 		//	'</hyperlink>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<hyperlink' 'reference=' reference=[doc::DReferenceableObject|STRING] '>' run=DRun '</hyperlink>'
+		//'<hyperlink' 'reference=' reference=[doc::DReferenceableObject|STRING] '>' run=DRun? '</hyperlink>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<hyperlink'
@@ -531,7 +531,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//run=DRun
+		//run=DRun?
 		public Assignment getRunAssignment_4() { return cRunAssignment_4; }
 		
 		//DRun
@@ -558,7 +558,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DFigureFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DFigureFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cFigureKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFigureFromFileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -572,17 +572,17 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DFigureFromFile doc::DFigureFromFile:
-		//	'<figure'
+		//	'<figureFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<figure' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
+		//'<figureFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<figure'
-		public Keyword getFigureKeyword_0() { return cFigureKeyword_0; }
+		//'<figureFromFile'
+		public Keyword getFigureFromFileKeyword_0() { return cFigureFromFileKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -620,7 +620,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DTableFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DTableFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPictureAsTableKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTableFromFileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -634,17 +634,17 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DTableFromFile doc::DTableFromFile:
-		//	'<pictureAsTable'
+		//	'<tableFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<pictureAsTable' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
+		//'<tableFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<pictureAsTable'
-		public Keyword getPictureAsTableKeyword_0() { return cPictureAsTableKeyword_0; }
+		//'<tableFromFile'
+		public Keyword getTableFromFileKeyword_0() { return cTableFromFileKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -1078,30 +1078,34 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	public class VSSSFixedSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSFixedSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cBodyAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cBodyDBodyParserRuleCall_0_0 = (RuleCall)cBodyAssignment_0.eContents().get(0);
-		private final Assignment cSssInstatiableSubsectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0 = (RuleCall)cSssInstatiableSubsectionsAssignment_1.eContents().get(0);
+		private final Action cVSSSFixedSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBodyDBodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		private final Assignment cSssInstatiableSubsectionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_2_0 = (RuleCall)cSssInstatiableSubsectionsAssignment_2.eContents().get(0);
 		
 		//VSSSFixedSection:
-		//	body=DBody
+		//	{VSSSFixedSection} body=DBody?
 		//	sssInstatiableSubsections+=VSSSInstatiableSection*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//body=DBody sssInstatiableSubsections+=VSSSInstatiableSection*
+		//{VSSSFixedSection} body=DBody? sssInstatiableSubsections+=VSSSInstatiableSection*
 		public Group getGroup() { return cGroup; }
 		
-		//body=DBody
-		public Assignment getBodyAssignment_0() { return cBodyAssignment_0; }
+		//{VSSSFixedSection}
+		public Action getVSSSFixedSectionAction_0() { return cVSSSFixedSectionAction_0; }
+		
+		//body=DBody?
+		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_0_0() { return cBodyDBodyParserRuleCall_0_0; }
+		public RuleCall getBodyDBodyParserRuleCall_1_0() { return cBodyDBodyParserRuleCall_1_0; }
 		
 		//sssInstatiableSubsections+=VSSSInstatiableSection*
-		public Assignment getSssInstatiableSubsectionsAssignment_1() { return cSssInstatiableSubsectionsAssignment_1; }
+		public Assignment getSssInstatiableSubsectionsAssignment_2() { return cSssInstatiableSubsectionsAssignment_2; }
 		
 		//VSSSInstatiableSection
-		public RuleCall getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0() { return cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0; }
+		public RuleCall getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_2_0() { return cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_2_0; }
 	}
 	public class VSSSInstatiableSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
@@ -1113,17 +1117,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cBodyDBodyParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
-		private final Keyword cSubsectionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSssInstatiableSubsectionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_5_0 = (RuleCall)cSssInstatiableSubsectionsAssignment_5.eContents().get(0);
+		private final Keyword cSubsectionKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSSSInstatiableSection VSSSInstantiableSection:
 		//	'<subsection'
 		//	'name=' name=STRING
 		//	'>'
-		//	body=DBody
+		//	body=DBody?
+		//	sssInstatiableSubsections+=VSSSInstatiableSection*
 		//	'</subsection>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<subsection' 'name=' name=STRING '>' body=DBody '</subsection>'
+		//'<subsection' 'name=' name=STRING '>' body=DBody? sssInstatiableSubsections+=VSSSInstatiableSection* '</subsection>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<subsection'
@@ -1141,14 +1148,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//body=DBody
+		//body=DBody?
 		public Assignment getBodyAssignment_4() { return cBodyAssignment_4; }
 		
 		//DBody
 		public RuleCall getBodyDBodyParserRuleCall_4_0() { return cBodyDBodyParserRuleCall_4_0; }
 		
+		//sssInstatiableSubsections+=VSSSInstatiableSection*
+		public Assignment getSssInstatiableSubsectionsAssignment_5() { return cSssInstatiableSubsectionsAssignment_5; }
+		
+		//VSSSInstatiableSection
+		public RuleCall getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_5_0() { return cSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_5_0; }
+		
 		//'</subsection>'
-		public Keyword getSubsectionKeyword_5() { return cSubsectionKeyword_5; }
+		public Keyword getSubsectionKeyword_6() { return cSubsectionKeyword_6; }
 	}
 	public class VSSSIntroductionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSIntroduction");
@@ -1328,25 +1341,25 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VSSSGeneralDescription:
 		//	'<GeneralDescription>'
-		//	'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
-		//	'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
-		//	'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
-		//	'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
-		//	'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
+		//	'<ProductPerspective>' productPerspective=VSSSFixedSection '</ProductPerspective>'
+		//	'<GeneralCapabilities>' generalCapabilities=VSSSFixedSection '</GeneralCapabilities>'
+		//	'<GeneralConstraints>' generalConstraints=VSSSFixedSection '</GeneralConstraints>'
+		//	'<OperationalEnvironment>' operationalEnvironment=VSSSFixedSection '</OperationalEnvironment>'
+		//	'<AssumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</AssumptionsDependencies>'
 		//	'</GeneralDescription>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<GeneralDescription>' '<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
-		//'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>' '<generalConstraints>'
-		//generalConstraints=VSSSFixedSection '</generalConstraints>' '<operationalEnvironment>'
-		//operationalEnvironment=VSSSFixedSection '</operationalEnvironment>' '<assumptionsDependencies>'
-		//assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>' '</GeneralDescription>'
+		//'<GeneralDescription>' '<ProductPerspective>' productPerspective=VSSSFixedSection '</ProductPerspective>'
+		//'<GeneralCapabilities>' generalCapabilities=VSSSFixedSection '</GeneralCapabilities>' '<GeneralConstraints>'
+		//generalConstraints=VSSSFixedSection '</GeneralConstraints>' '<OperationalEnvironment>'
+		//operationalEnvironment=VSSSFixedSection '</OperationalEnvironment>' '<AssumptionsDependencies>'
+		//assumptionsDependencies=VSSSFixedSection '</AssumptionsDependencies>' '</GeneralDescription>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<GeneralDescription>'
 		public Keyword getGeneralDescriptionKeyword_0() { return cGeneralDescriptionKeyword_0; }
 		
-		//'<productPerspective>'
+		//'<ProductPerspective>'
 		public Keyword getProductPerspectiveKeyword_1() { return cProductPerspectiveKeyword_1; }
 		
 		//productPerspective=VSSSFixedSection
@@ -1355,10 +1368,10 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSFixedSection
 		public RuleCall getProductPerspectiveVSSSFixedSectionParserRuleCall_2_0() { return cProductPerspectiveVSSSFixedSectionParserRuleCall_2_0; }
 		
-		//'</productPerspective>'
+		//'</ProductPerspective>'
 		public Keyword getProductPerspectiveKeyword_3() { return cProductPerspectiveKeyword_3; }
 		
-		//'<generalCapabilities>'
+		//'<GeneralCapabilities>'
 		public Keyword getGeneralCapabilitiesKeyword_4() { return cGeneralCapabilitiesKeyword_4; }
 		
 		//generalCapabilities=VSSSFixedSection
@@ -1367,10 +1380,10 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSFixedSection
 		public RuleCall getGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0() { return cGeneralCapabilitiesVSSSFixedSectionParserRuleCall_5_0; }
 		
-		//'</generalCapabilities>'
+		//'</GeneralCapabilities>'
 		public Keyword getGeneralCapabilitiesKeyword_6() { return cGeneralCapabilitiesKeyword_6; }
 		
-		//'<generalConstraints>'
+		//'<GeneralConstraints>'
 		public Keyword getGeneralConstraintsKeyword_7() { return cGeneralConstraintsKeyword_7; }
 		
 		//generalConstraints=VSSSFixedSection
@@ -1379,10 +1392,10 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSFixedSection
 		public RuleCall getGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0() { return cGeneralConstraintsVSSSFixedSectionParserRuleCall_8_0; }
 		
-		//'</generalConstraints>'
+		//'</GeneralConstraints>'
 		public Keyword getGeneralConstraintsKeyword_9() { return cGeneralConstraintsKeyword_9; }
 		
-		//'<operationalEnvironment>'
+		//'<OperationalEnvironment>'
 		public Keyword getOperationalEnvironmentKeyword_10() { return cOperationalEnvironmentKeyword_10; }
 		
 		//operationalEnvironment=VSSSFixedSection
@@ -1391,10 +1404,10 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSFixedSection
 		public RuleCall getOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0() { return cOperationalEnvironmentVSSSFixedSectionParserRuleCall_11_0; }
 		
-		//'</operationalEnvironment>'
+		//'</OperationalEnvironment>'
 		public Keyword getOperationalEnvironmentKeyword_12() { return cOperationalEnvironmentKeyword_12; }
 		
-		//'<assumptionsDependencies>'
+		//'<AssumptionsDependencies>'
 		public Keyword getAssumptionsDependenciesKeyword_13() { return cAssumptionsDependenciesKeyword_13; }
 		
 		//assumptionsDependencies=VSSSFixedSection
@@ -1403,7 +1416,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSFixedSection
 		public RuleCall getAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0() { return cAssumptionsDependenciesVSSSFixedSectionParserRuleCall_14_0; }
 		
-		//'</assumptionsDependencies>'
+		//'</AssumptionsDependencies>'
 		public Keyword getAssumptionsDependenciesKeyword_15() { return cAssumptionsDependenciesKeyword_15; }
 		
 		//'</GeneralDescription>'
@@ -3195,7 +3208,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<hyperlink'
 	//	'reference=' reference=[doc::DReferenceableObject|STRING]
 	//	'>'
-	//	run=DRun
+	//	run=DRun?
 	//	'</hyperlink>'
 	public DHyperlinkElements getDHyperlinkAccess() {
 		return pDHyperlink;
@@ -3222,7 +3235,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DFigureFromFile doc::DFigureFromFile:
-	//	'<figure'
+	//	'<figureFromFile'
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
@@ -3235,7 +3248,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DTableFromFile doc::DTableFromFile:
-	//	'<pictureAsTable'
+	//	'<tableFromFile'
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
@@ -3332,7 +3345,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSSSFixedSection:
-	//	body=DBody
+	//	{VSSSFixedSection} body=DBody?
 	//	sssInstatiableSubsections+=VSSSInstatiableSection*;
 	public VSSSFixedSectionElements getVSSSFixedSectionAccess() {
 		return pVSSSFixedSection;
@@ -3346,7 +3359,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<subsection'
 	//	'name=' name=STRING
 	//	'>'
-	//	body=DBody
+	//	body=DBody?
+	//	sssInstatiableSubsections+=VSSSInstatiableSection*
 	//	'</subsection>'
 	public VSSSInstatiableSectionElements getVSSSInstatiableSectionAccess() {
 		return pVSSSInstatiableSection;
@@ -3411,11 +3425,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSGeneralDescription:
 	//	'<GeneralDescription>'
-	//	'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
-	//	'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
-	//	'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
-	//	'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
-	//	'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
+	//	'<ProductPerspective>' productPerspective=VSSSFixedSection '</ProductPerspective>'
+	//	'<GeneralCapabilities>' generalCapabilities=VSSSFixedSection '</GeneralCapabilities>'
+	//	'<GeneralConstraints>' generalConstraints=VSSSFixedSection '</GeneralConstraints>'
+	//	'<OperationalEnvironment>' operationalEnvironment=VSSSFixedSection '</OperationalEnvironment>'
+	//	'<AssumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</AssumptionsDependencies>'
 	//	'</GeneralDescription>';
 	public VSSSGeneralDescriptionElements getVSSSGeneralDescriptionAccess() {
 		return pVSSSGeneralDescription;

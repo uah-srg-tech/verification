@@ -152,10 +152,11 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDReferenceDocumentAccess().getIssueAssignment_7_1(), "rule__DReferenceDocument__IssueAssignment_7_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_3(), "rule__DReferenceDocument__RevisionAssignment_7_3");
 					put(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1(), "rule__DReferenceDocument__DateAssignment_8_1");
-					put(grammarAccess.getVSSSFixedSectionAccess().getBodyAssignment_0(), "rule__VSSSFixedSection__BodyAssignment_0");
-					put(grammarAccess.getVSSSFixedSectionAccess().getSssInstatiableSubsectionsAssignment_1(), "rule__VSSSFixedSection__SssInstatiableSubsectionsAssignment_1");
+					put(grammarAccess.getVSSSFixedSectionAccess().getBodyAssignment_1(), "rule__VSSSFixedSection__BodyAssignment_1");
+					put(grammarAccess.getVSSSFixedSectionAccess().getSssInstatiableSubsectionsAssignment_2(), "rule__VSSSFixedSection__SssInstatiableSubsectionsAssignment_2");
 					put(grammarAccess.getVSSSInstatiableSectionAccess().getNameAssignment_2(), "rule__VSSSInstatiableSection__NameAssignment_2");
 					put(grammarAccess.getVSSSInstatiableSectionAccess().getBodyAssignment_4(), "rule__VSSSInstatiableSection__BodyAssignment_4");
+					put(grammarAccess.getVSSSInstatiableSectionAccess().getSssInstatiableSubsectionsAssignment_5(), "rule__VSSSInstatiableSection__SssInstatiableSubsectionsAssignment_5");
 					put(grammarAccess.getVSSSIntroductionAccess().getSssInstatiableSubsectionsAssignment_1(), "rule__VSSSIntroduction__SssInstatiableSubsectionsAssignment_1");
 					put(grammarAccess.getVSSSApplicableDocumentsAccess().getApplicableDocumentsAssignment_2(), "rule__VSSSApplicableDocuments__ApplicableDocumentsAssignment_2");
 					put(grammarAccess.getVSSSReferenceDocumentsAccess().getReferenceDocumentsAssignment_2(), "rule__VSSSReferenceDocuments__ReferenceDocumentsAssignment_2");

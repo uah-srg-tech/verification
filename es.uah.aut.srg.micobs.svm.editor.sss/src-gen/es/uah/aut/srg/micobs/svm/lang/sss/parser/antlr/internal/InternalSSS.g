@@ -930,7 +930,7 @@ ruleDHyperlink returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		otherlv_5='</hyperlink>'
 		{
 			newLeafNode(otherlv_5, grammarAccess.getDHyperlinkAccess().getHyperlinkKeyword_5());
@@ -989,9 +989,9 @@ ruleDFigureFromFile returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<figure'
+		otherlv_0='<figureFromFile'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDFigureFromFileAccess().getFigureKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getDFigureFromFileAccess().getFigureFromFileKeyword_0());
 		}
 		otherlv_1='name='
 		{
@@ -1084,9 +1084,9 @@ ruleDTableFromFile returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<pictureAsTable'
+		otherlv_0='<tableFromFile'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDTableFromFileAccess().getPictureAsTableKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getDTableFromFileAccess().getTableFromFileKeyword_0());
 		}
 		otherlv_1='name='
 		{
@@ -1792,11 +1792,21 @@ ruleVSSSFixedSection returns [EObject current=null]
 }:
 	(
 		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSSSFixedSectionAccess().getVSSSFixedSectionAction_0(),
+					$current);
+			}
+		)
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getBodyDBodyParserRuleCall_0_0());
+					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getBodyDBodyParserRuleCall_1_0());
 				}
-				lv_body_0_0=ruleDBody
+				lv_body_1_0=ruleDBody
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSFixedSectionRule());
@@ -1804,18 +1814,18 @@ ruleVSSSFixedSection returns [EObject current=null]
 					set(
 						$current,
 						"body",
-						lv_body_0_0,
+						lv_body_1_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
+		)?
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getVSSSFixedSectionAccess().getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_2_0());
 				}
-				lv_sssInstatiableSubsections_1_0=ruleVSSSInstatiableSection
+				lv_sssInstatiableSubsections_2_0=ruleVSSSInstatiableSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSFixedSectionRule());
@@ -1823,7 +1833,7 @@ ruleVSSSFixedSection returns [EObject current=null]
 					add(
 						$current,
 						"sssInstatiableSubsections",
-						lv_sssInstatiableSubsections_1_0,
+						lv_sssInstatiableSubsections_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
 					afterParserOrEnumRuleCall();
 				}
@@ -1896,10 +1906,29 @@ ruleVSSSInstatiableSection returns [EObject current=null]
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)
-		otherlv_5='</subsection>'
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSSSInstatiableSectionAccess().getSssInstatiableSubsectionsVSSSInstatiableSectionParserRuleCall_5_0());
+				}
+				lv_sssInstatiableSubsections_5_0=ruleVSSSInstatiableSection
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSSSInstatiableSectionRule());
+					}
+					add(
+						$current,
+						"sssInstatiableSubsections",
+						lv_sssInstatiableSubsections_5_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSInstatiableSection");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_6='</subsection>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSSSInstatiableSectionAccess().getSubsectionKeyword_5());
+			newLeafNode(otherlv_6, grammarAccess.getVSSSInstatiableSectionAccess().getSubsectionKeyword_6());
 		}
 	)
 ;
@@ -2176,7 +2205,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralDescriptionKeyword_0());
 		}
-		otherlv_1='<productPerspective>'
+		otherlv_1='<ProductPerspective>'
 		{
 			newLeafNode(otherlv_1, grammarAccess.getVSSSGeneralDescriptionAccess().getProductPerspectiveKeyword_1());
 		}
@@ -2199,11 +2228,11 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='</productPerspective>'
+		otherlv_3='</ProductPerspective>'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getVSSSGeneralDescriptionAccess().getProductPerspectiveKeyword_3());
 		}
-		otherlv_4='<generalCapabilities>'
+		otherlv_4='<GeneralCapabilities>'
 		{
 			newLeafNode(otherlv_4, grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralCapabilitiesKeyword_4());
 		}
@@ -2226,11 +2255,11 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_6='</generalCapabilities>'
+		otherlv_6='</GeneralCapabilities>'
 		{
 			newLeafNode(otherlv_6, grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralCapabilitiesKeyword_6());
 		}
-		otherlv_7='<generalConstraints>'
+		otherlv_7='<GeneralConstraints>'
 		{
 			newLeafNode(otherlv_7, grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralConstraintsKeyword_7());
 		}
@@ -2253,11 +2282,11 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_9='</generalConstraints>'
+		otherlv_9='</GeneralConstraints>'
 		{
 			newLeafNode(otherlv_9, grammarAccess.getVSSSGeneralDescriptionAccess().getGeneralConstraintsKeyword_9());
 		}
-		otherlv_10='<operationalEnvironment>'
+		otherlv_10='<OperationalEnvironment>'
 		{
 			newLeafNode(otherlv_10, grammarAccess.getVSSSGeneralDescriptionAccess().getOperationalEnvironmentKeyword_10());
 		}
@@ -2280,11 +2309,11 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_12='</operationalEnvironment>'
+		otherlv_12='</OperationalEnvironment>'
 		{
 			newLeafNode(otherlv_12, grammarAccess.getVSSSGeneralDescriptionAccess().getOperationalEnvironmentKeyword_12());
 		}
-		otherlv_13='<assumptionsDependencies>'
+		otherlv_13='<AssumptionsDependencies>'
 		{
 			newLeafNode(otherlv_13, grammarAccess.getVSSSGeneralDescriptionAccess().getAssumptionsDependenciesKeyword_13());
 		}
@@ -2307,7 +2336,7 @@ ruleVSSSGeneralDescription returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_15='</assumptionsDependencies>'
+		otherlv_15='</AssumptionsDependencies>'
 		{
 			newLeafNode(otherlv_15, grammarAccess.getVSSSGeneralDescriptionAccess().getAssumptionsDependenciesKeyword_15());
 		}

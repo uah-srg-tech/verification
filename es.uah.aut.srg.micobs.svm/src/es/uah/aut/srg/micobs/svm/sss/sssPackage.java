@@ -782,13 +782,22 @@ public interface sssPackage extends EPackage {
 	int VSSS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>VSSS Instantiable Section</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSSS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSSS Instantiable Section</em>' class.
@@ -3012,6 +3021,17 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSInstantiableSection_Body();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getSssInstatiableSubsections <em>Sss Instatiable Subsections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Instatiable Subsections</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection#getSssInstatiableSubsections()
+	 * @see #getVSSSInstantiableSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableSection_SssInstatiableSubsections();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription <em>VSSS General Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3913,6 +3933,14 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSSS_INSTANTIABLE_SECTION__BODY = eINSTANCE.getVSSSInstantiableSection_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSSSInstantiableSection_SssInstatiableSubsections();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl <em>VSSS General Description</em>}' class.

@@ -72,7 +72,7 @@ DHyperlink returns doc::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doc::DReferenceableObject|STRING]
 	'>'
-		run=DRun
+		(run=DRun)?
 	'</hyperlink>';
 	
 DText returns doc::DText:
@@ -82,14 +82,14 @@ terminal RUNTEXT returns ecore::EString:
     '<text>' -> '</text>';
 
 DFigureFromFile returns doc::DFigureFromFile:
-	'<figure'
+	'<figureFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
 		('caption=' caption=STRING)?
 	'/>';
 
 DTableFromFile returns doc::DTableFromFile:
-	'<pictureAsTable'
+	'<tableFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
 		('caption=' caption=STRING)?
@@ -143,14 +143,16 @@ DReferenceDocument returns doc::DReferenceDocument:
 	'/>';
 
 VSSSFixedSection returns VSSSFixedSection:
-	body=DBody
+{VSSSFixedSection}
+	(body=DBody)?
 	(sssInstatiableSubsections+=VSSSInstatiableSection)*;
 
 VSSSInstatiableSection returns VSSSInstantiableSection:
 	'<subsection'
 		'name=' name=STRING
 		'>'
-		body=DBody
+		(body=DBody)?
+		(sssInstatiableSubsections+=VSSSInstatiableSection)*
 	'</subsection>';
 
 VSSSIntroduction returns VSSSIntroduction:
@@ -180,11 +182,11 @@ VSSSTermsDefinitionsAbbreviations returns VSSSTermsDefinitionsAbbreviations:
 
 VSSSGeneralDescription returns VSSSGeneralDescription:
 	'<GeneralDescription>'
-		'<productPerspective>' productPerspective=VSSSFixedSection '</productPerspective>'
-		'<generalCapabilities>' generalCapabilities=VSSSFixedSection '</generalCapabilities>'
-		'<generalConstraints>' generalConstraints=VSSSFixedSection '</generalConstraints>'
-		'<operationalEnvironment>' operationalEnvironment=VSSSFixedSection '</operationalEnvironment>'
-		'<assumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</assumptionsDependencies>'
+		'<ProductPerspective>' productPerspective=VSSSFixedSection '</ProductPerspective>'
+		'<GeneralCapabilities>' generalCapabilities=VSSSFixedSection '</GeneralCapabilities>'
+		'<GeneralConstraints>' generalConstraints=VSSSFixedSection '</GeneralConstraints>'
+		'<OperationalEnvironment>' operationalEnvironment=VSSSFixedSection '</OperationalEnvironment>'
+		'<AssumptionsDependencies>' assumptionsDependencies=VSSSFixedSection '</AssumptionsDependencies>'
 	'</GeneralDescription>';
 
 VSSSSpecificRequirements returns VSSSSpecificRequirements:

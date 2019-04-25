@@ -677,6 +677,15 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSSSInstantiableSection_SssInstatiableSubsections() {
+		return (EReference)vsssInstantiableSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSGeneralDescription() {
 		return vsssGeneralDescriptionEClass;
 	}
@@ -1255,6 +1264,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		vsssInstantiableSectionEClass = createEClass(VSSS_INSTANTIABLE_SECTION);
 		createEReference(vsssInstantiableSectionEClass, VSSS_INSTANTIABLE_SECTION__BODY);
+		createEReference(vsssInstantiableSectionEClass, VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS);
 
 		vsssGeneralDescriptionEClass = createEClass(VSSS_GENERAL_DESCRIPTION);
 		createEReference(vsssGeneralDescriptionEClass, VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE);
@@ -1446,11 +1456,12 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEClass(vsssAbbreviationEClass, VSSSAbbreviation.class, "VSSSAbbreviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsssFixedSectionEClass, VSSSFixedSection.class, "VSSSFixedSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSSSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSSSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSFixedSection_SssInstatiableSubsections(), this.getVSSSInstantiableSection(), null, "sssInstatiableSubsections", null, 0, -1, VSSSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssInstantiableSectionEClass, VSSSInstantiableSection.class, "VSSSInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSSSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSSSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSSSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSInstantiableSection_SssInstatiableSubsections(), this.getVSSSInstantiableSection(), null, "sssInstatiableSubsections", null, 0, -1, VSSSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsssGeneralDescriptionEClass, VSSSGeneralDescription.class, "VSSSGeneralDescription", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSSSGeneralDescription_ProductPerspective(), this.getVSSSFixedSection(), null, "productPerspective", null, 1, 1, VSSSGeneralDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
