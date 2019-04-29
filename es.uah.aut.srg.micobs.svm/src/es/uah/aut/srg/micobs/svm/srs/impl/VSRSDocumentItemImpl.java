@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 
@@ -248,10 +249,10 @@ public class VSRSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 		}
 		return super.eIsSet(featureID);
 	}
+	
 	@Override
-	public EList<VTraceableDocumentAbstractItem> getParentItem() {
-		// TODO Auto-generated method stub
-		return super.getParentItem();
+	public VTraceableDocumentAbstractGroup getGroup() {
+		return (VTraceableDocumentAbstractGroup)eContainer();
 	}
 
 } //VSRSDocumentItemImpl
