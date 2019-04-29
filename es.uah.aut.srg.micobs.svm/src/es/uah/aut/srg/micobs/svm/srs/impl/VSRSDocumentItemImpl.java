@@ -14,12 +14,11 @@ import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -248,10 +247,10 @@ public class VSRSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 		}
 		return super.eIsSet(featureID);
 	}
+	
 	@Override
-	public EList<VTraceableDocumentAbstractItem> getParentItem() {
-		// TODO Auto-generated method stub
-		return super.getParentItem();
+	public VTraceableDocumentAbstractGroup getGroup() {
+		return (VTraceableDocumentAbstractGroup)eContainer();
 	}
 
 } //VSRSDocumentItemImpl
