@@ -63,7 +63,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
-import es.uah.aut.srg.micobs.svm.srs.VSRSTraceabilty;
+import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -240,8 +240,8 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case srsPackage.VSRS_TERMS_DEFINITIONS_ABBREVIATIONS:
 				sequence_VSRSTermsDefinitionsAbbreviations(context, (VSRSTermsDefinitionsAbbreviations) semanticObject); 
 				return; 
-			case srsPackage.VSRS_TRACEABILTY:
-				sequence_VSRSTraceabilty(context, (VSRSTraceabilty) semanticObject); 
+			case srsPackage.VSRS_TRACEABILITY:
+				sequence_VSRSTraceability(context, (VSRSTraceability) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -588,9 +588,9 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         applicableDocumentsSection=VSRSApplicableDocuments 
 	 *         referenceDocumentsSection=VSRSReferenceDocuments 
 	 *         termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations 
-	 *         generalDescriptionSection=VSRSSoftwareOverview 
+	 *         softwareOverviewSection=VSRSSoftwareOverview 
 	 *         requirementsSection=VSRSRequirements 
-	 *         traceabiltySection=VSRSTraceabilty 
+	 *         traceabilitySection=VSRSTraceability 
 	 *         logicalModelsSection=VSRSLogicalModels 
 	 *         parents+=[VTraceableDocument|STRING]*
 	 *     )
@@ -897,14 +897,19 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSRSSoftwareOverview returns VSRSSoftwareOverview
 	 *
 	 * Constraint:
-	 *     (functionPurpose=VSRSFixedSection environmentalConsideration=VSRSFixedSection relationOtherSystems=VSRSFixedSection constraints=VSRSFixedSection)
+	 *     (
+	 *         functionPurpose=VSRSFixedSection 
+	 *         environmentalConsiderations=VSRSFixedSection 
+	 *         relationOtherSystems=VSRSFixedSection 
+	 *         constraints=VSRSFixedSection
+	 *     )
 	 */
 	protected void sequence_VSRSSoftwareOverview(ISerializationContext context, VSRSSoftwareOverview semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE));
-			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION));
+			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS));
 			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS));
 			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS) == ValueTransient.YES)
@@ -912,7 +917,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getFunctionPurposeVSRSFixedSectionParserRuleCall_2_0(), semanticObject.getFunctionPurpose());
-		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getEnvironmentalConsiderationVSRSFixedSectionParserRuleCall_5_0(), semanticObject.getEnvironmentalConsideration());
+		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getEnvironmentalConsiderationsVSRSFixedSectionParserRuleCall_5_0(), semanticObject.getEnvironmentalConsiderations());
 		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getRelationOtherSystemsVSRSFixedSectionParserRuleCall_8_0(), semanticObject.getRelationOtherSystems());
 		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getConstraintsVSRSFixedSectionParserRuleCall_11_0(), semanticObject.getConstraints());
 		feeder.finish();
@@ -954,18 +959,18 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VSRSTraceabilty returns VSRSTraceabilty
+	 *     VSRSTraceability returns VSRSTraceability
 	 *
 	 * Constraint:
 	 *     sectionDescription=DBody
 	 */
-	protected void sequence_VSRSTraceabilty(ISerializationContext context, VSRSTraceabilty semanticObject) {
+	protected void sequence_VSRSTraceability(ISerializationContext context, VSRSTraceability semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_TRACEABILTY__SECTION_DESCRIPTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_TRACEABILTY__SECTION_DESCRIPTION));
+			if (transientValues.isValueTransient(semanticObject, srsPackage.Literals.VSRS_TRACEABILITY__SECTION_DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, srsPackage.Literals.VSRS_TRACEABILITY__SECTION_DESCRIPTION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSRSTraceabiltyAccess().getSectionDescriptionDBodyParserRuleCall_1_0(), semanticObject.getSectionDescription());
+		feeder.accept(grammarAccess.getVSRSTraceabilityAccess().getSectionDescriptionDBodyParserRuleCall_1_0(), semanticObject.getSectionDescription());
 		feeder.finish();
 	}
 	

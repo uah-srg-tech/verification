@@ -18,9 +18,9 @@ VSRSDocument returns VSRSDocument:
 		applicableDocumentsSection=VSRSApplicableDocuments
 		referenceDocumentsSection=VSRSReferenceDocuments
 		termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
-		generalDescriptionSection=VSRSSoftwareOverview
+		softwareOverviewSection=VSRSSoftwareOverview
 		requirementsSection=VSRSRequirements
-		traceabiltySection=VSRSTraceabilty
+		traceabilitySection=VSRSTraceability
 		logicalModelsSection=VSRSLogicalModels
 		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 	'</SRS>';
@@ -182,7 +182,7 @@ VSRSTermsDefinitionsAbbreviations returns VSRSTermsDefinitionsAbbreviations:
 VSRSSoftwareOverview returns VSRSSoftwareOverview:
 	'<SoftwareOverview>'
 		'<functionPurpose>' functionPurpose=VSRSFixedSection '</functionPurpose>'
-		'<environmentalConsideration>' environmentalConsideration=VSRSFixedSection '</environmentalConsideration>' 
+		'<environmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</environmentalConsiderations>' 
 		'<relationOtherSystems>' relationOtherSystems=VSRSFixedSection '</relationOtherSystems>'
 		'<constraints>' constraints=VSRSFixedSection '</constraints>'
 	'</SoftwareOverview>';
@@ -209,10 +209,10 @@ VSRSRequirements returns VSRSRequirements:
 		adaptationInstallation=VSRSAdaptationInstallationRequirements
 	'</Requirements>';
 
-VSRSTraceabilty returns VSRSTraceabilty:
-	'<Traceabilty>'
+VSRSTraceability returns VSRSTraceability:
+	'<Traceability>'
 		sectionDescription=DBody
-	'</Traceabilty>';
+	'</Traceability>';
 
 VSRSLogicalModels returns VSRSLogicalModels:
 	{VSRSLogicalModels}

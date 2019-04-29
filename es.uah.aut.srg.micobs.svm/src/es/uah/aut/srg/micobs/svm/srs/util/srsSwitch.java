@@ -380,11 +380,11 @@ public class srsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case srsPackage.VSRS_TRACEABILTY: {
-				VSRSTraceabilty vsrsTraceabilty = (VSRSTraceabilty)theEObject;
-				T result = caseVSRSTraceabilty(vsrsTraceabilty);
-				if (result == null) result = caseDFixedSection(vsrsTraceabilty);
-				if (result == null) result = caseDAbstractSection(vsrsTraceabilty);
+			case srsPackage.VSRS_TRACEABILITY: {
+				VSRSTraceability vsrsTraceability = (VSRSTraceability)theEObject;
+				T result = caseVSRSTraceability(vsrsTraceability);
+				if (result == null) result = caseDFixedSection(vsrsTraceability);
+				if (result == null) result = caseDAbstractSection(vsrsTraceability);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -902,17 +902,17 @@ public class srsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSRS Traceabilty</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSRS Traceability</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSRS Traceabilty</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSRS Traceability</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSRSTraceabilty(VSRSTraceabilty object) {
+	public T caseVSRSTraceability(VSRSTraceability object) {
 		return null;
 	}
 

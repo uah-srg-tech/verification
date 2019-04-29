@@ -35,7 +35,7 @@
 '</SoftwareOverview>'=77
 '</Term>'=85
 '</TermsDefinitionsAbbreviations>'=67
-'</Traceabilty>'=81
+'</Traceability>'=81
 '</basicTable>'=47
 '</body>'=23
 '</cell>'=54
@@ -43,7 +43,7 @@
 '</constraints>'=76
 '</description>'=126
 '</enumerate>'=33
-'</environmentalConsideration>'=72
+'</environmentalConsiderations>'=72
 '</functionPurpose>'=70
 '</hyperlink>'=41
 '</itemize>'=31
@@ -86,7 +86,7 @@
 '<SoftwareOverview>'=68
 '<Term'=84
 '<TermsDefinitionsAbbreviations>'=66
-'<Traceabilty>'=80
+'<Traceability>'=80
 '<basicTable'=46
 '<body>'=22
 '<cell>'=53
@@ -94,7 +94,7 @@
 '<constraints>'=75
 '<description>'=125
 '<enumerate>'=32
-'<environmentalConsideration>'=71
+'<environmentalConsiderations>'=71
 '<figure'=42
 '<functionPurpose>'=69
 '<hyperlink'=39

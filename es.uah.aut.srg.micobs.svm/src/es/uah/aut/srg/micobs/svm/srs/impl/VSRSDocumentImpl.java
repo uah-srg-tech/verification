@@ -26,7 +26,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.srs.VSRSRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
-import es.uah.aut.srg.micobs.svm.srs.VSRSTraceabilty;
+import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentImpl;
@@ -63,9 +63,9 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getGeneralDescriptionSection <em>General Description Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSoftwareOverviewSection <em>Software Overview Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getRequirementsSection <em>Requirements Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getTraceabiltySection <em>Traceabilty Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getTraceabilitySection <em>Traceability Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getLogicalModelsSection <em>Logical Models Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSrsFigures <em>Srs Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSrsTables <em>Srs Tables</em>}</li>
@@ -115,14 +115,14 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	protected VSRSTermsDefinitionsAbbreviations termsDefinitionsAbbreviationsSection;
 
 	/**
-	 * The cached value of the '{@link #getGeneralDescriptionSection() <em>General Description Section</em>}' containment reference.
+	 * The cached value of the '{@link #getSoftwareOverviewSection() <em>Software Overview Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getGeneralDescriptionSection()
+	 * @see #getSoftwareOverviewSection()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSRSSoftwareOverview generalDescriptionSection;
+	protected VSRSSoftwareOverview softwareOverviewSection;
 
 	/**
 	 * The cached value of the '{@link #getRequirementsSection() <em>Requirements Section</em>}' containment reference.
@@ -135,14 +135,14 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	protected VSRSRequirements requirementsSection;
 
 	/**
-	 * The cached value of the '{@link #getTraceabiltySection() <em>Traceabilty Section</em>}' containment reference.
+	 * The cached value of the '{@link #getTraceabilitySection() <em>Traceability Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTraceabiltySection()
+	 * @see #getTraceabilitySection()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSRSTraceabilty traceabiltySection;
+	protected VSRSTraceability traceabilitySection;
 
 	/**
 	 * The cached value of the '{@link #getLogicalModelsSection() <em>Logical Models Section</em>}' containment reference.
@@ -229,7 +229,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		sections.add((DAbstractSection) getReferenceDocumentsSection());
 		sections.add((DAbstractSection) getTermsDefinitionsAbbreviationsSection());
 		sections.add((DAbstractSection) getRequirementsSection());
-		sections.add((DAbstractSection) getTraceabiltySection());
+		sections.add((DAbstractSection) getTraceabilitySection());
 		sections.add((DAbstractSection) getLogicalModelsSection());
 		return sections;
 	}
@@ -434,8 +434,8 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSRSSoftwareOverview getGeneralDescriptionSection() {
-		return generalDescriptionSection;
+	public VSRSSoftwareOverview getSoftwareOverviewSection() {
+		return softwareOverviewSection;
 	}
 
 	/**
@@ -443,11 +443,11 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetGeneralDescriptionSection(VSRSSoftwareOverview newGeneralDescriptionSection, NotificationChain msgs) {
-		VSRSSoftwareOverview oldGeneralDescriptionSection = generalDescriptionSection;
-		generalDescriptionSection = newGeneralDescriptionSection;
+	public NotificationChain basicSetSoftwareOverviewSection(VSRSSoftwareOverview newSoftwareOverviewSection, NotificationChain msgs) {
+		VSRSSoftwareOverview oldSoftwareOverviewSection = softwareOverviewSection;
+		softwareOverviewSection = newSoftwareOverviewSection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION, oldGeneralDescriptionSection, newGeneralDescriptionSection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION, oldSoftwareOverviewSection, newSoftwareOverviewSection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -458,18 +458,18 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setGeneralDescriptionSection(VSRSSoftwareOverview newGeneralDescriptionSection) {
-		if (newGeneralDescriptionSection != generalDescriptionSection) {
+	public void setSoftwareOverviewSection(VSRSSoftwareOverview newSoftwareOverviewSection) {
+		if (newSoftwareOverviewSection != softwareOverviewSection) {
 			NotificationChain msgs = null;
-			if (generalDescriptionSection != null)
-				msgs = ((InternalEObject)generalDescriptionSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION, null, msgs);
-			if (newGeneralDescriptionSection != null)
-				msgs = ((InternalEObject)newGeneralDescriptionSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION, null, msgs);
-			msgs = basicSetGeneralDescriptionSection(newGeneralDescriptionSection, msgs);
+			if (softwareOverviewSection != null)
+				msgs = ((InternalEObject)softwareOverviewSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION, null, msgs);
+			if (newSoftwareOverviewSection != null)
+				msgs = ((InternalEObject)newSoftwareOverviewSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION, null, msgs);
+			msgs = basicSetSoftwareOverviewSection(newSoftwareOverviewSection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION, newGeneralDescriptionSection, newGeneralDescriptionSection));
+			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION, newSoftwareOverviewSection, newSoftwareOverviewSection));
 	}
 
 	/**
@@ -520,8 +520,8 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSRSTraceabilty getTraceabiltySection() {
-		return traceabiltySection;
+	public VSRSTraceability getTraceabilitySection() {
+		return traceabilitySection;
 	}
 
 	/**
@@ -529,11 +529,11 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTraceabiltySection(VSRSTraceabilty newTraceabiltySection, NotificationChain msgs) {
-		VSRSTraceabilty oldTraceabiltySection = traceabiltySection;
-		traceabiltySection = newTraceabiltySection;
+	public NotificationChain basicSetTraceabilitySection(VSRSTraceability newTraceabilitySection, NotificationChain msgs) {
+		VSRSTraceability oldTraceabilitySection = traceabilitySection;
+		traceabilitySection = newTraceabilitySection;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION, oldTraceabiltySection, newTraceabiltySection);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION, oldTraceabilitySection, newTraceabilitySection);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -544,18 +544,18 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTraceabiltySection(VSRSTraceabilty newTraceabiltySection) {
-		if (newTraceabiltySection != traceabiltySection) {
+	public void setTraceabilitySection(VSRSTraceability newTraceabilitySection) {
+		if (newTraceabilitySection != traceabilitySection) {
 			NotificationChain msgs = null;
-			if (traceabiltySection != null)
-				msgs = ((InternalEObject)traceabiltySection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION, null, msgs);
-			if (newTraceabiltySection != null)
-				msgs = ((InternalEObject)newTraceabiltySection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION, null, msgs);
-			msgs = basicSetTraceabiltySection(newTraceabiltySection, msgs);
+			if (traceabilitySection != null)
+				msgs = ((InternalEObject)traceabilitySection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION, null, msgs);
+			if (newTraceabilitySection != null)
+				msgs = ((InternalEObject)newTraceabilitySection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION, null, msgs);
+			msgs = basicSetTraceabilitySection(newTraceabilitySection, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION, newTraceabiltySection, newTraceabiltySection));
+			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION, newTraceabilitySection, newTraceabilitySection));
 	}
 
 	/**
@@ -641,12 +641,12 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return basicSetReferenceDocumentsSection(null, msgs);
 			case srsPackage.VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return basicSetTermsDefinitionsAbbreviationsSection(null, msgs);
-			case srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION:
-				return basicSetGeneralDescriptionSection(null, msgs);
+			case srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
+				return basicSetSoftwareOverviewSection(null, msgs);
 			case srsPackage.VSRS_DOCUMENT__REQUIREMENTS_SECTION:
 				return basicSetRequirementsSection(null, msgs);
-			case srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION:
-				return basicSetTraceabiltySection(null, msgs);
+			case srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION:
+				return basicSetTraceabilitySection(null, msgs);
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return basicSetLogicalModelsSection(null, msgs);
 			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
@@ -683,12 +683,12 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return getReferenceDocumentsSection();
 			case srsPackage.VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return getTermsDefinitionsAbbreviationsSection();
-			case srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION:
-				return getGeneralDescriptionSection();
+			case srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
+				return getSoftwareOverviewSection();
 			case srsPackage.VSRS_DOCUMENT__REQUIREMENTS_SECTION:
 				return getRequirementsSection();
-			case srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION:
-				return getTraceabiltySection();
+			case srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION:
+				return getTraceabilitySection();
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return getLogicalModelsSection();
 			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
@@ -740,14 +740,14 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				setTermsDefinitionsAbbreviationsSection((VSRSTermsDefinitionsAbbreviations)newValue);
 				return;
-			case srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION:
-				setGeneralDescriptionSection((VSRSSoftwareOverview)newValue);
+			case srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
+				setSoftwareOverviewSection((VSRSSoftwareOverview)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__REQUIREMENTS_SECTION:
 				setRequirementsSection((VSRSRequirements)newValue);
 				return;
-			case srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION:
-				setTraceabiltySection((VSRSTraceabilty)newValue);
+			case srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION:
+				setTraceabilitySection((VSRSTraceability)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				setLogicalModelsSection((VSRSLogicalModels)newValue);
@@ -799,14 +799,14 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				setTermsDefinitionsAbbreviationsSection((VSRSTermsDefinitionsAbbreviations)null);
 				return;
-			case srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION:
-				setGeneralDescriptionSection((VSRSSoftwareOverview)null);
+			case srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
+				setSoftwareOverviewSection((VSRSSoftwareOverview)null);
 				return;
 			case srsPackage.VSRS_DOCUMENT__REQUIREMENTS_SECTION:
 				setRequirementsSection((VSRSRequirements)null);
 				return;
-			case srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION:
-				setTraceabiltySection((VSRSTraceabilty)null);
+			case srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION:
+				setTraceabilitySection((VSRSTraceability)null);
 				return;
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				setLogicalModelsSection((VSRSLogicalModels)null);
@@ -847,12 +847,12 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return referenceDocumentsSection != null;
 			case srsPackage.VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return termsDefinitionsAbbreviationsSection != null;
-			case srsPackage.VSRS_DOCUMENT__GENERAL_DESCRIPTION_SECTION:
-				return generalDescriptionSection != null;
+			case srsPackage.VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
+				return softwareOverviewSection != null;
 			case srsPackage.VSRS_DOCUMENT__REQUIREMENTS_SECTION:
 				return requirementsSection != null;
-			case srsPackage.VSRS_DOCUMENT__TRACEABILTY_SECTION:
-				return traceabiltySection != null;
+			case srsPackage.VSRS_DOCUMENT__TRACEABILITY_SECTION:
+				return traceabilitySection != null;
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return logicalModelsSection != null;
 			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:

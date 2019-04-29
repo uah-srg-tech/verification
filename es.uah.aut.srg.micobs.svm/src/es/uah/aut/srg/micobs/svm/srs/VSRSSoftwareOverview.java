@@ -22,7 +22,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getFunctionPurpose <em>Function Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getEnvironmentalConsideration <em>Environmental Consideration</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getEnvironmentalConsiderations <em>Environmental Considerations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getRelationOtherSystems <em>Relation Other Systems</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getConstraints <em>Constraints</em>}</li>
  * </ul>
@@ -59,30 +59,30 @@ public interface VSRSSoftwareOverview extends DFixedSection {
 	void setFunctionPurpose(VSRSFixedSection value);
 
 	/**
-	 * Returns the value of the '<em><b>Environmental Consideration</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Environmental Considerations</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Environmental Consideration</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Environmental Considerations</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Environmental Consideration</em>' containment reference.
-	 * @see #setEnvironmentalConsideration(VSRSFixedSection)
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSSoftwareOverview_EnvironmentalConsideration()
+	 * @return the value of the '<em>Environmental Considerations</em>' containment reference.
+	 * @see #setEnvironmentalConsiderations(VSRSFixedSection)
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSSoftwareOverview_EnvironmentalConsiderations()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSRSFixedSection getEnvironmentalConsideration();
+	VSRSFixedSection getEnvironmentalConsiderations();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getEnvironmentalConsideration <em>Environmental Consideration</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview#getEnvironmentalConsiderations <em>Environmental Considerations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Environmental Consideration</em>' containment reference.
-	 * @see #getEnvironmentalConsideration()
+	 * @param value the new value of the '<em>Environmental Considerations</em>' containment reference.
+	 * @see #getEnvironmentalConsiderations()
 	 * @generated
 	 */
-	void setEnvironmentalConsideration(VSRSFixedSection value);
+	void setEnvironmentalConsiderations(VSRSFixedSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Relation Other Systems</b></em>' containment reference.

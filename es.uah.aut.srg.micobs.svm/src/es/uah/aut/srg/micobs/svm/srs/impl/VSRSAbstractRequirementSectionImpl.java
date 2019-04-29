@@ -325,14 +325,14 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getSrsRequirementSubsections());
+		subsections.addAll((Collection<? extends DAbstractSection>) getSrsRequirementSubsections());
 		return subsections;
 	}
 
 	@Override
 	public EList<VTraceableDocumentAbstractItem> getItems() {
 		EList<VTraceableDocumentAbstractItem> items = new BasicEList<VTraceableDocumentAbstractItem>();
-		items.add((VTraceableDocumentAbstractItem) getSrsItems());
+		items.addAll((Collection<? extends VTraceableDocumentAbstractItem>) getSrsItems());
 		return items;
 	}
 

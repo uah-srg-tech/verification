@@ -10,12 +10,12 @@
         lowerBound="1" eType="#//VSRSReferenceDocuments" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="termsDefinitionsAbbreviationsSection"
         lowerBound="1" eType="#//VSRSTermsDefinitionsAbbreviations" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="generalDescriptionSection"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwareOverviewSection"
         lowerBound="1" eType="#//VSRSSoftwareOverview" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirementsSection" lowerBound="1"
         eType="#//VSRSRequirements" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="traceabiltySection" lowerBound="1"
-        eType="#//VSRSTraceabilty" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traceabilitySection" lowerBound="1"
+        eType="#//VSRSTraceability" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="logicalModelsSection" lowerBound="1"
         eType="#//VSRSLogicalModels" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="srsFigures" upperBound="-1"
@@ -69,7 +69,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSRSSoftwareOverview" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="functionPurpose" lowerBound="1"
         eType="#//VSRSFixedSection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentalConsideration"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentalConsiderations"
         lowerBound="1" eType="#//VSRSFixedSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="relationOtherSystems" lowerBound="1"
         eType="#//VSRSFixedSection" containment="true"/>
@@ -155,7 +155,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSRSTraceabilty" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+  <eClassifiers xsi:type="ecore:EClass" name="VSRSTraceability" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>

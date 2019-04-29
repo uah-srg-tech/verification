@@ -13,7 +13,8 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-import es.uah.aut.srg.micobs.svm.srs.VSRSTraceabilty;
+
+import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,18 +27,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSRS Traceabilty</b></em>'.
+ * An implementation of the model object '<em><b>VSRS Traceability</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabiltyImpl#getSectionDescription <em>Section Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabilityImpl#getSectionDescription <em>Section Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTraceabilty {
+public class VSRSTraceabilityImpl extends DFixedSectionImpl implements VSRSTraceability {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -53,7 +54,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSRSTraceabiltyImpl() {
+	protected VSRSTraceabilityImpl() {
 		super();
 	}
 
@@ -64,7 +65,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return srsPackage.Literals.VSRS_TRACEABILTY;
+		return srsPackage.Literals.VSRS_TRACEABILITY;
 	}
 
 	/**
@@ -85,7 +86,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 		DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -100,14 +101,14 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
-				msgs = ((InternalEObject)sectionDescription).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)sectionDescription).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION, null, msgs);
 			if (newSectionDescription != null)
-				msgs = ((InternalEObject)newSectionDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)newSectionDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION, null, msgs);
 			msgs = basicSetSectionDescription(newSectionDescription, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION, newSectionDescription, newSectionDescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION, newSectionDescription, newSectionDescription));
 	}
 
 	/**
@@ -118,7 +119,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION:
+			case srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION:
 				return basicSetSectionDescription(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -132,7 +133,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION:
+			case srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION:
 				return getSectionDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -146,7 +147,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION:
+			case srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION:
 				setSectionDescription((DBody)newValue);
 				return;
 		}
@@ -161,7 +162,7 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION:
+			case srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION:
 				setSectionDescription((DBody)null);
 				return;
 		}
@@ -176,10 +177,10 @@ public class VSRSTraceabiltyImpl extends DFixedSectionImpl implements VSRSTracea
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case srsPackage.VSRS_TRACEABILTY__SECTION_DESCRIPTION:
+			case srsPackage.VSRS_TRACEABILITY__SECTION_DESCRIPTION:
 				return sectionDescription != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //VSRSTraceabiltyImpl
+} //VSRSTraceabilityImpl

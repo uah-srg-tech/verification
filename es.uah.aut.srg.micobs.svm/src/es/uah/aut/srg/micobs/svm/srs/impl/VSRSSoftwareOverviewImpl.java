@@ -33,7 +33,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl#getFunctionPurpose <em>Function Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl#getEnvironmentalConsideration <em>Environmental Consideration</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl#getEnvironmentalConsiderations <em>Environmental Considerations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl#getRelationOtherSystems <em>Relation Other Systems</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl#getConstraints <em>Constraints</em>}</li>
  * </ul>
@@ -52,14 +52,14 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 	protected VSRSFixedSection functionPurpose;
 
 	/**
-	 * The cached value of the '{@link #getEnvironmentalConsideration() <em>Environmental Consideration</em>}' containment reference.
+	 * The cached value of the '{@link #getEnvironmentalConsiderations() <em>Environmental Considerations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEnvironmentalConsideration()
+	 * @see #getEnvironmentalConsiderations()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSRSFixedSection environmentalConsideration;
+	protected VSRSFixedSection environmentalConsiderations;
 
 	/**
 	 * The cached value of the '{@link #getRelationOtherSystems() <em>Relation Other Systems</em>}' containment reference.
@@ -148,8 +148,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSRSFixedSection getEnvironmentalConsideration() {
-		return environmentalConsideration;
+	public VSRSFixedSection getEnvironmentalConsiderations() {
+		return environmentalConsiderations;
 	}
 
 	/**
@@ -157,11 +157,11 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEnvironmentalConsideration(VSRSFixedSection newEnvironmentalConsideration, NotificationChain msgs) {
-		VSRSFixedSection oldEnvironmentalConsideration = environmentalConsideration;
-		environmentalConsideration = newEnvironmentalConsideration;
+	public NotificationChain basicSetEnvironmentalConsiderations(VSRSFixedSection newEnvironmentalConsiderations, NotificationChain msgs) {
+		VSRSFixedSection oldEnvironmentalConsiderations = environmentalConsiderations;
+		environmentalConsiderations = newEnvironmentalConsiderations;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION, oldEnvironmentalConsideration, newEnvironmentalConsideration);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS, oldEnvironmentalConsiderations, newEnvironmentalConsiderations);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -172,18 +172,18 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnvironmentalConsideration(VSRSFixedSection newEnvironmentalConsideration) {
-		if (newEnvironmentalConsideration != environmentalConsideration) {
+	public void setEnvironmentalConsiderations(VSRSFixedSection newEnvironmentalConsiderations) {
+		if (newEnvironmentalConsiderations != environmentalConsiderations) {
 			NotificationChain msgs = null;
-			if (environmentalConsideration != null)
-				msgs = ((InternalEObject)environmentalConsideration).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION, null, msgs);
-			if (newEnvironmentalConsideration != null)
-				msgs = ((InternalEObject)newEnvironmentalConsideration).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION, null, msgs);
-			msgs = basicSetEnvironmentalConsideration(newEnvironmentalConsideration, msgs);
+			if (environmentalConsiderations != null)
+				msgs = ((InternalEObject)environmentalConsiderations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS, null, msgs);
+			if (newEnvironmentalConsiderations != null)
+				msgs = ((InternalEObject)newEnvironmentalConsiderations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS, null, msgs);
+			msgs = basicSetEnvironmentalConsiderations(newEnvironmentalConsiderations, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION, newEnvironmentalConsideration, newEnvironmentalConsideration));
+			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS, newEnvironmentalConsiderations, newEnvironmentalConsiderations));
 	}
 
 	/**
@@ -282,8 +282,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 		switch (featureID) {
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE:
 				return basicSetFunctionPurpose(null, msgs);
-			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION:
-				return basicSetEnvironmentalConsideration(null, msgs);
+			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS:
+				return basicSetEnvironmentalConsiderations(null, msgs);
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS:
 				return basicSetRelationOtherSystems(null, msgs);
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS:
@@ -302,8 +302,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 		switch (featureID) {
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE:
 				return getFunctionPurpose();
-			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION:
-				return getEnvironmentalConsideration();
+			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS:
+				return getEnvironmentalConsiderations();
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS:
 				return getRelationOtherSystems();
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS:
@@ -323,8 +323,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE:
 				setFunctionPurpose((VSRSFixedSection)newValue);
 				return;
-			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION:
-				setEnvironmentalConsideration((VSRSFixedSection)newValue);
+			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS:
+				setEnvironmentalConsiderations((VSRSFixedSection)newValue);
 				return;
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS:
 				setRelationOtherSystems((VSRSFixedSection)newValue);
@@ -347,8 +347,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE:
 				setFunctionPurpose((VSRSFixedSection)null);
 				return;
-			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION:
-				setEnvironmentalConsideration((VSRSFixedSection)null);
+			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS:
+				setEnvironmentalConsiderations((VSRSFixedSection)null);
 				return;
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS:
 				setRelationOtherSystems((VSRSFixedSection)null);
@@ -370,8 +370,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 		switch (featureID) {
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE:
 				return functionPurpose != null;
-			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATION:
-				return environmentalConsideration != null;
+			case srsPackage.VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS:
+				return environmentalConsiderations != null;
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS:
 				return relationOtherSystems != null;
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS:

@@ -31,9 +31,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getGeneralDescriptionSection <em>General Description Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSoftwareOverviewSection <em>Software Overview Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getRequirementsSection <em>Requirements Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabiltySection <em>Traceabilty Section</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection <em>Traceability Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getLogicalModelsSection <em>Logical Models Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsFigures <em>Srs Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsTables <em>Srs Tables</em>}</li>
@@ -149,30 +149,30 @@ public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	void setTermsDefinitionsAbbreviationsSection(VSRSTermsDefinitionsAbbreviations value);
 
 	/**
-	 * Returns the value of the '<em><b>General Description Section</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Software Overview Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General Description Section</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Software Overview Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>General Description Section</em>' containment reference.
-	 * @see #setGeneralDescriptionSection(VSRSSoftwareOverview)
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_GeneralDescriptionSection()
+	 * @return the value of the '<em>Software Overview Section</em>' containment reference.
+	 * @see #setSoftwareOverviewSection(VSRSSoftwareOverview)
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_SoftwareOverviewSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSRSSoftwareOverview getGeneralDescriptionSection();
+	VSRSSoftwareOverview getSoftwareOverviewSection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getGeneralDescriptionSection <em>General Description Section</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSoftwareOverviewSection <em>Software Overview Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>General Description Section</em>' containment reference.
-	 * @see #getGeneralDescriptionSection()
+	 * @param value the new value of the '<em>Software Overview Section</em>' containment reference.
+	 * @see #getSoftwareOverviewSection()
 	 * @generated
 	 */
-	void setGeneralDescriptionSection(VSRSSoftwareOverview value);
+	void setSoftwareOverviewSection(VSRSSoftwareOverview value);
 
 	/**
 	 * Returns the value of the '<em><b>Requirements Section</b></em>' containment reference.
@@ -201,30 +201,30 @@ public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	void setRequirementsSection(VSRSRequirements value);
 
 	/**
-	 * Returns the value of the '<em><b>Traceabilty Section</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Traceability Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Traceabilty Section</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Traceability Section</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Traceabilty Section</em>' containment reference.
-	 * @see #setTraceabiltySection(VSRSTraceabilty)
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_TraceabiltySection()
+	 * @return the value of the '<em>Traceability Section</em>' containment reference.
+	 * @see #setTraceabilitySection(VSRSTraceability)
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_TraceabilitySection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSRSTraceabilty getTraceabiltySection();
+	VSRSTraceability getTraceabilitySection();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabiltySection <em>Traceabilty Section</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection <em>Traceability Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Traceabilty Section</em>' containment reference.
-	 * @see #getTraceabiltySection()
+	 * @param value the new value of the '<em>Traceability Section</em>' containment reference.
+	 * @see #getTraceabilitySection()
 	 * @generated
 	 */
-	void setTraceabiltySection(VSRSTraceabilty value);
+	void setTraceabilitySection(VSRSTraceability value);
 
 	/**
 	 * Returns the value of the '<em><b>Logical Models Section</b></em>' containment reference.
