@@ -54,29 +54,29 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDateAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cDateSTRINGTerminalRuleCall_10_0 = (RuleCall)cDateAssignment_10.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cIntroductionSectionAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cIntroductionSectionVSRSIntroductionParserRuleCall_12_0 = (RuleCall)cIntroductionSectionAssignment_12.eContents().get(0);
-		private final Assignment cApplicableDocumentsSectionAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_13_0 = (RuleCall)cApplicableDocumentsSectionAssignment_13.eContents().get(0);
-		private final Assignment cReferenceDocumentsSectionAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_14_0 = (RuleCall)cReferenceDocumentsSectionAssignment_14.eContents().get(0);
-		private final Assignment cTermsDefinitionsAbbreviationsSectionAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_15_0 = (RuleCall)cTermsDefinitionsAbbreviationsSectionAssignment_15.eContents().get(0);
-		private final Assignment cSoftwareOverviewSectionAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_16_0 = (RuleCall)cSoftwareOverviewSectionAssignment_16.eContents().get(0);
-		private final Assignment cRequirementsSectionAssignment_17 = (Assignment)cGroup.eContents().get(17);
-		private final RuleCall cRequirementsSectionVSRSRequirementsParserRuleCall_17_0 = (RuleCall)cRequirementsSectionAssignment_17.eContents().get(0);
-		private final Assignment cTraceabilitySectionAssignment_18 = (Assignment)cGroup.eContents().get(18);
-		private final RuleCall cTraceabilitySectionVSRSTraceabilityParserRuleCall_18_0 = (RuleCall)cTraceabilitySectionAssignment_18.eContents().get(0);
-		private final Assignment cLogicalModelsSectionAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0 = (RuleCall)cLogicalModelsSectionAssignment_19.eContents().get(0);
-		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
-		private final Keyword cParentKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
-		private final Keyword cNameKeyword_20_1 = (Keyword)cGroup_20.eContents().get(1);
-		private final Assignment cParentsAssignment_20_2 = (Assignment)cGroup_20.eContents().get(2);
-		private final CrossReference cParentsVTraceableDocumentCrossReference_20_2_0 = (CrossReference)cParentsAssignment_20_2.eContents().get(0);
-		private final RuleCall cParentsVTraceableDocumentSTRINGTerminalRuleCall_20_2_0_1 = (RuleCall)cParentsVTraceableDocumentCrossReference_20_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_20_3 = (Keyword)cGroup_20.eContents().get(3);
+		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
+		private final Keyword cParentKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
+		private final Keyword cNameKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
+		private final Assignment cParentsAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
+		private final CrossReference cParentsVTraceableDocumentCrossReference_12_2_0 = (CrossReference)cParentsAssignment_12_2.eContents().get(0);
+		private final RuleCall cParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cParentsVTraceableDocumentCrossReference_12_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
+		private final Assignment cIntroductionSectionAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cIntroductionSectionVSRSIntroductionParserRuleCall_13_0 = (RuleCall)cIntroductionSectionAssignment_13.eContents().get(0);
+		private final Assignment cApplicableDocumentsSectionAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_14_0 = (RuleCall)cApplicableDocumentsSectionAssignment_14.eContents().get(0);
+		private final Assignment cReferenceDocumentsSectionAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_15_0 = (RuleCall)cReferenceDocumentsSectionAssignment_15.eContents().get(0);
+		private final Assignment cTermsDefinitionsAbbreviationsSectionAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_16_0 = (RuleCall)cTermsDefinitionsAbbreviationsSectionAssignment_16.eContents().get(0);
+		private final Assignment cSoftwareOverviewSectionAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0 = (RuleCall)cSoftwareOverviewSectionAssignment_17.eContents().get(0);
+		private final Assignment cRequirementsSectionAssignment_18 = (Assignment)cGroup.eContents().get(18);
+		private final RuleCall cRequirementsSectionVSRSRequirementsParserRuleCall_18_0 = (RuleCall)cRequirementsSectionAssignment_18.eContents().get(0);
+		private final Assignment cTraceabilitySectionAssignment_19 = (Assignment)cGroup.eContents().get(19);
+		private final RuleCall cTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0 = (RuleCall)cTraceabilitySectionAssignment_19.eContents().get(0);
+		private final Assignment cLogicalModelsSectionAssignment_20 = (Assignment)cGroup.eContents().get(20);
+		private final RuleCall cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0 = (RuleCall)cLogicalModelsSectionAssignment_20.eContents().get(0);
 		private final Keyword cSRSKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		
 		//VSRSDocument:
@@ -86,7 +86,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'issue=' issue=STRING
 		//	'revision=' revision=STRING
 		//	'date=' date=STRING
-		//	'>'
+		//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 		//	introductionSection=VSRSIntroduction
 		//	applicableDocumentsSection=VSRSApplicableDocuments
 		//	referenceDocumentsSection=VSRSReferenceDocuments
@@ -94,16 +94,16 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	softwareOverviewSection=VSRSSoftwareOverview
 		//	requirementsSection=VSRSRequirements
 		//	traceabilitySection=VSRSTraceability
-		//	logicalModelsSection=VSRSLogicalModels ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+		//	logicalModelsSection=VSRSLogicalModels
 		//	'</SRS>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<SRS' 'name=' name=STRING 'id=' id=STRING 'issue=' issue=STRING 'revision=' revision=STRING 'date=' date=STRING '>'
-		//introductionSection=VSRSIntroduction applicableDocumentsSection=VSRSApplicableDocuments
-		//referenceDocumentsSection=VSRSReferenceDocuments
+		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')* introductionSection=VSRSIntroduction
+		//applicableDocumentsSection=VSRSApplicableDocuments referenceDocumentsSection=VSRSReferenceDocuments
 		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations softwareOverviewSection=VSRSSoftwareOverview
 		//requirementsSection=VSRSRequirements traceabilitySection=VSRSTraceability logicalModelsSection=VSRSLogicalModels
-		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')* '</SRS>'
+		//'</SRS>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<SRS'
@@ -157,74 +157,74 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_11() { return cGreaterThanSignKeyword_11; }
 		
-		//introductionSection=VSRSIntroduction
-		public Assignment getIntroductionSectionAssignment_12() { return cIntroductionSectionAssignment_12; }
-		
-		//VSRSIntroduction
-		public RuleCall getIntroductionSectionVSRSIntroductionParserRuleCall_12_0() { return cIntroductionSectionVSRSIntroductionParserRuleCall_12_0; }
-		
-		//applicableDocumentsSection=VSRSApplicableDocuments
-		public Assignment getApplicableDocumentsSectionAssignment_13() { return cApplicableDocumentsSectionAssignment_13; }
-		
-		//VSRSApplicableDocuments
-		public RuleCall getApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_13_0() { return cApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_13_0; }
-		
-		//referenceDocumentsSection=VSRSReferenceDocuments
-		public Assignment getReferenceDocumentsSectionAssignment_14() { return cReferenceDocumentsSectionAssignment_14; }
-		
-		//VSRSReferenceDocuments
-		public RuleCall getReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_14_0() { return cReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_14_0; }
-		
-		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
-		public Assignment getTermsDefinitionsAbbreviationsSectionAssignment_15() { return cTermsDefinitionsAbbreviationsSectionAssignment_15; }
-		
-		//VSRSTermsDefinitionsAbbreviations
-		public RuleCall getTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_15_0() { return cTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_15_0; }
-		
-		//softwareOverviewSection=VSRSSoftwareOverview
-		public Assignment getSoftwareOverviewSectionAssignment_16() { return cSoftwareOverviewSectionAssignment_16; }
-		
-		//VSRSSoftwareOverview
-		public RuleCall getSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_16_0() { return cSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_16_0; }
-		
-		//requirementsSection=VSRSRequirements
-		public Assignment getRequirementsSectionAssignment_17() { return cRequirementsSectionAssignment_17; }
-		
-		//VSRSRequirements
-		public RuleCall getRequirementsSectionVSRSRequirementsParserRuleCall_17_0() { return cRequirementsSectionVSRSRequirementsParserRuleCall_17_0; }
-		
-		//traceabilitySection=VSRSTraceability
-		public Assignment getTraceabilitySectionAssignment_18() { return cTraceabilitySectionAssignment_18; }
-		
-		//VSRSTraceability
-		public RuleCall getTraceabilitySectionVSRSTraceabilityParserRuleCall_18_0() { return cTraceabilitySectionVSRSTraceabilityParserRuleCall_18_0; }
-		
-		//logicalModelsSection=VSRSLogicalModels
-		public Assignment getLogicalModelsSectionAssignment_19() { return cLogicalModelsSectionAssignment_19; }
-		
-		//VSRSLogicalModels
-		public RuleCall getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0() { return cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0; }
-		
 		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
-		public Group getGroup_20() { return cGroup_20; }
+		public Group getGroup_12() { return cGroup_12; }
 		
 		//'<parent'
-		public Keyword getParentKeyword_20_0() { return cParentKeyword_20_0; }
+		public Keyword getParentKeyword_12_0() { return cParentKeyword_12_0; }
 		
 		//'name='
-		public Keyword getNameKeyword_20_1() { return cNameKeyword_20_1; }
+		public Keyword getNameKeyword_12_1() { return cNameKeyword_12_1; }
 		
 		//parents+=[tdm::VTraceableDocument|STRING]
-		public Assignment getParentsAssignment_20_2() { return cParentsAssignment_20_2; }
+		public Assignment getParentsAssignment_12_2() { return cParentsAssignment_12_2; }
 		
 		//[tdm::VTraceableDocument|STRING]
-		public CrossReference getParentsVTraceableDocumentCrossReference_20_2_0() { return cParentsVTraceableDocumentCrossReference_20_2_0; }
+		public CrossReference getParentsVTraceableDocumentCrossReference_12_2_0() { return cParentsVTraceableDocumentCrossReference_12_2_0; }
 		
 		//STRING
-		public RuleCall getParentsVTraceableDocumentSTRINGTerminalRuleCall_20_2_0_1() { return cParentsVTraceableDocumentSTRINGTerminalRuleCall_20_2_0_1; }
+		public RuleCall getParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1() { return cParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_20_3() { return cSolidusGreaterThanSignKeyword_20_3; }
+		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
+		
+		//introductionSection=VSRSIntroduction
+		public Assignment getIntroductionSectionAssignment_13() { return cIntroductionSectionAssignment_13; }
+		
+		//VSRSIntroduction
+		public RuleCall getIntroductionSectionVSRSIntroductionParserRuleCall_13_0() { return cIntroductionSectionVSRSIntroductionParserRuleCall_13_0; }
+		
+		//applicableDocumentsSection=VSRSApplicableDocuments
+		public Assignment getApplicableDocumentsSectionAssignment_14() { return cApplicableDocumentsSectionAssignment_14; }
+		
+		//VSRSApplicableDocuments
+		public RuleCall getApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_14_0() { return cApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_14_0; }
+		
+		//referenceDocumentsSection=VSRSReferenceDocuments
+		public Assignment getReferenceDocumentsSectionAssignment_15() { return cReferenceDocumentsSectionAssignment_15; }
+		
+		//VSRSReferenceDocuments
+		public RuleCall getReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_15_0() { return cReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_15_0; }
+		
+		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
+		public Assignment getTermsDefinitionsAbbreviationsSectionAssignment_16() { return cTermsDefinitionsAbbreviationsSectionAssignment_16; }
+		
+		//VSRSTermsDefinitionsAbbreviations
+		public RuleCall getTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_16_0() { return cTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_16_0; }
+		
+		//softwareOverviewSection=VSRSSoftwareOverview
+		public Assignment getSoftwareOverviewSectionAssignment_17() { return cSoftwareOverviewSectionAssignment_17; }
+		
+		//VSRSSoftwareOverview
+		public RuleCall getSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0() { return cSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0; }
+		
+		//requirementsSection=VSRSRequirements
+		public Assignment getRequirementsSectionAssignment_18() { return cRequirementsSectionAssignment_18; }
+		
+		//VSRSRequirements
+		public RuleCall getRequirementsSectionVSRSRequirementsParserRuleCall_18_0() { return cRequirementsSectionVSRSRequirementsParserRuleCall_18_0; }
+		
+		//traceabilitySection=VSRSTraceability
+		public Assignment getTraceabilitySectionAssignment_19() { return cTraceabilitySectionAssignment_19; }
+		
+		//VSRSTraceability
+		public RuleCall getTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0() { return cTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0; }
+		
+		//logicalModelsSection=VSRSLogicalModels
+		public Assignment getLogicalModelsSectionAssignment_20() { return cLogicalModelsSectionAssignment_20; }
+		
+		//VSRSLogicalModels
+		public RuleCall getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0() { return cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0; }
 		
 		//'</SRS>'
 		public Keyword getSRSKeyword_21() { return cSRSKeyword_21; }
@@ -533,11 +533,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<hyperlink'
 		//	'reference=' reference=[doc::DReferenceableObject|STRING]
 		//	'>'
-		//	run=DRun
+		//	run=DRun?
 		//	'</hyperlink>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<hyperlink' 'reference=' reference=[doc::DReferenceableObject|STRING] '>' run=DRun '</hyperlink>'
+		//'<hyperlink' 'reference=' reference=[doc::DReferenceableObject|STRING] '>' run=DRun? '</hyperlink>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<hyperlink'
@@ -558,7 +558,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//run=DRun
+		//run=DRun?
 		public Assignment getRunAssignment_4() { return cRunAssignment_4; }
 		
 		//DRun
@@ -585,7 +585,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DFigureFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DFigureFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cFigureKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFigureFromFileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -599,17 +599,17 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DFigureFromFile doc::DFigureFromFile:
-		//	'<figure'
+		//	'<figureFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<figure' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
+		//'<figureFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<figure'
-		public Keyword getFigureKeyword_0() { return cFigureKeyword_0; }
+		//'<figureFromFile'
+		public Keyword getFigureFromFileKeyword_0() { return cFigureFromFileKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -647,7 +647,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DTableFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DTableFromFile");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cPictureAsTableKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTableFromFileKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -661,17 +661,17 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cSolidusGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//DTableFromFile doc::DTableFromFile:
-		//	'<pictureAsTable'
+		//	'<tableFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<pictureAsTable' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
+		//'<tableFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<pictureAsTable'
-		public Keyword getPictureAsTableKeyword_0() { return cPictureAsTableKeyword_0; }
+		//'<tableFromFile'
+		public Keyword getTableFromFileKeyword_0() { return cTableFromFileKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -1105,30 +1105,34 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	public class VSRSFixedSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSFixedSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cBodyAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cBodyDBodyParserRuleCall_0_0 = (RuleCall)cBodyAssignment_0.eContents().get(0);
-		private final Assignment cSrsInstatiableSubsectionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_1_0 = (RuleCall)cSrsInstatiableSubsectionsAssignment_1.eContents().get(0);
+		private final Action cVSRSFixedSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBodyDBodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		private final Assignment cSrsInstatiableSubsectionsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_2_0 = (RuleCall)cSrsInstatiableSubsectionsAssignment_2.eContents().get(0);
 		
 		//VSRSFixedSection:
-		//	body=DBody
+		//	{VSRSFixedSection} body=DBody?
 		//	srsInstatiableSubsections+=VSRSInstantiableSection*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//body=DBody srsInstatiableSubsections+=VSRSInstantiableSection*
+		//{VSRSFixedSection} body=DBody? srsInstatiableSubsections+=VSRSInstantiableSection*
 		public Group getGroup() { return cGroup; }
 		
-		//body=DBody
-		public Assignment getBodyAssignment_0() { return cBodyAssignment_0; }
+		//{VSRSFixedSection}
+		public Action getVSRSFixedSectionAction_0() { return cVSRSFixedSectionAction_0; }
+		
+		//body=DBody?
+		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_0_0() { return cBodyDBodyParserRuleCall_0_0; }
+		public RuleCall getBodyDBodyParserRuleCall_1_0() { return cBodyDBodyParserRuleCall_1_0; }
 		
 		//srsInstatiableSubsections+=VSRSInstantiableSection*
-		public Assignment getSrsInstatiableSubsectionsAssignment_1() { return cSrsInstatiableSubsectionsAssignment_1; }
+		public Assignment getSrsInstatiableSubsectionsAssignment_2() { return cSrsInstatiableSubsectionsAssignment_2; }
 		
 		//VSRSInstantiableSection
-		public RuleCall getSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_1_0() { return cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_1_0; }
+		public RuleCall getSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_2_0() { return cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_2_0; }
 	}
 	public class VSRSInstantiableSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSInstantiableSection");
@@ -1140,17 +1144,20 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cBodyDBodyParserRuleCall_4_0 = (RuleCall)cBodyAssignment_4.eContents().get(0);
-		private final Keyword cSubsectionKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cSrsInstatiableSubsectionsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_5_0 = (RuleCall)cSrsInstatiableSubsectionsAssignment_5.eContents().get(0);
+		private final Keyword cSubsectionKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSRSInstantiableSection:
 		//	'<subsection'
 		//	'name=' name=STRING
 		//	'>'
-		//	body=DBody
+		//	body=DBody?
+		//	srsInstatiableSubsections+=VSRSInstantiableSection*
 		//	'</subsection>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<subsection' 'name=' name=STRING '>' body=DBody '</subsection>'
+		//'<subsection' 'name=' name=STRING '>' body=DBody? srsInstatiableSubsections+=VSRSInstantiableSection* '</subsection>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<subsection'
@@ -1168,14 +1175,20 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//body=DBody
+		//body=DBody?
 		public Assignment getBodyAssignment_4() { return cBodyAssignment_4; }
 		
 		//DBody
 		public RuleCall getBodyDBodyParserRuleCall_4_0() { return cBodyDBodyParserRuleCall_4_0; }
 		
+		//srsInstatiableSubsections+=VSRSInstantiableSection*
+		public Assignment getSrsInstatiableSubsectionsAssignment_5() { return cSrsInstatiableSubsectionsAssignment_5; }
+		
+		//VSRSInstantiableSection
+		public RuleCall getSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_5_0() { return cSrsInstatiableSubsectionsVSRSInstantiableSectionParserRuleCall_5_0; }
+		
 		//'</subsection>'
-		public Keyword getSubsectionKeyword_5() { return cSubsectionKeyword_5; }
+		public Keyword getSubsectionKeyword_6() { return cSubsectionKeyword_6; }
 	}
 	public class VSRSIntroductionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSIntroduction");
@@ -1351,23 +1364,23 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VSRSSoftwareOverview:
 		//	'<SoftwareOverview>'
-		//	'<functionPurpose>' functionPurpose=VSRSFixedSection '</functionPurpose>'
-		//	'<environmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</environmentalConsiderations>'
-		//	'<relationOtherSystems>' relationOtherSystems=VSRSFixedSection '</relationOtherSystems>'
-		//	'<constraints>' constraints=VSRSFixedSection '</constraints>'
+		//	'<FunctionPurpose>' functionPurpose=VSRSFixedSection '</FunctionPurpose>'
+		//	'<EnvironmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</EnvironmentalConsiderations>'
+		//	'<RelationOtherSystems>' relationOtherSystems=VSRSFixedSection '</RelationOtherSystems>'
+		//	'<Constraints>' constraints=VSRSFixedSection '</Constraints>'
 		//	'</SoftwareOverview>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<SoftwareOverview>' '<functionPurpose>' functionPurpose=VSRSFixedSection '</functionPurpose>'
-		//'<environmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</environmentalConsiderations>'
-		//'<relationOtherSystems>' relationOtherSystems=VSRSFixedSection '</relationOtherSystems>' '<constraints>'
-		//constraints=VSRSFixedSection '</constraints>' '</SoftwareOverview>'
+		//'<SoftwareOverview>' '<FunctionPurpose>' functionPurpose=VSRSFixedSection '</FunctionPurpose>'
+		//'<EnvironmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</EnvironmentalConsiderations>'
+		//'<RelationOtherSystems>' relationOtherSystems=VSRSFixedSection '</RelationOtherSystems>' '<Constraints>'
+		//constraints=VSRSFixedSection '</Constraints>' '</SoftwareOverview>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<SoftwareOverview>'
 		public Keyword getSoftwareOverviewKeyword_0() { return cSoftwareOverviewKeyword_0; }
 		
-		//'<functionPurpose>'
+		//'<FunctionPurpose>'
 		public Keyword getFunctionPurposeKeyword_1() { return cFunctionPurposeKeyword_1; }
 		
 		//functionPurpose=VSRSFixedSection
@@ -1376,10 +1389,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSFixedSection
 		public RuleCall getFunctionPurposeVSRSFixedSectionParserRuleCall_2_0() { return cFunctionPurposeVSRSFixedSectionParserRuleCall_2_0; }
 		
-		//'</functionPurpose>'
+		//'</FunctionPurpose>'
 		public Keyword getFunctionPurposeKeyword_3() { return cFunctionPurposeKeyword_3; }
 		
-		//'<environmentalConsiderations>'
+		//'<EnvironmentalConsiderations>'
 		public Keyword getEnvironmentalConsiderationsKeyword_4() { return cEnvironmentalConsiderationsKeyword_4; }
 		
 		//environmentalConsiderations=VSRSFixedSection
@@ -1388,10 +1401,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSFixedSection
 		public RuleCall getEnvironmentalConsiderationsVSRSFixedSectionParserRuleCall_5_0() { return cEnvironmentalConsiderationsVSRSFixedSectionParserRuleCall_5_0; }
 		
-		//'</environmentalConsiderations>'
+		//'</EnvironmentalConsiderations>'
 		public Keyword getEnvironmentalConsiderationsKeyword_6() { return cEnvironmentalConsiderationsKeyword_6; }
 		
-		//'<relationOtherSystems>'
+		//'<RelationOtherSystems>'
 		public Keyword getRelationOtherSystemsKeyword_7() { return cRelationOtherSystemsKeyword_7; }
 		
 		//relationOtherSystems=VSRSFixedSection
@@ -1400,10 +1413,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSFixedSection
 		public RuleCall getRelationOtherSystemsVSRSFixedSectionParserRuleCall_8_0() { return cRelationOtherSystemsVSRSFixedSectionParserRuleCall_8_0; }
 		
-		//'</relationOtherSystems>'
+		//'</RelationOtherSystems>'
 		public Keyword getRelationOtherSystemsKeyword_9() { return cRelationOtherSystemsKeyword_9; }
 		
-		//'<constraints>'
+		//'<Constraints>'
 		public Keyword getConstraintsKeyword_10() { return cConstraintsKeyword_10; }
 		
 		//constraints=VSRSFixedSection
@@ -1412,7 +1425,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSFixedSection
 		public RuleCall getConstraintsVSRSFixedSectionParserRuleCall_11_0() { return cConstraintsVSRSFixedSectionParserRuleCall_11_0; }
 		
-		//'</constraints>'
+		//'</Constraints>'
 		public Keyword getConstraintsKeyword_12() { return cConstraintsKeyword_12; }
 		
 		//'</SoftwareOverview>'
@@ -1610,28 +1623,24 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	public class VSRSTraceabilityElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTraceability");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cTraceabilityKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cSectionDescriptionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cSectionDescriptionDBodyParserRuleCall_1_0 = (RuleCall)cSectionDescriptionAssignment_1.eContents().get(0);
+		private final Action cVSRSTraceabilityAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cTraceabilityKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cTraceabilityKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//VSRSTraceability:
+		//	{VSRSTraceability}
 		//	'<Traceability>'
-		//	sectionDescription=DBody
 		//	'</Traceability>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Traceability>' sectionDescription=DBody '</Traceability>'
+		//{VSRSTraceability} '<Traceability>' '</Traceability>'
 		public Group getGroup() { return cGroup; }
 		
+		//{VSRSTraceability}
+		public Action getVSRSTraceabilityAction_0() { return cVSRSTraceabilityAction_0; }
+		
 		//'<Traceability>'
-		public Keyword getTraceabilityKeyword_0() { return cTraceabilityKeyword_0; }
-		
-		//sectionDescription=DBody
-		public Assignment getSectionDescriptionAssignment_1() { return cSectionDescriptionAssignment_1; }
-		
-		//DBody
-		public RuleCall getSectionDescriptionDBodyParserRuleCall_1_0() { return cSectionDescriptionDBodyParserRuleCall_1_0; }
+		public Keyword getTraceabilityKeyword_1() { return cTraceabilityKeyword_1; }
 		
 		//'</Traceability>'
 		public Keyword getTraceabilityKeyword_2() { return cTraceabilityKeyword_2; }
@@ -3135,7 +3144,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'issue=' issue=STRING
 	//	'revision=' revision=STRING
 	//	'date=' date=STRING
-	//	'>'
+	//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 	//	introductionSection=VSRSIntroduction
 	//	applicableDocumentsSection=VSRSApplicableDocuments
 	//	referenceDocumentsSection=VSRSReferenceDocuments
@@ -3143,7 +3152,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	softwareOverviewSection=VSRSSoftwareOverview
 	//	requirementsSection=VSRSRequirements
 	//	traceabilitySection=VSRSTraceability
-	//	logicalModelsSection=VSRSLogicalModels ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+	//	logicalModelsSection=VSRSLogicalModels
 	//	'</SRS>';
 	public VSRSDocumentElements getVSRSDocumentAccess() {
 		return pVSRSDocument;
@@ -3263,7 +3272,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<hyperlink'
 	//	'reference=' reference=[doc::DReferenceableObject|STRING]
 	//	'>'
-	//	run=DRun
+	//	run=DRun?
 	//	'</hyperlink>'
 	public DHyperlinkElements getDHyperlinkAccess() {
 		return pDHyperlink;
@@ -3290,7 +3299,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DFigureFromFile doc::DFigureFromFile:
-	//	'<figure'
+	//	'<figureFromFile'
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
@@ -3303,7 +3312,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DTableFromFile doc::DTableFromFile:
-	//	'<pictureAsTable'
+	//	'<tableFromFile'
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING ('caption=' caption=STRING)?
 	//	'/>'
@@ -3400,7 +3409,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSRSFixedSection:
-	//	body=DBody
+	//	{VSRSFixedSection} body=DBody?
 	//	srsInstatiableSubsections+=VSRSInstantiableSection*;
 	public VSRSFixedSectionElements getVSRSFixedSectionAccess() {
 		return pVSRSFixedSection;
@@ -3414,7 +3423,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<subsection'
 	//	'name=' name=STRING
 	//	'>'
-	//	body=DBody
+	//	body=DBody?
+	//	srsInstatiableSubsections+=VSRSInstantiableSection*
 	//	'</subsection>';
 	public VSRSInstantiableSectionElements getVSRSInstantiableSectionAccess() {
 		return pVSRSInstantiableSection;
@@ -3479,10 +3489,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSRSSoftwareOverview:
 	//	'<SoftwareOverview>'
-	//	'<functionPurpose>' functionPurpose=VSRSFixedSection '</functionPurpose>'
-	//	'<environmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</environmentalConsiderations>'
-	//	'<relationOtherSystems>' relationOtherSystems=VSRSFixedSection '</relationOtherSystems>'
-	//	'<constraints>' constraints=VSRSFixedSection '</constraints>'
+	//	'<FunctionPurpose>' functionPurpose=VSRSFixedSection '</FunctionPurpose>'
+	//	'<EnvironmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</EnvironmentalConsiderations>'
+	//	'<RelationOtherSystems>' relationOtherSystems=VSRSFixedSection '</RelationOtherSystems>'
+	//	'<Constraints>' constraints=VSRSFixedSection '</Constraints>'
 	//	'</SoftwareOverview>';
 	public VSRSSoftwareOverviewElements getVSRSSoftwareOverviewAccess() {
 		return pVSRSSoftwareOverview;
@@ -3522,8 +3532,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSRSTraceability:
+	//	{VSRSTraceability}
 	//	'<Traceability>'
-	//	sectionDescription=DBody
 	//	'</Traceability>';
 	public VSRSTraceabilityElements getVSRSTraceabilityAccess() {
 		return pVSRSTraceability;

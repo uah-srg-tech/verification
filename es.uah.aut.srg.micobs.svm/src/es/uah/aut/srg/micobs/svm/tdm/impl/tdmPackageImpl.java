@@ -413,7 +413,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEReference(getVTraceableDocument_Groups(), this.getVTraceableDocumentAbstractGroup(), null, "groups", null, 1, -1, VTraceableDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentAbstractGroupEClass, VTraceableDocumentAbstractGroup.class, "VTraceableDocumentAbstractGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVTraceableDocumentAbstractGroup_Items(), this.getVTraceableDocumentAbstractItem(), null, "items", null, 1, -1, VTraceableDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getVTraceableDocumentAbstractGroup_Items(), this.getVTraceableDocumentAbstractItem(), null, "items", null, 0, -1, VTraceableDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentFixedGroupEClass, VTraceableDocumentFixedGroup.class, "VTraceableDocumentFixedGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

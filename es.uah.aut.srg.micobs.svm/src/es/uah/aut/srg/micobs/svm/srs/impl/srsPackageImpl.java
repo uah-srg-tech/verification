@@ -677,6 +677,15 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVSRSInstantiableSection_SrsInstatiableSubsections() {
+		return (EReference)vsrsInstantiableSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSRSSoftwareOverview() {
 		return vsrsSoftwareOverviewEClass;
 	}
@@ -1145,15 +1154,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSRSTraceability_SectionDescription() {
-		return (EReference)vsrsTraceabilityEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVSRSLogicalModels() {
 		return vsrsLogicalModelsEClass;
 	}
@@ -1246,6 +1246,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		vsrsInstantiableSectionEClass = createEClass(VSRS_INSTANTIABLE_SECTION);
 		createEReference(vsrsInstantiableSectionEClass, VSRS_INSTANTIABLE_SECTION__BODY);
+		createEReference(vsrsInstantiableSectionEClass, VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS);
 
 		vsrsSoftwareOverviewEClass = createEClass(VSRS_SOFTWARE_OVERVIEW);
 		createEReference(vsrsSoftwareOverviewEClass, VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE);
@@ -1321,7 +1322,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		createEReference(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION);
 
 		vsrsTraceabilityEClass = createEClass(VSRS_TRACEABILITY);
-		createEReference(vsrsTraceabilityEClass, VSRS_TRACEABILITY__SECTION_DESCRIPTION);
 
 		vsrsLogicalModelsEClass = createEClass(VSRS_LOGICAL_MODELS);
 		createEReference(vsrsLogicalModelsEClass, VSRS_LOGICAL_MODELS__LOGICAL_MODELS);
@@ -1436,11 +1436,12 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEClass(vsrsAbbreviationEClass, VSRSAbbreviation.class, "VSRSAbbreviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsrsFixedSectionEClass, VSRSFixedSection.class, "VSRSFixedSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSFixedSection_SrsInstatiableSubsections(), this.getVSRSInstantiableSection(), null, "srsInstatiableSubsections", null, 0, -1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsInstantiableSectionEClass, VSRSInstantiableSection.class, "VSRSInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSInstantiableSection_SrsInstatiableSubsections(), this.getVSRSInstantiableSection(), null, "srsInstatiableSubsections", null, 0, -1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsSoftwareOverviewEClass, VSRSSoftwareOverview.class, "VSRSSoftwareOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSSoftwareOverview_FunctionPurpose(), this.getVSRSFixedSection(), null, "functionPurpose", null, 1, 1, VSRSSoftwareOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1516,7 +1517,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEReference(getVSRSDocumentItem_ExtendedDescription(), thedocPackage.getDBody(), null, "extendedDescription", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsTraceabilityEClass, VSRSTraceability.class, "VSRSTraceability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSTraceability_SectionDescription(), thedocPackage.getDBody(), null, "sectionDescription", null, 1, 1, VSRSTraceability.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsLogicalModelsEClass, VSRSLogicalModels.class, "VSRSLogicalModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSLogicalModels_LogicalModels(), this.getVSRSLogicalModel(), null, "logicalModels", null, 0, -1, VSRSLogicalModels.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

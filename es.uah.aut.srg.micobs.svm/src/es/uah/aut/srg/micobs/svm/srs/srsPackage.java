@@ -782,13 +782,22 @@ public interface srsPackage extends EPackage {
 	int VSRS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>VSRS Instantiable Section</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSRS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSRS Instantiable Section</em>' class.
@@ -2560,22 +2569,13 @@ public interface srsPackage extends EPackage {
 	int VSRS_TRACEABILITY__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_TRACEABILITY__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
 	 * The number of structural features of the '<em>VSRS Traceability</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TRACEABILITY_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_TRACEABILITY_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSRS Traceability</em>' class.
@@ -3001,6 +3001,17 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSRSInstantiableSection_Body();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection#getSrsInstatiableSubsections <em>Srs Instatiable Subsections</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Srs Instatiable Subsections</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection#getSrsInstatiableSubsections()
+	 * @see #getVSRSInstantiableSection()
+	 * @generated
+	 */
+	EReference getVSRSInstantiableSection_SrsInstatiableSubsections();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview <em>VSRS Software Overview</em>}'.
@@ -3552,17 +3563,6 @@ public interface srsPackage extends EPackage {
 	EClass getVSRSTraceability();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTraceability#getSectionDescription <em>Section Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Section Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTraceability#getSectionDescription()
-	 * @see #getVSRSTraceability()
-	 * @generated
-	 */
-	EReference getVSRSTraceability_SectionDescription();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModels <em>VSRS Logical Models</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3893,6 +3893,14 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSRS_INSTANTIABLE_SECTION__BODY = eINSTANCE.getVSRSInstantiableSection_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSRSInstantiableSection_SrsInstatiableSubsections();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl <em>VSRS Software Overview</em>}' class.
@@ -4355,14 +4363,6 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSRS_TRACEABILITY = eINSTANCE.getVSRSTraceability();
-
-		/**
-		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSRS_TRACEABILITY__SECTION_DESCRIPTION = eINSTANCE.getVSRSTraceability_SectionDescription();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSLogicalModelsImpl <em>VSRS Logical Models</em>}' class.

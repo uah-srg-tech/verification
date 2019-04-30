@@ -14,6 +14,7 @@ VSRSDocument returns VSRSDocument:
 		'revision=' revision=STRING
 		'date=' date=STRING
 		'>'
+		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 		introductionSection=VSRSIntroduction
 		applicableDocumentsSection=VSRSApplicableDocuments
 		referenceDocumentsSection=VSRSReferenceDocuments
@@ -22,7 +23,6 @@ VSRSDocument returns VSRSDocument:
 		requirementsSection=VSRSRequirements
 		traceabilitySection=VSRSTraceability
 		logicalModelsSection=VSRSLogicalModels
-		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 	'</SRS>';
 
 DBody returns doc::DBody:
@@ -73,7 +73,7 @@ DHyperlink returns doc::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doc::DReferenceableObject|STRING]
 	'>'
-		run=DRun
+		(run=DRun)?
 	'</hyperlink>';
 	
 DText returns doc::DText:
@@ -83,14 +83,14 @@ terminal RUNTEXT returns ecore::EString:
     '<text>' -> '</text>';
 
 DFigureFromFile returns doc::DFigureFromFile:
-	'<figure'
+	'<figureFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
 		('caption=' caption=STRING)?
 	'/>';
 
 DTableFromFile returns doc::DTableFromFile:
-	'<pictureAsTable'
+	'<tableFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
 		('caption=' caption=STRING)?
@@ -144,14 +144,16 @@ DReferenceDocument returns doc::DReferenceDocument:
 	'/>';
 
 VSRSFixedSection returns VSRSFixedSection:
-	body=DBody
+{VSRSFixedSection}
+	(body=DBody)?
 	(srsInstatiableSubsections+=VSRSInstantiableSection)*;
 
 VSRSInstantiableSection returns VSRSInstantiableSection:
 	'<subsection'
 		'name=' name=STRING
 		'>'
-		body=DBody
+		(body=DBody)?
+		(srsInstatiableSubsections+=VSRSInstantiableSection)*
 	'</subsection>';
 	
 VSRSIntroduction returns VSRSIntroduction:
@@ -181,10 +183,10 @@ VSRSTermsDefinitionsAbbreviations returns VSRSTermsDefinitionsAbbreviations:
 
 VSRSSoftwareOverview returns VSRSSoftwareOverview:
 	'<SoftwareOverview>'
-		'<functionPurpose>' functionPurpose=VSRSFixedSection '</functionPurpose>'
-		'<environmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</environmentalConsiderations>' 
-		'<relationOtherSystems>' relationOtherSystems=VSRSFixedSection '</relationOtherSystems>'
-		'<constraints>' constraints=VSRSFixedSection '</constraints>'
+		'<FunctionPurpose>' functionPurpose=VSRSFixedSection '</FunctionPurpose>'
+		'<EnvironmentalConsiderations>' environmentalConsiderations=VSRSFixedSection '</EnvironmentalConsiderations>' 
+		'<RelationOtherSystems>' relationOtherSystems=VSRSFixedSection '</RelationOtherSystems>'
+		'<Constraints>' constraints=VSRSFixedSection '</Constraints>'
 	'</SoftwareOverview>';
 
 VSRSRequirements returns VSRSRequirements:
@@ -210,8 +212,8 @@ VSRSRequirements returns VSRSRequirements:
 	'</Requirements>';
 
 VSRSTraceability returns VSRSTraceability:
+{VSRSTraceability}
 	'<Traceability>'
-		sectionDescription=DBody
 	'</Traceability>';
 
 VSRSLogicalModels returns VSRSLogicalModels:

@@ -42,7 +42,7 @@ public interface VTraceableDocumentAbstractGroup extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Items</em>' reference list.
 	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableDocumentAbstractGroup_Items()
-	 * @model required="true" transient="true" volatile="true" derived="true"
+	 * @model transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
 	EList<VTraceableDocumentAbstractItem> getItems();
