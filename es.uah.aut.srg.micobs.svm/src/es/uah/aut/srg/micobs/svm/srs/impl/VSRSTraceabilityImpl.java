@@ -10,10 +10,14 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
+
+import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 /**
@@ -41,6 +45,11 @@ public class VSRSTraceabilityImpl extends DFixedSectionImpl implements VSRSTrace
 	@Override
 	protected EClass eStaticClass() {
 		return srsPackage.Literals.VSRS_TRACEABILITY;
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSRSTraceabilityImpl
