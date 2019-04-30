@@ -248,7 +248,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	}
 	
 	@Override
-	public VTraceableDocumentAbstractGroup getGroup() {
+	public VTraceableDocumentAbstractGroup basicGetGroup() {
 		return (VTraceableDocumentAbstractGroup)eContainer();
 	}
 

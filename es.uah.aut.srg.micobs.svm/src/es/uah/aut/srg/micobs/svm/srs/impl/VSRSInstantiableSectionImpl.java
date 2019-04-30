@@ -18,6 +18,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
+import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.ECollections;
@@ -26,6 +27,8 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -36,6 +39,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSInstantiableSectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSInstantiableSectionImpl#getSrsInstatiableSubsections <em>Srs Instatiable Subsections</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +54,16 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * @ordered
 	 */
 	protected DBody body;
+
+	/**
+	 * The cached value of the '{@link #getSrsInstatiableSubsections() <em>Srs Instatiable Subsections</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSrsInstatiableSubsections()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VSRSInstantiableSection> srsInstatiableSubsections;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -118,11 +132,25 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VSRSInstantiableSection> getSrsInstatiableSubsections() {
+		if (srsInstatiableSubsections == null) {
+			srsInstatiableSubsections = new EObjectContainmentEList<VSRSInstantiableSection>(VSRSInstantiableSection.class, this, srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS);
+		}
+		return srsInstatiableSubsections;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
 				return basicSetBody(null, msgs);
+			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
+				return ((InternalEList<?>)getSrsInstatiableSubsections()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -137,6 +165,8 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
 				return getBody();
+			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
+				return getSrsInstatiableSubsections();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,11 +176,16 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
 				setBody((DBody)newValue);
+				return;
+			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
+				getSrsInstatiableSubsections().clear();
+				getSrsInstatiableSubsections().addAll((Collection<? extends VSRSInstantiableSection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -167,6 +202,9 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
 				setBody((DBody)null);
 				return;
+			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
+				getSrsInstatiableSubsections().clear();
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -181,6 +219,8 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
 				return body != null;
+			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
+				return srsInstatiableSubsections != null && !srsInstatiableSubsections.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

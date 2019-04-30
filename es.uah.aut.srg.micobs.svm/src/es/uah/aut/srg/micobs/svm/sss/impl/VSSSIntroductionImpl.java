@@ -158,7 +158,10 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getSssInstatiableSubsections());
+		
+		for(DAbstractSection subsection : getSssInstatiableSubsections()) {
+			subsections.add(subsection);
+		}
 		return subsections;
 	}
 

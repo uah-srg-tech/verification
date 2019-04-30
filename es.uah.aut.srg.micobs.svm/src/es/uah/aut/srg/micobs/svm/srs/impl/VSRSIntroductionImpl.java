@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
@@ -19,7 +20,7 @@ import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -155,6 +156,16 @@ public class VSRSIntroductionImpl extends DFixedSectionImpl implements VSRSIntro
 				return srsInstatiableSubsections != null && !srsInstatiableSubsections.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		
+		for(DAbstractSection subsection : getSrsInstatiableSubsections()) {
+			subsections.add(subsection);
+		}
+		return subsections;
 	}
 
 } //VSRSIntroductionImpl

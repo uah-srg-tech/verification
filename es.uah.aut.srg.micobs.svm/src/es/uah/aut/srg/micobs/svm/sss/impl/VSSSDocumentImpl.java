@@ -193,28 +193,40 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
 		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
-		appdocs.add((DApplicableDocument) getApplicableDocumentsSection().getApplicableDocuments());
+
+		for(DApplicableDocument appdoc : getApplicableDocumentsSection().getApplicableDocuments()) {
+			appdocs.add(appdoc);
+		}
 		return appdocs;
 	}
 	
 	@Override
 	public EList<DReferenceDocument> getReferenceDocuments() {
 		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
-		refdocs.add((DReferenceDocument) getApplicableDocumentsSection().getApplicableDocuments());
+
+		for(DReferenceDocument refdoc : getReferenceDocumentsSection().getReferenceDocuments()) {
+			refdocs.add(refdoc);
+		}
 		return refdocs;
 	}
 
 	@Override
 	public EList<DAbstractFigure> getFigures() {
 		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
-		figures.add((DAbstractFigure) getSssFigures());
+
+		for(DAbstractFigure figure : getSssFigures()) {
+			figures.add(figure);
+		}
 		return figures;
 	}
 
 	@Override
 	public EList<DAbstractTable> getTables() {
 		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
-		tables.add((DAbstractTable) getSssTables());
+
+		for(DAbstractTable table : getSssTables()) {
+			tables.add(table);
+		}
 		return tables;
 	}
 

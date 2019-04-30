@@ -20,6 +20,7 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -249,8 +250,14 @@ public class VSRSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	}
 	
 	@Override
-	public VTraceableDocumentAbstractGroup getGroup() {
-		return (VTraceableDocumentAbstractGroup)eContainer();
+	public VTraceableDocumentAbstractGroup basicGetGroup() {
+		final EObject parent = eContainer();
+		if (parent instanceof VSRSInstantiableRequirementSectionImpl) {
+			return (VTraceableDocumentAbstractGroup)parent.eContainer();
+		}
+		else {
+			return (VTraceableDocumentAbstractGroup)eContainer();
+		}
 	}
 
 } //VSRSDocumentItemImpl

@@ -232,7 +232,10 @@ public class VSRSFixedSectionImpl extends DFixedSectionImpl implements VSRSFixed
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getSrsInstatiableSubsections());
+		
+		for(DAbstractSection subsection : getSrsInstatiableSubsections()) {
+			subsections.add(subsection);
+		}
 		return subsections;
 	}
 

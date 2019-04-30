@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModel;
@@ -19,7 +20,7 @@ import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -157,4 +158,8 @@ public class VSRSLogicalModelsImpl extends DFixedSectionImpl implements VSRSLogi
 		return super.eIsSet(featureID);
 	}
 
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
+	}
 } //VSRSLogicalModelsImpl

@@ -44,7 +44,7 @@ public interface VSRSFixedSection extends DFixedSection {
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSFixedSection_Body()
-	 * @model containment="true" required="true"
+	 * @model containment="true"
 	 * @generated
 	 */
 	DBody getBody();

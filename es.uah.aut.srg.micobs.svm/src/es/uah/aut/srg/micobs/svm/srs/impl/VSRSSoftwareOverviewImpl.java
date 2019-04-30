@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
@@ -18,7 +19,8 @@ import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -378,6 +380,11 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 				return constraints != null;
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSRSSoftwareOverviewImpl
