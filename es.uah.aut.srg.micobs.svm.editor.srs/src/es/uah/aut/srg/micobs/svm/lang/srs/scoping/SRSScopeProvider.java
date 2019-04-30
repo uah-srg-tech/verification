@@ -10,6 +10,24 @@
  ******************************************************************************/
 package es.uah.aut.srg.micobs.svm.lang.srs.scoping;
 
+import java.util.Collection;
+import java.util.HashSet;
+
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.resource.EObjectDescription;
+import org.eclipse.xtext.resource.IEObjectDescription;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
+import org.eclipse.xtext.scoping.impl.SimpleScope;
+
+import com.google.common.base.Function;
+import com.google.common.base.Predicate;
+import com.google.common.base.Predicates;
+import com.google.common.collect.Iterables;
+
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 /**
  * This class contains custom scoping description.
@@ -17,6 +35,51 @@ package es.uah.aut.srg.micobs.svm.lang.srs.scoping;
  * See https://www.eclipse.org/Xtext/documentation/303_runtime_concepts.html#scoping
  * on how and when to use it.
  */
-public class SRSScopeProvider extends AbstractSRSScopeProvider {
+public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 
+	public IScope scope_VTraceableDocument(VTraceableDocument srsDoc, EReference reference) {
+		
+		IScope scope = delegateGetScope(srsDoc, reference);
+		Iterable<IEObjectDescription> elements = scope.getAllElements();
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.filter(elements, new Predicate<IEObjectDescription>() {
+
+			@Override
+			public boolean apply(IEObjectDescription from) {
+				if (from.getEObjectOrProxy() != srsDoc) {
+					return true;
+				}
+				else {
+					return false;
+				}
+			}
+		});
+
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VTraceableDocumentAbstractItem(VTraceableDocument srsDoc, EReference reference) {
+		
+		Collection<VTraceableDocumentAbstractItem> items = new HashSet<VTraceableDocumentAbstractItem>();
+		
+		for(VTraceableDocument doc : srsDoc.getParents()) {
+			for(VTraceableDocumentAbstractGroup group : doc.getGroups()) {
+				items.addAll(group.getItems());
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VTraceableDocumentAbstractItem, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTraceableDocumentAbstractItem from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
 }
