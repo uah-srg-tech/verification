@@ -27,16 +27,16 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class SSSSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SSSGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_DRun_BoldKeyword_1_q;
-	protected AbstractElementAlias match_DRun_ItalicKeyword_2_q;
-	protected AbstractElementAlias match_DRun_UnderscoreKeyword_3_q;
+	protected AbstractElementAlias match_DRun_BoldTrueKeyword_1_q;
+	protected AbstractElementAlias match_DRun_ItalicsTrueKeyword_2_q;
+	protected AbstractElementAlias match_DRun_UnderlineTrueKeyword_3_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SSSGrammarAccess) access;
-		match_DRun_BoldKeyword_1_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getBoldKeyword_1());
-		match_DRun_ItalicKeyword_2_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getItalicKeyword_2());
-		match_DRun_UnderscoreKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getUnderscoreKeyword_3());
+		match_DRun_BoldTrueKeyword_1_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getBoldTrueKeyword_1());
+		match_DRun_ItalicsTrueKeyword_2_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getItalicsTrueKeyword_2());
+		match_DRun_UnderlineTrueKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
 	}
 	
 	@Override
@@ -51,46 +51,46 @@ public class SSSSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_DRun_BoldKeyword_1_q.equals(syntax))
-				emit_DRun_BoldKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DRun_ItalicKeyword_2_q.equals(syntax))
-				emit_DRun_ItalicKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DRun_UnderscoreKeyword_3_q.equals(syntax))
-				emit_DRun_UnderscoreKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_DRun_BoldTrueKeyword_1_q.equals(syntax))
+				emit_DRun_BoldTrueKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DRun_ItalicsTrueKeyword_2_q.equals(syntax))
+				emit_DRun_ItalicsTrueKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DRun_UnderlineTrueKeyword_3_q.equals(syntax))
+				emit_DRun_UnderlineTrueKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     'bold'?
+	 *     'bold="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' (ambiguity) 'italic'? 'underscore'? '>' text=DText
+	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? '>' text=DText
 	 */
-	protected void emit_DRun_BoldKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DRun_BoldTrueKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'italic'?
+	 *     'italics="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' 'bold'? (ambiguity) 'underscore'? '>' text=DText
+	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? '>' text=DText
 	 */
-	protected void emit_DRun_ItalicKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DRun_ItalicsTrueKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     'underscore'?
+	 *     'underline="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' 'bold'? 'italic'? (ambiguity) '>' text=DText
+	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) '>' text=DText
 	 */
-	protected void emit_DRun_UnderscoreKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DRun_UnderlineTrueKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

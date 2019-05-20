@@ -471,9 +471,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRun");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRunKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cBoldKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cItalicKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cUnderscoreKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Keyword cBoldTrueKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cItalicsTrueKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cUnderlineTrueKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cTextAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cTextDTextParserRuleCall_5_0 = (RuleCall)cTextAssignment_5.eContents().get(0);
@@ -481,28 +481,28 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//DRun doc::DRun:
 		//	'<run'
-		//	'bold'?
-		//	'italic'?
-		//	'underscore'?
+		//	'bold="true"'?
+		//	'italics="true"'?
+		//	'underline="true"'?
 		//	'>'
 		//	text=DText
 		//	'</run>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<run' 'bold'? 'italic'? 'underscore'? '>' text=DText '</run>'
+		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? '>' text=DText '</run>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<run'
 		public Keyword getRunKeyword_0() { return cRunKeyword_0; }
 		
-		//'bold'?
-		public Keyword getBoldKeyword_1() { return cBoldKeyword_1; }
+		//'bold="true"'?
+		public Keyword getBoldTrueKeyword_1() { return cBoldTrueKeyword_1; }
 		
-		//'italic'?
-		public Keyword getItalicKeyword_2() { return cItalicKeyword_2; }
+		//'italics="true"'?
+		public Keyword getItalicsTrueKeyword_2() { return cItalicsTrueKeyword_2; }
 		
-		//'underscore'?
-		public Keyword getUnderscoreKeyword_3() { return cUnderscoreKeyword_3; }
+		//'underline="true"'?
+		public Keyword getUnderlineTrueKeyword_3() { return cUnderlineTrueKeyword_3; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
@@ -3254,9 +3254,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DRun doc::DRun:
 	//	'<run'
-	//	'bold'?
-	//	'italic'?
-	//	'underscore'?
+	//	'bold="true"'?
+	//	'italics="true"'?
+	//	'underline="true"'?
 	//	'>'
 	//	text=DText
 	//	'</run>'

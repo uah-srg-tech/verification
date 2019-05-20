@@ -851,21 +851,21 @@ ruleDRun returns [EObject current=null]
 			newLeafNode(otherlv_0, grammarAccess.getDRunAccess().getRunKeyword_0());
 		}
 		(
-			otherlv_1='bold'
+			otherlv_1='bold="true"'
 			{
-				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldKeyword_1());
+				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldTrueKeyword_1());
 			}
 		)?
 		(
-			otherlv_2='italic'
+			otherlv_2='italics="true"'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getDRunAccess().getItalicKeyword_2());
+				newLeafNode(otherlv_2, grammarAccess.getDRunAccess().getItalicsTrueKeyword_2());
 			}
 		)?
 		(
-			otherlv_3='underscore'
+			otherlv_3='underline="true"'
 			{
-				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderscoreKeyword_3());
+				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
 			}
 		)?
 		otherlv_4='>'

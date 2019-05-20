@@ -2837,9 +2837,9 @@ rule__DRun__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDRunAccess().getBoldKeyword_1()); }
-	('bold')?
-	{ after(grammarAccess.getDRunAccess().getBoldKeyword_1()); }
+	{ before(grammarAccess.getDRunAccess().getBoldTrueKeyword_1()); }
+	('bold="true"')?
+	{ after(grammarAccess.getDRunAccess().getBoldTrueKeyword_1()); }
 )
 ;
 finally {
@@ -2864,9 +2864,9 @@ rule__DRun__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDRunAccess().getItalicKeyword_2()); }
-	('italic')?
-	{ after(grammarAccess.getDRunAccess().getItalicKeyword_2()); }
+	{ before(grammarAccess.getDRunAccess().getItalicsTrueKeyword_2()); }
+	('italics="true"')?
+	{ after(grammarAccess.getDRunAccess().getItalicsTrueKeyword_2()); }
 )
 ;
 finally {
@@ -2891,9 +2891,9 @@ rule__DRun__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getDRunAccess().getUnderscoreKeyword_3()); }
-	('underscore')?
-	{ after(grammarAccess.getDRunAccess().getUnderscoreKeyword_3()); }
+	{ before(grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3()); }
+	('underline="true"')?
+	{ after(grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3()); }
 )
 ;
 finally {

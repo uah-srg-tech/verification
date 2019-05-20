@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalSRSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<SRS'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'<parent'", "'/>'", "'</SRS>'", "'<body>'", "'</body>'", "'<paragraph>'", "'</paragraph>'", "'<listItem>'", "'<sublist>'", "'</sublist>'", "'</listItem>'", "'<itemize>'", "'</itemize>'", "'<enumerate>'", "'</enumerate>'", "'<run'", "'bold'", "'italic'", "'underscore'", "'</run>'", "'<hyperlink'", "'reference='", "'</hyperlink>'", "'<figureFromFile'", "'referenceFile='", "'caption='", "'<tableFromFile'", "'<basicTable'", "'</basicTable>'", "'<row'", "'span='", "'</row>'", "'<column'", "'</column>'", "'<cell>'", "'</cell>'", "'<ApplicableDocument'", "'title='", "'<ReferenceDocument'", "'<subsection'", "'</subsection>'", "'<Introduction>'", "'</Introduction>'", "'<ApplicableDocuments>'", "'</ApplicableDocuments>'", "'<ReferenceDocuments>'", "'</ReferenceDocuments>'", "'<TermsDefinitionsAbbreviations>'", "'</TermsDefinitionsAbbreviations>'", "'<SoftwareOverview>'", "'<FunctionPurpose>'", "'</FunctionPurpose>'", "'<EnvironmentalConsiderations>'", "'</EnvironmentalConsiderations>'", "'<RelationOtherSystems>'", "'</RelationOtherSystems>'", "'<Constraints>'", "'</Constraints>'", "'</SoftwareOverview>'", "'<Requirements>'", "'</Requirements>'", "'<Traceability>'", "'</Traceability>'", "'<LogicalModels>'", "'</LogicalModels>'", "'<Term'", "'</Term>'", "'<Definition'", "'</Definition>'", "'<Abbreviation'", "'</Abbreviation>'", "'<GeneralRequirements>'", "'</GeneralRequirements>'", "'<FunctionalRequirements>'", "'</FunctionalRequirements>'", "'<PerformanceRequirements>'", "'</PerformanceRequirements>'", "'<InterfaceRequirements>'", "'</InterfaceRequirements>'", "'<OperationalRequirements>'", "'</OperationalRequirements>'", "'<ResourcesRequirements>'", "'</ResourcesRequirements>'", "'<DesignRequirements>'", "'</DesignRequirements>'", "'<SecurityPrivacyRequirements>'", "'</SecurityPrivacyRequirements>'", "'<PortabilityRequirements>'", "'</PortabilityRequirements>'", "'<SWQualityRequirements>'", "'</SWQualityRequirements>'", "'<SWReliabiltyRequirements>'", "'</SWReliabiltyRequirements>'", "'<SWMaintainabilityRequirements>'", "'</SWMaintainabilityRequirements>'", "'<SWSafetyRequirements>'", "'</SWSafetyRequirements>'", "'<SWConfigurationDeliveryRequirements>'", "'</SWConfigurationDeliveryRequirements>'", "'<DataDefinitionDBRequirements>'", "'</DataDefinitionDBRequirements>'", "'<HumanFactorsRequirements>'", "'</HumanFactorsRequirements>'", "'<AdaptationInstallationRequirements>'", "'<Item'", "'validationMethod='", "'<description>'", "'</description>'", "'<parentItem'", "'</Item>'", "'<LogicalModel/>'", "'\"Analysis\"'", "'\"Inspection\"'", "'\"Testing\"'", "'\"Review\"'", "'\"ModelSimulation\"'", "'\"WalkThrough\"'", "'\"CrossReading\"'", "'\"DeskChecking\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<SRS'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'<parent'", "'/>'", "'</SRS>'", "'<body>'", "'</body>'", "'<paragraph>'", "'</paragraph>'", "'<listItem>'", "'<sublist>'", "'</sublist>'", "'</listItem>'", "'<itemize>'", "'</itemize>'", "'<enumerate>'", "'</enumerate>'", "'<run'", "'bold=\"true\"'", "'italics=\"true\"'", "'underline=\"true\"'", "'</run>'", "'<hyperlink'", "'reference='", "'</hyperlink>'", "'<figureFromFile'", "'referenceFile='", "'caption='", "'<tableFromFile'", "'<basicTable'", "'</basicTable>'", "'<row'", "'span='", "'</row>'", "'<column'", "'</column>'", "'<cell>'", "'</cell>'", "'<ApplicableDocument'", "'title='", "'<ReferenceDocument'", "'<subsection'", "'</subsection>'", "'<Introduction>'", "'</Introduction>'", "'<ApplicableDocuments>'", "'</ApplicableDocuments>'", "'<ReferenceDocuments>'", "'</ReferenceDocuments>'", "'<TermsDefinitionsAbbreviations>'", "'</TermsDefinitionsAbbreviations>'", "'<SoftwareOverview>'", "'<FunctionPurpose>'", "'</FunctionPurpose>'", "'<EnvironmentalConsiderations>'", "'</EnvironmentalConsiderations>'", "'<RelationOtherSystems>'", "'</RelationOtherSystems>'", "'<Constraints>'", "'</Constraints>'", "'</SoftwareOverview>'", "'<Requirements>'", "'</Requirements>'", "'<Traceability>'", "'</Traceability>'", "'<LogicalModels>'", "'</LogicalModels>'", "'<Term'", "'</Term>'", "'<Definition'", "'</Definition>'", "'<Abbreviation'", "'</Abbreviation>'", "'<GeneralRequirements>'", "'</GeneralRequirements>'", "'<FunctionalRequirements>'", "'</FunctionalRequirements>'", "'<PerformanceRequirements>'", "'</PerformanceRequirements>'", "'<InterfaceRequirements>'", "'</InterfaceRequirements>'", "'<OperationalRequirements>'", "'</OperationalRequirements>'", "'<ResourcesRequirements>'", "'</ResourcesRequirements>'", "'<DesignRequirements>'", "'</DesignRequirements>'", "'<SecurityPrivacyRequirements>'", "'</SecurityPrivacyRequirements>'", "'<PortabilityRequirements>'", "'</PortabilityRequirements>'", "'<SWQualityRequirements>'", "'</SWQualityRequirements>'", "'<SWReliabiltyRequirements>'", "'</SWReliabiltyRequirements>'", "'<SWMaintainabilityRequirements>'", "'</SWMaintainabilityRequirements>'", "'<SWSafetyRequirements>'", "'</SWSafetyRequirements>'", "'<SWConfigurationDeliveryRequirements>'", "'</SWConfigurationDeliveryRequirements>'", "'<DataDefinitionDBRequirements>'", "'</DataDefinitionDBRequirements>'", "'<HumanFactorsRequirements>'", "'</HumanFactorsRequirements>'", "'<AdaptationInstallationRequirements>'", "'<Item'", "'validationMethod='", "'<description>'", "'</description>'", "'<parentItem'", "'</Item>'", "'<LogicalModel/>'", "'\"Analysis\"'", "'\"Inspection\"'", "'\"Testing\"'", "'\"Review\"'", "'\"ModelSimulation\"'", "'\"WalkThrough\"'", "'\"CrossReading\"'", "'\"DeskChecking\"'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -2361,7 +2361,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDRun"
-    // InternalSRS.g:841:1: ruleDRun returns [EObject current=null] : (otherlv_0= '<run' (otherlv_1= 'bold' )? (otherlv_2= 'italic' )? (otherlv_3= 'underscore' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' ) ;
+    // InternalSRS.g:841:1: ruleDRun returns [EObject current=null] : (otherlv_0= '<run' (otherlv_1= 'bold=\"true\"' )? (otherlv_2= 'italics=\"true\"' )? (otherlv_3= 'underline=\"true\"' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' ) ;
     public final EObject ruleDRun() throws RecognitionException {
         EObject current = null;
 
@@ -2378,11 +2378,11 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSRS.g:847:2: ( (otherlv_0= '<run' (otherlv_1= 'bold' )? (otherlv_2= 'italic' )? (otherlv_3= 'underscore' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' ) )
-            // InternalSRS.g:848:2: (otherlv_0= '<run' (otherlv_1= 'bold' )? (otherlv_2= 'italic' )? (otherlv_3= 'underscore' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' )
+            // InternalSRS.g:847:2: ( (otherlv_0= '<run' (otherlv_1= 'bold=\"true\"' )? (otherlv_2= 'italics=\"true\"' )? (otherlv_3= 'underline=\"true\"' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' ) )
+            // InternalSRS.g:848:2: (otherlv_0= '<run' (otherlv_1= 'bold=\"true\"' )? (otherlv_2= 'italics=\"true\"' )? (otherlv_3= 'underline=\"true\"' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' )
             {
-            // InternalSRS.g:848:2: (otherlv_0= '<run' (otherlv_1= 'bold' )? (otherlv_2= 'italic' )? (otherlv_3= 'underscore' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' )
-            // InternalSRS.g:849:3: otherlv_0= '<run' (otherlv_1= 'bold' )? (otherlv_2= 'italic' )? (otherlv_3= 'underscore' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>'
+            // InternalSRS.g:848:2: (otherlv_0= '<run' (otherlv_1= 'bold=\"true\"' )? (otherlv_2= 'italics=\"true\"' )? (otherlv_3= 'underline=\"true\"' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>' )
+            // InternalSRS.g:849:3: otherlv_0= '<run' (otherlv_1= 'bold=\"true\"' )? (otherlv_2= 'italics=\"true\"' )? (otherlv_3= 'underline=\"true\"' )? otherlv_4= '>' ( (lv_text_5_0= ruleDText ) ) otherlv_6= '</run>'
             {
             otherlv_0=(Token)match(input,34,FollowSets000.FOLLOW_32); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -2390,7 +2390,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDRunAccess().getRunKeyword_0());
               		
             }
-            // InternalSRS.g:853:3: (otherlv_1= 'bold' )?
+            // InternalSRS.g:853:3: (otherlv_1= 'bold=\"true\"' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -2399,12 +2399,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
             }
             switch (alt11) {
                 case 1 :
-                    // InternalSRS.g:854:4: otherlv_1= 'bold'
+                    // InternalSRS.g:854:4: otherlv_1= 'bold=\"true\"'
                     {
                     otherlv_1=(Token)match(input,35,FollowSets000.FOLLOW_33); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldKeyword_1());
+                      				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldTrueKeyword_1());
                       			
                     }
 
@@ -2413,7 +2413,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSRS.g:859:3: (otherlv_2= 'italic' )?
+            // InternalSRS.g:859:3: (otherlv_2= 'italics=\"true\"' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2422,12 +2422,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
             }
             switch (alt12) {
                 case 1 :
-                    // InternalSRS.g:860:4: otherlv_2= 'italic'
+                    // InternalSRS.g:860:4: otherlv_2= 'italics=\"true\"'
                     {
                     otherlv_2=(Token)match(input,36,FollowSets000.FOLLOW_34); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_2, grammarAccess.getDRunAccess().getItalicKeyword_2());
+                      				newLeafNode(otherlv_2, grammarAccess.getDRunAccess().getItalicsTrueKeyword_2());
                       			
                     }
 
@@ -2436,7 +2436,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSRS.g:865:3: (otherlv_3= 'underscore' )?
+            // InternalSRS.g:865:3: (otherlv_3= 'underline=\"true\"' )?
             int alt13=2;
             int LA13_0 = input.LA(1);
 
@@ -2445,12 +2445,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
             }
             switch (alt13) {
                 case 1 :
-                    // InternalSRS.g:866:4: otherlv_3= 'underscore'
+                    // InternalSRS.g:866:4: otherlv_3= 'underline=\"true\"'
                     {
                     otherlv_3=(Token)match(input,37,FollowSets000.FOLLOW_9); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderscoreKeyword_3());
+                      				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
                       			
                     }
 

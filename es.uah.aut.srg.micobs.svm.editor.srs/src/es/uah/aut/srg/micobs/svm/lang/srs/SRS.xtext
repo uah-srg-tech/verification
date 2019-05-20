@@ -62,9 +62,9 @@ DParagraphContent returns doc::DParagraphContent:
 
 DRun returns doc::DRun:
 	'<run'
-		('bold')?
-		('italic')?
-		('underscore')?
+		('bold="true"')?
+		('italics="true"')?
+		('underline="true"')?
 	'>'
 		text=DText
 	'</run>';
