@@ -4710,7 +4710,7 @@ ruleVSRSAdaptationInstallationRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_5='<AdaptationInstallationRequirements>'
+		otherlv_5='</AdaptationInstallationRequirements>'
 		{
 			newLeafNode(otherlv_5, grammarAccess.getVSRSAdaptationInstallationRequirementsAccess().getAdaptationInstallationRequirementsKeyword_5());
 		}

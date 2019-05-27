@@ -2743,12 +2743,12 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	sectionDescription=DBody?
 		//	srsItems+=VSRSDocumentItem*
 		//	srsRequirementSubsections+=VSRSInstantiableRequirementSection*
-		//	'<AdaptationInstallationRequirements>';
+		//	'</AdaptationInstallationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{VSRSAdaptationInstallationRequirements} '<AdaptationInstallationRequirements>' sectionDescription=DBody?
 		//srsItems+=VSRSDocumentItem* srsRequirementSubsections+=VSRSInstantiableRequirementSection*
-		//'<AdaptationInstallationRequirements>'
+		//'</AdaptationInstallationRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSRSAdaptationInstallationRequirements}
@@ -2775,7 +2775,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSInstantiableRequirementSection
 		public RuleCall getSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0() { return cSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
-		//'<AdaptationInstallationRequirements>'
+		//'</AdaptationInstallationRequirements>'
 		public Keyword getAdaptationInstallationRequirementsKeyword_5() { return cAdaptationInstallationRequirementsKeyword_5; }
 	}
 	public class VSRSDocumentItemElements extends AbstractParserRuleElementFinder {
@@ -3856,7 +3856,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	sectionDescription=DBody?
 	//	srsItems+=VSRSDocumentItem*
 	//	srsRequirementSubsections+=VSRSInstantiableRequirementSection*
-	//	'<AdaptationInstallationRequirements>';
+	//	'</AdaptationInstallationRequirements>';
 	public VSRSAdaptationInstallationRequirementsElements getVSRSAdaptationInstallationRequirementsAccess() {
 		return pVSRSAdaptationInstallationRequirements;
 	}

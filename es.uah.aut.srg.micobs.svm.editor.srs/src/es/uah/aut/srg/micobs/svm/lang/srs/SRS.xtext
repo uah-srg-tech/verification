@@ -383,7 +383,7 @@ VSRSAdaptationInstallationRequirements returns VSRSAdaptationInstallationRequire
 		(sectionDescription=DBody)?
 		(srsItems+=VSRSDocumentItem)*
 		(srsRequirementSubsections+=VSRSInstantiableRequirementSection)*
-	'<AdaptationInstallationRequirements>';
+	'</AdaptationInstallationRequirements>';
 
 VSRSDocumentItem returns VSRSDocumentItem:
 	'<Item'

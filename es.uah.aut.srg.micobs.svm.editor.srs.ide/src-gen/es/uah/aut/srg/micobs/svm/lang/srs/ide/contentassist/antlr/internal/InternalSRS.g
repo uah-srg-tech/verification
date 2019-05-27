@@ -10432,7 +10432,7 @@ rule__VSRSAdaptationInstallationRequirements__Group__5__Impl
 :
 (
 	{ before(grammarAccess.getVSRSAdaptationInstallationRequirementsAccess().getAdaptationInstallationRequirementsKeyword_5()); }
-	'<AdaptationInstallationRequirements>'
+	'</AdaptationInstallationRequirements>'
 	{ after(grammarAccess.getVSRSAdaptationInstallationRequirementsAccess().getAdaptationInstallationRequirementsKeyword_5()); }
 )
 ;
