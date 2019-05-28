@@ -98,6 +98,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSSoftwareMaintenanceRequirementsAccess().getGroup(), "rule__VSSSSoftwareMaintenanceRequirements__Group__0");
 					put(grammarAccess.getVSSSSystemSoftwareObservabilityRequirementsAccess().getGroup(), "rule__VSSSSystemSoftwareObservabilityRequirements__Group__0");
 					put(grammarAccess.getVSSSDocumentItemAccess().getGroup(), "rule__VSSSDocumentItem__Group__0");
+					put(grammarAccess.getVSSSDocumentItemAccess().getGroup_9(), "rule__VSSSDocumentItem__Group_9__0");
 					put(grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getGroup(), "rule__VSSSVerificationValidationProcessRequirements__Group__0");
 					put(grammarAccess.getVSSSValidationApproachAccess().getGroup(), "rule__VSSSValidationApproach__Group__0");
 					put(grammarAccess.getVSSSValidationRequirementsAccess().getGroup(), "rule__VSSSValidationRequirements__Group__0");
@@ -239,7 +240,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSDocumentItemAccess().getNameAssignment_2(), "rule__VSSSDocumentItem__NameAssignment_2");
 					put(grammarAccess.getVSSSDocumentItemAccess().getValidationMethodAssignment_4(), "rule__VSSSDocumentItem__ValidationMethodAssignment_4");
 					put(grammarAccess.getVSSSDocumentItemAccess().getDescriptionAssignment_7(), "rule__VSSSDocumentItem__DescriptionAssignment_7");
-					put(grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionAssignment_9(), "rule__VSSSDocumentItem__ExtendedDescriptionAssignment_9");
+					put(grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionAssignment_9_1(), "rule__VSSSDocumentItem__ExtendedDescriptionAssignment_9_1");
 					put(grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getSssItemsAssignment_2(), "rule__VSSSVerificationValidationProcessRequirements__SssItemsAssignment_2");
 					put(grammarAccess.getVSSSVerificationValidationProcessRequirementsAccess().getSssRequirementSubsectionsAssignment_3(), "rule__VSSSVerificationValidationProcessRequirements__SssRequirementSubsectionsAssignment_3");
 					put(grammarAccess.getVSSSValidationApproachAccess().getSssItemsAssignment_2(), "rule__VSSSValidationApproach__SssItemsAssignment_2");

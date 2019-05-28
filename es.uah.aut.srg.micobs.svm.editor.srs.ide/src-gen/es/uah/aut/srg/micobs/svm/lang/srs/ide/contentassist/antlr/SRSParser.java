@@ -104,6 +104,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSAdaptationInstallationRequirementsAccess().getGroup(), "rule__VSRSAdaptationInstallationRequirements__Group__0");
 					put(grammarAccess.getVSRSDocumentItemAccess().getGroup(), "rule__VSRSDocumentItem__Group__0");
 					put(grammarAccess.getVSRSDocumentItemAccess().getGroup_9(), "rule__VSRSDocumentItem__Group_9__0");
+					put(grammarAccess.getVSRSDocumentItemAccess().getGroup_10(), "rule__VSRSDocumentItem__Group_10__0");
 					put(grammarAccess.getVSRSLogicalModelAccess().getGroup(), "rule__VSRSLogicalModel__Group__0");
 					put(grammarAccess.getVSRSDocumentAccess().getNameAssignment_2(), "rule__VSRSDocument__NameAssignment_2");
 					put(grammarAccess.getVSRSDocumentAccess().getIdAssignment_4(), "rule__VSRSDocument__IdAssignment_4");
@@ -253,7 +254,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentItemAccess().getValidationMethodAssignment_4(), "rule__VSRSDocumentItem__ValidationMethodAssignment_4");
 					put(grammarAccess.getVSRSDocumentItemAccess().getDescriptionAssignment_7(), "rule__VSRSDocumentItem__DescriptionAssignment_7");
 					put(grammarAccess.getVSRSDocumentItemAccess().getParentItemAssignment_9_2(), "rule__VSRSDocumentItem__ParentItemAssignment_9_2");
-					put(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionAssignment_10(), "rule__VSRSDocumentItem__ExtendedDescriptionAssignment_10");
+					put(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionAssignment_10_1(), "rule__VSRSDocumentItem__ExtendedDescriptionAssignment_10_1");
 				}
 			};
 		}

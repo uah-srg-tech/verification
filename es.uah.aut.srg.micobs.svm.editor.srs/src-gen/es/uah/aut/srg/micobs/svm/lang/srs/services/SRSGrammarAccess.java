@@ -2800,8 +2800,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cParentItemVTraceableDocumentAbstractItemCrossReference_9_2_0 = (CrossReference)cParentItemAssignment_9_2.eContents().get(0);
 		private final RuleCall cParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_9_2_0_1 = (RuleCall)cParentItemVTraceableDocumentAbstractItemCrossReference_9_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
-		private final Assignment cExtendedDescriptionAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_10_0 = (RuleCall)cExtendedDescriptionAssignment_10.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cExtendedDescriptionKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cExtendedDescriptionAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_10_1_0 = (RuleCall)cExtendedDescriptionAssignment_10_1.eContents().get(0);
+		private final Keyword cExtendedDescriptionKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
 		private final Keyword cItemKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//VSRSDocumentItem:
@@ -2812,13 +2815,15 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<description>'
 		//	description=DBody
 		//	'</description>' ('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-		//	extendedDescription=DBody?
+		//	('<extendedDescription>'
+		//	extendedDescription=DBody
+		//	'</extendedDescription>')?
 		//	'</Item>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<Item' 'name=' name=STRING 'validationMethod=' validationMethod=VValidationMethod '>' '<description>' description=DBody
 		//'</description>' ('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-		//extendedDescription=DBody? '</Item>'
+		//('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')? '</Item>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Item'
@@ -2878,11 +2883,20 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_9_3() { return cSolidusGreaterThanSignKeyword_9_3; }
 		
-		//extendedDescription=DBody?
-		public Assignment getExtendedDescriptionAssignment_10() { return cExtendedDescriptionAssignment_10; }
+		//('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')?
+		public Group getGroup_10() { return cGroup_10; }
+		
+		//'<extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_10_0() { return cExtendedDescriptionKeyword_10_0; }
+		
+		//extendedDescription=DBody
+		public Assignment getExtendedDescriptionAssignment_10_1() { return cExtendedDescriptionAssignment_10_1; }
 		
 		//DBody
-		public RuleCall getExtendedDescriptionDBodyParserRuleCall_10_0() { return cExtendedDescriptionDBodyParserRuleCall_10_0; }
+		public RuleCall getExtendedDescriptionDBodyParserRuleCall_10_1_0() { return cExtendedDescriptionDBodyParserRuleCall_10_1_0; }
+		
+		//'</extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_10_2() { return cExtendedDescriptionKeyword_10_2; }
 		
 		//'</Item>'
 		public Keyword getItemKeyword_11() { return cItemKeyword_11; }
@@ -3873,7 +3887,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<description>'
 	//	description=DBody
 	//	'</description>' ('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-	//	extendedDescription=DBody?
+	//	('<extendedDescription>'
+	//	extendedDescription=DBody
+	//	'</extendedDescription>')?
 	//	'</Item>';
 	public VSRSDocumentItemElements getVSRSDocumentItemAccess() {
 		return pVSRSDocumentItem;

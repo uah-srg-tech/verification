@@ -394,7 +394,9 @@ VSRSDocumentItem returns VSRSDocumentItem:
 				description=DBody
 			'</description>'
 			('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-			(extendedDescription=DBody)?
+			('<extendedDescription>'
+				extendedDescription=DBody
+			'</extendedDescription>')?
 	'</Item>';
 	
 

@@ -360,7 +360,9 @@ VSSSDocumentItem returns VSSSDocumentItem:
 			'<description>'
 				description=DBody
 			'</description>'
-			(extendedDescription=DBody)?
+			('<extendedDescription>'
+				extendedDescription=DBody
+			'</extendedDescription>')?
 	'</Item>';
     
 enum VValidationMethod returns tdm::VValidationMethod:

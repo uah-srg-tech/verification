@@ -2581,8 +2581,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDescriptionAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cDescriptionDBodyParserRuleCall_7_0 = (RuleCall)cDescriptionAssignment_7.eContents().get(0);
 		private final Keyword cDescriptionKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Assignment cExtendedDescriptionAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_9_0 = (RuleCall)cExtendedDescriptionAssignment_9.eContents().get(0);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cExtendedDescriptionKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cExtendedDescriptionAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_9_1_0 = (RuleCall)cExtendedDescriptionAssignment_9_1.eContents().get(0);
+		private final Keyword cExtendedDescriptionKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
 		private final Keyword cItemKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//VSSSDocumentItem:
@@ -2592,13 +2595,14 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'>'
 		//	'<description>'
 		//	description=DBody
-		//	'</description>'
-		//	extendedDescription=DBody?
+		//	'</description>' ('<extendedDescription>'
+		//	extendedDescription=DBody
+		//	'</extendedDescription>')?
 		//	'</Item>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<Item' 'name=' name=STRING 'validationMethod=' validationMethod=VValidationMethod '>' '<description>' description=DBody
-		//'</description>' extendedDescription=DBody? '</Item>'
+		//'</description>' ('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')? '</Item>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Item'
@@ -2637,11 +2641,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</description>'
 		public Keyword getDescriptionKeyword_8() { return cDescriptionKeyword_8; }
 		
-		//extendedDescription=DBody?
-		public Assignment getExtendedDescriptionAssignment_9() { return cExtendedDescriptionAssignment_9; }
+		//('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'<extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_9_0() { return cExtendedDescriptionKeyword_9_0; }
+		
+		//extendedDescription=DBody
+		public Assignment getExtendedDescriptionAssignment_9_1() { return cExtendedDescriptionAssignment_9_1; }
 		
 		//DBody
-		public RuleCall getExtendedDescriptionDBodyParserRuleCall_9_0() { return cExtendedDescriptionDBodyParserRuleCall_9_0; }
+		public RuleCall getExtendedDescriptionDBodyParserRuleCall_9_1_0() { return cExtendedDescriptionDBodyParserRuleCall_9_1_0; }
+		
+		//'</extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_9_2() { return cExtendedDescriptionKeyword_9_2; }
 		
 		//'</Item>'
 		public Keyword getItemKeyword_10() { return cItemKeyword_10; }
@@ -3749,8 +3762,9 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'>'
 	//	'<description>'
 	//	description=DBody
-	//	'</description>'
-	//	extendedDescription=DBody?
+	//	'</description>' ('<extendedDescription>'
+	//	extendedDescription=DBody
+	//	'</extendedDescription>')?
 	//	'</Item>';
 	public VSSSDocumentItemElements getVSSSDocumentItemAccess() {
 		return pVSSSDocumentItem;

@@ -4444,27 +4444,37 @@ ruleVSSSDocumentItem returns [EObject current=null]
 			newLeafNode(otherlv_8, grammarAccess.getVSSSDocumentItemAccess().getDescriptionKeyword_8());
 		}
 		(
+			otherlv_9='<extendedDescription>'
+			{
+				newLeafNode(otherlv_9, grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionKeyword_9_0());
+			}
 			(
-				{
-					newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_9_0());
-				}
-				lv_extendedDescription_9_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSSSDocumentItemRule());
+				(
+					{
+						newCompositeNode(grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_9_1_0());
 					}
-					set(
-						$current,
-						"extendedDescription",
-						lv_extendedDescription_9_0,
-						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
-					afterParserOrEnumRuleCall();
-				}
+					lv_extendedDescription_10_0=ruleDBody
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSSSDocumentItemRule());
+						}
+						set(
+							$current,
+							"extendedDescription",
+							lv_extendedDescription_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBody");
+						afterParserOrEnumRuleCall();
+					}
+				)
 			)
+			otherlv_11='</extendedDescription>'
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSSSDocumentItemAccess().getExtendedDescriptionKeyword_9_2());
+			}
 		)?
-		otherlv_10='</Item>'
+		otherlv_12='</Item>'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getVSSSDocumentItemAccess().getItemKeyword_10());
+			newLeafNode(otherlv_12, grammarAccess.getVSSSDocumentItemAccess().getItemKeyword_10());
 		}
 	)
 ;

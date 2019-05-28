@@ -47,6 +47,7 @@
 '</column>'=60
 '</description>'=135
 '</enumerate>'=41
+'</extendedDescription>'=139
 '</hyperlink>'=49
 '</itemize>'=39
 '</listItem>'=35
@@ -71,7 +72,7 @@
 '<InterfaceRequirements>'=104
 '<Introduction>'=68
 '<Item'=132
-'<LogicalModel/>'=138
+'<LogicalModel/>'=140
 '<LogicalModels>'=90
 '<OperationalRequirements>'=106
 '<PerformanceRequirements>'=102
@@ -98,6 +99,7 @@
 '<column'=59
 '<description>'=134
 '<enumerate>'=40
+'<extendedDescription>'=138
 '<figureFromFile'=50
 '<hyperlink'=47
 '<itemize>'=38
@@ -173,7 +175,9 @@ T__135=135
 T__136=136
 T__137=137
 T__138=138
+T__139=139
 T__13=13
+T__140=140
 T__14=14
 T__15=15
 T__16=16
