@@ -26,6 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getGroup <em>Group</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems <em>Validating Items</em>}</li>
  * </ul>
  *
@@ -59,6 +60,32 @@ public interface VValidationDocumentAbstractItem extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Group</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Group</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Group</em>' reference.
+	 * @see #setGroup(VValidationDocumentAbstractGroup)
+	 * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractItem_Group()
+	 * @model required="true" transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	VValidationDocumentAbstractGroup getGroup();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getGroup <em>Group</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Group</em>' reference.
+	 * @see #getGroup()
+	 * @generated
+	 */
+	void setGroup(VValidationDocumentAbstractGroup value);
 
 	/**
 	 * Returns the value of the '<em><b>Validating Items</b></em>' reference list.

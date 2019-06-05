@@ -313,13 +313,22 @@ public interface vdmPackage extends EPackage {
 	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME = 0;
 
 	/**
+	 * The feature id for the '<em><b>Group</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP = 1;
+
+	/**
 	 * The feature id for the '<em><b>Validating Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = 1;
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = 2;
 
 	/**
 	 * The number of structural features of the '<em>VValidation Document Abstract Item</em>' class.
@@ -328,7 +337,7 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 2;
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>VValidation Document Abstract Item</em>' class.
@@ -501,6 +510,17 @@ public interface vdmPackage extends EPackage {
 	EAttribute getVValidationDocumentAbstractItem_Name();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getGroup <em>Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getGroup()
+	 * @see #getVValidationDocumentAbstractItem()
+	 * @generated
+	 */
+	EReference getVValidationDocumentAbstractItem_Group();
+
+	/**
 	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems <em>Validating Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -663,6 +683,14 @@ public interface vdmPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME = eINSTANCE.getVValidationDocumentAbstractItem_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Group</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP = eINSTANCE.getVValidationDocumentAbstractItem_Group();
 
 		/**
 		 * The meta object literal for the '<em><b>Validating Items</b></em>' reference list feature.
