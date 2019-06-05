@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="svs" nsURI="http://srg.aut.uah.es/micobs/svm/svs" nsPrefix="micobs.svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSDocument" eSuperTypes="vdm.ecore#//VValidationDocument ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DDocumentTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="introductionSection" lowerBound="1"
+        eType="#//VSVSIntroduction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocumentsSection"
+        lowerBound="1" eType="#//VSVSApplicableDocuments" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocumentsSection"
+        lowerBound="1" eType="#//VSVSReferenceDocuments" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="termsDefinitionsAbbreviationsSection"
+        lowerBound="1" eType="#//VSVSTermsDefinitionsAbbreviations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="softwareOverviewSection"
+        lowerBound="1" eType="#//VSVSTaskIdentification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskIdentificationSection"
+        lowerBound="1" eType="#//VSVSTaskIdentification" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testingSpecificationDesignSection"
+        lowerBound="1" eType="#//VSVSTestingSpecificationDesign" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testCasesSection" lowerBound="1"
+        eType="#//VSVSTestCases" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testProceduresSection"
+        lowerBound="1" eType="#//VSVSTestProcedures" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="analysisInspectionReviewSection"
+        lowerBound="1" eType="#//VSVSAnalysisInspectionReview" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testPlatformRequirementsSection"
+        lowerBound="1" eType="#//VSVSTestPlatformRequirements" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInformationSection"
+        lowerBound="1" eType="#//VSVSAdditionalInformation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsFigures" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DAbstractFigure"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsTables" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DAbstractTable"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSInstantiableSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DInstantiableSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsInstatiableSubsections"
+        upperBound="-1" eType="#//VSVSInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSIntroduction" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsInstatiableSubsections"
+        lowerBound="1" upperBound="-1" eType="#//VSVSInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSApplicableDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DApplicableDocument"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSReferenceDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocuments" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DReferenceDocument"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTermsDefinitionsAbbreviations" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" upperBound="-1"
+        eType="#//VSVSTerm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definitions" upperBound="-1"
+        eType="#//VSVSDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abbreviations" upperBound="-1"
+        eType="#//VSVSAbbreviation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSAbstractBriefDescription" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DRun"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTerm" eSuperTypes="#//VSVSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSDefinition" eSuperTypes="#//VSVSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSAbbreviation" eSuperTypes="#//VSVSAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSFixedSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsInstatiableSubsections"
+        upperBound="-1" eType="#//VSVSInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSSoftwareOverview" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTaskIdentification" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskCriteria" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featuresToBeTested" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featuresNotToBeTested"
+        lowerBound="1" eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testPassFailCriteria" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="itemsCanNotBeValidated"
+        lowerBound="1" eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="manuallyAutoGeneratedCode"
+        lowerBound="1" eType="#//VSVSFixedSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestingSpecificationDesign" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testDesigns" upperBound="-1"
+        eType="#//VSVSTestDesign"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestDesign" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featuresToBeTested" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="approachRefinements" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestCases" eSuperTypes="vdm.ecore#//VValidationDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testCases" upperBound="-1"
+        eType="#//VSVSTestCase"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestCase" eSuperTypes="vdm.ecore#//VValidationDocumentAbstractItem ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifier" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="passFailCriteria" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="environmentalNeeds" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="specialConstraints" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaceDependencies"
+        lowerBound="1" eType="#//VSVSFixedSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestProcedures" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testProcedures" upperBound="-1"
+        eType="#//VSVSTestProcedure"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestProcedure" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifier" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="purpose" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="steps" lowerBound="1" upperBound="-1"
+        eType="#//VSVSProcedureStep" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="procedureSteps" lowerBound="1"
+        eType="#//VSVSFixedSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureStep"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSAnalysisInspectionReview" eSuperTypes="#//VSVSFixedSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSTestPlatformRequirements" eSuperTypes="#//VSVSFixedSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSAdditionalInformation" eSuperTypes="#//VSVSFixedSection"/>
+</ecore:EPackage>
