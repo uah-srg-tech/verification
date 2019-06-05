@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
+    modelName="Svs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doc.genmodel#//doc tdm.genmodel#//tdm vdm.genmodel#//vdm"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>svs.ecore</foreignModel>
+  <genPackages prefix="svs" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
+      ecorePackage="svs.ecore#/">
+    <genClasses ecoreClass="svs.ecore#//VSVSDocument">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/introductionSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/applicableDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/referenceDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/termsDefinitionsAbbreviationsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/softwareOverviewSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/taskIdentificationSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/testingSpecificationDesignSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/testCasesSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/testProceduresSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/analysisInspectionReviewSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/testPlatformRequirementsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/additionalInformationSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/svsFigures"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSDocument/svsTables"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSInstantiableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInstantiableSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInstantiableSection/svsInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSIntroduction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSIntroduction/svsInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSApplicableDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSApplicableDocuments/applicableDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSReferenceDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSReferenceDocuments/referenceDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTermsDefinitionsAbbreviations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTermsDefinitionsAbbreviations/terms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTermsDefinitionsAbbreviations/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTermsDefinitionsAbbreviations/abbreviations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="svs.ecore#//VSVSAbstractBriefDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSAbstractBriefDescription/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSAbstractBriefDescription/description"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTerm"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSDefinition"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSAbbreviation"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSFixedSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSFixedSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSFixedSection/svsInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSSoftwareOverview"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSTaskIdentification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/taskCriteria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/featuresToBeTested"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/featuresNotToBeTested"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/testPassFailCriteria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/itemsCanNotBeValidated"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTaskIdentification/manuallyAutoGeneratedCode"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestingSpecificationDesign">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/testDesigns"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestDesign">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestDesign/general"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestDesign/featuresToBeTested"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestDesign/approachRefinements"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestCases">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCases/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCases/testCases"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestCase">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/inputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/outputs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/passFailCriteria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/environmentalNeeds"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/specialConstraints"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestCase/interfaceDependencies"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestProcedures">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedures/general"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedures/testProcedures"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestProcedure">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedure/identifier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedure/purpose"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedure/steps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestProcedure/procedureSteps"/>
+    </genClasses>
+    <genClasses ecoreClass="svs.ecore#//VSVSProcedureStep"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSAnalysisInspectionReview"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSTestPlatformRequirements"/>
+    <genClasses ecoreClass="svs.ecore#//VSVSAdditionalInformation"/>
+  </genPackages>
+</genmodel:GenModel>
