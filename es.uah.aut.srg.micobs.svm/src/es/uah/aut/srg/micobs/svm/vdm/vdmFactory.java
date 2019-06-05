@@ -30,22 +30,49 @@ public interface vdmFactory extends EFactory {
 	vdmFactory eINSTANCE = es.uah.aut.srg.micobs.svm.vdm.impl.vdmFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>VVerification Document</em>'.
+	 * Returns a new object of class '<em>VValidation Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VVerification Document</em>'.
+	 * @return a new object of class '<em>VValidation Document</em>'.
 	 * @generated
 	 */
-	VVerificationDocument createVVerificationDocument();
+	VValidationDocument createVValidationDocument();
 
 	/**
-	 * Returns a new object of class '<em>VVerification Document Item</em>'.
+	 * Returns a new object of class '<em>VValidation Document Abstract Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VVerification Document Item</em>'.
+	 * @return a new object of class '<em>VValidation Document Abstract Group</em>'.
 	 * @generated
 	 */
-	VVerificationDocumentItem createVVerificationDocumentItem();
+	VValidationDocumentAbstractGroup createVValidationDocumentAbstractGroup();
+
+	/**
+	 * Returns a new object of class '<em>VValidation Document Fixed Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VValidation Document Fixed Group</em>'.
+	 * @generated
+	 */
+	VValidationDocumentFixedGroup createVValidationDocumentFixedGroup();
+
+	/**
+	 * Returns a new object of class '<em>VValidation Document Instantiable Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VValidation Document Instantiable Group</em>'.
+	 * @generated
+	 */
+	VValidationDocumentInstantiableGroup createVValidationDocumentInstantiableGroup();
+
+	/**
+	 * Returns a new object of class '<em>VValidation Document Abstract Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VValidation Document Abstract Item</em>'.
+	 * @generated
+	 */
+	VValidationDocumentAbstractItem createVValidationDocumentAbstractItem();
 
 	/**
 	 * Returns the package supported by this factory.

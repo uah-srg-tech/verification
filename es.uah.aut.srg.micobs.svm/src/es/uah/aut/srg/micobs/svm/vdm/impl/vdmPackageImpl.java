@@ -14,8 +14,11 @@ import es.uah.aut.srg.micobs.common.commonPackage;
 
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
-import es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument;
-import es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup;
 import es.uah.aut.srg.micobs.svm.vdm.vdmFactory;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
@@ -38,14 +41,35 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vVerificationDocumentEClass = null;
+	private EClass vValidationDocumentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vVerificationDocumentItemEClass = null;
+	private EClass vValidationDocumentAbstractGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vValidationDocumentFixedGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vValidationDocumentInstantiableGroupEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vValidationDocumentAbstractItemEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -116,8 +140,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVVerificationDocument() {
-		return vVerificationDocumentEClass;
+	public EClass getVValidationDocument() {
+		return vValidationDocumentEClass;
 	}
 
 	/**
@@ -125,8 +149,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVVerificationDocument_Id() {
-		return (EAttribute)vVerificationDocumentEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVValidationDocument_Name() {
+		return (EAttribute)vValidationDocumentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -134,8 +158,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVVerificationDocument_Issue() {
-		return (EAttribute)vVerificationDocumentEClass.getEStructuralFeatures().get(1);
+	public EAttribute getVValidationDocument_Id() {
+		return (EAttribute)vValidationDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -143,8 +167,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVVerificationDocument_Date() {
-		return (EAttribute)vVerificationDocumentEClass.getEStructuralFeatures().get(2);
+	public EAttribute getVValidationDocument_Issue() {
+		return (EAttribute)vValidationDocumentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -152,8 +176,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVVerificationDocument_Item() {
-		return (EReference)vVerificationDocumentEClass.getEStructuralFeatures().get(3);
+	public EAttribute getVValidationDocument_Revision() {
+		return (EAttribute)vValidationDocumentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -161,8 +185,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVVerificationDocumentItem() {
-		return vVerificationDocumentItemEClass;
+	public EAttribute getVValidationDocument_Date() {
+		return (EAttribute)vValidationDocumentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -170,8 +194,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVVerificationDocumentItem_Id() {
-		return (EAttribute)vVerificationDocumentItemEClass.getEStructuralFeatures().get(0);
+	public EReference getVValidationDocument_Parents() {
+		return (EReference)vValidationDocumentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -179,8 +203,80 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVVerificationDocumentItem_EvidenceOf() {
-		return (EReference)vVerificationDocumentItemEClass.getEStructuralFeatures().get(1);
+	public EReference getVValidationDocument_Groups() {
+		return (EReference)vValidationDocumentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVValidationDocumentAbstractGroup() {
+		return vValidationDocumentAbstractGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVValidationDocumentAbstractGroup_Items() {
+		return (EReference)vValidationDocumentAbstractGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVValidationDocumentFixedGroup() {
+		return vValidationDocumentFixedGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVValidationDocumentInstantiableGroup() {
+		return vValidationDocumentInstantiableGroupEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVValidationDocumentInstantiableGroup_Prefix() {
+		return (EAttribute)vValidationDocumentInstantiableGroupEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVValidationDocumentAbstractItem() {
+		return vValidationDocumentAbstractItemEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVValidationDocumentAbstractItem_Name() {
+		return (EAttribute)vValidationDocumentAbstractItemEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVValidationDocumentAbstractItem_ValidatingItems() {
+		return (EReference)vValidationDocumentAbstractItemEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -211,15 +307,26 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		isCreated = true;
 
 		// Create classes and their features
-		vVerificationDocumentEClass = createEClass(VVERIFICATION_DOCUMENT);
-		createEAttribute(vVerificationDocumentEClass, VVERIFICATION_DOCUMENT__ID);
-		createEAttribute(vVerificationDocumentEClass, VVERIFICATION_DOCUMENT__ISSUE);
-		createEAttribute(vVerificationDocumentEClass, VVERIFICATION_DOCUMENT__DATE);
-		createEReference(vVerificationDocumentEClass, VVERIFICATION_DOCUMENT__ITEM);
+		vValidationDocumentEClass = createEClass(VVALIDATION_DOCUMENT);
+		createEAttribute(vValidationDocumentEClass, VVALIDATION_DOCUMENT__NAME);
+		createEAttribute(vValidationDocumentEClass, VVALIDATION_DOCUMENT__ID);
+		createEAttribute(vValidationDocumentEClass, VVALIDATION_DOCUMENT__ISSUE);
+		createEAttribute(vValidationDocumentEClass, VVALIDATION_DOCUMENT__REVISION);
+		createEAttribute(vValidationDocumentEClass, VVALIDATION_DOCUMENT__DATE);
+		createEReference(vValidationDocumentEClass, VVALIDATION_DOCUMENT__PARENTS);
+		createEReference(vValidationDocumentEClass, VVALIDATION_DOCUMENT__GROUPS);
 
-		vVerificationDocumentItemEClass = createEClass(VVERIFICATION_DOCUMENT_ITEM);
-		createEAttribute(vVerificationDocumentItemEClass, VVERIFICATION_DOCUMENT_ITEM__ID);
-		createEReference(vVerificationDocumentItemEClass, VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF);
+		vValidationDocumentAbstractGroupEClass = createEClass(VVALIDATION_DOCUMENT_ABSTRACT_GROUP);
+		createEReference(vValidationDocumentAbstractGroupEClass, VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS);
+
+		vValidationDocumentFixedGroupEClass = createEClass(VVALIDATION_DOCUMENT_FIXED_GROUP);
+
+		vValidationDocumentInstantiableGroupEClass = createEClass(VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP);
+		createEAttribute(vValidationDocumentInstantiableGroupEClass, VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX);
+
+		vValidationDocumentAbstractItemEClass = createEClass(VVALIDATION_DOCUMENT_ABSTRACT_ITEM);
+		createEAttribute(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME);
+		createEReference(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS);
 	}
 
 	/**
@@ -254,19 +361,31 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		vVerificationDocumentEClass.getESuperTypes().add(thecommonPackage.getMCommonPackageElement());
-		vVerificationDocumentItemEClass.getESuperTypes().add(thecommonPackage.getMCommonReferenceableObj());
+		vValidationDocumentFixedGroupEClass.getESuperTypes().add(this.getVValidationDocumentAbstractGroup());
+		vValidationDocumentInstantiableGroupEClass.getESuperTypes().add(this.getVValidationDocumentAbstractGroup());
+		vValidationDocumentInstantiableGroupEClass.getESuperTypes().add(thecommonPackage.getMCommonReferenceableObj());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(vVerificationDocumentEClass, VVerificationDocument.class, "VVerificationDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVVerificationDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VVerificationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVVerificationDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VVerificationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVVerificationDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VVerificationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVVerificationDocument_Item(), this.getVVerificationDocumentItem(), null, "item", null, 1, -1, VVerificationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(vValidationDocumentEClass, VValidationDocument.class, "VValidationDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVValidationDocument_Name(), ecorePackage.getEString(), "name", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVValidationDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVValidationDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVValidationDocument_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVValidationDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocument_Parents(), this.getVValidationDocument(), null, "parents", null, 0, -1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocument_Groups(), this.getVValidationDocumentAbstractItem(), null, "groups", null, 1, -1, VValidationDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
-		initEClass(vVerificationDocumentItemEClass, VVerificationDocumentItem.class, "VVerificationDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVVerificationDocumentItem_Id(), ecorePackage.getEString(), "id", null, 1, 1, VVerificationDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVVerificationDocumentItem_EvidenceOf(), thetdmPackage.getVTraceableDocumentAbstractItem(), null, "evidenceOf", null, 1, -1, VVerificationDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEClass(vValidationDocumentAbstractGroupEClass, VValidationDocumentAbstractGroup.class, "VValidationDocumentAbstractGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVValidationDocumentAbstractGroup_Items(), this.getVValidationDocumentAbstractItem(), null, "items", null, 0, -1, VValidationDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+
+		initEClass(vValidationDocumentFixedGroupEClass, VValidationDocumentFixedGroup.class, "VValidationDocumentFixedGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(vValidationDocumentInstantiableGroupEClass, VValidationDocumentInstantiableGroup.class, "VValidationDocumentInstantiableGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVValidationDocumentInstantiableGroup_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VValidationDocumentInstantiableGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vValidationDocumentAbstractItemEClass, VValidationDocumentAbstractItem.class, "VValidationDocumentAbstractItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVValidationDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocumentAbstractItem_ValidatingItems(), thetdmPackage.getVTraceableDocumentAbstractItem(), null, "validatingItems", null, 1, -1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

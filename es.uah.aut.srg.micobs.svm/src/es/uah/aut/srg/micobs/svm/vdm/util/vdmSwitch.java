@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm.util;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 
 import es.uah.aut.srg.micobs.svm.vdm.*;
@@ -77,17 +76,36 @@ public class vdmSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case vdmPackage.VVERIFICATION_DOCUMENT: {
-				VVerificationDocument vVerificationDocument = (VVerificationDocument)theEObject;
-				T result = caseVVerificationDocument(vVerificationDocument);
-				if (result == null) result = caseMCommonPackageElement(vVerificationDocument);
+			case vdmPackage.VVALIDATION_DOCUMENT: {
+				VValidationDocument vValidationDocument = (VValidationDocument)theEObject;
+				T result = caseVValidationDocument(vValidationDocument);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM: {
-				VVerificationDocumentItem vVerificationDocumentItem = (VVerificationDocumentItem)theEObject;
-				T result = caseVVerificationDocumentItem(vVerificationDocumentItem);
-				if (result == null) result = caseMCommonReferenceableObj(vVerificationDocumentItem);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP: {
+				VValidationDocumentAbstractGroup vValidationDocumentAbstractGroup = (VValidationDocumentAbstractGroup)theEObject;
+				T result = caseVValidationDocumentAbstractGroup(vValidationDocumentAbstractGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case vdmPackage.VVALIDATION_DOCUMENT_FIXED_GROUP: {
+				VValidationDocumentFixedGroup vValidationDocumentFixedGroup = (VValidationDocumentFixedGroup)theEObject;
+				T result = caseVValidationDocumentFixedGroup(vValidationDocumentFixedGroup);
+				if (result == null) result = caseVValidationDocumentAbstractGroup(vValidationDocumentFixedGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP: {
+				VValidationDocumentInstantiableGroup vValidationDocumentInstantiableGroup = (VValidationDocumentInstantiableGroup)theEObject;
+				T result = caseVValidationDocumentInstantiableGroup(vValidationDocumentInstantiableGroup);
+				if (result == null) result = caseVValidationDocumentAbstractGroup(vValidationDocumentInstantiableGroup);
+				if (result == null) result = caseMCommonReferenceableObj(vValidationDocumentInstantiableGroup);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM: {
+				VValidationDocumentAbstractItem vValidationDocumentAbstractItem = (VValidationDocumentAbstractItem)theEObject;
+				T result = caseVValidationDocumentAbstractItem(vValidationDocumentAbstractItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -96,47 +114,77 @@ public class vdmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VVerification Document</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VValidation Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VVerification Document</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VValidation Document</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVVerificationDocument(VVerificationDocument object) {
+	public T caseVValidationDocument(VValidationDocument object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VVerification Document Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VValidation Document Abstract Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VVerification Document Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VValidation Document Abstract Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVVerificationDocumentItem(VVerificationDocumentItem object) {
+	public T caseVValidationDocumentAbstractGroup(VValidationDocumentAbstractGroup object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VValidation Document Fixed Group</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>MCommon Package Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VValidation Document Fixed Group</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseMCommonPackageElement(MCommonPackageElement object) {
+	public T caseVValidationDocumentFixedGroup(VValidationDocumentFixedGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VValidation Document Instantiable Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VValidation Document Instantiable Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVValidationDocumentInstantiableGroup(VValidationDocumentInstantiableGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VValidation Document Abstract Item</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VValidation Document Abstract Item</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVValidationDocumentAbstractItem(VValidationDocumentAbstractItem object) {
 		return null;
 	}
 

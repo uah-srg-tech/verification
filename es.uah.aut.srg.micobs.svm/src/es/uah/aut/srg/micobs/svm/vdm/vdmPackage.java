@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm;
 
-import es.uah.aut.srg.micobs.common.commonPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -67,23 +65,14 @@ public interface vdmPackage extends EPackage {
 	vdmPackage eINSTANCE = es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentImpl <em>VVerification Document</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl <em>VValidation Document</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentImpl
-	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVVerificationDocument()
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocument()
 	 * @generated
 	 */
-	int VVERIFICATION_DOCUMENT = 0;
-
-	/**
-	 * The feature id for the '<em><b>Version</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VVERIFICATION_DOCUMENT__VERSION = commonPackage.MCOMMON_PACKAGE_ELEMENT__VERSION;
+	int VVALIDATION_DOCUMENT = 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -92,16 +81,7 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT__NAME = commonPackage.MCOMMON_PACKAGE_ELEMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Uri</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VVERIFICATION_DOCUMENT__URI = commonPackage.MCOMMON_PACKAGE_ELEMENT__URI;
+	int VVALIDATION_DOCUMENT__NAME = 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -110,7 +90,7 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT__ID = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 0;
+	int VVALIDATION_DOCUMENT__ID = 1;
 
 	/**
 	 * The feature id for the '<em><b>Issue</b></em>' attribute.
@@ -119,7 +99,16 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT__ISSUE = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 1;
+	int VVALIDATION_DOCUMENT__ISSUE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Revision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT__REVISION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Date</b></em>' attribute.
@@ -128,44 +117,136 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT__DATE = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 2;
+	int VVALIDATION_DOCUMENT__DATE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Item</b></em>' reference list.
+	 * The feature id for the '<em><b>Parents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT__ITEM = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 3;
+	int VVALIDATION_DOCUMENT__PARENTS = 5;
 
 	/**
-	 * The number of structural features of the '<em>VVerification Document</em>' class.
+	 * The feature id for the '<em><b>Groups</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_FEATURE_COUNT = commonPackage.MCOMMON_PACKAGE_ELEMENT_FEATURE_COUNT + 4;
+	int VVALIDATION_DOCUMENT__GROUPS = 6;
 
 	/**
-	 * The number of operations of the '<em>VVerification Document</em>' class.
+	 * The number of structural features of the '<em>VValidation Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_OPERATION_COUNT = commonPackage.MCOMMON_PACKAGE_ELEMENT_OPERATION_COUNT + 0;
+	int VVALIDATION_DOCUMENT_FEATURE_COUNT = 7;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl <em>VVerification Document Item</em>}' class.
+	 * The number of operations of the '<em>VValidation Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl
-	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVVerificationDocumentItem()
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl <em>VValidation Document Abstract Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentAbstractGroup()
 	 * @generated
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM = 1;
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP = 1;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS = 0;
+
+	/**
+	 * The number of structural features of the '<em>VValidation Document Abstract Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>VValidation Document Abstract Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl <em>VValidation Document Fixed Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentFixedGroup()
+	 * @generated
+	 */
+	int VVALIDATION_DOCUMENT_FIXED_GROUP = 2;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_FIXED_GROUP__ITEMS = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS;
+
+	/**
+	 * The number of structural features of the '<em>VValidation Document Fixed Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_FIXED_GROUP_FEATURE_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>VValidation Document Fixed Group</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_FIXED_GROUP_OPERATION_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl <em>VValidation Document Instantiable Group</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentInstantiableGroup()
+	 * @generated
+	 */
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP = 3;
+
+	/**
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__ITEMS = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -174,7 +255,7 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM__NAME = commonPackage.MCOMMON_REFERENCEABLE_OBJ__NAME;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__NAME = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -183,130 +264,252 @@ public interface vdmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM__DESCRIPTION = commonPackage.MCOMMON_REFERENCEABLE_OBJ__DESCRIPTION;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM__ID = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 0;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Evidence Of</b></em>' reference list.
+	 * The number of structural features of the '<em>VValidation Document Instantiable Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 1;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
 
 	/**
-	 * The number of structural features of the '<em>VVerification Document Item</em>' class.
+	 * The number of operations of the '<em>VValidation Document Instantiable Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM_FEATURE_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_FEATURE_COUNT + 2;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP_OPERATION_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>VVerification Document Item</em>' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl <em>VValidation Document Abstract Item</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl
+	 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentAbstractItem()
+	 * @generated
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVERIFICATION_DOCUMENT_ITEM_OPERATION_COUNT = commonPackage.MCOMMON_REFERENCEABLE_OBJ_OPERATION_COUNT + 0;
-
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME = 0;
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument <em>VVerification Document</em>}'.
+	 * The feature id for the '<em><b>Validating Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VVerification Document</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument
 	 * @generated
+	 * @ordered
 	 */
-	EClass getVVerificationDocument();
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = 1;
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getId <em>Id</em>}'.
+	 * The number of structural features of the '<em>VValidation Document Abstract Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VValidation Document Abstract Item</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM_OPERATION_COUNT = 0;
+
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument <em>VValidation Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VValidation Document</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument
+	 * @generated
+	 */
+	EClass getVValidationDocument();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getName()
+	 * @see #getVValidationDocument()
+	 * @generated
+	 */
+	EAttribute getVValidationDocument_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getId()
-	 * @see #getVVerificationDocument()
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getId()
+	 * @see #getVValidationDocument()
 	 * @generated
 	 */
-	EAttribute getVVerificationDocument_Id();
+	EAttribute getVValidationDocument_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getIssue <em>Issue</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getIssue <em>Issue</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Issue</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getIssue()
-	 * @see #getVVerificationDocument()
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getIssue()
+	 * @see #getVValidationDocument()
 	 * @generated
 	 */
-	EAttribute getVVerificationDocument_Issue();
+	EAttribute getVValidationDocument_Issue();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getDate <em>Date</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getRevision <em>Revision</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Revision</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getRevision()
+	 * @see #getVValidationDocument()
+	 * @generated
+	 */
+	EAttribute getVValidationDocument_Revision();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getDate <em>Date</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Date</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getDate()
-	 * @see #getVVerificationDocument()
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getDate()
+	 * @see #getVValidationDocument()
 	 * @generated
 	 */
-	EAttribute getVVerificationDocument_Date();
+	EAttribute getVValidationDocument_Date();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getItem <em>Item</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getParents <em>Parents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Item</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument#getItem()
-	 * @see #getVVerificationDocument()
+	 * @return the meta object for the reference list '<em>Parents</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getParents()
+	 * @see #getVValidationDocument()
 	 * @generated
 	 */
-	EReference getVVerificationDocument_Item();
+	EReference getVValidationDocument_Parents();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem <em>VVerification Document Item</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getGroups <em>Groups</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VVerification Document Item</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem
+	 * @return the meta object for the reference list '<em>Groups</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument#getGroups()
+	 * @see #getVValidationDocument()
 	 * @generated
 	 */
-	EClass getVVerificationDocumentItem();
+	EReference getVValidationDocument_Groups();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem#getId <em>Id</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup <em>VValidation Document Abstract Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem#getId()
-	 * @see #getVVerificationDocumentItem()
+	 * @return the meta object for class '<em>VValidation Document Abstract Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup
 	 * @generated
 	 */
-	EAttribute getVVerificationDocumentItem_Id();
+	EClass getVValidationDocumentAbstractGroup();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem#getEvidenceOf <em>Evidence Of</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getItems <em>Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Evidence Of</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem#getEvidenceOf()
-	 * @see #getVVerificationDocumentItem()
+	 * @return the meta object for the reference list '<em>Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getItems()
+	 * @see #getVValidationDocumentAbstractGroup()
 	 * @generated
 	 */
-	EReference getVVerificationDocumentItem_EvidenceOf();
+	EReference getVValidationDocumentAbstractGroup_Items();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup <em>VValidation Document Fixed Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VValidation Document Fixed Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup
+	 * @generated
+	 */
+	EClass getVValidationDocumentFixedGroup();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup <em>VValidation Document Instantiable Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VValidation Document Instantiable Group</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup
+	 * @generated
+	 */
+	EClass getVValidationDocumentInstantiableGroup();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup#getPrefix <em>Prefix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Prefix</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup#getPrefix()
+	 * @see #getVValidationDocumentInstantiableGroup()
+	 * @generated
+	 */
+	EAttribute getVValidationDocumentInstantiableGroup_Prefix();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem <em>VValidation Document Abstract Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VValidation Document Abstract Item</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem
+	 * @generated
+	 */
+	EClass getVValidationDocumentAbstractItem();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getName()
+	 * @see #getVValidationDocumentAbstractItem()
+	 * @generated
+	 */
+	EAttribute getVValidationDocumentAbstractItem_Name();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems <em>Validating Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Validating Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems()
+	 * @see #getVValidationDocumentAbstractItem()
+	 * @generated
+	 */
+	EReference getVValidationDocumentAbstractItem_ValidatingItems();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -332,14 +535,22 @@ public interface vdmPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentImpl <em>VVerification Document</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl <em>VValidation Document</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentImpl
-		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVVerificationDocument()
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocument()
 		 * @generated
 		 */
-		EClass VVERIFICATION_DOCUMENT = eINSTANCE.getVVerificationDocument();
+		EClass VVALIDATION_DOCUMENT = eINSTANCE.getVValidationDocument();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VVALIDATION_DOCUMENT__NAME = eINSTANCE.getVValidationDocument_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
@@ -347,7 +558,7 @@ public interface vdmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VVERIFICATION_DOCUMENT__ID = eINSTANCE.getVVerificationDocument_Id();
+		EAttribute VVALIDATION_DOCUMENT__ID = eINSTANCE.getVValidationDocument_Id();
 
 		/**
 		 * The meta object literal for the '<em><b>Issue</b></em>' attribute feature.
@@ -355,7 +566,15 @@ public interface vdmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VVERIFICATION_DOCUMENT__ISSUE = eINSTANCE.getVVerificationDocument_Issue();
+		EAttribute VVALIDATION_DOCUMENT__ISSUE = eINSTANCE.getVValidationDocument_Issue();
+
+		/**
+		 * The meta object literal for the '<em><b>Revision</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VVALIDATION_DOCUMENT__REVISION = eINSTANCE.getVValidationDocument_Revision();
 
 		/**
 		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
@@ -363,41 +582,95 @@ public interface vdmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VVERIFICATION_DOCUMENT__DATE = eINSTANCE.getVVerificationDocument_Date();
+		EAttribute VVALIDATION_DOCUMENT__DATE = eINSTANCE.getVValidationDocument_Date();
 
 		/**
-		 * The meta object literal for the '<em><b>Item</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Parents</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VVERIFICATION_DOCUMENT__ITEM = eINSTANCE.getVVerificationDocument_Item();
+		EReference VVALIDATION_DOCUMENT__PARENTS = eINSTANCE.getVValidationDocument_Parents();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl <em>VVerification Document Item</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl
-		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVVerificationDocumentItem()
-		 * @generated
-		 */
-		EClass VVERIFICATION_DOCUMENT_ITEM = eINSTANCE.getVVerificationDocumentItem();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Groups</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VVERIFICATION_DOCUMENT_ITEM__ID = eINSTANCE.getVVerificationDocumentItem_Id();
+		EReference VVALIDATION_DOCUMENT__GROUPS = eINSTANCE.getVValidationDocument_Groups();
 
 		/**
-		 * The meta object literal for the '<em><b>Evidence Of</b></em>' reference list feature.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl <em>VValidation Document Abstract Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentAbstractGroup()
+		 * @generated
+		 */
+		EClass VVALIDATION_DOCUMENT_ABSTRACT_GROUP = eINSTANCE.getVValidationDocumentAbstractGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Items</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF = eINSTANCE.getVVerificationDocumentItem_EvidenceOf();
+		EReference VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS = eINSTANCE.getVValidationDocumentAbstractGroup_Items();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl <em>VValidation Document Fixed Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentFixedGroup()
+		 * @generated
+		 */
+		EClass VVALIDATION_DOCUMENT_FIXED_GROUP = eINSTANCE.getVValidationDocumentFixedGroup();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl <em>VValidation Document Instantiable Group</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentInstantiableGroup()
+		 * @generated
+		 */
+		EClass VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP = eINSTANCE.getVValidationDocumentInstantiableGroup();
+
+		/**
+		 * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = eINSTANCE.getVValidationDocumentInstantiableGroup_Prefix();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl <em>VValidation Document Abstract Item</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl
+		 * @see es.uah.aut.srg.micobs.svm.vdm.impl.vdmPackageImpl#getVValidationDocumentAbstractItem()
+		 * @generated
+		 */
+		EClass VVALIDATION_DOCUMENT_ABSTRACT_ITEM = eINSTANCE.getVValidationDocumentAbstractItem();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME = eINSTANCE.getVValidationDocumentAbstractItem_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Validating Items</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = eINSTANCE.getVValidationDocumentAbstractItem_ValidatingItems();
 
 	}
 

@@ -10,7 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm.util;
 
-import es.uah.aut.srg.micobs.common.MCommonPackageElement;
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 
 import es.uah.aut.srg.micobs.svm.vdm.*;
@@ -79,16 +78,24 @@ public class vdmAdapterFactory extends AdapterFactoryImpl {
 	protected vdmSwitch<Adapter> modelSwitch =
 		new vdmSwitch<Adapter>() {
 			@Override
-			public Adapter caseVVerificationDocument(VVerificationDocument object) {
-				return createVVerificationDocumentAdapter();
+			public Adapter caseVValidationDocument(VValidationDocument object) {
+				return createVValidationDocumentAdapter();
 			}
 			@Override
-			public Adapter caseVVerificationDocumentItem(VVerificationDocumentItem object) {
-				return createVVerificationDocumentItemAdapter();
+			public Adapter caseVValidationDocumentAbstractGroup(VValidationDocumentAbstractGroup object) {
+				return createVValidationDocumentAbstractGroupAdapter();
 			}
 			@Override
-			public Adapter caseMCommonPackageElement(MCommonPackageElement object) {
-				return createMCommonPackageElementAdapter();
+			public Adapter caseVValidationDocumentFixedGroup(VValidationDocumentFixedGroup object) {
+				return createVValidationDocumentFixedGroupAdapter();
+			}
+			@Override
+			public Adapter caseVValidationDocumentInstantiableGroup(VValidationDocumentInstantiableGroup object) {
+				return createVValidationDocumentInstantiableGroupAdapter();
+			}
+			@Override
+			public Adapter caseVValidationDocumentAbstractItem(VValidationDocumentAbstractItem object) {
+				return createVValidationDocumentAbstractItemAdapter();
 			}
 			@Override
 			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
@@ -115,44 +122,72 @@ public class vdmAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument <em>VVerification Document</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument <em>VValidation Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocument
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocument
 	 * @generated
 	 */
-	public Adapter createVVerificationDocumentAdapter() {
+	public Adapter createVValidationDocumentAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem <em>VVerification Document Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup <em>VValidation Document Abstract Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup
 	 * @generated
 	 */
-	public Adapter createVVerificationDocumentItemAdapter() {
+	public Adapter createVValidationDocumentAbstractGroupAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.common.MCommonPackageElement <em>MCommon Package Element</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup <em>VValidation Document Fixed Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.common.MCommonPackageElement
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup
 	 * @generated
 	 */
-	public Adapter createMCommonPackageElementAdapter() {
+	public Adapter createVValidationDocumentFixedGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup <em>VValidation Document Instantiable Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup
+	 * @generated
+	 */
+	public Adapter createVValidationDocumentInstantiableGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem <em>VValidation Document Abstract Item</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem
+	 * @generated
+	 */
+	public Adapter createVValidationDocumentAbstractItemAdapter() {
 		return null;
 	}
 

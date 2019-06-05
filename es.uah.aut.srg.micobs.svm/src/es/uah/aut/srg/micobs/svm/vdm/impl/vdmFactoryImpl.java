@@ -64,8 +64,11 @@ public class vdmFactoryImpl extends EFactoryImpl implements vdmFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case vdmPackage.VVERIFICATION_DOCUMENT: return createVVerificationDocument();
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM: return createVVerificationDocumentItem();
+			case vdmPackage.VVALIDATION_DOCUMENT: return createVValidationDocument();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP: return createVValidationDocumentAbstractGroup();
+			case vdmPackage.VVALIDATION_DOCUMENT_FIXED_GROUP: return createVValidationDocumentFixedGroup();
+			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP: return createVValidationDocumentInstantiableGroup();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM: return createVValidationDocumentAbstractItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -76,9 +79,9 @@ public class vdmFactoryImpl extends EFactoryImpl implements vdmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VVerificationDocument createVVerificationDocument() {
-		VVerificationDocumentImpl vVerificationDocument = new VVerificationDocumentImpl();
-		return vVerificationDocument;
+	public VValidationDocument createVValidationDocument() {
+		VValidationDocumentImpl vValidationDocument = new VValidationDocumentImpl();
+		return vValidationDocument;
 	}
 
 	/**
@@ -86,9 +89,39 @@ public class vdmFactoryImpl extends EFactoryImpl implements vdmFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VVerificationDocumentItem createVVerificationDocumentItem() {
-		VVerificationDocumentItemImpl vVerificationDocumentItem = new VVerificationDocumentItemImpl();
-		return vVerificationDocumentItem;
+	public VValidationDocumentAbstractGroup createVValidationDocumentAbstractGroup() {
+		VValidationDocumentAbstractGroupImpl vValidationDocumentAbstractGroup = new VValidationDocumentAbstractGroupImpl();
+		return vValidationDocumentAbstractGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VValidationDocumentFixedGroup createVValidationDocumentFixedGroup() {
+		VValidationDocumentFixedGroupImpl vValidationDocumentFixedGroup = new VValidationDocumentFixedGroupImpl();
+		return vValidationDocumentFixedGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VValidationDocumentInstantiableGroup createVValidationDocumentInstantiableGroup() {
+		VValidationDocumentInstantiableGroupImpl vValidationDocumentInstantiableGroup = new VValidationDocumentInstantiableGroupImpl();
+		return vValidationDocumentInstantiableGroup;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VValidationDocumentAbstractItem createVValidationDocumentAbstractItem() {
+		VValidationDocumentAbstractItemImpl vValidationDocumentAbstractItem = new VValidationDocumentAbstractItemImpl();
+		return vValidationDocumentAbstractItem;
 	}
 
 	/**

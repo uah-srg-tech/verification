@@ -10,11 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm.impl;
 
-import es.uah.aut.srg.micobs.common.impl.MCommonReferenceableObjImpl;
-
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
-import es.uah.aut.srg.micobs.svm.vdm.VVerificationDocumentItem;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
 import java.util.Collection;
@@ -26,60 +24,61 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VVerification Document Item</b></em>'.
+ * An implementation of the model object '<em><b>VValidation Document Abstract Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VVerificationDocumentItemImpl#getEvidenceOf <em>Evidence Of</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getValidatingItems <em>Validating Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl implements VVerificationDocumentItem {
+public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Container implements VValidationDocumentAbstractItem {
 	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String ID_EDEFAULT = null;
+	protected static final String NAME_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getId()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected String id = ID_EDEFAULT;
+	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getEvidenceOf() <em>Evidence Of</em>}' reference list.
+	 * The cached value of the '{@link #getValidatingItems() <em>Validating Items</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEvidenceOf()
+	 * @see #getValidatingItems()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocumentAbstractItem> evidenceOf;
+	protected EList<VTraceableDocumentAbstractItem> validatingItems;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VVerificationDocumentItemImpl() {
+	protected VValidationDocumentAbstractItemImpl() {
 		super();
 	}
 
@@ -90,7 +89,7 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return vdmPackage.Literals.VVERIFICATION_DOCUMENT_ITEM;
+		return vdmPackage.Literals.VVALIDATION_DOCUMENT_ABSTRACT_ITEM;
 	}
 
 	/**
@@ -98,8 +97,8 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -107,11 +106,11 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vdmPackage.VVERIFICATION_DOCUMENT_ITEM__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -119,11 +118,11 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentAbstractItem> getEvidenceOf() {
-		if (evidenceOf == null) {
-			evidenceOf = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF);
+	public EList<VTraceableDocumentAbstractItem> getValidatingItems() {
+		if (validatingItems == null) {
+			validatingItems = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS);
 		}
-		return evidenceOf;
+		return validatingItems;
 	}
 
 	/**
@@ -134,10 +133,10 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__ID:
-				return getId();
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF:
-				return getEvidenceOf();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME:
+				return getName();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
+				return getValidatingItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -151,12 +150,12 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__ID:
-				setId((String)newValue);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME:
+				setName((String)newValue);
 				return;
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF:
-				getEvidenceOf().clear();
-				getEvidenceOf().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
+				getValidatingItems().clear();
+				getValidatingItems().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -170,11 +169,11 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__ID:
-				setId(ID_EDEFAULT);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF:
-				getEvidenceOf().clear();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
+				getValidatingItems().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -188,10 +187,10 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case vdmPackage.VVERIFICATION_DOCUMENT_ITEM__EVIDENCE_OF:
-				return evidenceOf != null && !evidenceOf.isEmpty();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
+				return validatingItems != null && !validatingItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -206,10 +205,10 @@ public class VVerificationDocumentItemImpl extends MCommonReferenceableObjImpl i
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (id: ");
-		result.append(id);
+		result.append(" (name: ");
+		result.append(name);
 		result.append(')');
 		return result.toString();
 	}
 
-} //VVerificationDocumentItemImpl
+} //VValidationDocumentAbstractItemImpl
