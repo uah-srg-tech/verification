@@ -76,7 +76,10 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="svsInstatiableSubsections"
         upperBound="-1" eType="#//VSVSInstantiableSection" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSSoftwareOverview" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSSoftwareOverview" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsInstatiableSubsections"
+        lowerBound="1" upperBound="-1" eType="#//VSVSInstantiableSection" containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSTaskIdentification" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskCriteria" lowerBound="1"
         eType="#//VSVSFixedSection" containment="true"/>
@@ -140,7 +143,7 @@
         eType="#//VSVSFixedSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="steps" lowerBound="1" upperBound="-1"
         eType="#//VSVSProcedureStep" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="procedureSteps" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testScript" lowerBound="1"
         eType="#//VSVSFixedSection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureStep"/>

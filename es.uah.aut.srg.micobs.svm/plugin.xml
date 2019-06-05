@@ -46,4 +46,12 @@
             genModel="model/srs.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated svs -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/svs"
+            class="es.uah.aut.srg.micobs.svm.svs.svsPackage"
+            genModel="model/svs.genmodel"/>
+   </extension>
+
 </plugin>

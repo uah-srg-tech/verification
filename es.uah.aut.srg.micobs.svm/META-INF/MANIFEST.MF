@@ -24,4 +24,7 @@ Export-Package: es.uah.aut.srg.micobs.svm.tdm,
  es.uah.aut.srg.micobs.svm.sss.util,
  es.uah.aut.srg.micobs.svm.srs,
  es.uah.aut.srg.micobs.svm.srs.impl,
- es.uah.aut.srg.micobs.svm.srs.util
+ es.uah.aut.srg.micobs.svm.srs.util,
+ es.uah.aut.srg.micobs.svm.svs,
+ es.uah.aut.srg.micobs.svm.svs.impl,
+ es.uah.aut.srg.micobs.svm.svs.util
