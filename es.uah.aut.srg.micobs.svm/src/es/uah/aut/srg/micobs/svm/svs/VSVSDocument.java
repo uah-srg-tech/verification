@@ -161,12 +161,12 @@ public interface VSVSDocument extends VValidationDocument, DDocumentTemplate {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Software Overview Section</em>' containment reference.
-	 * @see #setSoftwareOverviewSection(VSVSTaskIdentification)
+	 * @see #setSoftwareOverviewSection(VSVSSoftwareOverview)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSDocument_SoftwareOverviewSection()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSTaskIdentification getSoftwareOverviewSection();
+	VSVSSoftwareOverview getSoftwareOverviewSection();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSoftwareOverviewSection <em>Software Overview Section</em>}' containment reference.
@@ -176,7 +176,7 @@ public interface VSVSDocument extends VValidationDocument, DDocumentTemplate {
 	 * @see #getSoftwareOverviewSection()
 	 * @generated
 	 */
-	void setSoftwareOverviewSection(VSVSTaskIdentification value);
+	void setSoftwareOverviewSection(VSVSSoftwareOverview value);
 
 	/**
 	 * Returns the value of the '<em><b>Task Identification Section</b></em>' containment reference.

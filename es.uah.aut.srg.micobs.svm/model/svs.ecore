@@ -11,7 +11,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="termsDefinitionsAbbreviationsSection"
         lowerBound="1" eType="#//VSVSTermsDefinitionsAbbreviations" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="softwareOverviewSection"
-        lowerBound="1" eType="#//VSVSTaskIdentification" containment="true"/>
+        lowerBound="1" eType="#//VSVSSoftwareOverview" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskIdentificationSection"
         lowerBound="1" eType="#//VSVSTaskIdentification" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testingSpecificationDesignSection"

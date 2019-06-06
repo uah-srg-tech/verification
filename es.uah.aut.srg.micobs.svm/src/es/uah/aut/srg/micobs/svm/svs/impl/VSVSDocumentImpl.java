@@ -24,6 +24,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
+import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
@@ -129,7 +130,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSTaskIdentification softwareOverviewSection;
+	protected VSVSSoftwareOverview softwareOverviewSection;
 
 	/**
 	 * The cached value of the '{@link #getTaskIdentificationSection() <em>Task Identification Section</em>}' containment reference.
@@ -475,7 +476,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSTaskIdentification getSoftwareOverviewSection() {
+	public VSVSSoftwareOverview getSoftwareOverviewSection() {
 		return softwareOverviewSection;
 	}
 
@@ -484,8 +485,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSoftwareOverviewSection(VSVSTaskIdentification newSoftwareOverviewSection, NotificationChain msgs) {
-		VSVSTaskIdentification oldSoftwareOverviewSection = softwareOverviewSection;
+	public NotificationChain basicSetSoftwareOverviewSection(VSVSSoftwareOverview newSoftwareOverviewSection, NotificationChain msgs) {
+		VSVSSoftwareOverview oldSoftwareOverviewSection = softwareOverviewSection;
 		softwareOverviewSection = newSoftwareOverviewSection;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION, oldSoftwareOverviewSection, newSoftwareOverviewSection);
@@ -499,7 +500,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSoftwareOverviewSection(VSVSTaskIdentification newSoftwareOverviewSection) {
+	public void setSoftwareOverviewSection(VSVSSoftwareOverview newSoftwareOverviewSection) {
 		if (newSoftwareOverviewSection != softwareOverviewSection) {
 			NotificationChain msgs = null;
 			if (softwareOverviewSection != null)
@@ -970,7 +971,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				setTermsDefinitionsAbbreviationsSection((VSVSTermsDefinitionsAbbreviations)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
-				setSoftwareOverviewSection((VSVSTaskIdentification)newValue);
+				setSoftwareOverviewSection((VSVSSoftwareOverview)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION:
 				setTaskIdentificationSection((VSVSTaskIdentification)newValue);
@@ -1041,7 +1042,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				setTermsDefinitionsAbbreviationsSection((VSVSTermsDefinitionsAbbreviations)null);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION:
-				setSoftwareOverviewSection((VSVSTaskIdentification)null);
+				setSoftwareOverviewSection((VSVSSoftwareOverview)null);
 				return;
 			case svsPackage.VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION:
 				setTaskIdentificationSection((VSVSTaskIdentification)null);
