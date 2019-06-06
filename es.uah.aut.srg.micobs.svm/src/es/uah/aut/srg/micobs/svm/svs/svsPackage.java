@@ -861,7 +861,16 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SOFTWARE_OVERVIEW__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_SOFTWARE_OVERVIEW__SUBSECTIONS = VSVS_FIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SOFTWARE_OVERVIEW__BODY = VSVS_FIXED_SECTION__BODY;
 
 	/**
 	 * The feature id for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list.
@@ -870,7 +879,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS = VSVS_FIXED_SECTION__SVS_INSTATIABLE_SUBSECTIONS;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Software Overview</em>' class.
@@ -879,7 +888,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SOFTWARE_OVERVIEW_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_SOFTWARE_OVERVIEW_FEATURE_COUNT = VSVS_FIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of operations of the '<em>VSVS Software Overview</em>' class.
@@ -888,7 +897,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SOFTWARE_OVERVIEW_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_SOFTWARE_OVERVIEW_OPERATION_COUNT = VSVS_FIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTaskIdentificationImpl <em>VSVS Task Identification</em>}' class.
@@ -1010,7 +1019,7 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Test Designs</b></em>' reference list.
+	 * The feature id for the '<em><b>Test Designs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1056,13 +1065,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_DESIGN__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_DESIGN__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features To Be Tested</b></em>' containment reference.
@@ -1071,7 +1089,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Approach Refinements</b></em>' containment reference.
@@ -1080,7 +1098,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Design</em>' class.
@@ -1089,7 +1107,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Design</em>' class.
@@ -1138,7 +1156,7 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_CASES__GENERAL = vdmPackage.VVALIDATION_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Test Cases</b></em>' reference list.
+	 * The feature id for the '<em><b>Test Cases</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1320,7 +1338,7 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURES__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Test Procedures</b></em>' reference list.
+	 * The feature id for the '<em><b>Test Procedures</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -1366,13 +1384,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_PROCEDURE__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Identifier</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__IDENTIFIER = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_PROCEDURE__IDENTIFIER = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Purpose</b></em>' containment reference.
@@ -1381,7 +1408,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_PROCEDURE__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
@@ -1390,7 +1417,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TEST_PROCEDURE__STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Test Script</b></em>' containment reference.
@@ -1399,7 +1426,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Procedure</em>' class.
@@ -1408,7 +1435,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Procedure</em>' class.
@@ -2020,17 +2047,6 @@ public interface svsPackage extends EPackage {
 	EClass getVSVSSoftwareOverview();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview#getSvsInstatiableSubsections <em>Svs Instatiable Subsections</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Svs Instatiable Subsections</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview#getSvsInstatiableSubsections()
-	 * @see #getVSVSSoftwareOverview()
-	 * @generated
-	 */
-	EReference getVSVSSoftwareOverview_SvsInstatiableSubsections();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification <em>VSVS Task Identification</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2128,10 +2144,10 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestingSpecificationDesign_General();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Test Designs</em>'.
+	 * @return the meta object for the containment reference list '<em>Test Designs</em>'.
 	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns()
 	 * @see #getVSVSTestingSpecificationDesign()
 	 * @generated
@@ -2147,6 +2163,17 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSVSTestDesign();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName()
+	 * @see #getVSVSTestDesign()
+	 * @generated
+	 */
+	EAttribute getVSVSTestDesign_Name();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getGeneral <em>General</em>}'.
@@ -2203,10 +2230,10 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestCases_General();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCases#getTestCases <em>Test Cases</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCases#getTestCases <em>Test Cases</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Test Cases</em>'.
+	 * @return the meta object for the containment reference list '<em>Test Cases</em>'.
 	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestCases#getTestCases()
 	 * @see #getVSVSTestCases()
 	 * @generated
@@ -2322,10 +2349,10 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestProcedures_General();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures#getTestProcedures <em>Test Procedures</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures#getTestProcedures <em>Test Procedures</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Test Procedures</em>'.
+	 * @return the meta object for the containment reference list '<em>Test Procedures</em>'.
 	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures#getTestProcedures()
 	 * @see #getVSVSTestProcedures()
 	 * @generated
@@ -2341,6 +2368,17 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSVSTestProcedure();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getName()
+	 * @see #getVSVSTestProcedure()
+	 * @generated
+	 */
+	EAttribute getVSVSTestProcedure_Name();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getIdentifier <em>Identifier</em>}'.
@@ -2778,14 +2816,6 @@ public interface svsPackage extends EPackage {
 		EClass VSVS_SOFTWARE_OVERVIEW = eINSTANCE.getVSVSSoftwareOverview();
 
 		/**
-		 * The meta object literal for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSVSSoftwareOverview_SvsInstatiableSubsections();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTaskIdentificationImpl <em>VSVS Task Identification</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2862,7 +2892,7 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = eINSTANCE.getVSVSTestingSpecificationDesign_General();
 
 		/**
-		 * The meta object literal for the '<em><b>Test Designs</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Test Designs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -2878,6 +2908,14 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_TEST_DESIGN = eINSTANCE.getVSVSTestDesign();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_TEST_DESIGN__NAME = eINSTANCE.getVSVSTestDesign_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>General</b></em>' containment reference feature.
@@ -2922,7 +2960,7 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TEST_CASES__GENERAL = eINSTANCE.getVSVSTestCases_General();
 
 		/**
-		 * The meta object literal for the '<em><b>Test Cases</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Test Cases</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3014,7 +3052,7 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TEST_PROCEDURES__GENERAL = eINSTANCE.getVSVSTestProcedures_General();
 
 		/**
-		 * The meta object literal for the '<em><b>Test Procedures</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Test Procedures</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -3030,6 +3068,14 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_TEST_PROCEDURE = eINSTANCE.getVSVSTestProcedure();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_TEST_PROCEDURE__NAME = eINSTANCE.getVSVSTestProcedure_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Identifier</b></em>' containment reference feature.

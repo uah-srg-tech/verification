@@ -59,7 +59,7 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	void setGeneral(VSVSFixedSection value);
 
 	/**
-	 * Returns the value of the '<em><b>Test Designs</b></em>' reference list.
+	 * Returns the value of the '<em><b>Test Designs</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -67,9 +67,9 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test Designs</em>' reference list.
+	 * @return the value of the '<em>Test Designs</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_TestDesigns()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSVSTestDesign> getTestDesigns();

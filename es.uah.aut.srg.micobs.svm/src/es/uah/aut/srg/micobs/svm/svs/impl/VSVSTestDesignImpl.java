@@ -34,6 +34,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl#getGeneral <em>General</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl#getFeaturesToBeTested <em>Features To Be Tested</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl#getApproachRefinements <em>Approach Refinements</em>}</li>
@@ -42,6 +43,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDesign {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -89,6 +110,27 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	@Override
 	protected EClass eStaticClass() {
 		return svsPackage.Literals.VSVS_TEST_DESIGN;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_DESIGN__NAME, oldName, name));
 	}
 
 	/**
@@ -246,6 +288,8 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_DESIGN__NAME:
+				return getName();
 			case svsPackage.VSVS_TEST_DESIGN__GENERAL:
 				return getGeneral();
 			case svsPackage.VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED:
@@ -264,6 +308,9 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_DESIGN__NAME:
+				setName((String)newValue);
+				return;
 			case svsPackage.VSVS_TEST_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)newValue);
 				return;
@@ -285,6 +332,9 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_DESIGN__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case svsPackage.VSVS_TEST_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)null);
 				return;
@@ -306,6 +356,8 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_DESIGN__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case svsPackage.VSVS_TEST_DESIGN__GENERAL:
 				return general != null;
 			case svsPackage.VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED:
@@ -314,6 +366,22 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 				return approachRefinements != null;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
 	}
 
 	@Override

@@ -11,48 +11,21 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
-import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>VSVS Software Overview</b></em>'.
  * <!-- end-user-doc -->
- * <p>
- * The following features are implemented:
- * </p>
- * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSoftwareOverviewImpl#getSvsInstatiableSubsections <em>Svs Instatiable Subsections</em>}</li>
- * </ul>
  *
  * @generated
  */
-public class VSVSSoftwareOverviewImpl extends DFixedSectionImpl implements VSVSSoftwareOverview {
-	/**
-	 * The cached value of the '{@link #getSvsInstatiableSubsections() <em>Svs Instatiable Subsections</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSvsInstatiableSubsections()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VSVSInstantiableSection> svsInstatiableSubsections;
-
+public class VSVSSoftwareOverviewImpl extends VSVSFixedSectionImpl implements VSVSSoftwareOverview {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -72,92 +45,6 @@ public class VSVSSoftwareOverviewImpl extends DFixedSectionImpl implements VSVSS
 		return svsPackage.Literals.VSVS_SOFTWARE_OVERVIEW;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<VSVSInstantiableSection> getSvsInstatiableSubsections() {
-		if (svsInstatiableSubsections == null) {
-			svsInstatiableSubsections = new EObjectContainmentEList<VSVSInstantiableSection>(VSVSInstantiableSection.class, this, svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS);
-		}
-		return svsInstatiableSubsections;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS:
-				return ((InternalEList<?>)getSvsInstatiableSubsections()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eGet(int featureID, boolean resolve, boolean coreType) {
-		switch (featureID) {
-			case svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS:
-				return getSvsInstatiableSubsections();
-		}
-		return super.eGet(featureID, resolve, coreType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@SuppressWarnings("unchecked")
-	@Override
-	public void eSet(int featureID, Object newValue) {
-		switch (featureID) {
-			case svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS:
-				getSvsInstatiableSubsections().clear();
-				getSvsInstatiableSubsections().addAll((Collection<? extends VSVSInstantiableSection>)newValue);
-				return;
-		}
-		super.eSet(featureID, newValue);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void eUnset(int featureID) {
-		switch (featureID) {
-			case svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS:
-				getSvsInstatiableSubsections().clear();
-				return;
-		}
-		super.eUnset(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public boolean eIsSet(int featureID) {
-		switch (featureID) {
-			case svsPackage.VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS:
-				return svsInstatiableSubsections != null && !svsInstatiableSubsections.isEmpty();
-		}
-		return super.eIsSet(featureID);
-	}
-	
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		

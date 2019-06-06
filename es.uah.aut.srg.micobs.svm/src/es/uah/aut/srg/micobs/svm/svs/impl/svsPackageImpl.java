@@ -627,15 +627,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSSoftwareOverview_SvsInstatiableSubsections() {
-		return (EReference)vsvsSoftwareOverviewEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVSVSTaskIdentification() {
 		return vsvsTaskIdentificationEClass;
 	}
@@ -735,8 +726,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestDesign_General() {
-		return (EReference)vsvsTestDesignEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVSVSTestDesign_Name() {
+		return (EAttribute)vsvsTestDesignEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -744,7 +735,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestDesign_FeaturesToBeTested() {
+	public EReference getVSVSTestDesign_General() {
 		return (EReference)vsvsTestDesignEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -753,8 +744,17 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestDesign_ApproachRefinements() {
+	public EReference getVSVSTestDesign_FeaturesToBeTested() {
 		return (EReference)vsvsTestDesignEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSTestDesign_ApproachRefinements() {
+		return (EReference)vsvsTestDesignEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -897,8 +897,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_Identifier() {
-		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(0);
+	public EAttribute getVSVSTestProcedure_Name() {
+		return (EAttribute)vsvsTestProcedureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -906,7 +906,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_Purpose() {
+	public EReference getVSVSTestProcedure_Identifier() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -915,7 +915,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_Steps() {
+	public EReference getVSVSTestProcedure_Purpose() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -924,8 +924,17 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_TestScript() {
+	public EReference getVSVSTestProcedure_Steps() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSTestProcedure_TestScript() {
+		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1041,7 +1050,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsFixedSectionEClass, VSVS_FIXED_SECTION__SVS_INSTATIABLE_SUBSECTIONS);
 
 		vsvsSoftwareOverviewEClass = createEClass(VSVS_SOFTWARE_OVERVIEW);
-		createEReference(vsvsSoftwareOverviewEClass, VSVS_SOFTWARE_OVERVIEW__SVS_INSTATIABLE_SUBSECTIONS);
 
 		vsvsTaskIdentificationEClass = createEClass(VSVS_TASK_IDENTIFICATION);
 		createEReference(vsvsTaskIdentificationEClass, VSVS_TASK_IDENTIFICATION__TASK_CRITERIA);
@@ -1056,6 +1064,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS);
 
 		vsvsTestDesignEClass = createEClass(VSVS_TEST_DESIGN);
+		createEAttribute(vsvsTestDesignEClass, VSVS_TEST_DESIGN__NAME);
 		createEReference(vsvsTestDesignEClass, VSVS_TEST_DESIGN__GENERAL);
 		createEReference(vsvsTestDesignEClass, VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED);
 		createEReference(vsvsTestDesignEClass, VSVS_TEST_DESIGN__APPROACH_REFINEMENTS);
@@ -1078,6 +1087,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsTestProceduresEClass, VSVS_TEST_PROCEDURES__TEST_PROCEDURES);
 
 		vsvsTestProcedureEClass = createEClass(VSVS_TEST_PROCEDURE);
+		createEAttribute(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__NAME);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__IDENTIFIER);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__PURPOSE);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__STEPS);
@@ -1135,7 +1145,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		vsvsDefinitionEClass.getESuperTypes().add(this.getVSVSAbstractBriefDescription());
 		vsvsAbbreviationEClass.getESuperTypes().add(this.getVSVSAbstractBriefDescription());
 		vsvsFixedSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsSoftwareOverviewEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsSoftwareOverviewEClass.getESuperTypes().add(this.getVSVSFixedSection());
 		vsvsTaskIdentificationEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsvsTestingSpecificationDesignEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsvsTestDesignEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
@@ -1199,7 +1209,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSFixedSection_SvsInstatiableSubsections(), this.getVSVSInstantiableSection(), null, "svsInstatiableSubsections", null, 0, -1, VSVSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsSoftwareOverviewEClass, VSVSSoftwareOverview.class, "VSVSSoftwareOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSSoftwareOverview_SvsInstatiableSubsections(), this.getVSVSInstantiableSection(), null, "svsInstatiableSubsections", null, 1, -1, VSVSSoftwareOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTaskIdentificationEClass, VSVSTaskIdentification.class, "VSVSTaskIdentification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTaskIdentification_TaskCriteria(), this.getVSVSFixedSection(), null, "taskCriteria", null, 1, 1, VSVSTaskIdentification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1211,16 +1220,17 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsTestingSpecificationDesignEClass, VSVSTestingSpecificationDesign.class, "VSVSTestingSpecificationDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestingSpecificationDesign_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestingSpecificationDesign_TestDesigns(), this.getVSVSTestDesign(), null, "testDesigns", null, 0, -1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestingSpecificationDesign_TestDesigns(), this.getVSVSTestDesign(), null, "testDesigns", null, 1, -1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestDesignEClass, VSVSTestDesign.class, "VSVSTestDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSTestDesign_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestDesign_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestDesign_FeaturesToBeTested(), this.getVSVSFixedSection(), null, "featuresToBeTested", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestDesign_ApproachRefinements(), this.getVSVSFixedSection(), null, "approachRefinements", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestCasesEClass, VSVSTestCases.class, "VSVSTestCases", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestCases_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestCases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestCases_TestCases(), this.getVSVSTestCase(), null, "testCases", null, 0, -1, VSVSTestCases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestCases_TestCases(), this.getVSVSTestCase(), null, "testCases", null, 1, -1, VSVSTestCases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestCaseEClass, VSVSTestCase.class, "VSVSTestCase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestCase_Identifier(), this.getVSVSFixedSection(), null, "identifier", null, 1, 1, VSVSTestCase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1233,13 +1243,14 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsTestProceduresEClass, VSVSTestProcedures.class, "VSVSTestProcedures", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestProcedures_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestProcedures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestProcedures_TestProcedures(), this.getVSVSTestProcedure(), null, "testProcedures", null, 0, -1, VSVSTestProcedures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestProcedures_TestProcedures(), this.getVSVSTestProcedure(), null, "testProcedures", null, 1, -1, VSVSTestProcedures.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestProcedureEClass, VSVSTestProcedure.class, "VSVSTestProcedure", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSTestProcedure_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Identifier(), this.getVSVSFixedSection(), null, "identifier", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Purpose(), this.getVSVSFixedSection(), null, "purpose", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Steps(), this.getVSVSProcedureStep(), null, "steps", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestProcedure_TestScript(), this.getVSVSFixedSection(), null, "testScript", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestProcedure_TestScript(), this.getVSVSFixedSection(), null, "testScript", null, 0, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsProcedureStepEClass, VSVSProcedureStep.class, "VSVSProcedureStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

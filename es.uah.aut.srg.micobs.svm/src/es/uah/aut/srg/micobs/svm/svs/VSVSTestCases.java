@@ -61,7 +61,7 @@ public interface VSVSTestCases extends VValidationDocumentFixedGroup, DFixedSect
 	void setGeneral(VSVSFixedSection value);
 
 	/**
-	 * Returns the value of the '<em><b>Test Cases</b></em>' reference list.
+	 * Returns the value of the '<em><b>Test Cases</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -69,9 +69,9 @@ public interface VSVSTestCases extends VValidationDocumentFixedGroup, DFixedSect
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test Cases</em>' reference list.
+	 * @return the value of the '<em>Test Cases</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCases_TestCases()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSVSTestCase> getTestCases();

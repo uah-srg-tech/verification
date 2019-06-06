@@ -10,8 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm.impl;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
-import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
 import java.util.Collection;
@@ -155,7 +156,7 @@ public class VValidationDocumentImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VValidationDocument> parents;
+	protected EList<VTraceableDocument> parents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,9 +287,9 @@ public class VValidationDocumentImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VValidationDocument> getParents() {
+	public EList<VTraceableDocument> getParents() {
 		if (parents == null) {
-			parents = new EObjectResolvingEList<VValidationDocument>(VValidationDocument.class, this, vdmPackage.VVALIDATION_DOCUMENT__PARENTS);
+			parents = new EObjectResolvingEList<VTraceableDocument>(VTraceableDocument.class, this, vdmPackage.VVALIDATION_DOCUMENT__PARENTS);
 		}
 		return parents;
 	}
@@ -298,7 +299,7 @@ public class VValidationDocumentImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VValidationDocumentAbstractItem> getGroups() {
+	public EList<VValidationDocumentAbstractGroup> getGroups() {
 		// TODO: implement this method to return the 'Groups' reference list
 		// Ensure that you remove @generated or mark it @generated NOT
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
@@ -358,11 +359,11 @@ public class VValidationDocumentImpl extends MinimalEObjectImpl.Container implem
 				return;
 			case vdmPackage.VVALIDATION_DOCUMENT__PARENTS:
 				getParents().clear();
-				getParents().addAll((Collection<? extends VValidationDocument>)newValue);
+				getParents().addAll((Collection<? extends VTraceableDocument>)newValue);
 				return;
 			case vdmPackage.VVALIDATION_DOCUMENT__GROUPS:
 				getGroups().clear();
-				getGroups().addAll((Collection<? extends VValidationDocumentAbstractItem>)newValue);
+				getGroups().addAll((Collection<? extends VValidationDocumentAbstractGroup>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

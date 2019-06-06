@@ -59,7 +59,7 @@ public interface VSVSTestProcedures extends DFixedSection {
 	void setGeneral(VSVSFixedSection value);
 
 	/**
-	 * Returns the value of the '<em><b>Test Procedures</b></em>' reference list.
+	 * Returns the value of the '<em><b>Test Procedures</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -67,9 +67,9 @@ public interface VSVSTestProcedures extends DFixedSection {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test Procedures</em>' reference list.
+	 * @return the value of the '<em>Test Procedures</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedures_TestProcedures()
-	 * @model
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSVSTestProcedure> getTestProcedures();

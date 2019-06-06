@@ -41,6 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getSteps <em>Steps</em>}</li>
@@ -50,6 +51,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * @generated
  */
 public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTestProcedure {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getIdentifier() <em>Identifier</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -107,6 +128,27 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	@Override
 	protected EClass eStaticClass() {
 		return svsPackage.Literals.VSVS_TEST_PROCEDURE;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__NAME, oldName, name));
 	}
 
 	/**
@@ -278,6 +320,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_PROCEDURE__NAME:
+				return getName();
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
 				return getIdentifier();
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
@@ -299,6 +343,9 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_PROCEDURE__NAME:
+				setName((String)newValue);
+				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
 				setIdentifier((VSVSFixedSection)newValue);
 				return;
@@ -324,6 +371,9 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_PROCEDURE__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
 				setIdentifier((VSVSFixedSection)null);
 				return;
@@ -348,6 +398,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_TEST_PROCEDURE__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
 				return identifier != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
@@ -360,12 +412,27 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 		return super.eIsSet(featureID);
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subections = new BasicEList<DAbstractSection>();
 		subections.add((DAbstractSection) getIdentifier());
 		subections.add((DAbstractSection) getPurpose());
-		subections.add((DAbstractSection) getSteps());
 		subections.add((DAbstractSection) getTestScript());
 		return subections;
 	}

@@ -363,8 +363,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		setNsURI(eNS_URI);
 
 		// Obtain other dependent packages
-		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
 		tdmPackage thetdmPackage = (tdmPackage)EPackage.Registry.INSTANCE.getEPackage(tdmPackage.eNS_URI);
+		commonPackage thecommonPackage = (commonPackage)EPackage.Registry.INSTANCE.getEPackage(commonPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -382,8 +382,8 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		initEAttribute(getVValidationDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVValidationDocument_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVValidationDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVValidationDocument_Parents(), this.getVValidationDocument(), null, "parents", null, 0, -1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVValidationDocument_Groups(), this.getVValidationDocumentAbstractItem(), null, "groups", null, 1, -1, VValidationDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocument_Parents(), thetdmPackage.getVTraceableDocument(), null, "parents", null, 0, -1, VValidationDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocument_Groups(), this.getVValidationDocumentAbstractGroup(), null, "groups", null, 1, -1, VValidationDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vValidationDocumentAbstractGroupEClass, VValidationDocumentAbstractGroup.class, "VValidationDocumentAbstractGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVValidationDocumentAbstractGroup_Items(), this.getVValidationDocumentAbstractItem(), null, "items", null, 0, -1, VValidationDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);

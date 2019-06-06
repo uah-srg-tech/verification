@@ -173,6 +173,7 @@ public class svsSwitch<T> extends Switch<T> {
 			case svsPackage.VSVS_SOFTWARE_OVERVIEW: {
 				VSVSSoftwareOverview vsvsSoftwareOverview = (VSVSSoftwareOverview)theEObject;
 				T result = caseVSVSSoftwareOverview(vsvsSoftwareOverview);
+				if (result == null) result = caseVSVSFixedSection(vsvsSoftwareOverview);
 				if (result == null) result = caseDFixedSection(vsvsSoftwareOverview);
 				if (result == null) result = caseDAbstractSection(vsvsSoftwareOverview);
 				if (result == null) result = defaultCase(theEObject);

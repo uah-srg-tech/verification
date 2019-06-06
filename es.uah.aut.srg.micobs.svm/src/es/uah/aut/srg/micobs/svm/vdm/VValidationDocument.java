@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
@@ -169,7 +170,7 @@ public interface VValidationDocument extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Parents</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocument}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Parents</em>' reference list isn't clear,
@@ -181,11 +182,11 @@ public interface VValidationDocument extends EObject {
 	 * @model
 	 * @generated
 	 */
-	EList<VValidationDocument> getParents();
+	EList<VTraceableDocument> getParents();
 
 	/**
 	 * Returns the value of the '<em><b>Groups</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Groups</em>' reference list isn't clear,
@@ -197,6 +198,6 @@ public interface VValidationDocument extends EObject {
 	 * @model required="true" transient="true" volatile="true" derived="true"
 	 * @generated
 	 */
-	EList<VValidationDocumentAbstractItem> getGroups();
+	EList<VValidationDocumentAbstractGroup> getGroups();
 
 } // VValidationDocument

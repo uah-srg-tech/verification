@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +59,7 @@ public class VSVSTestProceduresImpl extends DFixedSectionImpl implements VSVSTes
 	protected VSVSFixedSection general;
 
 	/**
-	 * The cached value of the '{@link #getTestProcedures() <em>Test Procedures</em>}' reference list.
+	 * The cached value of the '{@link #getTestProcedures() <em>Test Procedures</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTestProcedures()
@@ -136,7 +137,7 @@ public class VSVSTestProceduresImpl extends DFixedSectionImpl implements VSVSTes
 	 */
 	public EList<VSVSTestProcedure> getTestProcedures() {
 		if (testProcedures == null) {
-			testProcedures = new EObjectResolvingEList<VSVSTestProcedure>(VSVSTestProcedure.class, this, svsPackage.VSVS_TEST_PROCEDURES__TEST_PROCEDURES);
+			testProcedures = new EObjectContainmentEList<VSVSTestProcedure>(VSVSTestProcedure.class, this, svsPackage.VSVS_TEST_PROCEDURES__TEST_PROCEDURES);
 		}
 		return testProcedures;
 	}
@@ -151,6 +152,8 @@ public class VSVSTestProceduresImpl extends DFixedSectionImpl implements VSVSTes
 		switch (featureID) {
 			case svsPackage.VSVS_TEST_PROCEDURES__GENERAL:
 				return basicSetGeneral(null, msgs);
+			case svsPackage.VSVS_TEST_PROCEDURES__TEST_PROCEDURES:
+				return ((InternalEList<?>)getTestProcedures()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

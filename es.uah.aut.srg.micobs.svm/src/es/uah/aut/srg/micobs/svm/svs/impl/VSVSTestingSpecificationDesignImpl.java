@@ -30,7 +30,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -58,7 +59,7 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	protected VSVSFixedSection general;
 
 	/**
-	 * The cached value of the '{@link #getTestDesigns() <em>Test Designs</em>}' reference list.
+	 * The cached value of the '{@link #getTestDesigns() <em>Test Designs</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTestDesigns()
@@ -136,7 +137,7 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 */
 	public EList<VSVSTestDesign> getTestDesigns() {
 		if (testDesigns == null) {
-			testDesigns = new EObjectResolvingEList<VSVSTestDesign>(VSVSTestDesign.class, this, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS);
+			testDesigns = new EObjectContainmentEList<VSVSTestDesign>(VSVSTestDesign.class, this, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS);
 		}
 		return testDesigns;
 	}
@@ -151,6 +152,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return basicSetGeneral(null, msgs);
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
+				return ((InternalEList<?>)getTestDesigns()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

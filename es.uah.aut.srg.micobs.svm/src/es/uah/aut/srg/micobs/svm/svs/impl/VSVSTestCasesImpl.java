@@ -33,7 +33,8 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -62,7 +63,7 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 	protected VSVSFixedSection general;
 
 	/**
-	 * The cached value of the '{@link #getTestCases() <em>Test Cases</em>}' reference list.
+	 * The cached value of the '{@link #getTestCases() <em>Test Cases</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTestCases()
@@ -151,7 +152,7 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 	 */
 	public EList<VSVSTestCase> getTestCases() {
 		if (testCases == null) {
-			testCases = new EObjectResolvingEList<VSVSTestCase>(VSVSTestCase.class, this, svsPackage.VSVS_TEST_CASES__TEST_CASES);
+			testCases = new EObjectContainmentEList<VSVSTestCase>(VSVSTestCase.class, this, svsPackage.VSVS_TEST_CASES__TEST_CASES);
 		}
 		return testCases;
 	}
@@ -166,6 +167,8 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 		switch (featureID) {
 			case svsPackage.VSVS_TEST_CASES__GENERAL:
 				return basicSetGeneral(null, msgs);
+			case svsPackage.VSVS_TEST_CASES__TEST_CASES:
+				return ((InternalEList<?>)getTestCases()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}

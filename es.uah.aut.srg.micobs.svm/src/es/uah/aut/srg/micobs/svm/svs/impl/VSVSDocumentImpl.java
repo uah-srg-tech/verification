@@ -32,7 +32,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestPlatformRequirements;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl;
 
 import java.util.Collection;
@@ -297,6 +297,13 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		sections.add((DAbstractSection) getTestPlatformRequirementsSection());
 		sections.add((DAbstractSection) getAdditionalInformationSection());
 		return sections;
+	}
+	
+	@Override
+	public EList<VValidationDocumentAbstractGroup> getGroups() {
+		EList<VValidationDocumentAbstractGroup> groups = new BasicEList<VValidationDocumentAbstractGroup>();
+		groups.add((VValidationDocumentAbstractGroup) getTestCasesSection());
+		return groups;
 	}
 
 	/**
