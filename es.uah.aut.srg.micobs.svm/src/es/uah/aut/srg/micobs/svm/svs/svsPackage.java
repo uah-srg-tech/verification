@@ -1429,13 +1429,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Test Case</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_PROCEDURE__TEST_CASE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>VSVS Test Procedure</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Procedure</em>' class.
@@ -2425,6 +2434,17 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestProcedure_TestScript();
 
 	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestCase <em>Test Case</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Test Case</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestCase()
+	 * @see #getVSVSTestProcedure()
+	 * @generated
+	 */
+	EReference getVSVSTestProcedure_TestCase();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep <em>VSVS Procedure Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3108,6 +3128,14 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_TEST_PROCEDURE__TEST_SCRIPT = eINSTANCE.getVSVSTestProcedure_TestScript();
+
+		/**
+		 * The meta object literal for the '<em><b>Test Case</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TEST_PROCEDURE__TEST_CASE = eINSTANCE.getVSVSTestProcedure_TestCase();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl <em>VSVS Procedure Step</em>}' class.

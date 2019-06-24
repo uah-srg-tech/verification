@@ -3720,16 +3720,46 @@ ruleVSVSTestProcedure returns [EObject current=null]
 		{
 			newLeafNode(otherlv_9, grammarAccess.getVSVSTestProcedureAccess().getPurposeKeyword_9());
 		}
-		otherlv_10='<Steps>'
+		(
+			otherlv_10='<TestCase'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSTestProcedureAccess().getTestCaseKeyword_10_0());
+			}
+			otherlv_11='name='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSTestProcedureAccess().getNameKeyword_10_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSTestProcedureRule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSTestProcedureAccess().getTestCaseVSVSTestCaseCrossReference_10_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSTestProcedureAccess().getSolidusGreaterThanSignKeyword_10_3());
+			}
+		)*
+		otherlv_14='<Steps>'
 		{
-			newLeafNode(otherlv_10, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_10());
+			newLeafNode(otherlv_14, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getStepsVSVSProcedureStepParserRuleCall_11_0());
+					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getStepsVSVSProcedureStepParserRuleCall_12_0());
 				}
-				lv_steps_11_0=ruleVSVSProcedureStep
+				lv_steps_15_0=ruleVSVSProcedureStep
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestProcedureRule());
@@ -3737,26 +3767,26 @@ ruleVSVSTestProcedure returns [EObject current=null]
 					add(
 						$current,
 						"steps",
-						lv_steps_11_0,
+						lv_steps_15_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_12='</Steps>'
+		otherlv_16='</Steps>'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_12());
+			newLeafNode(otherlv_16, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_13());
 		}
-		otherlv_13='<TestScript>'
+		otherlv_17='<TestScript>'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_13());
+			newLeafNode(otherlv_17, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_14());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_15_0());
 				}
-				lv_testScript_14_0=ruleVSVSFixedSection
+				lv_testScript_18_0=ruleVSVSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestProcedureRule());
@@ -3764,19 +3794,19 @@ ruleVSVSTestProcedure returns [EObject current=null]
 					set(
 						$current,
 						"testScript",
-						lv_testScript_14_0,
+						lv_testScript_18_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_15='</TestScript>'
+		otherlv_19='</TestScript>'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_15());
+			newLeafNode(otherlv_19, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_16());
 		}
-		otherlv_16='</TestProcedure>'
+		otherlv_20='</TestProcedure>'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_16());
+			newLeafNode(otherlv_20, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_17());
 		}
 	)
 ;

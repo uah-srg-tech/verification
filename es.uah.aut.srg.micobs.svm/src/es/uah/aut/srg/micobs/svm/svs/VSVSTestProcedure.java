@@ -28,6 +28,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getSteps <em>Steps</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestScript <em>Test Script</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure()
@@ -154,5 +155,21 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @generated
 	 */
 	void setTestScript(VSVSFixedSection value);
+
+	/**
+	 * Returns the value of the '<em><b>Test Case</b></em>' reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Test Case</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Test Case</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_TestCase()
+	 * @model required="true"
+	 * @generated
+	 */
+	EList<VSVSTestCase> getTestCase();
 
 } // VSVSTestProcedure

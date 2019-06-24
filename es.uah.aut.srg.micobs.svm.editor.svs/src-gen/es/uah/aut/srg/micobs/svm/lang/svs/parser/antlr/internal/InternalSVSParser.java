@@ -9463,7 +9463,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSTestProcedure"
-    // InternalSVS.g:3631:1: ruleVSVSTestProcedure returns [EObject current=null] : (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' otherlv_10= '<Steps>' ( (lv_steps_11_0= ruleVSVSProcedureStep ) ) otherlv_12= '</Steps>' otherlv_13= '<TestScript>' ( (lv_testScript_14_0= ruleVSVSFixedSection ) ) otherlv_15= '</TestScript>' otherlv_16= '</TestProcedure>' ) ;
+    // InternalSVS.g:3631:1: ruleVSVSTestProcedure returns [EObject current=null] : (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )* otherlv_14= '<Steps>' ( (lv_steps_15_0= ruleVSVSProcedureStep ) ) otherlv_16= '</Steps>' otherlv_17= '<TestScript>' ( (lv_testScript_18_0= ruleVSVSFixedSection ) ) otherlv_19= '</TestScript>' otherlv_20= '</TestProcedure>' ) ;
     public final EObject ruleVSVSTestProcedure() throws RecognitionException {
         EObject current = null;
 
@@ -9476,28 +9476,32 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         Token otherlv_7=null;
         Token otherlv_9=null;
         Token otherlv_10=null;
+        Token otherlv_11=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        Token otherlv_15=null;
+        Token otherlv_14=null;
         Token otherlv_16=null;
+        Token otherlv_17=null;
+        Token otherlv_19=null;
+        Token otherlv_20=null;
         EObject lv_identifier_5_0 = null;
 
         EObject lv_purpose_8_0 = null;
 
-        EObject lv_steps_11_0 = null;
+        EObject lv_steps_15_0 = null;
 
-        EObject lv_testScript_14_0 = null;
+        EObject lv_testScript_18_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSVS.g:3637:2: ( (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' otherlv_10= '<Steps>' ( (lv_steps_11_0= ruleVSVSProcedureStep ) ) otherlv_12= '</Steps>' otherlv_13= '<TestScript>' ( (lv_testScript_14_0= ruleVSVSFixedSection ) ) otherlv_15= '</TestScript>' otherlv_16= '</TestProcedure>' ) )
-            // InternalSVS.g:3638:2: (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' otherlv_10= '<Steps>' ( (lv_steps_11_0= ruleVSVSProcedureStep ) ) otherlv_12= '</Steps>' otherlv_13= '<TestScript>' ( (lv_testScript_14_0= ruleVSVSFixedSection ) ) otherlv_15= '</TestScript>' otherlv_16= '</TestProcedure>' )
+            // InternalSVS.g:3637:2: ( (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )* otherlv_14= '<Steps>' ( (lv_steps_15_0= ruleVSVSProcedureStep ) ) otherlv_16= '</Steps>' otherlv_17= '<TestScript>' ( (lv_testScript_18_0= ruleVSVSFixedSection ) ) otherlv_19= '</TestScript>' otherlv_20= '</TestProcedure>' ) )
+            // InternalSVS.g:3638:2: (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )* otherlv_14= '<Steps>' ( (lv_steps_15_0= ruleVSVSProcedureStep ) ) otherlv_16= '</Steps>' otherlv_17= '<TestScript>' ( (lv_testScript_18_0= ruleVSVSFixedSection ) ) otherlv_19= '</TestScript>' otherlv_20= '</TestProcedure>' )
             {
-            // InternalSVS.g:3638:2: (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' otherlv_10= '<Steps>' ( (lv_steps_11_0= ruleVSVSProcedureStep ) ) otherlv_12= '</Steps>' otherlv_13= '<TestScript>' ( (lv_testScript_14_0= ruleVSVSFixedSection ) ) otherlv_15= '</TestScript>' otherlv_16= '</TestProcedure>' )
-            // InternalSVS.g:3639:3: otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' otherlv_10= '<Steps>' ( (lv_steps_11_0= ruleVSVSProcedureStep ) ) otherlv_12= '</Steps>' otherlv_13= '<TestScript>' ( (lv_testScript_14_0= ruleVSVSFixedSection ) ) otherlv_15= '</TestScript>' otherlv_16= '</TestProcedure>'
+            // InternalSVS.g:3638:2: (otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )* otherlv_14= '<Steps>' ( (lv_steps_15_0= ruleVSVSProcedureStep ) ) otherlv_16= '</Steps>' otherlv_17= '<TestScript>' ( (lv_testScript_18_0= ruleVSVSFixedSection ) ) otherlv_19= '</TestScript>' otherlv_20= '</TestProcedure>' )
+            // InternalSVS.g:3639:3: otherlv_0= '<TestProcedure' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= '>' otherlv_4= '<Identifier>' ( (lv_identifier_5_0= ruleVSVSFixedSection ) ) otherlv_6= '</Identifier>' otherlv_7= '<Purpose>' ( (lv_purpose_8_0= ruleVSVSFixedSection ) ) otherlv_9= '</Purpose>' (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )* otherlv_14= '<Steps>' ( (lv_steps_15_0= ruleVSVSProcedureStep ) ) otherlv_16= '</Steps>' otherlv_17= '<TestScript>' ( (lv_testScript_18_0= ruleVSVSFixedSection ) ) otherlv_19= '</TestScript>' otherlv_20= '</TestProcedure>'
             {
             otherlv_0=(Token)match(input,125,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -9641,25 +9645,97 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSTestProcedureAccess().getPurposeKeyword_9());
               		
             }
-            otherlv_10=(Token)match(input,128,FollowSets000.FOLLOW_139); if (state.failed) return current;
+            // InternalSVS.g:3723:3: (otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )*
+            loop48:
+            do {
+                int alt48=2;
+                int LA48_0 = input.LA(1);
+
+                if ( (LA48_0==108) ) {
+                    alt48=1;
+                }
+
+
+                switch (alt48) {
+            	case 1 :
+            	    // InternalSVS.g:3724:4: otherlv_10= '<TestCase' otherlv_11= 'name=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+            	    {
+            	    otherlv_10=(Token)match(input,108,FollowSets000.FOLLOW_3); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_10, grammarAccess.getVSVSTestProcedureAccess().getTestCaseKeyword_10_0());
+            	      			
+            	    }
+            	    otherlv_11=(Token)match(input,13,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_11, grammarAccess.getVSVSTestProcedureAccess().getNameKeyword_10_1());
+            	      			
+            	    }
+            	    // InternalSVS.g:3732:4: ( (otherlv_12= RULE_STRING ) )
+            	    // InternalSVS.g:3733:5: (otherlv_12= RULE_STRING )
+            	    {
+            	    // InternalSVS.g:3733:5: (otherlv_12= RULE_STRING )
+            	    // InternalSVS.g:3734:6: otherlv_12= RULE_STRING
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						/* */
+            	      					
+            	    }
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElement(grammarAccess.getVSVSTestProcedureRule());
+            	      						}
+            	      					
+            	    }
+            	    otherlv_12=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_11); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						newLeafNode(otherlv_12, grammarAccess.getVSVSTestProcedureAccess().getTestCaseVSVSTestCaseCrossReference_10_2_0());
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    otherlv_13=(Token)match(input,20,FollowSets000.FOLLOW_138); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_13, grammarAccess.getVSVSTestProcedureAccess().getSolidusGreaterThanSignKeyword_10_3());
+            	      			
+            	    }
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop48;
+                }
+            } while (true);
+
+            otherlv_14=(Token)match(input,128,FollowSets000.FOLLOW_139); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_10, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_10());
+              			newLeafNode(otherlv_14, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_11());
               		
             }
-            // InternalSVS.g:3727:3: ( (lv_steps_11_0= ruleVSVSProcedureStep ) )
-            // InternalSVS.g:3728:4: (lv_steps_11_0= ruleVSVSProcedureStep )
+            // InternalSVS.g:3757:3: ( (lv_steps_15_0= ruleVSVSProcedureStep ) )
+            // InternalSVS.g:3758:4: (lv_steps_15_0= ruleVSVSProcedureStep )
             {
-            // InternalSVS.g:3728:4: (lv_steps_11_0= ruleVSVSProcedureStep )
-            // InternalSVS.g:3729:5: lv_steps_11_0= ruleVSVSProcedureStep
+            // InternalSVS.g:3758:4: (lv_steps_15_0= ruleVSVSProcedureStep )
+            // InternalSVS.g:3759:5: lv_steps_15_0= ruleVSVSProcedureStep
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getStepsVSVSProcedureStepParserRuleCall_11_0());
+              					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getStepsVSVSProcedureStepParserRuleCall_12_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_140);
-            lv_steps_11_0=ruleVSVSProcedureStep();
+            lv_steps_15_0=ruleVSVSProcedureStep();
 
             state._fsp--;
             if (state.failed) return current;
@@ -9671,7 +9747,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               					add(
               						current,
               						"steps",
-              						lv_steps_11_0,
+              						lv_steps_15_0,
               						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
               					afterParserOrEnumRuleCall();
               				
@@ -9682,31 +9758,31 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,129,FollowSets000.FOLLOW_141); if (state.failed) return current;
+            otherlv_16=(Token)match(input,129,FollowSets000.FOLLOW_141); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_12, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_12());
+              			newLeafNode(otherlv_16, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_13());
               		
             }
-            otherlv_13=(Token)match(input,130,FollowSets000.FOLLOW_142); if (state.failed) return current;
+            otherlv_17=(Token)match(input,130,FollowSets000.FOLLOW_142); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_13, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_13());
+              			newLeafNode(otherlv_17, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_14());
               		
             }
-            // InternalSVS.g:3754:3: ( (lv_testScript_14_0= ruleVSVSFixedSection ) )
-            // InternalSVS.g:3755:4: (lv_testScript_14_0= ruleVSVSFixedSection )
+            // InternalSVS.g:3784:3: ( (lv_testScript_18_0= ruleVSVSFixedSection ) )
+            // InternalSVS.g:3785:4: (lv_testScript_18_0= ruleVSVSFixedSection )
             {
-            // InternalSVS.g:3755:4: (lv_testScript_14_0= ruleVSVSFixedSection )
-            // InternalSVS.g:3756:5: lv_testScript_14_0= ruleVSVSFixedSection
+            // InternalSVS.g:3785:4: (lv_testScript_18_0= ruleVSVSFixedSection )
+            // InternalSVS.g:3786:5: lv_testScript_18_0= ruleVSVSFixedSection
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_14_0());
+              					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_15_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_143);
-            lv_testScript_14_0=ruleVSVSFixedSection();
+            lv_testScript_18_0=ruleVSVSFixedSection();
 
             state._fsp--;
             if (state.failed) return current;
@@ -9718,7 +9794,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"testScript",
-              						lv_testScript_14_0,
+              						lv_testScript_18_0,
               						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSFixedSection");
               					afterParserOrEnumRuleCall();
               				
@@ -9729,16 +9805,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_15=(Token)match(input,131,FollowSets000.FOLLOW_144); if (state.failed) return current;
+            otherlv_19=(Token)match(input,131,FollowSets000.FOLLOW_144); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_15, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_15());
+              			newLeafNode(otherlv_19, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_16());
               		
             }
-            otherlv_16=(Token)match(input,132,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_20=(Token)match(input,132,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_16, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_16());
+              			newLeafNode(otherlv_20, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_17());
               		
             }
 
@@ -9766,7 +9842,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSProcedureStep"
-    // InternalSVS.g:3785:1: entryRuleVSVSProcedureStep returns [EObject current=null] : iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF ;
+    // InternalSVS.g:3815:1: entryRuleVSVSProcedureStep returns [EObject current=null] : iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF ;
     public final EObject entryRuleVSVSProcedureStep() throws RecognitionException {
         EObject current = null;
 
@@ -9774,8 +9850,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:3785:58: (iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF )
-            // InternalSVS.g:3786:2: iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF
+            // InternalSVS.g:3815:58: (iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF )
+            // InternalSVS.g:3816:2: iv_ruleVSVSProcedureStep= ruleVSVSProcedureStep EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSProcedureStepRule()); 
@@ -9806,7 +9882,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSProcedureStep"
-    // InternalSVS.g:3792:1: ruleVSVSProcedureStep returns [EObject current=null] : ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' ) ;
+    // InternalSVS.g:3822:1: ruleVSVSProcedureStep returns [EObject current=null] : ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' ) ;
     public final EObject ruleVSVSProcedureStep() throws RecognitionException {
         EObject current = null;
 
@@ -9817,14 +9893,14 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:3798:2: ( ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' ) )
-            // InternalSVS.g:3799:2: ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' )
+            // InternalSVS.g:3828:2: ( ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' ) )
+            // InternalSVS.g:3829:2: ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' )
             {
-            // InternalSVS.g:3799:2: ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' )
-            // InternalSVS.g:3800:3: () otherlv_1= '<ProcedureStep' otherlv_2= '/>'
+            // InternalSVS.g:3829:2: ( () otherlv_1= '<ProcedureStep' otherlv_2= '/>' )
+            // InternalSVS.g:3830:3: () otherlv_1= '<ProcedureStep' otherlv_2= '/>'
             {
-            // InternalSVS.g:3800:3: ()
-            // InternalSVS.g:3801:4: 
+            // InternalSVS.g:3830:3: ()
+            // InternalSVS.g:3831:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -10020,7 +10096,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_135 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
         public static final BitSet FOLLOW_136 = new BitSet(new long[]{0x0400000000400000L,0x8000000000000000L});
         public static final BitSet FOLLOW_137 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
-        public static final BitSet FOLLOW_138 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
+        public static final BitSet FOLLOW_138 = new BitSet(new long[]{0x0000000000000000L,0x0000100000000000L,0x0000000000000001L});
         public static final BitSet FOLLOW_139 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000020L});
         public static final BitSet FOLLOW_140 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
         public static final BitSet FOLLOW_141 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});

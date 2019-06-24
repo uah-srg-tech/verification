@@ -91,6 +91,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestCaseAccess().getGroup(), "rule__VSVSTestCase__Group__0");
 					put(grammarAccess.getVSVSTestCaseAccess().getGroup_25(), "rule__VSVSTestCase__Group_25__0");
 					put(grammarAccess.getVSVSTestProcedureAccess().getGroup(), "rule__VSVSTestProcedure__Group__0");
+					put(grammarAccess.getVSVSTestProcedureAccess().getGroup_10(), "rule__VSVSTestProcedure__Group_10__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup(), "rule__VSVSProcedureStep__Group__0");
 					put(grammarAccess.getVSVSDocumentAccess().getNameAssignment_2(), "rule__VSVSDocument__NameAssignment_2");
 					put(grammarAccess.getVSVSDocumentAccess().getIdAssignment_4(), "rule__VSVSDocument__IdAssignment_4");
@@ -199,8 +200,9 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestProcedureAccess().getNameAssignment_2(), "rule__VSVSTestProcedure__NameAssignment_2");
 					put(grammarAccess.getVSVSTestProcedureAccess().getIdentifierAssignment_5(), "rule__VSVSTestProcedure__IdentifierAssignment_5");
 					put(grammarAccess.getVSVSTestProcedureAccess().getPurposeAssignment_8(), "rule__VSVSTestProcedure__PurposeAssignment_8");
-					put(grammarAccess.getVSVSTestProcedureAccess().getStepsAssignment_11(), "rule__VSVSTestProcedure__StepsAssignment_11");
-					put(grammarAccess.getVSVSTestProcedureAccess().getTestScriptAssignment_14(), "rule__VSVSTestProcedure__TestScriptAssignment_14");
+					put(grammarAccess.getVSVSTestProcedureAccess().getTestCaseAssignment_10_2(), "rule__VSVSTestProcedure__TestCaseAssignment_10_2");
+					put(grammarAccess.getVSVSTestProcedureAccess().getStepsAssignment_12(), "rule__VSVSTestProcedure__StepsAssignment_12");
+					put(grammarAccess.getVSVSTestProcedureAccess().getTestScriptAssignment_15(), "rule__VSVSTestProcedure__TestScriptAssignment_15");
 				}
 			};
 		}

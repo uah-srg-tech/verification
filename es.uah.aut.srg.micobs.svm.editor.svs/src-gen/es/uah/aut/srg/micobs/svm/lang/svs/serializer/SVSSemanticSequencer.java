@@ -745,7 +745,14 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSTestProcedure returns VSVSTestProcedure
 	 *
 	 * Constraint:
-	 *     (name=STRING identifier=VSVSFixedSection purpose=VSVSFixedSection steps+=VSVSProcedureStep testScript=VSVSFixedSection)
+	 *     (
+	 *         name=STRING 
+	 *         identifier=VSVSFixedSection 
+	 *         purpose=VSVSFixedSection 
+	 *         testCase+=[VSVSTestCase|STRING]* 
+	 *         steps+=VSVSProcedureStep 
+	 *         testScript=VSVSFixedSection
+	 *     )
 	 */
 	protected void sequence_VSVSTestProcedure(ISerializationContext context, VSVSTestProcedure semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
