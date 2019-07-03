@@ -21,6 +21,7 @@ import es.uah.aut.srg.micobs.svm.sss.*;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -178,8 +179,9 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_ABSTRACT_REQUIREMENT_SECTION: {
 				VSSSAbstractRequirementSection vsssAbstractRequirementSection = (VSSSAbstractRequirementSection)theEObject;
 				T result = caseVSSSAbstractRequirementSection(vsssAbstractRequirementSection);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAbstractRequirementSection);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssAbstractRequirementSection);
 				if (result == null) result = caseDFixedSection(vsssAbstractRequirementSection);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAbstractRequirementSection);
 				if (result == null) result = caseDAbstractSection(vsssAbstractRequirementSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -205,8 +207,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSGeneralRequirements vsssGeneralRequirements = (VSSSGeneralRequirements)theEObject;
 				T result = caseVSSSGeneralRequirements(vsssGeneralRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssGeneralRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssGeneralRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssGeneralRequirements);
 				if (result == null) result = caseDFixedSection(vsssGeneralRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssGeneralRequirements);
 				if (result == null) result = caseDAbstractSection(vsssGeneralRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -215,8 +218,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSCapabilitiesRequirements vsssCapabilitiesRequirements = (VSSSCapabilitiesRequirements)theEObject;
 				T result = caseVSSSCapabilitiesRequirements(vsssCapabilitiesRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssCapabilitiesRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssCapabilitiesRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssCapabilitiesRequirements);
 				if (result == null) result = caseDFixedSection(vsssCapabilitiesRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssCapabilitiesRequirements);
 				if (result == null) result = caseDAbstractSection(vsssCapabilitiesRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -225,8 +229,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSystemInterfaceRequirements vsssSystemInterfaceRequirements = (VSSSSystemInterfaceRequirements)theEObject;
 				T result = caseVSSSSystemInterfaceRequirements(vsssSystemInterfaceRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSystemInterfaceRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemInterfaceRequirements);
 				if (result == null) result = caseDFixedSection(vsssSystemInterfaceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemInterfaceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSystemInterfaceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -235,8 +240,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSAdaptationMissionizationRequirements vsssAdaptationMissionizationRequirements = (VSSSAdaptationMissionizationRequirements)theEObject;
 				T result = caseVSSSAdaptationMissionizationRequirements(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssAdaptationMissionizationRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = caseDFixedSection(vsssAdaptationMissionizationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssAdaptationMissionizationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -245,8 +251,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSComputerResourceRequirements vsssComputerResourceRequirements = (VSSSComputerResourceRequirements)theEObject;
 				T result = caseVSSSComputerResourceRequirements(vsssComputerResourceRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssComputerResourceRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssComputerResourceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssComputerResourceRequirements);
 				if (result == null) result = caseDFixedSection(vsssComputerResourceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssComputerResourceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssComputerResourceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -255,8 +262,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSecurityRequirements vsssSecurityRequirements = (VSSSSecurityRequirements)theEObject;
 				T result = caseVSSSSecurityRequirements(vsssSecurityRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSecurityRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSecurityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSecurityRequirements);
 				if (result == null) result = caseDFixedSection(vsssSecurityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSecurityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSecurityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -265,8 +273,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSafetyRequirements vsssSafetyRequirements = (VSSSSafetyRequirements)theEObject;
 				T result = caseVSSSSafetyRequirements(vsssSafetyRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSafetyRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSafetyRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSafetyRequirements);
 				if (result == null) result = caseDFixedSection(vsssSafetyRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSafetyRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSafetyRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -275,8 +284,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSReliabiltyAvailabilityRequirements vsssReliabiltyAvailabilityRequirements = (VSSSReliabiltyAvailabilityRequirements)theEObject;
 				T result = caseVSSSReliabiltyAvailabilityRequirements(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssReliabiltyAvailabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -285,8 +295,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSQualityRequirements vsssQualityRequirements = (VSSSQualityRequirements)theEObject;
 				T result = caseVSSSQualityRequirements(vsssQualityRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssQualityRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssQualityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssQualityRequirements);
 				if (result == null) result = caseDFixedSection(vsssQualityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssQualityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssQualityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -295,8 +306,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSDesignRequirements vsssDesignRequirements = (VSSSDesignRequirements)theEObject;
 				T result = caseVSSSDesignRequirements(vsssDesignRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssDesignRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssDesignRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssDesignRequirements);
 				if (result == null) result = caseDFixedSection(vsssDesignRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssDesignRequirements);
 				if (result == null) result = caseDAbstractSection(vsssDesignRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -305,8 +317,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSoftwareOperationsRequirements vsssSoftwareOperationsRequirements = (VSSSSoftwareOperationsRequirements)theEObject;
 				T result = caseVSSSSoftwareOperationsRequirements(vsssSoftwareOperationsRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSoftwareOperationsRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareOperationsRequirements);
 				if (result == null) result = caseDFixedSection(vsssSoftwareOperationsRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareOperationsRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSoftwareOperationsRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -315,8 +328,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSoftwareMaintenanceRequirements vsssSoftwareMaintenanceRequirements = (VSSSSoftwareMaintenanceRequirements)theEObject;
 				T result = caseVSSSSoftwareMaintenanceRequirements(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSoftwareMaintenanceRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = caseDFixedSection(vsssSoftwareMaintenanceRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSoftwareMaintenanceRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -325,8 +339,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSSystemSoftwareObservabilityRequirements vsssSystemSoftwareObservabilityRequirements = (VSSSSystemSoftwareObservabilityRequirements)theEObject;
 				T result = caseVSSSSystemSoftwareObservabilityRequirements(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssSystemSoftwareObservabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = caseDFixedSection(vsssSystemSoftwareObservabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = caseDAbstractSection(vsssSystemSoftwareObservabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -343,8 +358,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSVerificationValidationProcessRequirements vsssVerificationValidationProcessRequirements = (VSSSVerificationValidationProcessRequirements)theEObject;
 				T result = caseVSSSVerificationValidationProcessRequirements(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssVerificationValidationProcessRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = caseDFixedSection(vsssVerificationValidationProcessRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = caseDAbstractSection(vsssVerificationValidationProcessRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -353,8 +369,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSValidationApproach vsssValidationApproach = (VSSSValidationApproach)theEObject;
 				T result = caseVSSSValidationApproach(vsssValidationApproach);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssValidationApproach);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationApproach);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationApproach);
 				if (result == null) result = caseDFixedSection(vsssValidationApproach);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationApproach);
 				if (result == null) result = caseDAbstractSection(vsssValidationApproach);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -363,8 +380,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSVerificationRequirements vsssVerificationRequirements = (VSSSVerificationRequirements)theEObject;
 				T result = caseVSSSVerificationRequirements(vsssVerificationRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssVerificationRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssVerificationRequirements);
 				if (result == null) result = caseDFixedSection(vsssVerificationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssVerificationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssVerificationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -373,8 +391,9 @@ public class sssSwitch<T> extends Switch<T> {
 				VSSSValidationRequirements vsssValidationRequirements = (VSSSValidationRequirements)theEObject;
 				T result = caseVSSSValidationRequirements(vsssValidationRequirements);
 				if (result == null) result = caseVSSSAbstractRequirementSection(vsssValidationRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssValidationRequirements);
 				if (result == null) result = caseDFixedSection(vsssValidationRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssValidationRequirements);
 				if (result == null) result = caseDAbstractSection(vsssValidationRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
@@ -1046,6 +1065,21 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocumentAbstractGroup(VTraceableDocumentAbstractGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Fixed Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
 		return null;
 	}
 

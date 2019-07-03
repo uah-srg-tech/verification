@@ -12,9 +12,7 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
-
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -35,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
  * @model abstract="true"
  * @generated
  */
-public interface VSRSAbstractRequirementSection extends VTraceableDocumentAbstractGroup, DFixedSection {
+public interface VSRSAbstractRequirementSection extends VTraceableDocumentFixedGroup, DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Section Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

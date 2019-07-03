@@ -82,7 +82,7 @@
         lowerBound="1" eType="#//VSSSFixedSection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSAbstractRequirementSection" abstract="true"
-      eSuperTypes="tdm.ecore#//VTraceableDocumentAbstractGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+      eSuperTypes="tdm.ecore#//VTraceableDocumentFixedGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"

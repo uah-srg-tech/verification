@@ -907,7 +907,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -916,7 +916,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 0;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -925,7 +925,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -934,7 +934,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
@@ -943,7 +943,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Abstract Requirement Section</em>' class.
@@ -952,7 +952,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 4;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>VSSS Abstract Requirement Section</em>' class.
@@ -961,7 +961,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_OPERATION_COUNT + 0;
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.

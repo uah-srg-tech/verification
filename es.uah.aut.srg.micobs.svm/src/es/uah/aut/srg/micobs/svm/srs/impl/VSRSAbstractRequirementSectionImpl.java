@@ -20,8 +20,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl;
-
+import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -53,7 +52,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocumentAbstractGroupImpl implements VSRSAbstractRequirementSection {
+public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocumentFixedGroupImpl implements VSRSAbstractRequirementSection {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
