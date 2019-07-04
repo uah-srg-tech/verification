@@ -220,10 +220,6 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createVSRSDocumentItemAdapter();
 			}
 			@Override
-			public Adapter caseVSRSTraceability(VSRSTraceability object) {
-				return createVSRSTraceabilityAdapter();
-			}
-			@Override
 			public Adapter caseVSRSLogicalModels(VSRSLogicalModels object) {
 				return createVSRSLogicalModelsAdapter();
 			}
@@ -746,20 +742,6 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSRSDocumentItemAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTraceability <em>VSRS Traceability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTraceability
-	 * @generated
-	 */
-	public Adapter createVSRSTraceabilityAdapter() {
 		return null;
 	}
 

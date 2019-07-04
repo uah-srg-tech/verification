@@ -309,15 +309,6 @@ public interface srsFactory extends EFactory {
 	VSRSDocumentItem createVSRSDocumentItem();
 
 	/**
-	 * Returns a new object of class '<em>VSRS Traceability</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSRS Traceability</em>'.
-	 * @generated
-	 */
-	VSRSTraceability createVSRSTraceability();
-
-	/**
 	 * Returns a new object of class '<em>VSRS Logical Models</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

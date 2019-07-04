@@ -21,7 +21,6 @@ VSRSDocument returns VSRSDocument:
 		termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
 		softwareOverviewSection=VSRSSoftwareOverview
 		requirementsSection=VSRSRequirements
-		traceabilitySection=VSRSTraceability
 		logicalModelsSection=VSRSLogicalModels
 	'</SRS>';
 
@@ -210,11 +209,6 @@ VSRSRequirements returns VSRSRequirements:
 		humanFactors=VSRSHumanFactorsRequirements
 		adaptationInstallation=VSRSAdaptationInstallationRequirements
 	'</Requirements>';
-
-VSRSTraceability returns VSRSTraceability:
-{VSRSTraceability}
-	'<Traceability>'
-	'</Traceability>';
 
 VSRSLogicalModels returns VSRSLogicalModels:
 	{VSRSLogicalModels}

@@ -95,7 +95,6 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 			case srsPackage.VSRS_HUMAN_FACTORS_REQUIREMENTS: return createVSRSHumanFactorsRequirements();
 			case srsPackage.VSRS_ADAPTATION_INSTALLATION_REQUIREMENTS: return createVSRSAdaptationInstallationRequirements();
 			case srsPackage.VSRS_DOCUMENT_ITEM: return createVSRSDocumentItem();
-			case srsPackage.VSRS_TRACEABILITY: return createVSRSTraceability();
 			case srsPackage.VSRS_LOGICAL_MODELS: return createVSRSLogicalModels();
 			case srsPackage.VSRS_LOGICAL_MODEL: return createVSRSLogicalModel();
 			default:
@@ -411,16 +410,6 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 	public VSRSDocumentItem createVSRSDocumentItem() {
 		VSRSDocumentItemImpl vsrsDocumentItem = new VSRSDocumentItemImpl();
 		return vsrsDocumentItem;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSRSTraceability createVSRSTraceability() {
-		VSRSTraceabilityImpl vsrsTraceability = new VSRSTraceabilityImpl();
-		return vsrsTraceability;
 	}
 
 	/**

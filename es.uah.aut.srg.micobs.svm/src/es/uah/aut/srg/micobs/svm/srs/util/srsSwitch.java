@@ -399,14 +399,6 @@ public class srsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case srsPackage.VSRS_TRACEABILITY: {
-				VSRSTraceability vsrsTraceability = (VSRSTraceability)theEObject;
-				T result = caseVSRSTraceability(vsrsTraceability);
-				if (result == null) result = caseDFixedSection(vsrsTraceability);
-				if (result == null) result = caseDAbstractSection(vsrsTraceability);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			case srsPackage.VSRS_LOGICAL_MODELS: {
 				VSRSLogicalModels vsrsLogicalModels = (VSRSLogicalModels)theEObject;
 				T result = caseVSRSLogicalModels(vsrsLogicalModels);
@@ -917,21 +909,6 @@ public class srsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSRSDocumentItem(VSRSDocumentItem object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSRS Traceability</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSRS Traceability</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSRSTraceability(VSRSTraceability object) {
 		return null;
 	}
 

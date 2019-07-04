@@ -33,7 +33,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSoftwareOverviewSection <em>Software Overview Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getRequirementsSection <em>Requirements Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection <em>Traceability Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getLogicalModelsSection <em>Logical Models Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsFigures <em>Srs Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsTables <em>Srs Tables</em>}</li>
@@ -199,32 +198,6 @@ public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @generated
 	 */
 	void setRequirementsSection(VSRSRequirements value);
-
-	/**
-	 * Returns the value of the '<em><b>Traceability Section</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Traceability Section</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Traceability Section</em>' containment reference.
-	 * @see #setTraceabilitySection(VSRSTraceability)
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_TraceabilitySection()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	VSRSTraceability getTraceabilitySection();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection <em>Traceability Section</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Traceability Section</em>' containment reference.
-	 * @see #getTraceabilitySection()
-	 * @generated
-	 */
-	void setTraceabilitySection(VSRSTraceability value);
 
 	/**
 	 * Returns the value of the '<em><b>Logical Models Section</b></em>' containment reference.

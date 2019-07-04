@@ -73,11 +73,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0 = (RuleCall)cSoftwareOverviewSectionAssignment_17.eContents().get(0);
 		private final Assignment cRequirementsSectionAssignment_18 = (Assignment)cGroup.eContents().get(18);
 		private final RuleCall cRequirementsSectionVSRSRequirementsParserRuleCall_18_0 = (RuleCall)cRequirementsSectionAssignment_18.eContents().get(0);
-		private final Assignment cTraceabilitySectionAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0 = (RuleCall)cTraceabilitySectionAssignment_19.eContents().get(0);
-		private final Assignment cLogicalModelsSectionAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final RuleCall cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0 = (RuleCall)cLogicalModelsSectionAssignment_20.eContents().get(0);
-		private final Keyword cSRSKeyword_21 = (Keyword)cGroup.eContents().get(21);
+		private final Assignment cLogicalModelsSectionAssignment_19 = (Assignment)cGroup.eContents().get(19);
+		private final RuleCall cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0 = (RuleCall)cLogicalModelsSectionAssignment_19.eContents().get(0);
+		private final Keyword cSRSKeyword_20 = (Keyword)cGroup.eContents().get(20);
 		
 		//VSRSDocument:
 		//	'<SRS'
@@ -93,7 +91,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
 		//	softwareOverviewSection=VSRSSoftwareOverview
 		//	requirementsSection=VSRSRequirements
-		//	traceabilitySection=VSRSTraceability
 		//	logicalModelsSection=VSRSLogicalModels
 		//	'</SRS>';
 		@Override public ParserRule getRule() { return rule; }
@@ -102,8 +99,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')* introductionSection=VSRSIntroduction
 		//applicableDocumentsSection=VSRSApplicableDocuments referenceDocumentsSection=VSRSReferenceDocuments
 		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations softwareOverviewSection=VSRSSoftwareOverview
-		//requirementsSection=VSRSRequirements traceabilitySection=VSRSTraceability logicalModelsSection=VSRSLogicalModels
-		//'</SRS>'
+		//requirementsSection=VSRSRequirements logicalModelsSection=VSRSLogicalModels '</SRS>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<SRS'
@@ -214,20 +210,14 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSRequirements
 		public RuleCall getRequirementsSectionVSRSRequirementsParserRuleCall_18_0() { return cRequirementsSectionVSRSRequirementsParserRuleCall_18_0; }
 		
-		//traceabilitySection=VSRSTraceability
-		public Assignment getTraceabilitySectionAssignment_19() { return cTraceabilitySectionAssignment_19; }
-		
-		//VSRSTraceability
-		public RuleCall getTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0() { return cTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0; }
-		
 		//logicalModelsSection=VSRSLogicalModels
-		public Assignment getLogicalModelsSectionAssignment_20() { return cLogicalModelsSectionAssignment_20; }
+		public Assignment getLogicalModelsSectionAssignment_19() { return cLogicalModelsSectionAssignment_19; }
 		
 		//VSRSLogicalModels
-		public RuleCall getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0() { return cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0; }
+		public RuleCall getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0() { return cLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0; }
 		
 		//'</SRS>'
-		public Keyword getSRSKeyword_21() { return cSRSKeyword_21; }
+		public Keyword getSRSKeyword_20() { return cSRSKeyword_20; }
 	}
 	public class DBodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
@@ -1620,31 +1610,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Requirements>'
 		public Keyword getRequirementsKeyword_19() { return cRequirementsKeyword_19; }
 	}
-	public class VSRSTraceabilityElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTraceability");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSRSTraceabilityAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cTraceabilityKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cTraceabilityKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		
-		//VSRSTraceability:
-		//	{VSRSTraceability}
-		//	'<Traceability>'
-		//	'</Traceability>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{VSRSTraceability} '<Traceability>' '</Traceability>'
-		public Group getGroup() { return cGroup; }
-		
-		//{VSRSTraceability}
-		public Action getVSRSTraceabilityAction_0() { return cVSRSTraceabilityAction_0; }
-		
-		//'<Traceability>'
-		public Keyword getTraceabilityKeyword_1() { return cTraceabilityKeyword_1; }
-		
-		//'</Traceability>'
-		public Keyword getTraceabilityKeyword_2() { return cTraceabilityKeyword_2; }
-	}
 	public class VSRSLogicalModelsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSLogicalModels");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -3031,7 +2996,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSRSTermsDefinitionsAbbreviationsElements pVSRSTermsDefinitionsAbbreviations;
 	private final VSRSSoftwareOverviewElements pVSRSSoftwareOverview;
 	private final VSRSRequirementsElements pVSRSRequirements;
-	private final VSRSTraceabilityElements pVSRSTraceability;
 	private final VSRSLogicalModelsElements pVSRSLogicalModels;
 	private final VSRSTermElements pVSRSTerm;
 	private final VSRSDefinitionElements pVSRSDefinition;
@@ -3096,7 +3060,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSRSTermsDefinitionsAbbreviations = new VSRSTermsDefinitionsAbbreviationsElements();
 		this.pVSRSSoftwareOverview = new VSRSSoftwareOverviewElements();
 		this.pVSRSRequirements = new VSRSRequirementsElements();
-		this.pVSRSTraceability = new VSRSTraceabilityElements();
 		this.pVSRSLogicalModels = new VSRSLogicalModelsElements();
 		this.pVSRSTerm = new VSRSTermElements();
 		this.pVSRSDefinition = new VSRSDefinitionElements();
@@ -3165,7 +3128,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations
 	//	softwareOverviewSection=VSRSSoftwareOverview
 	//	requirementsSection=VSRSRequirements
-	//	traceabilitySection=VSRSTraceability
 	//	logicalModelsSection=VSRSLogicalModels
 	//	'</SRS>';
 	public VSRSDocumentElements getVSRSDocumentAccess() {
@@ -3543,18 +3505,6 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSRSRequirementsRule() {
 		return getVSRSRequirementsAccess().getRule();
-	}
-	
-	//VSRSTraceability:
-	//	{VSRSTraceability}
-	//	'<Traceability>'
-	//	'</Traceability>';
-	public VSRSTraceabilityElements getVSRSTraceabilityAccess() {
-		return pVSRSTraceability;
-	}
-	
-	public ParserRule getVSRSTraceabilityRule() {
-		return getVSRSTraceabilityAccess().getRule();
 	}
 	
 	//VSRSLogicalModels:

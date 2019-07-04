@@ -62,7 +62,6 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
-import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -238,9 +237,6 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case srsPackage.VSRS_TERMS_DEFINITIONS_ABBREVIATIONS:
 				sequence_VSRSTermsDefinitionsAbbreviations(context, (VSRSTermsDefinitionsAbbreviations) semanticObject); 
-				return; 
-			case srsPackage.VSRS_TRACEABILITY:
-				sequence_VSRSTraceability(context, (VSRSTraceability) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -581,7 +577,6 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations 
 	 *         softwareOverviewSection=VSRSSoftwareOverview 
 	 *         requirementsSection=VSRSRequirements 
-	 *         traceabilitySection=VSRSTraceability 
 	 *         logicalModelsSection=VSRSLogicalModels
 	 *     )
 	 */
@@ -934,18 +929,6 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (terms+=VSRSTerm* definitions+=VSRSDefinition* abbreviations+=VSRSAbbreviation*)
 	 */
 	protected void sequence_VSRSTermsDefinitionsAbbreviations(ISerializationContext context, VSRSTermsDefinitionsAbbreviations semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VSRSTraceability returns VSRSTraceability
-	 *
-	 * Constraint:
-	 *     {VSRSTraceability}
-	 */
-	protected void sequence_VSRSTraceability(ISerializationContext context, VSRSTraceability semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

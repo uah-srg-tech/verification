@@ -79,7 +79,6 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSTermsDefinitionsAbbreviationsAccess().getGroup(), "rule__VSRSTermsDefinitionsAbbreviations__Group__0");
 					put(grammarAccess.getVSRSSoftwareOverviewAccess().getGroup(), "rule__VSRSSoftwareOverview__Group__0");
 					put(grammarAccess.getVSRSRequirementsAccess().getGroup(), "rule__VSRSRequirements__Group__0");
-					put(grammarAccess.getVSRSTraceabilityAccess().getGroup(), "rule__VSRSTraceability__Group__0");
 					put(grammarAccess.getVSRSLogicalModelsAccess().getGroup(), "rule__VSRSLogicalModels__Group__0");
 					put(grammarAccess.getVSRSTermAccess().getGroup(), "rule__VSRSTerm__Group__0");
 					put(grammarAccess.getVSRSDefinitionAccess().getGroup(), "rule__VSRSDefinition__Group__0");
@@ -118,8 +117,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentAccess().getTermsDefinitionsAbbreviationsSectionAssignment_16(), "rule__VSRSDocument__TermsDefinitionsAbbreviationsSectionAssignment_16");
 					put(grammarAccess.getVSRSDocumentAccess().getSoftwareOverviewSectionAssignment_17(), "rule__VSRSDocument__SoftwareOverviewSectionAssignment_17");
 					put(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionAssignment_18(), "rule__VSRSDocument__RequirementsSectionAssignment_18");
-					put(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionAssignment_19(), "rule__VSRSDocument__TraceabilitySectionAssignment_19");
-					put(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_20(), "rule__VSRSDocument__LogicalModelsSectionAssignment_20");
+					put(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_19(), "rule__VSRSDocument__LogicalModelsSectionAssignment_19");
 					put(grammarAccess.getDBodyAccess().getBodyContentAssignment_1(), "rule__DBody__BodyContentAssignment_1");
 					put(grammarAccess.getDParagraphAccess().getParagraphContentAssignment_1(), "rule__DParagraph__ParagraphContentAssignment_1");
 					put(grammarAccess.getDListItemAccess().getParagraphAssignment_1(), "rule__DListItem__ParagraphAssignment_1");

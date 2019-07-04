@@ -47,7 +47,6 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
-import es.uah.aut.srg.micobs.svm.srs.VSRSTraceability;
 import es.uah.aut.srg.micobs.svm.srs.srsFactory;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
@@ -303,13 +302,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsrsTraceabilityEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EClass vsrsLogicalModelsEClass = null;
 
 	/**
@@ -452,7 +444,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSRSDocument_TraceabilitySection() {
+	public EReference getVSRSDocument_LogicalModelsSection() {
 		return (EReference)vsrsDocumentEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -461,7 +453,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSRSDocument_LogicalModelsSection() {
+	public EReference getVSRSDocument_SrsFigures() {
 		return (EReference)vsrsDocumentEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -470,17 +462,8 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSRSDocument_SrsFigures() {
-		return (EReference)vsrsDocumentEClass.getEStructuralFeatures().get(8);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getVSRSDocument_SrsTables() {
-		return (EReference)vsrsDocumentEClass.getEStructuralFeatures().get(9);
+		return (EReference)vsrsDocumentEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -1145,15 +1128,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSRSTraceability() {
-		return vsrsTraceabilityEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVSRSLogicalModels() {
 		return vsrsLogicalModelsEClass;
 	}
@@ -1211,7 +1185,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION);
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION);
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__REQUIREMENTS_SECTION);
-		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__TRACEABILITY_SECTION);
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__LOGICAL_MODELS_SECTION);
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__SRS_FIGURES);
 		createEReference(vsrsDocumentEClass, VSRS_DOCUMENT__SRS_TABLES);
@@ -1321,8 +1294,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		createEReference(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__DESCRIPTION);
 		createEReference(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION);
 
-		vsrsTraceabilityEClass = createEClass(VSRS_TRACEABILITY);
-
 		vsrsLogicalModelsEClass = createEClass(VSRS_LOGICAL_MODELS);
 		createEReference(vsrsLogicalModelsEClass, VSRS_LOGICAL_MODELS__LOGICAL_MODELS);
 
@@ -1395,7 +1366,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		vsrsHumanFactorsRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsAdaptationInstallationRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsDocumentItemEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentAbstractItem());
-		vsrsTraceabilityEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsrsLogicalModelsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 
 		// Initialize classes, features, and operations; add parameters
@@ -1406,7 +1376,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEReference(getVSRSDocument_TermsDefinitionsAbbreviationsSection(), this.getVSRSTermsDefinitionsAbbreviations(), null, "termsDefinitionsAbbreviationsSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_SoftwareOverviewSection(), this.getVSRSSoftwareOverview(), null, "softwareOverviewSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_RequirementsSection(), this.getVSRSRequirements(), null, "requirementsSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSDocument_TraceabilitySection(), this.getVSRSTraceability(), null, "traceabilitySection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_LogicalModelsSection(), this.getVSRSLogicalModels(), null, "logicalModelsSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_SrsFigures(), thedocPackage.getDAbstractFigure(), null, "srsFigures", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_SrsTables(), thedocPackage.getDAbstractTable(), null, "srsTables", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1515,8 +1484,6 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEClass(vsrsDocumentItemEClass, VSRSDocumentItem.class, "VSRSDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSDocumentItem_Description(), thedocPackage.getDBody(), null, "description", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocumentItem_ExtendedDescription(), thedocPackage.getDBody(), null, "extendedDescription", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsrsTraceabilityEClass, VSRSTraceability.class, "VSRSTraceability", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsrsLogicalModelsEClass, VSRSLogicalModels.class, "VSRSLogicalModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSLogicalModels_LogicalModels(), this.getVSRSLogicalModel(), null, "logicalModels", null, 0, -1, VSRSLogicalModels.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -14,8 +14,6 @@
         lowerBound="1" eType="#//VSRSSoftwareOverview" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="requirementsSection" lowerBound="1"
         eType="#//VSRSRequirements" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="traceabilitySection" lowerBound="1"
-        eType="#//VSRSTraceability" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="logicalModelsSection" lowerBound="1"
         eType="#//VSRSLogicalModels" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="srsFigures" upperBound="-1"
@@ -157,7 +155,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSRSTraceability" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSRSLogicalModels" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="logicalModels" upperBound="-1"
         eType="#//VSRSLogicalModel" containment="true"/>

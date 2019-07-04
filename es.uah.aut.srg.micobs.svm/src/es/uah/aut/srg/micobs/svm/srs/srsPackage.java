@@ -241,22 +241,13 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT__REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Traceability Section</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__TRACEABILITY_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
-
-	/**
 	 * The feature id for the '<em><b>Logical Models Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
+	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Srs Figures</b></em>' containment reference list.
@@ -265,7 +256,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__SRS_FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
+	int VSRS_DOCUMENT__SRS_FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Srs Tables</b></em>' containment reference list.
@@ -274,7 +265,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__SRS_TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
+	int VSRS_DOCUMENT__SRS_TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Document</em>' class.
@@ -283,7 +274,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 15;
+	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>VSRS Document</em>' class.
@@ -2550,43 +2541,6 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT_ITEM_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabilityImpl <em>VSRS Traceability</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabilityImpl
-	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTraceability()
-	 * @generated
-	 */
-	int VSRS_TRACEABILITY = 33;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_TRACEABILITY__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The number of structural features of the '<em>VSRS Traceability</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_TRACEABILITY_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>VSRS Traceability</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_TRACEABILITY_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSLogicalModelsImpl <em>VSRS Logical Models</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2594,7 +2548,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSLogicalModels()
 	 * @generated
 	 */
-	int VSRS_LOGICAL_MODELS = 34;
+	int VSRS_LOGICAL_MODELS = 33;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2640,7 +2594,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSLogicalModel()
 	 * @generated
 	 */
-	int VSRS_LOGICAL_MODEL = 35;
+	int VSRS_LOGICAL_MODEL = 34;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Logical Model</em>' class.
@@ -2736,17 +2690,6 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSRSDocument_RequirementsSection();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection <em>Traceability Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Traceability Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTraceabilitySection()
-	 * @see #getVSRSDocument()
-	 * @generated
-	 */
-	EReference getVSRSDocument_TraceabilitySection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getLogicalModelsSection <em>Logical Models Section</em>}'.
@@ -3553,16 +3496,6 @@ public interface srsPackage extends EPackage {
 	EReference getVSRSDocumentItem_ExtendedDescription();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTraceability <em>VSRS Traceability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSRS Traceability</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTraceability
-	 * @generated
-	 */
-	EClass getVSRSTraceability();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModels <em>VSRS Logical Models</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3673,14 +3606,6 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSRS_DOCUMENT__REQUIREMENTS_SECTION = eINSTANCE.getVSRSDocument_RequirementsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Traceability Section</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSRS_DOCUMENT__TRACEABILITY_SECTION = eINSTANCE.getVSRSDocument_TraceabilitySection();
 
 		/**
 		 * The meta object literal for the '<em><b>Logical Models Section</b></em>' containment reference feature.
@@ -4353,16 +4278,6 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION = eINSTANCE.getVSRSDocumentItem_ExtendedDescription();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabilityImpl <em>VSRS Traceability</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSTraceabilityImpl
-		 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTraceability()
-		 * @generated
-		 */
-		EClass VSRS_TRACEABILITY = eINSTANCE.getVSRSTraceability();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSLogicalModelsImpl <em>VSRS Logical Models</em>}' class.

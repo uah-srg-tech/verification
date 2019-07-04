@@ -355,28 +355,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0());
 				}
-				lv_traceabilitySection_22_0=ruleVSRSTraceability
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
-					}
-					set(
-						$current,
-						"traceabilitySection",
-						lv_traceabilitySection_22_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTraceability");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0());
-				}
-				lv_logicalModelsSection_23_0=ruleVSRSLogicalModels
+				lv_logicalModelsSection_22_0=ruleVSRSLogicalModels
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -384,15 +365,15 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"logicalModelsSection",
-						lv_logicalModelsSection_23_0,
+						lv_logicalModelsSection_22_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSLogicalModels");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_24='</SRS>'
+		otherlv_23='</SRS>'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_21());
+			newLeafNode(otherlv_23, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20());
 		}
 	)
 ;
@@ -2715,43 +2696,6 @@ ruleVSRSRequirements returns [EObject current=null]
 		otherlv_19='</Requirements>'
 		{
 			newLeafNode(otherlv_19, grammarAccess.getVSRSRequirementsAccess().getRequirementsKeyword_19());
-		}
-	)
-;
-
-// Entry rule entryRuleVSRSTraceability
-entryRuleVSRSTraceability returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSRSTraceabilityRule()); }
-	iv_ruleVSRSTraceability=ruleVSRSTraceability
-	{ $current=$iv_ruleVSRSTraceability.current; }
-	EOF;
-
-// Rule VSRSTraceability
-ruleVSRSTraceability returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getVSRSTraceabilityAccess().getVSRSTraceabilityAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='<Traceability>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_1());
-		}
-		otherlv_2='</Traceability>'
-		{
-			newLeafNode(otherlv_2, grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_2());
 		}
 	)
 ;

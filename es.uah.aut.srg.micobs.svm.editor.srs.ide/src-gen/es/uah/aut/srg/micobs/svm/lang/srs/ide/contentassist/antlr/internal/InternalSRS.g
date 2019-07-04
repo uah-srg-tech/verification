@@ -757,31 +757,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleVSRSTraceability
-entryRuleVSRSTraceability
-:
-{ before(grammarAccess.getVSRSTraceabilityRule()); }
-	 ruleVSRSTraceability
-{ after(grammarAccess.getVSRSTraceabilityRule()); } 
-	 EOF 
-;
-
-// Rule VSRSTraceability
-ruleVSRSTraceability 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getVSRSTraceabilityAccess().getGroup()); }
-		(rule__VSRSTraceability__Group__0)
-		{ after(grammarAccess.getVSRSTraceabilityAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleVSRSLogicalModels
 entryRuleVSRSLogicalModels
 :
@@ -2073,9 +2048,9 @@ rule__VSRSDocument__Group__19__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionAssignment_19()); }
-	(rule__VSRSDocument__TraceabilitySectionAssignment_19)
-	{ after(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionAssignment_19()); }
+	{ before(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_19()); }
+	(rule__VSRSDocument__LogicalModelsSectionAssignment_19)
+	{ after(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_19()); }
 )
 ;
 finally {
@@ -2088,7 +2063,6 @@ rule__VSRSDocument__Group__20
 	}
 :
 	rule__VSRSDocument__Group__20__Impl
-	rule__VSRSDocument__Group__21
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2100,35 +2074,9 @@ rule__VSRSDocument__Group__20__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_20()); }
-	(rule__VSRSDocument__LogicalModelsSectionAssignment_20)
-	{ after(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_20()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSDocument__Group__21
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSRSDocument__Group__21__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSDocument__Group__21__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSRSDocumentAccess().getSRSKeyword_21()); }
+	{ before(grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20()); }
 	'</SRS>'
-	{ after(grammarAccess.getVSRSDocumentAccess().getSRSKeyword_21()); }
+	{ after(grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20()); }
 )
 ;
 finally {
@@ -6823,87 +6771,6 @@ finally {
 }
 
 
-rule__VSRSTraceability__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSRSTraceability__Group__0__Impl
-	rule__VSRSTraceability__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSTraceability__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSRSTraceabilityAccess().getVSRSTraceabilityAction_0()); }
-	()
-	{ after(grammarAccess.getVSRSTraceabilityAccess().getVSRSTraceabilityAction_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSTraceability__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSRSTraceability__Group__1__Impl
-	rule__VSRSTraceability__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSTraceability__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_1()); }
-	'<Traceability>'
-	{ after(grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSTraceability__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSRSTraceability__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSTraceability__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_2()); }
-	'</Traceability>'
-	{ after(grammarAccess.getVSRSTraceabilityAccess().getTraceabilityKeyword_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__VSRSLogicalModels__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -11192,30 +11059,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSRSDocument__TraceabilitySectionAssignment_19
+rule__VSRSDocument__LogicalModelsSectionAssignment_19
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0()); }
-		ruleVSRSTraceability
-		{ after(grammarAccess.getVSRSDocumentAccess().getTraceabilitySectionVSRSTraceabilityParserRuleCall_19_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSRSDocument__LogicalModelsSectionAssignment_20
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0()); }
+		{ before(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0()); }
 		ruleVSRSLogicalModels
-		{ after(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0()); }
+		{ after(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0()); }
 	)
 ;
 finally {
