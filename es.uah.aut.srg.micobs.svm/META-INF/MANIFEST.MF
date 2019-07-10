@@ -10,21 +10,18 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
  es.uah.aut.srg.micobs.doctpl;visibility:=reexport,
  es.uah.aut.srg.micobs;visibility:=reexport,
- es.uah.aut.srg.micobs.svm;visibility:=reexport
+ es.uah.aut.srg.micobs.svm;visibility:=reexport,
+ es.uah.aut.srg.tmtcif;visibility:=reexport
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: es.uah.aut.srg.micobs.svm.tdm,
- es.uah.aut.srg.micobs.svm.tdm.impl,
- es.uah.aut.srg.micobs.svm.tdm.util,
- es.uah.aut.srg.micobs.svm.vdm,
- es.uah.aut.srg.micobs.svm.vdm.impl,
- es.uah.aut.srg.micobs.svm.vdm.util,
+Export-Package: es.uah.aut.srg.micobs.svm.srs,
+ es.uah.aut.srg.micobs.svm.srs.impl,
+ es.uah.aut.srg.micobs.svm.srs.util,
  es.uah.aut.srg.micobs.svm.sss,
  es.uah.aut.srg.micobs.svm.sss.impl,
  es.uah.aut.srg.micobs.svm.sss.util,
- es.uah.aut.srg.micobs.svm.srs,
- es.uah.aut.srg.micobs.svm.srs.impl,
- es.uah.aut.srg.micobs.svm.srs.util,
  es.uah.aut.srg.micobs.svm.svs,
  es.uah.aut.srg.micobs.svm.svs.impl,
- es.uah.aut.srg.micobs.svm.svs.util
+ es.uah.aut.srg.micobs.svm.svs.util,
+ es.uah.aut.srg.micobs.svm.tdm,
+ es.uah.aut.srg.micobs.svm.vdm

@@ -192,6 +192,15 @@ public interface svsFactory extends EFactory {
 	VSVSTestProcedure createVSVSTestProcedure();
 
 	/**
+	 * Returns a new object of class '<em>VSVS Procedure Steps</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Procedure Steps</em>'.
+	 * @generated
+	 */
+	VSVSProcedureSteps createVSVSProcedureSteps();
+
+	/**
 	 * Returns a new object of class '<em>VSVS Procedure Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -199,6 +208,159 @@ public interface svsFactory extends EFactory {
 	 * @generated
 	 */
 	VSVSProcedureStep createVSVSProcedureStep();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Inputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Inputs</em>'.
+	 * @generated
+	 */
+	VSVSStepInputs createVSVSStepInputs();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Outputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Outputs</em>'.
+	 * @generated
+	 */
+	VSVSStepOutputs createVSVSStepOutputs();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Special Packets</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Special Packets</em>'.
+	 * @generated
+	 */
+	VSVSStepSpecialPackets createVSVSStepSpecialPackets();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Enable Disable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Enable Disable</em>'.
+	 * @generated
+	 */
+	VSVSStepEnableDisable createVSVSStepEnableDisable();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Concurrent Steps</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Concurrent Steps</em>'.
+	 * @generated
+	 */
+	VSVSStepConcurrentSteps createVSVSStepConcurrentSteps();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Next Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Next Step</em>'.
+	 * @generated
+	 */
+	VSVSStepNextStep createVSVSStepNextStep();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Concurrent Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Concurrent Step</em>'.
+	 * @generated
+	 */
+	VSVSStepConcurrentStep createVSVSStepConcurrentStep();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Input</em>'.
+	 * @generated
+	 */
+	VSVSStepInput createVSVSStepInput();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Input Level3</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Input Level3</em>'.
+	 * @generated
+	 */
+	VSVSStepInputLevel3 createVSVSStepInputLevel3();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Input Level2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Input Level2</em>'.
+	 * @generated
+	 */
+	VSVSStepInputLevel2 createVSVSStepInputLevel2();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Input Level1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Input Level1</em>'.
+	 * @generated
+	 */
+	VSVSStepInputLevel1 createVSVSStepInputLevel1();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Input Level0</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Input Level0</em>'.
+	 * @generated
+	 */
+	VSVSStepInputLevel0 createVSVSStepInputLevel0();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Output Level3</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Output Level3</em>'.
+	 * @generated
+	 */
+	VSVSStepOutputLevel3 createVSVSStepOutputLevel3();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Output Level2</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Output Level2</em>'.
+	 * @generated
+	 */
+	VSVSStepOutputLevel2 createVSVSStepOutputLevel2();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Output Level1</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Output Level1</em>'.
+	 * @generated
+	 */
+	VSVSStepOutputLevel1 createVSVSStepOutputLevel1();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Output Level0</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Output Level0</em>'.
+	 * @generated
+	 */
+	VSVSStepOutputLevel0 createVSVSStepOutputLevel0();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Filter</em>'.
+	 * @generated
+	 */
+	VSVSStepFilter createVSVSStepFilter();
 
 	/**
 	 * Returns a new object of class '<em>VSVS Analysis Inspection Review</em>'.

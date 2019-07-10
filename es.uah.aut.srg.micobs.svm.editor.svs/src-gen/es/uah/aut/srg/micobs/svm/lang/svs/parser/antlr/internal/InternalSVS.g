@@ -31,6 +31,7 @@ import org.eclipse.xtext.parser.*;
 import org.eclipse.xtext.parser.impl.*;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.EObject;
+import org.eclipse.emf.common.util.Enumerator;
 import org.eclipse.xtext.parser.antlr.AbstractInternalAntlrParser;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream;
 import org.eclipse.xtext.parser.antlr.XtextTokenStream.HiddenTokens;
@@ -143,9 +144,9 @@ ruleVSVSDocument returns [EObject current=null]
 		}
 		(
 			(
-				lv_issue_6_0=RULE_STRING
+				lv_issue_6_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_issue_6_0, grammarAccess.getVSVSDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0());
+					newLeafNode(lv_issue_6_0, grammarAccess.getVSVSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -155,7 +156,7 @@ ruleVSVSDocument returns [EObject current=null]
 						$current,
 						"issue",
 						lv_issue_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -165,9 +166,9 @@ ruleVSVSDocument returns [EObject current=null]
 		}
 		(
 			(
-				lv_revision_8_0=RULE_STRING
+				lv_revision_8_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_revision_8_0, grammarAccess.getVSVSDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0());
+					newLeafNode(lv_revision_8_0, grammarAccess.getVSVSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0());
 				}
 				{
 					if ($current==null) {
@@ -177,7 +178,7 @@ ruleVSVSDocument returns [EObject current=null]
 						$current,
 						"revision",
 						lv_revision_8_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -3750,43 +3751,35 @@ ruleVSVSTestProcedure returns [EObject current=null]
 				newLeafNode(otherlv_13, grammarAccess.getVSVSTestProcedureAccess().getSolidusGreaterThanSignKeyword_10_3());
 			}
 		)*
-		otherlv_14='<Steps>'
-		{
-			newLeafNode(otherlv_14, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_11());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getStepsVSVSProcedureStepParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getProcedureStepsVSVSProcedureStepsParserRuleCall_11_0());
 				}
-				lv_steps_15_0=ruleVSVSProcedureStep
+				lv_procedureSteps_14_0=ruleVSVSProcedureSteps
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestProcedureRule());
 					}
-					add(
+					set(
 						$current,
-						"steps",
-						lv_steps_15_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
+						"procedureSteps",
+						lv_procedureSteps_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureSteps");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_16='</Steps>'
+		otherlv_15='<TestScript>'
 		{
-			newLeafNode(otherlv_16, grammarAccess.getVSVSTestProcedureAccess().getStepsKeyword_13());
-		}
-		otherlv_17='<TestScript>'
-		{
-			newLeafNode(otherlv_17, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_14());
+			newLeafNode(otherlv_15, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_12());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_13_0());
 				}
-				lv_testScript_18_0=ruleVSVSFixedSection
+				lv_testScript_16_0=ruleVSVSFixedSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestProcedureRule());
@@ -3794,19 +3787,91 @@ ruleVSVSTestProcedure returns [EObject current=null]
 					set(
 						$current,
 						"testScript",
-						lv_testScript_18_0,
+						lv_testScript_16_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSFixedSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_19='</TestScript>'
+		otherlv_17='</TestScript>'
 		{
-			newLeafNode(otherlv_19, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_16());
+			newLeafNode(otherlv_17, grammarAccess.getVSVSTestProcedureAccess().getTestScriptKeyword_14());
 		}
-		otherlv_20='</TestProcedure>'
+		otherlv_18='</TestProcedure>'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_17());
+			newLeafNode(otherlv_18, grammarAccess.getVSVSTestProcedureAccess().getTestProcedureKeyword_15());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSProcedureSteps
+entryRuleVSVSProcedureSteps returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSProcedureStepsRule()); }
+	iv_ruleVSVSProcedureSteps=ruleVSVSProcedureSteps
+	{ $current=$iv_ruleVSVSProcedureSteps.current; }
+	EOF;
+
+// Rule VSVSProcedureSteps
+ruleVSVSProcedureSteps returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<ProcedureSteps'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepsAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSProcedureStepsAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSProcedureStepsRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_4_0());
+				}
+				lv_step_4_0=ruleVSVSProcedureStep
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepsRule());
+					}
+					add(
+						$current,
+						"step",
+						lv_step_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_5='</ProcedureSteps>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_5());
 		}
 	)
 ;
@@ -3827,28 +3892,3961 @@ ruleVSVSProcedureStep returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='<step'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSProcedureStepAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSProcedureStepRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepAccess().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSProcedureStepAccess().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSProcedureStepRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_5='prev_step_idref='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefKeyword_5_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSProcedureStepRule());
+						}
+					}
+					otherlv_6=RULE_STRING
+					{
+						newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefVSVSProcedureStepCrossReference_5_1_0());
+					}
+				)
+			)
+		)?
+		(
+			otherlv_7='output_idref_from_prev_step='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepKeyword_6_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSProcedureStepRule());
+						}
+					}
+					otherlv_8=RULE_STRING
+					{
+						newLeafNode(otherlv_8, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_6_1_0());
+					}
+				)
+			)
+		)?
+		otherlv_9='mode='
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSProcedureStepAccess().getModeKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getModeVSVSStepModeEnumRuleCall_8_0());
+				}
+				lv_mode_10_0=ruleVSVSStepMode
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"mode",
+						lv_mode_10_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepMode");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_11='replays='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSProcedureStepAccess().getReplaysKeyword_9_0());
+			}
+			(
+				(
+					lv_replays_12_0=RULE_STRING
+					{
+						newLeafNode(lv_replays_12_0, grammarAccess.getVSVSProcedureStepAccess().getReplaysSTRINGTerminalRuleCall_9_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSProcedureStepRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"replays",
+							lv_replays_12_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_13='>'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getVSVSProcedureStepAccess().getGreaterThanSignKeyword_10());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getInputsVSVSStepInputsParserRuleCall_11_0());
+				}
+				lv_inputs_14_0=ruleVSVSStepInputs
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"inputs",
+						lv_inputs_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputs");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getOutputsVSVSStepOutputsParserRuleCall_12_0());
+				}
+				lv_outputs_15_0=ruleVSVSStepOutputs
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"outputs",
+						lv_outputs_15_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputs");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getSpecialPacketsVSVSStepSpecialPacketsParserRuleCall_13_0());
+				}
+				lv_specialPackets_16_0=ruleVSVSStepSpecialPackets
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"specialPackets",
+						lv_specialPackets_16_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepSpecialPackets");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getConcurrent_stepsVSVSStepConcurrentStepsParserRuleCall_14_0());
+				}
+				lv_concurrent_steps_17_0=ruleVSVSStepConcurrentSteps
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"concurrent_steps",
+						lv_concurrent_steps_17_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentSteps");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_18='</step>'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_15());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepInputs
+entryRuleVSVSStepInputs returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepInputsRule()); }
+	iv_ruleVSVSStepInputs=ruleVSVSStepInputs
+	{ $current=$iv_ruleVSVSStepInputs.current; }
+	EOF;
+
+// Rule VSVSStepInputs
+ruleVSVSStepInputs returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
 		(
 			{
 				/* */
 			}
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getVSVSProcedureStepAccess().getVSVSProcedureStepAction_0(),
+					grammarAccess.getVSVSStepInputsAccess().getVSVSStepInputsAction_0(),
 					$current);
 			}
 		)
-		otherlv_1='<ProcedureStep'
+		otherlv_1='<inputs>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepAccess().getProcedureStepKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_1());
 		}
-		otherlv_2='/>'
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_3VSVSStepInputLevel3ParserRuleCall_2_0_0());
+					}
+					lv_input_level_3_2_0=ruleVSVSStepInputLevel3
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
+						}
+						add(
+							$current,
+							"input_level_3",
+							lv_input_level_3_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel3");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_2VSVSStepInputLevel2ParserRuleCall_2_1_0());
+					}
+					lv_input_level_2_3_0=ruleVSVSStepInputLevel2
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
+						}
+						add(
+							$current,
+							"input_level_2",
+							lv_input_level_2_3_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel2");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_1VSVSStepInputLevel1ParserRuleCall_2_2_0());
+					}
+					lv_input_level_1_4_0=ruleVSVSStepInputLevel1
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
+						}
+						add(
+							$current,
+							"input_level_1",
+							lv_input_level_1_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel1");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_0VSVSStepInputLevel0ParserRuleCall_2_3_0());
+					}
+					lv_input_level_0_5_0=ruleVSVSStepInputLevel0
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
+						}
+						add(
+							$current,
+							"input_level_0",
+							lv_input_level_0_5_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel0");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)+
+		otherlv_6='</inputs>'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getVSVSProcedureStepAccess().getSolidusGreaterThanSignKeyword_2());
+			newLeafNode(otherlv_6, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_3());
 		}
 	)
 ;
 
+// Entry rule entryRuleVSVSStepOutputs
+entryRuleVSVSStepOutputs returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepOutputsRule()); }
+	iv_ruleVSVSStepOutputs=ruleVSVSStepOutputs
+	{ $current=$iv_ruleVSVSStepOutputs.current; }
+	EOF;
+
+// Rule VSVSStepOutputs
+ruleVSVSStepOutputs returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<outputs'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_0());
+		}
+		otherlv_1='checkmode='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputsAccess().getCheckmodeKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getCheckmodeVSVSStepCheckmodeEnumRuleCall_2_0());
+				}
+				lv_checkmode_2_0=ruleVSVSStepCheckmode
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+					}
+					set(
+						$current,
+						"checkmode",
+						lv_checkmode_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepCheckmode");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3='valid_time_interval_value='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueINTEGERParserRuleCall_4_0());
+				}
+				lv_valid_time_interval_value_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+					}
+					set(
+						$current,
+						"valid_time_interval_value",
+						lv_valid_time_interval_value_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='valid_time_interval_unit='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_unitKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0());
+				}
+				lv_valid_time_interval_unit_6_0=ruleVSVSStepUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+					}
+					set(
+						$current,
+						"valid_time_interval_unit",
+						lv_valid_time_interval_unit_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputsAccess().getGreaterThanSignKeyword_7());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_3VSVSStepOutputLevel3ParserRuleCall_8_0_0());
+					}
+					lv_output_level_3_8_0=ruleVSVSStepOutputLevel3
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						}
+						add(
+							$current,
+							"output_level_3",
+							lv_output_level_3_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel3");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_2VSVSStepOutputLevel2ParserRuleCall_8_1_0());
+					}
+					lv_output_level_2_9_0=ruleVSVSStepOutputLevel2
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						}
+						add(
+							$current,
+							"output_level_2",
+							lv_output_level_2_9_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel2");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_1VSVSStepOutputLevel1ParserRuleCall_8_2_0());
+					}
+					lv_output_level_1_10_0=ruleVSVSStepOutputLevel1
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						}
+						add(
+							$current,
+							"output_level_1",
+							lv_output_level_1_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel1");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_0VSVSStepOutputLevel0ParserRuleCall_8_3_0());
+					}
+					lv_output_level_0_11_0=ruleVSVSStepOutputLevel0
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						}
+						add(
+							$current,
+							"output_level_0",
+							lv_output_level_0_11_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel0");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)+
+		otherlv_12='</outputs>'
+		{
+			newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_9());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepSpecialPackets
+entryRuleVSVSStepSpecialPackets returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsRule()); }
+	iv_ruleVSVSStepSpecialPackets=ruleVSVSStepSpecialPackets
+	{ $current=$iv_ruleVSVSStepSpecialPackets.current; }
+	EOF;
+
+// Rule VSVSStepSpecialPackets
+ruleVSVSStepSpecialPackets returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSVSStepSpecialPacketsAccess().getVSVSStepSpecialPacketsAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<specialPackets>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepSpecialPacketsAccess().getSpecialPacketsKeyword_1());
+		}
+		(
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsAccess().getEnableVSVSStepEnableParserRuleCall_2_0_0());
+					}
+					lv_enable_2_0=ruleVSVSStepEnable
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepSpecialPacketsRule());
+						}
+						add(
+							$current,
+							"enable",
+							lv_enable_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnable");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsAccess().getDisableVSVSStepDisableParserRuleCall_2_1_0());
+					}
+					lv_disable_3_0=ruleVSVSStepDisable
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepSpecialPacketsRule());
+						}
+						add(
+							$current,
+							"disable",
+							lv_disable_3_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisable");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsAccess().getEnable_printVSVSStepEnablePrintParserRuleCall_2_2_0());
+					}
+					lv_enable_print_4_0=ruleVSVSStepEnablePrint
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepSpecialPacketsRule());
+						}
+						add(
+							$current,
+							"enable_print",
+							lv_enable_print_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnablePrint");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			    |
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsAccess().getDisable_printVSVSStepDisablePrintParserRuleCall_2_3_0());
+					}
+					lv_disable_print_5_0=ruleVSVSStepDisablePrint
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepSpecialPacketsRule());
+						}
+						add(
+							$current,
+							"disable_print",
+							lv_disable_print_5_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisablePrint");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)+
+		otherlv_6='</specialPackets>'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getVSVSStepSpecialPacketsAccess().getSpecialPacketsKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepConcurrentSteps
+entryRuleVSVSStepConcurrentSteps returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsRule()); }
+	iv_ruleVSVSStepConcurrentSteps=ruleVSVSStepConcurrentSteps
+	{ $current=$iv_ruleVSVSStepConcurrentSteps.current; }
+	EOF;
+
+// Rule VSVSStepConcurrentSteps
+ruleVSVSStepConcurrentSteps returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<concurrent_steps'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepsKeyword_0());
+		}
+		otherlv_1='nextStep='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConcurrentStepsAccess().getNextStepKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsAccess().getNextStepVSVSStepNextStepParserRuleCall_2_0());
+				}
+				lv_nextStep_2_0=ruleVSVSStepNextStep
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepConcurrentStepsRule());
+					}
+					set(
+						$current,
+						"nextStep",
+						lv_nextStep_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepNextStep");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepsAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepConcurrentStepsAccess().getGreaterThanSignKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_5_0());
+				}
+				lv_concurrent_step_5_0=ruleVSVSStepConcurrentStep
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepConcurrentStepsRule());
+					}
+					add(
+						$current,
+						"concurrent_step",
+						lv_concurrent_step_5_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentStep");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_6='</concurrent_steps>'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepsKeyword_6());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepInputLevel3
+entryRuleVSVSStepInputLevel3 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepInputLevel3Rule()); }
+	iv_ruleVSVSStepInputLevel3=ruleVSVSStepInputLevel3
+	{ $current=$iv_ruleVSVSStepInputLevel3.current; }
+	EOF;
+
+// Rule VSVSStepInputLevel3
+ruleVSVSStepInputLevel3 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<input_level_3'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepInputLevel3Access().getInput_level_3Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel3Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepInputLevel3Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ifRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel3Access().getIfRefKeyword_3());
+		}
+		(
+			(
+				lv_ifRef_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_4_0, grammarAccess.getVSVSStepInputLevel3Access().getIfRefUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='delay_value='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel3Access().getDelay_valueKeyword_5());
+		}
+		(
+			(
+				lv_delay_value_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepInputLevel3Access().getDelay_valueUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"delay_value",
+						lv_delay_value_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='delay_unit='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel3Access().getDelay_unitKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepInputLevel3Access().getDelay_unitVSVSStepUnitEnumRuleCall_8_0());
+				}
+				lv_delay_unit_8_0=ruleVSVSStepUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepInputLevel3Rule());
+					}
+					set(
+						$current,
+						"delay_unit",
+						lv_delay_unit_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel3Access().getGreaterThanSignKeyword_9());
+		}
+		(
+			otherlv_10='<level3'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepInputLevel3Access().getLevel3Keyword_10_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_11=RULE_STRING
+					{
+						newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel3Access().getLevel3TMTCIFFormatFormatCrossReference_10_1_0());
+					}
+				)
+			)
+			otherlv_12='/>'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_10_2());
+			}
+		)?
+		otherlv_13='<app_to_level3'
+		{
+			newLeafNode(otherlv_13, grammarAccess.getVSVSStepInputLevel3Access().getApp_to_level3Keyword_11());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+					}
+				}
+				otherlv_14=RULE_STRING
+				{
+					newLeafNode(otherlv_14, grammarAccess.getVSVSStepInputLevel3Access().getApp_to_level3TMTCIFExportExportCrossReference_12_0());
+				}
+			)
+		)
+		otherlv_15='/>'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_13());
+		}
+		(
+			otherlv_16='<level2'
+			{
+				newLeafNode(otherlv_16, grammarAccess.getVSVSStepInputLevel3Access().getLevel2Keyword_14_0());
+			}
+			otherlv_17='format='
+			{
+				newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_14_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_18=RULE_STRING
+					{
+						newLeafNode(otherlv_18, grammarAccess.getVSVSStepInputLevel3Access().getLevel2TMTCIFFormatFormatCrossReference_14_2_0());
+					}
+				)
+			)
+			otherlv_19='/>'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_14_3());
+			}
+		)?
+		(
+			otherlv_20='<level3_to_level2'
+			{
+				newLeafNode(otherlv_20, grammarAccess.getVSVSStepInputLevel3Access().getLevel3_to_level2Keyword_15_0());
+			}
+			otherlv_21='export='
+			{
+				newLeafNode(otherlv_21, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_15_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_22=RULE_STRING
+					{
+						newLeafNode(otherlv_22, grammarAccess.getVSVSStepInputLevel3Access().getLevel3_to_level2TMTCIFExportExportCrossReference_15_2_0());
+					}
+				)
+			)
+			otherlv_23='/>'
+			{
+				newLeafNode(otherlv_23, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_15_3());
+			}
+		)?
+		(
+			otherlv_24='<level1'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getVSVSStepInputLevel3Access().getLevel1Keyword_16_0());
+			}
+			otherlv_25='format='
+			{
+				newLeafNode(otherlv_25, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_16_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_26=RULE_STRING
+					{
+						newLeafNode(otherlv_26, grammarAccess.getVSVSStepInputLevel3Access().getLevel1TMTCIFFormatFormatCrossReference_16_2_0());
+					}
+				)
+			)
+			otherlv_27='/>'
+			{
+				newLeafNode(otherlv_27, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_16_3());
+			}
+		)?
+		(
+			otherlv_28='<level2_to_level1'
+			{
+				newLeafNode(otherlv_28, grammarAccess.getVSVSStepInputLevel3Access().getLevel2_to_level1Keyword_17_0());
+			}
+			otherlv_29='export='
+			{
+				newLeafNode(otherlv_29, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_17_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_30=RULE_STRING
+					{
+						newLeafNode(otherlv_30, grammarAccess.getVSVSStepInputLevel3Access().getLevel2_to_level1TMTCIFExportExportCrossReference_17_2_0());
+					}
+				)
+			)
+			otherlv_31='/>'
+			{
+				newLeafNode(otherlv_31, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_17_3());
+			}
+		)?
+		(
+			otherlv_32='<level0'
+			{
+				newLeafNode(otherlv_32, grammarAccess.getVSVSStepInputLevel3Access().getLevel0Keyword_18_0());
+			}
+			otherlv_33='format='
+			{
+				newLeafNode(otherlv_33, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_18_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_34=RULE_STRING
+					{
+						newLeafNode(otherlv_34, grammarAccess.getVSVSStepInputLevel3Access().getLevel0TMTCIFFormatFormatCrossReference_18_2_0());
+					}
+				)
+			)
+			otherlv_35='/>'
+			{
+				newLeafNode(otherlv_35, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_18_3());
+			}
+		)?
+		(
+			otherlv_36='<level1_to_level0'
+			{
+				newLeafNode(otherlv_36, grammarAccess.getVSVSStepInputLevel3Access().getLevel1_to_level0Keyword_19_0());
+			}
+			otherlv_37='export='
+			{
+				newLeafNode(otherlv_37, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_19_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel3Rule());
+						}
+					}
+					otherlv_38=RULE_STRING
+					{
+						newLeafNode(otherlv_38, grammarAccess.getVSVSStepInputLevel3Access().getLevel1_to_level0TMTCIFExportExportCrossReference_19_2_0());
+					}
+				)
+			)
+			otherlv_39='/>'
+			{
+				newLeafNode(otherlv_39, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_19_3());
+			}
+		)?
+		otherlv_40='</input_level_3>'
+		{
+			newLeafNode(otherlv_40, grammarAccess.getVSVSStepInputLevel3Access().getInput_level_3Keyword_20());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepInputLevel2
+entryRuleVSVSStepInputLevel2 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepInputLevel2Rule()); }
+	iv_ruleVSVSStepInputLevel2=ruleVSVSStepInputLevel2
+	{ $current=$iv_ruleVSVSStepInputLevel2.current; }
+	EOF;
+
+// Rule VSVSStepInputLevel2
+ruleVSVSStepInputLevel2 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<input_level_2'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepInputLevel2Access().getInput_level_2Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel2Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepInputLevel2Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ifRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel2Access().getIfRefKeyword_3());
+		}
+		(
+			(
+				lv_ifRef_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_4_0, grammarAccess.getVSVSStepInputLevel2Access().getIfRefUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='delay_value='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel2Access().getDelay_valueKeyword_5());
+		}
+		(
+			(
+				lv_delay_value_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepInputLevel2Access().getDelay_valueUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"delay_value",
+						lv_delay_value_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='delay_unit='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel2Access().getDelay_unitKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepInputLevel2Access().getDelay_unitVSVSStepUnitEnumRuleCall_8_0());
+				}
+				lv_delay_unit_8_0=ruleVSVSStepUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepInputLevel2Rule());
+					}
+					set(
+						$current,
+						"delay_unit",
+						lv_delay_unit_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel2Access().getGreaterThanSignKeyword_9());
+		}
+		(
+			otherlv_10='<level2'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepInputLevel2Access().getLevel2Keyword_10_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_10_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepInputLevel2Access().getLevel2TMTCIFFormatFormatCrossReference_10_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_10_3());
+			}
+		)?
+		otherlv_14='<app_to_level2'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getVSVSStepInputLevel2Access().getApp_to_level2Keyword_11());
+		}
+		otherlv_15='export='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_12());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+					}
+				}
+				otherlv_16=RULE_STRING
+				{
+					newLeafNode(otherlv_16, grammarAccess.getVSVSStepInputLevel2Access().getApp_to_level2TMTCIFExportExportCrossReference_13_0());
+				}
+			)
+		)
+		otherlv_17='/>'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_14());
+		}
+		(
+			otherlv_18='<level1'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getVSVSStepInputLevel2Access().getLevel1Keyword_15_0());
+			}
+			otherlv_19='format='
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_15_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+						}
+					}
+					otherlv_20=RULE_STRING
+					{
+						newLeafNode(otherlv_20, grammarAccess.getVSVSStepInputLevel2Access().getLevel1TMTCIFFormatFormatCrossReference_15_2_0());
+					}
+				)
+			)
+			otherlv_21='/>'
+			{
+				newLeafNode(otherlv_21, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_15_3());
+			}
+		)?
+		(
+			otherlv_22='<level2_to_level1'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepInputLevel2Access().getLevel2_to_level1Keyword_16_0());
+			}
+			otherlv_23='export='
+			{
+				newLeafNode(otherlv_23, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_16_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+						}
+					}
+					otherlv_24=RULE_STRING
+					{
+						newLeafNode(otherlv_24, grammarAccess.getVSVSStepInputLevel2Access().getLevel2_to_level1TMTCIFExportExportCrossReference_16_2_0());
+					}
+				)
+			)
+			otherlv_25='/>'
+			{
+				newLeafNode(otherlv_25, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_16_3());
+			}
+		)?
+		(
+			otherlv_26='<level0'
+			{
+				newLeafNode(otherlv_26, grammarAccess.getVSVSStepInputLevel2Access().getLevel0Keyword_17_0());
+			}
+			otherlv_27='format='
+			{
+				newLeafNode(otherlv_27, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_17_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+						}
+					}
+					otherlv_28=RULE_STRING
+					{
+						newLeafNode(otherlv_28, grammarAccess.getVSVSStepInputLevel2Access().getLevel0TMTCIFFormatFormatCrossReference_17_2_0());
+					}
+				)
+			)
+			otherlv_29='/>'
+			{
+				newLeafNode(otherlv_29, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_17_3());
+			}
+		)?
+		(
+			otherlv_30='<level1_to_level0'
+			{
+				newLeafNode(otherlv_30, grammarAccess.getVSVSStepInputLevel2Access().getLevel1_to_level0Keyword_18_0());
+			}
+			otherlv_31='export='
+			{
+				newLeafNode(otherlv_31, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_18_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel2Rule());
+						}
+					}
+					otherlv_32=RULE_STRING
+					{
+						newLeafNode(otherlv_32, grammarAccess.getVSVSStepInputLevel2Access().getLevel1_to_level0TMTCIFExportExportCrossReference_18_2_0());
+					}
+				)
+			)
+			otherlv_33='/>'
+			{
+				newLeafNode(otherlv_33, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_18_3());
+			}
+		)?
+		otherlv_34='</input_level_2>'
+		{
+			newLeafNode(otherlv_34, grammarAccess.getVSVSStepInputLevel2Access().getInput_level_2Keyword_19());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepInputLevel1
+entryRuleVSVSStepInputLevel1 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepInputLevel1Rule()); }
+	iv_ruleVSVSStepInputLevel1=ruleVSVSStepInputLevel1
+	{ $current=$iv_ruleVSVSStepInputLevel1.current; }
+	EOF;
+
+// Rule VSVSStepInputLevel1
+ruleVSVSStepInputLevel1 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<input_level_1'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepInputLevel1Access().getInput_level_1Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel1Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepInputLevel1Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ifRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel1Access().getIfRefKeyword_3());
+		}
+		(
+			(
+				lv_ifRef_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_4_0, grammarAccess.getVSVSStepInputLevel1Access().getIfRefUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='delay_value='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel1Access().getDelay_valueKeyword_5());
+		}
+		(
+			(
+				lv_delay_value_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepInputLevel1Access().getDelay_valueUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"delay_value",
+						lv_delay_value_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='delay_unit='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel1Access().getDelay_unitKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepInputLevel1Access().getDelay_unitVSVSStepUnitEnumRuleCall_8_0());
+				}
+				lv_delay_unit_8_0=ruleVSVSStepUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepInputLevel1Rule());
+					}
+					set(
+						$current,
+						"delay_unit",
+						lv_delay_unit_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel1Access().getGreaterThanSignKeyword_9());
+		}
+		(
+			otherlv_10='<level1'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepInputLevel1Access().getLevel1Keyword_10_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel1Access().getFormatKeyword_10_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepInputLevel1Access().getLevel1TMTCIFFormatFormatCrossReference_10_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepInputLevel1Access().getSolidusGreaterThanSignKeyword_10_3());
+			}
+		)?
+		otherlv_14='<app_to_level1'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getVSVSStepInputLevel1Access().getApp_to_level1Keyword_11());
+		}
+		otherlv_15='export='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel1Access().getExportKeyword_12());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+					}
+				}
+				otherlv_16=RULE_STRING
+				{
+					newLeafNode(otherlv_16, grammarAccess.getVSVSStepInputLevel1Access().getApp_to_level1TMTCIFExportExportCrossReference_13_0());
+				}
+			)
+		)
+		otherlv_17='/>'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel1Access().getSolidusGreaterThanSignKeyword_14());
+		}
+		(
+			otherlv_18='<level0'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getVSVSStepInputLevel1Access().getLevel0Keyword_15_0());
+			}
+			otherlv_19='format='
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepInputLevel1Access().getFormatKeyword_15_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+						}
+					}
+					otherlv_20=RULE_STRING
+					{
+						newLeafNode(otherlv_20, grammarAccess.getVSVSStepInputLevel1Access().getLevel0TMTCIFFormatFormatCrossReference_15_2_0());
+					}
+				)
+			)
+			otherlv_21='/>'
+			{
+				newLeafNode(otherlv_21, grammarAccess.getVSVSStepInputLevel1Access().getSolidusGreaterThanSignKeyword_15_3());
+			}
+		)?
+		(
+			otherlv_22='<level1_to_level0'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepInputLevel1Access().getLevel1_to_level0Keyword_16_0());
+			}
+			otherlv_23='export='
+			{
+				newLeafNode(otherlv_23, grammarAccess.getVSVSStepInputLevel1Access().getExportKeyword_16_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel1Rule());
+						}
+					}
+					otherlv_24=RULE_STRING
+					{
+						newLeafNode(otherlv_24, grammarAccess.getVSVSStepInputLevel1Access().getLevel1_to_level0TMTCIFExportExportCrossReference_16_2_0());
+					}
+				)
+			)
+			otherlv_25='/>'
+			{
+				newLeafNode(otherlv_25, grammarAccess.getVSVSStepInputLevel1Access().getSolidusGreaterThanSignKeyword_16_3());
+			}
+		)?
+		otherlv_26='</input_level_1>'
+		{
+			newLeafNode(otherlv_26, grammarAccess.getVSVSStepInputLevel1Access().getInput_level_1Keyword_17());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepInputLevel0
+entryRuleVSVSStepInputLevel0 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepInputLevel0Rule()); }
+	iv_ruleVSVSStepInputLevel0=ruleVSVSStepInputLevel0
+	{ $current=$iv_ruleVSVSStepInputLevel0.current; }
+	EOF;
+
+// Rule VSVSStepInputLevel0
+ruleVSVSStepInputLevel0 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<input_level_0'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepInputLevel0Access().getInput_level_0Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel0Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepInputLevel0Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ifRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel0Access().getIfRefKeyword_3());
+		}
+		(
+			(
+				lv_ifRef_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_4_0, grammarAccess.getVSVSStepInputLevel0Access().getIfRefUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='delay_value='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel0Access().getDelay_valueKeyword_5());
+		}
+		(
+			(
+				lv_delay_value_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepInputLevel0Access().getDelay_valueUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"delay_value",
+						lv_delay_value_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='delay_unit='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel0Access().getDelay_unitKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepInputLevel0Access().getDelay_unitVSVSStepUnitEnumRuleCall_8_0());
+				}
+				lv_delay_unit_8_0=ruleVSVSStepUnit
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepInputLevel0Rule());
+					}
+					set(
+						$current,
+						"delay_unit",
+						lv_delay_unit_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel0Access().getGreaterThanSignKeyword_9());
+		}
+		(
+			otherlv_10='<level0'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepInputLevel0Access().getLevel0Keyword_10_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel0Access().getFormatKeyword_10_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepInputLevel0Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepInputLevel0Access().getLevel0TMTCIFFormatFormatCrossReference_10_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepInputLevel0Access().getSolidusGreaterThanSignKeyword_10_3());
+			}
+		)?
+		otherlv_14='<app_to_level0'
+		{
+			newLeafNode(otherlv_14, grammarAccess.getVSVSStepInputLevel0Access().getApp_to_level0Keyword_11());
+		}
+		otherlv_15='export='
+		{
+			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel0Access().getExportKeyword_12());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepInputLevel0Rule());
+					}
+				}
+				otherlv_16=RULE_STRING
+				{
+					newLeafNode(otherlv_16, grammarAccess.getVSVSStepInputLevel0Access().getApp_to_level0TMTCIFExportExportCrossReference_13_0());
+				}
+			)
+		)
+		otherlv_17='/>'
+		{
+			newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel0Access().getSolidusGreaterThanSignKeyword_14());
+		}
+		otherlv_18='</input_level_0>'
+		{
+			newLeafNode(otherlv_18, grammarAccess.getVSVSStepInputLevel0Access().getInput_level_0Keyword_15());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepOutputLevel3
+entryRuleVSVSStepOutputLevel3 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Rule()); }
+	iv_ruleVSVSStepOutputLevel3=ruleVSVSStepOutputLevel3
+	{ $current=$iv_ruleVSVSStepOutputLevel3.current; }
+	EOF;
+
+// Rule VSVSStepOutputLevel3
+ruleVSVSStepOutputLevel3 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<output_level_3'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel3Access().getOutput_level_3Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel3Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepOutputLevel3Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel3Access().getIdKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getIdINTEGERParserRuleCall_4_0());
+				}
+				lv_id_4_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='ifRef='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel3Access().getIfRefKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getIfRefINTEGERParserRuleCall_6_0());
+				}
+				lv_ifRef_6_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"ifRef",
+						lv_ifRef_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_7='optional='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel3Access().getOptionalKeyword_7_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getOptionalINTEGERParserRuleCall_7_1_0());
+					}
+					lv_optional_8_0=ruleINTEGER
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+						set(
+							$current,
+							"optional",
+							lv_optional_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel3Access().getGreaterThanSignKeyword_8());
+		}
+		(
+			otherlv_10='<level3'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepOutputLevel3Access().getLevel3Keyword_9_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_9_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputLevel3Access().getLevel3TMTCIFFormatFormatCrossReference_9_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_9_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getLevel3_filterVSVSStepLevel3FilterParserRuleCall_10_0());
+				}
+				lv_level3_filter_14_0=ruleVSVSStepLevel3Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"level3_filter",
+						lv_level3_filter_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel3Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_15='<level2'
+			{
+				newLeafNode(otherlv_15, grammarAccess.getVSVSStepOutputLevel3Access().getLevel2Keyword_11_0());
+			}
+			otherlv_16='format='
+			{
+				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_11_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_17=RULE_STRING
+					{
+						newLeafNode(otherlv_17, grammarAccess.getVSVSStepOutputLevel3Access().getLevel2TMTCIFFormatFormatCrossReference_11_2_0());
+					}
+				)
+			)
+			otherlv_18='/>'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_11_3());
+			}
+		)?
+		(
+			otherlv_19='<level3_from_level2'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepOutputLevel3Access().getLevel3_from_level2Keyword_12_0());
+			}
+			otherlv_20='import='
+			{
+				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_12_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_21=RULE_STRING
+					{
+						newLeafNode(otherlv_21, grammarAccess.getVSVSStepOutputLevel3Access().getLevel3_from_level2TMTCIFImportImportCrossReference_12_2_0());
+					}
+				)
+			)
+			otherlv_22='/>'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_12_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getLevel2_filterVSVSStepLevel2FilterParserRuleCall_13_0());
+				}
+				lv_level2_filter_23_0=ruleVSVSStepLevel2Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"level2_filter",
+						lv_level2_filter_23_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel2Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_24='<level1'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getVSVSStepOutputLevel3Access().getLevel1Keyword_14_0());
+			}
+			otherlv_25='format='
+			{
+				newLeafNode(otherlv_25, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_14_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_26=RULE_STRING
+					{
+						newLeafNode(otherlv_26, grammarAccess.getVSVSStepOutputLevel3Access().getLevel1TMTCIFFormatFormatCrossReference_14_2_0());
+					}
+				)
+			)
+			otherlv_27='/>'
+			{
+				newLeafNode(otherlv_27, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_14_3());
+			}
+		)?
+		(
+			otherlv_28='<level2_from_level1'
+			{
+				newLeafNode(otherlv_28, grammarAccess.getVSVSStepOutputLevel3Access().getLevel2_from_level1Keyword_15_0());
+			}
+			otherlv_29='import='
+			{
+				newLeafNode(otherlv_29, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_15_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_30=RULE_STRING
+					{
+						newLeafNode(otherlv_30, grammarAccess.getVSVSStepOutputLevel3Access().getLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0());
+					}
+				)
+			)
+			otherlv_31=';'
+			{
+				newLeafNode(otherlv_31, grammarAccess.getVSVSStepOutputLevel3Access().getSemicolonKeyword_15_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getLevel1_filterVSVSStepLevel1FilterParserRuleCall_16_0());
+				}
+				lv_level1_filter_32_0=ruleVSVSStepLevel1Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"level1_filter",
+						lv_level1_filter_32_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel1Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_33='<level0'
+			{
+				newLeafNode(otherlv_33, grammarAccess.getVSVSStepOutputLevel3Access().getLevel0Keyword_17_0());
+			}
+			otherlv_34='format='
+			{
+				newLeafNode(otherlv_34, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_17_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_35=RULE_STRING
+					{
+						newLeafNode(otherlv_35, grammarAccess.getVSVSStepOutputLevel3Access().getLevel0TMTCIFFormatFormatCrossReference_17_2_0());
+					}
+				)
+			)
+			otherlv_36='/>'
+			{
+				newLeafNode(otherlv_36, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_17_3());
+			}
+		)?
+		(
+			otherlv_37='<level1_from_level0'
+			{
+				newLeafNode(otherlv_37, grammarAccess.getVSVSStepOutputLevel3Access().getLevel1_from_level0Keyword_18_0());
+			}
+			otherlv_38='import='
+			{
+				newLeafNode(otherlv_38, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_18_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
+						}
+					}
+					otherlv_39=RULE_STRING
+					{
+						newLeafNode(otherlv_39, grammarAccess.getVSVSStepOutputLevel3Access().getLevel1_from_level0TMTCIFImportImportCrossReference_18_2_0());
+					}
+				)
+			)
+			otherlv_40='/>'
+			{
+				newLeafNode(otherlv_40, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_18_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getLevel0_filterVSVSStepLevel0FilterParserRuleCall_19_0());
+				}
+				lv_level0_filter_41_0=ruleVSVSStepLevel0Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+					}
+					set(
+						$current,
+						"level0_filter",
+						lv_level0_filter_41_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_42='</output_level_3>'
+		{
+			newLeafNode(otherlv_42, grammarAccess.getVSVSStepOutputLevel3Access().getOutput_level_3Keyword_20());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepOutputLevel2
+entryRuleVSVSStepOutputLevel2 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepOutputLevel2Rule()); }
+	iv_ruleVSVSStepOutputLevel2=ruleVSVSStepOutputLevel2
+	{ $current=$iv_ruleVSVSStepOutputLevel2.current; }
+	EOF;
+
+// Rule VSVSStepOutputLevel2
+ruleVSVSStepOutputLevel2 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='output_level_2'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel2Access().getOutput_level_2Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel2Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepOutputLevel2Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel2Access().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSStepOutputLevel2Access().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='ifRef='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel2Access().getIfRefKeyword_5());
+		}
+		(
+			(
+				lv_ifRef_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_6_0, grammarAccess.getVSVSStepOutputLevel2Access().getIfRefUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_7='optional='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel2Access().getOptionalKeyword_7_0());
+			}
+			(
+				(
+					lv_optional_8_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_optional_8_0, grammarAccess.getVSVSStepOutputLevel2Access().getOptionalUINT_STRINGTerminalRuleCall_7_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+						setWithLastConsumed(
+							$current,
+							"optional",
+							lv_optional_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel2Access().getGreaterThanSignKeyword_8());
+		}
+		(
+			otherlv_10='<level2'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepOutputLevel2Access().getLevel2Keyword_9_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_9_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputLevel2Access().getLevel2TMTCIFFormatFormatCrossReference_9_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepOutputLevel2Access().getSolidusGreaterThanSignKeyword_9_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel2Access().getLevel2_filterVSVSStepLevel2FilterParserRuleCall_10_0());
+				}
+				lv_level2_filter_14_0=ruleVSVSStepLevel2Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					set(
+						$current,
+						"level2_filter",
+						lv_level2_filter_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel2Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_15='<level1'
+			{
+				newLeafNode(otherlv_15, grammarAccess.getVSVSStepOutputLevel2Access().getLevel1Keyword_11_0());
+			}
+			otherlv_16='format='
+			{
+				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_11_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+					}
+					otherlv_17=RULE_STRING
+					{
+						newLeafNode(otherlv_17, grammarAccess.getVSVSStepOutputLevel2Access().getLevel1TMTCIFFormatFormatCrossReference_11_2_0());
+					}
+				)
+			)
+			otherlv_18='/>'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getVSVSStepOutputLevel2Access().getSolidusGreaterThanSignKeyword_11_3());
+			}
+		)?
+		(
+			otherlv_19='<level2_from_level1'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepOutputLevel2Access().getLevel2_from_level1Keyword_12_0());
+			}
+			otherlv_20='import='
+			{
+				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel2Access().getImportKeyword_12_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+					}
+					otherlv_21=RULE_STRING
+					{
+						newLeafNode(otherlv_21, grammarAccess.getVSVSStepOutputLevel2Access().getLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0());
+					}
+				)
+			)
+			otherlv_22=';'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepOutputLevel2Access().getSemicolonKeyword_12_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel2Access().getLevel1_filterVSVSStepLevel1FilterParserRuleCall_13_0());
+				}
+				lv_level1_filter_23_0=ruleVSVSStepLevel1Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					set(
+						$current,
+						"level1_filter",
+						lv_level1_filter_23_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel1Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_24='<level0'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getVSVSStepOutputLevel2Access().getLevel0Keyword_14_0());
+			}
+			otherlv_25='format='
+			{
+				newLeafNode(otherlv_25, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_14_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+					}
+					otherlv_26=RULE_STRING
+					{
+						newLeafNode(otherlv_26, grammarAccess.getVSVSStepOutputLevel2Access().getLevel0TMTCIFFormatFormatCrossReference_14_2_0());
+					}
+				)
+			)
+			otherlv_27='/>'
+			{
+				newLeafNode(otherlv_27, grammarAccess.getVSVSStepOutputLevel2Access().getSolidusGreaterThanSignKeyword_14_3());
+			}
+		)?
+		(
+			otherlv_28='<level1_from_level0'
+			{
+				newLeafNode(otherlv_28, grammarAccess.getVSVSStepOutputLevel2Access().getLevel1_from_level0Keyword_15_0());
+			}
+			otherlv_29='import='
+			{
+				newLeafNode(otherlv_29, grammarAccess.getVSVSStepOutputLevel2Access().getImportKeyword_15_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel2Rule());
+						}
+					}
+					otherlv_30=RULE_STRING
+					{
+						newLeafNode(otherlv_30, grammarAccess.getVSVSStepOutputLevel2Access().getLevel1_from_level0TMTCIFImportImportCrossReference_15_2_0());
+					}
+				)
+			)
+			otherlv_31='/>'
+			{
+				newLeafNode(otherlv_31, grammarAccess.getVSVSStepOutputLevel2Access().getSolidusGreaterThanSignKeyword_15_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel2Access().getLevel0_filterVSVSStepLevel0FilterParserRuleCall_16_0());
+				}
+				lv_level0_filter_32_0=ruleVSVSStepLevel0Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel2Rule());
+					}
+					set(
+						$current,
+						"level0_filter",
+						lv_level0_filter_32_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_33='</output_level_2>'
+		{
+			newLeafNode(otherlv_33, grammarAccess.getVSVSStepOutputLevel2Access().getOutput_level_2Keyword_17());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepOutputLevel1
+entryRuleVSVSStepOutputLevel1 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepOutputLevel1Rule()); }
+	iv_ruleVSVSStepOutputLevel1=ruleVSVSStepOutputLevel1
+	{ $current=$iv_ruleVSVSStepOutputLevel1.current; }
+	EOF;
+
+// Rule VSVSStepOutputLevel1
+ruleVSVSStepOutputLevel1 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='output_level_1'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel1Access().getOutput_level_1Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel1Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepOutputLevel1Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel1Access().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSStepOutputLevel1Access().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='ifRef='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel1Access().getIfRefKeyword_5());
+		}
+		(
+			(
+				lv_ifRef_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_6_0, grammarAccess.getVSVSStepOutputLevel1Access().getIfRefUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_7='optional='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel1Access().getOptionalKeyword_7_0());
+			}
+			(
+				(
+					lv_optional_8_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_optional_8_0, grammarAccess.getVSVSStepOutputLevel1Access().getOptionalUINT_STRINGTerminalRuleCall_7_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+						}
+						setWithLastConsumed(
+							$current,
+							"optional",
+							lv_optional_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel1Access().getGreaterThanSignKeyword_8());
+		}
+		(
+			otherlv_10='<level1'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepOutputLevel1Access().getLevel1Keyword_9_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel1Access().getFormatKeyword_9_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputLevel1Access().getLevel1TMTCIFFormatFormatCrossReference_9_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepOutputLevel1Access().getSolidusGreaterThanSignKeyword_9_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel1Access().getLevel1_filterVSVSStepLevel1FilterParserRuleCall_10_0());
+				}
+				lv_level1_filter_14_0=ruleVSVSStepLevel1Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel1Rule());
+					}
+					set(
+						$current,
+						"level1_filter",
+						lv_level1_filter_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel1Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_15='<level0'
+			{
+				newLeafNode(otherlv_15, grammarAccess.getVSVSStepOutputLevel1Access().getLevel0Keyword_11_0());
+			}
+			otherlv_16='format='
+			{
+				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel1Access().getFormatKeyword_11_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+						}
+					}
+					otherlv_17=RULE_STRING
+					{
+						newLeafNode(otherlv_17, grammarAccess.getVSVSStepOutputLevel1Access().getLevel0TMTCIFFormatFormatCrossReference_11_2_0());
+					}
+				)
+			)
+			otherlv_18='/>'
+			{
+				newLeafNode(otherlv_18, grammarAccess.getVSVSStepOutputLevel1Access().getSolidusGreaterThanSignKeyword_11_3());
+			}
+		)?
+		(
+			otherlv_19='<level1_from_level0'
+			{
+				newLeafNode(otherlv_19, grammarAccess.getVSVSStepOutputLevel1Access().getLevel1_from_level0Keyword_12_0());
+			}
+			otherlv_20='import='
+			{
+				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel1Access().getImportKeyword_12_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel1Rule());
+						}
+					}
+					otherlv_21=RULE_STRING
+					{
+						newLeafNode(otherlv_21, grammarAccess.getVSVSStepOutputLevel1Access().getLevel1_from_level0TMTCIFImportImportCrossReference_12_2_0());
+					}
+				)
+			)
+			otherlv_22='/>'
+			{
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepOutputLevel1Access().getSolidusGreaterThanSignKeyword_12_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel1Access().getLevel0_filterVSVSStepLevel0FilterParserRuleCall_13_0());
+				}
+				lv_level0_filter_23_0=ruleVSVSStepLevel0Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel1Rule());
+					}
+					set(
+						$current,
+						"level0_filter",
+						lv_level0_filter_23_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_24='</output_level_1>'
+		{
+			newLeafNode(otherlv_24, grammarAccess.getVSVSStepOutputLevel1Access().getOutput_level_1Keyword_14());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepOutputLevel0
+entryRuleVSVSStepOutputLevel0 returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepOutputLevel0Rule()); }
+	iv_ruleVSVSStepOutputLevel0=ruleVSVSStepOutputLevel0
+	{ $current=$iv_ruleVSVSStepOutputLevel0.current; }
+	EOF;
+
+// Rule VSVSStepOutputLevel0
+ruleVSVSStepOutputLevel0 returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<output_level_0'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel0Access().getOutput_level_0Keyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel0Access().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepOutputLevel0Access().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel0Access().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSStepOutputLevel0Access().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='ifRef='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel0Access().getIfRefKeyword_5());
+		}
+		(
+			(
+				lv_ifRef_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_ifRef_6_0, grammarAccess.getVSVSStepOutputLevel0Access().getIfRefUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel0Rule());
+					}
+					setWithLastConsumed(
+						$current,
+						"ifRef",
+						lv_ifRef_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_7='optional='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel0Access().getOptionalKeyword_7_0());
+			}
+			(
+				(
+					lv_optional_8_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_optional_8_0, grammarAccess.getVSVSStepOutputLevel0Access().getOptionalUINT_STRINGTerminalRuleCall_7_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel0Rule());
+						}
+						setWithLastConsumed(
+							$current,
+							"optional",
+							lv_optional_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel0Access().getGreaterThanSignKeyword_8());
+		}
+		(
+			otherlv_10='<level0'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSStepOutputLevel0Access().getLevel0Keyword_9_0());
+			}
+			otherlv_11='format='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel0Access().getFormatKeyword_9_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel0Rule());
+						}
+					}
+					otherlv_12=RULE_STRING
+					{
+						newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputLevel0Access().getLevel0TMTCIFFormatFormatCrossReference_9_2_0());
+					}
+				)
+			)
+			otherlv_13='/>'
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSVSStepOutputLevel0Access().getSolidusGreaterThanSignKeyword_9_3());
+			}
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepOutputLevel0Access().getLevel0_filterVSVSStepLevel0FilterParserRuleCall_10_0());
+				}
+				lv_level0_filter_14_0=ruleVSVSStepLevel0Filter
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel0Rule());
+					}
+					set(
+						$current,
+						"level0_filter",
+						lv_level0_filter_14_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_15='</output_level_0>'
+		{
+			newLeafNode(otherlv_15, grammarAccess.getVSVSStepOutputLevel0Access().getOutput_level_0Keyword_11());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepLevel3Filter
+entryRuleVSVSStepLevel3Filter returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepLevel3FilterRule()); }
+	iv_ruleVSVSStepLevel3Filter=ruleVSVSStepLevel3Filter
+	{ $current=$iv_ruleVSVSStepLevel3Filter.current; }
+	EOF;
+
+// Rule VSVSStepLevel3Filter
+ruleVSVSStepLevel3Filter returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<level3_filter'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepLevel3FilterAccess().getLevel3_filterKeyword_0());
+		}
+		otherlv_1='apply_def_filter='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel3FilterAccess().getApply_def_filterKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepLevel3FilterAccess().getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0());
+				}
+				lv_apply_def_filter_2_0=ruleVSVSStepYesNo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepLevel3FilterRule());
+					}
+					set(
+						$current,
+						"apply_def_filter",
+						lv_apply_def_filter_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel3FilterAccess().getSemicolonKeyword_3());
+		}
+		(
+			otherlv_4='extra_filter='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterKeyword_4_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepLevel3FilterRule());
+						}
+					}
+					otherlv_5=RULE_STRING
+					{
+						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+					}
+				)
+			)
+			otherlv_6=';'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel3FilterAccess().getSemicolonKeyword_4_2());
+			}
+		)?
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel3FilterAccess().getSolidusGreaterThanSignKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepLevel2Filter
+entryRuleVSVSStepLevel2Filter returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepLevel2FilterRule()); }
+	iv_ruleVSVSStepLevel2Filter=ruleVSVSStepLevel2Filter
+	{ $current=$iv_ruleVSVSStepLevel2Filter.current; }
+	EOF;
+
+// Rule VSVSStepLevel2Filter
+ruleVSVSStepLevel2Filter returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<level2_filter'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepLevel2FilterAccess().getLevel2_filterKeyword_0());
+		}
+		otherlv_1='apply_def_filter='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel2FilterAccess().getApply_def_filterKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepLevel2FilterAccess().getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0());
+				}
+				lv_apply_def_filter_2_0=ruleVSVSStepYesNo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepLevel2FilterRule());
+					}
+					set(
+						$current,
+						"apply_def_filter",
+						lv_apply_def_filter_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel2FilterAccess().getSemicolonKeyword_3());
+		}
+		(
+			otherlv_4='extra_filter='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterKeyword_4_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepLevel2FilterRule());
+						}
+					}
+					otherlv_5=RULE_STRING
+					{
+						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+					}
+				)
+			)
+			otherlv_6=';'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel2FilterAccess().getSemicolonKeyword_4_2());
+			}
+		)?
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel2FilterAccess().getSolidusGreaterThanSignKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepLevel1Filter
+entryRuleVSVSStepLevel1Filter returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepLevel1FilterRule()); }
+	iv_ruleVSVSStepLevel1Filter=ruleVSVSStepLevel1Filter
+	{ $current=$iv_ruleVSVSStepLevel1Filter.current; }
+	EOF;
+
+// Rule VSVSStepLevel1Filter
+ruleVSVSStepLevel1Filter returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<level1_filter'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepLevel1FilterAccess().getLevel1_filterKeyword_0());
+		}
+		otherlv_1='apply_def_filter='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel1FilterAccess().getApply_def_filterKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepLevel1FilterAccess().getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0());
+				}
+				lv_apply_def_filter_2_0=ruleVSVSStepYesNo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepLevel1FilterRule());
+					}
+					set(
+						$current,
+						"apply_def_filter",
+						lv_apply_def_filter_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel1FilterAccess().getSemicolonKeyword_3());
+		}
+		(
+			otherlv_4='extra_filter='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterKeyword_4_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepLevel1FilterRule());
+						}
+					}
+					otherlv_5=RULE_STRING
+					{
+						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+					}
+				)
+			)
+			otherlv_6=';'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel1FilterAccess().getSemicolonKeyword_4_2());
+			}
+		)?
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel1FilterAccess().getSolidusGreaterThanSignKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepLevel0Filter
+entryRuleVSVSStepLevel0Filter returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepLevel0FilterRule()); }
+	iv_ruleVSVSStepLevel0Filter=ruleVSVSStepLevel0Filter
+	{ $current=$iv_ruleVSVSStepLevel0Filter.current; }
+	EOF;
+
+// Rule VSVSStepLevel0Filter
+ruleVSVSStepLevel0Filter returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<level0_filter'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepLevel0FilterAccess().getLevel0_filterKeyword_0());
+		}
+		otherlv_1='apply_def_filter='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel0FilterAccess().getApply_def_filterKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepLevel0FilterAccess().getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0());
+				}
+				lv_apply_def_filter_2_0=ruleVSVSStepYesNo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepLevel0FilterRule());
+					}
+					set(
+						$current,
+						"apply_def_filter",
+						lv_apply_def_filter_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel0FilterAccess().getSemicolonKeyword_3());
+		}
+		(
+			otherlv_4='extra_filter='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterKeyword_4_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepLevel0FilterRule());
+						}
+					}
+					otherlv_5=RULE_STRING
+					{
+						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+					}
+				)
+			)
+			otherlv_6=';'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel0FilterAccess().getSemicolonKeyword_4_2());
+			}
+		)?
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel0FilterAccess().getSolidusGreaterThanSignKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepEnable
+entryRuleVSVSStepEnable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepEnableRule()); }
+	iv_ruleVSVSStepEnable=ruleVSVSStepEnable
+	{ $current=$iv_ruleVSVSStepEnable.current; }
+	EOF;
+
+// Rule VSVSStepEnable
+ruleVSVSStepEnable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<enable'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepEnableAccess().getEnableKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepEnableAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepEnableAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepEnableRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnableAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='/>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepEnableAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepDisable
+entryRuleVSVSStepDisable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepDisableRule()); }
+	iv_ruleVSVSStepDisable=ruleVSVSStepDisable
+	{ $current=$iv_ruleVSVSStepDisable.current; }
+	EOF;
+
+// Rule VSVSStepDisable
+ruleVSVSStepDisable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<disable'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepDisableAccess().getDisableKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepDisableAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepDisableAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepDisableRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisableAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='/>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepDisableAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepEnablePrint
+entryRuleVSVSStepEnablePrint returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepEnablePrintRule()); }
+	iv_ruleVSVSStepEnablePrint=ruleVSVSStepEnablePrint
+	{ $current=$iv_ruleVSVSStepEnablePrint.current; }
+	EOF;
+
+// Rule VSVSStepEnablePrint
+ruleVSVSStepEnablePrint returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<enable_print'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepEnablePrintAccess().getEnable_printKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepEnablePrintAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepEnablePrintAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepEnablePrintRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnablePrintAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='/>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepEnablePrintAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepDisablePrint
+entryRuleVSVSStepDisablePrint returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepDisablePrintRule()); }
+	iv_ruleVSVSStepDisablePrint=ruleVSVSStepDisablePrint
+	{ $current=$iv_ruleVSVSStepDisablePrint.current; }
+	EOF;
+
+// Rule VSVSStepDisablePrint
+ruleVSVSStepDisablePrint returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<disable_print'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepDisablePrintAccess().getDisable_printKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepDisablePrintAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepDisablePrintAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepDisablePrintRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisablePrintAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='/>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepDisablePrintAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepNextStep
+entryRuleVSVSStepNextStep returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepNextStepRule()); }
+	iv_ruleVSVSStepNextStep=ruleVSVSStepNextStep
+	{ $current=$iv_ruleVSVSStepNextStep.current; }
+	EOF;
+
+// Rule VSVSStepNextStep
+ruleVSVSStepNextStep returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<nextStep'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepNextStepAccess().getNextStepKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepNextStepAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepNextStepAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepNextStepRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepNextStepAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='isConcurrent='
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentKeyword_4());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentVSVSStepYesNoEnumRuleCall_5_0());
+				}
+				lv_isConcurrent_5_0=ruleVSVSStepYesNo
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepNextStepRule());
+					}
+					set(
+						$current,
+						"isConcurrent",
+						lv_isConcurrent_5_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_6=';'
+		{
+			newLeafNode(otherlv_6, grammarAccess.getVSVSStepNextStepAccess().getSemicolonKeyword_6());
+		}
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepNextStepAccess().getSolidusGreaterThanSignKeyword_7());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepConcurrentStep
+entryRuleVSVSStepConcurrentStep returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepConcurrentStepRule()); }
+	iv_ruleVSVSStepConcurrentStep=ruleVSVSStepConcurrentStep
+	{ $current=$iv_ruleVSVSStepConcurrentStep.current; }
+	EOF;
+
+// Rule VSVSStepConcurrentStep
+ruleVSVSStepConcurrentStep returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<concurrent_step'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepConcurrentStepAccess().getConcurrent_stepKeyword_0());
+		}
+		otherlv_1='id='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConcurrentStepAccess().getIdKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepAccess().getIdINTEGERParserRuleCall_2_0());
+				}
+				lv_id_2_0=ruleINTEGER
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepConcurrentStepRule());
+					}
+					set(
+						$current,
+						"id",
+						lv_id_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_3=';'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepAccess().getSemicolonKeyword_3());
+		}
+		otherlv_4='/>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSVSStepConcurrentStepAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleQualifiedName
+entryRuleQualifiedName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getQualifiedNameRule()); }
+	iv_ruleQualifiedName=ruleQualifiedName
+	{ $current=$iv_ruleQualifiedName.current.getText(); }
+	EOF;
+
+// Rule QualifiedName
+ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		this_ID_0=RULE_ID
+		{
+			$current.merge(this_ID_0);
+		}
+		{
+			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
+		}
+		(
+			kw='.'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
+			}
+			this_ID_2=RULE_ID
+			{
+				$current.merge(this_ID_2);
+			}
+			{
+				newLeafNode(this_ID_2, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_1_1());
+			}
+		)*
+	)
+;
+
+// Entry rule entryRuleVersion
+entryRuleVersion returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionRule()); }
+	iv_ruleVersion=ruleVersion
+	{ $current=$iv_ruleVersion.current.getText(); }
+	EOF;
+
+// Rule Version
+ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			this_INT_0=RULE_INT
+			{
+				$current.merge(this_INT_0);
+			}
+			{
+				newLeafNode(this_INT_0, grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_0());
+			}
+			    |
+			(
+				(
+					this_INT_1=RULE_INT
+					{
+						$current.merge(this_INT_1);
+					}
+					{
+						newLeafNode(this_INT_1, grammarAccess.getVersionAccess().getINTTerminalRuleCall_0_1_0());
+					}
+				)?
+				this_ID_2=RULE_ID
+				{
+					$current.merge(this_ID_2);
+				}
+				{
+					newLeafNode(this_ID_2, grammarAccess.getVersionAccess().getIDTerminalRuleCall_0_1_1());
+				}
+			)
+		)
+		(
+			kw='.'
+			{
+				$current.merge(kw);
+				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
+			}
+			(
+				this_INT_4=RULE_INT
+				{
+					$current.merge(this_INT_4);
+				}
+				{
+					newLeafNode(this_INT_4, grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_0());
+				}
+				    |
+				(
+					(
+						this_INT_5=RULE_INT
+						{
+							$current.merge(this_INT_5);
+						}
+						{
+							newLeafNode(this_INT_5, grammarAccess.getVersionAccess().getINTTerminalRuleCall_1_1_1_0());
+						}
+					)?
+					this_ID_6=RULE_ID
+					{
+						$current.merge(this_ID_6);
+					}
+					{
+						newLeafNode(this_ID_6, grammarAccess.getVersionAccess().getIDTerminalRuleCall_1_1_1_1());
+					}
+				)
+			)
+		)*
+	)
+;
+
+// Entry rule entryRuleVersionedQualifiedName
+entryRuleVersionedQualifiedName returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); }
+	iv_ruleVersionedQualifiedName=ruleVersionedQualifiedName
+	{ $current=$iv_ruleVersionedQualifiedName.current.getText(); }
+	EOF;
+
+// Rule VersionedQualifiedName
+ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
+		}
+		this_QualifiedName_0=ruleQualifiedName
+		{
+			$current.merge(this_QualifiedName_0);
+		}
+		{
+			afterParserOrEnumRuleCall();
+		}
+		kw='('
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getLeftParenthesisKeyword_1());
+		}
+		{
+			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
+		}
+		this_Version_2=ruleVersion
+		{
+			$current.merge(this_Version_2);
+		}
+		{
+			afterParserOrEnumRuleCall();
+		}
+		kw=')'
+		{
+			$current.merge(kw);
+			newLeafNode(kw, grammarAccess.getVersionedQualifiedNameAccess().getRightParenthesisKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleINTEGER
+entryRuleINTEGER returns [String current=null]:
+	{ newCompositeNode(grammarAccess.getINTEGERRule()); }
+	iv_ruleINTEGER=ruleINTEGER
+	{ $current=$iv_ruleINTEGER.current.getText(); }
+	EOF;
+
+// Rule INTEGER
+ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				kw='-'
+				{
+					$current.merge(kw);
+					newLeafNode(kw, grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0());
+				}
+			)?
+			this_INT_1=RULE_INT
+			{
+				$current.merge(this_INT_1);
+			}
+			{
+				newLeafNode(this_INT_1, grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1());
+			}
+		)
+		    |
+		this_HEXADECIMAL_2=RULE_HEXADECIMAL
+		{
+			$current.merge(this_HEXADECIMAL_2);
+		}
+		{
+			newLeafNode(this_HEXADECIMAL_2, grammarAccess.getINTEGERAccess().getHEXADECIMALTerminalRuleCall_1());
+		}
+	)
+;
+
+// Rule VSVSStepMode
+ruleVSVSStepMode returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"continuous"'
+			{
+				$current = grammarAccess.getVSVSStepModeAccess().getContinuousEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepModeAccess().getContinuousEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"manual"'
+			{
+				$current = grammarAccess.getVSVSStepModeAccess().getManualEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepModeAccess().getManualEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='"concurrent"'
+			{
+				$current = grammarAccess.getVSVSStepModeAccess().getConcurrentEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getVSVSStepModeAccess().getConcurrentEnumLiteralDeclaration_2());
+			}
+		)
+	)
+;
+
+// Rule VSVSStepUnit
+ruleVSVSStepUnit returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"miliseconds"'
+			{
+				$current = grammarAccess.getVSVSStepUnitAccess().getMilisecondsEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepUnitAccess().getMilisecondsEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"seconds"'
+			{
+				$current = grammarAccess.getVSVSStepUnitAccess().getSecondsEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepUnitAccess().getSecondsEnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
+// Rule VSVSStepCheckmode
+ruleVSVSStepCheckmode returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"all"'
+			{
+				$current = grammarAccess.getVSVSStepCheckmodeAccess().getAllEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepCheckmodeAccess().getAllEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"allunsorted"'
+			{
+				$current = grammarAccess.getVSVSStepCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='"any"'
+			{
+				$current = grammarAccess.getVSVSStepCheckmodeAccess().getAnyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getVSVSStepCheckmodeAccess().getAnyEnumLiteralDeclaration_2());
+			}
+		)
+	)
+;
+
+// Rule VSVSStepYesNo
+ruleVSVSStepYesNo returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='yes'
+			{
+				$current = grammarAccess.getVSVSStepYesNoAccess().getYesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepYesNoAccess().getYesEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='no'
+			{
+				$current = grammarAccess.getVSVSStepYesNoAccess().getNoEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepYesNoAccess().getNoEnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
 RULE_RUNTEXT : '<text>' ( options {greedy=false;} : . )*'</text>';
+
+RULE_HEXADECIMAL : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
+
+RULE_UINT_STRING : '"' ('0'..'9')+ '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

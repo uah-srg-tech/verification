@@ -16,6 +16,7 @@ import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -1411,13 +1412,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
-	 * The feature id for the '<em><b>Steps</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Procedure Steps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Test Script</b></em>' containment reference.
@@ -1456,6 +1457,52 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl <em>VSVS Procedure Steps</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
+	 * @generated
+	 */
+	int VSVS_PROCEDURE_STEPS = 19;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS__STEP = 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Procedure Steps</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Procedure Steps</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl <em>VSVS Procedure Step</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1463,7 +1510,106 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureStep()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEP = 19;
+	int VSVS_PROCEDURE_STEP = 20;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__ID = 2;
+
+	/**
+	 * The feature id for the '<em><b>Mode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__MODE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Replays</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__REPLAYS = 4;
+
+	/**
+	 * The feature id for the '<em><b>Prev step idref</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__PREV_STEP_IDREF = 5;
+
+	/**
+	 * The feature id for the '<em><b>Output idref from prev step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP = 6;
+
+	/**
+	 * The feature id for the '<em><b>Inputs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__INPUTS = 7;
+
+	/**
+	 * The feature id for the '<em><b>Outputs</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__OUTPUTS = 8;
+
+	/**
+	 * The feature id for the '<em><b>Special Packets</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__SPECIAL_PACKETS = 9;
+
+	/**
+	 * The feature id for the '<em><b>Concurrent steps</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEP__CONCURRENT_STEPS = 10;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Procedure Step</em>' class.
@@ -1472,7 +1618,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEP_FEATURE_COUNT = 0;
+	int VSVS_PROCEDURE_STEP_FEATURE_COUNT = 11;
 
 	/**
 	 * The number of operations of the '<em>VSVS Procedure Step</em>' class.
@@ -1484,6 +1630,1491 @@ public interface svsPackage extends EPackage {
 	int VSVS_PROCEDURE_STEP_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputsImpl <em>VSVS Step Inputs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUTS = 21;
+
+	/**
+	 * The feature id for the '<em><b>Input level 3</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS__INPUT_LEVEL_3 = 0;
+
+	/**
+	 * The feature id for the '<em><b>Input level 2</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS__INPUT_LEVEL_2 = 1;
+
+	/**
+	 * The feature id for the '<em><b>Input level 1</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS__INPUT_LEVEL_1 = 2;
+
+	/**
+	 * The feature id for the '<em><b>Input level 0</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS__INPUT_LEVEL_0 = 3;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Inputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl <em>VSVS Step Outputs</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUTS = 22;
+
+	/**
+	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__CHECKMODE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Valid time interval value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_VALUE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Valid time interval unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Output level 3</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3 = 3;
+
+	/**
+	 * The feature id for the '<em><b>Output level 2</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2 = 4;
+
+	/**
+	 * The feature id for the '<em><b>Output level 1</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1 = 5;
+
+	/**
+	 * The feature id for the '<em><b>Output level 0</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0 = 6;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Outputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS_FEATURE_COUNT = 7;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Outputs</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUTS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepSpecialPacketsImpl <em>VSVS Step Special Packets</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepSpecialPacketsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepSpecialPackets()
+	 * @generated
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS = 23;
+
+	/**
+	 * The feature id for the '<em><b>Enable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS__ENABLE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Disable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS__DISABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Enable print</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS__ENABLE_PRINT = 2;
+
+	/**
+	 * The feature id for the '<em><b>Disable print</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS__DISABLE_PRINT = 3;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Special Packets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Special Packets</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_SPECIAL_PACKETS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepEnableDisableImpl <em>VSVS Step Enable Disable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepEnableDisableImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepEnableDisable()
+	 * @generated
+	 */
+	int VSVS_STEP_ENABLE_DISABLE = 24;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_ENABLE_DISABLE__ID = 0;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Enable Disable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_ENABLE_DISABLE_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Enable Disable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_ENABLE_DISABLE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepsImpl <em>VSVS Step Concurrent Steps</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentSteps()
+	 * @generated
+	 */
+	int VSVS_STEP_CONCURRENT_STEPS = 25;
+
+	/**
+	 * The feature id for the '<em><b>Next Step</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEPS__NEXT_STEP = 0;
+
+	/**
+	 * The feature id for the '<em><b>Concurrent step</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEPS__CONCURRENT_STEP = 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Concurrent Steps</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEPS_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Concurrent Steps</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEPS_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepNextStepImpl <em>VSVS Step Next Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepNextStepImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepNextStep()
+	 * @generated
+	 */
+	int VSVS_STEP_NEXT_STEP = 26;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_NEXT_STEP__ID = 0;
+
+	/**
+	 * The feature id for the '<em><b>Is Concurrent</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_NEXT_STEP__IS_CONCURRENT = 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Next Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_NEXT_STEP_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Next Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_NEXT_STEP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepImpl <em>VSVS Step Concurrent Step</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentStep()
+	 * @generated
+	 */
+	int VSVS_STEP_CONCURRENT_STEP = 27;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEP__ID = 0;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Concurrent Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEP_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Concurrent Step</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_CONCURRENT_STEP_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl <em>VSVS Step Input</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInput()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUT = 28;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT__IF_REF = 1;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT__DELAY_VALUE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT__DELAY_UNIT = 3;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Input</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel3Impl <em>VSVS Step Input Level3</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel3Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUT_LEVEL3 = 29;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__NAME = VSVS_STEP_INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__IF_REF = VSVS_STEP_INPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__DELAY_VALUE = VSVS_STEP_INPUT__DELAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__DELAY_UNIT = VSVS_STEP_INPUT__DELAY_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Level3</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL3 = VSVS_STEP_INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>App to level3</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__APP_TO_LEVEL3 = VSVS_STEP_INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL2 = VSVS_STEP_INPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level3 to level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL3_TO_LEVEL2 = VSVS_STEP_INPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL2_TO_LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3__LEVEL1_TO_LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Input Level3</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3_FEATURE_COUNT = VSVS_STEP_INPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Input Level3</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL3_OPERATION_COUNT = VSVS_STEP_INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel2Impl <em>VSVS Step Input Level2</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel2Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUT_LEVEL2 = 30;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__NAME = VSVS_STEP_INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__IF_REF = VSVS_STEP_INPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__DELAY_VALUE = VSVS_STEP_INPUT__DELAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__DELAY_UNIT = VSVS_STEP_INPUT__DELAY_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__LEVEL2 = VSVS_STEP_INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>App to level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__APP_TO_LEVEL2 = VSVS_STEP_INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level2 to level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__LEVEL2_TO_LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2__LEVEL1_TO_LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Input Level2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2_FEATURE_COUNT = VSVS_STEP_INPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Input Level2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL2_OPERATION_COUNT = VSVS_STEP_INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel1Impl <em>VSVS Step Input Level1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel1Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel1()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUT_LEVEL1 = 31;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__NAME = VSVS_STEP_INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__IF_REF = VSVS_STEP_INPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__DELAY_VALUE = VSVS_STEP_INPUT__DELAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__DELAY_UNIT = VSVS_STEP_INPUT__DELAY_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>App to level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__APP_TO_LEVEL1 = VSVS_STEP_INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level1 to level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1__LEVEL1_TO_LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Input Level1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1_FEATURE_COUNT = VSVS_STEP_INPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Input Level1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL1_OPERATION_COUNT = VSVS_STEP_INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel0Impl <em>VSVS Step Input Level0</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel0Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel0()
+	 * @generated
+	 */
+	int VSVS_STEP_INPUT_LEVEL0 = 32;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__NAME = VSVS_STEP_INPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__IF_REF = VSVS_STEP_INPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Delay value</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__DELAY_VALUE = VSVS_STEP_INPUT__DELAY_VALUE;
+
+	/**
+	 * The feature id for the '<em><b>Delay unit</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__DELAY_UNIT = VSVS_STEP_INPUT__DELAY_UNIT;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>App to level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0__APP_TO_LEVEL0 = VSVS_STEP_INPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Input Level0</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0_FEATURE_COUNT = VSVS_STEP_INPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Input Level0</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_INPUT_LEVEL0_OPERATION_COUNT = VSVS_STEP_INPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputImpl <em>VSVS Step Output</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutput()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUT = 33;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT__ID = 1;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT__IF_REF = 2;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT__OPTIONAL = 3;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Output</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel3Impl <em>VSVS Step Output Level3</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel3Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3 = 34;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__NAME = VSVS_STEP_OUTPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__ID = VSVS_STEP_OUTPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__IF_REF = VSVS_STEP_OUTPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__OPTIONAL = VSVS_STEP_OUTPUT__OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Level3</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL3 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Level3 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL2 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level3 from level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Level2 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL1 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 9;
+
+	/**
+	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3__LEVEL0_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 10;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Output Level3</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3_FEATURE_COUNT = VSVS_STEP_OUTPUT_FEATURE_COUNT + 11;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Output Level3</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL3_OPERATION_COUNT = VSVS_STEP_OUTPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel2Impl <em>VSVS Step Output Level2</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel2Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2 = 35;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__NAME = VSVS_STEP_OUTPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__ID = VSVS_STEP_OUTPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__IF_REF = VSVS_STEP_OUTPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__OPTIONAL = VSVS_STEP_OUTPUT__OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Level2</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL2 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Level2 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL1 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level2 from level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 6;
+
+	/**
+	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2__LEVEL0_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 7;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Output Level2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2_FEATURE_COUNT = VSVS_STEP_OUTPUT_FEATURE_COUNT + 8;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Output Level2</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL2_OPERATION_COUNT = VSVS_STEP_OUTPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel1Impl <em>VSVS Step Output Level1</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel1Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1 = 36;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__NAME = VSVS_STEP_OUTPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__ID = VSVS_STEP_OUTPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__IF_REF = VSVS_STEP_OUTPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__OPTIONAL = VSVS_STEP_OUTPUT__OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Level1</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__LEVEL1 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Level1 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Level1 from level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FROM_LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1__LEVEL0_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 4;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Output Level1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1_FEATURE_COUNT = VSVS_STEP_OUTPUT_FEATURE_COUNT + 5;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Output Level1</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL1_OPERATION_COUNT = VSVS_STEP_OUTPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel0Impl <em>VSVS Step Output Level0</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel0Impl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel0()
+	 * @generated
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0 = 37;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__NAME = VSVS_STEP_OUTPUT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__ID = VSVS_STEP_OUTPUT__ID;
+
+	/**
+	 * The feature id for the '<em><b>If Ref</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__IF_REF = VSVS_STEP_OUTPUT__IF_REF;
+
+	/**
+	 * The feature id for the '<em><b>Optional</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__OPTIONAL = VSVS_STEP_OUTPUT__OPTIONAL;
+
+	/**
+	 * The feature id for the '<em><b>Level0</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__LEVEL0 = VSVS_STEP_OUTPUT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Level0 filter</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0__LEVEL0_FILTER = VSVS_STEP_OUTPUT_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Output Level0</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0_FEATURE_COUNT = VSVS_STEP_OUTPUT_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Output Level0</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_OUTPUT_LEVEL0_OPERATION_COUNT = VSVS_STEP_OUTPUT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepFilterImpl <em>VSVS Step Filter</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepFilterImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepFilter()
+	 * @generated
+	 */
+	int VSVS_STEP_FILTER = 38;
+
+	/**
+	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_FILTER__APPLY_DEF_FILTER = 0;
+
+	/**
+	 * The feature id for the '<em><b>Extra filter</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_FILTER__EXTRA_FILTER = 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Step Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_FILTER_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VSVS Step Filter</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_STEP_FILTER_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSAnalysisInspectionReviewImpl <em>VSVS Analysis Inspection Review</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1491,7 +3122,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAnalysisInspectionReview()
 	 * @generated
 	 */
-	int VSVS_ANALYSIS_INSPECTION_REVIEW = 20;
+	int VSVS_ANALYSIS_INSPECTION_REVIEW = 39;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1546,7 +3177,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestPlatformRequirements()
 	 * @generated
 	 */
-	int VSVS_TEST_PLATFORM_REQUIREMENTS = 21;
+	int VSVS_TEST_PLATFORM_REQUIREMENTS = 40;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1601,7 +3232,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAdditionalInformation()
 	 * @generated
 	 */
-	int VSVS_ADDITIONAL_INFORMATION = 22;
+	int VSVS_ADDITIONAL_INFORMATION = 41;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1647,6 +3278,46 @@ public interface svsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSVS_ADDITIONAL_INFORMATION_OPERATION_COUNT = VSVS_FIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepMode <em>VSVS Step Mode</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepMode
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepMode()
+	 * @generated
+	 */
+	int VSVS_STEP_MODE = 42;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit <em>VSVS Step Unit</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepUnit()
+	 * @generated
+	 */
+	int VSVS_STEP_UNIT = 43;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode <em>VSVS Step Checkmode</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepCheckmode()
+	 * @generated
+	 */
+	int VSVS_STEP_CHECKMODE = 44;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo <em>VSVS Step Yes No</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepYesNo()
+	 * @generated
+	 */
+	int VSVS_STEP_YES_NO = 45;
 
 
 	/**
@@ -2412,15 +4083,15 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestProcedure_Purpose();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getSteps <em>Steps</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getProcedureSteps <em>Procedure Steps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Steps</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getSteps()
+	 * @return the meta object for the containment reference '<em>Procedure Steps</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getProcedureSteps()
 	 * @see #getVSVSTestProcedure()
 	 * @generated
 	 */
-	EReference getVSVSTestProcedure_Steps();
+	EReference getVSVSTestProcedure_ProcedureSteps();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestScript <em>Test Script</em>}'.
@@ -2445,6 +4116,38 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestProcedure_TestCase();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps <em>VSVS Procedure Steps</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Procedure Steps</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps
+	 * @generated
+	 */
+	EClass getVSVSProcedureSteps();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getName()
+	 * @see #getVSVSProcedureSteps()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureSteps_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getStep <em>Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getStep()
+	 * @see #getVSVSProcedureSteps()
+	 * @generated
+	 */
+	EReference getVSVSProcedureSteps_Step();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep <em>VSVS Procedure Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2453,6 +4156,1154 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSVSProcedureStep();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getName()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureStep_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getDescription()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureStep_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getId()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureStep_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getMode <em>Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Mode</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getMode()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureStep_Mode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getReplays <em>Replays</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Replays</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getReplays()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EAttribute getVSVSProcedureStep_Replays();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step_idref <em>Prev step idref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prev step idref</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step_idref()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_Prev_step_idref();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Output idref from prev step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutput_idref_from_prev_step()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_Output_idref_from_prev_step();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getInputs <em>Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Inputs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getInputs()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_Inputs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutputs <em>Outputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Outputs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutputs()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_Outputs();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getSpecialPackets <em>Special Packets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Special Packets</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getSpecialPackets()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_SpecialPackets();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getConcurrent_steps <em>Concurrent steps</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Concurrent steps</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getConcurrent_steps()
+	 * @see #getVSVSProcedureStep()
+	 * @generated
+	 */
+	EReference getVSVSProcedureStep_Concurrent_steps();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs <em>VSVS Step Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Inputs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs
+	 * @generated
+	 */
+	EClass getVSVSStepInputs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_3 <em>Input level 3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Input level 3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_3()
+	 * @see #getVSVSStepInputs()
+	 * @generated
+	 */
+	EReference getVSVSStepInputs_Input_level_3();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_2 <em>Input level 2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Input level 2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_2()
+	 * @see #getVSVSStepInputs()
+	 * @generated
+	 */
+	EReference getVSVSStepInputs_Input_level_2();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_1 <em>Input level 1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Input level 1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_1()
+	 * @see #getVSVSStepInputs()
+	 * @generated
+	 */
+	EReference getVSVSStepInputs_Input_level_1();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_0 <em>Input level 0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Input level 0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_0()
+	 * @see #getVSVSStepInputs()
+	 * @generated
+	 */
+	EReference getVSVSStepInputs_Input_level_0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs <em>VSVS Step Outputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Outputs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs
+	 * @generated
+	 */
+	EClass getVSVSStepOutputs();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getCheckmode <em>Checkmode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Checkmode</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getCheckmode()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutputs_Checkmode();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_value <em>Valid time interval value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid time interval value</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_value()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutputs_Valid_time_interval_value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Valid time interval unit</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_unit()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutputs_Valid_time_interval_unit();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_3 <em>Output level 3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output level 3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_3()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputs_Output_level_3();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_2 <em>Output level 2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output level 2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_2()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputs_Output_level_2();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_1 <em>Output level 1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output level 1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_1()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputs_Output_level_1();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_0 <em>Output level 0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Output level 0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_0()
+	 * @see #getVSVSStepOutputs()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputs_Output_level_0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets <em>VSVS Step Special Packets</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Special Packets</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets
+	 * @generated
+	 */
+	EClass getVSVSStepSpecialPackets();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getEnable <em>Enable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Enable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getEnable()
+	 * @see #getVSVSStepSpecialPackets()
+	 * @generated
+	 */
+	EReference getVSVSStepSpecialPackets_Enable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getDisable <em>Disable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Disable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getDisable()
+	 * @see #getVSVSStepSpecialPackets()
+	 * @generated
+	 */
+	EReference getVSVSStepSpecialPackets_Disable();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getEnable_print <em>Enable print</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Enable print</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getEnable_print()
+	 * @see #getVSVSStepSpecialPackets()
+	 * @generated
+	 */
+	EReference getVSVSStepSpecialPackets_Enable_print();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getDisable_print <em>Disable print</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Disable print</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets#getDisable_print()
+	 * @see #getVSVSStepSpecialPackets()
+	 * @generated
+	 */
+	EReference getVSVSStepSpecialPackets_Disable_print();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable <em>VSVS Step Enable Disable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Enable Disable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable
+	 * @generated
+	 */
+	EClass getVSVSStepEnableDisable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable#getId()
+	 * @see #getVSVSStepEnableDisable()
+	 * @generated
+	 */
+	EAttribute getVSVSStepEnableDisable_Id();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps <em>VSVS Step Concurrent Steps</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Concurrent Steps</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps
+	 * @generated
+	 */
+	EClass getVSVSStepConcurrentSteps();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps#getNextStep <em>Next Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Next Step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps#getNextStep()
+	 * @see #getVSVSStepConcurrentSteps()
+	 * @generated
+	 */
+	EReference getVSVSStepConcurrentSteps_NextStep();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps#getConcurrent_step <em>Concurrent step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Concurrent step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps#getConcurrent_step()
+	 * @see #getVSVSStepConcurrentSteps()
+	 * @generated
+	 */
+	EReference getVSVSStepConcurrentSteps_Concurrent_step();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep <em>VSVS Step Next Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Next Step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep
+	 * @generated
+	 */
+	EClass getVSVSStepNextStep();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep#getId()
+	 * @see #getVSVSStepNextStep()
+	 * @generated
+	 */
+	EAttribute getVSVSStepNextStep_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep#getIsConcurrent <em>Is Concurrent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Concurrent</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep#getIsConcurrent()
+	 * @see #getVSVSStepNextStep()
+	 * @generated
+	 */
+	EAttribute getVSVSStepNextStep_IsConcurrent();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep <em>VSVS Step Concurrent Step</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Concurrent Step</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep
+	 * @generated
+	 */
+	EClass getVSVSStepConcurrentStep();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep#getId()
+	 * @see #getVSVSStepConcurrentStep()
+	 * @generated
+	 */
+	EAttribute getVSVSStepConcurrentStep_Id();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput <em>VSVS Step Input</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Input</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput
+	 * @generated
+	 */
+	EClass getVSVSStepInput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getName()
+	 * @see #getVSVSStepInput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepInput_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getIfRef <em>If Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>If Ref</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getIfRef()
+	 * @see #getVSVSStepInput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepInput_IfRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_value <em>Delay value</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Delay value</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_value()
+	 * @see #getVSVSStepInput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepInput_Delay_value();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_unit <em>Delay unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Delay unit</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_unit()
+	 * @see #getVSVSStepInput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepInput_Delay_unit();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3 <em>VSVS Step Input Level3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Input Level3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3
+	 * @generated
+	 */
+	EClass getVSVSStepInputLevel3();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel3 <em>Level3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel3()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level3();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getApp_to_level3 <em>App to level3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>App to level3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getApp_to_level3()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_App_to_level3();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel2 <em>Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel2()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel3_to_level2 <em>Level3 to level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level3 to level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel3_to_level2()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level3_to_level2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel1()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel2_to_level1 <em>Level2 to level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2 to level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel2_to_level1()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level2_to_level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel0()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3#getLevel1_to_level0()
+	 * @see #getVSVSStepInputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel3_Level1_to_level0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2 <em>VSVS Step Input Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Input Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2
+	 * @generated
+	 */
+	EClass getVSVSStepInputLevel2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel2 <em>Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel2()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_Level2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getApp_to_level2 <em>App to level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>App to level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getApp_to_level2()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_App_to_level2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel1()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_Level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel2_to_level1 <em>Level2 to level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2 to level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel2_to_level1()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_Level2_to_level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel0()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2#getLevel1_to_level0()
+	 * @see #getVSVSStepInputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel2_Level1_to_level0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1 <em>VSVS Step Input Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Input Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1
+	 * @generated
+	 */
+	EClass getVSVSStepInputLevel1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel1()
+	 * @see #getVSVSStepInputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel1_Level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getApp_to_level1 <em>App to level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>App to level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getApp_to_level1()
+	 * @see #getVSVSStepInputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel1_App_to_level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel0()
+	 * @see #getVSVSStepInputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel1_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel1_to_level0 <em>Level1 to level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 to level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1#getLevel1_to_level0()
+	 * @see #getVSVSStepInputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel1_Level1_to_level0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0 <em>VSVS Step Input Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Input Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0
+	 * @generated
+	 */
+	EClass getVSVSStepInputLevel0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0#getLevel0()
+	 * @see #getVSVSStepInputLevel0()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel0_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0#getApp_to_level0 <em>App to level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>App to level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0#getApp_to_level0()
+	 * @see #getVSVSStepInputLevel0()
+	 * @generated
+	 */
+	EReference getVSVSStepInputLevel0_App_to_level0();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput <em>VSVS Step Output</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Output</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput
+	 * @generated
+	 */
+	EClass getVSVSStepOutput();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getName()
+	 * @see #getVSVSStepOutput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutput_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getId()
+	 * @see #getVSVSStepOutput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutput_Id();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getIfRef <em>If Ref</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>If Ref</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getIfRef()
+	 * @see #getVSVSStepOutput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutput_IfRef();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getOptional <em>Optional</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Optional</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getOptional()
+	 * @see #getVSVSStepOutput()
+	 * @generated
+	 */
+	EAttribute getVSVSStepOutput_Optional();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3 <em>VSVS Step Output Level3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Output Level3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3
+	 * @generated
+	 */
+	EClass getVSVSStepOutputLevel3();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3 <em>Level3</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level3</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level3();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3_filter <em>Level3 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level3 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3_filter()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level3_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2 <em>Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3_from_level2 <em>Level3 from level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level3 from level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel3_from_level2()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level3_from_level2();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2_filter <em>Level2 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level2 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2_filter()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level2_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2_from_level1 <em>Level2 from level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2 from level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel2_from_level1()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level2_from_level1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1_filter <em>Level1 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level1 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1_filter()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level1_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel0()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel1_from_level0()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level1_from_level0();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel0_filter <em>Level0 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level0 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3#getLevel0_filter()
+	 * @see #getVSVSStepOutputLevel3()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel3_Level0_filter();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2 <em>VSVS Step Output Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Output Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2
+	 * @generated
+	 */
+	EClass getVSVSStepOutputLevel2();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2 <em>Level2</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level2();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2_filter <em>Level2 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level2 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2_filter()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level2_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2_from_level1 <em>Level2 from level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level2 from level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel2_from_level1()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level2_from_level1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1_filter <em>Level1 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level1 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1_filter()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level1_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel0()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel1_from_level0()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level1_from_level0();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel0_filter <em>Level0 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level0 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2#getLevel0_filter()
+	 * @see #getVSVSStepOutputLevel2()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel2_Level0_filter();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1 <em>VSVS Step Output Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Output Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1
+	 * @generated
+	 */
+	EClass getVSVSStepOutputLevel1();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1 <em>Level1</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1()
+	 * @see #getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel1_Level1();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1_filter <em>Level1 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level1 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1_filter()
+	 * @see #getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel1_Level1_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel0()
+	 * @see #getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel1_Level0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1_from_level0 <em>Level1 from level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level1 from level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel1_from_level0()
+	 * @see #getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel1_Level1_from_level0();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel0_filter <em>Level0 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level0 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1#getLevel0_filter()
+	 * @see #getVSVSStepOutputLevel1()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel1_Level0_filter();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0 <em>VSVS Step Output Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Output Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0
+	 * @generated
+	 */
+	EClass getVSVSStepOutputLevel0();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0#getLevel0 <em>Level0</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Level0</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0#getLevel0()
+	 * @see #getVSVSStepOutputLevel0()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel0_Level0();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0#getLevel0_filter <em>Level0 filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Level0 filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0#getLevel0_filter()
+	 * @see #getVSVSStepOutputLevel0()
+	 * @generated
+	 */
+	EReference getVSVSStepOutputLevel0_Level0_filter();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter <em>VSVS Step Filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Step Filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter
+	 * @generated
+	 */
+	EClass getVSVSStepFilter();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter#getApply_def_filter <em>Apply def filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Apply def filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter#getApply_def_filter()
+	 * @see #getVSVSStepFilter()
+	 * @generated
+	 */
+	EAttribute getVSVSStepFilter_Apply_def_filter();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter#getExtra_filter <em>Extra filter</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Extra filter</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter#getExtra_filter()
+	 * @see #getVSVSStepFilter()
+	 * @generated
+	 */
+	EReference getVSVSStepFilter_Extra_filter();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview <em>VSVS Analysis Inspection Review</em>}'.
@@ -2483,6 +5334,46 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSVSAdditionalInformation();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepMode <em>VSVS Step Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VSVS Step Mode</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepMode
+	 * @generated
+	 */
+	EEnum getVSVSStepMode();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit <em>VSVS Step Unit</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VSVS Step Unit</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @generated
+	 */
+	EEnum getVSVSStepUnit();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode <em>VSVS Step Checkmode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VSVS Step Checkmode</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode
+	 * @generated
+	 */
+	EEnum getVSVSStepCheckmode();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo <em>VSVS Step Yes No</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VSVS Step Yes No</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo
+	 * @generated
+	 */
+	EEnum getVSVSStepYesNo();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -3114,12 +6005,12 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TEST_PROCEDURE__PURPOSE = eINSTANCE.getVSVSTestProcedure_Purpose();
 
 		/**
-		 * The meta object literal for the '<em><b>Steps</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Procedure Steps</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_TEST_PROCEDURE__STEPS = eINSTANCE.getVSVSTestProcedure_Steps();
+		EReference VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = eINSTANCE.getVSVSTestProcedure_ProcedureSteps();
 
 		/**
 		 * The meta object literal for the '<em><b>Test Script</b></em>' containment reference feature.
@@ -3138,6 +6029,32 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TEST_PROCEDURE__TEST_CASE = eINSTANCE.getVSVSTestProcedure_TestCase();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl <em>VSVS Procedure Steps</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
+		 * @generated
+		 */
+		EClass VSVS_PROCEDURE_STEPS = eINSTANCE.getVSVSProcedureSteps();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEPS__NAME = eINSTANCE.getVSVSProcedureSteps_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEPS__STEP = eINSTANCE.getVSVSProcedureSteps_Step();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl <em>VSVS Procedure Step</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3146,6 +6063,890 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_PROCEDURE_STEP = eINSTANCE.getVSVSProcedureStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEP__NAME = eINSTANCE.getVSVSProcedureStep_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEP__DESCRIPTION = eINSTANCE.getVSVSProcedureStep_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEP__ID = eINSTANCE.getVSVSProcedureStep_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Mode</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEP__MODE = eINSTANCE.getVSVSProcedureStep_Mode();
+
+		/**
+		 * The meta object literal for the '<em><b>Replays</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_PROCEDURE_STEP__REPLAYS = eINSTANCE.getVSVSProcedureStep_Replays();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev step idref</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__PREV_STEP_IDREF = eINSTANCE.getVSVSProcedureStep_Prev_step_idref();
+
+		/**
+		 * The meta object literal for the '<em><b>Output idref from prev step</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP = eINSTANCE.getVSVSProcedureStep_Output_idref_from_prev_step();
+
+		/**
+		 * The meta object literal for the '<em><b>Inputs</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__INPUTS = eINSTANCE.getVSVSProcedureStep_Inputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Outputs</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__OUTPUTS = eINSTANCE.getVSVSProcedureStep_Outputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Special Packets</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__SPECIAL_PACKETS = eINSTANCE.getVSVSProcedureStep_SpecialPackets();
+
+		/**
+		 * The meta object literal for the '<em><b>Concurrent steps</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEP__CONCURRENT_STEPS = eINSTANCE.getVSVSProcedureStep_Concurrent_steps();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputsImpl <em>VSVS Step Inputs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUTS = eINSTANCE.getVSVSStepInputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Input level 3</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_3 = eINSTANCE.getVSVSStepInputs_Input_level_3();
+
+		/**
+		 * The meta object literal for the '<em><b>Input level 2</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_2 = eINSTANCE.getVSVSStepInputs_Input_level_2();
+
+		/**
+		 * The meta object literal for the '<em><b>Input level 1</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_1 = eINSTANCE.getVSVSStepInputs_Input_level_1();
+
+		/**
+		 * The meta object literal for the '<em><b>Input level 0</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_0 = eINSTANCE.getVSVSStepInputs_Input_level_0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl <em>VSVS Step Outputs</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUTS = eINSTANCE.getVSVSStepOutputs();
+
+		/**
+		 * The meta object literal for the '<em><b>Checkmode</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUTS__CHECKMODE = eINSTANCE.getVSVSStepOutputs_Checkmode();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid time interval value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_VALUE = eINSTANCE.getVSVSStepOutputs_Valid_time_interval_value();
+
+		/**
+		 * The meta object literal for the '<em><b>Valid time interval unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT = eINSTANCE.getVSVSStepOutputs_Valid_time_interval_unit();
+
+		/**
+		 * The meta object literal for the '<em><b>Output level 3</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3 = eINSTANCE.getVSVSStepOutputs_Output_level_3();
+
+		/**
+		 * The meta object literal for the '<em><b>Output level 2</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2 = eINSTANCE.getVSVSStepOutputs_Output_level_2();
+
+		/**
+		 * The meta object literal for the '<em><b>Output level 1</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1 = eINSTANCE.getVSVSStepOutputs_Output_level_1();
+
+		/**
+		 * The meta object literal for the '<em><b>Output level 0</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0 = eINSTANCE.getVSVSStepOutputs_Output_level_0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepSpecialPacketsImpl <em>VSVS Step Special Packets</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepSpecialPacketsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepSpecialPackets()
+		 * @generated
+		 */
+		EClass VSVS_STEP_SPECIAL_PACKETS = eINSTANCE.getVSVSStepSpecialPackets();
+
+		/**
+		 * The meta object literal for the '<em><b>Enable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_SPECIAL_PACKETS__ENABLE = eINSTANCE.getVSVSStepSpecialPackets_Enable();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_SPECIAL_PACKETS__DISABLE = eINSTANCE.getVSVSStepSpecialPackets_Disable();
+
+		/**
+		 * The meta object literal for the '<em><b>Enable print</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_SPECIAL_PACKETS__ENABLE_PRINT = eINSTANCE.getVSVSStepSpecialPackets_Enable_print();
+
+		/**
+		 * The meta object literal for the '<em><b>Disable print</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_SPECIAL_PACKETS__DISABLE_PRINT = eINSTANCE.getVSVSStepSpecialPackets_Disable_print();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepEnableDisableImpl <em>VSVS Step Enable Disable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepEnableDisableImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepEnableDisable()
+		 * @generated
+		 */
+		EClass VSVS_STEP_ENABLE_DISABLE = eINSTANCE.getVSVSStepEnableDisable();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_ENABLE_DISABLE__ID = eINSTANCE.getVSVSStepEnableDisable_Id();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepsImpl <em>VSVS Step Concurrent Steps</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentSteps()
+		 * @generated
+		 */
+		EClass VSVS_STEP_CONCURRENT_STEPS = eINSTANCE.getVSVSStepConcurrentSteps();
+
+		/**
+		 * The meta object literal for the '<em><b>Next Step</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_CONCURRENT_STEPS__NEXT_STEP = eINSTANCE.getVSVSStepConcurrentSteps_NextStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Concurrent step</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_CONCURRENT_STEPS__CONCURRENT_STEP = eINSTANCE.getVSVSStepConcurrentSteps_Concurrent_step();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepNextStepImpl <em>VSVS Step Next Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepNextStepImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepNextStep()
+		 * @generated
+		 */
+		EClass VSVS_STEP_NEXT_STEP = eINSTANCE.getVSVSStepNextStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_NEXT_STEP__ID = eINSTANCE.getVSVSStepNextStep_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Is Concurrent</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_NEXT_STEP__IS_CONCURRENT = eINSTANCE.getVSVSStepNextStep_IsConcurrent();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepImpl <em>VSVS Step Concurrent Step</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConcurrentStepImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentStep()
+		 * @generated
+		 */
+		EClass VSVS_STEP_CONCURRENT_STEP = eINSTANCE.getVSVSStepConcurrentStep();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_CONCURRENT_STEP__ID = eINSTANCE.getVSVSStepConcurrentStep_Id();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl <em>VSVS Step Input</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInput()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUT = eINSTANCE.getVSVSStepInput();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_INPUT__NAME = eINSTANCE.getVSVSStepInput_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_INPUT__IF_REF = eINSTANCE.getVSVSStepInput_IfRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay value</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_INPUT__DELAY_VALUE = eINSTANCE.getVSVSStepInput_Delay_value();
+
+		/**
+		 * The meta object literal for the '<em><b>Delay unit</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_INPUT__DELAY_UNIT = eINSTANCE.getVSVSStepInput_Delay_unit();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel3Impl <em>VSVS Step Input Level3</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel3Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel3()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUT_LEVEL3 = eINSTANCE.getVSVSStepInputLevel3();
+
+		/**
+		 * The meta object literal for the '<em><b>Level3</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL3 = eINSTANCE.getVSVSStepInputLevel3_Level3();
+
+		/**
+		 * The meta object literal for the '<em><b>App to level3</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__APP_TO_LEVEL3 = eINSTANCE.getVSVSStepInputLevel3_App_to_level3();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL2 = eINSTANCE.getVSVSStepInputLevel3_Level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level3 to level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL3_TO_LEVEL2 = eINSTANCE.getVSVSStepInputLevel3_Level3_to_level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL1 = eINSTANCE.getVSVSStepInputLevel3_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL2_TO_LEVEL1 = eINSTANCE.getVSVSStepInputLevel3_Level2_to_level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL0 = eINSTANCE.getVSVSStepInputLevel3_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL3__LEVEL1_TO_LEVEL0 = eINSTANCE.getVSVSStepInputLevel3_Level1_to_level0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel2Impl <em>VSVS Step Input Level2</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel2Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel2()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUT_LEVEL2 = eINSTANCE.getVSVSStepInputLevel2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__LEVEL2 = eINSTANCE.getVSVSStepInputLevel2_Level2();
+
+		/**
+		 * The meta object literal for the '<em><b>App to level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__APP_TO_LEVEL2 = eINSTANCE.getVSVSStepInputLevel2_App_to_level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__LEVEL1 = eINSTANCE.getVSVSStepInputLevel2_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 to level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__LEVEL2_TO_LEVEL1 = eINSTANCE.getVSVSStepInputLevel2_Level2_to_level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__LEVEL0 = eINSTANCE.getVSVSStepInputLevel2_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL2__LEVEL1_TO_LEVEL0 = eINSTANCE.getVSVSStepInputLevel2_Level1_to_level0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel1Impl <em>VSVS Step Input Level1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel1Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel1()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUT_LEVEL1 = eINSTANCE.getVSVSStepInputLevel1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL1__LEVEL1 = eINSTANCE.getVSVSStepInputLevel1_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>App to level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL1__APP_TO_LEVEL1 = eINSTANCE.getVSVSStepInputLevel1_App_to_level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL1__LEVEL0 = eINSTANCE.getVSVSStepInputLevel1_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 to level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL1__LEVEL1_TO_LEVEL0 = eINSTANCE.getVSVSStepInputLevel1_Level1_to_level0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel0Impl <em>VSVS Step Input Level0</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputLevel0Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel0()
+		 * @generated
+		 */
+		EClass VSVS_STEP_INPUT_LEVEL0 = eINSTANCE.getVSVSStepInputLevel0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL0__LEVEL0 = eINSTANCE.getVSVSStepInputLevel0_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>App to level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_INPUT_LEVEL0__APP_TO_LEVEL0 = eINSTANCE.getVSVSStepInputLevel0_App_to_level0();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputImpl <em>VSVS Step Output</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutput()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUT = eINSTANCE.getVSVSStepOutput();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUT__NAME = eINSTANCE.getVSVSStepOutput_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUT__ID = eINSTANCE.getVSVSStepOutput_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>If Ref</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUT__IF_REF = eINSTANCE.getVSVSStepOutput_IfRef();
+
+		/**
+		 * The meta object literal for the '<em><b>Optional</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_OUTPUT__OPTIONAL = eINSTANCE.getVSVSStepOutput_Optional();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel3Impl <em>VSVS Step Output Level3</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel3Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel3()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUT_LEVEL3 = eINSTANCE.getVSVSStepOutputLevel3();
+
+		/**
+		 * The meta object literal for the '<em><b>Level3</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL3 = eINSTANCE.getVSVSStepOutputLevel3_Level3();
+
+		/**
+		 * The meta object literal for the '<em><b>Level3 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FILTER = eINSTANCE.getVSVSStepOutputLevel3_Level3_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL2 = eINSTANCE.getVSVSStepOutputLevel3_Level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level3 from level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2 = eINSTANCE.getVSVSStepOutputLevel3_Level3_from_level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FILTER = eINSTANCE.getVSVSStepOutputLevel3_Level2_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL1 = eINSTANCE.getVSVSStepOutputLevel3_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1 = eINSTANCE.getVSVSStepOutputLevel3_Level2_from_level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FILTER = eINSTANCE.getVSVSStepOutputLevel3_Level1_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL0 = eINSTANCE.getVSVSStepOutputLevel3_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0 = eINSTANCE.getVSVSStepOutputLevel3_Level1_from_level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL3__LEVEL0_FILTER = eINSTANCE.getVSVSStepOutputLevel3_Level0_filter();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel2Impl <em>VSVS Step Output Level2</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel2Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel2()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUT_LEVEL2 = eINSTANCE.getVSVSStepOutputLevel2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL2 = eINSTANCE.getVSVSStepOutputLevel2_Level2();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FILTER = eINSTANCE.getVSVSStepOutputLevel2_Level2_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL1 = eINSTANCE.getVSVSStepOutputLevel2_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level2 from level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1 = eINSTANCE.getVSVSStepOutputLevel2_Level2_from_level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FILTER = eINSTANCE.getVSVSStepOutputLevel2_Level1_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL0 = eINSTANCE.getVSVSStepOutputLevel2_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0 = eINSTANCE.getVSVSStepOutputLevel2_Level1_from_level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL2__LEVEL0_FILTER = eINSTANCE.getVSVSStepOutputLevel2_Level0_filter();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel1Impl <em>VSVS Step Output Level1</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel1Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel1()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUT_LEVEL1 = eINSTANCE.getVSVSStepOutputLevel1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL1__LEVEL1 = eINSTANCE.getVSVSStepOutputLevel1_Level1();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FILTER = eINSTANCE.getVSVSStepOutputLevel1_Level1_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL1__LEVEL0 = eINSTANCE.getVSVSStepOutputLevel1_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level1 from level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FROM_LEVEL0 = eINSTANCE.getVSVSStepOutputLevel1_Level1_from_level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL1__LEVEL0_FILTER = eINSTANCE.getVSVSStepOutputLevel1_Level0_filter();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel0Impl <em>VSVS Step Output Level0</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputLevel0Impl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel0()
+		 * @generated
+		 */
+		EClass VSVS_STEP_OUTPUT_LEVEL0 = eINSTANCE.getVSVSStepOutputLevel0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL0__LEVEL0 = eINSTANCE.getVSVSStepOutputLevel0_Level0();
+
+		/**
+		 * The meta object literal for the '<em><b>Level0 filter</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_OUTPUT_LEVEL0__LEVEL0_FILTER = eINSTANCE.getVSVSStepOutputLevel0_Level0_filter();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepFilterImpl <em>VSVS Step Filter</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepFilterImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepFilter()
+		 * @generated
+		 */
+		EClass VSVS_STEP_FILTER = eINSTANCE.getVSVSStepFilter();
+
+		/**
+		 * The meta object literal for the '<em><b>Apply def filter</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_STEP_FILTER__APPLY_DEF_FILTER = eINSTANCE.getVSVSStepFilter_Apply_def_filter();
+
+		/**
+		 * The meta object literal for the '<em><b>Extra filter</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_STEP_FILTER__EXTRA_FILTER = eINSTANCE.getVSVSStepFilter_Extra_filter();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSAnalysisInspectionReviewImpl <em>VSVS Analysis Inspection Review</em>}' class.
@@ -3176,6 +6977,46 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_ADDITIONAL_INFORMATION = eINSTANCE.getVSVSAdditionalInformation();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepMode <em>VSVS Step Mode</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepMode
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepMode()
+		 * @generated
+		 */
+		EEnum VSVS_STEP_MODE = eINSTANCE.getVSVSStepMode();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit <em>VSVS Step Unit</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepUnit()
+		 * @generated
+		 */
+		EEnum VSVS_STEP_UNIT = eINSTANCE.getVSVSStepUnit();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode <em>VSVS Step Checkmode</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepCheckmode()
+		 * @generated
+		 */
+		EEnum VSVS_STEP_CHECKMODE = eINSTANCE.getVSVSStepCheckmode();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo <em>VSVS Step Yes No</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepYesNo()
+		 * @generated
+		 */
+		EEnum VSVS_STEP_YES_NO = eINSTANCE.getVSVSStepYesNo();
 
 	}
 

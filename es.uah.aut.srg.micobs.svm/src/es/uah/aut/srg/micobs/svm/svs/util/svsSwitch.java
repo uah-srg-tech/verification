@@ -238,9 +238,131 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVS_PROCEDURE_STEPS: {
+				VSVSProcedureSteps vsvsProcedureSteps = (VSVSProcedureSteps)theEObject;
+				T result = caseVSVSProcedureSteps(vsvsProcedureSteps);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_PROCEDURE_STEP: {
 				VSVSProcedureStep vsvsProcedureStep = (VSVSProcedureStep)theEObject;
 				T result = caseVSVSProcedureStep(vsvsProcedureStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUTS: {
+				VSVSStepInputs vsvsStepInputs = (VSVSStepInputs)theEObject;
+				T result = caseVSVSStepInputs(vsvsStepInputs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUTS: {
+				VSVSStepOutputs vsvsStepOutputs = (VSVSStepOutputs)theEObject;
+				T result = caseVSVSStepOutputs(vsvsStepOutputs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_SPECIAL_PACKETS: {
+				VSVSStepSpecialPackets vsvsStepSpecialPackets = (VSVSStepSpecialPackets)theEObject;
+				T result = caseVSVSStepSpecialPackets(vsvsStepSpecialPackets);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_ENABLE_DISABLE: {
+				VSVSStepEnableDisable vsvsStepEnableDisable = (VSVSStepEnableDisable)theEObject;
+				T result = caseVSVSStepEnableDisable(vsvsStepEnableDisable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_CONCURRENT_STEPS: {
+				VSVSStepConcurrentSteps vsvsStepConcurrentSteps = (VSVSStepConcurrentSteps)theEObject;
+				T result = caseVSVSStepConcurrentSteps(vsvsStepConcurrentSteps);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_NEXT_STEP: {
+				VSVSStepNextStep vsvsStepNextStep = (VSVSStepNextStep)theEObject;
+				T result = caseVSVSStepNextStep(vsvsStepNextStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_CONCURRENT_STEP: {
+				VSVSStepConcurrentStep vsvsStepConcurrentStep = (VSVSStepConcurrentStep)theEObject;
+				T result = caseVSVSStepConcurrentStep(vsvsStepConcurrentStep);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUT: {
+				VSVSStepInput vsvsStepInput = (VSVSStepInput)theEObject;
+				T result = caseVSVSStepInput(vsvsStepInput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUT_LEVEL3: {
+				VSVSStepInputLevel3 vsvsStepInputLevel3 = (VSVSStepInputLevel3)theEObject;
+				T result = caseVSVSStepInputLevel3(vsvsStepInputLevel3);
+				if (result == null) result = caseVSVSStepInput(vsvsStepInputLevel3);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUT_LEVEL2: {
+				VSVSStepInputLevel2 vsvsStepInputLevel2 = (VSVSStepInputLevel2)theEObject;
+				T result = caseVSVSStepInputLevel2(vsvsStepInputLevel2);
+				if (result == null) result = caseVSVSStepInput(vsvsStepInputLevel2);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUT_LEVEL1: {
+				VSVSStepInputLevel1 vsvsStepInputLevel1 = (VSVSStepInputLevel1)theEObject;
+				T result = caseVSVSStepInputLevel1(vsvsStepInputLevel1);
+				if (result == null) result = caseVSVSStepInput(vsvsStepInputLevel1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_INPUT_LEVEL0: {
+				VSVSStepInputLevel0 vsvsStepInputLevel0 = (VSVSStepInputLevel0)theEObject;
+				T result = caseVSVSStepInputLevel0(vsvsStepInputLevel0);
+				if (result == null) result = caseVSVSStepInput(vsvsStepInputLevel0);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUT: {
+				VSVSStepOutput vsvsStepOutput = (VSVSStepOutput)theEObject;
+				T result = caseVSVSStepOutput(vsvsStepOutput);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL3: {
+				VSVSStepOutputLevel3 vsvsStepOutputLevel3 = (VSVSStepOutputLevel3)theEObject;
+				T result = caseVSVSStepOutputLevel3(vsvsStepOutputLevel3);
+				if (result == null) result = caseVSVSStepOutput(vsvsStepOutputLevel3);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL2: {
+				VSVSStepOutputLevel2 vsvsStepOutputLevel2 = (VSVSStepOutputLevel2)theEObject;
+				T result = caseVSVSStepOutputLevel2(vsvsStepOutputLevel2);
+				if (result == null) result = caseVSVSStepOutput(vsvsStepOutputLevel2);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL1: {
+				VSVSStepOutputLevel1 vsvsStepOutputLevel1 = (VSVSStepOutputLevel1)theEObject;
+				T result = caseVSVSStepOutputLevel1(vsvsStepOutputLevel1);
+				if (result == null) result = caseVSVSStepOutput(vsvsStepOutputLevel1);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL0: {
+				VSVSStepOutputLevel0 vsvsStepOutputLevel0 = (VSVSStepOutputLevel0)theEObject;
+				T result = caseVSVSStepOutputLevel0(vsvsStepOutputLevel0);
+				if (result == null) result = caseVSVSStepOutput(vsvsStepOutputLevel0);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_FILTER: {
+				VSVSStepFilter vsvsStepFilter = (VSVSStepFilter)theEObject;
+				T result = caseVSVSStepFilter(vsvsStepFilter);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -561,6 +683,21 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Procedure Steps</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Procedure Steps</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSProcedureSteps(VSVSProcedureSteps object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSVS Procedure Step</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -572,6 +709,276 @@ public class svsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVSProcedureStep(VSVSProcedureStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputs(VSVSStepInputs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Outputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Outputs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutputs(VSVSStepOutputs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Special Packets</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Special Packets</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepSpecialPackets(VSVSStepSpecialPackets object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Enable Disable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Enable Disable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepEnableDisable(VSVSStepEnableDisable object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Concurrent Steps</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Concurrent Steps</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepConcurrentSteps(VSVSStepConcurrentSteps object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Next Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Next Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepNextStep(VSVSStepNextStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Concurrent Step</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Concurrent Step</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepConcurrentStep(VSVSStepConcurrentStep object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInput(VSVSStepInput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input Level3</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input Level3</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputLevel3(VSVSStepInputLevel3 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input Level2</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input Level2</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputLevel2(VSVSStepInputLevel2 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input Level1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input Level1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputLevel1(VSVSStepInputLevel1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input Level0</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input Level0</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputLevel0(VSVSStepInputLevel0 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutput(VSVSStepOutput object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output Level3</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output Level3</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutputLevel3(VSVSStepOutputLevel3 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output Level2</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output Level2</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutputLevel2(VSVSStepOutputLevel2 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output Level1</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output Level1</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutputLevel1(VSVSStepOutputLevel1 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output Level0</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output Level0</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepOutputLevel0(VSVSStepOutputLevel0 object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Filter</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Filter</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepFilter(VSVSStepFilter object) {
 		return null;
 	}
 

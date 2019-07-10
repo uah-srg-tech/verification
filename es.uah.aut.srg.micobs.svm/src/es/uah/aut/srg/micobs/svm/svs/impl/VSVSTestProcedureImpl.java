@@ -14,7 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -31,9 +31,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -46,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getPurpose <em>Purpose</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getSteps <em>Steps</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getProcedureSteps <em>Procedure Steps</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestScript <em>Test Script</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestCase <em>Test Case</em>}</li>
  * </ul>
@@ -95,14 +93,14 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	protected VSVSFixedSection purpose;
 
 	/**
-	 * The cached value of the '{@link #getSteps() <em>Steps</em>}' containment reference list.
+	 * The cached value of the '{@link #getProcedureSteps() <em>Procedure Steps</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSteps()
+	 * @see #getProcedureSteps()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSVSProcedureStep> steps;
+	protected VSVSProcedureSteps procedureSteps;
 
 	/**
 	 * The cached value of the '{@link #getTestScript() <em>Test Script</em>}' containment reference.
@@ -255,11 +253,42 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSVSProcedureStep> getSteps() {
-		if (steps == null) {
-			steps = new EObjectContainmentEList<VSVSProcedureStep>(VSVSProcedureStep.class, this, svsPackage.VSVS_TEST_PROCEDURE__STEPS);
+	public VSVSProcedureSteps getProcedureSteps() {
+		return procedureSteps;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetProcedureSteps(VSVSProcedureSteps newProcedureSteps, NotificationChain msgs) {
+		VSVSProcedureSteps oldProcedureSteps = procedureSteps;
+		procedureSteps = newProcedureSteps;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS, oldProcedureSteps, newProcedureSteps);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return steps;
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setProcedureSteps(VSVSProcedureSteps newProcedureSteps) {
+		if (newProcedureSteps != procedureSteps) {
+			NotificationChain msgs = null;
+			if (procedureSteps != null)
+				msgs = ((InternalEObject)procedureSteps).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS, null, msgs);
+			if (newProcedureSteps != null)
+				msgs = ((InternalEObject)newProcedureSteps).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS, null, msgs);
+			msgs = basicSetProcedureSteps(newProcedureSteps, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS, newProcedureSteps, newProcedureSteps));
 	}
 
 	/**
@@ -329,8 +358,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return basicSetIdentifier(null, msgs);
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				return basicSetPurpose(null, msgs);
-			case svsPackage.VSVS_TEST_PROCEDURE__STEPS:
-				return ((InternalEList<?>)getSteps()).basicRemove(otherEnd, msgs);
+			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
+				return basicSetProcedureSteps(null, msgs);
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				return basicSetTestScript(null, msgs);
 		}
@@ -351,8 +380,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return getIdentifier();
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				return getPurpose();
-			case svsPackage.VSVS_TEST_PROCEDURE__STEPS:
-				return getSteps();
+			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
+				return getProcedureSteps();
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				return getTestScript();
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
@@ -379,9 +408,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				setPurpose((VSVSFixedSection)newValue);
 				return;
-			case svsPackage.VSVS_TEST_PROCEDURE__STEPS:
-				getSteps().clear();
-				getSteps().addAll((Collection<? extends VSVSProcedureStep>)newValue);
+			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
+				setProcedureSteps((VSVSProcedureSteps)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				setTestScript((VSVSFixedSection)newValue);
@@ -411,8 +439,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				setPurpose((VSVSFixedSection)null);
 				return;
-			case svsPackage.VSVS_TEST_PROCEDURE__STEPS:
-				getSteps().clear();
+			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
+				setProcedureSteps((VSVSProcedureSteps)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				setTestScript((VSVSFixedSection)null);
@@ -438,8 +466,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return identifier != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				return purpose != null;
-			case svsPackage.VSVS_TEST_PROCEDURE__STEPS:
-				return steps != null && !steps.isEmpty();
+			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
+				return procedureSteps != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				return testScript != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:

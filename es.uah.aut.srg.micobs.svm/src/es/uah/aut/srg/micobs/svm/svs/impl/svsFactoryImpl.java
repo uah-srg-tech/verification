@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 import es.uah.aut.srg.micobs.svm.svs.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -82,12 +83,72 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_TEST_CASE: return createVSVSTestCase();
 			case svsPackage.VSVS_TEST_PROCEDURES: return createVSVSTestProcedures();
 			case svsPackage.VSVS_TEST_PROCEDURE: return createVSVSTestProcedure();
+			case svsPackage.VSVS_PROCEDURE_STEPS: return createVSVSProcedureSteps();
 			case svsPackage.VSVS_PROCEDURE_STEP: return createVSVSProcedureStep();
+			case svsPackage.VSVS_STEP_INPUTS: return createVSVSStepInputs();
+			case svsPackage.VSVS_STEP_OUTPUTS: return createVSVSStepOutputs();
+			case svsPackage.VSVS_STEP_SPECIAL_PACKETS: return createVSVSStepSpecialPackets();
+			case svsPackage.VSVS_STEP_ENABLE_DISABLE: return createVSVSStepEnableDisable();
+			case svsPackage.VSVS_STEP_CONCURRENT_STEPS: return createVSVSStepConcurrentSteps();
+			case svsPackage.VSVS_STEP_NEXT_STEP: return createVSVSStepNextStep();
+			case svsPackage.VSVS_STEP_CONCURRENT_STEP: return createVSVSStepConcurrentStep();
+			case svsPackage.VSVS_STEP_INPUT: return createVSVSStepInput();
+			case svsPackage.VSVS_STEP_INPUT_LEVEL3: return createVSVSStepInputLevel3();
+			case svsPackage.VSVS_STEP_INPUT_LEVEL2: return createVSVSStepInputLevel2();
+			case svsPackage.VSVS_STEP_INPUT_LEVEL1: return createVSVSStepInputLevel1();
+			case svsPackage.VSVS_STEP_INPUT_LEVEL0: return createVSVSStepInputLevel0();
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL3: return createVSVSStepOutputLevel3();
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL2: return createVSVSStepOutputLevel2();
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL1: return createVSVSStepOutputLevel1();
+			case svsPackage.VSVS_STEP_OUTPUT_LEVEL0: return createVSVSStepOutputLevel0();
+			case svsPackage.VSVS_STEP_FILTER: return createVSVSStepFilter();
 			case svsPackage.VSVS_ANALYSIS_INSPECTION_REVIEW: return createVSVSAnalysisInspectionReview();
 			case svsPackage.VSVS_TEST_PLATFORM_REQUIREMENTS: return createVSVSTestPlatformRequirements();
 			case svsPackage.VSVS_ADDITIONAL_INFORMATION: return createVSVSAdditionalInformation();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+			case svsPackage.VSVS_STEP_MODE:
+				return createVSVSStepModeFromString(eDataType, initialValue);
+			case svsPackage.VSVS_STEP_UNIT:
+				return createVSVSStepUnitFromString(eDataType, initialValue);
+			case svsPackage.VSVS_STEP_CHECKMODE:
+				return createVSVSStepCheckmodeFromString(eDataType, initialValue);
+			case svsPackage.VSVS_STEP_YES_NO:
+				return createVSVSStepYesNoFromString(eDataType, initialValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+			case svsPackage.VSVS_STEP_MODE:
+				return convertVSVSStepModeToString(eDataType, instanceValue);
+			case svsPackage.VSVS_STEP_UNIT:
+				return convertVSVSStepUnitToString(eDataType, instanceValue);
+			case svsPackage.VSVS_STEP_CHECKMODE:
+				return convertVSVSStepCheckmodeToString(eDataType, instanceValue);
+			case svsPackage.VSVS_STEP_YES_NO:
+				return convertVSVSStepYesNoToString(eDataType, instanceValue);
+			default:
+				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -276,9 +337,189 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSProcedureSteps createVSVSProcedureSteps() {
+		VSVSProcedureStepsImpl vsvsProcedureSteps = new VSVSProcedureStepsImpl();
+		return vsvsProcedureSteps;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSVSProcedureStep createVSVSProcedureStep() {
 		VSVSProcedureStepImpl vsvsProcedureStep = new VSVSProcedureStepImpl();
 		return vsvsProcedureStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInputs createVSVSStepInputs() {
+		VSVSStepInputsImpl vsvsStepInputs = new VSVSStepInputsImpl();
+		return vsvsStepInputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepOutputs createVSVSStepOutputs() {
+		VSVSStepOutputsImpl vsvsStepOutputs = new VSVSStepOutputsImpl();
+		return vsvsStepOutputs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepSpecialPackets createVSVSStepSpecialPackets() {
+		VSVSStepSpecialPacketsImpl vsvsStepSpecialPackets = new VSVSStepSpecialPacketsImpl();
+		return vsvsStepSpecialPackets;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepEnableDisable createVSVSStepEnableDisable() {
+		VSVSStepEnableDisableImpl vsvsStepEnableDisable = new VSVSStepEnableDisableImpl();
+		return vsvsStepEnableDisable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepConcurrentSteps createVSVSStepConcurrentSteps() {
+		VSVSStepConcurrentStepsImpl vsvsStepConcurrentSteps = new VSVSStepConcurrentStepsImpl();
+		return vsvsStepConcurrentSteps;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepNextStep createVSVSStepNextStep() {
+		VSVSStepNextStepImpl vsvsStepNextStep = new VSVSStepNextStepImpl();
+		return vsvsStepNextStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepConcurrentStep createVSVSStepConcurrentStep() {
+		VSVSStepConcurrentStepImpl vsvsStepConcurrentStep = new VSVSStepConcurrentStepImpl();
+		return vsvsStepConcurrentStep;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInput createVSVSStepInput() {
+		VSVSStepInputImpl vsvsStepInput = new VSVSStepInputImpl();
+		return vsvsStepInput;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInputLevel3 createVSVSStepInputLevel3() {
+		VSVSStepInputLevel3Impl vsvsStepInputLevel3 = new VSVSStepInputLevel3Impl();
+		return vsvsStepInputLevel3;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInputLevel2 createVSVSStepInputLevel2() {
+		VSVSStepInputLevel2Impl vsvsStepInputLevel2 = new VSVSStepInputLevel2Impl();
+		return vsvsStepInputLevel2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInputLevel1 createVSVSStepInputLevel1() {
+		VSVSStepInputLevel1Impl vsvsStepInputLevel1 = new VSVSStepInputLevel1Impl();
+		return vsvsStepInputLevel1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepInputLevel0 createVSVSStepInputLevel0() {
+		VSVSStepInputLevel0Impl vsvsStepInputLevel0 = new VSVSStepInputLevel0Impl();
+		return vsvsStepInputLevel0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepOutputLevel3 createVSVSStepOutputLevel3() {
+		VSVSStepOutputLevel3Impl vsvsStepOutputLevel3 = new VSVSStepOutputLevel3Impl();
+		return vsvsStepOutputLevel3;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepOutputLevel2 createVSVSStepOutputLevel2() {
+		VSVSStepOutputLevel2Impl vsvsStepOutputLevel2 = new VSVSStepOutputLevel2Impl();
+		return vsvsStepOutputLevel2;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepOutputLevel1 createVSVSStepOutputLevel1() {
+		VSVSStepOutputLevel1Impl vsvsStepOutputLevel1 = new VSVSStepOutputLevel1Impl();
+		return vsvsStepOutputLevel1;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepOutputLevel0 createVSVSStepOutputLevel0() {
+		VSVSStepOutputLevel0Impl vsvsStepOutputLevel0 = new VSVSStepOutputLevel0Impl();
+		return vsvsStepOutputLevel0;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepFilter createVSVSStepFilter() {
+		VSVSStepFilterImpl vsvsStepFilter = new VSVSStepFilterImpl();
+		return vsvsStepFilter;
 	}
 
 	/**
@@ -309,6 +550,86 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSAdditionalInformation createVSVSAdditionalInformation() {
 		VSVSAdditionalInformationImpl vsvsAdditionalInformation = new VSVSAdditionalInformationImpl();
 		return vsvsAdditionalInformation;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepMode createVSVSStepModeFromString(EDataType eDataType, String initialValue) {
+		VSVSStepMode result = VSVSStepMode.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSStepModeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepUnit createVSVSStepUnitFromString(EDataType eDataType, String initialValue) {
+		VSVSStepUnit result = VSVSStepUnit.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSStepUnitToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepCheckmode createVSVSStepCheckmodeFromString(EDataType eDataType, String initialValue) {
+		VSVSStepCheckmode result = VSVSStepCheckmode.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSStepCheckmodeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepYesNo createVSVSStepYesNoFromString(EDataType eDataType, String initialValue) {
+		VSVSStepYesNo result = VSVSStepYesNo.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSStepYesNoToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

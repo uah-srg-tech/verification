@@ -65,7 +65,7 @@ public interface VSVSTestCases extends VValidationDocumentFixedGroup, DFixedSect
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Test Cases</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Test Cases</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

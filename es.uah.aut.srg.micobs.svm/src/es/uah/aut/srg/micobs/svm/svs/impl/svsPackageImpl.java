@@ -23,8 +23,31 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInput;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepMode;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTerm;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
@@ -40,8 +63,17 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
+import es.uah.aut.srg.tmtcif.export.exportPackage;
+
+import es.uah.aut.srg.tmtcif.filter.filterPackage;
+
+import es.uah.aut.srg.tmtcif.format.formatPackage;
+
+import es.uah.aut.srg.tmtcif.import_.importPackage;
+
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -192,7 +224,140 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	private EClass vsvsProcedureStepsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	private EClass vsvsProcedureStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepSpecialPacketsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepEnableDisableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepConcurrentStepsEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepNextStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepConcurrentStepEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputLevel3EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputLevel2EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputLevel1EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepInputLevel0EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputLevel3EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputLevel2EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputLevel1EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepOutputLevel0EClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvsStepFilterEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -214,6 +379,34 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * @generated
 	 */
 	private EClass vsvsAdditionalInformationEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum vsvsStepModeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum vsvsStepUnitEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum vsvsStepCheckmodeEEnum = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum vsvsStepYesNoEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -263,6 +456,9 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Initialize simple dependencies
 		docPackage.eINSTANCE.eClass();
+		exportPackage.eINSTANCE.eClass();
+		filterPackage.eINSTANCE.eClass();
+		importPackage.eINSTANCE.eClass();
 		vdmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -924,7 +1120,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_Steps() {
+	public EReference getVSVSTestProcedure_ProcedureSteps() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -951,8 +1147,989 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVSVSProcedureSteps() {
+		return vsvsProcedureStepsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureSteps_Name() {
+		return (EAttribute)vsvsProcedureStepsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureSteps_Step() {
+		return (EReference)vsvsProcedureStepsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSVSProcedureStep() {
 		return vsvsProcedureStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureStep_Name() {
+		return (EAttribute)vsvsProcedureStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureStep_Description() {
+		return (EAttribute)vsvsProcedureStepEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureStep_Id() {
+		return (EAttribute)vsvsProcedureStepEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureStep_Mode() {
+		return (EAttribute)vsvsProcedureStepEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSProcedureStep_Replays() {
+		return (EAttribute)vsvsProcedureStepEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_Prev_step_idref() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_Output_idref_from_prev_step() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_Inputs() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_Outputs() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_SpecialPackets() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureStep_Concurrent_steps() {
+		return (EReference)vsvsProcedureStepEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInputs() {
+		return vsvsStepInputsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputs_Input_level_3() {
+		return (EReference)vsvsStepInputsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputs_Input_level_2() {
+		return (EReference)vsvsStepInputsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputs_Input_level_1() {
+		return (EReference)vsvsStepInputsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputs_Input_level_0() {
+		return (EReference)vsvsStepInputsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutputs() {
+		return vsvsStepOutputsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutputs_Checkmode() {
+		return (EAttribute)vsvsStepOutputsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutputs_Valid_time_interval_value() {
+		return (EAttribute)vsvsStepOutputsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutputs_Valid_time_interval_unit() {
+		return (EAttribute)vsvsStepOutputsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputs_Output_level_3() {
+		return (EReference)vsvsStepOutputsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputs_Output_level_2() {
+		return (EReference)vsvsStepOutputsEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputs_Output_level_1() {
+		return (EReference)vsvsStepOutputsEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputs_Output_level_0() {
+		return (EReference)vsvsStepOutputsEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepSpecialPackets() {
+		return vsvsStepSpecialPacketsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepSpecialPackets_Enable() {
+		return (EReference)vsvsStepSpecialPacketsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepSpecialPackets_Disable() {
+		return (EReference)vsvsStepSpecialPacketsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepSpecialPackets_Enable_print() {
+		return (EReference)vsvsStepSpecialPacketsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepSpecialPackets_Disable_print() {
+		return (EReference)vsvsStepSpecialPacketsEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepEnableDisable() {
+		return vsvsStepEnableDisableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepEnableDisable_Id() {
+		return (EAttribute)vsvsStepEnableDisableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepConcurrentSteps() {
+		return vsvsStepConcurrentStepsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepConcurrentSteps_NextStep() {
+		return (EReference)vsvsStepConcurrentStepsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepConcurrentSteps_Concurrent_step() {
+		return (EReference)vsvsStepConcurrentStepsEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepNextStep() {
+		return vsvsStepNextStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepNextStep_Id() {
+		return (EAttribute)vsvsStepNextStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepNextStep_IsConcurrent() {
+		return (EAttribute)vsvsStepNextStepEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepConcurrentStep() {
+		return vsvsStepConcurrentStepEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepConcurrentStep_Id() {
+		return (EAttribute)vsvsStepConcurrentStepEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInput() {
+		return vsvsStepInputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepInput_Name() {
+		return (EAttribute)vsvsStepInputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepInput_IfRef() {
+		return (EAttribute)vsvsStepInputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepInput_Delay_value() {
+		return (EAttribute)vsvsStepInputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepInput_Delay_unit() {
+		return (EAttribute)vsvsStepInputEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInputLevel3() {
+		return vsvsStepInputLevel3EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level3() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_App_to_level3() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level2() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level3_to_level2() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level1() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level2_to_level1() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level0() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel3_Level1_to_level0() {
+		return (EReference)vsvsStepInputLevel3EClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInputLevel2() {
+		return vsvsStepInputLevel2EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_Level2() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_App_to_level2() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_Level1() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_Level2_to_level1() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_Level0() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel2_Level1_to_level0() {
+		return (EReference)vsvsStepInputLevel2EClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInputLevel1() {
+		return vsvsStepInputLevel1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel1_Level1() {
+		return (EReference)vsvsStepInputLevel1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel1_App_to_level1() {
+		return (EReference)vsvsStepInputLevel1EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel1_Level0() {
+		return (EReference)vsvsStepInputLevel1EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel1_Level1_to_level0() {
+		return (EReference)vsvsStepInputLevel1EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepInputLevel0() {
+		return vsvsStepInputLevel0EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel0_Level0() {
+		return (EReference)vsvsStepInputLevel0EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepInputLevel0_App_to_level0() {
+		return (EReference)vsvsStepInputLevel0EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutput() {
+		return vsvsStepOutputEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutput_Name() {
+		return (EAttribute)vsvsStepOutputEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutput_Id() {
+		return (EAttribute)vsvsStepOutputEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutput_IfRef() {
+		return (EAttribute)vsvsStepOutputEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepOutput_Optional() {
+		return (EAttribute)vsvsStepOutputEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutputLevel3() {
+		return vsvsStepOutputLevel3EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level3() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level3_filter() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level2() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level3_from_level2() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level2_filter() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level1() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level2_from_level1() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level1_filter() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level0() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level1_from_level0() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel3_Level0_filter() {
+		return (EReference)vsvsStepOutputLevel3EClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutputLevel2() {
+		return vsvsStepOutputLevel2EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level2() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level2_filter() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level1() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level2_from_level1() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level1_filter() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level0() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level1_from_level0() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel2_Level0_filter() {
+		return (EReference)vsvsStepOutputLevel2EClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutputLevel1() {
+		return vsvsStepOutputLevel1EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel1_Level1() {
+		return (EReference)vsvsStepOutputLevel1EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel1_Level1_filter() {
+		return (EReference)vsvsStepOutputLevel1EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel1_Level0() {
+		return (EReference)vsvsStepOutputLevel1EClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel1_Level1_from_level0() {
+		return (EReference)vsvsStepOutputLevel1EClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel1_Level0_filter() {
+		return (EReference)vsvsStepOutputLevel1EClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepOutputLevel0() {
+		return vsvsStepOutputLevel0EClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel0_Level0() {
+		return (EReference)vsvsStepOutputLevel0EClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepOutputLevel0_Level0_filter() {
+		return (EReference)vsvsStepOutputLevel0EClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSStepFilter() {
+		return vsvsStepFilterEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getVSVSStepFilter_Apply_def_filter() {
+		return (EAttribute)vsvsStepFilterEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSStepFilter_Extra_filter() {
+		return (EReference)vsvsStepFilterEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -980,6 +2157,42 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 */
 	public EClass getVSVSAdditionalInformation() {
 		return vsvsAdditionalInformationEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVSVSStepMode() {
+		return vsvsStepModeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVSVSStepUnit() {
+		return vsvsStepUnitEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVSVSStepCheckmode() {
+		return vsvsStepCheckmodeEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVSVSStepYesNo() {
+		return vsvsStepYesNoEEnum;
 	}
 
 	/**
@@ -1099,17 +2312,151 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEAttribute(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__NAME);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__IDENTIFIER);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__PURPOSE);
-		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__STEPS);
+		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__PROCEDURE_STEPS);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_SCRIPT);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_CASE);
 
+		vsvsProcedureStepsEClass = createEClass(VSVS_PROCEDURE_STEPS);
+		createEAttribute(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__NAME);
+		createEReference(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__STEP);
+
 		vsvsProcedureStepEClass = createEClass(VSVS_PROCEDURE_STEP);
+		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__NAME);
+		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__DESCRIPTION);
+		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__ID);
+		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__MODE);
+		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__REPLAYS);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__PREV_STEP_IDREF);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__INPUTS);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__OUTPUTS);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__SPECIAL_PACKETS);
+		createEReference(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__CONCURRENT_STEPS);
+
+		vsvsStepInputsEClass = createEClass(VSVS_STEP_INPUTS);
+		createEReference(vsvsStepInputsEClass, VSVS_STEP_INPUTS__INPUT_LEVEL_3);
+		createEReference(vsvsStepInputsEClass, VSVS_STEP_INPUTS__INPUT_LEVEL_2);
+		createEReference(vsvsStepInputsEClass, VSVS_STEP_INPUTS__INPUT_LEVEL_1);
+		createEReference(vsvsStepInputsEClass, VSVS_STEP_INPUTS__INPUT_LEVEL_0);
+
+		vsvsStepOutputsEClass = createEClass(VSVS_STEP_OUTPUTS);
+		createEAttribute(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__CHECKMODE);
+		createEAttribute(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_VALUE);
+		createEAttribute(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT);
+		createEReference(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3);
+		createEReference(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2);
+		createEReference(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1);
+		createEReference(vsvsStepOutputsEClass, VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0);
+
+		vsvsStepSpecialPacketsEClass = createEClass(VSVS_STEP_SPECIAL_PACKETS);
+		createEReference(vsvsStepSpecialPacketsEClass, VSVS_STEP_SPECIAL_PACKETS__ENABLE);
+		createEReference(vsvsStepSpecialPacketsEClass, VSVS_STEP_SPECIAL_PACKETS__DISABLE);
+		createEReference(vsvsStepSpecialPacketsEClass, VSVS_STEP_SPECIAL_PACKETS__ENABLE_PRINT);
+		createEReference(vsvsStepSpecialPacketsEClass, VSVS_STEP_SPECIAL_PACKETS__DISABLE_PRINT);
+
+		vsvsStepEnableDisableEClass = createEClass(VSVS_STEP_ENABLE_DISABLE);
+		createEAttribute(vsvsStepEnableDisableEClass, VSVS_STEP_ENABLE_DISABLE__ID);
+
+		vsvsStepConcurrentStepsEClass = createEClass(VSVS_STEP_CONCURRENT_STEPS);
+		createEReference(vsvsStepConcurrentStepsEClass, VSVS_STEP_CONCURRENT_STEPS__NEXT_STEP);
+		createEReference(vsvsStepConcurrentStepsEClass, VSVS_STEP_CONCURRENT_STEPS__CONCURRENT_STEP);
+
+		vsvsStepNextStepEClass = createEClass(VSVS_STEP_NEXT_STEP);
+		createEAttribute(vsvsStepNextStepEClass, VSVS_STEP_NEXT_STEP__ID);
+		createEAttribute(vsvsStepNextStepEClass, VSVS_STEP_NEXT_STEP__IS_CONCURRENT);
+
+		vsvsStepConcurrentStepEClass = createEClass(VSVS_STEP_CONCURRENT_STEP);
+		createEAttribute(vsvsStepConcurrentStepEClass, VSVS_STEP_CONCURRENT_STEP__ID);
+
+		vsvsStepInputEClass = createEClass(VSVS_STEP_INPUT);
+		createEAttribute(vsvsStepInputEClass, VSVS_STEP_INPUT__NAME);
+		createEAttribute(vsvsStepInputEClass, VSVS_STEP_INPUT__IF_REF);
+		createEAttribute(vsvsStepInputEClass, VSVS_STEP_INPUT__DELAY_VALUE);
+		createEAttribute(vsvsStepInputEClass, VSVS_STEP_INPUT__DELAY_UNIT);
+
+		vsvsStepInputLevel3EClass = createEClass(VSVS_STEP_INPUT_LEVEL3);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL3);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__APP_TO_LEVEL3);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL2);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL3_TO_LEVEL2);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL1);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL2_TO_LEVEL1);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL0);
+		createEReference(vsvsStepInputLevel3EClass, VSVS_STEP_INPUT_LEVEL3__LEVEL1_TO_LEVEL0);
+
+		vsvsStepInputLevel2EClass = createEClass(VSVS_STEP_INPUT_LEVEL2);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__LEVEL2);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__APP_TO_LEVEL2);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__LEVEL1);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__LEVEL2_TO_LEVEL1);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__LEVEL0);
+		createEReference(vsvsStepInputLevel2EClass, VSVS_STEP_INPUT_LEVEL2__LEVEL1_TO_LEVEL0);
+
+		vsvsStepInputLevel1EClass = createEClass(VSVS_STEP_INPUT_LEVEL1);
+		createEReference(vsvsStepInputLevel1EClass, VSVS_STEP_INPUT_LEVEL1__LEVEL1);
+		createEReference(vsvsStepInputLevel1EClass, VSVS_STEP_INPUT_LEVEL1__APP_TO_LEVEL1);
+		createEReference(vsvsStepInputLevel1EClass, VSVS_STEP_INPUT_LEVEL1__LEVEL0);
+		createEReference(vsvsStepInputLevel1EClass, VSVS_STEP_INPUT_LEVEL1__LEVEL1_TO_LEVEL0);
+
+		vsvsStepInputLevel0EClass = createEClass(VSVS_STEP_INPUT_LEVEL0);
+		createEReference(vsvsStepInputLevel0EClass, VSVS_STEP_INPUT_LEVEL0__LEVEL0);
+		createEReference(vsvsStepInputLevel0EClass, VSVS_STEP_INPUT_LEVEL0__APP_TO_LEVEL0);
+
+		vsvsStepOutputEClass = createEClass(VSVS_STEP_OUTPUT);
+		createEAttribute(vsvsStepOutputEClass, VSVS_STEP_OUTPUT__NAME);
+		createEAttribute(vsvsStepOutputEClass, VSVS_STEP_OUTPUT__ID);
+		createEAttribute(vsvsStepOutputEClass, VSVS_STEP_OUTPUT__IF_REF);
+		createEAttribute(vsvsStepOutputEClass, VSVS_STEP_OUTPUT__OPTIONAL);
+
+		vsvsStepOutputLevel3EClass = createEClass(VSVS_STEP_OUTPUT_LEVEL3);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL3);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FILTER);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL2);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL3_FROM_LEVEL2);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FILTER);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL1);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL2_FROM_LEVEL1);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FILTER);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL0);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL1_FROM_LEVEL0);
+		createEReference(vsvsStepOutputLevel3EClass, VSVS_STEP_OUTPUT_LEVEL3__LEVEL0_FILTER);
+
+		vsvsStepOutputLevel2EClass = createEClass(VSVS_STEP_OUTPUT_LEVEL2);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL2);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FILTER);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL1);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL2_FROM_LEVEL1);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FILTER);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL0);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL1_FROM_LEVEL0);
+		createEReference(vsvsStepOutputLevel2EClass, VSVS_STEP_OUTPUT_LEVEL2__LEVEL0_FILTER);
+
+		vsvsStepOutputLevel1EClass = createEClass(VSVS_STEP_OUTPUT_LEVEL1);
+		createEReference(vsvsStepOutputLevel1EClass, VSVS_STEP_OUTPUT_LEVEL1__LEVEL1);
+		createEReference(vsvsStepOutputLevel1EClass, VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FILTER);
+		createEReference(vsvsStepOutputLevel1EClass, VSVS_STEP_OUTPUT_LEVEL1__LEVEL0);
+		createEReference(vsvsStepOutputLevel1EClass, VSVS_STEP_OUTPUT_LEVEL1__LEVEL1_FROM_LEVEL0);
+		createEReference(vsvsStepOutputLevel1EClass, VSVS_STEP_OUTPUT_LEVEL1__LEVEL0_FILTER);
+
+		vsvsStepOutputLevel0EClass = createEClass(VSVS_STEP_OUTPUT_LEVEL0);
+		createEReference(vsvsStepOutputLevel0EClass, VSVS_STEP_OUTPUT_LEVEL0__LEVEL0);
+		createEReference(vsvsStepOutputLevel0EClass, VSVS_STEP_OUTPUT_LEVEL0__LEVEL0_FILTER);
+
+		vsvsStepFilterEClass = createEClass(VSVS_STEP_FILTER);
+		createEAttribute(vsvsStepFilterEClass, VSVS_STEP_FILTER__APPLY_DEF_FILTER);
+		createEReference(vsvsStepFilterEClass, VSVS_STEP_FILTER__EXTRA_FILTER);
 
 		vsvsAnalysisInspectionReviewEClass = createEClass(VSVS_ANALYSIS_INSPECTION_REVIEW);
 
 		vsvsTestPlatformRequirementsEClass = createEClass(VSVS_TEST_PLATFORM_REQUIREMENTS);
 
 		vsvsAdditionalInformationEClass = createEClass(VSVS_ADDITIONAL_INFORMATION);
+
+		// Create enums
+		vsvsStepModeEEnum = createEEnum(VSVS_STEP_MODE);
+		vsvsStepUnitEEnum = createEEnum(VSVS_STEP_UNIT);
+		vsvsStepCheckmodeEEnum = createEEnum(VSVS_STEP_CHECKMODE);
+		vsvsStepYesNoEEnum = createEEnum(VSVS_STEP_YES_NO);
 	}
 
 	/**
@@ -1138,6 +2485,10 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		// Obtain other dependent packages
 		vdmPackage thevdmPackage = (vdmPackage)EPackage.Registry.INSTANCE.getEPackage(vdmPackage.eNS_URI);
 		docPackage thedocPackage = (docPackage)EPackage.Registry.INSTANCE.getEPackage(docPackage.eNS_URI);
+		formatPackage theformatPackage = (formatPackage)EPackage.Registry.INSTANCE.getEPackage(formatPackage.eNS_URI);
+		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
+		importPackage theimportPackage = (importPackage)EPackage.Registry.INSTANCE.getEPackage(importPackage.eNS_URI);
+		filterPackage thefilterPackage = (filterPackage)EPackage.Registry.INSTANCE.getEPackage(filterPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1165,6 +2516,14 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		vsvsTestCaseEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsvsTestProceduresEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsvsTestProcedureEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsStepInputLevel3EClass.getESuperTypes().add(this.getVSVSStepInput());
+		vsvsStepInputLevel2EClass.getESuperTypes().add(this.getVSVSStepInput());
+		vsvsStepInputLevel1EClass.getESuperTypes().add(this.getVSVSStepInput());
+		vsvsStepInputLevel0EClass.getESuperTypes().add(this.getVSVSStepInput());
+		vsvsStepOutputLevel3EClass.getESuperTypes().add(this.getVSVSStepOutput());
+		vsvsStepOutputLevel2EClass.getESuperTypes().add(this.getVSVSStepOutput());
+		vsvsStepOutputLevel1EClass.getESuperTypes().add(this.getVSVSStepOutput());
+		vsvsStepOutputLevel0EClass.getESuperTypes().add(this.getVSVSStepOutput());
 		vsvsAnalysisInspectionReviewEClass.getESuperTypes().add(this.getVSVSFixedSection());
 		vsvsTestPlatformRequirementsEClass.getESuperTypes().add(this.getVSVSFixedSection());
 		vsvsAdditionalInformationEClass.getESuperTypes().add(this.getVSVSFixedSection());
@@ -1259,17 +2618,164 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEAttribute(getVSVSTestProcedure_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Identifier(), this.getVSVSFixedSection(), null, "identifier", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Purpose(), this.getVSVSFixedSection(), null, "purpose", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestProcedure_Steps(), this.getVSVSProcedureStep(), null, "steps", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestProcedure_ProcedureSteps(), this.getVSVSProcedureSteps(), null, "procedureSteps", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_TestScript(), this.getVSVSFixedSection(), null, "testScript", null, 0, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_TestCase(), this.getVSVSTestCase(), null, "testCase", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(vsvsProcedureStepsEClass, VSVSProcedureSteps.class, "VSVSProcedureSteps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSProcedureSteps_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureSteps_Step(), this.getVSVSProcedureStep(), null, "step", null, 1, 1900, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		initEClass(vsvsProcedureStepEClass, VSVSProcedureStep.class, "VSVSProcedureStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSProcedureStep_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSProcedureStep_Description(), ecorePackage.getEString(), "description", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSProcedureStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSProcedureStep_Mode(), this.getVSVSStepMode(), "mode", null, 1, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSProcedureStep_Replays(), ecorePackage.getEString(), "replays", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_Prev_step_idref(), this.getVSVSProcedureStep(), null, "prev_step_idref", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_Output_idref_from_prev_step(), this.getVSVSStepOutput(), null, "output_idref_from_prev_step", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_Inputs(), this.getVSVSStepInputs(), null, "inputs", null, 1, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_Outputs(), this.getVSVSStepOutputs(), null, "outputs", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_SpecialPackets(), this.getVSVSStepSpecialPackets(), null, "specialPackets", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureStep_Concurrent_steps(), this.getVSVSStepConcurrentSteps(), null, "concurrent_steps", null, 0, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputsEClass, VSVSStepInputs.class, "VSVSStepInputs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepInputs_Input_level_3(), this.getVSVSStepInputLevel3(), null, "input_level_3", null, 0, -1, VSVSStepInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputs_Input_level_2(), this.getVSVSStepInputLevel2(), null, "input_level_2", null, 0, -1, VSVSStepInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputs_Input_level_1(), this.getVSVSStepInputLevel1(), null, "input_level_1", null, 0, -1, VSVSStepInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputs_Input_level_0(), this.getVSVSStepInputLevel0(), null, "input_level_0", null, 0, -1, VSVSStepInputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputsEClass, VSVSStepOutputs.class, "VSVSStepOutputs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepOutputs_Checkmode(), this.getVSVSStepCheckmode(), "checkmode", null, 1, 1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepOutputs_Valid_time_interval_value(), ecorePackage.getEString(), "valid_time_interval_value", null, 1, 1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepOutputs_Valid_time_interval_unit(), this.getVSVSStepUnit(), "valid_time_interval_unit", null, 1, 1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputs_Output_level_3(), this.getVSVSStepOutputLevel3(), null, "output_level_3", null, 0, -1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputs_Output_level_2(), this.getVSVSStepOutputLevel2(), null, "output_level_2", null, 0, -1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputs_Output_level_1(), this.getVSVSStepOutputLevel1(), null, "output_level_1", null, 0, -1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputs_Output_level_0(), this.getVSVSStepOutputLevel0(), null, "output_level_0", null, 0, -1, VSVSStepOutputs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepSpecialPacketsEClass, VSVSStepSpecialPackets.class, "VSVSStepSpecialPackets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepSpecialPackets_Enable(), this.getVSVSStepEnableDisable(), null, "enable", null, 0, -1, VSVSStepSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepSpecialPackets_Disable(), this.getVSVSStepEnableDisable(), null, "disable", null, 0, -1, VSVSStepSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepSpecialPackets_Enable_print(), this.getVSVSStepEnableDisable(), null, "enable_print", null, 0, -1, VSVSStepSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepSpecialPackets_Disable_print(), this.getVSVSStepEnableDisable(), null, "disable_print", null, 0, -1, VSVSStepSpecialPackets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepEnableDisableEClass, VSVSStepEnableDisable.class, "VSVSStepEnableDisable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepEnableDisable_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSStepEnableDisable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepConcurrentStepsEClass, VSVSStepConcurrentSteps.class, "VSVSStepConcurrentSteps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepConcurrentSteps_NextStep(), this.getVSVSStepNextStep(), null, "nextStep", null, 1, 1, VSVSStepConcurrentSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepConcurrentSteps_Concurrent_step(), this.getVSVSStepConcurrentStep(), null, "concurrent_step", null, 1, -1, VSVSStepConcurrentSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepNextStepEClass, VSVSStepNextStep.class, "VSVSStepNextStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepNextStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSStepNextStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepNextStep_IsConcurrent(), this.getVSVSStepYesNo(), "isConcurrent", null, 1, 1, VSVSStepNextStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepConcurrentStepEClass, VSVSStepConcurrentStep.class, "VSVSStepConcurrentStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepConcurrentStep_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSStepConcurrentStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputEClass, VSVSStepInput.class, "VSVSStepInput", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepInput_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSStepInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepInput_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, VSVSStepInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepInput_Delay_value(), ecorePackage.getEString(), "delay_value", null, 1, 1, VSVSStepInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepInput_Delay_unit(), this.getVSVSStepUnit(), "delay_unit", null, 1, 1, VSVSStepInput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputLevel3EClass, VSVSStepInputLevel3.class, "VSVSStepInputLevel3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepInputLevel3_Level3(), theformatPackage.getTMTCIFFormatFormat(), null, "level3", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_App_to_level3(), theexportPackage.getTMTCIFExportExport(), null, "app_to_level3", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level2(), theformatPackage.getTMTCIFFormatFormat(), null, "level2", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level3_to_level2(), theexportPackage.getTMTCIFExportExport(), null, "level3_to_level2", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level2_to_level1(), theexportPackage.getTMTCIFExportExport(), null, "level2_to_level1", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel3_Level1_to_level0(), theexportPackage.getTMTCIFExportExport(), null, "level1_to_level0", null, 0, 1, VSVSStepInputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputLevel2EClass, VSVSStepInputLevel2.class, "VSVSStepInputLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepInputLevel2_Level2(), theformatPackage.getTMTCIFFormatFormat(), null, "level2", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel2_App_to_level2(), theexportPackage.getTMTCIFExportExport(), null, "app_to_level2", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel2_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel2_Level2_to_level1(), theexportPackage.getTMTCIFExportExport(), null, "level2_to_level1", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel2_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel2_Level1_to_level0(), theexportPackage.getTMTCIFExportExport(), null, "level1_to_level0", null, 0, 1, VSVSStepInputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputLevel1EClass, VSVSStepInputLevel1.class, "VSVSStepInputLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepInputLevel1_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel1_App_to_level1(), theexportPackage.getTMTCIFExportExport(), null, "app_to_level1", null, 0, 1, VSVSStepInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel1_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel1_Level1_to_level0(), theexportPackage.getTMTCIFExportExport(), null, "level1_to_level0", null, 0, 1, VSVSStepInputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepInputLevel0EClass, VSVSStepInputLevel0.class, "VSVSStepInputLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepInputLevel0_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepInputLevel0_App_to_level0(), theexportPackage.getTMTCIFExportExport(), null, "app_to_level0", null, 0, 1, VSVSStepInputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputEClass, VSVSStepOutput.class, "VSVSStepOutput", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepOutput_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSStepOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepOutput_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSStepOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepOutput_IfRef(), ecorePackage.getEString(), "ifRef", null, 1, 1, VSVSStepOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepOutput_Optional(), ecorePackage.getEString(), "optional", null, 0, 1, VSVSStepOutput.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputLevel3EClass, VSVSStepOutputLevel3.class, "VSVSStepOutputLevel3", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepOutputLevel3_Level3(), theformatPackage.getTMTCIFFormatFormat(), null, "level3", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level3_filter(), this.getVSVSStepFilter(), null, "level3_filter", null, 1, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level2(), theformatPackage.getTMTCIFFormatFormat(), null, "level2", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level3_from_level2(), theimportPackage.getTMTCIFImportImport(), null, "level3_from_level2", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level2_filter(), this.getVSVSStepFilter(), null, "level2_filter", null, 1, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level2_from_level1(), theimportPackage.getTMTCIFImportImport(), null, "level2_from_level1", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level1_filter(), this.getVSVSStepFilter(), null, "level1_filter", null, 1, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level1_from_level0(), theimportPackage.getTMTCIFImportImport(), null, "level1_from_level0", null, 0, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel3_Level0_filter(), this.getVSVSStepFilter(), null, "level0_filter", null, 1, 1, VSVSStepOutputLevel3.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputLevel2EClass, VSVSStepOutputLevel2.class, "VSVSStepOutputLevel2", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepOutputLevel2_Level2(), theformatPackage.getTMTCIFFormatFormat(), null, "level2", null, 0, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level2_filter(), this.getVSVSStepFilter(), null, "level2_filter", null, 1, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level2_from_level1(), theimportPackage.getTMTCIFImportImport(), null, "level2_from_level1", null, 0, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level1_filter(), this.getVSVSStepFilter(), null, "level1_filter", null, 1, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level1_from_level0(), theimportPackage.getTMTCIFImportImport(), null, "level1_from_level0", null, 0, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel2_Level0_filter(), this.getVSVSStepFilter(), null, "level0_filter", null, 1, 1, VSVSStepOutputLevel2.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputLevel1EClass, VSVSStepOutputLevel1.class, "VSVSStepOutputLevel1", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepOutputLevel1_Level1(), theformatPackage.getTMTCIFFormatFormat(), null, "level1", null, 0, 1, VSVSStepOutputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel1_Level1_filter(), this.getVSVSStepFilter(), null, "level1_filter", null, 1, 1, VSVSStepOutputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel1_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepOutputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel1_Level1_from_level0(), theimportPackage.getTMTCIFImportImport(), null, "level1_from_level0", null, 0, 1, VSVSStepOutputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel1_Level0_filter(), this.getVSVSStepFilter(), null, "level0_filter", null, 1, 1, VSVSStepOutputLevel1.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepOutputLevel0EClass, VSVSStepOutputLevel0.class, "VSVSStepOutputLevel0", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSStepOutputLevel0_Level0(), theformatPackage.getTMTCIFFormatFormat(), null, "level0", null, 0, 1, VSVSStepOutputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepOutputLevel0_Level0_filter(), this.getVSVSStepFilter(), null, "level0_filter", null, 1, 1, VSVSStepOutputLevel0.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvsStepFilterEClass, VSVSStepFilter.class, "VSVSStepFilter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVSVSStepFilter_Apply_def_filter(), this.getVSVSStepYesNo(), "apply_def_filter", null, 1, 1, VSVSStepFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepFilter_Extra_filter(), thefilterPackage.getTMTCIFFilterFilter(), null, "extra_filter", null, 0, 1, VSVSStepFilter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsAnalysisInspectionReviewEClass, VSVSAnalysisInspectionReview.class, "VSVSAnalysisInspectionReview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsvsTestPlatformRequirementsEClass, VSVSTestPlatformRequirements.class, "VSVSTestPlatformRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsvsAdditionalInformationEClass, VSVSAdditionalInformation.class, "VSVSAdditionalInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(vsvsStepModeEEnum, VSVSStepMode.class, "VSVSStepMode");
+		addEEnumLiteral(vsvsStepModeEEnum, VSVSStepMode.CONTINUOUS);
+		addEEnumLiteral(vsvsStepModeEEnum, VSVSStepMode.MANUAL);
+		addEEnumLiteral(vsvsStepModeEEnum, VSVSStepMode.CONCURRENT);
+
+		initEEnum(vsvsStepUnitEEnum, VSVSStepUnit.class, "VSVSStepUnit");
+		addEEnumLiteral(vsvsStepUnitEEnum, VSVSStepUnit.MILISECONDS);
+		addEEnumLiteral(vsvsStepUnitEEnum, VSVSStepUnit.SECONDS);
+
+		initEEnum(vsvsStepCheckmodeEEnum, VSVSStepCheckmode.class, "VSVSStepCheckmode");
+		addEEnumLiteral(vsvsStepCheckmodeEEnum, VSVSStepCheckmode.ALL);
+		addEEnumLiteral(vsvsStepCheckmodeEEnum, VSVSStepCheckmode.ALLUNSORTED);
+		addEEnumLiteral(vsvsStepCheckmodeEEnum, VSVSStepCheckmode.ANY);
+
+		initEEnum(vsvsStepYesNoEEnum, VSVSStepYesNo.class, "VSVSStepYesNo");
+		addEEnumLiteral(vsvsStepYesNoEEnum, VSVSStepYesNo.YES);
+		addEEnumLiteral(vsvsStepYesNoEEnum, VSVSStepYesNo.NO);
 
 		// Create resource
 		createResource(eNS_URI);

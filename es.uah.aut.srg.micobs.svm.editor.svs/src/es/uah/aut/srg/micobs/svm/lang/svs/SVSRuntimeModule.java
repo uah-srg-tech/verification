@@ -10,9 +10,9 @@
  ******************************************************************************/
 package es.uah.aut.srg.micobs.svm.lang.svs;
 
-
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class SVSRuntimeModule extends AbstractSVSRuntimeModule {
+	
 }

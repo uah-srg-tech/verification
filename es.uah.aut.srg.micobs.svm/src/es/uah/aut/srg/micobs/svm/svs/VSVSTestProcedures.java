@@ -63,7 +63,7 @@ public interface VSVSTestProcedures extends DFixedSection {
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Test Procedures</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Test Procedures</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
