@@ -3433,9 +3433,9 @@ ruleVSSSAdaptationMissionizationRequirements returns [EObject current=null]
 					$current);
 			}
 		)
-		otherlv_1='<VSSSAdaptationMissionizationRequirements>'
+		otherlv_1='<AdaptationMissionizationRequirements>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_1());
 		}
 		(
 			(
@@ -3494,9 +3494,9 @@ ruleVSSSAdaptationMissionizationRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_5='</VSSSAdaptationMissionizationRequirements>'
+		otherlv_5='</AdaptationMissionizationRequirements>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_5());
 		}
 	)
 ;

@@ -274,11 +274,11 @@ VSSSSystemInterfaceRequirements returns VSSSSystemInterfaceRequirements:
 
 VSSSAdaptationMissionizationRequirements returns VSSSAdaptationMissionizationRequirements:
 	{VSSSAdaptationMissionizationRequirements}
-	'<VSSSAdaptationMissionizationRequirements>'
+	'<AdaptationMissionizationRequirements>'
 		(sectionDescription=DBody)?
 		(sssItems+=VSSSDocumentItem)*
 		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
-	'</VSSSAdaptationMissionizationRequirements>';
+	'</AdaptationMissionizationRequirements>';
 
 VSSSComputerResourceRequirements returns VSSSComputerResourceRequirements:
 	{VSSSComputerResourceRequirements}

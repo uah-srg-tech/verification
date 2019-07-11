@@ -8164,9 +8164,9 @@ rule__VSSSAdaptationMissionizationRequirements__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_1()); }
-	'<VSSSAdaptationMissionizationRequirements>'
-	{ after(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_1()); }
+	{ before(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_1()); }
+	'<AdaptationMissionizationRequirements>'
+	{ after(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_1()); }
 )
 ;
 finally {
@@ -8271,9 +8271,9 @@ rule__VSSSAdaptationMissionizationRequirements__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_5()); }
-	'</VSSSAdaptationMissionizationRequirements>'
-	{ after(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getVSSSAdaptationMissionizationRequirementsKeyword_5()); }
+	{ before(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_5()); }
+	'</AdaptationMissionizationRequirements>'
+	{ after(grammarAccess.getVSSSAdaptationMissionizationRequirementsAccess().getAdaptationMissionizationRequirementsKeyword_5()); }
 )
 ;
 finally {

@@ -8,6 +8,7 @@
 '"WalkThrough"'=17
 '/>'=50
 '</Abbreviation>'=98
+'</AdaptationMissionizationRequirements>'=106
 '</ApplicableDocuments>'=70
 '</AssumptionsDependencies>'=85
 '</CapabilitiesRequirements>'=102
@@ -36,7 +37,6 @@
 '</SystemSoftwareObservabilityRequirements>'=124
 '</Term>'=94
 '</TermsDefinitionsAbbreviations>'=74
-'</VSSSAdaptationMissionizationRequirements>'=106
 '</ValidationApproach>'=135
 '</ValidationRequirements>'=137
 '</VerificationRequirements>'=139
@@ -58,6 +58,7 @@
 '</sublist>'=35
 '</subsection>'=66
 '<Abbreviation'=97
+'<AdaptationMissionizationRequirements>'=105
 '<ApplicableDocument'=62
 '<ApplicableDocuments>'=69
 '<AssumptionsDependencies>'=84
@@ -89,7 +90,6 @@
 '<SystemSoftwareObservabilityRequirements>'=123
 '<Term'=93
 '<TermsDefinitionsAbbreviations>'=73
-'<VSSSAdaptationMissionizationRequirements>'=105
 '<ValidationApproach>'=134
 '<ValidationRequirements>'=136
 '<VerificationRequirements>'=138

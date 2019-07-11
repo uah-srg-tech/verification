@@ -2034,34 +2034,34 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSAdaptationMissionizationRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSSSAdaptationMissionizationRequirementsAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cVSSSAdaptationMissionizationRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cAdaptationMissionizationRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
 		private final Assignment cSssItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cSssItemsVSSSDocumentItemParserRuleCall_3_0 = (RuleCall)cSssItemsAssignment_3.eContents().get(0);
 		private final Assignment cSssRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSssRequirementSubsectionsAssignment_4.eContents().get(0);
-		private final Keyword cVSSSAdaptationMissionizationRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cAdaptationMissionizationRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSSSAdaptationMissionizationRequirements:
 		//	{VSSSAdaptationMissionizationRequirements}
-		//	'<VSSSAdaptationMissionizationRequirements>'
+		//	'<AdaptationMissionizationRequirements>'
 		//	sectionDescription=DBody?
 		//	sssItems+=VSSSDocumentItem*
 		//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
-		//	'</VSSSAdaptationMissionizationRequirements>';
+		//	'</AdaptationMissionizationRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSSSAdaptationMissionizationRequirements} '<VSSSAdaptationMissionizationRequirements>' sectionDescription=DBody?
+		//{VSSSAdaptationMissionizationRequirements} '<AdaptationMissionizationRequirements>' sectionDescription=DBody?
 		//sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*
-		//'</VSSSAdaptationMissionizationRequirements>'
+		//'</AdaptationMissionizationRequirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSSSAdaptationMissionizationRequirements}
 		public Action getVSSSAdaptationMissionizationRequirementsAction_0() { return cVSSSAdaptationMissionizationRequirementsAction_0; }
 		
-		//'<VSSSAdaptationMissionizationRequirements>'
-		public Keyword getVSSSAdaptationMissionizationRequirementsKeyword_1() { return cVSSSAdaptationMissionizationRequirementsKeyword_1; }
+		//'<AdaptationMissionizationRequirements>'
+		public Keyword getAdaptationMissionizationRequirementsKeyword_1() { return cAdaptationMissionizationRequirementsKeyword_1; }
 		
 		//sectionDescription=DBody?
 		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
@@ -2081,8 +2081,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSInstantiableRequirementSection
 		public RuleCall getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0() { return cSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
-		//'</VSSSAdaptationMissionizationRequirements>'
-		public Keyword getVSSSAdaptationMissionizationRequirementsKeyword_5() { return cVSSSAdaptationMissionizationRequirementsKeyword_5; }
+		//'</AdaptationMissionizationRequirements>'
+		public Keyword getAdaptationMissionizationRequirementsKeyword_5() { return cAdaptationMissionizationRequirementsKeyword_5; }
 	}
 	public class VSSSComputerResourceRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSComputerResourceRequirements");
@@ -3607,11 +3607,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSSSAdaptationMissionizationRequirements:
 	//	{VSSSAdaptationMissionizationRequirements}
-	//	'<VSSSAdaptationMissionizationRequirements>'
+	//	'<AdaptationMissionizationRequirements>'
 	//	sectionDescription=DBody?
 	//	sssItems+=VSSSDocumentItem*
 	//	sssRequirementSubsections+=VSSSInstantiableRequirementSection*
-	//	'</VSSSAdaptationMissionizationRequirements>';
+	//	'</AdaptationMissionizationRequirements>';
 	public VSSSAdaptationMissionizationRequirementsElements getVSSSAdaptationMissionizationRequirementsAccess() {
 		return pVSSSAdaptationMissionizationRequirements;
 	}
