@@ -1430,16 +1430,42 @@ ruleDCell returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<cell>'
+		otherlv_0='<cell'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDCellAccess().getCellKeyword_0());
+		}
+		otherlv_1='span='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDCellAccess().getSpanKeyword_1());
+		}
+		(
+			(
+				lv_span_2_0=RULE_STRING
+				{
+					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDCellRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"span",
+						lv_span_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDCellAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDCellAccess().getBodyContentDBodyContentParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDCellAccess().getBodyContentDBodyContentParserRuleCall_4_0());
 				}
-				lv_bodyContent_1_0=ruleDBodyContent
+				lv_bodyContent_4_0=ruleDBodyContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDCellRule());
@@ -1447,15 +1473,15 @@ ruleDCell returns [EObject current=null]
 					add(
 						$current,
 						"bodyContent",
-						lv_bodyContent_1_0,
+						lv_bodyContent_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBodyContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_2='</cell>'
+		otherlv_5='</cell>'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDCellAccess().getCellKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getDCellAccess().getCellKeyword_5());
 		}
 	)
 ;

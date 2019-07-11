@@ -285,7 +285,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCell returns DCell
 	 *
 	 * Constraint:
-	 *     bodyContent+=DBodyContent+
+	 *     (span=STRING bodyContent+=DBodyContent+)
 	 */
 	protected void sequence_DCell(ISerializationContext context, DCell semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

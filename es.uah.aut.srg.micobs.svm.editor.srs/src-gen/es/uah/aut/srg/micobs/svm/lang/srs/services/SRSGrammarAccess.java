@@ -857,30 +857,48 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DCell");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCellKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cBodyContentAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cBodyContentDBodyContentParserRuleCall_1_0 = (RuleCall)cBodyContentAssignment_1.eContents().get(0);
-		private final Keyword cCellKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cSpanSTRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cBodyContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cBodyContentDBodyContentParserRuleCall_4_0 = (RuleCall)cBodyContentAssignment_4.eContents().get(0);
+		private final Keyword cCellKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//DCell doc::DCell:
-		//	'<cell>'
+		//	'<cell'
+		//	'span=' span=STRING
+		//	'>'
 		//	bodyContent+=DBodyContent+
 		//	'</cell>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<cell>' bodyContent+=DBodyContent+ '</cell>'
+		//'<cell' 'span=' span=STRING '>' bodyContent+=DBodyContent+ '</cell>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<cell>'
+		//'<cell'
 		public Keyword getCellKeyword_0() { return cCellKeyword_0; }
 		
+		//'span='
+		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
+		
+		//span=STRING
+		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
+		
+		//STRING
+		public RuleCall getSpanSTRINGTerminalRuleCall_2_0() { return cSpanSTRINGTerminalRuleCall_2_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
 		//bodyContent+=DBodyContent+
-		public Assignment getBodyContentAssignment_1() { return cBodyContentAssignment_1; }
+		public Assignment getBodyContentAssignment_4() { return cBodyContentAssignment_4; }
 		
 		//DBodyContent
-		public RuleCall getBodyContentDBodyContentParserRuleCall_1_0() { return cBodyContentDBodyContentParserRuleCall_1_0; }
+		public RuleCall getBodyContentDBodyContentParserRuleCall_4_0() { return cBodyContentDBodyContentParserRuleCall_4_0; }
 		
 		//'</cell>'
-		public Keyword getCellKeyword_2() { return cCellKeyword_2; }
+		public Keyword getCellKeyword_5() { return cCellKeyword_5; }
 	}
 	public class DApplicableDocumentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DApplicableDocument");
@@ -3343,7 +3361,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DCell doc::DCell:
-	//	'<cell>'
+	//	'<cell'
+	//	'span=' span=STRING
+	//	'>'
 	//	bodyContent+=DBodyContent+
 	//	'</cell>'
 	public DCellElements getDCellAccess() {

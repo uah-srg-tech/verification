@@ -221,7 +221,8 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDRowAccess().getColumnsAssignment_4(), "rule__DRow__ColumnsAssignment_4");
 					put(grammarAccess.getDColumnAccess().getSpanAssignment_2(), "rule__DColumn__SpanAssignment_2");
 					put(grammarAccess.getDColumnAccess().getCellsAssignment_4(), "rule__DColumn__CellsAssignment_4");
-					put(grammarAccess.getDCellAccess().getBodyContentAssignment_1(), "rule__DCell__BodyContentAssignment_1");
+					put(grammarAccess.getDCellAccess().getSpanAssignment_2(), "rule__DCell__SpanAssignment_2");
+					put(grammarAccess.getDCellAccess().getBodyContentAssignment_4(), "rule__DCell__BodyContentAssignment_4");
 					put(grammarAccess.getDApplicableDocumentAccess().getNameAssignment_2(), "rule__DApplicableDocument__NameAssignment_2");
 					put(grammarAccess.getDApplicableDocumentAccess().getTitleAssignment_4(), "rule__DApplicableDocument__TitleAssignment_4");
 					put(grammarAccess.getDApplicableDocumentAccess().getIdAssignment_6(), "rule__DApplicableDocument__IdAssignment_6");

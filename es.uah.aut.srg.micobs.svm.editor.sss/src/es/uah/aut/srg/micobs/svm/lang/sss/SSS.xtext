@@ -118,7 +118,9 @@ DColumn returns doc::DColumn:
 	'</column>';
 
 DCell returns doc::DCell:
-	'<cell>'
+	'<cell'
+		'span=' span=STRING
+	'>'
 		(bodyContent+=DBodyContent)+
 	'</cell>';
 
