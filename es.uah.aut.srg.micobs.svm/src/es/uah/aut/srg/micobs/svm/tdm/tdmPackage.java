@@ -268,22 +268,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>VTraceable Document Instantiable Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
+	int VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VTRACEABLE_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VTraceable Document Instantiable Group</em>' class.
@@ -497,17 +488,6 @@ public interface tdmPackage extends EPackage {
 	EClass getVTraceableDocumentInstantiableGroup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup#getPrefix <em>Prefix</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Prefix</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup#getPrefix()
-	 * @see #getVTraceableDocumentInstantiableGroup()
-	 * @generated
-	 */
-	EAttribute getVTraceableDocumentInstantiableGroup_Prefix();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem <em>VTraceable Document Abstract Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -697,14 +677,6 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP = eINSTANCE.getVTraceableDocumentInstantiableGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = eINSTANCE.getVTraceableDocumentInstantiableGroup_Prefix();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl <em>VTraceable Document Abstract Item</em>}' class.

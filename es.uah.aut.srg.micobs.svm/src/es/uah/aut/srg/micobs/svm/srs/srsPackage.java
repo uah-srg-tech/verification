@@ -956,13 +956,13 @@ public interface srsPackage extends EPackage {
 	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -971,7 +971,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__NAME = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -980,7 +980,16 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -989,7 +998,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Srs Items</b></em>' containment reference list.
@@ -998,7 +1007,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SRS_ITEMS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SRS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Instantiable Requirement Section</em>' class.
@@ -1007,7 +1016,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSRS Instantiable Requirement Section</em>' class.
@@ -1016,7 +1025,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl <em>VSRS Requirements</em>}' class.

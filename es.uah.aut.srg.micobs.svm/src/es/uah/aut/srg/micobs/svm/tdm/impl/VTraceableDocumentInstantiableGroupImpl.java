@@ -29,7 +29,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl#getPrefix <em>Prefix</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,25 +70,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-	/**
-	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PREFIX_EDEFAULT = null;
-	/**
-	 * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected String prefix = PREFIX_EDEFAULT;
-
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -156,27 +136,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPrefix() {
-		return prefix;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrefix(String newPrefix) {
-		String oldPrefix = prefix;
-		prefix = newPrefix;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX, oldPrefix, prefix));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -184,8 +143,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 				return getName();
 			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				return getDescription();
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				return getPrefix();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -203,9 +160,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				setDescription((String)newValue);
-				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				setPrefix((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -225,9 +179,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				setPrefix(PREFIX_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -244,8 +195,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -298,8 +247,6 @@ public abstract class VTraceableDocumentInstantiableGroupImpl extends VTraceable
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", prefix: ");
-		result.append(prefix);
 		result.append(')');
 		return result.toString();
 	}

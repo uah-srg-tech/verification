@@ -22,6 +22,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -260,6 +261,10 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
 				return createVTraceableDocumentFixedGroupAdapter();
+			}
+			@Override
+			public Adapter caseVTraceableDocumentInstantiableGroup(VTraceableDocumentInstantiableGroup object) {
+				return createVTraceableDocumentInstantiableGroupAdapter();
 			}
 			@Override
 			public Adapter caseVTraceableDocumentAbstractItem(VTraceableDocumentAbstractItem object) {
@@ -898,6 +903,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentFixedGroupAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup <em>VTraceable Document Instantiable Group</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup
+	 * @generated
+	 */
+	public Adapter createVTraceableDocumentInstantiableGroupAdapter() {
 		return null;
 	}
 

@@ -22,6 +22,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -189,9 +190,11 @@ public class sssSwitch<T> extends Switch<T> {
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION: {
 				VSSSInstantiableRequirementSection vsssInstantiableRequirementSection = (VSSSInstantiableRequirementSection)theEObject;
 				T result = caseVSSSInstantiableRequirementSection(vsssInstantiableRequirementSection);
+				if (result == null) result = caseVTraceableDocumentInstantiableGroup(vsssInstantiableRequirementSection);
 				if (result == null) result = caseDInstantiableSection(vsssInstantiableRequirementSection);
-				if (result == null) result = caseDAbstractSection(vsssInstantiableRequirementSection);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssInstantiableRequirementSection);
 				if (result == null) result = caseMCommonReferenceableObj(vsssInstantiableRequirementSection);
+				if (result == null) result = caseDAbstractSection(vsssInstantiableRequirementSection);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -1080,6 +1083,21 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTraceableDocumentFixedGroup(VTraceableDocumentFixedGroup object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTraceable Document Instantiable Group</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTraceable Document Instantiable Group</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTraceableDocumentInstantiableGroup(VTraceableDocumentInstantiableGroup object) {
 		return null;
 	}
 

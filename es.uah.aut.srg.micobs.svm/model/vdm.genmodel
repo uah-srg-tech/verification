@@ -9,15 +9,24 @@
   <foreignModel>vdm.ecore</foreignModel>
   <genPackages prefix="vdm" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
       ecorePackage="vdm.ecore#/">
-    <genClasses ecoreClass="vdm.ecore#//VVerificationDocument">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VVerificationDocument/id"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VVerificationDocument/issue"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VVerificationDocument/date"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VVerificationDocument/item"/>
+    <genClasses ecoreClass="vdm.ecore#//VValidationDocument">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocument/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocument/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocument/issue"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocument/revision"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocument/date"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VValidationDocument/parents"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VValidationDocument/groups"/>
     </genClasses>
-    <genClasses ecoreClass="vdm.ecore#//VVerificationDocumentItem">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VVerificationDocumentItem/id"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VVerificationDocumentItem/evidenceOf"/>
+    <genClasses ecoreClass="vdm.ecore#//VValidationDocumentAbstractGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VValidationDocumentAbstractGroup/items"/>
+    </genClasses>
+    <genClasses ecoreClass="vdm.ecore#//VValidationDocumentFixedGroup"/>
+    <genClasses ecoreClass="vdm.ecore#//VValidationDocumentInstantiableGroup"/>
+    <genClasses ecoreClass="vdm.ecore#//VValidationDocumentAbstractItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vdm.ecore#//VValidationDocumentAbstractItem/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VValidationDocumentAbstractItem/group"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vdm.ecore#//VValidationDocumentAbstractItem/validatingItems"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

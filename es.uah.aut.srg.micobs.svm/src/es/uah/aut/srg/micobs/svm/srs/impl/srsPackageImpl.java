@@ -1346,6 +1346,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		vsrsSoftwareOverviewEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsrsAbstractRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsrsAbstractRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsInstantiableRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentInstantiableGroup());
 		vsrsInstantiableRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDInstantiableSection());
 		vsrsRequirementsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsrsGeneralRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());

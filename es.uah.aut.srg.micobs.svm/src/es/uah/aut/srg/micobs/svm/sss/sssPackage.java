@@ -984,13 +984,13 @@ public interface sssPackage extends EPackage {
 	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION = 13;
 
 	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * The feature id for the '<em><b>Items</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -999,7 +999,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__NAME = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -1008,7 +1008,16 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -1017,7 +1026,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1026,7 +1035,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Instantiable Requirement Section</em>' class.
@@ -1035,7 +1044,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSSS Instantiable Requirement Section</em>' class.
@@ -1044,7 +1053,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.

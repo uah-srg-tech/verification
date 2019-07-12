@@ -91,7 +91,7 @@
         upperBound="-1" eType="#//VSSSInstantiableRequirementSection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSInstantiableRequirementSection"
-      eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DInstantiableSection">
+      eSuperTypes="tdm.ecore#//VTraceableDocumentInstantiableGroup ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DInstantiableSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sectionDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sssItems" upperBound="-1"

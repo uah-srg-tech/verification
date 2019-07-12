@@ -18,6 +18,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
 import java.util.Collection;
@@ -335,6 +336,12 @@ public abstract class VSSSAbstractRequirementSectionImpl extends VTraceableDocum
 		
 		for(VTraceableDocumentAbstractItem item : getSssItems()) {
 			items.add(item);
+		}
+		
+		for(VTraceableDocumentAbstractGroup subsection : getSssRequirementSubsections()) {
+			for(VTraceableDocumentAbstractItem item : subsection.getItems()) {
+				items.add(item);
+			}
 		}
 		return items;
 	}

@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.sss;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -31,7 +32,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSInstantiableRequirementSection extends DInstantiableSection {
+public interface VSSSInstantiableRequirementSection extends VTraceableDocumentInstantiableGroup, DInstantiableSection {
 	/**
 	 * Returns the value of the '<em><b>Section Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

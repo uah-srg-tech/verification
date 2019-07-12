@@ -12,14 +12,18 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl;
+import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
+import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
@@ -38,13 +42,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl#getSubsections <em>Subsections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl#getSectionDescription <em>Section Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl#getSssItems <em>Sss Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSSSInstantiableRequirementSectionImpl extends DInstantiableSectionImpl implements VSSSInstantiableRequirementSection {
+public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentInstantiableGroupImpl implements VSSSInstantiableRequirementSection {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -167,6 +172,8 @@ public class VSSSInstantiableRequirementSectionImpl extends DInstantiableSection
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
+				return getSubsections();
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
 				return getSectionDescription();
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS:
@@ -184,6 +191,10 @@ public class VSSSInstantiableRequirementSectionImpl extends DInstantiableSection
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
+				getSubsections().clear();
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
+				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
 				setSectionDescription((DBody)newValue);
 				return;
@@ -203,6 +214,9 @@ public class VSSSInstantiableRequirementSectionImpl extends DInstantiableSection
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
+				getSubsections().clear();
+				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
 				setSectionDescription((DBody)null);
 				return;
@@ -221,12 +235,66 @@ public class VSSSInstantiableRequirementSectionImpl extends DInstantiableSection
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
+				return !getSubsections().isEmpty();
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
 				return sectionDescription != null;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS:
 				return sssItems != null && !sssItems.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
+		if (baseClass == DAbstractSection.class) {
+			switch (derivedFeatureID) {
+				case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
+				default: return -1;
+			}
+		}
+		if (baseClass == DInstantiableSection.class) {
+			switch (derivedFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
+		if (baseClass == DAbstractSection.class) {
+			switch (baseFeatureID) {
+				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS;
+				default: return -1;
+			}
+		}
+		if (baseClass == DInstantiableSection.class) {
+			switch (baseFeatureID) {
+				default: return -1;
+			}
+		}
+		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	@Override
+	public EList<VTraceableDocumentAbstractItem> getItems() {
+		EList<VTraceableDocumentAbstractItem> items = new BasicEList<VTraceableDocumentAbstractItem>();
+		
+		for(VTraceableDocumentAbstractItem item : getSssItems()) {
+			items.add(item);
+		}
+		return items;
 	}
 	
 } //VSSSInstantiableRequirementSectionImpl

@@ -1395,6 +1395,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		vsssGeneralDescriptionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssAbstractRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
 		vsssAbstractRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsssInstantiableRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentInstantiableGroup());
 		vsssInstantiableRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDInstantiableSection());
 		vsssSpecificRequirementsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
 		vsssGeneralRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());

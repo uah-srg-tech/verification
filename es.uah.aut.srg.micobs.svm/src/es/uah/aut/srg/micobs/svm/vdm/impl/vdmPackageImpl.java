@@ -248,15 +248,6 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVValidationDocumentInstantiableGroup_Prefix() {
-		return (EAttribute)vValidationDocumentInstantiableGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVValidationDocumentAbstractItem() {
 		return vValidationDocumentAbstractItemEClass;
 	}
@@ -331,7 +322,6 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		vValidationDocumentFixedGroupEClass = createEClass(VVALIDATION_DOCUMENT_FIXED_GROUP);
 
 		vValidationDocumentInstantiableGroupEClass = createEClass(VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP);
-		createEAttribute(vValidationDocumentInstantiableGroupEClass, VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX);
 
 		vValidationDocumentAbstractItemEClass = createEClass(VVALIDATION_DOCUMENT_ABSTRACT_ITEM);
 		createEAttribute(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME);
@@ -391,7 +381,6 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		initEClass(vValidationDocumentFixedGroupEClass, VValidationDocumentFixedGroup.class, "VValidationDocumentFixedGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vValidationDocumentInstantiableGroupEClass, VValidationDocumentInstantiableGroup.class, "VValidationDocumentInstantiableGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVValidationDocumentInstantiableGroup_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VValidationDocumentInstantiableGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vValidationDocumentAbstractItemEClass, VValidationDocumentAbstractItem.class, "VValidationDocumentAbstractItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVValidationDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

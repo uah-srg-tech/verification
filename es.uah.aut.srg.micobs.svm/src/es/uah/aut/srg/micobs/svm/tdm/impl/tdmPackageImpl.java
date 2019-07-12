@@ -254,15 +254,6 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTraceableDocumentInstantiableGroup_Prefix() {
-		return (EAttribute)vTraceableDocumentInstantiableGroupEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EClass getVTraceableDocumentAbstractItem() {
 		return vTraceableDocumentAbstractItemEClass;
 	}
@@ -355,7 +346,6 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		vTraceableDocumentFixedGroupEClass = createEClass(VTRACEABLE_DOCUMENT_FIXED_GROUP);
 
 		vTraceableDocumentInstantiableGroupEClass = createEClass(VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP);
-		createEAttribute(vTraceableDocumentInstantiableGroupEClass, VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__PREFIX);
 
 		vTraceableDocumentAbstractItemEClass = createEClass(VTRACEABLE_DOCUMENT_ABSTRACT_ITEM);
 		createEAttribute(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__NAME);
@@ -418,7 +408,6 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEClass(vTraceableDocumentFixedGroupEClass, VTraceableDocumentFixedGroup.class, "VTraceableDocumentFixedGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vTraceableDocumentInstantiableGroupEClass, VTraceableDocumentInstantiableGroup.class, "VTraceableDocumentInstantiableGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVTraceableDocumentInstantiableGroup_Prefix(), ecorePackage.getEString(), "prefix", null, 1, 1, VTraceableDocumentInstantiableGroup.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentAbstractItemEClass, VTraceableDocumentAbstractItem.class, "VTraceableDocumentAbstractItem", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTraceableDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

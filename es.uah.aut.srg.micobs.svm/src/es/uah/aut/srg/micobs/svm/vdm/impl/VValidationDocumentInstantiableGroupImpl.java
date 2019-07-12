@@ -32,7 +32,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentInstantiableGroupImpl#getPrefix <em>Prefix</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,26 +76,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 	 * @ordered
 	 */
 	protected String description = DESCRIPTION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String PREFIX_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getPrefix() <em>Prefix</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getPrefix()
-	 * @generated
-	 * @ordered
-	 */
-	protected String prefix = PREFIX_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -164,27 +143,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getPrefix() {
-		return prefix;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrefix(String newPrefix) {
-		String oldPrefix = prefix;
-		prefix = newPrefix;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX, oldPrefix, prefix));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
@@ -192,8 +150,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 				return getName();
 			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				return getDescription();
-			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				return getPrefix();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -211,9 +167,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 				return;
 			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				setDescription((String)newValue);
-				return;
-			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				setPrefix((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -233,9 +186,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				setDescription(DESCRIPTION_EDEFAULT);
 				return;
-			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				setPrefix(PREFIX_EDEFAULT);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -252,8 +202,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION:
 				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
-			case vdmPackage.VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX:
-				return PREFIX_EDEFAULT == null ? prefix != null : !PREFIX_EDEFAULT.equals(prefix);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -306,8 +254,6 @@ public class VValidationDocumentInstantiableGroupImpl extends VValidationDocumen
 		result.append(name);
 		result.append(", description: ");
 		result.append(description);
-		result.append(", prefix: ");
-		result.append(prefix);
 		result.append(')');
 		return result.toString();
 	}

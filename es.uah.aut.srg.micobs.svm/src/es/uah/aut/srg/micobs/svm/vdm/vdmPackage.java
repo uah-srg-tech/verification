@@ -267,22 +267,13 @@ public interface vdmPackage extends EPackage {
 	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DESCRIPTION = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Prefix</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
-
-	/**
 	 * The number of structural features of the '<em>VValidation Document Instantiable Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 3;
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP_FEATURE_COUNT = VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VValidation Document Instantiable Group</em>' class.
@@ -478,17 +469,6 @@ public interface vdmPackage extends EPackage {
 	EClass getVValidationDocumentInstantiableGroup();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup#getPrefix <em>Prefix</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Prefix</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentInstantiableGroup#getPrefix()
-	 * @see #getVValidationDocumentInstantiableGroup()
-	 * @generated
-	 */
-	EAttribute getVValidationDocumentInstantiableGroup_Prefix();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem <em>VValidation Document Abstract Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -657,14 +637,6 @@ public interface vdmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP = eINSTANCE.getVValidationDocumentInstantiableGroup();
-
-		/**
-		 * The meta object literal for the '<em><b>Prefix</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__PREFIX = eINSTANCE.getVValidationDocumentInstantiableGroup_Prefix();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl <em>VValidation Document Abstract Item</em>}' class.
