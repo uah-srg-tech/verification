@@ -1690,28 +1690,30 @@ ruleDApplicableDocument returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_9='revision='
-			{
-				newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7_2());
-			}
 			(
+				otherlv_9='revision='
+				{
+					newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7_2_0());
+				}
 				(
-					lv_revision_10_0=RULE_STRING
-					{
-						newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+					(
+						lv_revision_10_0=RULE_STRING
+						{
+							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
 						}
-						setWithLastConsumed(
-							$current,
-							"revision",
-							lv_revision_10_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"revision",
+								lv_revision_10_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
 				)
-			)
+			)?
 		)?
 		(
 			otherlv_11='date='
@@ -1853,28 +1855,30 @@ ruleDReferenceDocument returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_9='revision='
-			{
-				newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7_2());
-			}
 			(
+				otherlv_9='revision='
+				{
+					newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7_2_0());
+				}
 				(
-					lv_revision_10_0=RULE_STRING
-					{
-						newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+					(
+						lv_revision_10_0=RULE_STRING
+						{
+							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
 						}
-						setWithLastConsumed(
-							$current,
-							"revision",
-							lv_revision_10_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"revision",
+								lv_revision_10_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
 				)
-			)
+			)?
 		)?
 		(
 			otherlv_11='date='

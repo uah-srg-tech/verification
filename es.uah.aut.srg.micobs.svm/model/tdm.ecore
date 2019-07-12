@@ -33,13 +33,13 @@
         eType="#//VTraceableDocumentAbstractItem"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VValidationMethod">
-    <eLiterals name="Analysis"/>
-    <eLiterals name="Inspection" value="1"/>
-    <eLiterals name="Testing" value="2"/>
-    <eLiterals name="Review" value="3"/>
-    <eLiterals name="ModelSimulation" value="4"/>
-    <eLiterals name="WalkThrough" value="5"/>
-    <eLiterals name="CrossReading" value="6"/>
-    <eLiterals name="DeskChecking" value="7"/>
+    <eLiterals name="Analysis" literal="A"/>
+    <eLiterals name="Inspection" value="1" literal="I"/>
+    <eLiterals name="Testing" value="2" literal="T"/>
+    <eLiterals name="Review" value="3" literal="R"/>
+    <eLiterals name="ModelSimulation" value="4" literal="MS"/>
+    <eLiterals name="WalkThrough" value="5" literal="WT"/>
+    <eLiterals name="CrossReading" value="6" literal="CR"/>
+    <eLiterals name="DeskChecking" value="7" literal="DC"/>
   </eClassifiers>
 </ecore:EPackage>

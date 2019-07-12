@@ -67,9 +67,11 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDCellAccess().getGroup(), "rule__DCell__Group__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup(), "rule__DApplicableDocument__Group__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7(), "rule__DApplicableDocument__Group_7__0");
+					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7_2(), "rule__DApplicableDocument__Group_7_2__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_8(), "rule__DApplicableDocument__Group_8__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup(), "rule__DReferenceDocument__Group__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7(), "rule__DReferenceDocument__Group_7__0");
+					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7_2(), "rule__DReferenceDocument__Group_7_2__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_8(), "rule__DReferenceDocument__Group_8__0");
 					put(grammarAccess.getVSRSFixedSectionAccess().getGroup(), "rule__VSRSFixedSection__Group__0");
 					put(grammarAccess.getVSRSInstantiableSectionAccess().getGroup(), "rule__VSRSInstantiableSection__Group__0");
@@ -147,13 +149,13 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDApplicableDocumentAccess().getTitleAssignment_4(), "rule__DApplicableDocument__TitleAssignment_4");
 					put(grammarAccess.getDApplicableDocumentAccess().getIdAssignment_6(), "rule__DApplicableDocument__IdAssignment_6");
 					put(grammarAccess.getDApplicableDocumentAccess().getIssueAssignment_7_1(), "rule__DApplicableDocument__IssueAssignment_7_1");
-					put(grammarAccess.getDApplicableDocumentAccess().getRevisionAssignment_7_3(), "rule__DApplicableDocument__RevisionAssignment_7_3");
+					put(grammarAccess.getDApplicableDocumentAccess().getRevisionAssignment_7_2_1(), "rule__DApplicableDocument__RevisionAssignment_7_2_1");
 					put(grammarAccess.getDApplicableDocumentAccess().getDateAssignment_8_1(), "rule__DApplicableDocument__DateAssignment_8_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getNameAssignment_2(), "rule__DReferenceDocument__NameAssignment_2");
 					put(grammarAccess.getDReferenceDocumentAccess().getTitleAssignment_4(), "rule__DReferenceDocument__TitleAssignment_4");
 					put(grammarAccess.getDReferenceDocumentAccess().getIdAssignment_6(), "rule__DReferenceDocument__IdAssignment_6");
 					put(grammarAccess.getDReferenceDocumentAccess().getIssueAssignment_7_1(), "rule__DReferenceDocument__IssueAssignment_7_1");
-					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_3(), "rule__DReferenceDocument__RevisionAssignment_7_3");
+					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_2_1(), "rule__DReferenceDocument__RevisionAssignment_7_2_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1(), "rule__DReferenceDocument__DateAssignment_8_1");
 					put(grammarAccess.getVSRSFixedSectionAccess().getBodyAssignment_1(), "rule__VSRSFixedSection__BodyAssignment_1");
 					put(grammarAccess.getVSRSFixedSectionAccess().getSrsInstatiableSubsectionsAssignment_2(), "rule__VSRSFixedSection__SrsInstatiableSubsectionsAssignment_2");
@@ -252,8 +254,8 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentItemAccess().getNameAssignment_2(), "rule__VSRSDocumentItem__NameAssignment_2");
 					put(grammarAccess.getVSRSDocumentItemAccess().getValidationMethodAssignment_4(), "rule__VSRSDocumentItem__ValidationMethodAssignment_4");
 					put(grammarAccess.getVSRSDocumentItemAccess().getDescriptionAssignment_7(), "rule__VSRSDocumentItem__DescriptionAssignment_7");
-					put(grammarAccess.getVSRSDocumentItemAccess().getParentItemAssignment_9_2(), "rule__VSRSDocumentItem__ParentItemAssignment_9_2");
-					put(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionAssignment_10_1(), "rule__VSRSDocumentItem__ExtendedDescriptionAssignment_10_1");
+					put(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionAssignment_9_1(), "rule__VSRSDocumentItem__ExtendedDescriptionAssignment_9_1");
+					put(grammarAccess.getVSRSDocumentItemAccess().getParentItemAssignment_10_2(), "rule__VSRSDocumentItem__ParentItemAssignment_10_2");
 				}
 			};
 		}

@@ -34,7 +34,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	ANALYSIS(0, "Analysis", "Analysis"),
+	ANALYSIS(0, "Analysis", "A"),
 
 	/**
 	 * The '<em><b>Inspection</b></em>' literal object.
@@ -44,7 +44,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSPECTION(1, "Inspection", "Inspection"),
+	INSPECTION(1, "Inspection", "I"),
 
 	/**
 	 * The '<em><b>Testing</b></em>' literal object.
@@ -54,7 +54,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	TESTING(2, "Testing", "Testing"),
+	TESTING(2, "Testing", "T"),
 
 	/**
 	 * The '<em><b>Review</b></em>' literal object.
@@ -64,7 +64,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	REVIEW(3, "Review", "Review"),
+	REVIEW(3, "Review", "R"),
 
 	/**
 	 * The '<em><b>Model Simulation</b></em>' literal object.
@@ -74,7 +74,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	MODEL_SIMULATION(4, "ModelSimulation", "ModelSimulation"),
+	MODEL_SIMULATION(4, "ModelSimulation", "MS"),
 
 	/**
 	 * The '<em><b>Walk Through</b></em>' literal object.
@@ -84,7 +84,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	WALK_THROUGH(5, "WalkThrough", "WalkThrough"),
+	WALK_THROUGH(5, "WalkThrough", "WT"),
 
 	/**
 	 * The '<em><b>Cross Reading</b></em>' literal object.
@@ -94,7 +94,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CROSS_READING(6, "CrossReading", "CrossReading"),
+	CROSS_READING(6, "CrossReading", "CR"),
 
 	/**
 	 * The '<em><b>Desk Checking</b></em>' literal object.
@@ -104,7 +104,7 @@ public enum VValidationMethod implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	DESK_CHECKING(7, "DeskChecking", "DeskChecking");
+	DESK_CHECKING(7, "DeskChecking", "DC");
 
 	/**
 	 * The '<em><b>Analysis</b></em>' literal value.
@@ -115,7 +115,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #ANALYSIS
-	 * @model name="Analysis"
+	 * @model name="Analysis" literal="A"
 	 * @generated
 	 * @ordered
 	 */
@@ -130,7 +130,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #INSPECTION
-	 * @model name="Inspection"
+	 * @model name="Inspection" literal="I"
 	 * @generated
 	 * @ordered
 	 */
@@ -145,7 +145,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #TESTING
-	 * @model name="Testing"
+	 * @model name="Testing" literal="T"
 	 * @generated
 	 * @ordered
 	 */
@@ -160,7 +160,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #REVIEW
-	 * @model name="Review"
+	 * @model name="Review" literal="R"
 	 * @generated
 	 * @ordered
 	 */
@@ -175,7 +175,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #MODEL_SIMULATION
-	 * @model name="ModelSimulation"
+	 * @model name="ModelSimulation" literal="MS"
 	 * @generated
 	 * @ordered
 	 */
@@ -190,7 +190,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #WALK_THROUGH
-	 * @model name="WalkThrough"
+	 * @model name="WalkThrough" literal="WT"
 	 * @generated
 	 * @ordered
 	 */
@@ -205,7 +205,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #CROSS_READING
-	 * @model name="CrossReading"
+	 * @model name="CrossReading" literal="CR"
 	 * @generated
 	 * @ordered
 	 */
@@ -220,7 +220,7 @@ public enum VValidationMethod implements Enumerator {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @see #DESK_CHECKING
-	 * @model name="DeskChecking"
+	 * @model name="DeskChecking" literal="DC"
 	 * @generated
 	 * @ordered
 	 */

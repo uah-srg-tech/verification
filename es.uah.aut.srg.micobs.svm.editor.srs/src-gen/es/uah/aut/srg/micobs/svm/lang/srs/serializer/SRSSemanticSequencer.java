@@ -248,7 +248,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -388,7 +388,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -552,7 +552,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSRSDocumentItem returns VSRSDocumentItem
 	 *
 	 * Constraint:
-	 *     (name=STRING validationMethod=VValidationMethod description=DBody parentItem+=[VTraceableDocumentAbstractItem|STRING]* extendedDescription=DBody?)
+	 *     (name=STRING validationMethod=VValidationMethod description=DBody extendedDescription=DBody? parentItem+=[VTraceableDocumentAbstractItem|STRING]*)
 	 */
 	protected void sequence_VSRSDocumentItem(ISerializationContext context, VSRSDocumentItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

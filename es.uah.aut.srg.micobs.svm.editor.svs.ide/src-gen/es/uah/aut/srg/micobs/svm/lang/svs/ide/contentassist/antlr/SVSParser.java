@@ -76,9 +76,11 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDCellAccess().getGroup(), "rule__DCell__Group__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup(), "rule__DApplicableDocument__Group__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7(), "rule__DApplicableDocument__Group_7__0");
+					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7_2(), "rule__DApplicableDocument__Group_7_2__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_8(), "rule__DApplicableDocument__Group_8__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup(), "rule__DReferenceDocument__Group__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7(), "rule__DReferenceDocument__Group_7__0");
+					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7_2(), "rule__DReferenceDocument__Group_7_2__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_8(), "rule__DReferenceDocument__Group_8__0");
 					put(grammarAccess.getVSVSFixedSectionAccess().getGroup(), "rule__VSVSFixedSection__Group__0");
 					put(grammarAccess.getVSVSInstantiableSectionAccess().getGroup(), "rule__VSVSInstantiableSection__Group__0");
@@ -227,13 +229,13 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDApplicableDocumentAccess().getTitleAssignment_4(), "rule__DApplicableDocument__TitleAssignment_4");
 					put(grammarAccess.getDApplicableDocumentAccess().getIdAssignment_6(), "rule__DApplicableDocument__IdAssignment_6");
 					put(grammarAccess.getDApplicableDocumentAccess().getIssueAssignment_7_1(), "rule__DApplicableDocument__IssueAssignment_7_1");
-					put(grammarAccess.getDApplicableDocumentAccess().getRevisionAssignment_7_3(), "rule__DApplicableDocument__RevisionAssignment_7_3");
+					put(grammarAccess.getDApplicableDocumentAccess().getRevisionAssignment_7_2_1(), "rule__DApplicableDocument__RevisionAssignment_7_2_1");
 					put(grammarAccess.getDApplicableDocumentAccess().getDateAssignment_8_1(), "rule__DApplicableDocument__DateAssignment_8_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getNameAssignment_2(), "rule__DReferenceDocument__NameAssignment_2");
 					put(grammarAccess.getDReferenceDocumentAccess().getTitleAssignment_4(), "rule__DReferenceDocument__TitleAssignment_4");
 					put(grammarAccess.getDReferenceDocumentAccess().getIdAssignment_6(), "rule__DReferenceDocument__IdAssignment_6");
 					put(grammarAccess.getDReferenceDocumentAccess().getIssueAssignment_7_1(), "rule__DReferenceDocument__IssueAssignment_7_1");
-					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_3(), "rule__DReferenceDocument__RevisionAssignment_7_3");
+					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_2_1(), "rule__DReferenceDocument__RevisionAssignment_7_2_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1(), "rule__DReferenceDocument__DateAssignment_8_1");
 					put(grammarAccess.getVSVSFixedSectionAccess().getBodyAssignment_1(), "rule__VSVSFixedSection__BodyAssignment_1");
 					put(grammarAccess.getVSVSFixedSectionAccess().getSvsInstatiableSubsectionsAssignment_2(), "rule__VSVSFixedSection__SvsInstatiableSubsectionsAssignment_2");

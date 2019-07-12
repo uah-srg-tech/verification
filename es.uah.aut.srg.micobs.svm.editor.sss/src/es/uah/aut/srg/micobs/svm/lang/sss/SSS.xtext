@@ -130,7 +130,7 @@ DApplicableDocument returns doc::DApplicableDocument:
 		'title=' title=STRING
 		'id=' id=STRING
 		('issue=' issue=STRING
-		'revision=' revision=STRING)?
+		('revision=' revision=STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -140,7 +140,7 @@ DReferenceDocument returns doc::DReferenceDocument:
 		'title=' title=STRING
 		'id=' id=STRING
 		('issue=' issue=STRING
-		'revision=' revision=STRING)?
+		('revision=' revision=STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 

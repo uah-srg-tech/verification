@@ -130,7 +130,7 @@ DApplicableDocument returns doc::DApplicableDocument:
 		'title=' title=STRING
 		'id=' id=STRING
 		('issue=' issue=STRING
-		'revision=' revision=STRING)?
+		('revision=' revision=STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -140,7 +140,7 @@ DReferenceDocument returns doc::DReferenceDocument:
 		'title=' title=STRING
 		'id=' id=STRING
 		('issue=' issue=STRING
-		'revision=' revision=STRING)?
+		('revision=' revision=STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -251,7 +251,6 @@ VSRSGeneralRequirements returns VSRSGeneralRequirements:
 		(srsItems+=VSRSDocumentItem)*
 		(srsRequirementSubsections+=VSRSInstantiableRequirementSection)*
 	'</GeneralRequirements>';
-
 
 VSRSFunctionalRequirements returns VSRSFunctionalRequirements:
 	{VSRSFunctionalRequirements}
@@ -389,12 +388,11 @@ VSRSDocumentItem returns VSRSDocumentItem:
 			'<description>'
 				description=DBody
 			'</description>'
-			('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 			('<extendedDescription>'
 				extendedDescription=DBody
 			'</extendedDescription>')?
+			('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 	'</Item>';
-	
 
 enum VValidationMethod returns tdm::VValidationMethod:
 	Analysis = '"Analysis"' | Inspection = '"Inspection"' | Testing = '"Testing"' |

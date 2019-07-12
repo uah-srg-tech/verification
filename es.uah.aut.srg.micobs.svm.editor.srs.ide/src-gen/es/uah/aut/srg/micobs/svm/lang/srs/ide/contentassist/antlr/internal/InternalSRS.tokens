@@ -46,7 +46,7 @@
 '</column>'=60
 '</description>'=133
 '</enumerate>'=41
-'</extendedDescription>'=137
+'</extendedDescription>'=136
 '</hyperlink>'=49
 '</itemize>'=39
 '</listItem>'=35
@@ -97,14 +97,14 @@
 '<column'=59
 '<description>'=132
 '<enumerate>'=40
-'<extendedDescription>'=136
+'<extendedDescription>'=135
 '<figureFromFile'=50
 '<hyperlink'=47
 '<itemize>'=38
 '<listItem>'=34
 '<paragraph>'=32
 '<parent'=28
-'<parentItem'=135
+'<parentItem'=137
 '<row'=56
 '<run'=42
 '<sublist>'=36

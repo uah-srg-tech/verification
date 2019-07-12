@@ -1595,28 +1595,30 @@ ruleDApplicableDocument returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_9='revision='
-			{
-				newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7_2());
-			}
 			(
+				otherlv_9='revision='
+				{
+					newLeafNode(otherlv_9, grammarAccess.getDApplicableDocumentAccess().getRevisionKeyword_7_2_0());
+				}
 				(
-					lv_revision_10_0=RULE_STRING
-					{
-						newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+					(
+						lv_revision_10_0=RULE_STRING
+						{
+							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
 						}
-						setWithLastConsumed(
-							$current,
-							"revision",
-							lv_revision_10_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"revision",
+								lv_revision_10_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
 				)
-			)
+			)?
 		)?
 		(
 			otherlv_11='date='
@@ -1758,28 +1760,30 @@ ruleDReferenceDocument returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_9='revision='
-			{
-				newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7_2());
-			}
 			(
+				otherlv_9='revision='
+				{
+					newLeafNode(otherlv_9, grammarAccess.getDReferenceDocumentAccess().getRevisionKeyword_7_2_0());
+				}
 				(
-					lv_revision_10_0=RULE_STRING
-					{
-						newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_3_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+					(
+						lv_revision_10_0=RULE_STRING
+						{
+							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
 						}
-						setWithLastConsumed(
-							$current,
-							"revision",
-							lv_revision_10_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
-					}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"revision",
+								lv_revision_10_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
 				)
-			)
+			)?
 		)?
 		(
 			otherlv_11='date='
@@ -4784,13 +4788,42 @@ ruleVSRSDocumentItem returns [EObject current=null]
 			newLeafNode(otherlv_8, grammarAccess.getVSRSDocumentItemAccess().getDescriptionKeyword_8());
 		}
 		(
-			otherlv_9='<parentItem'
+			otherlv_9='<extendedDescription>'
 			{
-				newLeafNode(otherlv_9, grammarAccess.getVSRSDocumentItemAccess().getParentItemKeyword_9_0());
+				newLeafNode(otherlv_9, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_9_0());
 			}
-			otherlv_10='name='
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_9_1_0());
+					}
+					lv_extendedDescription_10_0=ruleDBody
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSRSDocumentItemRule());
+						}
+						set(
+							$current,
+							"extendedDescription",
+							lv_extendedDescription_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_11='</extendedDescription>'
 			{
-				newLeafNode(otherlv_10, grammarAccess.getVSRSDocumentItemAccess().getNameKeyword_9_1());
+				newLeafNode(otherlv_11, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_9_2());
+			}
+		)?
+		(
+			otherlv_12='<parentItem'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getVSRSDocumentItemAccess().getParentItemKeyword_10_0());
+			}
+			otherlv_13='name='
+			{
+				newLeafNode(otherlv_13, grammarAccess.getVSRSDocumentItemAccess().getNameKeyword_10_1());
 			}
 			(
 				(
@@ -4802,46 +4835,17 @@ ruleVSRSDocumentItem returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVSRSDocumentItemRule());
 						}
 					}
-					otherlv_11=RULE_STRING
+					otherlv_14=RULE_STRING
 					{
-						newLeafNode(otherlv_11, grammarAccess.getVSRSDocumentItemAccess().getParentItemVTraceableDocumentAbstractItemCrossReference_9_2_0());
+						newLeafNode(otherlv_14, grammarAccess.getVSRSDocumentItemAccess().getParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0());
 					}
 				)
 			)
-			otherlv_12='/>'
+			otherlv_15='/>'
 			{
-				newLeafNode(otherlv_12, grammarAccess.getVSRSDocumentItemAccess().getSolidusGreaterThanSignKeyword_9_3());
+				newLeafNode(otherlv_15, grammarAccess.getVSRSDocumentItemAccess().getSolidusGreaterThanSignKeyword_10_3());
 			}
 		)*
-		(
-			otherlv_13='<extendedDescription>'
-			{
-				newLeafNode(otherlv_13, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_10_0());
-			}
-			(
-				(
-					{
-						newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_10_1_0());
-					}
-					lv_extendedDescription_14_0=ruleDBody
-					{
-						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getVSRSDocumentItemRule());
-						}
-						set(
-							$current,
-							"extendedDescription",
-							lv_extendedDescription_14_0,
-							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
-						afterParserOrEnumRuleCall();
-					}
-				)
-			)
-			otherlv_15='</extendedDescription>'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_10_2());
-			}
-		)?
 		otherlv_16='</Item>'
 		{
 			newLeafNode(otherlv_16, grammarAccess.getVSRSDocumentItemAccess().getItemKeyword_11());

@@ -302,7 +302,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -442,7 +442,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
