@@ -1674,9 +1674,9 @@ ruleDApplicableDocument returns [EObject current=null]
 			}
 			(
 				(
-					lv_issue_8_0=RULE_STRING
+					lv_issue_8_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_issue_8_0, grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
+						newLeafNode(lv_issue_8_0, grammarAccess.getDApplicableDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1686,7 +1686,7 @@ ruleDApplicableDocument returns [EObject current=null]
 							$current,
 							"issue",
 							lv_issue_8_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 					}
 				)
 			)
@@ -1697,9 +1697,9 @@ ruleDApplicableDocument returns [EObject current=null]
 				}
 				(
 					(
-						lv_revision_10_0=RULE_STRING
+						lv_revision_10_0=RULE_UINT_STRING
 						{
-							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
+							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0());
 						}
 						{
 							if ($current==null) {
@@ -1709,7 +1709,7 @@ ruleDApplicableDocument returns [EObject current=null]
 								$current,
 								"revision",
 								lv_revision_10_0,
-								"org.eclipse.xtext.common.Terminals.STRING");
+								"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 						}
 					)
 				)
@@ -1839,9 +1839,9 @@ ruleDReferenceDocument returns [EObject current=null]
 			}
 			(
 				(
-					lv_issue_8_0=RULE_STRING
+					lv_issue_8_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_issue_8_0, grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
+						newLeafNode(lv_issue_8_0, grammarAccess.getDReferenceDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1851,7 +1851,7 @@ ruleDReferenceDocument returns [EObject current=null]
 							$current,
 							"issue",
 							lv_issue_8_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 					}
 				)
 			)
@@ -1862,9 +1862,9 @@ ruleDReferenceDocument returns [EObject current=null]
 				}
 				(
 					(
-						lv_revision_10_0=RULE_STRING
+						lv_revision_10_0=RULE_UINT_STRING
 						{
-							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
+							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0());
 						}
 						{
 							if ($current==null) {
@@ -1874,7 +1874,7 @@ ruleDReferenceDocument returns [EObject current=null]
 								$current,
 								"revision",
 								lv_revision_10_0,
-								"org.eclipse.xtext.common.Terminals.STRING");
+								"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 						}
 					)
 				)
@@ -4315,20 +4315,19 @@ ruleVSVSStepOutputs returns [EObject current=null]
 		}
 		(
 			(
+				lv_valid_time_interval_value_4_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueINTEGERParserRuleCall_4_0());
+					newLeafNode(lv_valid_time_interval_value_4_0, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0());
 				}
-				lv_valid_time_interval_value_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						$current = createModelElement(grammarAccess.getVSVSStepOutputsRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"valid_time_interval_value",
 						lv_valid_time_interval_value_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -4608,20 +4607,16 @@ ruleVSVSStepConcurrentSteps returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepsAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepConcurrentStepsAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepsAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0());
 				}
-				lv_concurrent_step_5_0=ruleVSVSStepConcurrentStep
+				lv_concurrent_step_4_0=ruleVSVSStepConcurrentStep
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSStepConcurrentStepsRule());
@@ -4629,15 +4624,15 @@ ruleVSVSStepConcurrentSteps returns [EObject current=null]
 					add(
 						$current,
 						"concurrent_step",
-						lv_concurrent_step_5_0,
+						lv_concurrent_step_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentStep");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_6='</concurrent_steps>'
+		otherlv_5='</concurrent_steps>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepsKeyword_6());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepConcurrentStepsAccess().getConcurrent_stepsKeyword_5());
 		}
 	)
 ;
@@ -5754,20 +5749,19 @@ ruleVSVSStepOutputLevel3 returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_4_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getIdINTEGERParserRuleCall_4_0());
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSStepOutputLevel3Access().getIdUINT_STRINGTerminalRuleCall_4_0());
 				}
-				lv_id_4_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -5777,20 +5771,19 @@ ruleVSVSStepOutputLevel3 returns [EObject current=null]
 		}
 		(
 			(
+				lv_ifRef_6_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getIfRefINTEGERParserRuleCall_6_0());
+					newLeafNode(lv_ifRef_6_0, grammarAccess.getVSVSStepOutputLevel3Access().getIfRefUINT_STRINGTerminalRuleCall_6_0());
 				}
-				lv_ifRef_6_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+						$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"ifRef",
 						lv_ifRef_6_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -5801,20 +5794,19 @@ ruleVSVSStepOutputLevel3 returns [EObject current=null]
 			}
 			(
 				(
+					lv_optional_8_0=RULE_UINT_STRING
 					{
-						newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Access().getOptionalINTEGERParserRuleCall_7_1_0());
+						newLeafNode(lv_optional_8_0, grammarAccess.getVSVSStepOutputLevel3Access().getOptionalUINT_STRINGTerminalRuleCall_7_1_0());
 					}
-					lv_optional_8_0=ruleINTEGER
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getVSVSStepOutputLevel3Rule());
+							$current = createModelElement(grammarAccess.getVSVSStepOutputLevel3Rule());
 						}
-						set(
+						setWithLastConsumed(
 							$current,
 							"optional",
 							lv_optional_8_0,
-							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-						afterParserOrEnumRuleCall();
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 					}
 				)
 			)
@@ -6006,9 +5998,9 @@ ruleVSVSStepOutputLevel3 returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_31=';'
+			otherlv_31='/>'
 			{
-				newLeafNode(otherlv_31, grammarAccess.getVSVSStepOutputLevel3Access().getSemicolonKeyword_15_3());
+				newLeafNode(otherlv_31, grammarAccess.getVSVSStepOutputLevel3Access().getSolidusGreaterThanSignKeyword_15_3());
 			}
 		)?
 		(
@@ -6132,7 +6124,7 @@ ruleVSVSStepOutputLevel2 returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='output_level_2'
+		otherlv_0='<output_level_2'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel2Access().getOutput_level_2Keyword_0());
 		}
@@ -6334,9 +6326,9 @@ ruleVSVSStepOutputLevel2 returns [EObject current=null]
 					}
 				)
 			)
-			otherlv_22=';'
+			otherlv_22='/>'
 			{
-				newLeafNode(otherlv_22, grammarAccess.getVSVSStepOutputLevel2Access().getSemicolonKeyword_12_3());
+				newLeafNode(otherlv_22, grammarAccess.getVSVSStepOutputLevel2Access().getSolidusGreaterThanSignKeyword_12_3());
 			}
 		)?
 		(
@@ -6460,7 +6452,7 @@ ruleVSVSStepOutputLevel1 returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='output_level_1'
+		otherlv_0='<output_level_1'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputLevel1Access().getOutput_level_1Keyword_0());
 		}
@@ -6906,14 +6898,10 @@ ruleVSVSStepLevel3Filter returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=';'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel3FilterAccess().getSemicolonKeyword_3());
-		}
 		(
-			otherlv_4='extra_filter='
+			otherlv_3='extra_filter='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterKeyword_4_0());
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterKeyword_3_0());
 			}
 			(
 				(
@@ -6925,20 +6913,16 @@ ruleVSVSStepLevel3Filter returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVSVSStepLevel3FilterRule());
 						}
 					}
-					otherlv_5=RULE_STRING
+					otherlv_4=RULE_STRING
 					{
-						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+						newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0());
 					}
 				)
 			)
-			otherlv_6=';'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel3FilterAccess().getSemicolonKeyword_4_2());
-			}
 		)?
-		otherlv_7='/>'
+		otherlv_5='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel3FilterAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel3FilterAccess().getSolidusGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -6986,14 +6970,10 @@ ruleVSVSStepLevel2Filter returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=';'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel2FilterAccess().getSemicolonKeyword_3());
-		}
 		(
-			otherlv_4='extra_filter='
+			otherlv_3='extra_filter='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterKeyword_4_0());
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterKeyword_3_0());
 			}
 			(
 				(
@@ -7005,20 +6985,16 @@ ruleVSVSStepLevel2Filter returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVSVSStepLevel2FilterRule());
 						}
 					}
-					otherlv_5=RULE_STRING
+					otherlv_4=RULE_STRING
 					{
-						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+						newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0());
 					}
 				)
 			)
-			otherlv_6=';'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel2FilterAccess().getSemicolonKeyword_4_2());
-			}
 		)?
-		otherlv_7='/>'
+		otherlv_5='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel2FilterAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel2FilterAccess().getSolidusGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -7066,14 +7042,10 @@ ruleVSVSStepLevel1Filter returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=';'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel1FilterAccess().getSemicolonKeyword_3());
-		}
 		(
-			otherlv_4='extra_filter='
+			otherlv_3='extra_filter='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterKeyword_4_0());
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterKeyword_3_0());
 			}
 			(
 				(
@@ -7085,20 +7057,16 @@ ruleVSVSStepLevel1Filter returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVSVSStepLevel1FilterRule());
 						}
 					}
-					otherlv_5=RULE_STRING
+					otherlv_4=RULE_STRING
 					{
-						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+						newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0());
 					}
 				)
 			)
-			otherlv_6=';'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel1FilterAccess().getSemicolonKeyword_4_2());
-			}
 		)?
-		otherlv_7='/>'
+		otherlv_5='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel1FilterAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel1FilterAccess().getSolidusGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -7146,14 +7114,10 @@ ruleVSVSStepLevel0Filter returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3=';'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel0FilterAccess().getSemicolonKeyword_3());
-		}
 		(
-			otherlv_4='extra_filter='
+			otherlv_3='extra_filter='
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterKeyword_4_0());
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterKeyword_3_0());
 			}
 			(
 				(
@@ -7165,20 +7129,16 @@ ruleVSVSStepLevel0Filter returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVSVSStepLevel0FilterRule());
 						}
 					}
-					otherlv_5=RULE_STRING
+					otherlv_4=RULE_STRING
 					{
-						newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0());
+						newLeafNode(otherlv_4, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0());
 					}
 				)
 			)
-			otherlv_6=';'
-			{
-				newLeafNode(otherlv_6, grammarAccess.getVSVSStepLevel0FilterAccess().getSemicolonKeyword_4_2());
-			}
 		)?
-		otherlv_7='/>'
+		otherlv_5='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepLevel0FilterAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepLevel0FilterAccess().getSolidusGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -7209,30 +7169,25 @@ ruleVSVSStepEnable returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepEnableAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepEnableAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepEnableRule());
+						$current = createModelElement(grammarAccess.getVSVSStepEnableRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='/>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnableAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='/>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepEnableAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnableAccess().getSolidusGreaterThanSignKeyword_3());
 		}
 	)
 ;
@@ -7263,30 +7218,25 @@ ruleVSVSStepDisable returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepDisableAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepDisableAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepDisableRule());
+						$current = createModelElement(grammarAccess.getVSVSStepDisableRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='/>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisableAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='/>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepDisableAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisableAccess().getSolidusGreaterThanSignKeyword_3());
 		}
 	)
 ;
@@ -7317,30 +7267,25 @@ ruleVSVSStepEnablePrint returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepEnablePrintAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepEnablePrintAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepEnablePrintRule());
+						$current = createModelElement(grammarAccess.getVSVSStepEnablePrintRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='/>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnablePrintAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='/>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepEnablePrintAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepEnablePrintAccess().getSolidusGreaterThanSignKeyword_3());
 		}
 	)
 ;
@@ -7371,30 +7316,25 @@ ruleVSVSStepDisablePrint returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepDisablePrintAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepDisablePrintAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepDisablePrintRule());
+						$current = createModelElement(grammarAccess.getVSVSStepDisablePrintRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='/>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisablePrintAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='/>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepDisablePrintAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepDisablePrintAccess().getSolidusGreaterThanSignKeyword_3());
 		}
 	)
 ;
@@ -7425,37 +7365,32 @@ ruleVSVSStepNextStep returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepNextStepAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepNextStepAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepNextStepRule());
+						$current = createModelElement(grammarAccess.getVSVSStepNextStepRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='isConcurrent='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepNextStepAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='isConcurrent='
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentVSVSStepYesNoEnumRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentVSVSStepYesNoEnumRuleCall_4_0());
 				}
-				lv_isConcurrent_5_0=ruleVSVSStepYesNo
+				lv_isConcurrent_4_0=ruleVSVSStepYesNo
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSStepNextStepRule());
@@ -7463,19 +7398,15 @@ ruleVSVSStepNextStep returns [EObject current=null]
 					set(
 						$current,
 						"isConcurrent",
-						lv_isConcurrent_5_0,
+						lv_isConcurrent_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6=';'
+		otherlv_5='/>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVSVSStepNextStepAccess().getSemicolonKeyword_6());
-		}
-		otherlv_7='/>'
-		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepNextStepAccess().getSolidusGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepNextStepAccess().getSolidusGreaterThanSignKeyword_5());
 		}
 	)
 ;
@@ -7506,30 +7437,25 @@ ruleVSVSStepConcurrentStep returns [EObject current=null]
 		}
 		(
 			(
+				lv_id_2_0=RULE_UINT_STRING
 				{
-					newCompositeNode(grammarAccess.getVSVSStepConcurrentStepAccess().getIdINTEGERParserRuleCall_2_0());
+					newLeafNode(lv_id_2_0, grammarAccess.getVSVSStepConcurrentStepAccess().getIdUINT_STRINGTerminalRuleCall_2_0());
 				}
-				lv_id_2_0=ruleINTEGER
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepConcurrentStepRule());
+						$current = createModelElement(grammarAccess.getVSVSStepConcurrentStepRule());
 					}
-					set(
+					setWithLastConsumed(
 						$current,
 						"id",
 						lv_id_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.INTEGER");
-					afterParserOrEnumRuleCall();
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
-		otherlv_3=';'
+		otherlv_3='/>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepAccess().getSemicolonKeyword_3());
-		}
-		otherlv_4='/>'
-		{
-			newLeafNode(otherlv_4, grammarAccess.getVSVSStepConcurrentStepAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepAccess().getSolidusGreaterThanSignKeyword_3());
 		}
 	)
 ;
@@ -7705,49 +7631,6 @@ ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrData
 	)
 ;
 
-// Entry rule entryRuleINTEGER
-entryRuleINTEGER returns [String current=null]:
-	{ newCompositeNode(grammarAccess.getINTEGERRule()); }
-	iv_ruleINTEGER=ruleINTEGER
-	{ $current=$iv_ruleINTEGER.current.getText(); }
-	EOF;
-
-// Rule INTEGER
-ruleINTEGER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			(
-				kw='-'
-				{
-					$current.merge(kw);
-					newLeafNode(kw, grammarAccess.getINTEGERAccess().getHyphenMinusKeyword_0_0());
-				}
-			)?
-			this_INT_1=RULE_INT
-			{
-				$current.merge(this_INT_1);
-			}
-			{
-				newLeafNode(this_INT_1, grammarAccess.getINTEGERAccess().getINTTerminalRuleCall_0_1());
-			}
-		)
-		    |
-		this_HEXADECIMAL_2=RULE_HEXADECIMAL
-		{
-			$current.merge(this_HEXADECIMAL_2);
-		}
-		{
-			newLeafNode(this_HEXADECIMAL_2, grammarAccess.getINTEGERAccess().getHEXADECIMALTerminalRuleCall_1());
-		}
-	)
-;
-
 // Rule VSVSStepMode
 ruleVSVSStepMode returns [Enumerator current=null]
 @init {
@@ -7855,7 +7738,7 @@ ruleVSVSStepYesNo returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='yes'
+			enumLiteral_0='"yes"'
 			{
 				$current = grammarAccess.getVSVSStepYesNoAccess().getYesEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepYesNoAccess().getYesEnumLiteralDeclaration_0());
@@ -7863,7 +7746,7 @@ ruleVSVSStepYesNo returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='no'
+			enumLiteral_1='"no"'
 			{
 				$current = grammarAccess.getVSVSStepYesNoAccess().getNoEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepYesNoAccess().getNoEnumLiteralDeclaration_1());

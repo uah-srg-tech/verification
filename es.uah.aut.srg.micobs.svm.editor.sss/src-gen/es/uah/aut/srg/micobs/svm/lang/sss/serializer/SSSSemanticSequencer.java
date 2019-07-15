@@ -253,7 +253,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -393,7 +393,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -584,8 +584,8 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=STRING 
 	 *         id=STRING 
-	 *         issue=STRING 
-	 *         revision=STRING 
+	 *         issue=UINT_STRING 
+	 *         revision=UINT_STRING 
 	 *         date=STRING 
 	 *         introductionSection=VSSSIntroduction 
 	 *         applicableDocumentsSection=VSSSApplicableDocuments 
@@ -629,8 +629,8 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVSSSDocumentAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIdSTRINGTerminalRuleCall_4_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0(), semanticObject.getIssue());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0(), semanticObject.getRevision());
+		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0(), semanticObject.getIssue());
+		feeder.accept(grammarAccess.getVSSSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0(), semanticObject.getRevision());
 		feeder.accept(grammarAccess.getVSSSDocumentAccess().getDateSTRINGTerminalRuleCall_10_0(), semanticObject.getDate());
 		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIntroductionSectionVSSSIntroductionParserRuleCall_12_0(), semanticObject.getIntroductionSection());
 		feeder.accept(grammarAccess.getVSSSDocumentAccess().getApplicableDocumentsSectionVSSSApplicableDocumentsParserRuleCall_13_0(), semanticObject.getApplicableDocumentsSection());

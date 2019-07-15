@@ -11046,9 +11046,9 @@ rule__VSRSDocument__IssueAssignment_6
 	}
 :
 	(
-		{ before(grammarAccess.getVSRSDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getVSRSDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0()); }
+		{ before(grammarAccess.getVSRSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getVSRSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0()); }
 	)
 ;
 finally {
@@ -11061,9 +11061,9 @@ rule__VSRSDocument__RevisionAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getVSRSDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getVSRSDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0()); }
+		{ before(grammarAccess.getVSRSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getVSRSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0()); }
 	)
 ;
 finally {
@@ -11639,9 +11639,9 @@ rule__DApplicableDocument__IssueAssignment_7_1
 	}
 :
 	(
-		{ before(grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0()); }
+		{ before(grammarAccess.getDApplicableDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDApplicableDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0()); }
 	)
 ;
 finally {
@@ -11654,9 +11654,9 @@ rule__DApplicableDocument__RevisionAssignment_7_2_1
 	}
 :
 	(
-		{ before(grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0()); }
+		{ before(grammarAccess.getDApplicableDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDApplicableDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0()); }
 	)
 ;
 finally {
@@ -11729,9 +11729,9 @@ rule__DReferenceDocument__IssueAssignment_7_1
 	}
 :
 	(
-		{ before(grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0()); }
+		{ before(grammarAccess.getDReferenceDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDReferenceDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0()); }
 	)
 ;
 finally {
@@ -11744,9 +11744,9 @@ rule__DReferenceDocument__RevisionAssignment_7_2_1
 	}
 :
 	(
-		{ before(grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0()); }
+		{ before(grammarAccess.getDReferenceDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDReferenceDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0()); }
 	)
 ;
 finally {
@@ -13258,6 +13258,8 @@ finally {
 }
 
 RULE_RUNTEXT : '<text>' ( options {greedy=false;} : . )*'</text>';
+
+RULE_UINT_STRING : '"' ('0'..'9')+ '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

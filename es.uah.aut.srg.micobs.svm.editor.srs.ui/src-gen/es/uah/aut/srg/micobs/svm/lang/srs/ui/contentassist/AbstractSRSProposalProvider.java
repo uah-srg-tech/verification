@@ -635,4 +635,7 @@ public abstract class AbstractSRSProposalProvider extends TerminalsProposalProvi
 	public void complete_VSRSLogicalModel(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
+	public void complete_UINT_STRING(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
 }

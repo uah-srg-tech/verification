@@ -302,7 +302,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -442,7 +442,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -720,7 +720,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepConcurrentStep returns VSVSStepConcurrentStep
 	 *
 	 * Constraint:
-	 *     id=INTEGER
+	 *     id=UINT_STRING
 	 */
 	protected void sequence_VSVSStepConcurrentStep(ISerializationContext context, VSVSStepConcurrentStep semanticObject) {
 		if (errorAcceptor != null) {
@@ -728,7 +728,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_CONCURRENT_STEP__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepConcurrentStepAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepConcurrentStepAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -750,7 +750,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepDisablePrint returns VSVSStepEnableDisable
 	 *
 	 * Constraint:
-	 *     id=INTEGER
+	 *     id=UINT_STRING
 	 */
 	protected void sequence_VSVSStepDisablePrint(ISerializationContext context, VSVSStepEnableDisable semanticObject) {
 		if (errorAcceptor != null) {
@@ -758,7 +758,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_ENABLE_DISABLE__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepDisablePrintAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepDisablePrintAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -768,7 +768,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepDisable returns VSVSStepEnableDisable
 	 *
 	 * Constraint:
-	 *     id=INTEGER
+	 *     id=UINT_STRING
 	 */
 	protected void sequence_VSVSStepDisable(ISerializationContext context, VSVSStepEnableDisable semanticObject) {
 		if (errorAcceptor != null) {
@@ -776,7 +776,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_ENABLE_DISABLE__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepDisableAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepDisableAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -786,7 +786,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepEnablePrint returns VSVSStepEnableDisable
 	 *
 	 * Constraint:
-	 *     id=INTEGER
+	 *     id=UINT_STRING
 	 */
 	protected void sequence_VSVSStepEnablePrint(ISerializationContext context, VSVSStepEnableDisable semanticObject) {
 		if (errorAcceptor != null) {
@@ -794,7 +794,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_ENABLE_DISABLE__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepEnablePrintAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepEnablePrintAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -804,7 +804,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepEnable returns VSVSStepEnableDisable
 	 *
 	 * Constraint:
-	 *     id=INTEGER
+	 *     id=UINT_STRING
 	 */
 	protected void sequence_VSVSStepEnable(ISerializationContext context, VSVSStepEnableDisable semanticObject) {
 		if (errorAcceptor != null) {
@@ -812,7 +812,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_ENABLE_DISABLE__ID));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepEnableAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepEnableAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
 		feeder.finish();
 	}
 	
@@ -970,7 +970,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepNextStep returns VSVSStepNextStep
 	 *
 	 * Constraint:
-	 *     (id=INTEGER isConcurrent=VSVSStepYesNo)
+	 *     (id=UINT_STRING isConcurrent=VSVSStepYesNo)
 	 */
 	protected void sequence_VSVSStepNextStep(ISerializationContext context, VSVSStepNextStep semanticObject) {
 		if (errorAcceptor != null) {
@@ -980,8 +980,8 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_NEXT_STEP__IS_CONCURRENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepNextStepAccess().getIdINTEGERParserRuleCall_2_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentVSVSStepYesNoEnumRuleCall_5_0(), semanticObject.getIsConcurrent());
+		feeder.accept(grammarAccess.getVSVSStepNextStepAccess().getIdUINT_STRINGTerminalRuleCall_2_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentVSVSStepYesNoEnumRuleCall_4_0(), semanticObject.getIsConcurrent());
 		feeder.finish();
 	}
 	
@@ -1059,9 +1059,9 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         id=INTEGER 
-	 *         ifRef=INTEGER 
-	 *         optional=INTEGER? 
+	 *         id=UINT_STRING 
+	 *         ifRef=UINT_STRING 
+	 *         optional=UINT_STRING? 
 	 *         level3=[TMTCIFFormatFormat|STRING]? 
 	 *         level3_filter=VSVSStepLevel3Filter 
 	 *         level2=[TMTCIFFormatFormat|STRING]? 
@@ -1087,7 +1087,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         checkmode=VSVSStepCheckmode 
-	 *         valid_time_interval_value=INTEGER 
+	 *         valid_time_interval_value=UINT_STRING 
 	 *         valid_time_interval_unit=VSVSStepUnit 
 	 *         (
 	 *             output_level_3+=VSVSStepOutputLevel3 | 

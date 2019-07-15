@@ -10,8 +10,8 @@ VSSSDocument returns VSSSDocument:
 	'<SSS'
 		'name=' name=STRING
 		'id=' id=STRING
-		'issue=' issue=STRING
-		'revision=' revision=STRING
+		'issue=' issue=UINT_STRING
+		'revision=' revision=UINT_STRING
 		'date=' date=STRING
 		'>'
 		introductionSection=VSSSIntroduction
@@ -129,8 +129,8 @@ DApplicableDocument returns doc::DApplicableDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -139,8 +139,8 @@ DReferenceDocument returns doc::DReferenceDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -403,3 +403,6 @@ VSSSVerificationRequirements returns VSSSVerificationRequirements:
 VSSSSystemModel returns VSSSSystemModel:
 	{VSSSSystemModel}
 	'<SystemModel/>';
+	
+terminal UINT_STRING returns ecore::EString:
+	('"' ('0'..'9')+ '"');

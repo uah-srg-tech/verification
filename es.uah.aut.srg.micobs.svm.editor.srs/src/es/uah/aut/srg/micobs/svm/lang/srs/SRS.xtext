@@ -10,8 +10,8 @@ VSRSDocument returns VSRSDocument:
 	'<SRS'
 		'name=' name=STRING
 		'id=' id=STRING
-		'issue=' issue=STRING
-		'revision=' revision=STRING
+		'issue=' issue=UINT_STRING
+		'revision=' revision=UINT_STRING
 		'date=' date=STRING
 		'>'
 		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
@@ -129,8 +129,8 @@ DApplicableDocument returns doc::DApplicableDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -139,8 +139,8 @@ DReferenceDocument returns doc::DReferenceDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -402,3 +402,6 @@ enum VValidationMethod returns tdm::VValidationMethod:
 VSRSLogicalModel returns VSRSLogicalModel:
 	{VSRSLogicalModel}
 	'<LogicalModel/>';
+	
+terminal UINT_STRING returns ecore::EString:
+	('"' ('0'..'9')+ '"');

@@ -140,8 +140,8 @@ DApplicableDocument returns doc::DApplicableDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -150,8 +150,8 @@ DReferenceDocument returns doc::DReferenceDocument:
 		'name=' name=STRING
 		'title=' title=STRING
 		'id=' id=STRING
-		('issue=' issue=STRING
-		('revision=' revision=STRING)?)?
+		('issue=' issue=UINT_STRING
+		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
 	'/>';
 
@@ -343,7 +343,7 @@ VSVSStepInputs returns VSVSStepInputs:
 VSVSStepOutputs returns VSVSStepOutputs:
 	'<outputs'
 		'checkmode=' checkmode=VSVSStepCheckmode
-		'valid_time_interval_value=' valid_time_interval_value=INTEGER
+		'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
 		'>'
 		((output_level_3+=VSVSStepOutputLevel3) |
@@ -365,7 +365,7 @@ VSVSStepSpecialPackets returns VSVSStepSpecialPackets:
 
 VSVSStepConcurrentSteps returns VSVSStepConcurrentSteps:
 	'<concurrent_steps'
-		'nextStep=' nextStep=VSVSStepNextStep ';'
+		'nextStep=' nextStep=VSVSStepNextStep
 		'>'
 		(concurrent_step+=VSVSStepConcurrentStep)+ 
 	'</concurrent_steps>'
@@ -442,9 +442,9 @@ enum VSVSStepCheckmode returns VSVSStepCheckmode:
 VSVSStepOutputLevel3 returns VSVSStepOutputLevel3:
 	'<output_level_3'
 		'name=' name=STRING
-		'id=' id=INTEGER
-		'ifRef=' ifRef=INTEGER
-		('optional=' optional=INTEGER)?
+		'id=' id=UINT_STRING
+		'ifRef=' ifRef=UINT_STRING
+		('optional=' optional=UINT_STRING)?
 		'>'
 		('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
 		level3_filter=VSVSStepLevel3Filter
@@ -452,7 +452,7 @@ VSVSStepOutputLevel3 returns VSVSStepOutputLevel3:
 		('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
 		level2_filter=VSVSStepLevel2Filter
 		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		level1_filter=VSVSStepLevel1Filter
 		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 		('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
@@ -461,7 +461,7 @@ VSVSStepOutputLevel3 returns VSVSStepOutputLevel3:
 ;
 
 VSVSStepOutputLevel2 returns VSVSStepOutputLevel2:
-	'output_level_2'
+	'<output_level_2'
 		'name=' name=STRING
 		'id=' id=UINT_STRING
 		'ifRef=' ifRef=UINT_STRING
@@ -470,7 +470,7 @@ VSVSStepOutputLevel2 returns VSVSStepOutputLevel2:
 		('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
 		level2_filter=VSVSStepLevel2Filter
 		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		level1_filter=VSVSStepLevel1Filter
 		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 		('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
@@ -479,7 +479,7 @@ VSVSStepOutputLevel2 returns VSVSStepOutputLevel2:
 ;
 
 VSVSStepOutputLevel1 returns VSVSStepOutputLevel1:
-	'output_level_1'
+	'<output_level_1'
 		'name=' name=STRING
 		'id=' id=UINT_STRING
 		'ifRef=' ifRef=UINT_STRING
@@ -507,70 +507,70 @@ VSVSStepOutputLevel0 returns VSVSStepOutputLevel0:
 
 VSVSStepLevel3Filter returns VSVSStepFilter:
 	'<level3_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';'
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
+		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	'/>'
 ;
 
 VSVSStepLevel2Filter returns VSVSStepFilter:
 	'<level2_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';'
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
+		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	'/>'
 ;
 
 VSVSStepLevel1Filter returns VSVSStepFilter:
 	'<level1_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';'
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
+		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	'/>'
 ;
 
 VSVSStepLevel0Filter returns VSVSStepFilter:
 	'<level0_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';'
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
+		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	'/>'
 ;
 
 enum VSVSStepYesNo returns VSVSStepYesNo:
-	yes = 'yes' | no = 'no'
+	yes = '"yes"' | no = '"no"'
 ;
 
 VSVSStepEnable returns VSVSStepEnableDisable:
 	'<enable'
-		'id=' id=INTEGER ';'
+		'id=' id=UINT_STRING
 	'/>'
 ;
 
 VSVSStepDisable returns VSVSStepEnableDisable:
 	'<disable'
-		'id=' id=INTEGER ';'
+		'id=' id=UINT_STRING
 	'/>'
 ;
 
 VSVSStepEnablePrint returns VSVSStepEnableDisable:
 	'<enable_print'
-		'id=' id=INTEGER ';'
+		'id=' id=UINT_STRING
 	'/>'
 ;
 
 VSVSStepDisablePrint returns VSVSStepEnableDisable:
 	'<disable_print'
-		'id=' id=INTEGER ';'
+		'id=' id=UINT_STRING
 	'/>'
 ;
 
 VSVSStepNextStep returns VSVSStepNextStep:
 	'<nextStep'
-		'id=' id=INTEGER ';'
-		'isConcurrent=' isConcurrent=VSVSStepYesNo ';'
+		'id=' id=UINT_STRING
+		'isConcurrent=' isConcurrent=VSVSStepYesNo
 	'/>'
 ;
 
 VSVSStepConcurrentStep returns VSVSStepConcurrentStep:
 	'<concurrent_step'
-		'id=' id=INTEGER ';'
+		'id=' id=UINT_STRING
 	'/>'
 ;
 

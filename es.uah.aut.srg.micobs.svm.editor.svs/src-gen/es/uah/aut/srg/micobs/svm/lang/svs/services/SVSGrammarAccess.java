@@ -966,11 +966,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cIssueKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cIssueAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cIssueSTRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
+		private final RuleCall cIssueUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
 		private final Group cGroup_7_2 = (Group)cGroup_7.eContents().get(2);
 		private final Keyword cRevisionKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
 		private final Assignment cRevisionAssignment_7_2_1 = (Assignment)cGroup_7_2.eContents().get(1);
-		private final RuleCall cRevisionSTRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
+		private final RuleCall cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
@@ -981,12 +981,12 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<ApplicableDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ApplicableDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=STRING ('revision='
-		//revision=STRING)?)? ('date=' date=STRING)? '/>'
+		//'<ApplicableDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ApplicableDocument'
@@ -1019,29 +1019,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_6_0() { return cIdSTRINGTerminalRuleCall_6_0; }
 		
-		//('issue=' issue=STRING ('revision=' revision=STRING)?)?
+		//('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'issue='
 		public Keyword getIssueKeyword_7_0() { return cIssueKeyword_7_0; }
 		
-		//issue=STRING
+		//issue=UINT_STRING
 		public Assignment getIssueAssignment_7_1() { return cIssueAssignment_7_1; }
 		
-		//STRING
-		public RuleCall getIssueSTRINGTerminalRuleCall_7_1_0() { return cIssueSTRINGTerminalRuleCall_7_1_0; }
+		//UINT_STRING
+		public RuleCall getIssueUINT_STRINGTerminalRuleCall_7_1_0() { return cIssueUINT_STRINGTerminalRuleCall_7_1_0; }
 		
-		//('revision=' revision=STRING)?
+		//('revision=' revision=UINT_STRING)?
 		public Group getGroup_7_2() { return cGroup_7_2; }
 		
 		//'revision='
 		public Keyword getRevisionKeyword_7_2_0() { return cRevisionKeyword_7_2_0; }
 		
-		//revision=STRING
+		//revision=UINT_STRING
 		public Assignment getRevisionAssignment_7_2_1() { return cRevisionAssignment_7_2_1; }
 		
-		//STRING
-		public RuleCall getRevisionSTRINGTerminalRuleCall_7_2_1_0() { return cRevisionSTRINGTerminalRuleCall_7_2_1_0; }
+		//UINT_STRING
+		public RuleCall getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0() { return cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0; }
 		
 		//('date=' date=STRING)?
 		public Group getGroup_8() { return cGroup_8; }
@@ -1074,11 +1074,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cIssueKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cIssueAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cIssueSTRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
+		private final RuleCall cIssueUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
 		private final Group cGroup_7_2 = (Group)cGroup_7.eContents().get(2);
 		private final Keyword cRevisionKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
 		private final Assignment cRevisionAssignment_7_2_1 = (Assignment)cGroup_7_2.eContents().get(1);
-		private final RuleCall cRevisionSTRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
+		private final RuleCall cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
@@ -1089,12 +1089,12 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<ReferenceDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ReferenceDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=STRING ('revision='
-		//revision=STRING)?)? ('date=' date=STRING)? '/>'
+		//'<ReferenceDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ReferenceDocument'
@@ -1127,29 +1127,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_6_0() { return cIdSTRINGTerminalRuleCall_6_0; }
 		
-		//('issue=' issue=STRING ('revision=' revision=STRING)?)?
+		//('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'issue='
 		public Keyword getIssueKeyword_7_0() { return cIssueKeyword_7_0; }
 		
-		//issue=STRING
+		//issue=UINT_STRING
 		public Assignment getIssueAssignment_7_1() { return cIssueAssignment_7_1; }
 		
-		//STRING
-		public RuleCall getIssueSTRINGTerminalRuleCall_7_1_0() { return cIssueSTRINGTerminalRuleCall_7_1_0; }
+		//UINT_STRING
+		public RuleCall getIssueUINT_STRINGTerminalRuleCall_7_1_0() { return cIssueUINT_STRINGTerminalRuleCall_7_1_0; }
 		
-		//('revision=' revision=STRING)?
+		//('revision=' revision=UINT_STRING)?
 		public Group getGroup_7_2() { return cGroup_7_2; }
 		
 		//'revision='
 		public Keyword getRevisionKeyword_7_2_0() { return cRevisionKeyword_7_2_0; }
 		
-		//revision=STRING
+		//revision=UINT_STRING
 		public Assignment getRevisionAssignment_7_2_1() { return cRevisionAssignment_7_2_1; }
 		
-		//STRING
-		public RuleCall getRevisionSTRINGTerminalRuleCall_7_2_1_0() { return cRevisionSTRINGTerminalRuleCall_7_2_1_0; }
+		//UINT_STRING
+		public RuleCall getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0() { return cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0; }
 		
 		//('date=' date=STRING)?
 		public Group getGroup_8() { return cGroup_8; }
@@ -2675,7 +2675,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCheckmodeVSVSStepCheckmodeEnumRuleCall_2_0 = (RuleCall)cCheckmodeAssignment_2.eContents().get(0);
 		private final Keyword cValid_time_interval_valueKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cValid_time_interval_valueAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cValid_time_interval_valueINTEGERParserRuleCall_4_0 = (RuleCall)cValid_time_interval_valueAssignment_4.eContents().get(0);
+		private final RuleCall cValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cValid_time_interval_valueAssignment_4.eContents().get(0);
 		private final Keyword cValid_time_interval_unitKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cValid_time_interval_unitAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0 = (RuleCall)cValid_time_interval_unitAssignment_6.eContents().get(0);
@@ -2694,14 +2694,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepOutputs:
 		//	'<outputs'
 		//	'checkmode=' checkmode=VSVSStepCheckmode
-		//	'valid_time_interval_value=' valid_time_interval_value=INTEGER
+		//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
 		//	'>' (output_level_3+=VSVSStepOutputLevel3 | output_level_2+=VSVSStepOutputLevel2 |
 		//	output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
 		//	'</outputs>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<outputs' 'checkmode=' checkmode=VSVSStepCheckmode 'valid_time_interval_value=' valid_time_interval_value=INTEGER
+		//'<outputs' 'checkmode=' checkmode=VSVSStepCheckmode 'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		//'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit '>' (output_level_3+=VSVSStepOutputLevel3 |
 		//output_level_2+=VSVSStepOutputLevel2 | output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
 		//'</outputs>'
@@ -2722,11 +2722,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'valid_time_interval_value='
 		public Keyword getValid_time_interval_valueKeyword_3() { return cValid_time_interval_valueKeyword_3; }
 		
-		//valid_time_interval_value=INTEGER
+		//valid_time_interval_value=UINT_STRING
 		public Assignment getValid_time_interval_valueAssignment_4() { return cValid_time_interval_valueAssignment_4; }
 		
-		//INTEGER
-		public RuleCall getValid_time_interval_valueINTEGERParserRuleCall_4_0() { return cValid_time_interval_valueINTEGERParserRuleCall_4_0; }
+		//UINT_STRING
+		public RuleCall getValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0() { return cValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0; }
 		
 		//'valid_time_interval_unit='
 		public Keyword getValid_time_interval_unitKeyword_5() { return cValid_time_interval_unitKeyword_5; }
@@ -2842,21 +2842,20 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNextStepKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNextStepAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNextStepVSVSStepNextStepParserRuleCall_2_0 = (RuleCall)cNextStepAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cConcurrent_stepAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_5_0 = (RuleCall)cConcurrent_stepAssignment_5.eContents().get(0);
-		private final Keyword cConcurrent_stepsKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cConcurrent_stepAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0 = (RuleCall)cConcurrent_stepAssignment_4.eContents().get(0);
+		private final Keyword cConcurrent_stepsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSVSStepConcurrentSteps:
 		//	'<concurrent_steps'
-		//	'nextStep=' nextStep=VSVSStepNextStep ';'
+		//	'nextStep=' nextStep=VSVSStepNextStep
 		//	'>'
 		//	concurrent_step+=VSVSStepConcurrentStep+
 		//	'</concurrent_steps>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<concurrent_steps' 'nextStep=' nextStep=VSVSStepNextStep ';' '>' concurrent_step+=VSVSStepConcurrentStep+
+		//'<concurrent_steps' 'nextStep=' nextStep=VSVSStepNextStep '>' concurrent_step+=VSVSStepConcurrentStep+
 		//'</concurrent_steps>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2872,20 +2871,17 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepNextStep
 		public RuleCall getNextStepVSVSStepNextStepParserRuleCall_2_0() { return cNextStepVSVSStepNextStepParserRuleCall_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
 		//concurrent_step+=VSVSStepConcurrentStep+
-		public Assignment getConcurrent_stepAssignment_5() { return cConcurrent_stepAssignment_5; }
+		public Assignment getConcurrent_stepAssignment_4() { return cConcurrent_stepAssignment_4; }
 		
 		//VSVSStepConcurrentStep
-		public RuleCall getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_5_0() { return cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_5_0; }
+		public RuleCall getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0() { return cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0; }
 		
 		//'</concurrent_steps>'
-		public Keyword getConcurrent_stepsKeyword_6() { return cConcurrent_stepsKeyword_6; }
+		public Keyword getConcurrent_stepsKeyword_5() { return cConcurrent_stepsKeyword_5; }
 	}
 	public class VSVSStepInputLevel3Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel3");
@@ -3775,14 +3771,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdINTEGERParserRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
 		private final Keyword cIfRefKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cIfRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIfRefINTEGERParserRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
+		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cOptionalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cOptionalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cOptionalINTEGERParserRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
+		private final RuleCall cOptionalUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
 		private final Keyword cLevel3Keyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
@@ -3822,7 +3818,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLevel2_from_level1Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
 		private final CrossReference cLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0 = (CrossReference)cLevel2_from_level1Assignment_15_2.eContents().get(0);
 		private final RuleCall cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
+		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
 		private final Assignment cLevel1_filterAssignment_16 = (Assignment)cGroup.eContents().get(16);
 		private final RuleCall cLevel1_filterVSVSStepLevel1FilterParserRuleCall_16_0 = (RuleCall)cLevel1_filterAssignment_16.eContents().get(0);
 		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
@@ -3846,27 +3842,28 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepOutputLevel3:
 		//	'<output_level_3'
 		//	'name=' name=STRING
-		//	'id=' id=INTEGER
-		//	'ifRef=' ifRef=INTEGER ('optional=' optional=INTEGER)?
+		//	'id=' id=UINT_STRING
+		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
 		//	'>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
 		//	level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
 		//	('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
 		//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 		//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
 		//	level0_filter=VSVSStepLevel0Filter
 		//	'</output_level_3>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<output_level_3' 'name=' name=STRING 'id=' id=INTEGER 'ifRef=' ifRef=INTEGER ('optional=' optional=INTEGER)? '>'
-		//('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')? level3_filter=VSVSStepLevel3Filter ('<level2'
-		//'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level3_from_level2' 'import='
-		//level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')? level2_filter=VSVSStepLevel2Filter ('<level1' 'format='
-		//level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_from_level1' 'import='
-		//level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')? level1_filter=VSVSStepLevel1Filter ('<level0' 'format='
-		//level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_from_level0' 'import='
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')? level0_filter=VSVSStepLevel0Filter '</output_level_3>'
+		//'<output_level_3' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
+		//optional=UINT_STRING)? '>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level0_filter=VSVSStepLevel0Filter '</output_level_3>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<output_level_3'
@@ -3884,32 +3881,32 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_4_0() { return cIdINTEGERParserRuleCall_4_0; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
 		
 		//'ifRef='
 		public Keyword getIfRefKeyword_5() { return cIfRefKeyword_5; }
 		
-		//ifRef=INTEGER
+		//ifRef=UINT_STRING
 		public Assignment getIfRefAssignment_6() { return cIfRefAssignment_6; }
 		
-		//INTEGER
-		public RuleCall getIfRefINTEGERParserRuleCall_6_0() { return cIfRefINTEGERParserRuleCall_6_0; }
+		//UINT_STRING
+		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_6_0() { return cIfRefUINT_STRINGTerminalRuleCall_6_0; }
 		
-		//('optional=' optional=INTEGER)?
+		//('optional=' optional=UINT_STRING)?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'optional='
 		public Keyword getOptionalKeyword_7_0() { return cOptionalKeyword_7_0; }
 		
-		//optional=INTEGER
+		//optional=UINT_STRING
 		public Assignment getOptionalAssignment_7_1() { return cOptionalAssignment_7_1; }
 		
-		//INTEGER
-		public RuleCall getOptionalINTEGERParserRuleCall_7_1_0() { return cOptionalINTEGERParserRuleCall_7_1_0; }
+		//UINT_STRING
+		public RuleCall getOptionalUINT_STRINGTerminalRuleCall_7_1_0() { return cOptionalUINT_STRINGTerminalRuleCall_7_1_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
@@ -4010,7 +4007,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_14_3() { return cSolidusGreaterThanSignKeyword_14_3; }
 		
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		public Group getGroup_15() { return cGroup_15; }
 		
 		//'<level2_from_level1'
@@ -4028,8 +4025,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1() { return cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_15_3() { return cSemicolonKeyword_15_3; }
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
 		
 		//level1_filter=VSVSStepLevel1Filter
 		public Assignment getLevel1_filterAssignment_16() { return cLevel1_filterAssignment_16; }
@@ -4128,7 +4125,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cLevel2_from_level1Assignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
 		private final CrossReference cLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0 = (CrossReference)cLevel2_from_level1Assignment_12_2.eContents().get(0);
 		private final RuleCall cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
+		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
 		private final Assignment cLevel1_filterAssignment_13 = (Assignment)cGroup.eContents().get(13);
 		private final RuleCall cLevel1_filterVSVSStepLevel1FilterParserRuleCall_13_0 = (RuleCall)cLevel1_filterAssignment_13.eContents().get(0);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
@@ -4150,28 +4147,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOutput_level_2Keyword_17 = (Keyword)cGroup.eContents().get(17);
 		
 		//VSVSStepOutputLevel2:
-		//	'output_level_2'
+		//	'<output_level_2'
 		//	'name=' name=STRING
 		//	'id=' id=UINT_STRING
 		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
 		//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
 		//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 		//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
 		//	level0_filter=VSVSStepLevel0Filter
 		//	'</output_level_2>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'output_level_2' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')? level2_filter=VSVSStepLevel2Filter
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_from_level1' 'import='
-		//level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')? level1_filter=VSVSStepLevel1Filter ('<level0' 'format='
-		//level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_from_level0' 'import='
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')? level0_filter=VSVSStepLevel0Filter '</output_level_2>'
+		//'<output_level_2' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
+		//optional=UINT_STRING)? '>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level0_filter=VSVSStepLevel0Filter '</output_level_2>'
 		public Group getGroup() { return cGroup; }
 		
-		//'output_level_2'
+		//'<output_level_2'
 		public Keyword getOutput_level_2Keyword_0() { return cOutput_level_2Keyword_0; }
 		
 		//'name='
@@ -4264,7 +4262,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
 		
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 		public Group getGroup_12() { return cGroup_12; }
 		
 		//'<level2_from_level1'
@@ -4282,8 +4280,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1() { return cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_12_3() { return cSemicolonKeyword_12_3; }
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
 		
 		//level1_filter=VSVSStepLevel1Filter
 		public Assignment getLevel1_filterAssignment_13() { return cLevel1_filterAssignment_13; }
@@ -4388,7 +4386,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOutput_level_1Keyword_14 = (Keyword)cGroup.eContents().get(14);
 		
 		//VSVSStepOutputLevel1:
-		//	'output_level_1'
+		//	'<output_level_1'
 		//	'name=' name=STRING
 		//	'id=' id=UINT_STRING
 		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
@@ -4399,13 +4397,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</output_level_1>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'output_level_1' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//'>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')? level1_filter=VSVSStepLevel1Filter
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_from_level0' 'import='
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')? level0_filter=VSVSStepLevel0Filter '</output_level_1>'
+		//'<output_level_1' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
+		//optional=UINT_STRING)? '>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
+		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
+		//level0_filter=VSVSStepLevel0Filter '</output_level_1>'
 		public Group getGroup() { return cGroup; }
 		
-		//'output_level_1'
+		//'<output_level_1'
 		public Keyword getOutput_level_1Keyword_0() { return cOutput_level_1Keyword_0; }
 		
 		//'name='
@@ -4654,24 +4653,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cExtra_filterKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0 = (CrossReference)cExtra_filterAssignment_4_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
+		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSVSStepLevel3Filter VSVSStepFilter:
 		//	'<level3_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<level3_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')? '/>'
+		//'<level3_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<level3_filter'
@@ -4686,29 +4683,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepYesNo
 		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
-		public Group getGroup_4() { return cGroup_4; }
+		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'extra_filter='
-		public Keyword getExtra_filterKeyword_4_0() { return cExtra_filterKeyword_4_0; }
+		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
 		
 		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_4_1() { return cExtra_filterAssignment_4_1; }
+		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
 		
 		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0; }
+		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
 	}
 	public class VSVSStepLevel2FilterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel2Filter");
@@ -4717,24 +4708,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cExtra_filterKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0 = (CrossReference)cExtra_filterAssignment_4_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
+		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSVSStepLevel2Filter VSVSStepFilter:
 		//	'<level2_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<level2_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')? '/>'
+		//'<level2_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<level2_filter'
@@ -4749,29 +4738,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepYesNo
 		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
-		public Group getGroup_4() { return cGroup_4; }
+		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'extra_filter='
-		public Keyword getExtra_filterKeyword_4_0() { return cExtra_filterKeyword_4_0; }
+		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
 		
 		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_4_1() { return cExtra_filterAssignment_4_1; }
+		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
 		
 		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0; }
+		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
 	}
 	public class VSVSStepLevel1FilterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel1Filter");
@@ -4780,24 +4763,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cExtra_filterKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0 = (CrossReference)cExtra_filterAssignment_4_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
+		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSVSStepLevel1Filter VSVSStepFilter:
 		//	'<level1_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<level1_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')? '/>'
+		//'<level1_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<level1_filter'
@@ -4812,29 +4793,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepYesNo
 		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
-		public Group getGroup_4() { return cGroup_4; }
+		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'extra_filter='
-		public Keyword getExtra_filterKeyword_4_0() { return cExtra_filterKeyword_4_0; }
+		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
 		
 		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_4_1() { return cExtra_filterAssignment_4_1; }
+		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
 		
 		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0; }
+		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
 	}
 	public class VSVSStepLevel0FilterElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
@@ -4843,24 +4818,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cExtra_filterKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0 = (CrossReference)cExtra_filterAssignment_4_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSemicolonKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
+		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//VSVSStepLevel0Filter VSVSStepFilter:
 		//	'<level0_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<level0_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')? '/>'
+		//'<level0_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<level0_filter'
@@ -4875,29 +4848,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepYesNo
 		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
 		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
-		public Group getGroup_4() { return cGroup_4; }
+		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'extra_filter='
-		public Keyword getExtra_filterKeyword_4_0() { return cExtra_filterKeyword_4_0; }
+		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
 		
 		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_4_1() { return cExtra_filterAssignment_4_1; }
+		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
 		
 		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_4_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_4_1_0; }
+		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_4_1_0_1; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_4_2() { return cSemicolonKeyword_4_2; }
+		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
 	}
 	public class VSVSStepEnableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnable");
@@ -4905,17 +4872,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEnableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepEnable VSVSStepEnableDisable:
 		//	'<enable'
-		//	'id=' id=INTEGER ';'
+		//	'id=' id=UINT_STRING
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<enable' 'id=' id=INTEGER ';' '/>'
+		//'<enable' 'id=' id=UINT_STRING '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<enable'
@@ -4924,17 +4890,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class VSVSStepDisableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisable");
@@ -4942,17 +4905,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDisableKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepDisable VSVSStepEnableDisable:
 		//	'<disable'
-		//	'id=' id=INTEGER ';'
+		//	'id=' id=UINT_STRING
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<disable' 'id=' id=INTEGER ';' '/>'
+		//'<disable' 'id=' id=UINT_STRING '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<disable'
@@ -4961,17 +4923,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class VSVSStepEnablePrintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnablePrint");
@@ -4979,17 +4938,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cEnable_printKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepEnablePrint VSVSStepEnableDisable:
 		//	'<enable_print'
-		//	'id=' id=INTEGER ';'
+		//	'id=' id=UINT_STRING
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<enable_print' 'id=' id=INTEGER ';' '/>'
+		//'<enable_print' 'id=' id=UINT_STRING '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<enable_print'
@@ -4998,17 +4956,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class VSVSStepDisablePrintElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisablePrint");
@@ -5016,17 +4971,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDisable_printKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepDisablePrint VSVSStepEnableDisable:
 		//	'<disable_print'
-		//	'id=' id=INTEGER ';'
+		//	'id=' id=UINT_STRING
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<disable_print' 'id=' id=INTEGER ';' '/>'
+		//'<disable_print' 'id=' id=UINT_STRING '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<disable_print'
@@ -5035,17 +4989,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class VSVSStepNextStepElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepNextStep");
@@ -5053,22 +5004,20 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNextStepKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cIsConcurrentKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cIsConcurrentAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cIsConcurrentVSVSStepYesNoEnumRuleCall_5_0 = (RuleCall)cIsConcurrentAssignment_5.eContents().get(0);
-		private final Keyword cSemicolonKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cIsConcurrentKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIsConcurrentAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIsConcurrentVSVSStepYesNoEnumRuleCall_4_0 = (RuleCall)cIsConcurrentAssignment_4.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSVSStepNextStep:
 		//	'<nextStep'
-		//	'id=' id=INTEGER ';'
-		//	'isConcurrent=' isConcurrent=VSVSStepYesNo ';'
+		//	'id=' id=UINT_STRING
+		//	'isConcurrent=' isConcurrent=VSVSStepYesNo
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<nextStep' 'id=' id=INTEGER ';' 'isConcurrent=' isConcurrent=VSVSStepYesNo ';' '/>'
+		//'<nextStep' 'id=' id=UINT_STRING 'isConcurrent=' isConcurrent=VSVSStepYesNo '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<nextStep'
@@ -5077,29 +5026,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'isConcurrent='
-		public Keyword getIsConcurrentKeyword_4() { return cIsConcurrentKeyword_4; }
+		public Keyword getIsConcurrentKeyword_3() { return cIsConcurrentKeyword_3; }
 		
 		//isConcurrent=VSVSStepYesNo
-		public Assignment getIsConcurrentAssignment_5() { return cIsConcurrentAssignment_5; }
+		public Assignment getIsConcurrentAssignment_4() { return cIsConcurrentAssignment_4; }
 		
 		//VSVSStepYesNo
-		public RuleCall getIsConcurrentVSVSStepYesNoEnumRuleCall_5_0() { return cIsConcurrentVSVSStepYesNoEnumRuleCall_5_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_6() { return cSemicolonKeyword_6; }
+		public RuleCall getIsConcurrentVSVSStepYesNoEnumRuleCall_4_0() { return cIsConcurrentVSVSStepYesNoEnumRuleCall_4_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
 	}
 	public class VSVSStepConcurrentStepElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentStep");
@@ -5107,17 +5050,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cConcurrent_stepKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdINTEGERParserRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSemicolonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepConcurrentStep:
 		//	'<concurrent_step'
-		//	'id=' id=INTEGER ';'
+		//	'id=' id=UINT_STRING
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<concurrent_step' 'id=' id=INTEGER ';' '/>'
+		//'<concurrent_step' 'id=' id=UINT_STRING '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<concurrent_step'
@@ -5126,17 +5068,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'id='
 		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
 		
-		//id=INTEGER
+		//id=UINT_STRING
 		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
 		
-		//INTEGER
-		public RuleCall getIdINTEGERParserRuleCall_2_0() { return cIdINTEGERParserRuleCall_2_0; }
-		
-		//';'
-		public Keyword getSemicolonKeyword_3() { return cSemicolonKeyword_3; }
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.QualifiedName");
@@ -5425,22 +5364,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNoNoKeyword_1_0 = (Keyword)cNoEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum VSVSStepYesNo:
-		//	yes | no;
+		//	yes='"yes"' | no='"no"';
 		public EnumRule getRule() { return rule; }
 		
-		//yes | no
+		//yes='"yes"' | no='"no"'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//yes
+		//yes='"yes"'
 		public EnumLiteralDeclaration getYesEnumLiteralDeclaration_0() { return cYesEnumLiteralDeclaration_0; }
 		
-		//'yes'
+		//'"yes"'
 		public Keyword getYesYesKeyword_0_0() { return cYesYesKeyword_0_0; }
 		
-		//no
+		//no='"no"'
 		public EnumLiteralDeclaration getNoEnumLiteralDeclaration_1() { return cNoEnumLiteralDeclaration_1; }
 		
-		//'no'
+		//'"no"'
 		public Keyword getNoNoKeyword_1_0() { return cNoNoKeyword_1_0; }
 	}
 	
@@ -5886,7 +5825,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ApplicableDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 	//	'/>'
 	public DApplicableDocumentElements getDApplicableDocumentAccess() {
 		return pDApplicableDocument;
@@ -5900,7 +5839,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ReferenceDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 	//	'/>'
 	public DReferenceDocumentElements getDReferenceDocumentAccess() {
 		return pDReferenceDocument;
@@ -6255,7 +6194,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSStepOutputs:
 	//	'<outputs'
 	//	'checkmode=' checkmode=VSVSStepCheckmode
-	//	'valid_time_interval_value=' valid_time_interval_value=INTEGER
+	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
 	//	'>' (output_level_3+=VSVSStepOutputLevel3 | output_level_2+=VSVSStepOutputLevel2 |
 	//	output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
@@ -6283,7 +6222,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepConcurrentSteps:
 	//	'<concurrent_steps'
-	//	'nextStep=' nextStep=VSVSStepNextStep ';'
+	//	'nextStep=' nextStep=VSVSStepNextStep
 	//	'>'
 	//	concurrent_step+=VSVSStepConcurrentStep+
 	//	'</concurrent_steps>';
@@ -6398,13 +6337,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSStepOutputLevel3:
 	//	'<output_level_3'
 	//	'name=' name=STRING
-	//	'id=' id=INTEGER
-	//	'ifRef=' ifRef=INTEGER ('optional=' optional=INTEGER)?
+	//	'id=' id=UINT_STRING
+	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
 	//	'>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
 	//	level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
 	//	('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
 	//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 	//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 	//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
 	//	level0_filter=VSVSStepLevel0Filter
@@ -6418,13 +6357,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSVSStepOutputLevel2:
-	//	'output_level_2'
+	//	'<output_level_2'
 	//	'name=' name=STRING
 	//	'id=' id=UINT_STRING
 	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
 	//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
 	//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] ';')?
+	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
 	//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
 	//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
 	//	level0_filter=VSVSStepLevel0Filter
@@ -6438,7 +6377,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSVSStepOutputLevel1:
-	//	'output_level_1'
+	//	'<output_level_1'
 	//	'name=' name=STRING
 	//	'id=' id=UINT_STRING
 	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
@@ -6473,8 +6412,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepLevel3Filter VSVSStepFilter:
 	//	'<level3_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	//	'/>'
 	public VSVSStepLevel3FilterElements getVSVSStepLevel3FilterAccess() {
 		return pVSVSStepLevel3Filter;
@@ -6486,8 +6425,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepLevel2Filter VSVSStepFilter:
 	//	'<level2_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	//	'/>'
 	public VSVSStepLevel2FilterElements getVSVSStepLevel2FilterAccess() {
 		return pVSVSStepLevel2Filter;
@@ -6499,8 +6438,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepLevel1Filter VSVSStepFilter:
 	//	'<level1_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	//	'/>'
 	public VSVSStepLevel1FilterElements getVSVSStepLevel1FilterAccess() {
 		return pVSVSStepLevel1Filter;
@@ -6512,8 +6451,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepLevel0Filter VSVSStepFilter:
 	//	'<level0_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ';' ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING] ';')?
+	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
+	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
 	//	'/>'
 	public VSVSStepLevel0FilterElements getVSVSStepLevel0FilterAccess() {
 		return pVSVSStepLevel0Filter;
@@ -6524,7 +6463,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum VSVSStepYesNo:
-	//	yes | no;
+	//	yes='"yes"' | no='"no"';
 	public VSVSStepYesNoElements getVSVSStepYesNoAccess() {
 		return eVSVSStepYesNo;
 	}
@@ -6535,7 +6474,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepEnable VSVSStepEnableDisable:
 	//	'<enable'
-	//	'id=' id=INTEGER ';'
+	//	'id=' id=UINT_STRING
 	//	'/>'
 	public VSVSStepEnableElements getVSVSStepEnableAccess() {
 		return pVSVSStepEnable;
@@ -6547,7 +6486,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepDisable VSVSStepEnableDisable:
 	//	'<disable'
-	//	'id=' id=INTEGER ';'
+	//	'id=' id=UINT_STRING
 	//	'/>'
 	public VSVSStepDisableElements getVSVSStepDisableAccess() {
 		return pVSVSStepDisable;
@@ -6559,7 +6498,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepEnablePrint VSVSStepEnableDisable:
 	//	'<enable_print'
-	//	'id=' id=INTEGER ';'
+	//	'id=' id=UINT_STRING
 	//	'/>'
 	public VSVSStepEnablePrintElements getVSVSStepEnablePrintAccess() {
 		return pVSVSStepEnablePrint;
@@ -6571,7 +6510,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepDisablePrint VSVSStepEnableDisable:
 	//	'<disable_print'
-	//	'id=' id=INTEGER ';'
+	//	'id=' id=UINT_STRING
 	//	'/>'
 	public VSVSStepDisablePrintElements getVSVSStepDisablePrintAccess() {
 		return pVSVSStepDisablePrint;
@@ -6583,8 +6522,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepNextStep:
 	//	'<nextStep'
-	//	'id=' id=INTEGER ';'
-	//	'isConcurrent=' isConcurrent=VSVSStepYesNo ';'
+	//	'id=' id=UINT_STRING
+	//	'isConcurrent=' isConcurrent=VSVSStepYesNo
 	//	'/>';
 	public VSVSStepNextStepElements getVSVSStepNextStepAccess() {
 		return pVSVSStepNextStep;
@@ -6596,7 +6535,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepConcurrentStep:
 	//	'<concurrent_step'
-	//	'id=' id=INTEGER ';'
+	//	'id=' id=UINT_STRING
 	//	'/>';
 	public VSVSStepConcurrentStepElements getVSVSStepConcurrentStepAccess() {
 		return pVSVSStepConcurrentStep;

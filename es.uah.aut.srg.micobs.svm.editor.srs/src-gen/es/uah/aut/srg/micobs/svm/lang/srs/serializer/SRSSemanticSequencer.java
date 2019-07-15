@@ -248,7 +248,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -388,7 +388,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=STRING revision=STRING?)? date=STRING?)
+	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -567,8 +567,8 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (
 	 *         name=STRING 
 	 *         id=STRING 
-	 *         issue=STRING 
-	 *         revision=STRING 
+	 *         issue=UINT_STRING 
+	 *         revision=UINT_STRING 
 	 *         date=STRING 
 	 *         parents+=[VTraceableDocument|STRING]* 
 	 *         introductionSection=VSRSIntroduction 

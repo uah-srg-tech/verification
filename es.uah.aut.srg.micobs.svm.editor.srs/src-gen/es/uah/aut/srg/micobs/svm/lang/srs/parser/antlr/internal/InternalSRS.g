@@ -144,9 +144,9 @@ ruleVSRSDocument returns [EObject current=null]
 		}
 		(
 			(
-				lv_issue_6_0=RULE_STRING
+				lv_issue_6_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_issue_6_0, grammarAccess.getVSRSDocumentAccess().getIssueSTRINGTerminalRuleCall_6_0());
+					newLeafNode(lv_issue_6_0, grammarAccess.getVSRSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0());
 				}
 				{
 					if ($current==null) {
@@ -156,7 +156,7 @@ ruleVSRSDocument returns [EObject current=null]
 						$current,
 						"issue",
 						lv_issue_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 				}
 			)
 		)
@@ -166,9 +166,9 @@ ruleVSRSDocument returns [EObject current=null]
 		}
 		(
 			(
-				lv_revision_8_0=RULE_STRING
+				lv_revision_8_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_revision_8_0, grammarAccess.getVSRSDocumentAccess().getRevisionSTRINGTerminalRuleCall_8_0());
+					newLeafNode(lv_revision_8_0, grammarAccess.getVSRSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0());
 				}
 				{
 					if ($current==null) {
@@ -178,7 +178,7 @@ ruleVSRSDocument returns [EObject current=null]
 						$current,
 						"revision",
 						lv_revision_8_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 				}
 			)
 		)
@@ -1579,9 +1579,9 @@ ruleDApplicableDocument returns [EObject current=null]
 			}
 			(
 				(
-					lv_issue_8_0=RULE_STRING
+					lv_issue_8_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_issue_8_0, grammarAccess.getDApplicableDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
+						newLeafNode(lv_issue_8_0, grammarAccess.getDApplicableDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1591,7 +1591,7 @@ ruleDApplicableDocument returns [EObject current=null]
 							$current,
 							"issue",
 							lv_issue_8_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 					}
 				)
 			)
@@ -1602,9 +1602,9 @@ ruleDApplicableDocument returns [EObject current=null]
 				}
 				(
 					(
-						lv_revision_10_0=RULE_STRING
+						lv_revision_10_0=RULE_UINT_STRING
 						{
-							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
+							newLeafNode(lv_revision_10_0, grammarAccess.getDApplicableDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0());
 						}
 						{
 							if ($current==null) {
@@ -1614,7 +1614,7 @@ ruleDApplicableDocument returns [EObject current=null]
 								$current,
 								"revision",
 								lv_revision_10_0,
-								"org.eclipse.xtext.common.Terminals.STRING");
+								"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 						}
 					)
 				)
@@ -1744,9 +1744,9 @@ ruleDReferenceDocument returns [EObject current=null]
 			}
 			(
 				(
-					lv_issue_8_0=RULE_STRING
+					lv_issue_8_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_issue_8_0, grammarAccess.getDReferenceDocumentAccess().getIssueSTRINGTerminalRuleCall_7_1_0());
+						newLeafNode(lv_issue_8_0, grammarAccess.getDReferenceDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1756,7 +1756,7 @@ ruleDReferenceDocument returns [EObject current=null]
 							$current,
 							"issue",
 							lv_issue_8_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 					}
 				)
 			)
@@ -1767,9 +1767,9 @@ ruleDReferenceDocument returns [EObject current=null]
 				}
 				(
 					(
-						lv_revision_10_0=RULE_STRING
+						lv_revision_10_0=RULE_UINT_STRING
 						{
-							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionSTRINGTerminalRuleCall_7_2_1_0());
+							newLeafNode(lv_revision_10_0, grammarAccess.getDReferenceDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0());
 						}
 						{
 							if ($current==null) {
@@ -1779,7 +1779,7 @@ ruleDReferenceDocument returns [EObject current=null]
 								$current,
 								"revision",
 								lv_revision_10_0,
-								"org.eclipse.xtext.common.Terminals.STRING");
+								"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 						}
 					)
 				)
@@ -4962,6 +4962,8 @@ ruleVValidationMethod returns [Enumerator current=null]
 ;
 
 RULE_RUNTEXT : '<text>' ( options {greedy=false;} : . )*'</text>';
+
+RULE_UINT_STRING : '"' ('0'..'9')+ '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

@@ -46,10 +46,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIdSTRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
 		private final Keyword cIssueKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cIssueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIssueSTRINGTerminalRuleCall_6_0 = (RuleCall)cIssueAssignment_6.eContents().get(0);
+		private final RuleCall cIssueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIssueAssignment_6.eContents().get(0);
 		private final Keyword cRevisionKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cRevisionAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cRevisionSTRINGTerminalRuleCall_8_0 = (RuleCall)cRevisionAssignment_8.eContents().get(0);
+		private final RuleCall cRevisionUINT_STRINGTerminalRuleCall_8_0 = (RuleCall)cRevisionAssignment_8.eContents().get(0);
 		private final Keyword cDateKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Assignment cDateAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cDateSTRINGTerminalRuleCall_10_0 = (RuleCall)cDateAssignment_10.eContents().get(0);
@@ -81,8 +81,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<SRS'
 		//	'name=' name=STRING
 		//	'id=' id=STRING
-		//	'issue=' issue=STRING
-		//	'revision=' revision=STRING
+		//	'issue=' issue=UINT_STRING
+		//	'revision=' revision=UINT_STRING
 		//	'date=' date=STRING
 		//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 		//	introductionSection=VSRSIntroduction
@@ -95,9 +95,10 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</SRS>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<SRS' 'name=' name=STRING 'id=' id=STRING 'issue=' issue=STRING 'revision=' revision=STRING 'date=' date=STRING '>'
-		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')* introductionSection=VSRSIntroduction
-		//applicableDocumentsSection=VSRSApplicableDocuments referenceDocumentsSection=VSRSReferenceDocuments
+		//'<SRS' 'name=' name=STRING 'id=' id=STRING 'issue=' issue=UINT_STRING 'revision=' revision=UINT_STRING 'date='
+		//date=STRING '>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+		//introductionSection=VSRSIntroduction applicableDocumentsSection=VSRSApplicableDocuments
+		//referenceDocumentsSection=VSRSReferenceDocuments
 		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations softwareOverviewSection=VSRSSoftwareOverview
 		//requirementsSection=VSRSRequirements logicalModelsSection=VSRSLogicalModels '</SRS>'
 		public Group getGroup() { return cGroup; }
@@ -126,20 +127,20 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'issue='
 		public Keyword getIssueKeyword_5() { return cIssueKeyword_5; }
 		
-		//issue=STRING
+		//issue=UINT_STRING
 		public Assignment getIssueAssignment_6() { return cIssueAssignment_6; }
 		
-		//STRING
-		public RuleCall getIssueSTRINGTerminalRuleCall_6_0() { return cIssueSTRINGTerminalRuleCall_6_0; }
+		//UINT_STRING
+		public RuleCall getIssueUINT_STRINGTerminalRuleCall_6_0() { return cIssueUINT_STRINGTerminalRuleCall_6_0; }
 		
 		//'revision='
 		public Keyword getRevisionKeyword_7() { return cRevisionKeyword_7; }
 		
-		//revision=STRING
+		//revision=UINT_STRING
 		public Assignment getRevisionAssignment_8() { return cRevisionAssignment_8; }
 		
-		//STRING
-		public RuleCall getRevisionSTRINGTerminalRuleCall_8_0() { return cRevisionSTRINGTerminalRuleCall_8_0; }
+		//UINT_STRING
+		public RuleCall getRevisionUINT_STRINGTerminalRuleCall_8_0() { return cRevisionUINT_STRINGTerminalRuleCall_8_0; }
 		
 		//'date='
 		public Keyword getDateKeyword_9() { return cDateKeyword_9; }
@@ -916,11 +917,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cIssueKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cIssueAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cIssueSTRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
+		private final RuleCall cIssueUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
 		private final Group cGroup_7_2 = (Group)cGroup_7.eContents().get(2);
 		private final Keyword cRevisionKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
 		private final Assignment cRevisionAssignment_7_2_1 = (Assignment)cGroup_7_2.eContents().get(1);
-		private final RuleCall cRevisionSTRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
+		private final RuleCall cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
@@ -931,12 +932,12 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<ApplicableDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ApplicableDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=STRING ('revision='
-		//revision=STRING)?)? ('date=' date=STRING)? '/>'
+		//'<ApplicableDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ApplicableDocument'
@@ -969,29 +970,29 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_6_0() { return cIdSTRINGTerminalRuleCall_6_0; }
 		
-		//('issue=' issue=STRING ('revision=' revision=STRING)?)?
+		//('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'issue='
 		public Keyword getIssueKeyword_7_0() { return cIssueKeyword_7_0; }
 		
-		//issue=STRING
+		//issue=UINT_STRING
 		public Assignment getIssueAssignment_7_1() { return cIssueAssignment_7_1; }
 		
-		//STRING
-		public RuleCall getIssueSTRINGTerminalRuleCall_7_1_0() { return cIssueSTRINGTerminalRuleCall_7_1_0; }
+		//UINT_STRING
+		public RuleCall getIssueUINT_STRINGTerminalRuleCall_7_1_0() { return cIssueUINT_STRINGTerminalRuleCall_7_1_0; }
 		
-		//('revision=' revision=STRING)?
+		//('revision=' revision=UINT_STRING)?
 		public Group getGroup_7_2() { return cGroup_7_2; }
 		
 		//'revision='
 		public Keyword getRevisionKeyword_7_2_0() { return cRevisionKeyword_7_2_0; }
 		
-		//revision=STRING
+		//revision=UINT_STRING
 		public Assignment getRevisionAssignment_7_2_1() { return cRevisionAssignment_7_2_1; }
 		
-		//STRING
-		public RuleCall getRevisionSTRINGTerminalRuleCall_7_2_1_0() { return cRevisionSTRINGTerminalRuleCall_7_2_1_0; }
+		//UINT_STRING
+		public RuleCall getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0() { return cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0; }
 		
 		//('date=' date=STRING)?
 		public Group getGroup_8() { return cGroup_8; }
@@ -1024,11 +1025,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cIssueKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Assignment cIssueAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cIssueSTRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
+		private final RuleCall cIssueUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cIssueAssignment_7_1.eContents().get(0);
 		private final Group cGroup_7_2 = (Group)cGroup_7.eContents().get(2);
 		private final Keyword cRevisionKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
 		private final Assignment cRevisionAssignment_7_2_1 = (Assignment)cGroup_7_2.eContents().get(1);
-		private final RuleCall cRevisionSTRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
+		private final RuleCall cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0 = (RuleCall)cRevisionAssignment_7_2_1.eContents().get(0);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
@@ -1039,12 +1040,12 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<ReferenceDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ReferenceDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=STRING ('revision='
-		//revision=STRING)?)? ('date=' date=STRING)? '/>'
+		//'<ReferenceDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ReferenceDocument'
@@ -1077,29 +1078,29 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getIdSTRINGTerminalRuleCall_6_0() { return cIdSTRINGTerminalRuleCall_6_0; }
 		
-		//('issue=' issue=STRING ('revision=' revision=STRING)?)?
+		//('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//'issue='
 		public Keyword getIssueKeyword_7_0() { return cIssueKeyword_7_0; }
 		
-		//issue=STRING
+		//issue=UINT_STRING
 		public Assignment getIssueAssignment_7_1() { return cIssueAssignment_7_1; }
 		
-		//STRING
-		public RuleCall getIssueSTRINGTerminalRuleCall_7_1_0() { return cIssueSTRINGTerminalRuleCall_7_1_0; }
+		//UINT_STRING
+		public RuleCall getIssueUINT_STRINGTerminalRuleCall_7_1_0() { return cIssueUINT_STRINGTerminalRuleCall_7_1_0; }
 		
-		//('revision=' revision=STRING)?
+		//('revision=' revision=UINT_STRING)?
 		public Group getGroup_7_2() { return cGroup_7_2; }
 		
 		//'revision='
 		public Keyword getRevisionKeyword_7_2_0() { return cRevisionKeyword_7_2_0; }
 		
-		//revision=STRING
+		//revision=UINT_STRING
 		public Assignment getRevisionAssignment_7_2_1() { return cRevisionAssignment_7_2_1; }
 		
-		//STRING
-		public RuleCall getRevisionSTRINGTerminalRuleCall_7_2_1_0() { return cRevisionSTRINGTerminalRuleCall_7_2_1_0; }
+		//UINT_STRING
+		public RuleCall getRevisionUINT_STRINGTerminalRuleCall_7_2_1_0() { return cRevisionUINT_STRINGTerminalRuleCall_7_2_1_0; }
 		
 		//('date=' date=STRING)?
 		public Group getGroup_8() { return cGroup_8; }
@@ -3044,6 +3045,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSRSDocumentItemElements pVSRSDocumentItem;
 	private final VValidationMethodElements eVValidationMethod;
 	private final VSRSLogicalModelElements pVSRSLogicalModel;
+	private final TerminalRule tUINT_STRING;
 	
 	private final Grammar grammar;
 	
@@ -3108,6 +3110,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSRSDocumentItem = new VSRSDocumentItemElements();
 		this.eVValidationMethod = new VValidationMethodElements();
 		this.pVSRSLogicalModel = new VSRSLogicalModelElements();
+		this.tUINT_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -3141,8 +3144,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<SRS'
 	//	'name=' name=STRING
 	//	'id=' id=STRING
-	//	'issue=' issue=STRING
-	//	'revision=' revision=STRING
+	//	'issue=' issue=UINT_STRING
+	//	'revision=' revision=UINT_STRING
 	//	'date=' date=STRING
 	//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
 	//	introductionSection=VSRSIntroduction
@@ -3383,7 +3386,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ApplicableDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 	//	'/>'
 	public DApplicableDocumentElements getDApplicableDocumentAccess() {
 		return pDApplicableDocument;
@@ -3397,7 +3400,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ReferenceDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=STRING ('revision=' revision=STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
 	//	'/>'
 	public DReferenceDocumentElements getDReferenceDocumentAccess() {
 		return pDReferenceDocument;
@@ -3892,6 +3895,12 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSRSLogicalModelRule() {
 		return getVSRSLogicalModelAccess().getRule();
+	}
+	
+	//terminal UINT_STRING:
+	//	'"' '0'..'9'+ '"';
+	public TerminalRule getUINT_STRINGRule() {
+		return tUINT_STRING;
 	}
 	
 	//terminal ID:
