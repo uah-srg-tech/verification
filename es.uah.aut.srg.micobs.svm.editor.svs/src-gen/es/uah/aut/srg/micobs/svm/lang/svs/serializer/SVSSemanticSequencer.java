@@ -684,7 +684,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSProcedureSteps returns VSVSProcedureSteps
 	 *
 	 * Constraint:
-	 *     (name=STRING step+=VSVSProcedureStep+)
+	 *     step+=VSVSProcedureStep+
 	 */
 	protected void sequence_VSVSProcedureSteps(ISerializationContext context, VSVSProcedureSteps semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

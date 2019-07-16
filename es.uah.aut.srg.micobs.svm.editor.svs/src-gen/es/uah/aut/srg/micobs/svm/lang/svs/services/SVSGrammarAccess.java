@@ -2399,48 +2399,35 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureSteps");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProcedureStepsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cStepAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStepVSVSProcedureStepParserRuleCall_4_0 = (RuleCall)cStepAssignment_4.eContents().get(0);
-		private final Keyword cProcedureStepsKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cStepAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cStepVSVSProcedureStepParserRuleCall_2_0 = (RuleCall)cStepAssignment_2.eContents().get(0);
+		private final Keyword cProcedureStepsKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSProcedureSteps:
 		//	'<ProcedureSteps'
-		//	'name=' name=STRING
 		//	'>'
 		//	step+=VSVSProcedureStep+
 		//	'</ProcedureSteps>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ProcedureSteps' 'name=' name=STRING '>' step+=VSVSProcedureStep+ '</ProcedureSteps>'
+		//'<ProcedureSteps' '>' step+=VSVSProcedureStep+ '</ProcedureSteps>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ProcedureSteps'
 		public Keyword getProcedureStepsKeyword_0() { return cProcedureStepsKeyword_0; }
 		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		public Keyword getGreaterThanSignKeyword_1() { return cGreaterThanSignKeyword_1; }
 		
 		//step+=VSVSProcedureStep+
-		public Assignment getStepAssignment_4() { return cStepAssignment_4; }
+		public Assignment getStepAssignment_2() { return cStepAssignment_2; }
 		
 		//VSVSProcedureStep
-		public RuleCall getStepVSVSProcedureStepParserRuleCall_4_0() { return cStepVSVSProcedureStepParserRuleCall_4_0; }
+		public RuleCall getStepVSVSProcedureStepParserRuleCall_2_0() { return cStepVSVSProcedureStepParserRuleCall_2_0; }
 		
 		//'</ProcedureSteps>'
-		public Keyword getProcedureStepsKeyword_5() { return cProcedureStepsKeyword_5; }
+		public Keyword getProcedureStepsKeyword_3() { return cProcedureStepsKeyword_3; }
 	}
 	public class VSVSProcedureStepElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
@@ -6135,7 +6122,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSProcedureSteps:
 	//	'<ProcedureSteps'
-	//	'name=' name=STRING
 	//	'>'
 	//	step+=VSVSProcedureStep+
 	//	'</ProcedureSteps>';

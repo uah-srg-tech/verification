@@ -293,8 +293,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestProcedureAccess().getTestCaseAssignment_10_2(), "rule__VSVSTestProcedure__TestCaseAssignment_10_2");
 					put(grammarAccess.getVSVSTestProcedureAccess().getProcedureStepsAssignment_11(), "rule__VSVSTestProcedure__ProcedureStepsAssignment_11");
 					put(grammarAccess.getVSVSTestProcedureAccess().getTestScriptAssignment_13(), "rule__VSVSTestProcedure__TestScriptAssignment_13");
-					put(grammarAccess.getVSVSProcedureStepsAccess().getNameAssignment_2(), "rule__VSVSProcedureSteps__NameAssignment_2");
-					put(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_4(), "rule__VSVSProcedureSteps__StepAssignment_4");
+					put(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2(), "rule__VSVSProcedureSteps__StepAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getNameAssignment_2(), "rule__VSVSProcedureStep__NameAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getIdAssignment_4(), "rule__VSVSProcedureStep__IdAssignment_4");
 					put(grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefAssignment_5_1(), "rule__VSVSProcedureStep__Prev_step_idrefAssignment_5_1");

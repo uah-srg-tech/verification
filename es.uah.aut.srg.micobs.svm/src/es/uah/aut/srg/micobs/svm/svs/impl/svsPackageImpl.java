@@ -1156,17 +1156,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVSVSProcedureSteps_Name() {
-		return (EAttribute)vsvsProcedureStepsEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getVSVSProcedureSteps_Step() {
-		return (EReference)vsvsProcedureStepsEClass.getEStructuralFeatures().get(1);
+		return (EReference)vsvsProcedureStepsEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -2317,7 +2308,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_CASE);
 
 		vsvsProcedureStepsEClass = createEClass(VSVS_PROCEDURE_STEPS);
-		createEAttribute(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__NAME);
 		createEReference(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__STEP);
 
 		vsvsProcedureStepEClass = createEClass(VSVS_PROCEDURE_STEP);
@@ -2623,7 +2613,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSTestProcedure_TestCase(), this.getVSVSTestCase(), null, "testCase", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsProcedureStepsEClass, VSVSProcedureSteps.class, "VSVSProcedureSteps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSVSProcedureSteps_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSProcedureSteps_Step(), this.getVSVSProcedureStep(), null, "step", null, 1, 1900, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsProcedureStepEClass, VSVSProcedureStep.class, "VSVSProcedureStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

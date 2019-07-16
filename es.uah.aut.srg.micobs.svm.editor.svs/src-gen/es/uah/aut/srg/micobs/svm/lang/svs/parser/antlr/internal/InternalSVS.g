@@ -3854,38 +3854,16 @@ ruleVSVSProcedureSteps returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_0());
 		}
-		otherlv_1='name='
+		otherlv_1='>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepsAccess().getNameKeyword_1());
-		}
-		(
-			(
-				lv_name_2_0=RULE_STRING
-				{
-					newLeafNode(lv_name_2_0, grammarAccess.getVSVSProcedureStepsAccess().getNameSTRINGTerminalRuleCall_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSProcedureStepsRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"name",
-						lv_name_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
-				}
-			)
-		)
-		otherlv_3='>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_3());
+			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_2_0());
 				}
-				lv_step_4_0=ruleVSVSProcedureStep
+				lv_step_2_0=ruleVSVSProcedureStep
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepsRule());
@@ -3893,15 +3871,15 @@ ruleVSVSProcedureSteps returns [EObject current=null]
 					add(
 						$current,
 						"step",
-						lv_step_4_0,
+						lv_step_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_5='</ProcedureSteps>'
+		otherlv_3='</ProcedureSteps>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_5());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3());
 		}
 	)
 ;

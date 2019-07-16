@@ -303,7 +303,6 @@ VSVSTestProcedure returns VSVSTestProcedure:
 
 VSVSProcedureSteps returns VSVSProcedureSteps:
 		'<ProcedureSteps'
-		'name=' name=STRING
 		'>'
 		(step+=VSVSProcedureStep)+
 		'</ProcedureSteps>' 

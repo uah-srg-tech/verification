@@ -1467,22 +1467,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_PROCEDURE_STEPS = 19;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PROCEDURE_STEPS__NAME = 0;
-
-	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS__STEP = 1;
+	int VSVS_PROCEDURE_STEPS__STEP = 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Procedure Steps</em>' class.
@@ -1491,7 +1482,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = 2;
+	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Procedure Steps</em>' class.
@@ -4126,17 +4117,6 @@ public interface svsPackage extends EPackage {
 	EClass getVSVSProcedureSteps();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getName()
-	 * @see #getVSVSProcedureSteps()
-	 * @generated
-	 */
-	EAttribute getVSVSProcedureSteps_Name();
-
-	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getStep <em>Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -6037,14 +6017,6 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_PROCEDURE_STEPS = eINSTANCE.getVSVSProcedureSteps();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_PROCEDURE_STEPS__NAME = eINSTANCE.getVSVSProcedureSteps_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Step</b></em>' containment reference list feature.

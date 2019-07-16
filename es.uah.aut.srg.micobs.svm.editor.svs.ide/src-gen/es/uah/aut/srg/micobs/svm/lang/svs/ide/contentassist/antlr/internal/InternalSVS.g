@@ -10606,9 +10606,9 @@ rule__VSVSProcedureSteps__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSProcedureStepsAccess().getNameKeyword_1()); }
-	'name='
-	{ after(grammarAccess.getVSVSProcedureStepsAccess().getNameKeyword_1()); }
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1()); }
+	'>'
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1()); }
 )
 ;
 finally {
@@ -10633,9 +10633,16 @@ rule__VSVSProcedureSteps__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSProcedureStepsAccess().getNameAssignment_2()); }
-	(rule__VSVSProcedureSteps__NameAssignment_2)
-	{ after(grammarAccess.getVSVSProcedureStepsAccess().getNameAssignment_2()); }
+	(
+		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2()); }
+		(rule__VSVSProcedureSteps__StepAssignment_2)
+		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2()); }
+	)
+	(
+		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2()); }
+		(rule__VSVSProcedureSteps__StepAssignment_2)*
+		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2()); }
+	)
 )
 ;
 finally {
@@ -10648,7 +10655,6 @@ rule__VSVSProcedureSteps__Group__3
 	}
 :
 	rule__VSVSProcedureSteps__Group__3__Impl
-	rule__VSVSProcedureSteps__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -10660,69 +10666,9 @@ rule__VSVSProcedureSteps__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_3()); }
-	'>'
-	{ after(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVSProcedureSteps__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVSProcedureSteps__Group__4__Impl
-	rule__VSVSProcedureSteps__Group__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVSProcedureSteps__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	(
-		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_4()); }
-		(rule__VSVSProcedureSteps__StepAssignment_4)
-		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_4()); }
-	)
-	(
-		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_4()); }
-		(rule__VSVSProcedureSteps__StepAssignment_4)*
-		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_4()); }
-	)
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVSProcedureSteps__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVSProcedureSteps__Group__5__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVSProcedureSteps__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_5()); }
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3()); }
 	'</ProcedureSteps>'
-	{ after(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_5()); }
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3()); }
 )
 ;
 finally {
@@ -23023,30 +22969,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSVSProcedureSteps__NameAssignment_2
+rule__VSVSProcedureSteps__StepAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSProcedureStepsAccess().getNameSTRINGTerminalRuleCall_2_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getVSVSProcedureStepsAccess().getNameSTRINGTerminalRuleCall_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVSProcedureSteps__StepAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_4_0()); }
+		{ before(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_2_0()); }
 		ruleVSVSProcedureStep
-		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_4_0()); }
+		{ after(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_2_0()); }
 	)
 ;
 finally {
