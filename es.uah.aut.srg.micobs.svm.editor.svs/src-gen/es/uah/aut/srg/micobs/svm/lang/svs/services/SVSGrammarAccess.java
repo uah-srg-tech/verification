@@ -815,7 +815,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRowKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanSTRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
+		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cColumnsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cColumnsDColumnParserRuleCall_4_0 = (RuleCall)cColumnsAssignment_4.eContents().get(0);
@@ -823,13 +823,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//DRow doc::DRow:
 		//	'<row'
-		//	'span=' span=STRING
+		//	'span=' span=UINT_STRING
 		//	'>'
 		//	columns+=DColumn+
 		//	'</row>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<row' 'span=' span=STRING '>' columns+=DColumn+ '</row>'
+		//'<row' 'span=' span=UINT_STRING '>' columns+=DColumn+ '</row>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<row'
@@ -838,11 +838,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'span='
 		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
 		
-		//span=STRING
+		//span=UINT_STRING
 		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
 		
-		//STRING
-		public RuleCall getSpanSTRINGTerminalRuleCall_2_0() { return cSpanSTRINGTerminalRuleCall_2_0; }
+		//UINT_STRING
+		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
@@ -862,7 +862,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cColumnKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanSTRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
+		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cCellsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cCellsDCellParserRuleCall_4_0 = (RuleCall)cCellsAssignment_4.eContents().get(0);
@@ -870,13 +870,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//DColumn doc::DColumn:
 		//	'<column'
-		//	'span=' span=STRING
+		//	'span=' span=UINT_STRING
 		//	'>'
 		//	cells+=DCell+
 		//	'</column>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<column' 'span=' span=STRING '>' cells+=DCell+ '</column>'
+		//'<column' 'span=' span=UINT_STRING '>' cells+=DCell+ '</column>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<column'
@@ -885,11 +885,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'span='
 		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
 		
-		//span=STRING
+		//span=UINT_STRING
 		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
 		
-		//STRING
-		public RuleCall getSpanSTRINGTerminalRuleCall_2_0() { return cSpanSTRINGTerminalRuleCall_2_0; }
+		//UINT_STRING
+		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
@@ -909,7 +909,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCellKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanSTRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
+		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cBodyContentDBodyContentParserRuleCall_4_0 = (RuleCall)cBodyContentAssignment_4.eContents().get(0);
@@ -917,13 +917,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//DCell doc::DCell:
 		//	'<cell'
-		//	'span=' span=STRING
+		//	'span=' span=UINT_STRING
 		//	'>'
 		//	bodyContent+=DBodyContent+
 		//	'</cell>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<cell' 'span=' span=STRING '>' bodyContent+=DBodyContent+ '</cell>'
+		//'<cell' 'span=' span=UINT_STRING '>' bodyContent+=DBodyContent+ '</cell>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<cell'
@@ -932,11 +932,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'span='
 		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
 		
-		//span=STRING
+		//span=UINT_STRING
 		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
 		
-		//STRING
-		public RuleCall getSpanSTRINGTerminalRuleCall_2_0() { return cSpanSTRINGTerminalRuleCall_2_0; }
+		//UINT_STRING
+		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
@@ -5781,7 +5781,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DRow doc::DRow:
 	//	'<row'
-	//	'span=' span=STRING
+	//	'span=' span=UINT_STRING
 	//	'>'
 	//	columns+=DColumn+
 	//	'</row>'
@@ -5795,7 +5795,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DColumn doc::DColumn:
 	//	'<column'
-	//	'span=' span=STRING
+	//	'span=' span=UINT_STRING
 	//	'>'
 	//	cells+=DCell+
 	//	'</column>'
@@ -5809,7 +5809,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DCell doc::DCell:
 	//	'<cell'
-	//	'span=' span=STRING
+	//	'span=' span=UINT_STRING
 	//	'>'
 	//	bodyContent+=DBodyContent+
 	//	'</cell>'

@@ -105,21 +105,21 @@ DBasicTable returns doc::DBasicTable:
 
 DRow returns doc::DRow:
 	'<row'
-		'span=' span=STRING
+		'span=' span=UINT_STRING
 	'>'
 		(columns+=DColumn)+ 
 	'</row>';
 
 DColumn returns doc::DColumn:
 	'<column'
-		'span=' span=STRING
+		'span=' span=UINT_STRING
 	'>'
 		(cells+=DCell)+
 	'</column>';
 
 DCell returns doc::DCell:
 	'<cell'
-		'span=' span=STRING
+		'span=' span=UINT_STRING
 	'>'
 		(bodyContent+=DBodyContent)+
 	'</cell>';

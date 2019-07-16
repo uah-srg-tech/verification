@@ -339,7 +339,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCell returns DCell
 	 *
 	 * Constraint:
-	 *     (span=STRING bodyContent+=DBodyContent+)
+	 *     (span=UINT_STRING bodyContent+=DBodyContent+)
 	 */
 	protected void sequence_DCell(ISerializationContext context, DCell semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -351,7 +351,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DColumn returns DColumn
 	 *
 	 * Constraint:
-	 *     (span=STRING cells+=DCell+)
+	 *     (span=UINT_STRING cells+=DCell+)
 	 */
 	protected void sequence_DColumn(ISerializationContext context, DColumn semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -454,7 +454,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DRow returns DRow
 	 *
 	 * Constraint:
-	 *     (span=STRING columns+=DColumn+)
+	 *     (span=UINT_STRING columns+=DColumn+)
 	 */
 	protected void sequence_DRow(ISerializationContext context, DRow semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

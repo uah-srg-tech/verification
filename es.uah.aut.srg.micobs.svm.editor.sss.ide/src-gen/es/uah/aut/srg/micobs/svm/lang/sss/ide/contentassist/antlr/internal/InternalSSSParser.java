@@ -12494,7 +12494,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             // InternalSSS.g:3778:1: ( rule__DRow__Group__1__Impl rule__DRow__Group__2 )
             // InternalSSS.g:3779:2: rule__DRow__Group__1__Impl rule__DRow__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_4);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__DRow__Group__1__Impl();
 
             state._fsp--;
@@ -13030,7 +13030,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             // InternalSSS.g:3947:1: ( rule__DColumn__Group__1__Impl rule__DColumn__Group__2 )
             // InternalSSS.g:3948:2: rule__DColumn__Group__1__Impl rule__DColumn__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_4);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__DColumn__Group__1__Impl();
 
             state._fsp--;
@@ -13566,7 +13566,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             // InternalSSS.g:4116:1: ( rule__DCell__Group__1__Impl rule__DCell__Group__2 )
             // InternalSSS.g:4117:2: rule__DCell__Group__1__Impl rule__DCell__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_4);
+            pushFollow(FollowSets000.FOLLOW_7);
             rule__DCell__Group__1__Impl();
 
             state._fsp--;
@@ -36718,24 +36718,24 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRow__SpanAssignment_2"
-    // InternalSSS.g:11333:1: rule__DRow__SpanAssignment_2 : ( RULE_STRING ) ;
+    // InternalSSS.g:11333:1: rule__DRow__SpanAssignment_2 : ( RULE_UINT_STRING ) ;
     public final void rule__DRow__SpanAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSSS.g:11337:1: ( ( RULE_STRING ) )
-            // InternalSSS.g:11338:2: ( RULE_STRING )
+            // InternalSSS.g:11337:1: ( ( RULE_UINT_STRING ) )
+            // InternalSSS.g:11338:2: ( RULE_UINT_STRING )
             {
-            // InternalSSS.g:11338:2: ( RULE_STRING )
-            // InternalSSS.g:11339:3: RULE_STRING
+            // InternalSSS.g:11338:2: ( RULE_UINT_STRING )
+            // InternalSSS.g:11339:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               before(grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               after(grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -36804,24 +36804,24 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DColumn__SpanAssignment_2"
-    // InternalSSS.g:11363:1: rule__DColumn__SpanAssignment_2 : ( RULE_STRING ) ;
+    // InternalSSS.g:11363:1: rule__DColumn__SpanAssignment_2 : ( RULE_UINT_STRING ) ;
     public final void rule__DColumn__SpanAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSSS.g:11367:1: ( ( RULE_STRING ) )
-            // InternalSSS.g:11368:2: ( RULE_STRING )
+            // InternalSSS.g:11367:1: ( ( RULE_UINT_STRING ) )
+            // InternalSSS.g:11368:2: ( RULE_UINT_STRING )
             {
-            // InternalSSS.g:11368:2: ( RULE_STRING )
-            // InternalSSS.g:11369:3: RULE_STRING
+            // InternalSSS.g:11368:2: ( RULE_UINT_STRING )
+            // InternalSSS.g:11369:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               before(grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               after(grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
 
             }
@@ -36890,24 +36890,24 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DCell__SpanAssignment_2"
-    // InternalSSS.g:11393:1: rule__DCell__SpanAssignment_2 : ( RULE_STRING ) ;
+    // InternalSSS.g:11393:1: rule__DCell__SpanAssignment_2 : ( RULE_UINT_STRING ) ;
     public final void rule__DCell__SpanAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSSS.g:11397:1: ( ( RULE_STRING ) )
-            // InternalSSS.g:11398:2: ( RULE_STRING )
+            // InternalSSS.g:11397:1: ( ( RULE_UINT_STRING ) )
+            // InternalSSS.g:11398:2: ( RULE_UINT_STRING )
             {
-            // InternalSSS.g:11398:2: ( RULE_STRING )
-            // InternalSSS.g:11399:3: RULE_STRING
+            // InternalSSS.g:11398:2: ( RULE_UINT_STRING )
+            // InternalSSS.g:11399:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               before(grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
-            match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0()); 
+               after(grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); 
             }
 
             }

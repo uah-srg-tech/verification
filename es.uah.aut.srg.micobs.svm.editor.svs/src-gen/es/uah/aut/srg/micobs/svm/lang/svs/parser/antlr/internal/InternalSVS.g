@@ -1391,9 +1391,9 @@ ruleDRow returns [EObject current=null]
 		}
 		(
 			(
-				lv_span_2_0=RULE_STRING
+				lv_span_2_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_span_2_0, grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -1403,7 +1403,7 @@ ruleDRow returns [EObject current=null]
 						$current,
 						"span",
 						lv_span_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -1463,9 +1463,9 @@ ruleDColumn returns [EObject current=null]
 		}
 		(
 			(
-				lv_span_2_0=RULE_STRING
+				lv_span_2_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_span_2_0, grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -1475,7 +1475,7 @@ ruleDColumn returns [EObject current=null]
 						$current,
 						"span",
 						lv_span_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)
@@ -1535,9 +1535,9 @@ ruleDCell returns [EObject current=null]
 		}
 		(
 			(
-				lv_span_2_0=RULE_STRING
+				lv_span_2_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
@@ -1547,7 +1547,7 @@ ruleDCell returns [EObject current=null]
 						$current,
 						"span",
 						lv_span_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 				}
 			)
 		)

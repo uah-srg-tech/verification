@@ -3794,7 +3794,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDRow"
-    // InternalSVS.g:1376:1: ruleDRow returns [EObject current=null] : (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' ) ;
+    // InternalSVS.g:1376:1: ruleDRow returns [EObject current=null] : (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' ) ;
     public final EObject ruleDRow() throws RecognitionException {
         EObject current = null;
 
@@ -3810,11 +3810,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:1382:2: ( (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' ) )
-            // InternalSVS.g:1383:2: (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' )
+            // InternalSVS.g:1382:2: ( (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' ) )
+            // InternalSVS.g:1383:2: (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' )
             {
-            // InternalSVS.g:1383:2: (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' )
-            // InternalSVS.g:1384:3: otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>'
+            // InternalSVS.g:1383:2: (otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>' )
+            // InternalSVS.g:1384:3: otherlv_0= '<row' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_columns_4_0= ruleDColumn ) )+ otherlv_5= '</row>'
             {
             otherlv_0=(Token)match(input,50,FollowSets000.FOLLOW_50); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -3822,22 +3822,22 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDRowAccess().getRowKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getDRowAccess().getSpanKeyword_1());
               		
             }
-            // InternalSVS.g:1392:3: ( (lv_span_2_0= RULE_STRING ) )
-            // InternalSVS.g:1393:4: (lv_span_2_0= RULE_STRING )
+            // InternalSVS.g:1392:3: ( (lv_span_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:1393:4: (lv_span_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:1393:4: (lv_span_2_0= RULE_STRING )
-            // InternalSVS.g:1394:5: lv_span_2_0= RULE_STRING
+            // InternalSVS.g:1393:4: (lv_span_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:1394:5: lv_span_2_0= RULE_UINT_STRING
             {
-            lv_span_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            lv_span_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_span_2_0, grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0());
+              					newLeafNode(lv_span_2_0, grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -3849,7 +3849,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               						current,
               						"span",
               						lv_span_2_0,
-              						"org.eclipse.xtext.common.Terminals.STRING");
+              						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
               				
             }
 
@@ -3994,7 +3994,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDColumn"
-    // InternalSVS.g:1448:1: ruleDColumn returns [EObject current=null] : (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' ) ;
+    // InternalSVS.g:1448:1: ruleDColumn returns [EObject current=null] : (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' ) ;
     public final EObject ruleDColumn() throws RecognitionException {
         EObject current = null;
 
@@ -4010,11 +4010,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:1454:2: ( (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' ) )
-            // InternalSVS.g:1455:2: (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' )
+            // InternalSVS.g:1454:2: ( (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' ) )
+            // InternalSVS.g:1455:2: (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' )
             {
-            // InternalSVS.g:1455:2: (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' )
-            // InternalSVS.g:1456:3: otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>'
+            // InternalSVS.g:1455:2: (otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>' )
+            // InternalSVS.g:1456:3: otherlv_0= '<column' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_cells_4_0= ruleDCell ) )+ otherlv_5= '</column>'
             {
             otherlv_0=(Token)match(input,53,FollowSets000.FOLLOW_50); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4022,22 +4022,22 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDColumnAccess().getColumnKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getDColumnAccess().getSpanKeyword_1());
               		
             }
-            // InternalSVS.g:1464:3: ( (lv_span_2_0= RULE_STRING ) )
-            // InternalSVS.g:1465:4: (lv_span_2_0= RULE_STRING )
+            // InternalSVS.g:1464:3: ( (lv_span_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:1465:4: (lv_span_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:1465:4: (lv_span_2_0= RULE_STRING )
-            // InternalSVS.g:1466:5: lv_span_2_0= RULE_STRING
+            // InternalSVS.g:1465:4: (lv_span_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:1466:5: lv_span_2_0= RULE_UINT_STRING
             {
-            lv_span_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            lv_span_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_span_2_0, grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0());
+              					newLeafNode(lv_span_2_0, grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -4049,7 +4049,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               						current,
               						"span",
               						lv_span_2_0,
-              						"org.eclipse.xtext.common.Terminals.STRING");
+              						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
               				
             }
 
@@ -4194,7 +4194,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDCell"
-    // InternalSVS.g:1520:1: ruleDCell returns [EObject current=null] : (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' ) ;
+    // InternalSVS.g:1520:1: ruleDCell returns [EObject current=null] : (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' ) ;
     public final EObject ruleDCell() throws RecognitionException {
         EObject current = null;
 
@@ -4210,11 +4210,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:1526:2: ( (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' ) )
-            // InternalSVS.g:1527:2: (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' )
+            // InternalSVS.g:1526:2: ( (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' ) )
+            // InternalSVS.g:1527:2: (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' )
             {
-            // InternalSVS.g:1527:2: (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' )
-            // InternalSVS.g:1528:3: otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>'
+            // InternalSVS.g:1527:2: (otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>' )
+            // InternalSVS.g:1528:3: otherlv_0= '<cell' otherlv_1= 'span=' ( (lv_span_2_0= RULE_UINT_STRING ) ) otherlv_3= '>' ( (lv_bodyContent_4_0= ruleDBodyContent ) )+ otherlv_5= '</cell>'
             {
             otherlv_0=(Token)match(input,55,FollowSets000.FOLLOW_50); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -4222,22 +4222,22 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getDCellAccess().getCellKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            otherlv_1=(Token)match(input,51,FollowSets000.FOLLOW_7); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getDCellAccess().getSpanKeyword_1());
               		
             }
-            // InternalSVS.g:1536:3: ( (lv_span_2_0= RULE_STRING ) )
-            // InternalSVS.g:1537:4: (lv_span_2_0= RULE_STRING )
+            // InternalSVS.g:1536:3: ( (lv_span_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:1537:4: (lv_span_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:1537:4: (lv_span_2_0= RULE_STRING )
-            // InternalSVS.g:1538:5: lv_span_2_0= RULE_STRING
+            // InternalSVS.g:1537:4: (lv_span_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:1538:5: lv_span_2_0= RULE_UINT_STRING
             {
-            lv_span_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
+            lv_span_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0());
+              					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
               				
             }
             if ( state.backtracking==0 ) {
@@ -4249,7 +4249,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               						current,
               						"span",
               						lv_span_2_0,
-              						"org.eclipse.xtext.common.Terminals.STRING");
+              						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
               				
             }
 

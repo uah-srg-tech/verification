@@ -21911,9 +21911,9 @@ rule__DRow__SpanAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDRowAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -21941,9 +21941,9 @@ rule__DColumn__SpanAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDColumnAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
 	)
 ;
 finally {
@@ -21971,9 +21971,9 @@ rule__DCell__SpanAssignment_2
 	}
 :
 	(
-		{ before(grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
-		RULE_STRING
-		{ after(grammarAccess.getDCellAccess().getSpanSTRINGTerminalRuleCall_2_0()); }
+		{ before(grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
+		RULE_UINT_STRING
+		{ after(grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0()); }
 	)
 ;
 finally {
