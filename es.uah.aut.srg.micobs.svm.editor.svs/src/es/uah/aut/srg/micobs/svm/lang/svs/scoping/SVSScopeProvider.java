@@ -24,6 +24,8 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
+import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
@@ -51,6 +53,26 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(VTraceableDocumentAbstractItem from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSTestCase(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<VSVSTestCase> items = new HashSet<VSVSTestCase>();
+		items.addAll(svsDoc.getTestCasesSection().getTestCases());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSTestCase, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSTestCase from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

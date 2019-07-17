@@ -296,7 +296,7 @@ VSVSTestProcedure returns VSVSTestProcedure:
 		'>'
 		'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
 		'<Purpose>' purpose=VSVSFixedSection '</Purpose>'
-		('<TestCase' 'name=' testCase+=[VSVSTestCase|STRING] '/>')*
+		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		procedureSteps=VSVSProcedureSteps
 		'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
 	'</TestProcedure>';

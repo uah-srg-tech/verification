@@ -2285,7 +2285,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cPurposeKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cTestCaseKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cNameKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
+		private final Keyword cRefKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
 		private final Assignment cTestCaseAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
 		private final CrossReference cTestCaseVSVSTestCaseCrossReference_10_2_0 = (CrossReference)cTestCaseAssignment_10_2.eContents().get(0);
 		private final RuleCall cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cTestCaseVSVSTestCaseCrossReference_10_2_0.eContents().get(1);
@@ -2303,14 +2303,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'name=' name=STRING
 		//	'>'
 		//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-		//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'name=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		//	procedureSteps=VSVSProcedureSteps
 		//	'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
 		//	'</TestProcedure>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedSection '</Identifier>' '<Purpose>'
-		//purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'name=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		//procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSFixedSection '</TestScript>' '</TestProcedure>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2353,14 +2353,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Purpose>'
 		public Keyword getPurposeKeyword_9() { return cPurposeKeyword_9; }
 		
-		//('<TestCase' 'name=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		public Group getGroup_10() { return cGroup_10; }
 		
 		//'<TestCase'
 		public Keyword getTestCaseKeyword_10_0() { return cTestCaseKeyword_10_0; }
 		
-		//'name='
-		public Keyword getNameKeyword_10_1() { return cNameKeyword_10_1; }
+		//'ref='
+		public Keyword getRefKeyword_10_1() { return cRefKeyword_10_1; }
 		
 		//testCase+=[VSVSTestCase|STRING]
 		public Assignment getTestCaseAssignment_10_2() { return cTestCaseAssignment_10_2; }
@@ -6108,7 +6108,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name=' name=STRING
 	//	'>'
 	//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-	//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'name=' testCase+=[VSVSTestCase|STRING] '/>')*
+	//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 	//	procedureSteps=VSVSProcedureSteps
 	//	'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
 	//	'</TestProcedure>';

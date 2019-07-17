@@ -3756,9 +3756,9 @@ ruleVSVSTestProcedure returns [EObject current=null]
 			{
 				newLeafNode(otherlv_10, grammarAccess.getVSVSTestProcedureAccess().getTestCaseKeyword_10_0());
 			}
-			otherlv_11='name='
+			otherlv_11='ref='
 			{
-				newLeafNode(otherlv_11, grammarAccess.getVSVSTestProcedureAccess().getNameKeyword_10_1());
+				newLeafNode(otherlv_11, grammarAccess.getVSVSTestProcedureAccess().getRefKeyword_10_1());
 			}
 			(
 				(

@@ -10498,9 +10498,9 @@ rule__VSVSTestProcedure__Group_10__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSTestProcedureAccess().getNameKeyword_10_1()); }
-	'name='
-	{ after(grammarAccess.getVSVSTestProcedureAccess().getNameKeyword_10_1()); }
+	{ before(grammarAccess.getVSVSTestProcedureAccess().getRefKeyword_10_1()); }
+	'ref='
+	{ after(grammarAccess.getVSVSTestProcedureAccess().getRefKeyword_10_1()); }
 )
 ;
 finally {
