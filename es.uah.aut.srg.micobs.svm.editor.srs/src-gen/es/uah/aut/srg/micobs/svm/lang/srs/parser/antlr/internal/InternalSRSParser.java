@@ -33,9 +33,15 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalSRSParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<SRS'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'<parent'", "'/>'", "'</SRS>'", "'<body>'", "'</body>'", "'<paragraph>'", "'</paragraph>'", "'<listItem>'", "'<sublist>'", "'</sublist>'", "'</listItem>'", "'<itemize>'", "'</itemize>'", "'<enumerate>'", "'</enumerate>'", "'<run'", "'bold=\"true\"'", "'italics=\"true\"'", "'underline=\"true\"'", "'</run>'", "'<hyperlink'", "'reference='", "'</hyperlink>'", "'<figureFromFile'", "'referenceFile='", "'caption='", "'<tableFromFile'", "'<basicTable'", "'</basicTable>'", "'<row'", "'span='", "'</row>'", "'<column'", "'</column>'", "'<cell'", "'</cell>'", "'<ApplicableDocument'", "'title='", "'<ReferenceDocument'", "'<subsection'", "'</subsection>'", "'<Introduction>'", "'</Introduction>'", "'<ApplicableDocuments>'", "'</ApplicableDocuments>'", "'<ReferenceDocuments>'", "'</ReferenceDocuments>'", "'<TermsDefinitionsAbbreviations>'", "'</TermsDefinitionsAbbreviations>'", "'<SoftwareOverview>'", "'<FunctionPurpose>'", "'</FunctionPurpose>'", "'<EnvironmentalConsiderations>'", "'</EnvironmentalConsiderations>'", "'<RelationOtherSystems>'", "'</RelationOtherSystems>'", "'<Constraints>'", "'</Constraints>'", "'</SoftwareOverview>'", "'<Requirements>'", "'</Requirements>'", "'<LogicalModels>'", "'</LogicalModels>'", "'<Term'", "'</Term>'", "'<Definition'", "'</Definition>'", "'<Abbreviation'", "'</Abbreviation>'", "'<GeneralRequirements>'", "'</GeneralRequirements>'", "'<FunctionalRequirements>'", "'</FunctionalRequirements>'", "'<PerformanceRequirements>'", "'</PerformanceRequirements>'", "'<InterfaceRequirements>'", "'</InterfaceRequirements>'", "'<OperationalRequirements>'", "'</OperationalRequirements>'", "'<ResourcesRequirements>'", "'</ResourcesRequirements>'", "'<DesignRequirements>'", "'</DesignRequirements>'", "'<SecurityPrivacyRequirements>'", "'</SecurityPrivacyRequirements>'", "'<PortabilityRequirements>'", "'</PortabilityRequirements>'", "'<SWQualityRequirements>'", "'</SWQualityRequirements>'", "'<SWReliabiltyRequirements>'", "'</SWReliabiltyRequirements>'", "'<SWMaintainabilityRequirements>'", "'</SWMaintainabilityRequirements>'", "'<SWSafetyRequirements>'", "'</SWSafetyRequirements>'", "'<SWConfigurationDeliveryRequirements>'", "'</SWConfigurationDeliveryRequirements>'", "'<DataDefinitionDBRequirements>'", "'</DataDefinitionDBRequirements>'", "'<HumanFactorsRequirements>'", "'</HumanFactorsRequirements>'", "'<AdaptationInstallationRequirements>'", "'</AdaptationInstallationRequirements>'", "'<Item'", "'validationMethod='", "'<description>'", "'</description>'", "'<extendedDescription>'", "'</extendedDescription>'", "'<parentItem'", "'</Item>'", "'<LogicalModel/>'", "'\"Analysis\"'", "'\"Inspection\"'", "'\"Testing\"'", "'\"Review\"'", "'\"ModelSimulation\"'", "'\"WalkThrough\"'", "'\"CrossReading\"'", "'\"DeskChecking\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<SRS'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'<parent'", "'/>'", "'</SRS>'", "'<body>'", "'</body>'", "'<paragraph>'", "'</paragraph>'", "'<listItem>'", "'<sublist>'", "'</sublist>'", "'</listItem>'", "'<itemize>'", "'</itemize>'", "'<enumerate>'", "'</enumerate>'", "'<run'", "'bold=\"true\"'", "'italics=\"true\"'", "'underline=\"true\"'", "'</run>'", "'<hyperlink'", "'reference='", "'</hyperlink>'", "'<figureFromFile'", "'referenceFile='", "'caption='", "'<tableFromFile'", "'<basicTable'", "'</basicTable>'", "'<row'", "'span='", "'</row>'", "'<column'", "'</column>'", "'<cell'", "'</cell>'", "'<ApplicableDocument'", "'title='", "'<ReferenceDocument'", "'<subsection'", "'</subsection>'", "'<Introduction>'", "'</Introduction>'", "'<ApplicableDocuments>'", "'</ApplicableDocuments>'", "'<ReferenceDocuments>'", "'</ReferenceDocuments>'", "'<TermsDefinitionsAbbreviations>'", "'</TermsDefinitionsAbbreviations>'", "'<SoftwareOverview>'", "'<FunctionPurpose>'", "'</FunctionPurpose>'", "'<EnvironmentalConsiderations>'", "'</EnvironmentalConsiderations>'", "'<RelationOtherSystems>'", "'</RelationOtherSystems>'", "'<Constraints>'", "'</Constraints>'", "'</SoftwareOverview>'", "'<Requirements>'", "'</Requirements>'", "'<LogicalModels>'", "'</LogicalModels>'", "'<Term'", "'</Term>'", "'<Definition'", "'</Definition>'", "'<Abbreviation'", "'</Abbreviation>'", "'<GeneralRequirements>'", "'</GeneralRequirements>'", "'<FunctionalRequirements>'", "'</FunctionalRequirements>'", "'<PerformanceRequirements>'", "'</PerformanceRequirements>'", "'<InterfaceRequirements>'", "'</InterfaceRequirements>'", "'<OperationalRequirements>'", "'</OperationalRequirements>'", "'<ResourcesRequirements>'", "'</ResourcesRequirements>'", "'<DesignRequirements>'", "'</DesignRequirements>'", "'<SecurityPrivacyRequirements>'", "'</SecurityPrivacyRequirements>'", "'<PortabilityRequirements>'", "'</PortabilityRequirements>'", "'<SWQualityRequirements>'", "'</SWQualityRequirements>'", "'<SWReliabiltyRequirements>'", "'</SWReliabiltyRequirements>'", "'<SWMaintainabilityRequirements>'", "'</SWMaintainabilityRequirements>'", "'<SWSafetyRequirements>'", "'</SWSafetyRequirements>'", "'<SWConfigurationDeliveryRequirements>'", "'</SWConfigurationDeliveryRequirements>'", "'<DataDefinitionDBRequirements>'", "'</DataDefinitionDBRequirements>'", "'<HumanFactorsRequirements>'", "'</HumanFactorsRequirements>'", "'<AdaptationInstallationRequirements>'", "'</AdaptationInstallationRequirements>'", "'<Item'", "'validationMethod='", "'<mode'", "'<description>'", "'</description>'", "'<extendedDescription>'", "'</extendedDescription>'", "'<parentItem'", "'</Item>'", "'<LogicalModel/>'", "'\"Analysis\"'", "'\"Inspection\"'", "'\"Testing\"'", "'\"Review\"'", "'\"ModelSimulation\"'", "'\"WalkThrough\"'", "'\"CrossReading\"'", "'\"DeskChecking\"'", "'\"Off\"'", "'\"Boot\"'", "'\"Safe\"'", "'\"Configuration\"'", "'\"Operational\"'"
     };
+    public static final int T__144=144;
+    public static final int T__143=143;
     public static final int T__50=50;
+    public static final int T__145=145;
+    public static final int T__140=140;
+    public static final int T__142=142;
+    public static final int T__141=141;
     public static final int T__59=59;
     public static final int T__55=55;
     public static final int T__56=56;
@@ -7206,7 +7212,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                 int alt39=2;
                 int LA39_0 = input.LA(1);
 
-                if ( (LA39_0==131) ) {
+                if ( (LA39_0==132) ) {
                     alt39=1;
                 }
 
@@ -12684,7 +12690,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSRSDocumentItem"
-    // InternalSRS.g:4702:1: ruleVSRSDocumentItem returns [EObject current=null] : (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' otherlv_6= '<description>' ( (lv_description_7_0= ruleDBody ) ) otherlv_8= '</description>' (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )? (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )* otherlv_16= '</Item>' ) ;
+    // InternalSRS.g:4702:1: ruleVSRSDocumentItem returns [EObject current=null] : (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )* otherlv_10= '<description>' ( (lv_description_11_0= ruleDBody ) ) otherlv_12= '</description>' (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )? (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )* otherlv_20= '</Item>' ) ;
     public final EObject ruleVSRSDocumentItem() throws RecognitionException {
         EObject current = null;
 
@@ -12694,30 +12700,35 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
-        Token otherlv_8=null;
+        Token otherlv_7=null;
         Token otherlv_9=null;
-        Token otherlv_11=null;
+        Token otherlv_10=null;
         Token otherlv_12=null;
         Token otherlv_13=null;
-        Token otherlv_14=null;
         Token otherlv_15=null;
         Token otherlv_16=null;
+        Token otherlv_17=null;
+        Token otherlv_18=null;
+        Token otherlv_19=null;
+        Token otherlv_20=null;
         Enumerator lv_validationMethod_4_0 = null;
 
-        EObject lv_description_7_0 = null;
+        Enumerator lv_mode_8_0 = null;
 
-        EObject lv_extendedDescription_10_0 = null;
+        EObject lv_description_11_0 = null;
+
+        EObject lv_extendedDescription_14_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSRS.g:4708:2: ( (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' otherlv_6= '<description>' ( (lv_description_7_0= ruleDBody ) ) otherlv_8= '</description>' (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )? (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )* otherlv_16= '</Item>' ) )
-            // InternalSRS.g:4709:2: (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' otherlv_6= '<description>' ( (lv_description_7_0= ruleDBody ) ) otherlv_8= '</description>' (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )? (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )* otherlv_16= '</Item>' )
+            // InternalSRS.g:4708:2: ( (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )* otherlv_10= '<description>' ( (lv_description_11_0= ruleDBody ) ) otherlv_12= '</description>' (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )? (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )* otherlv_20= '</Item>' ) )
+            // InternalSRS.g:4709:2: (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )* otherlv_10= '<description>' ( (lv_description_11_0= ruleDBody ) ) otherlv_12= '</description>' (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )? (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )* otherlv_20= '</Item>' )
             {
-            // InternalSRS.g:4709:2: (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' otherlv_6= '<description>' ( (lv_description_7_0= ruleDBody ) ) otherlv_8= '</description>' (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )? (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )* otherlv_16= '</Item>' )
-            // InternalSRS.g:4710:3: otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' otherlv_6= '<description>' ( (lv_description_7_0= ruleDBody ) ) otherlv_8= '</description>' (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )? (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )* otherlv_16= '</Item>'
+            // InternalSRS.g:4709:2: (otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )* otherlv_10= '<description>' ( (lv_description_11_0= ruleDBody ) ) otherlv_12= '</description>' (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )? (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )* otherlv_20= '</Item>' )
+            // InternalSRS.g:4710:3: otherlv_0= '<Item' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'validationMethod=' ( (lv_validationMethod_4_0= ruleVValidationMethod ) ) otherlv_5= '>' (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )* otherlv_10= '<description>' ( (lv_description_11_0= ruleDBody ) ) otherlv_12= '</description>' (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )? (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )* otherlv_20= '</Item>'
             {
             otherlv_0=(Token)match(input,123,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12808,25 +12819,102 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSRSDocumentItemAccess().getGreaterThanSignKeyword_5());
               		
             }
-            otherlv_6=(Token)match(input,125,FollowSets000.FOLLOW_157); if (state.failed) return current;
+            // InternalSRS.g:4763:3: (otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>' )*
+            loop93:
+            do {
+                int alt93=2;
+                int LA93_0 = input.LA(1);
+
+                if ( (LA93_0==125) ) {
+                    alt93=1;
+                }
+
+
+                switch (alt93) {
+            	case 1 :
+            	    // InternalSRS.g:4764:4: otherlv_6= '<mode' otherlv_7= 'name=' ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) ) otherlv_9= '/>'
+            	    {
+            	    otherlv_6=(Token)match(input,125,FollowSets000.FOLLOW_3); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_6, grammarAccess.getVSRSDocumentItemAccess().getModeKeyword_6_0());
+            	      			
+            	    }
+            	    otherlv_7=(Token)match(input,14,FollowSets000.FOLLOW_157); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_7, grammarAccess.getVSRSDocumentItemAccess().getNameKeyword_6_1());
+            	      			
+            	    }
+            	    // InternalSRS.g:4772:4: ( (lv_mode_8_0= ruleVSRSDocumentItemModes ) )
+            	    // InternalSRS.g:4773:5: (lv_mode_8_0= ruleVSRSDocumentItemModes )
+            	    {
+            	    // InternalSRS.g:4773:5: (lv_mode_8_0= ruleVSRSDocumentItemModes )
+            	    // InternalSRS.g:4774:6: lv_mode_8_0= ruleVSRSDocumentItemModes
+            	    {
+            	    if ( state.backtracking==0 ) {
+
+            	      						newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getModeVSRSDocumentItemModesEnumRuleCall_6_2_0());
+            	      					
+            	    }
+            	    pushFollow(FollowSets000.FOLLOW_12);
+            	    lv_mode_8_0=ruleVSRSDocumentItemModes();
+
+            	    state._fsp--;
+            	    if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      						if (current==null) {
+            	      							current = createModelElementForParent(grammarAccess.getVSRSDocumentItemRule());
+            	      						}
+            	      						add(
+            	      							current,
+            	      							"mode",
+            	      							lv_mode_8_0,
+            	      							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSDocumentItemModes");
+            	      						afterParserOrEnumRuleCall();
+            	      					
+            	    }
+
+            	    }
+
+
+            	    }
+
+            	    otherlv_9=(Token)match(input,21,FollowSets000.FOLLOW_156); if (state.failed) return current;
+            	    if ( state.backtracking==0 ) {
+
+            	      				newLeafNode(otherlv_9, grammarAccess.getVSRSDocumentItemAccess().getSolidusGreaterThanSignKeyword_6_3());
+            	      			
+            	    }
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop93;
+                }
+            } while (true);
+
+            otherlv_10=(Token)match(input,126,FollowSets000.FOLLOW_158); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getVSRSDocumentItemAccess().getDescriptionKeyword_6());
+              			newLeafNode(otherlv_10, grammarAccess.getVSRSDocumentItemAccess().getDescriptionKeyword_7());
               		
             }
-            // InternalSRS.g:4767:3: ( (lv_description_7_0= ruleDBody ) )
-            // InternalSRS.g:4768:4: (lv_description_7_0= ruleDBody )
+            // InternalSRS.g:4800:3: ( (lv_description_11_0= ruleDBody ) )
+            // InternalSRS.g:4801:4: (lv_description_11_0= ruleDBody )
             {
-            // InternalSRS.g:4768:4: (lv_description_7_0= ruleDBody )
-            // InternalSRS.g:4769:5: lv_description_7_0= ruleDBody
+            // InternalSRS.g:4801:4: (lv_description_11_0= ruleDBody )
+            // InternalSRS.g:4802:5: lv_description_11_0= ruleDBody
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getDescriptionDBodyParserRuleCall_7_0());
+              					newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getDescriptionDBodyParserRuleCall_8_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_158);
-            lv_description_7_0=ruleDBody();
+            pushFollow(FollowSets000.FOLLOW_159);
+            lv_description_11_0=ruleDBody();
 
             state._fsp--;
             if (state.failed) return current;
@@ -12838,7 +12926,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"description",
-              						lv_description_7_0,
+              						lv_description_11_0,
               						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
               					afterParserOrEnumRuleCall();
               				
@@ -12849,42 +12937,42 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,126,FollowSets000.FOLLOW_159); if (state.failed) return current;
+            otherlv_12=(Token)match(input,127,FollowSets000.FOLLOW_160); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_8, grammarAccess.getVSRSDocumentItemAccess().getDescriptionKeyword_8());
+              			newLeafNode(otherlv_12, grammarAccess.getVSRSDocumentItemAccess().getDescriptionKeyword_9());
               		
             }
-            // InternalSRS.g:4790:3: (otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>' )?
-            int alt93=2;
-            int LA93_0 = input.LA(1);
+            // InternalSRS.g:4823:3: (otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>' )?
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( (LA93_0==127) ) {
-                alt93=1;
+            if ( (LA94_0==128) ) {
+                alt94=1;
             }
-            switch (alt93) {
+            switch (alt94) {
                 case 1 :
-                    // InternalSRS.g:4791:4: otherlv_9= '<extendedDescription>' ( (lv_extendedDescription_10_0= ruleDBody ) ) otherlv_11= '</extendedDescription>'
+                    // InternalSRS.g:4824:4: otherlv_13= '<extendedDescription>' ( (lv_extendedDescription_14_0= ruleDBody ) ) otherlv_15= '</extendedDescription>'
                     {
-                    otherlv_9=(Token)match(input,127,FollowSets000.FOLLOW_157); if (state.failed) return current;
+                    otherlv_13=(Token)match(input,128,FollowSets000.FOLLOW_158); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_9, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_9_0());
+                      				newLeafNode(otherlv_13, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_10_0());
                       			
                     }
-                    // InternalSRS.g:4795:4: ( (lv_extendedDescription_10_0= ruleDBody ) )
-                    // InternalSRS.g:4796:5: (lv_extendedDescription_10_0= ruleDBody )
+                    // InternalSRS.g:4828:4: ( (lv_extendedDescription_14_0= ruleDBody ) )
+                    // InternalSRS.g:4829:5: (lv_extendedDescription_14_0= ruleDBody )
                     {
-                    // InternalSRS.g:4796:5: (lv_extendedDescription_10_0= ruleDBody )
-                    // InternalSRS.g:4797:6: lv_extendedDescription_10_0= ruleDBody
+                    // InternalSRS.g:4829:5: (lv_extendedDescription_14_0= ruleDBody )
+                    // InternalSRS.g:4830:6: lv_extendedDescription_14_0= ruleDBody
                     {
                     if ( state.backtracking==0 ) {
 
-                      						newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_9_1_0());
+                      						newCompositeNode(grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionDBodyParserRuleCall_10_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_160);
-                    lv_extendedDescription_10_0=ruleDBody();
+                    pushFollow(FollowSets000.FOLLOW_161);
+                    lv_extendedDescription_14_0=ruleDBody();
 
                     state._fsp--;
                     if (state.failed) return current;
@@ -12896,7 +12984,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                       						set(
                       							current,
                       							"extendedDescription",
-                      							lv_extendedDescription_10_0,
+                      							lv_extendedDescription_14_0,
                       							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
                       						afterParserOrEnumRuleCall();
                       					
@@ -12907,10 +12995,10 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,128,FollowSets000.FOLLOW_161); if (state.failed) return current;
+                    otherlv_15=(Token)match(input,129,FollowSets000.FOLLOW_162); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      				newLeafNode(otherlv_11, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_9_2());
+                      				newLeafNode(otherlv_15, grammarAccess.getVSRSDocumentItemAccess().getExtendedDescriptionKeyword_10_2());
                       			
                     }
 
@@ -12919,38 +13007,38 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSRS.g:4819:3: (otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' )*
-            loop94:
+            // InternalSRS.g:4852:3: (otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )*
+            loop95:
             do {
-                int alt94=2;
-                int LA94_0 = input.LA(1);
+                int alt95=2;
+                int LA95_0 = input.LA(1);
 
-                if ( (LA94_0==129) ) {
-                    alt94=1;
+                if ( (LA95_0==130) ) {
+                    alt95=1;
                 }
 
 
-                switch (alt94) {
+                switch (alt95) {
             	case 1 :
-            	    // InternalSRS.g:4820:4: otherlv_12= '<parentItem' otherlv_13= 'name=' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>'
+            	    // InternalSRS.g:4853:4: otherlv_16= '<parentItem' otherlv_17= 'name=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>'
             	    {
-            	    otherlv_12=(Token)match(input,129,FollowSets000.FOLLOW_3); if (state.failed) return current;
+            	    otherlv_16=(Token)match(input,130,FollowSets000.FOLLOW_3); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      				newLeafNode(otherlv_12, grammarAccess.getVSRSDocumentItemAccess().getParentItemKeyword_10_0());
+            	      				newLeafNode(otherlv_16, grammarAccess.getVSRSDocumentItemAccess().getParentItemKeyword_11_0());
             	      			
             	    }
-            	    otherlv_13=(Token)match(input,14,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            	    otherlv_17=(Token)match(input,14,FollowSets000.FOLLOW_4); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      				newLeafNode(otherlv_13, grammarAccess.getVSRSDocumentItemAccess().getNameKeyword_10_1());
+            	      				newLeafNode(otherlv_17, grammarAccess.getVSRSDocumentItemAccess().getNameKeyword_11_1());
             	      			
             	    }
-            	    // InternalSRS.g:4828:4: ( (otherlv_14= RULE_STRING ) )
-            	    // InternalSRS.g:4829:5: (otherlv_14= RULE_STRING )
+            	    // InternalSRS.g:4861:4: ( (otherlv_18= RULE_STRING ) )
+            	    // InternalSRS.g:4862:5: (otherlv_18= RULE_STRING )
             	    {
-            	    // InternalSRS.g:4829:5: (otherlv_14= RULE_STRING )
-            	    // InternalSRS.g:4830:6: otherlv_14= RULE_STRING
+            	    // InternalSRS.g:4862:5: (otherlv_18= RULE_STRING )
+            	    // InternalSRS.g:4863:6: otherlv_18= RULE_STRING
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -12964,10 +13052,10 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
             	      						}
             	      					
             	    }
-            	    otherlv_14=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            	    otherlv_18=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      						newLeafNode(otherlv_14, grammarAccess.getVSRSDocumentItemAccess().getParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0());
+            	      						newLeafNode(otherlv_18, grammarAccess.getVSRSDocumentItemAccess().getParentItemVTraceableDocumentAbstractItemCrossReference_11_2_0());
             	      					
             	    }
 
@@ -12976,10 +13064,10 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    otherlv_15=(Token)match(input,21,FollowSets000.FOLLOW_161); if (state.failed) return current;
+            	    otherlv_19=(Token)match(input,21,FollowSets000.FOLLOW_162); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      				newLeafNode(otherlv_15, grammarAccess.getVSRSDocumentItemAccess().getSolidusGreaterThanSignKeyword_10_3());
+            	      				newLeafNode(otherlv_19, grammarAccess.getVSRSDocumentItemAccess().getSolidusGreaterThanSignKeyword_11_3());
             	      			
             	    }
 
@@ -12987,14 +13075,14 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop94;
+            	    break loop95;
                 }
             } while (true);
 
-            otherlv_16=(Token)match(input,130,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_20=(Token)match(input,131,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_16, grammarAccess.getVSRSDocumentItemAccess().getItemKeyword_11());
+              			newLeafNode(otherlv_20, grammarAccess.getVSRSDocumentItemAccess().getItemKeyword_12());
               		
             }
 
@@ -13022,7 +13110,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSRSLogicalModel"
-    // InternalSRS.g:4857:1: entryRuleVSRSLogicalModel returns [EObject current=null] : iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF ;
+    // InternalSRS.g:4890:1: entryRuleVSRSLogicalModel returns [EObject current=null] : iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF ;
     public final EObject entryRuleVSRSLogicalModel() throws RecognitionException {
         EObject current = null;
 
@@ -13030,8 +13118,8 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSRS.g:4857:57: (iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF )
-            // InternalSRS.g:4858:2: iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF
+            // InternalSRS.g:4890:57: (iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF )
+            // InternalSRS.g:4891:2: iv_ruleVSRSLogicalModel= ruleVSRSLogicalModel EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSRSLogicalModelRule()); 
@@ -13062,7 +13150,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSRSLogicalModel"
-    // InternalSRS.g:4864:1: ruleVSRSLogicalModel returns [EObject current=null] : ( () otherlv_1= '<LogicalModel/>' ) ;
+    // InternalSRS.g:4897:1: ruleVSRSLogicalModel returns [EObject current=null] : ( () otherlv_1= '<LogicalModel/>' ) ;
     public final EObject ruleVSRSLogicalModel() throws RecognitionException {
         EObject current = null;
 
@@ -13072,14 +13160,14 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSRS.g:4870:2: ( ( () otherlv_1= '<LogicalModel/>' ) )
-            // InternalSRS.g:4871:2: ( () otherlv_1= '<LogicalModel/>' )
+            // InternalSRS.g:4903:2: ( ( () otherlv_1= '<LogicalModel/>' ) )
+            // InternalSRS.g:4904:2: ( () otherlv_1= '<LogicalModel/>' )
             {
-            // InternalSRS.g:4871:2: ( () otherlv_1= '<LogicalModel/>' )
-            // InternalSRS.g:4872:3: () otherlv_1= '<LogicalModel/>'
+            // InternalSRS.g:4904:2: ( () otherlv_1= '<LogicalModel/>' )
+            // InternalSRS.g:4905:3: () otherlv_1= '<LogicalModel/>'
             {
-            // InternalSRS.g:4872:3: ()
-            // InternalSRS.g:4873:4: 
+            // InternalSRS.g:4905:3: ()
+            // InternalSRS.g:4906:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13096,7 +13184,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,131,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_1=(Token)match(input,132,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getVSRSLogicalModelAccess().getLogicalModelKeyword_1());
@@ -13127,7 +13215,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVValidationMethod"
-    // InternalSRS.g:4890:1: ruleVValidationMethod returns [Enumerator current=null] : ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) ) ;
+    // InternalSRS.g:4923:1: ruleVValidationMethod returns [Enumerator current=null] : ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) ) ;
     public final Enumerator ruleVValidationMethod() throws RecognitionException {
         Enumerator current = null;
 
@@ -13144,68 +13232,68 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSRS.g:4896:2: ( ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) ) )
-            // InternalSRS.g:4897:2: ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) )
+            // InternalSRS.g:4929:2: ( ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) ) )
+            // InternalSRS.g:4930:2: ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) )
             {
-            // InternalSRS.g:4897:2: ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) )
-            int alt95=8;
+            // InternalSRS.g:4930:2: ( (enumLiteral_0= '\"Analysis\"' ) | (enumLiteral_1= '\"Inspection\"' ) | (enumLiteral_2= '\"Testing\"' ) | (enumLiteral_3= '\"Review\"' ) | (enumLiteral_4= '\"ModelSimulation\"' ) | (enumLiteral_5= '\"WalkThrough\"' ) | (enumLiteral_6= '\"CrossReading\"' ) | (enumLiteral_7= '\"DeskChecking\"' ) )
+            int alt96=8;
             switch ( input.LA(1) ) {
-            case 132:
-                {
-                alt95=1;
-                }
-                break;
             case 133:
                 {
-                alt95=2;
+                alt96=1;
                 }
                 break;
             case 134:
                 {
-                alt95=3;
+                alt96=2;
                 }
                 break;
             case 135:
                 {
-                alt95=4;
+                alt96=3;
                 }
                 break;
             case 136:
                 {
-                alt95=5;
+                alt96=4;
                 }
                 break;
             case 137:
                 {
-                alt95=6;
+                alt96=5;
                 }
                 break;
             case 138:
                 {
-                alt95=7;
+                alt96=6;
                 }
                 break;
             case 139:
                 {
-                alt95=8;
+                alt96=7;
+                }
+                break;
+            case 140:
+                {
+                alt96=8;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 95, 0, input);
+                    new NoViableAltException("", 96, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt95) {
+            switch (alt96) {
                 case 1 :
-                    // InternalSRS.g:4898:3: (enumLiteral_0= '\"Analysis\"' )
+                    // InternalSRS.g:4931:3: (enumLiteral_0= '\"Analysis\"' )
                     {
-                    // InternalSRS.g:4898:3: (enumLiteral_0= '\"Analysis\"' )
-                    // InternalSRS.g:4899:4: enumLiteral_0= '\"Analysis\"'
+                    // InternalSRS.g:4931:3: (enumLiteral_0= '\"Analysis\"' )
+                    // InternalSRS.g:4932:4: enumLiteral_0= '\"Analysis\"'
                     {
-                    enumLiteral_0=(Token)match(input,132,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,133,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getAnalysisEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -13219,12 +13307,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSRS.g:4906:3: (enumLiteral_1= '\"Inspection\"' )
+                    // InternalSRS.g:4939:3: (enumLiteral_1= '\"Inspection\"' )
                     {
-                    // InternalSRS.g:4906:3: (enumLiteral_1= '\"Inspection\"' )
-                    // InternalSRS.g:4907:4: enumLiteral_1= '\"Inspection\"'
+                    // InternalSRS.g:4939:3: (enumLiteral_1= '\"Inspection\"' )
+                    // InternalSRS.g:4940:4: enumLiteral_1= '\"Inspection\"'
                     {
-                    enumLiteral_1=(Token)match(input,133,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,134,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getInspectionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -13238,12 +13326,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSRS.g:4914:3: (enumLiteral_2= '\"Testing\"' )
+                    // InternalSRS.g:4947:3: (enumLiteral_2= '\"Testing\"' )
                     {
-                    // InternalSRS.g:4914:3: (enumLiteral_2= '\"Testing\"' )
-                    // InternalSRS.g:4915:4: enumLiteral_2= '\"Testing\"'
+                    // InternalSRS.g:4947:3: (enumLiteral_2= '\"Testing\"' )
+                    // InternalSRS.g:4948:4: enumLiteral_2= '\"Testing\"'
                     {
-                    enumLiteral_2=(Token)match(input,134,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,135,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getTestingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -13257,12 +13345,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalSRS.g:4922:3: (enumLiteral_3= '\"Review\"' )
+                    // InternalSRS.g:4955:3: (enumLiteral_3= '\"Review\"' )
                     {
-                    // InternalSRS.g:4922:3: (enumLiteral_3= '\"Review\"' )
-                    // InternalSRS.g:4923:4: enumLiteral_3= '\"Review\"'
+                    // InternalSRS.g:4955:3: (enumLiteral_3= '\"Review\"' )
+                    // InternalSRS.g:4956:4: enumLiteral_3= '\"Review\"'
                     {
-                    enumLiteral_3=(Token)match(input,135,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getReviewEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -13276,12 +13364,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalSRS.g:4930:3: (enumLiteral_4= '\"ModelSimulation\"' )
+                    // InternalSRS.g:4963:3: (enumLiteral_4= '\"ModelSimulation\"' )
                     {
-                    // InternalSRS.g:4930:3: (enumLiteral_4= '\"ModelSimulation\"' )
-                    // InternalSRS.g:4931:4: enumLiteral_4= '\"ModelSimulation\"'
+                    // InternalSRS.g:4963:3: (enumLiteral_4= '\"ModelSimulation\"' )
+                    // InternalSRS.g:4964:4: enumLiteral_4= '\"ModelSimulation\"'
                     {
-                    enumLiteral_4=(Token)match(input,136,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getModelSimulationEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -13295,12 +13383,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalSRS.g:4938:3: (enumLiteral_5= '\"WalkThrough\"' )
+                    // InternalSRS.g:4971:3: (enumLiteral_5= '\"WalkThrough\"' )
                     {
-                    // InternalSRS.g:4938:3: (enumLiteral_5= '\"WalkThrough\"' )
-                    // InternalSRS.g:4939:4: enumLiteral_5= '\"WalkThrough\"'
+                    // InternalSRS.g:4971:3: (enumLiteral_5= '\"WalkThrough\"' )
+                    // InternalSRS.g:4972:4: enumLiteral_5= '\"WalkThrough\"'
                     {
-                    enumLiteral_5=(Token)match(input,137,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getWalkThroughEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -13314,12 +13402,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalSRS.g:4946:3: (enumLiteral_6= '\"CrossReading\"' )
+                    // InternalSRS.g:4979:3: (enumLiteral_6= '\"CrossReading\"' )
                     {
-                    // InternalSRS.g:4946:3: (enumLiteral_6= '\"CrossReading\"' )
-                    // InternalSRS.g:4947:4: enumLiteral_6= '\"CrossReading\"'
+                    // InternalSRS.g:4979:3: (enumLiteral_6= '\"CrossReading\"' )
+                    // InternalSRS.g:4980:4: enumLiteral_6= '\"CrossReading\"'
                     {
-                    enumLiteral_6=(Token)match(input,138,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_6=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getCrossReadingEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
@@ -13333,12 +13421,12 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalSRS.g:4954:3: (enumLiteral_7= '\"DeskChecking\"' )
+                    // InternalSRS.g:4987:3: (enumLiteral_7= '\"DeskChecking\"' )
                     {
-                    // InternalSRS.g:4954:3: (enumLiteral_7= '\"DeskChecking\"' )
-                    // InternalSRS.g:4955:4: enumLiteral_7= '\"DeskChecking\"'
+                    // InternalSRS.g:4987:3: (enumLiteral_7= '\"DeskChecking\"' )
+                    // InternalSRS.g:4988:4: enumLiteral_7= '\"DeskChecking\"'
                     {
-                    enumLiteral_7=(Token)match(input,139,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_7=(Token)match(input,140,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVValidationMethodAccess().getDeskCheckingEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
@@ -13373,6 +13461,180 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         return current;
     }
     // $ANTLR end "ruleVValidationMethod"
+
+
+    // $ANTLR start "ruleVSRSDocumentItemModes"
+    // InternalSRS.g:4998:1: ruleVSRSDocumentItemModes returns [Enumerator current=null] : ( (enumLiteral_0= '\"Off\"' ) | (enumLiteral_1= '\"Boot\"' ) | (enumLiteral_2= '\"Safe\"' ) | (enumLiteral_3= '\"Configuration\"' ) | (enumLiteral_4= '\"Operational\"' ) ) ;
+    public final Enumerator ruleVSRSDocumentItemModes() throws RecognitionException {
+        Enumerator current = null;
+
+        Token enumLiteral_0=null;
+        Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
+        Token enumLiteral_3=null;
+        Token enumLiteral_4=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalSRS.g:5004:2: ( ( (enumLiteral_0= '\"Off\"' ) | (enumLiteral_1= '\"Boot\"' ) | (enumLiteral_2= '\"Safe\"' ) | (enumLiteral_3= '\"Configuration\"' ) | (enumLiteral_4= '\"Operational\"' ) ) )
+            // InternalSRS.g:5005:2: ( (enumLiteral_0= '\"Off\"' ) | (enumLiteral_1= '\"Boot\"' ) | (enumLiteral_2= '\"Safe\"' ) | (enumLiteral_3= '\"Configuration\"' ) | (enumLiteral_4= '\"Operational\"' ) )
+            {
+            // InternalSRS.g:5005:2: ( (enumLiteral_0= '\"Off\"' ) | (enumLiteral_1= '\"Boot\"' ) | (enumLiteral_2= '\"Safe\"' ) | (enumLiteral_3= '\"Configuration\"' ) | (enumLiteral_4= '\"Operational\"' ) )
+            int alt97=5;
+            switch ( input.LA(1) ) {
+            case 141:
+                {
+                alt97=1;
+                }
+                break;
+            case 142:
+                {
+                alt97=2;
+                }
+                break;
+            case 143:
+                {
+                alt97=3;
+                }
+                break;
+            case 144:
+                {
+                alt97=4;
+                }
+                break;
+            case 145:
+                {
+                alt97=5;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 97, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt97) {
+                case 1 :
+                    // InternalSRS.g:5006:3: (enumLiteral_0= '\"Off\"' )
+                    {
+                    // InternalSRS.g:5006:3: (enumLiteral_0= '\"Off\"' )
+                    // InternalSRS.g:5007:4: enumLiteral_0= '\"Off\"'
+                    {
+                    enumLiteral_0=(Token)match(input,141,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getVSRSDocumentItemModesAccess().getOffEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_0, grammarAccess.getVSRSDocumentItemModesAccess().getOffEnumLiteralDeclaration_0());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 2 :
+                    // InternalSRS.g:5014:3: (enumLiteral_1= '\"Boot\"' )
+                    {
+                    // InternalSRS.g:5014:3: (enumLiteral_1= '\"Boot\"' )
+                    // InternalSRS.g:5015:4: enumLiteral_1= '\"Boot\"'
+                    {
+                    enumLiteral_1=(Token)match(input,142,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getVSRSDocumentItemModesAccess().getBootEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_1, grammarAccess.getVSRSDocumentItemModesAccess().getBootEnumLiteralDeclaration_1());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalSRS.g:5022:3: (enumLiteral_2= '\"Safe\"' )
+                    {
+                    // InternalSRS.g:5022:3: (enumLiteral_2= '\"Safe\"' )
+                    // InternalSRS.g:5023:4: enumLiteral_2= '\"Safe\"'
+                    {
+                    enumLiteral_2=(Token)match(input,143,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getVSRSDocumentItemModesAccess().getSafeEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_2, grammarAccess.getVSRSDocumentItemModesAccess().getSafeEnumLiteralDeclaration_2());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 4 :
+                    // InternalSRS.g:5030:3: (enumLiteral_3= '\"Configuration\"' )
+                    {
+                    // InternalSRS.g:5030:3: (enumLiteral_3= '\"Configuration\"' )
+                    // InternalSRS.g:5031:4: enumLiteral_3= '\"Configuration\"'
+                    {
+                    enumLiteral_3=(Token)match(input,144,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getVSRSDocumentItemModesAccess().getConfigurationEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_3, grammarAccess.getVSRSDocumentItemModesAccess().getConfigurationEnumLiteralDeclaration_3());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+                case 5 :
+                    // InternalSRS.g:5038:3: (enumLiteral_4= '\"Operational\"' )
+                    {
+                    // InternalSRS.g:5038:3: (enumLiteral_4= '\"Operational\"' )
+                    // InternalSRS.g:5039:4: enumLiteral_4= '\"Operational\"'
+                    {
+                    enumLiteral_4=(Token)match(input,145,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      				current = grammarAccess.getVSRSDocumentItemModesAccess().getOperationalEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+                      				newLeafNode(enumLiteral_4, grammarAccess.getVSRSDocumentItemModesAccess().getOperationalEnumLiteralDeclaration_4());
+                      			
+                    }
+
+                    }
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVSRSDocumentItemModes"
 
     // Delegated rules
 
@@ -13476,7 +13738,7 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_93 = new BitSet(new long[]{0x0000000000000000L,0x0080000000000000L});
         public static final BitSet FOLLOW_94 = new BitSet(new long[]{0x0000000000000000L,0x0200000000000000L});
         public static final BitSet FOLLOW_95 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
-        public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L,0x0000000000000008L});
+        public static final BitSet FOLLOW_96 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L,0x0000000000000010L});
         public static final BitSet FOLLOW_97 = new BitSet(new long[]{0x0000000800000000L});
         public static final BitSet FOLLOW_98 = new BitSet(new long[]{0x0000000000000000L,0x0000000000100000L});
         public static final BitSet FOLLOW_99 = new BitSet(new long[]{0x0000000000000000L,0x0000000000400000L});
@@ -13535,13 +13797,14 @@ public class InternalSRSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_152 = new BitSet(new long[]{0x0800000000000000L,0x0C00000000000000L});
         public static final BitSet FOLLOW_153 = new BitSet(new long[]{0x0800000000000000L,0x0400000000000000L});
         public static final BitSet FOLLOW_154 = new BitSet(new long[]{0x0000000000000000L,0x1000000000000000L});
-        public static final BitSet FOLLOW_155 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000FF0L});
-        public static final BitSet FOLLOW_156 = new BitSet(new long[]{0x0000000000000000L,0x2000000000000000L});
-        public static final BitSet FOLLOW_157 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_158 = new BitSet(new long[]{0x0000000000000000L,0x4000000000000000L});
-        public static final BitSet FOLLOW_159 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L,0x0000000000000006L});
-        public static final BitSet FOLLOW_160 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000001L});
-        public static final BitSet FOLLOW_161 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000006L});
+        public static final BitSet FOLLOW_155 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000001FE0L});
+        public static final BitSet FOLLOW_156 = new BitSet(new long[]{0x0000000000000000L,0x6000000000000000L});
+        public static final BitSet FOLLOW_157 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000003E000L});
+        public static final BitSet FOLLOW_158 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_159 = new BitSet(new long[]{0x0000000000000000L,0x8000000000000000L});
+        public static final BitSet FOLLOW_160 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000000DL});
+        public static final BitSet FOLLOW_161 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+        public static final BitSet FOLLOW_162 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x000000000000000CL});
     }
 
 

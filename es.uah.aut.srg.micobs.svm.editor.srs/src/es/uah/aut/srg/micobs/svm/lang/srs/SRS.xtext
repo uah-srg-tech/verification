@@ -385,6 +385,7 @@ VSRSDocumentItem returns VSRSDocumentItem:
 		'name=' name=STRING
 		'validationMethod=' validationMethod=VValidationMethod
 		'>'
+			('<mode' 'name=' mode+=VSRSDocumentItemModes '/>')*
 			'<description>'
 				description=DBody
 			'</description>'
@@ -398,6 +399,10 @@ enum VValidationMethod returns tdm::VValidationMethod:
 	Analysis = '"Analysis"' | Inspection = '"Inspection"' | Testing = '"Testing"' |
 	Review = '"Review"' | ModelSimulation = '"ModelSimulation"' | WalkThrough = '"WalkThrough"' |
 	CrossReading = '"CrossReading"' | DeskChecking = '"DeskChecking"';
+	
+enum VSRSDocumentItemModes returns VSRSDocumentItemModes:
+	Off = '"Off"' | Boot = '"Boot"' | Safe = '"Safe"' |
+	Configuration = '"Configuration"' | Operational = '"Operational"';
 
 VSRSLogicalModel returns VSRSLogicalModel:
 	{VSRSLogicalModel}

@@ -552,7 +552,14 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSRSDocumentItem returns VSRSDocumentItem
 	 *
 	 * Constraint:
-	 *     (name=STRING validationMethod=VValidationMethod description=DBody extendedDescription=DBody? parentItem+=[VTraceableDocumentAbstractItem|STRING]*)
+	 *     (
+	 *         name=STRING 
+	 *         validationMethod=VValidationMethod 
+	 *         mode+=VSRSDocumentItemModes* 
+	 *         description=DBody 
+	 *         extendedDescription=DBody? 
+	 *         parentItem+=[VTraceableDocumentAbstractItem|STRING]*
+	 *     )
 	 */
 	protected void sequence_VSRSDocumentItem(ISerializationContext context, VSRSDocumentItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

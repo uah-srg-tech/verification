@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.svm.srs;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,6 +26,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getExtendedDescription <em>Extended Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getMode <em>Mode</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocumentItem()
@@ -83,5 +85,23 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * @generated
 	 */
 	void setExtendedDescription(DBody value);
+
+	/**
+	 * Returns the value of the '<em><b>Mode</b></em>' attribute list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Mode</em>' attribute list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Mode</em>' attribute list.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocumentItem_Mode()
+	 * @model upper="5"
+	 * @generated
+	 */
+	EList<VSRSDocumentItemModes> getMode();
 
 } // VSRSDocumentItem

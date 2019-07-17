@@ -2779,29 +2779,35 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValidationMethodAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cValidationMethodVValidationMethodEnumRuleCall_4_0 = (RuleCall)cValidationMethodAssignment_4.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cDescriptionKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cDescriptionAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cDescriptionDBodyParserRuleCall_7_0 = (RuleCall)cDescriptionAssignment_7.eContents().get(0);
-		private final Keyword cDescriptionKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cExtendedDescriptionKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cExtendedDescriptionAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_9_1_0 = (RuleCall)cExtendedDescriptionAssignment_9_1.eContents().get(0);
-		private final Keyword cExtendedDescriptionKeyword_9_2 = (Keyword)cGroup_9.eContents().get(2);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cModeKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cNameKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cModeAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cModeVSRSDocumentItemModesEnumRuleCall_6_2_0 = (RuleCall)cModeAssignment_6_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
+		private final Keyword cDescriptionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cDescriptionAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDescriptionDBodyParserRuleCall_8_0 = (RuleCall)cDescriptionAssignment_8.eContents().get(0);
+		private final Keyword cDescriptionKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cParentItemKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cNameKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cParentItemAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0 = (CrossReference)cParentItemAssignment_10_2.eContents().get(0);
-		private final RuleCall cParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Keyword cItemKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Keyword cExtendedDescriptionKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cExtendedDescriptionAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cExtendedDescriptionDBodyParserRuleCall_10_1_0 = (RuleCall)cExtendedDescriptionAssignment_10_1.eContents().get(0);
+		private final Keyword cExtendedDescriptionKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cParentItemKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cNameKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
+		private final Assignment cParentItemAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
+		private final CrossReference cParentItemVTraceableDocumentAbstractItemCrossReference_11_2_0 = (CrossReference)cParentItemAssignment_11_2.eContents().get(0);
+		private final RuleCall cParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cParentItemVTraceableDocumentAbstractItemCrossReference_11_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
+		private final Keyword cItemKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		
 		//VSRSDocumentItem:
 		//	'<Item'
 		//	'name=' name=STRING
 		//	'validationMethod=' validationMethod=VValidationMethod
-		//	'>'
+		//	'>' ('<mode' 'name=' mode+=VSRSDocumentItemModes '/>')*
 		//	'<description>'
 		//	description=DBody
 		//	'</description>' ('<extendedDescription>'
@@ -2810,8 +2816,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</Item>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Item' 'name=' name=STRING 'validationMethod=' validationMethod=VValidationMethod '>' '<description>' description=DBody
-		//'</description>' ('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')? ('<parentItem' 'name='
+		//'<Item' 'name=' name=STRING 'validationMethod=' validationMethod=VValidationMethod '>' ('<mode' 'name='
+		//mode+=VSRSDocumentItemModes '/>')* '<description>' description=DBody '</description>' ('<extendedDescription>'
+		//extendedDescription=DBody '</extendedDescription>')? ('<parentItem' 'name='
 		//parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')* '</Item>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2839,56 +2846,74 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
-		//'<description>'
-		public Keyword getDescriptionKeyword_6() { return cDescriptionKeyword_6; }
+		//('<mode' 'name=' mode+=VSRSDocumentItemModes '/>')*
+		public Group getGroup_6() { return cGroup_6; }
 		
-		//description=DBody
-		public Assignment getDescriptionAssignment_7() { return cDescriptionAssignment_7; }
-		
-		//DBody
-		public RuleCall getDescriptionDBodyParserRuleCall_7_0() { return cDescriptionDBodyParserRuleCall_7_0; }
-		
-		//'</description>'
-		public Keyword getDescriptionKeyword_8() { return cDescriptionKeyword_8; }
-		
-		//('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'<extendedDescription>'
-		public Keyword getExtendedDescriptionKeyword_9_0() { return cExtendedDescriptionKeyword_9_0; }
-		
-		//extendedDescription=DBody
-		public Assignment getExtendedDescriptionAssignment_9_1() { return cExtendedDescriptionAssignment_9_1; }
-		
-		//DBody
-		public RuleCall getExtendedDescriptionDBodyParserRuleCall_9_1_0() { return cExtendedDescriptionDBodyParserRuleCall_9_1_0; }
-		
-		//'</extendedDescription>'
-		public Keyword getExtendedDescriptionKeyword_9_2() { return cExtendedDescriptionKeyword_9_2; }
-		
-		//('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'<parentItem'
-		public Keyword getParentItemKeyword_10_0() { return cParentItemKeyword_10_0; }
+		//'<mode'
+		public Keyword getModeKeyword_6_0() { return cModeKeyword_6_0; }
 		
 		//'name='
-		public Keyword getNameKeyword_10_1() { return cNameKeyword_10_1; }
+		public Keyword getNameKeyword_6_1() { return cNameKeyword_6_1; }
 		
-		//parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING]
-		public Assignment getParentItemAssignment_10_2() { return cParentItemAssignment_10_2; }
+		//mode+=VSRSDocumentItemModes
+		public Assignment getModeAssignment_6_2() { return cModeAssignment_6_2; }
 		
-		//[tdm::VTraceableDocumentAbstractItem|STRING]
-		public CrossReference getParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0() { return cParentItemVTraceableDocumentAbstractItemCrossReference_10_2_0; }
-		
-		//STRING
-		public RuleCall getParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_10_2_0_1() { return cParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_10_2_0_1; }
+		//VSRSDocumentItemModes
+		public RuleCall getModeVSRSDocumentItemModesEnumRuleCall_6_2_0() { return cModeVSRSDocumentItemModesEnumRuleCall_6_2_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
+		public Keyword getSolidusGreaterThanSignKeyword_6_3() { return cSolidusGreaterThanSignKeyword_6_3; }
+		
+		//'<description>'
+		public Keyword getDescriptionKeyword_7() { return cDescriptionKeyword_7; }
+		
+		//description=DBody
+		public Assignment getDescriptionAssignment_8() { return cDescriptionAssignment_8; }
+		
+		//DBody
+		public RuleCall getDescriptionDBodyParserRuleCall_8_0() { return cDescriptionDBodyParserRuleCall_8_0; }
+		
+		//'</description>'
+		public Keyword getDescriptionKeyword_9() { return cDescriptionKeyword_9; }
+		
+		//('<extendedDescription>' extendedDescription=DBody '</extendedDescription>')?
+		public Group getGroup_10() { return cGroup_10; }
+		
+		//'<extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_10_0() { return cExtendedDescriptionKeyword_10_0; }
+		
+		//extendedDescription=DBody
+		public Assignment getExtendedDescriptionAssignment_10_1() { return cExtendedDescriptionAssignment_10_1; }
+		
+		//DBody
+		public RuleCall getExtendedDescriptionDBodyParserRuleCall_10_1_0() { return cExtendedDescriptionDBodyParserRuleCall_10_1_0; }
+		
+		//'</extendedDescription>'
+		public Keyword getExtendedDescriptionKeyword_10_2() { return cExtendedDescriptionKeyword_10_2; }
+		
+		//('<parentItem' 'name=' parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'<parentItem'
+		public Keyword getParentItemKeyword_11_0() { return cParentItemKeyword_11_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_11_1() { return cNameKeyword_11_1; }
+		
+		//parentItem+=[tdm::VTraceableDocumentAbstractItem|STRING]
+		public Assignment getParentItemAssignment_11_2() { return cParentItemAssignment_11_2; }
+		
+		//[tdm::VTraceableDocumentAbstractItem|STRING]
+		public CrossReference getParentItemVTraceableDocumentAbstractItemCrossReference_11_2_0() { return cParentItemVTraceableDocumentAbstractItemCrossReference_11_2_0; }
+		
+		//STRING
+		public RuleCall getParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_11_2_0_1() { return cParentItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_11_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
 		
 		//'</Item>'
-		public Keyword getItemKeyword_11() { return cItemKeyword_11; }
+		public Keyword getItemKeyword_12() { return cItemKeyword_12; }
 	}
 	public class VSRSLogicalModelElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSLogicalModel");
@@ -2990,6 +3015,58 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"DeskChecking"'
 		public Keyword getDeskCheckingDeskCheckingKeyword_7_0() { return cDeskCheckingDeskCheckingKeyword_7_0; }
 	}
+	public class VSRSDocumentItemModesElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSDocumentItemModes");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cOffEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cOffOffKeyword_0_0 = (Keyword)cOffEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cBootEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cBootBootKeyword_1_0 = (Keyword)cBootEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cSafeEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cSafeSafeKeyword_2_0 = (Keyword)cSafeEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cConfigurationEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cConfigurationConfigurationKeyword_3_0 = (Keyword)cConfigurationEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cOperationalEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cOperationalOperationalKeyword_4_0 = (Keyword)cOperationalEnumLiteralDeclaration_4.eContents().get(0);
+		
+		//enum VSRSDocumentItemModes:
+		//	Off='"Off"' | Boot='"Boot"' | Safe='"Safe"' |
+		//	Configuration='"Configuration"' | Operational='"Operational"';
+		public EnumRule getRule() { return rule; }
+		
+		//Off='"Off"' | Boot='"Boot"' | Safe='"Safe"' | Configuration='"Configuration"' | Operational='"Operational"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//Off='"Off"'
+		public EnumLiteralDeclaration getOffEnumLiteralDeclaration_0() { return cOffEnumLiteralDeclaration_0; }
+		
+		//'"Off"'
+		public Keyword getOffOffKeyword_0_0() { return cOffOffKeyword_0_0; }
+		
+		//Boot='"Boot"'
+		public EnumLiteralDeclaration getBootEnumLiteralDeclaration_1() { return cBootEnumLiteralDeclaration_1; }
+		
+		//'"Boot"'
+		public Keyword getBootBootKeyword_1_0() { return cBootBootKeyword_1_0; }
+		
+		//Safe='"Safe"'
+		public EnumLiteralDeclaration getSafeEnumLiteralDeclaration_2() { return cSafeEnumLiteralDeclaration_2; }
+		
+		//'"Safe"'
+		public Keyword getSafeSafeKeyword_2_0() { return cSafeSafeKeyword_2_0; }
+		
+		//Configuration='"Configuration"'
+		public EnumLiteralDeclaration getConfigurationEnumLiteralDeclaration_3() { return cConfigurationEnumLiteralDeclaration_3; }
+		
+		//'"Configuration"'
+		public Keyword getConfigurationConfigurationKeyword_3_0() { return cConfigurationConfigurationKeyword_3_0; }
+		
+		//Operational='"Operational"'
+		public EnumLiteralDeclaration getOperationalEnumLiteralDeclaration_4() { return cOperationalEnumLiteralDeclaration_4; }
+		
+		//'"Operational"'
+		public Keyword getOperationalOperationalKeyword_4_0() { return cOperationalOperationalKeyword_4_0; }
+	}
 	
 	private final VSRSDocumentElements pVSRSDocument;
 	private final DBodyElements pDBody;
@@ -3044,6 +3121,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSRSAdaptationInstallationRequirementsElements pVSRSAdaptationInstallationRequirements;
 	private final VSRSDocumentItemElements pVSRSDocumentItem;
 	private final VValidationMethodElements eVValidationMethod;
+	private final VSRSDocumentItemModesElements eVSRSDocumentItemModes;
 	private final VSRSLogicalModelElements pVSRSLogicalModel;
 	private final TerminalRule tUINT_STRING;
 	
@@ -3109,6 +3187,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSRSAdaptationInstallationRequirements = new VSRSAdaptationInstallationRequirementsElements();
 		this.pVSRSDocumentItem = new VSRSDocumentItemElements();
 		this.eVValidationMethod = new VValidationMethodElements();
+		this.eVSRSDocumentItemModes = new VSRSDocumentItemModesElements();
 		this.pVSRSLogicalModel = new VSRSLogicalModelElements();
 		this.tUINT_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
 	}
@@ -3859,7 +3938,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<Item'
 	//	'name=' name=STRING
 	//	'validationMethod=' validationMethod=VValidationMethod
-	//	'>'
+	//	'>' ('<mode' 'name=' mode+=VSRSDocumentItemModes '/>')*
 	//	'<description>'
 	//	description=DBody
 	//	'</description>' ('<extendedDescription>'
@@ -3884,6 +3963,17 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getVValidationMethodRule() {
 		return getVValidationMethodAccess().getRule();
+	}
+	
+	//enum VSRSDocumentItemModes:
+	//	Off='"Off"' | Boot='"Boot"' | Safe='"Safe"' |
+	//	Configuration='"Configuration"' | Operational='"Operational"';
+	public VSRSDocumentItemModesElements getVSRSDocumentItemModesAccess() {
+		return eVSRSDocumentItemModes;
+	}
+	
+	public EnumRule getVSRSDocumentItemModesRule() {
+		return getVSRSDocumentItemModesAccess().getRule();
 	}
 	
 	//VSRSLogicalModel:

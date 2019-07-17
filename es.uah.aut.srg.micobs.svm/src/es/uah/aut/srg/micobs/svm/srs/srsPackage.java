@@ -16,6 +16,7 @@ import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -2532,13 +2533,22 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Mode</b></em>' attribute list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT_ITEM__MODE = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 2;
+
+	/**
 	 * The number of structural features of the '<em>VSRS Document Item</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT_ITEM_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 2;
+	int VSRS_DOCUMENT_ITEM_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSRS Document Item</em>' class.
@@ -2622,6 +2632,17 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_LOGICAL_MODEL_OPERATION_COUNT = 0;
+
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes <em>VSRS Document Item Modes</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes
+	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDocumentItemModes()
+	 * @generated
+	 */
+	int VSRS_DOCUMENT_ITEM_MODES = 35;
 
 
 	/**
@@ -3505,6 +3526,17 @@ public interface srsPackage extends EPackage {
 	EReference getVSRSDocumentItem_ExtendedDescription();
 
 	/**
+	 * Returns the meta object for the attribute list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getMode <em>Mode</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute list '<em>Mode</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getMode()
+	 * @see #getVSRSDocumentItem()
+	 * @generated
+	 */
+	EAttribute getVSRSDocumentItem_Mode();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModels <em>VSRS Logical Models</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3534,6 +3566,16 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSRSLogicalModel();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes <em>VSRS Document Item Modes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VSRS Document Item Modes</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes
+	 * @generated
+	 */
+	EEnum getVSRSDocumentItemModes();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -4289,6 +4331,14 @@ public interface srsPackage extends EPackage {
 		EReference VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION = eINSTANCE.getVSRSDocumentItem_ExtendedDescription();
 
 		/**
+		 * The meta object literal for the '<em><b>Mode</b></em>' attribute list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSRS_DOCUMENT_ITEM__MODE = eINSTANCE.getVSRSDocumentItem_Mode();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSLogicalModelsImpl <em>VSRS Logical Models</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4315,6 +4365,16 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSRS_LOGICAL_MODEL = eINSTANCE.getVSRSLogicalModel();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes <em>VSRS Document Item Modes</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes
+		 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDocumentItemModes()
+		 * @generated
+		 */
+		EEnum VSRS_DOCUMENT_ITEM_MODES = eINSTANCE.getVSRSDocumentItemModes();
 
 	}
 

@@ -154,6 +154,14 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="extendedDescription" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" upperBound="5" eType="#//VSRSDocumentItemModes"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VSRSDocumentItemModes">
+    <eLiterals name="Off" literal="F"/>
+    <eLiterals name="Boot" value="1" literal="B"/>
+    <eLiterals name="Safe" value="2" literal="S"/>
+    <eLiterals name="Configuration" value="3" literal="C"/>
+    <eLiterals name="Operational" value="4" literal="O"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSRSLogicalModels" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="logicalModels" upperBound="-1"

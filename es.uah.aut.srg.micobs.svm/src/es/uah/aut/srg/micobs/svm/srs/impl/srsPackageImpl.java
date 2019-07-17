@@ -22,6 +22,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSDefinition;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDesignRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocument;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
+import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFunctionalRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSGeneralRequirements;
@@ -54,6 +55,7 @@ import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -310,6 +312,13 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * @generated
 	 */
 	private EClass vsrsLogicalModelEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum vsrsDocumentItemModesEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -1128,6 +1137,15 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVSRSDocumentItem_Mode() {
+		return (EAttribute)vsrsDocumentItemEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSRSLogicalModels() {
 		return vsrsLogicalModelsEClass;
 	}
@@ -1148,6 +1166,15 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 */
 	public EClass getVSRSLogicalModel() {
 		return vsrsLogicalModelEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getVSRSDocumentItemModes() {
+		return vsrsDocumentItemModesEEnum;
 	}
 
 	/**
@@ -1293,11 +1320,15 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		vsrsDocumentItemEClass = createEClass(VSRS_DOCUMENT_ITEM);
 		createEReference(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__DESCRIPTION);
 		createEReference(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION);
+		createEAttribute(vsrsDocumentItemEClass, VSRS_DOCUMENT_ITEM__MODE);
 
 		vsrsLogicalModelsEClass = createEClass(VSRS_LOGICAL_MODELS);
 		createEReference(vsrsLogicalModelsEClass, VSRS_LOGICAL_MODELS__LOGICAL_MODELS);
 
 		vsrsLogicalModelEClass = createEClass(VSRS_LOGICAL_MODEL);
+
+		// Create enums
+		vsrsDocumentItemModesEEnum = createEEnum(VSRS_DOCUMENT_ITEM_MODES);
 	}
 
 	/**
@@ -1485,11 +1516,20 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEClass(vsrsDocumentItemEClass, VSRSDocumentItem.class, "VSRSDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSDocumentItem_Description(), thedocPackage.getDBody(), null, "description", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocumentItem_ExtendedDescription(), thedocPackage.getDBody(), null, "extendedDescription", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSRSDocumentItem_Mode(), this.getVSRSDocumentItemModes(), "mode", null, 0, 5, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsLogicalModelsEClass, VSRSLogicalModels.class, "VSRSLogicalModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSLogicalModels_LogicalModels(), this.getVSRSLogicalModel(), null, "logicalModels", null, 0, -1, VSRSLogicalModels.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsLogicalModelEClass, VSRSLogicalModel.class, "VSRSLogicalModel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.class, "VSRSDocumentItemModes");
+		addEEnumLiteral(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.OFF);
+		addEEnumLiteral(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.BOOT);
+		addEEnumLiteral(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.SAFE);
+		addEEnumLiteral(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.CONFIGURATION);
+		addEEnumLiteral(vsrsDocumentItemModesEEnum, VSRSDocumentItemModes.OPERATIONAL);
 
 		// Create resource
 		createResource(eNS_URI);
