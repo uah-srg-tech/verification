@@ -25,7 +25,10 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
+import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
@@ -73,6 +76,59 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(VSVSTestCase from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSProcedureStep(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<VSVSProcedureStep> items = new HashSet<VSVSProcedureStep>();
+		
+		for(VSVSTestProcedure procedure : svsDoc.getTestProceduresSection().getTestProcedures()) {
+			items.addAll(procedure.getProcedureSteps().getStep());
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSProcedureStep, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSProcedureStep from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepOutput(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<VSVSStepOutput> items = new HashSet<VSVSStepOutput>();
+		
+		for(VSVSTestProcedure procedure : svsDoc.getTestProceduresSection().getTestProcedures()) {
+			for(VSVSProcedureStep step : procedure.getProcedureSteps().getStep()) {
+				if(step.getOutputs() != null) {
+					items.addAll(step.getOutputs().getOutput_level_0());
+					items.addAll(step.getOutputs().getOutput_level_1());
+					items.addAll(step.getOutputs().getOutput_level_2());
+					items.addAll(step.getOutputs().getOutput_level_3());
+				}
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSStepOutput, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSStepOutput from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
