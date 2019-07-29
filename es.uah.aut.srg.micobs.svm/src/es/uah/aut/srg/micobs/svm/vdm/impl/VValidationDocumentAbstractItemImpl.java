@@ -40,7 +40,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getGroup <em>Group</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getValidatingItems <em>Validating Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl#getValidatingItem <em>Validating Item</em>}</li>
  * </ul>
  *
  * @generated
@@ -67,14 +67,14 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getValidatingItems() <em>Validating Items</em>}' reference list.
+	 * The cached value of the '{@link #getValidatingItem() <em>Validating Item</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getValidatingItems()
+	 * @see #getValidatingItem()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocumentAbstractItem> validatingItems;
+	protected EList<VTraceableDocumentAbstractItem> validatingItem;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -154,11 +154,11 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentAbstractItem> getValidatingItems() {
-		if (validatingItems == null) {
-			validatingItems = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS);
+	public EList<VTraceableDocumentAbstractItem> getValidatingItem() {
+		if (validatingItem == null) {
+			validatingItem = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM);
 		}
-		return validatingItems;
+		return validatingItem;
 	}
 
 	/**
@@ -174,8 +174,8 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				if (resolve) return getGroup();
 				return basicGetGroup();
-			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
-				return getValidatingItems();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM:
+				return getValidatingItem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -195,9 +195,9 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VValidationDocumentAbstractGroup)newValue);
 				return;
-			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
-				getValidatingItems().clear();
-				getValidatingItems().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM:
+				getValidatingItem().clear();
+				getValidatingItem().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -217,8 +217,8 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				setGroup((VValidationDocumentAbstractGroup)null);
 				return;
-			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
-				getValidatingItems().clear();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM:
+				getValidatingItem().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -236,8 +236,8 @@ public class VValidationDocumentAbstractItemImpl extends MinimalEObjectImpl.Cont
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP:
 				return basicGetGroup() != null;
-			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS:
-				return validatingItems != null && !validatingItems.isEmpty();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM:
+				return validatingItem != null && !validatingItem.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

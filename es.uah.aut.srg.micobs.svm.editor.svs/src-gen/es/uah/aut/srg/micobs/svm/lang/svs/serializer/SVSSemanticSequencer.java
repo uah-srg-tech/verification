@@ -1201,7 +1201,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         environmentalNeeds=VSVSFixedSection 
 	 *         specialConstraints=VSVSFixedSection 
 	 *         interfaceDependencies=VSVSFixedSection 
-	 *         validatingItems+=[VTraceableDocumentAbstractItem|STRING]+
+	 *         validatingItem+=[VTraceableDocumentAbstractItem|STRING]+
 	 *     )
 	 */
 	protected void sequence_VSVSTestCase(ISerializationContext context, VSVSTestCase semanticObject) {

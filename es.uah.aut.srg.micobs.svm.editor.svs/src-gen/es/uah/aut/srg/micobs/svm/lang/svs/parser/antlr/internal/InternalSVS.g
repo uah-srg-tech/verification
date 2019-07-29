@@ -3615,9 +3615,9 @@ ruleVSVSTestCase returns [EObject current=null]
 			newLeafNode(otherlv_24, grammarAccess.getVSVSTestCaseAccess().getInterfaceDependenciesKeyword_24());
 		}
 		(
-			otherlv_25='<ValidatingItems'
+			otherlv_25='<ValidatingItem'
 			{
-				newLeafNode(otherlv_25, grammarAccess.getVSVSTestCaseAccess().getValidatingItemsKeyword_25_0());
+				newLeafNode(otherlv_25, grammarAccess.getVSVSTestCaseAccess().getValidatingItemKeyword_25_0());
 			}
 			otherlv_26='name='
 			{
@@ -3635,7 +3635,7 @@ ruleVSVSTestCase returns [EObject current=null]
 					}
 					otherlv_27=RULE_STRING
 					{
-						newLeafNode(otherlv_27, grammarAccess.getVSVSTestCaseAccess().getValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0());
+						newLeafNode(otherlv_27, grammarAccess.getVSVSTestCaseAccess().getValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0());
 					}
 				)
 			)

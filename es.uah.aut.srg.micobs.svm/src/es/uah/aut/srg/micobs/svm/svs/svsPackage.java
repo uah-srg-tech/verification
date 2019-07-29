@@ -1212,13 +1212,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_CASE__GROUP = vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP;
 
 	/**
-	 * The feature id for the '<em><b>Validating Items</b></em>' reference list.
+	 * The feature id for the '<em><b>Validating Item</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_CASE__VALIDATING_ITEMS = vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS;
+	int VSVS_TEST_CASE__VALIDATING_ITEM = vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.

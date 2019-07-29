@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getGroup <em>Group</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems <em>Validating Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItem <em>Validating Item</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractItem()
@@ -88,19 +88,19 @@ public interface VValidationDocumentAbstractItem extends EObject {
 	void setGroup(VValidationDocumentAbstractGroup value);
 
 	/**
-	 * Returns the value of the '<em><b>Validating Items</b></em>' reference list.
+	 * Returns the value of the '<em><b>Validating Item</b></em>' reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Validating Items</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Validating Item</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Validating Items</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractItem_ValidatingItems()
+	 * @return the value of the '<em>Validating Item</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractItem_ValidatingItem()
 	 * @model required="true"
 	 * @generated
 	 */
-	EList<VTraceableDocumentAbstractItem> getValidatingItems();
+	EList<VTraceableDocumentAbstractItem> getValidatingItem();
 
 } // VValidationDocumentAbstractItem

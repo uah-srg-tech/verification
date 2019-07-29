@@ -313,13 +313,13 @@ public interface vdmPackage extends EPackage {
 	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP = 1;
 
 	/**
-	 * The feature id for the '<em><b>Validating Items</b></em>' reference list.
+	 * The feature id for the '<em><b>Validating Item</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = 2;
+	int VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM = 2;
 
 	/**
 	 * The number of structural features of the '<em>VValidation Document Abstract Item</em>' class.
@@ -501,15 +501,15 @@ public interface vdmPackage extends EPackage {
 	EReference getVValidationDocumentAbstractItem_Group();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems <em>Validating Items</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItem <em>Validating Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Validating Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItems()
+	 * @return the meta object for the reference list '<em>Validating Item</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem#getValidatingItem()
 	 * @see #getVValidationDocumentAbstractItem()
 	 * @generated
 	 */
-	EReference getVValidationDocumentAbstractItem_ValidatingItems();
+	EReference getVValidationDocumentAbstractItem_ValidatingItem();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -665,12 +665,12 @@ public interface vdmPackage extends EPackage {
 		EReference VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP = eINSTANCE.getVValidationDocumentAbstractItem_Group();
 
 		/**
-		 * The meta object literal for the '<em><b>Validating Items</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Validating Item</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS = eINSTANCE.getVValidationDocumentAbstractItem_ValidatingItems();
+		EReference VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM = eINSTANCE.getVValidationDocumentAbstractItem_ValidatingItem();
 
 	}
 

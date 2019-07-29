@@ -2113,11 +2113,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0 = (RuleCall)cInterfaceDependenciesAssignment_23.eContents().get(0);
 		private final Keyword cInterfaceDependenciesKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Group cGroup_25 = (Group)cGroup.eContents().get(25);
-		private final Keyword cValidatingItemsKeyword_25_0 = (Keyword)cGroup_25.eContents().get(0);
+		private final Keyword cValidatingItemKeyword_25_0 = (Keyword)cGroup_25.eContents().get(0);
 		private final Keyword cNameKeyword_25_1 = (Keyword)cGroup_25.eContents().get(1);
-		private final Assignment cValidatingItemsAssignment_25_2 = (Assignment)cGroup_25.eContents().get(2);
-		private final CrossReference cValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0 = (CrossReference)cValidatingItemsAssignment_25_2.eContents().get(0);
-		private final RuleCall cValidatingItemsVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1 = (RuleCall)cValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0.eContents().get(1);
+		private final Assignment cValidatingItemAssignment_25_2 = (Assignment)cGroup_25.eContents().get(2);
+		private final CrossReference cValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0 = (CrossReference)cValidatingItemAssignment_25_2.eContents().get(0);
+		private final RuleCall cValidatingItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1 = (RuleCall)cValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_25_3 = (Keyword)cGroup_25.eContents().get(3);
 		private final Keyword cTestCaseKeyword_26 = (Keyword)cGroup.eContents().get(26);
 		
@@ -2131,8 +2131,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<PassFailCriteria>' passFailCriteria=VSVSFixedSection '</PassFailCriteria>'
 		//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection '</EnvironmentalNeeds>'
 		//	'<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-		//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItems'
-		//	'name=' validatingItems+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
+		//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem'
+		//	'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 		//	'</TestCase>';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -2140,8 +2140,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//inputs=VSVSFixedSection '</Inputs>' '<Outputs>' outputs=VSVSFixedSection '</Outputs>' '<PassFailCriteria>'
 		//passFailCriteria=VSVSFixedSection '</PassFailCriteria>' '<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection
 		//'</EnvironmentalNeeds>' '<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-		//'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItems'
-		//'name=' validatingItems+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+ '</TestCase>'
+		//'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem' 'name='
+		//validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+ '</TestCase>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestCase'
@@ -2243,23 +2243,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</InterfaceDependencies>'
 		public Keyword getInterfaceDependenciesKeyword_24() { return cInterfaceDependenciesKeyword_24; }
 		
-		//('<ValidatingItems' 'name=' validatingItems+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
+		//('<ValidatingItem' 'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 		public Group getGroup_25() { return cGroup_25; }
 		
-		//'<ValidatingItems'
-		public Keyword getValidatingItemsKeyword_25_0() { return cValidatingItemsKeyword_25_0; }
+		//'<ValidatingItem'
+		public Keyword getValidatingItemKeyword_25_0() { return cValidatingItemKeyword_25_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_25_1() { return cNameKeyword_25_1; }
 		
-		//validatingItems+=[tdm::VTraceableDocumentAbstractItem|STRING]
-		public Assignment getValidatingItemsAssignment_25_2() { return cValidatingItemsAssignment_25_2; }
+		//validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING]
+		public Assignment getValidatingItemAssignment_25_2() { return cValidatingItemAssignment_25_2; }
 		
 		//[tdm::VTraceableDocumentAbstractItem|STRING]
-		public CrossReference getValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0() { return cValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0; }
+		public CrossReference getValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0() { return cValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0; }
 		
 		//STRING
-		public RuleCall getValidatingItemsVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1() { return cValidatingItemsVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1; }
+		public RuleCall getValidatingItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1() { return cValidatingItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_25_3() { return cSolidusGreaterThanSignKeyword_25_3; }
@@ -6092,8 +6092,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<PassFailCriteria>' passFailCriteria=VSVSFixedSection '</PassFailCriteria>'
 	//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection '</EnvironmentalNeeds>'
 	//	'<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-	//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItems'
-	//	'name=' validatingItems+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
+	//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem'
+	//	'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 	//	'</TestCase>';
 	public VSVSTestCaseElements getVSVSTestCaseAccess() {
 		return pVSVSTestCase;

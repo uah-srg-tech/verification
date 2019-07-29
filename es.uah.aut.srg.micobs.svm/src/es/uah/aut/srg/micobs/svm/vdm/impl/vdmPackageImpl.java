@@ -275,7 +275,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVValidationDocumentAbstractItem_ValidatingItems() {
+	public EReference getVValidationDocumentAbstractItem_ValidatingItem() {
 		return (EReference)vValidationDocumentAbstractItemEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -326,7 +326,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		vValidationDocumentAbstractItemEClass = createEClass(VVALIDATION_DOCUMENT_ABSTRACT_ITEM);
 		createEAttribute(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__NAME);
 		createEReference(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__GROUP);
-		createEReference(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEMS);
+		createEReference(vValidationDocumentAbstractItemEClass, VVALIDATION_DOCUMENT_ABSTRACT_ITEM__VALIDATING_ITEM);
 	}
 
 	/**
@@ -385,7 +385,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 		initEClass(vValidationDocumentAbstractItemEClass, VValidationDocumentAbstractItem.class, "VValidationDocumentAbstractItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVValidationDocumentAbstractItem_Name(), ecorePackage.getEString(), "name", null, 1, 1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVValidationDocumentAbstractItem_Group(), this.getVValidationDocumentAbstractGroup(), null, "group", null, 1, 1, VValidationDocumentAbstractItem.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
-		initEReference(getVValidationDocumentAbstractItem_ValidatingItems(), thetdmPackage.getVTraceableDocumentAbstractItem(), null, "validatingItems", null, 1, -1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocumentAbstractItem_ValidatingItem(), thetdmPackage.getVTraceableDocumentAbstractItem(), null, "validatingItem", null, 1, -1, VValidationDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

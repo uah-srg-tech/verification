@@ -9931,9 +9931,9 @@ rule__VSVSTestCase__Group_25__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsKeyword_25_0()); }
-	'<ValidatingItems'
-	{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsKeyword_25_0()); }
+	{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemKeyword_25_0()); }
+	'<ValidatingItem'
+	{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemKeyword_25_0()); }
 )
 ;
 finally {
@@ -9985,9 +9985,9 @@ rule__VSVSTestCase__Group_25__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsAssignment_25_2()); }
-	(rule__VSVSTestCase__ValidatingItemsAssignment_25_2)
-	{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsAssignment_25_2()); }
+	{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemAssignment_25_2()); }
+	(rule__VSVSTestCase__ValidatingItemAssignment_25_2)
+	{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemAssignment_25_2()); }
 )
 ;
 finally {
@@ -22856,19 +22856,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSVSTestCase__ValidatingItemsAssignment_25_2
+rule__VSVSTestCase__ValidatingItemAssignment_25_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0()); }
 		(
-			{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1()); }
+			{ before(grammarAccess.getVSVSTestCaseAccess().getValidatingItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1()); }
 			RULE_STRING
-			{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1()); }
+			{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_25_2_0_1()); }
 		)
-		{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemsVTraceableDocumentAbstractItemCrossReference_25_2_0()); }
+		{ after(grammarAccess.getVSVSTestCaseAccess().getValidatingItemVTraceableDocumentAbstractItemCrossReference_25_2_0()); }
 	)
 ;
 finally {
