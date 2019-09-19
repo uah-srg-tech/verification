@@ -813,130 +813,84 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRow");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRowKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cColumnsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cColumnsDColumnParserRuleCall_4_0 = (RuleCall)cColumnsAssignment_4.eContents().get(0);
-		private final Keyword cRowKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cCellsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cCellsDCellParserRuleCall_1_0 = (RuleCall)cCellsAssignment_1.eContents().get(0);
+		private final Keyword cRowKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DRow doc::DRow:
-		//	'<row'
-		//	'span=' span=UINT_STRING
-		//	'>'
-		//	columns+=DColumn+
+		//	'<row>'
+		//	cells+=DCell+
 		//	'</row>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<row' 'span=' span=UINT_STRING '>' columns+=DColumn+ '</row>'
+		//'<row>' cells+=DCell+ '</row>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<row'
+		//'<row>'
 		public Keyword getRowKeyword_0() { return cRowKeyword_0; }
 		
-		//'span='
-		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
-		
-		//span=UINT_STRING
-		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
-		
-		//columns+=DColumn+
-		public Assignment getColumnsAssignment_4() { return cColumnsAssignment_4; }
-		
-		//DColumn
-		public RuleCall getColumnsDColumnParserRuleCall_4_0() { return cColumnsDColumnParserRuleCall_4_0; }
-		
-		//'</row>'
-		public Keyword getRowKeyword_5() { return cRowKeyword_5; }
-	}
-	public class DColumnElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DColumn");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cColumnKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cCellsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cCellsDCellParserRuleCall_4_0 = (RuleCall)cCellsAssignment_4.eContents().get(0);
-		private final Keyword cColumnKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//DColumn doc::DColumn:
-		//	'<column'
-		//	'span=' span=UINT_STRING
-		//	'>'
-		//	cells+=DCell+
-		//	'</column>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<column' 'span=' span=UINT_STRING '>' cells+=DCell+ '</column>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<column'
-		public Keyword getColumnKeyword_0() { return cColumnKeyword_0; }
-		
-		//'span='
-		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
-		
-		//span=UINT_STRING
-		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
-		
 		//cells+=DCell+
-		public Assignment getCellsAssignment_4() { return cCellsAssignment_4; }
+		public Assignment getCellsAssignment_1() { return cCellsAssignment_1; }
 		
 		//DCell
-		public RuleCall getCellsDCellParserRuleCall_4_0() { return cCellsDCellParserRuleCall_4_0; }
+		public RuleCall getCellsDCellParserRuleCall_1_0() { return cCellsDCellParserRuleCall_1_0; }
 		
-		//'</column>'
-		public Keyword getColumnKeyword_5() { return cColumnKeyword_5; }
+		//'</row>'
+		public Keyword getRowKeyword_2() { return cRowKeyword_2; }
 	}
 	public class DCellElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DCell");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cCellKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cSpanKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cSpanAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cSpanUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cSpanAssignment_2.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cGridSpanKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cGridSpanAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cGridSpanUINT_STRINGTerminalRuleCall_1_1_0 = (RuleCall)cGridSpanAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cVMergeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cVMergeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cVMergeDMergeTypeEnumRuleCall_2_1_0 = (RuleCall)cVMergeAssignment_2_1.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cBodyContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cBodyContentDBodyContentParserRuleCall_4_0 = (RuleCall)cBodyContentAssignment_4.eContents().get(0);
 		private final Keyword cCellKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//DCell doc::DCell:
-		//	'<cell'
-		//	'span=' span=UINT_STRING
+		//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)?
 		//	'>'
 		//	bodyContent+=DBodyContent+
 		//	'</cell>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<cell' 'span=' span=UINT_STRING '>' bodyContent+=DBodyContent+ '</cell>'
+		//'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)? '>' bodyContent+=DBodyContent+ '</cell>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<cell'
 		public Keyword getCellKeyword_0() { return cCellKeyword_0; }
 		
-		//'span='
-		public Keyword getSpanKeyword_1() { return cSpanKeyword_1; }
+		//('gridSpan=' gridSpan=UINT_STRING)?
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//span=UINT_STRING
-		public Assignment getSpanAssignment_2() { return cSpanAssignment_2; }
+		//'gridSpan='
+		public Keyword getGridSpanKeyword_1_0() { return cGridSpanKeyword_1_0; }
+		
+		//gridSpan=UINT_STRING
+		public Assignment getGridSpanAssignment_1_1() { return cGridSpanAssignment_1_1; }
 		
 		//UINT_STRING
-		public RuleCall getSpanUINT_STRINGTerminalRuleCall_2_0() { return cSpanUINT_STRINGTerminalRuleCall_2_0; }
+		public RuleCall getGridSpanUINT_STRINGTerminalRuleCall_1_1_0() { return cGridSpanUINT_STRINGTerminalRuleCall_1_1_0; }
+		
+		//('vMerge=' vMerge=DMergeType)?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'vMerge='
+		public Keyword getVMergeKeyword_2_0() { return cVMergeKeyword_2_0; }
+		
+		//vMerge=DMergeType
+		public Assignment getVMergeAssignment_2_1() { return cVMergeAssignment_2_1; }
+		
+		//DMergeType
+		public RuleCall getVMergeDMergeTypeEnumRuleCall_2_1_0() { return cVMergeDMergeTypeEnumRuleCall_2_1_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
@@ -5244,6 +5198,33 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		public RuleCall getHEXADECIMALTerminalRuleCall_1() { return cHEXADECIMALTerminalRuleCall_1; }
 	}
 	
+	public class DMergeTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DMergeType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cRestartEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cRestartRestartKeyword_0_0 = (Keyword)cRestartEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cContinueEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cContinueContinueKeyword_1_0 = (Keyword)cContinueEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum DMergeType returns doc::DMergeType:
+		//	restart='"restart"' | continue='"continue"';
+		public EnumRule getRule() { return rule; }
+		
+		//restart='"restart"' | continue='"continue"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//restart='"restart"'
+		public EnumLiteralDeclaration getRestartEnumLiteralDeclaration_0() { return cRestartEnumLiteralDeclaration_0; }
+		
+		//'"restart"'
+		public Keyword getRestartRestartKeyword_0_0() { return cRestartRestartKeyword_0_0; }
+		
+		//continue='"continue"'
+		public EnumLiteralDeclaration getContinueEnumLiteralDeclaration_1() { return cContinueEnumLiteralDeclaration_1; }
+		
+		//'"continue"'
+		public Keyword getContinueContinueKeyword_1_0() { return cContinueContinueKeyword_1_0; }
+	}
 	public class VSVSStepModeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepMode");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -5387,8 +5368,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DTableFromFileElements pDTableFromFile;
 	private final DBasicTableElements pDBasicTable;
 	private final DRowElements pDRow;
-	private final DColumnElements pDColumn;
 	private final DCellElements pDCell;
+	private final DMergeTypeElements eDMergeType;
 	private final DApplicableDocumentElements pDApplicableDocument;
 	private final DReferenceDocumentElements pDReferenceDocument;
 	private final VSVSFixedSectionElements pVSVSFixedSection;
@@ -5473,8 +5454,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDTableFromFile = new DTableFromFileElements();
 		this.pDBasicTable = new DBasicTableElements();
 		this.pDRow = new DRowElements();
-		this.pDColumn = new DColumnElements();
 		this.pDCell = new DCellElements();
+		this.eDMergeType = new DMergeTypeElements();
 		this.pDApplicableDocument = new DApplicableDocumentElements();
 		this.pDReferenceDocument = new DReferenceDocumentElements();
 		this.pVSVSFixedSection = new VSVSFixedSectionElements();
@@ -5767,10 +5748,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DRow doc::DRow:
-	//	'<row'
-	//	'span=' span=UINT_STRING
-	//	'>'
-	//	columns+=DColumn+
+	//	'<row>'
+	//	cells+=DCell+
 	//	'</row>'
 	public DRowElements getDRowAccess() {
 		return pDRow;
@@ -5780,23 +5759,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDRowAccess().getRule();
 	}
 	
-	//DColumn doc::DColumn:
-	//	'<column'
-	//	'span=' span=UINT_STRING
-	//	'>'
-	//	cells+=DCell+
-	//	'</column>'
-	public DColumnElements getDColumnAccess() {
-		return pDColumn;
-	}
-	
-	public ParserRule getDColumnRule() {
-		return getDColumnAccess().getRule();
-	}
-	
 	//DCell doc::DCell:
-	//	'<cell'
-	//	'span=' span=UINT_STRING
+	//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)?
 	//	'>'
 	//	bodyContent+=DBodyContent+
 	//	'</cell>'
@@ -5806,6 +5770,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDCellRule() {
 		return getDCellAccess().getRule();
+	}
+	
+	//enum DMergeType returns doc::DMergeType:
+	//	restart='"restart"' | continue='"continue"';
+	public DMergeTypeElements getDMergeTypeAccess() {
+		return eDMergeType;
+	}
+	
+	public EnumRule getDMergeTypeRule() {
+		return getDMergeTypeAccess().getRule();
 	}
 	
 	//DApplicableDocument doc::DApplicableDocument:

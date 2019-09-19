@@ -115,25 +115,20 @@ DBasicTable returns doc::DBasicTable:
 	'</basicTable>';
 
 DRow returns doc::DRow:
-	'<row'
-		'span=' span=UINT_STRING
-	'>'
-		(columns+=DColumn)+ 
-	'</row>';
-
-DColumn returns doc::DColumn:
-	'<column'
-		'span=' span=UINT_STRING
-	'>'
+	'<row>'
 		(cells+=DCell)+
-	'</column>';
+	'</row>';
 
 DCell returns doc::DCell:
 	'<cell'
-		'span=' span=UINT_STRING
+		('gridSpan=' gridSpan=UINT_STRING)?
+		('vMerge=' vMerge=DMergeType)?
 	'>'
 		(bodyContent+=DBodyContent)+
 	'</cell>';
+
+enum DMergeType returns doc::DMergeType:
+	restart = '"restart"' | continue = '"continue"';
 
 DApplicableDocument returns doc::DApplicableDocument:
 	'<ApplicableDocument'

@@ -1286,130 +1286,32 @@ ruleDRow returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<row'
+		otherlv_0='<row>'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDRowAccess().getRowKeyword_0());
 		}
-		otherlv_1='span='
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDRowAccess().getSpanKeyword_1());
-		}
-		(
-			(
-				lv_span_2_0=RULE_UINT_STRING
-				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDRowAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDRowRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"span",
-						lv_span_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
-				}
-			)
-		)
-		otherlv_3='>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDRowAccess().getGreaterThanSignKeyword_3());
-		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDRowAccess().getColumnsDColumnParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDRowAccess().getCellsDCellParserRuleCall_1_0());
 				}
-				lv_columns_4_0=ruleDColumn
+				lv_cells_1_0=ruleDCell
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRowRule());
 					}
 					add(
 						$current,
-						"columns",
-						lv_columns_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DColumn");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_5='</row>'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getDRowAccess().getRowKeyword_5());
-		}
-	)
-;
-
-// Entry rule entryRuleDColumn
-entryRuleDColumn returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDColumnRule()); }
-	iv_ruleDColumn=ruleDColumn
-	{ $current=$iv_ruleDColumn.current; }
-	EOF;
-
-// Rule DColumn
-ruleDColumn returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		otherlv_0='<column'
-		{
-			newLeafNode(otherlv_0, grammarAccess.getDColumnAccess().getColumnKeyword_0());
-		}
-		otherlv_1='span='
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDColumnAccess().getSpanKeyword_1());
-		}
-		(
-			(
-				lv_span_2_0=RULE_UINT_STRING
-				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDColumnAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDColumnRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"span",
-						lv_span_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
-				}
-			)
-		)
-		otherlv_3='>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDColumnAccess().getGreaterThanSignKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getDColumnAccess().getCellsDCellParserRuleCall_4_0());
-				}
-				lv_cells_4_0=ruleDCell
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDColumnRule());
-					}
-					add(
-						$current,
 						"cells",
-						lv_cells_4_0,
+						lv_cells_1_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DCell");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_5='</column>'
+		otherlv_2='</row>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDColumnAccess().getColumnKeyword_5());
+			newLeafNode(otherlv_2, grammarAccess.getDRowAccess().getRowKeyword_2());
 		}
 	)
 ;
@@ -1434,38 +1336,65 @@ ruleDCell returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDCellAccess().getCellKeyword_0());
 		}
-		otherlv_1='span='
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDCellAccess().getSpanKeyword_1());
-		}
 		(
+			otherlv_1='gridSpan='
+			{
+				newLeafNode(otherlv_1, grammarAccess.getDCellAccess().getGridSpanKeyword_1_0());
+			}
 			(
-				lv_span_2_0=RULE_UINT_STRING
-				{
-					newLeafNode(lv_span_2_0, grammarAccess.getDCellAccess().getSpanUINT_STRINGTerminalRuleCall_2_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getDCellRule());
+				(
+					lv_gridSpan_2_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_gridSpan_2_0, grammarAccess.getDCellAccess().getGridSpanUINT_STRINGTerminalRuleCall_1_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"span",
-						lv_span_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDCellRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"gridSpan",
+							lv_gridSpan_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
+					}
+				)
 			)
-		)
-		otherlv_3='>'
+		)?
+		(
+			otherlv_3='vMerge='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDCellAccess().getVMergeKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDCellAccess().getVMergeDMergeTypeEnumRuleCall_2_1_0());
+					}
+					lv_vMerge_4_0=ruleDMergeType
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDCellRule());
+						}
+						set(
+							$current,
+							"vMerge",
+							lv_vMerge_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DMergeType");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_5='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDCellAccess().getGreaterThanSignKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getDCellAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getDCellAccess().getBodyContentDBodyContentParserRuleCall_4_0());
 				}
-				lv_bodyContent_4_0=ruleDBodyContent
+				lv_bodyContent_6_0=ruleDBodyContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDCellRule());
@@ -1473,15 +1402,15 @@ ruleDCell returns [EObject current=null]
 					add(
 						$current,
 						"bodyContent",
-						lv_bodyContent_4_0,
+						lv_bodyContent_6_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBodyContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_5='</cell>'
+		otherlv_7='</cell>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDCellAccess().getCellKeyword_5());
+			newLeafNode(otherlv_7, grammarAccess.getDCellAccess().getCellKeyword_5());
 		}
 	)
 ;
@@ -4916,6 +4845,33 @@ ruleVSRSLogicalModel returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getVSRSLogicalModelAccess().getLogicalModelKeyword_1());
 		}
+	)
+;
+
+// Rule DMergeType
+ruleDMergeType returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"restart"'
+			{
+				$current = grammarAccess.getDMergeTypeAccess().getRestartEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getDMergeTypeAccess().getRestartEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"continue"'
+			{
+				$current = grammarAccess.getDMergeTypeAccess().getContinueEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getDMergeTypeAccess().getContinueEnumLiteralDeclaration_1());
+			}
+		)
 	)
 ;
 

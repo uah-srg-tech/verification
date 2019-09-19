@@ -15,7 +15,6 @@ import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DCell;
-import es.uah.aut.srg.micobs.doctpl.doc.DColumn;
 import es.uah.aut.srg.micobs.doctpl.doc.DEnumerate;
 import es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile;
 import es.uah.aut.srg.micobs.doctpl.doc.DHyperlink;
@@ -101,9 +100,6 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case docPackage.DCELL:
 				sequence_DCell(context, (DCell) semanticObject); 
-				return; 
-			case docPackage.DCOLUMN:
-				sequence_DColumn(context, (DColumn) semanticObject); 
 				return; 
 			case docPackage.DENUMERATE:
 				sequence_DEnumerate(context, (DEnumerate) semanticObject); 
@@ -290,21 +286,9 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCell returns DCell
 	 *
 	 * Constraint:
-	 *     (span=UINT_STRING bodyContent+=DBodyContent+)
+	 *     (gridSpan=UINT_STRING? vMerge=DMergeType? bodyContent+=DBodyContent+)
 	 */
 	protected void sequence_DCell(ISerializationContext context, DCell semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     DColumn returns DColumn
-	 *
-	 * Constraint:
-	 *     (span=UINT_STRING cells+=DCell+)
-	 */
-	protected void sequence_DColumn(ISerializationContext context, DColumn semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -405,7 +389,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DRow returns DRow
 	 *
 	 * Constraint:
-	 *     (span=UINT_STRING columns+=DColumn+)
+	 *     cells+=DCell+
 	 */
 	protected void sequence_DRow(ISerializationContext context, DRow semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

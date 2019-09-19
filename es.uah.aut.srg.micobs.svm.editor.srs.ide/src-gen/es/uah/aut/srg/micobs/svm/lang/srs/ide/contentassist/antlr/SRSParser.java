@@ -45,6 +45,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDBodyContentAccess().getAlternatives(), "rule__DBodyContent__Alternatives");
 					put(grammarAccess.getDListContentAccess().getAlternatives(), "rule__DListContent__Alternatives");
 					put(grammarAccess.getDParagraphContentAccess().getAlternatives(), "rule__DParagraphContent__Alternatives");
+					put(grammarAccess.getDMergeTypeAccess().getAlternatives(), "rule__DMergeType__Alternatives");
 					put(grammarAccess.getVValidationMethodAccess().getAlternatives(), "rule__VValidationMethod__Alternatives");
 					put(grammarAccess.getVSRSDocumentItemModesAccess().getAlternatives(), "rule__VSRSDocumentItemModes__Alternatives");
 					put(grammarAccess.getVSRSDocumentAccess().getGroup(), "rule__VSRSDocument__Group__0");
@@ -64,8 +65,9 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDBasicTableAccess().getGroup(), "rule__DBasicTable__Group__0");
 					put(grammarAccess.getDBasicTableAccess().getGroup_3(), "rule__DBasicTable__Group_3__0");
 					put(grammarAccess.getDRowAccess().getGroup(), "rule__DRow__Group__0");
-					put(grammarAccess.getDColumnAccess().getGroup(), "rule__DColumn__Group__0");
 					put(grammarAccess.getDCellAccess().getGroup(), "rule__DCell__Group__0");
+					put(grammarAccess.getDCellAccess().getGroup_1(), "rule__DCell__Group_1__0");
+					put(grammarAccess.getDCellAccess().getGroup_2(), "rule__DCell__Group_2__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup(), "rule__DApplicableDocument__Group__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7(), "rule__DApplicableDocument__Group_7__0");
 					put(grammarAccess.getDApplicableDocumentAccess().getGroup_7_2(), "rule__DApplicableDocument__Group_7_2__0");
@@ -141,11 +143,9 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDBasicTableAccess().getNameAssignment_2(), "rule__DBasicTable__NameAssignment_2");
 					put(grammarAccess.getDBasicTableAccess().getCaptionAssignment_3_1(), "rule__DBasicTable__CaptionAssignment_3_1");
 					put(grammarAccess.getDBasicTableAccess().getRowsAssignment_5(), "rule__DBasicTable__RowsAssignment_5");
-					put(grammarAccess.getDRowAccess().getSpanAssignment_2(), "rule__DRow__SpanAssignment_2");
-					put(grammarAccess.getDRowAccess().getColumnsAssignment_4(), "rule__DRow__ColumnsAssignment_4");
-					put(grammarAccess.getDColumnAccess().getSpanAssignment_2(), "rule__DColumn__SpanAssignment_2");
-					put(grammarAccess.getDColumnAccess().getCellsAssignment_4(), "rule__DColumn__CellsAssignment_4");
-					put(grammarAccess.getDCellAccess().getSpanAssignment_2(), "rule__DCell__SpanAssignment_2");
+					put(grammarAccess.getDRowAccess().getCellsAssignment_1(), "rule__DRow__CellsAssignment_1");
+					put(grammarAccess.getDCellAccess().getGridSpanAssignment_1_1(), "rule__DCell__GridSpanAssignment_1_1");
+					put(grammarAccess.getDCellAccess().getVMergeAssignment_2_1(), "rule__DCell__VMergeAssignment_2_1");
 					put(grammarAccess.getDCellAccess().getBodyContentAssignment_4(), "rule__DCell__BodyContentAssignment_4");
 					put(grammarAccess.getDApplicableDocumentAccess().getNameAssignment_2(), "rule__DApplicableDocument__NameAssignment_2");
 					put(grammarAccess.getDApplicableDocumentAccess().getTitleAssignment_4(), "rule__DApplicableDocument__TitleAssignment_4");
