@@ -84,7 +84,7 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 			case sssPackage.VSSS_COMPUTER_RESOURCE_REQUIREMENTS: return createVSSSComputerResourceRequirements();
 			case sssPackage.VSSS_SECURITY_REQUIREMENTS: return createVSSSSecurityRequirements();
 			case sssPackage.VSSS_SAFETY_REQUIREMENTS: return createVSSSSafetyRequirements();
-			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS: return createVSSSReliabiltyAvailabilityRequirements();
+			case sssPackage.VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS: return createVSSSReliabilityAvailabilityRequirements();
 			case sssPackage.VSSS_QUALITY_REQUIREMENTS: return createVSSSQualityRequirements();
 			case sssPackage.VSSS_DESIGN_REQUIREMENTS: return createVSSSDesignRequirements();
 			case sssPackage.VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS: return createVSSSSoftwareOperationsRequirements();
@@ -308,9 +308,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSReliabiltyAvailabilityRequirements createVSSSReliabiltyAvailabilityRequirements() {
-		VSSSReliabiltyAvailabilityRequirementsImpl vsssReliabiltyAvailabilityRequirements = new VSSSReliabiltyAvailabilityRequirementsImpl();
-		return vsssReliabiltyAvailabilityRequirements;
+	public VSSSReliabilityAvailabilityRequirements createVSSSReliabilityAvailabilityRequirements() {
+		VSSSReliabilityAvailabilityRequirementsImpl vsssReliabilityAvailabilityRequirements = new VSSSReliabilityAvailabilityRequirementsImpl();
+		return vsssReliabilityAvailabilityRequirements;
 	}
 
 	/**

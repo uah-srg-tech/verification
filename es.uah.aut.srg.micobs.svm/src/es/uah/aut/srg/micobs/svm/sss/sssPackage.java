@@ -1720,14 +1720,14 @@ public interface sssPackage extends EPackage {
 	int VSSS_SAFETY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl <em>VSSS Reliabilty Availability Requirements</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabilityAvailabilityRequirementsImpl <em>VSSS Reliability Availability Requirements</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSReliabiltyAvailabilityRequirements()
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabilityAvailabilityRequirementsImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSReliabilityAvailabilityRequirements()
 	 * @generated
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS = 22;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1736,7 +1736,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1745,7 +1745,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -1754,7 +1754,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__SECTION_DESCRIPTION = VSSS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Sss Items</b></em>' containment reference list.
@@ -1763,7 +1763,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__SSS_ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Sss Requirement Subsections</b></em>' containment reference list.
@@ -1772,25 +1772,25 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__SSS_REQUIREMENT_SUBSECTIONS = VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS;
 
 	/**
-	 * The number of structural features of the '<em>VSSS Reliabilty Availability Requirements</em>' class.
+	 * The number of structural features of the '<em>VSSS Reliability Availability Requirements</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS_FEATURE_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>VSSS Reliabilty Availability Requirements</em>' class.
+	 * The number of operations of the '<em>VSSS Reliability Availability Requirements</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS_OPERATION_COUNT = VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSQualityRequirementsImpl <em>VSSS Quality Requirements</em>}' class.
@@ -3415,14 +3415,14 @@ public interface sssPackage extends EPackage {
 	EClass getVSSSSafetyRequirements();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements <em>VSSS Reliabilty Availability Requirements</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements <em>VSSS Reliability Availability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSSS Reliabilty Availability Requirements</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements
+	 * @return the meta object for class '<em>VSSS Reliability Availability Requirements</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements
 	 * @generated
 	 */
-	EClass getVSSSReliabiltyAvailabilityRequirements();
+	EClass getVSSSReliabilityAvailabilityRequirements();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements <em>VSSS Quality Requirements</em>}'.
@@ -4254,14 +4254,14 @@ public interface sssPackage extends EPackage {
 		EClass VSSS_SAFETY_REQUIREMENTS = eINSTANCE.getVSSSSafetyRequirements();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl <em>VSSS Reliabilty Availability Requirements</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabilityAvailabilityRequirementsImpl <em>VSSS Reliability Availability Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabiltyAvailabilityRequirementsImpl
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSReliabiltyAvailabilityRequirements()
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSReliabilityAvailabilityRequirementsImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSReliabilityAvailabilityRequirements()
 		 * @generated
 		 */
-		EClass VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS = eINSTANCE.getVSSSReliabiltyAvailabilityRequirements();
+		EClass VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS = eINSTANCE.getVSSSReliabilityAvailabilityRequirements();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSQualityRequirementsImpl <em>VSSS Quality Requirements</em>}' class.

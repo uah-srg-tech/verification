@@ -115,7 +115,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="safety" lowerBound="1"
         eType="#//VSSSSafetyRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="reliabiltyAvailability"
-        lowerBound="1" eType="#//VSSSReliabiltyAvailabilityRequirements" containment="true"/>
+        lowerBound="1" eType="#//VSSSReliabilityAvailabilityRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quality" lowerBound="1"
         eType="#//VSSSQualityRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="design" lowerBound="1"
@@ -135,7 +135,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSSSComputerResourceRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSecurityRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSSafetyRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
-  <eClassifiers xsi:type="ecore:EClass" name="VSSSReliabiltyAvailabilityRequirements"
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSReliabilityAvailabilityRequirements"
       eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSQualityRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSDesignRequirements" eSuperTypes="#//VSSSAbstractRequirementSection"/>

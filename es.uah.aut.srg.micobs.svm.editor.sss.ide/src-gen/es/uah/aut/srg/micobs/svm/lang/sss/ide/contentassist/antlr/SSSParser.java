@@ -95,7 +95,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSComputerResourceRequirementsAccess().getGroup(), "rule__VSSSComputerResourceRequirements__Group__0");
 					put(grammarAccess.getVSSSSecurityRequirementsAccess().getGroup(), "rule__VSSSSecurityRequirements__Group__0");
 					put(grammarAccess.getVSSSSafetyRequirementsAccess().getGroup(), "rule__VSSSSafetyRequirements__Group__0");
-					put(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getGroup(), "rule__VSSSReliabiltyAvailabilityRequirements__Group__0");
+					put(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getGroup(), "rule__VSSSReliabilityAvailabilityRequirements__Group__0");
 					put(grammarAccess.getVSSSQualityRequirementsAccess().getGroup(), "rule__VSSSQualityRequirements__Group__0");
 					put(grammarAccess.getVSSSDesignRequirementsAccess().getGroup(), "rule__VSSSDesignRequirements__Group__0");
 					put(grammarAccess.getVSSSSoftwareOperationsRequirementsAccess().getGroup(), "rule__VSSSSoftwareOperationsRequirements__Group__0");
@@ -222,9 +222,9 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSSafetyRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSSSSafetyRequirements__SectionDescriptionAssignment_2");
 					put(grammarAccess.getVSSSSafetyRequirementsAccess().getSssItemsAssignment_3(), "rule__VSSSSafetyRequirements__SssItemsAssignment_3");
 					put(grammarAccess.getVSSSSafetyRequirementsAccess().getSssRequirementSubsectionsAssignment_4(), "rule__VSSSSafetyRequirements__SssRequirementSubsectionsAssignment_4");
-					put(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssItemsAssignment_2(), "rule__VSSSReliabiltyAvailabilityRequirements__SssItemsAssignment_2");
-					put(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3(), "rule__VSSSReliabiltyAvailabilityRequirements__SectionDescriptionAssignment_3");
-					put(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4(), "rule__VSSSReliabiltyAvailabilityRequirements__SssRequirementSubsectionsAssignment_4");
+					put(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssItemsAssignment_2(), "rule__VSSSReliabilityAvailabilityRequirements__SssItemsAssignment_2");
+					put(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3(), "rule__VSSSReliabilityAvailabilityRequirements__SectionDescriptionAssignment_3");
+					put(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4(), "rule__VSSSReliabilityAvailabilityRequirements__SssRequirementSubsectionsAssignment_4");
 					put(grammarAccess.getVSSSQualityRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSSSQualityRequirements__SectionDescriptionAssignment_2");
 					put(grammarAccess.getVSSSQualityRequirementsAccess().getSssItemsAssignment_3(), "rule__VSSSQualityRequirements__SssItemsAssignment_3");
 					put(grammarAccess.getVSSSQualityRequirementsAccess().getSssRequirementSubsectionsAssignment_4(), "rule__VSSSQualityRequirements__SssRequirementSubsectionsAssignment_4");

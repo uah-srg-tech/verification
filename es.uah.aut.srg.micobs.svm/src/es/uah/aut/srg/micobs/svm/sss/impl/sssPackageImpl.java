@@ -31,7 +31,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements;
@@ -226,7 +226,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsssReliabiltyAvailabilityRequirementsEClass = null;
+	private EClass vsssReliabilityAvailabilityRequirementsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -1001,8 +1001,8 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSSSReliabiltyAvailabilityRequirements() {
-		return vsssReliabiltyAvailabilityRequirementsEClass;
+	public EClass getVSSSReliabilityAvailabilityRequirements() {
+		return vsssReliabilityAvailabilityRequirementsEClass;
 	}
 
 	/**
@@ -1312,7 +1312,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		vsssSafetyRequirementsEClass = createEClass(VSSS_SAFETY_REQUIREMENTS);
 
-		vsssReliabiltyAvailabilityRequirementsEClass = createEClass(VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS);
+		vsssReliabilityAvailabilityRequirementsEClass = createEClass(VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS);
 
 		vsssQualityRequirementsEClass = createEClass(VSSS_QUALITY_REQUIREMENTS);
 
@@ -1405,7 +1405,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		vsssComputerResourceRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
 		vsssSecurityRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
 		vsssSafetyRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
-		vsssReliabiltyAvailabilityRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
+		vsssReliabilityAvailabilityRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
 		vsssQualityRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
 		vsssDesignRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
 		vsssSoftwareOperationsRequirementsEClass.getESuperTypes().add(this.getVSSSAbstractRequirementSection());
@@ -1489,7 +1489,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSSpecificRequirements_ComputerResource(), this.getVSSSComputerResourceRequirements(), null, "computerResource", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Security(), this.getVSSSSecurityRequirements(), null, "security", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Safety(), this.getVSSSSafetyRequirements(), null, "safety", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_ReliabiltyAvailability(), this.getVSSSReliabiltyAvailabilityRequirements(), null, "reliabiltyAvailability", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_ReliabiltyAvailability(), this.getVSSSReliabilityAvailabilityRequirements(), null, "reliabiltyAvailability", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Quality(), this.getVSSSQualityRequirements(), null, "quality", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Design(), this.getVSSSDesignRequirements(), null, "design", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_SoftwareOperations(), this.getVSSSSoftwareOperationsRequirements(), null, "softwareOperations", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1510,7 +1510,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 
 		initEClass(vsssSafetyRequirementsEClass, VSSSSafetyRequirements.class, "VSSSSafetyRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(vsssReliabiltyAvailabilityRequirementsEClass, VSSSReliabiltyAvailabilityRequirements.class, "VSSSReliabiltyAvailabilityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vsssReliabilityAvailabilityRequirementsEClass, VSSSReliabilityAvailabilityRequirements.class, "VSSSReliabilityAvailabilityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsssQualityRequirementsEClass, VSSSQualityRequirements.class, "VSSSQualityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

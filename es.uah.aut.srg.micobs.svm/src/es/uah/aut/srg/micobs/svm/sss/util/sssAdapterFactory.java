@@ -175,8 +175,8 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSSafetyRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSSSReliabiltyAvailabilityRequirements(VSSSReliabiltyAvailabilityRequirements object) {
-				return createVSSSReliabiltyAvailabilityRequirementsAdapter();
+			public Adapter caseVSSSReliabilityAvailabilityRequirements(VSSSReliabilityAvailabilityRequirements object) {
+				return createVSSSReliabilityAvailabilityRequirementsAdapter();
 			}
 			@Override
 			public Adapter caseVSSSQualityRequirements(VSSSQualityRequirements object) {
@@ -599,16 +599,16 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements <em>VSSS Reliabilty Availability Requirements</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements <em>VSSS Reliability Availability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements
 	 * @generated
 	 */
-	public Adapter createVSSSReliabiltyAvailabilityRequirementsAdapter() {
+	public Adapter createVSSSReliabilityAvailabilityRequirementsAdapter() {
 		return null;
 	}
 

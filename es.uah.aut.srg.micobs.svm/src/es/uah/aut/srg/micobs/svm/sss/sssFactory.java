@@ -210,13 +210,13 @@ public interface sssFactory extends EFactory {
 	VSSSSafetyRequirements createVSSSSafetyRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSSS Reliabilty Availability Requirements</em>'.
+	 * Returns a new object of class '<em>VSSS Reliability Availability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSSS Reliabilty Availability Requirements</em>'.
+	 * @return a new object of class '<em>VSSS Reliability Availability Requirements</em>'.
 	 * @generated
 	 */
-	VSSSReliabiltyAvailabilityRequirements createVSSSReliabiltyAvailabilityRequirements();
+	VSSSReliabilityAvailabilityRequirements createVSSSReliabilityAvailabilityRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSSS Quality Requirements</em>'.

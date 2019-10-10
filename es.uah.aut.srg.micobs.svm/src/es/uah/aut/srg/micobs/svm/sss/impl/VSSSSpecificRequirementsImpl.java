@@ -20,7 +20,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDesignRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements;
-import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements;
@@ -154,7 +154,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * @generated
 	 * @ordered
 	 */
-	protected VSSSReliabiltyAvailabilityRequirements reliabiltyAvailability;
+	protected VSSSReliabilityAvailabilityRequirements reliabiltyAvailability;
 
 	/**
 	 * The cached value of the '{@link #getQuality() <em>Quality</em>}' containment reference.
@@ -574,7 +574,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSReliabiltyAvailabilityRequirements getReliabiltyAvailability() {
+	public VSSSReliabilityAvailabilityRequirements getReliabiltyAvailability() {
 		return reliabiltyAvailability;
 	}
 
@@ -583,8 +583,8 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements newReliabiltyAvailability, NotificationChain msgs) {
-		VSSSReliabiltyAvailabilityRequirements oldReliabiltyAvailability = reliabiltyAvailability;
+	public NotificationChain basicSetReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements newReliabiltyAvailability, NotificationChain msgs) {
+		VSSSReliabilityAvailabilityRequirements oldReliabiltyAvailability = reliabiltyAvailability;
 		reliabiltyAvailability = newReliabiltyAvailability;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY, oldReliabiltyAvailability, newReliabiltyAvailability);
@@ -598,7 +598,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements newReliabiltyAvailability) {
+	public void setReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements newReliabiltyAvailability) {
 		if (newReliabiltyAvailability != reliabiltyAvailability) {
 			NotificationChain msgs = null;
 			if (reliabiltyAvailability != null)
@@ -940,7 +940,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 				setSafety((VSSSSafetyRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				setReliabiltyAvailability((VSSSReliabiltyAvailabilityRequirements)newValue);
+				setReliabiltyAvailability((VSSSReliabilityAvailabilityRequirements)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
 				setQuality((VSSSQualityRequirements)newValue);
@@ -994,7 +994,7 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 				setSafety((VSSSSafetyRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY:
-				setReliabiltyAvailability((VSSSReliabiltyAvailabilityRequirements)null);
+				setReliabiltyAvailability((VSSSReliabilityAvailabilityRequirements)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__QUALITY:
 				setQuality((VSSSQualityRequirements)null);

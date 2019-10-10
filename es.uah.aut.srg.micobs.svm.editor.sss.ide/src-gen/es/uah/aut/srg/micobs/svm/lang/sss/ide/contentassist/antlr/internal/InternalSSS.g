@@ -1057,25 +1057,25 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleVSSSReliabiltyAvailabilityRequirements
-entryRuleVSSSReliabiltyAvailabilityRequirements
+// Entry rule entryRuleVSSSReliabilityAvailabilityRequirements
+entryRuleVSSSReliabilityAvailabilityRequirements
 :
-{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsRule()); }
-	 ruleVSSSReliabiltyAvailabilityRequirements
-{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsRule()); } 
+{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsRule()); }
+	 ruleVSSSReliabilityAvailabilityRequirements
+{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsRule()); } 
 	 EOF 
 ;
 
-// Rule VSSSReliabiltyAvailabilityRequirements
-ruleVSSSReliabiltyAvailabilityRequirements 
+// Rule VSSSReliabilityAvailabilityRequirements
+ruleVSSSReliabilityAvailabilityRequirements 
 	@init {
 		int stackSize = keepStackSize();
 	}
 	:
 	(
-		{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getGroup()); }
-		(rule__VSSSReliabiltyAvailabilityRequirements__Group__0)
-		{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getGroup()); }
+		{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getGroup()); }
+		(rule__VSSSReliabilityAvailabilityRequirements__Group__0)
+		{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getGroup()); }
 	)
 ;
 finally {
@@ -8772,161 +8772,161 @@ finally {
 }
 
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__0
+rule__VSSSReliabilityAvailabilityRequirements__Group__0
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__0__Impl
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__1
+	rule__VSSSReliabilityAvailabilityRequirements__Group__0__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__1
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__0__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__0__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getVSSSReliabiltyAvailabilityRequirementsAction_0()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getVSSSReliabilityAvailabilityRequirementsAction_0()); }
 	()
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getVSSSReliabiltyAvailabilityRequirementsAction_0()); }
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getVSSSReliabilityAvailabilityRequirementsAction_0()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__1
+rule__VSSSReliabilityAvailabilityRequirements__Group__1
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__1__Impl
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__2
+	rule__VSSSReliabilityAvailabilityRequirements__Group__1__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__1__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__1__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_1()); }
-	'<ReliabiltyAvailabilityRequirements>'
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_1()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getReliabilityAvailabilityRequirementsKeyword_1()); }
+	'<ReliabilityAvailabilityRequirements>'
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getReliabilityAvailabilityRequirementsKeyword_1()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__2
+rule__VSSSReliabilityAvailabilityRequirements__Group__2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__2__Impl
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__3
+	rule__VSSSReliabilityAvailabilityRequirements__Group__2__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__3
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__2__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__2__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssItemsAssignment_2()); }
-	(rule__VSSSReliabiltyAvailabilityRequirements__SssItemsAssignment_2)*
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssItemsAssignment_2()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssItemsAssignment_2()); }
+	(rule__VSSSReliabilityAvailabilityRequirements__SssItemsAssignment_2)*
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssItemsAssignment_2()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__3
+rule__VSSSReliabilityAvailabilityRequirements__Group__3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__3__Impl
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__4
+	rule__VSSSReliabilityAvailabilityRequirements__Group__3__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__4
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__3__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__3__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3()); }
-	(rule__VSSSReliabiltyAvailabilityRequirements__SectionDescriptionAssignment_3)?
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3()); }
+	(rule__VSSSReliabilityAvailabilityRequirements__SectionDescriptionAssignment_3)?
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSectionDescriptionAssignment_3()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__4
+rule__VSSSReliabilityAvailabilityRequirements__Group__4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__4__Impl
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__5
+	rule__VSSSReliabilityAvailabilityRequirements__Group__4__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__5
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__4__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__4__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4()); }
-	(rule__VSSSReliabiltyAvailabilityRequirements__SssRequirementSubsectionsAssignment_4)*
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4()); }
+	(rule__VSSSReliabilityAvailabilityRequirements__SssRequirementSubsectionsAssignment_4)*
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssRequirementSubsectionsAssignment_4()); }
 )
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__5
+rule__VSSSReliabilityAvailabilityRequirements__Group__5
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
-	rule__VSSSReliabiltyAvailabilityRequirements__Group__5__Impl
+	rule__VSSSReliabilityAvailabilityRequirements__Group__5__Impl
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__Group__5__Impl
+rule__VSSSReliabilityAvailabilityRequirements__Group__5__Impl
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 (
-	{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_5()); }
-	'</ReliabiltyAvailabilityRequirements>'
-	{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getReliabiltyAvailabilityRequirementsKeyword_5()); }
+	{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getReliabilityAvailabilityRequirementsKeyword_5()); }
+	'</ReliabilityAvailabilityRequirements>'
+	{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getReliabilityAvailabilityRequirementsKeyword_5()); }
 )
 ;
 finally {
@@ -11806,9 +11806,9 @@ rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9
 	}
 :
 	(
-		{ before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0()); }
-		ruleVSSSReliabiltyAvailabilityRequirements
-		{ after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabiltyAvailabilityRequirementsParserRuleCall_9_0()); }
+		{ before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); }
+		ruleVSSSReliabilityAvailabilityRequirements
+		{ after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); }
 	)
 ;
 finally {
@@ -12430,45 +12430,45 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__SssItemsAssignment_2
+rule__VSSSReliabilityAvailabilityRequirements__SssItemsAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0()); }
+		{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0()); }
 		ruleVSSSDocumentItem
-		{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0()); }
+		{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssItemsVSSSDocumentItemParserRuleCall_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__SectionDescriptionAssignment_3
+rule__VSSSReliabilityAvailabilityRequirements__SectionDescriptionAssignment_3
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_3_0()); }
+		{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_3_0()); }
 		ruleDBody
-		{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_3_0()); }
+		{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_3_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSSSReliabiltyAvailabilityRequirements__SssRequirementSubsectionsAssignment_4
+rule__VSSSReliabilityAvailabilityRequirements__SssRequirementSubsectionsAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0()); }
+		{ before(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0()); }
 		ruleVSSSInstantiableRequirementSection
-		{ after(grammarAccess.getVSSSReliabiltyAvailabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0()); }
+		{ after(grammarAccess.getVSSSReliabilityAvailabilityRequirementsAccess().getSssRequirementSubsectionsVSSSInstantiableRequirementSectionParserRuleCall_4_0()); }
 	)
 ;
 finally {

@@ -260,12 +260,12 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Reliabilty Availability</em>' containment reference.
-	 * @see #setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements)
+	 * @see #setReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_ReliabiltyAvailability()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSReliabiltyAvailabilityRequirements getReliabiltyAvailability();
+	VSSSReliabilityAvailabilityRequirements getReliabiltyAvailability();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability <em>Reliabilty Availability</em>}' containment reference.
@@ -275,7 +275,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * @see #getReliabiltyAvailability()
 	 * @generated
 	 */
-	void setReliabiltyAvailability(VSSSReliabiltyAvailabilityRequirements value);
+	void setReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements value);
 
 	/**
 	 * Returns the value of the '<em><b>Quality</b></em>' containment reference.

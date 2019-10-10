@@ -27,7 +27,7 @@
 '</ProductPerspective>'=69
 '</QualityRequirements>'=108
 '</ReferenceDocuments>'=64
-'</ReliabiltyAvailabilityRequirements>'=106
+'</ReliabilityAvailabilityRequirements>'=106
 '</SSS>'=20
 '</SafetyRequirements>'=104
 '</SecurityRequirements>'=102
@@ -78,7 +78,7 @@
 '<QualityRequirements>'=107
 '<ReferenceDocument'=56
 '<ReferenceDocuments>'=63
-'<ReliabiltyAvailabilityRequirements>'=105
+'<ReliabilityAvailabilityRequirements>'=105
 '<SSS'=13
 '<SafetyRequirements>'=103
 '<SecurityRequirements>'=101

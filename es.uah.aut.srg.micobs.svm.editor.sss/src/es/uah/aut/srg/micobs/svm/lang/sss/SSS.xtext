@@ -196,7 +196,7 @@ VSSSSpecificRequirements returns VSSSSpecificRequirements:
 		computerResource=VSSSComputerResourceRequirements
 		security=VSSSSecurityRequirements
 		safety=VSSSSafetyRequirements
-		reliabiltyAvailability=VSSSReliabiltyAvailabilityRequirements
+		reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements
 		quality=VSSSQualityRequirements
 		design=VSSSDesignRequirements
 		softwareOperations=VSSSSoftwareOperationsRequirements
@@ -301,13 +301,13 @@ VSSSSafetyRequirements returns VSSSSafetyRequirements:
 		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
 	'</SafetyRequirements>';
 
-VSSSReliabiltyAvailabilityRequirements returns VSSSReliabiltyAvailabilityRequirements:
-	{VSSSReliabiltyAvailabilityRequirements}
-	'<ReliabiltyAvailabilityRequirements>'
+VSSSReliabilityAvailabilityRequirements returns VSSSReliabilityAvailabilityRequirements:
+	{VSSSReliabilityAvailabilityRequirements}
+	'<ReliabilityAvailabilityRequirements>'
 		(sssItems+=VSSSDocumentItem)*
 		(sectionDescription=DBody)?
 		(sssRequirementSubsections+=VSSSInstantiableRequirementSection)*
-	'</ReliabiltyAvailabilityRequirements>';
+	'</ReliabilityAvailabilityRequirements>';
 
 VSSSQualityRequirements returns VSSSQualityRequirements:
 	{VSSSQualityRequirements}

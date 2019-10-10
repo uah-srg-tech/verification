@@ -45,7 +45,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.VSSSQualityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSReliabilityAvailabilityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSecurityRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSoftwareMaintenanceRequirements;
@@ -188,8 +188,8 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case sssPackage.VSSS_REFERENCE_DOCUMENTS:
 				sequence_VSSSReferenceDocuments(context, (VSSSReferenceDocuments) semanticObject); 
 				return; 
-			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS:
-				sequence_VSSSReliabiltyAvailabilityRequirements(context, (VSSSReliabiltyAvailabilityRequirements) semanticObject); 
+			case sssPackage.VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS:
+				sequence_VSSSReliabilityAvailabilityRequirements(context, (VSSSReliabilityAvailabilityRequirements) semanticObject); 
 				return; 
 			case sssPackage.VSSS_SAFETY_REQUIREMENTS:
 				sequence_VSSSSafetyRequirements(context, (VSSSSafetyRequirements) semanticObject); 
@@ -750,12 +750,12 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VSSSReliabiltyAvailabilityRequirements returns VSSSReliabiltyAvailabilityRequirements
+	 *     VSSSReliabilityAvailabilityRequirements returns VSSSReliabilityAvailabilityRequirements
 	 *
 	 * Constraint:
 	 *     (sssItems+=VSSSDocumentItem* sectionDescription=DBody? sssRequirementSubsections+=VSSSInstantiableRequirementSection*)
 	 */
-	protected void sequence_VSSSReliabiltyAvailabilityRequirements(ISerializationContext context, VSSSReliabiltyAvailabilityRequirements semanticObject) {
+	protected void sequence_VSSSReliabilityAvailabilityRequirements(ISerializationContext context, VSSSReliabilityAvailabilityRequirements semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -822,7 +822,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         computerResource=VSSSComputerResourceRequirements 
 	 *         security=VSSSSecurityRequirements 
 	 *         safety=VSSSSafetyRequirements 
-	 *         reliabiltyAvailability=VSSSReliabiltyAvailabilityRequirements 
+	 *         reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements 
 	 *         quality=VSSSQualityRequirements 
 	 *         design=VSSSDesignRequirements 
 	 *         softwareOperations=VSSSSoftwareOperationsRequirements 

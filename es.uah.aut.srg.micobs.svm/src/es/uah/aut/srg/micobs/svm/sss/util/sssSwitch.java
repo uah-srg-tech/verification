@@ -283,14 +283,14 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case sssPackage.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS: {
-				VSSSReliabiltyAvailabilityRequirements vsssReliabiltyAvailabilityRequirements = (VSSSReliabiltyAvailabilityRequirements)theEObject;
-				T result = caseVSSSReliabiltyAvailabilityRequirements(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseVSSSAbstractRequirementSection(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseDFixedSection(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabiltyAvailabilityRequirements);
-				if (result == null) result = caseDAbstractSection(vsssReliabiltyAvailabilityRequirements);
+			case sssPackage.VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS: {
+				VSSSReliabilityAvailabilityRequirements vsssReliabilityAvailabilityRequirements = (VSSSReliabilityAvailabilityRequirements)theEObject;
+				T result = caseVSSSReliabilityAvailabilityRequirements(vsssReliabilityAvailabilityRequirements);
+				if (result == null) result = caseVSSSAbstractRequirementSection(vsssReliabilityAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsssReliabilityAvailabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsssReliabilityAvailabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsssReliabilityAvailabilityRequirements);
+				if (result == null) result = caseDAbstractSection(vsssReliabilityAvailabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -757,17 +757,17 @@ public class sssSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirements</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSSS Reliability Availability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSSS Reliabilty Availability Requirements</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSSS Reliability Availability Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSSSReliabiltyAvailabilityRequirements(VSSSReliabiltyAvailabilityRequirements object) {
+	public T caseVSSSReliabilityAvailabilityRequirements(VSSSReliabilityAvailabilityRequirements object) {
 		return null;
 	}
 
