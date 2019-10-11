@@ -156,6 +156,15 @@ public interface svsFactory extends EFactory {
 	VSVSTestDesign createVSVSTestDesign();
 
 	/**
+	 * Returns a new object of class '<em>VSVS Fixed Test Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Fixed Test Section</em>'.
+	 * @generated
+	 */
+	VSVSFixedTestSection createVSVSFixedTestSection();
+
+	/**
 	 * Returns a new object of class '<em>VSVS Test Cases</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

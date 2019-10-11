@@ -1120,6 +1120,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
 	}
+	public class VSVSFixedTestSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSFixedTestSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSFixedTestSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cBodyDBodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		
+		//VSVSFixedTestSection:
+		//	{VSVSFixedTestSection} body=DBody?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSFixedTestSection} body=DBody?
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSFixedTestSection}
+		public Action getVSVSFixedTestSectionAction_0() { return cVSVSFixedTestSectionAction_0; }
+		
+		//body=DBody?
+		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
+		
+		//DBody
+		public RuleCall getBodyDBodyParserRuleCall_1_0() { return cBodyDBodyParserRuleCall_1_0; }
+	}
 	public class VSVSFixedSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSFixedSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2040,31 +2063,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cIdentifierKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cIdentifierAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cIdentifierVSVSFixedSectionParserRuleCall_5_0 = (RuleCall)cIdentifierAssignment_5.eContents().get(0);
+		private final RuleCall cIdentifierVSVSFixedTestSectionParserRuleCall_5_0 = (RuleCall)cIdentifierAssignment_5.eContents().get(0);
 		private final Keyword cIdentifierKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cInputsKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cInputsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cInputsVSVSFixedSectionParserRuleCall_8_0 = (RuleCall)cInputsAssignment_8.eContents().get(0);
+		private final RuleCall cInputsVSVSFixedTestSectionParserRuleCall_8_0 = (RuleCall)cInputsAssignment_8.eContents().get(0);
 		private final Keyword cInputsKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Keyword cOutputsKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Assignment cOutputsAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cOutputsVSVSFixedSectionParserRuleCall_11_0 = (RuleCall)cOutputsAssignment_11.eContents().get(0);
+		private final RuleCall cOutputsVSVSFixedTestSectionParserRuleCall_11_0 = (RuleCall)cOutputsAssignment_11.eContents().get(0);
 		private final Keyword cOutputsKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Keyword cPassFailCriteriaKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Assignment cPassFailCriteriaAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cPassFailCriteriaVSVSFixedSectionParserRuleCall_14_0 = (RuleCall)cPassFailCriteriaAssignment_14.eContents().get(0);
+		private final RuleCall cPassFailCriteriaVSVSFixedTestSectionParserRuleCall_14_0 = (RuleCall)cPassFailCriteriaAssignment_14.eContents().get(0);
 		private final Keyword cPassFailCriteriaKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		private final Keyword cEnvironmentalNeedsKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		private final Assignment cEnvironmentalNeedsAssignment_17 = (Assignment)cGroup.eContents().get(17);
-		private final RuleCall cEnvironmentalNeedsVSVSFixedSectionParserRuleCall_17_0 = (RuleCall)cEnvironmentalNeedsAssignment_17.eContents().get(0);
+		private final RuleCall cEnvironmentalNeedsVSVSFixedTestSectionParserRuleCall_17_0 = (RuleCall)cEnvironmentalNeedsAssignment_17.eContents().get(0);
 		private final Keyword cEnvironmentalNeedsKeyword_18 = (Keyword)cGroup.eContents().get(18);
 		private final Keyword cSpecialConstraintsKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		private final Assignment cSpecialConstraintsAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final RuleCall cSpecialConstraintsVSVSFixedSectionParserRuleCall_20_0 = (RuleCall)cSpecialConstraintsAssignment_20.eContents().get(0);
+		private final RuleCall cSpecialConstraintsVSVSFixedTestSectionParserRuleCall_20_0 = (RuleCall)cSpecialConstraintsAssignment_20.eContents().get(0);
 		private final Keyword cSpecialConstraintsKeyword_21 = (Keyword)cGroup.eContents().get(21);
 		private final Keyword cInterfaceDependenciesKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		private final Assignment cInterfaceDependenciesAssignment_23 = (Assignment)cGroup.eContents().get(23);
-		private final RuleCall cInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0 = (RuleCall)cInterfaceDependenciesAssignment_23.eContents().get(0);
+		private final RuleCall cInterfaceDependenciesVSVSFixedTestSectionParserRuleCall_23_0 = (RuleCall)cInterfaceDependenciesAssignment_23.eContents().get(0);
 		private final Keyword cInterfaceDependenciesKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		private final Group cGroup_25 = (Group)cGroup.eContents().get(25);
 		private final Keyword cValidatingItemKeyword_25_0 = (Keyword)cGroup_25.eContents().get(0);
@@ -2079,22 +2102,23 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<TestCase'
 		//	'name=' name=STRING
 		//	'>'
-		//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-		//	'<Inputs>' inputs=VSVSFixedSection '</Inputs>'
-		//	'<Outputs>' outputs=VSVSFixedSection '</Outputs>'
-		//	'<PassFailCriteria>' passFailCriteria=VSVSFixedSection '</PassFailCriteria>'
-		//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection '</EnvironmentalNeeds>'
-		//	'<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-		//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem'
+		//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+		//	'<Inputs>' inputs=VSVSFixedTestSection '</Inputs>'
+		//	'<Outputs>' outputs=VSVSFixedTestSection '</Outputs>'
+		//	'<PassFailCriteria>' passFailCriteria=VSVSFixedTestSection '</PassFailCriteria>'
+		//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedTestSection '</EnvironmentalNeeds>'
+		//	'<SpecialConstraints>' specialConstraints=VSVSFixedTestSection '</SpecialConstraints>'
+		//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedTestSection '</InterfaceDependencies>' ('<ValidatingItem'
 		//	'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 		//	'</TestCase>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TestCase' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedSection '</Identifier>' '<Inputs>'
-		//inputs=VSVSFixedSection '</Inputs>' '<Outputs>' outputs=VSVSFixedSection '</Outputs>' '<PassFailCriteria>'
-		//passFailCriteria=VSVSFixedSection '</PassFailCriteria>' '<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection
-		//'</EnvironmentalNeeds>' '<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-		//'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem' 'name='
+		//'<TestCase' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedTestSection '</Identifier>' '<Inputs>'
+		//inputs=VSVSFixedTestSection '</Inputs>' '<Outputs>' outputs=VSVSFixedTestSection '</Outputs>' '<PassFailCriteria>'
+		//passFailCriteria=VSVSFixedTestSection '</PassFailCriteria>' '<EnvironmentalNeeds>'
+		//environmentalNeeds=VSVSFixedTestSection '</EnvironmentalNeeds>' '<SpecialConstraints>'
+		//specialConstraints=VSVSFixedTestSection '</SpecialConstraints>' '<InterfaceDependencies>'
+		//interfaceDependencies=VSVSFixedTestSection '</InterfaceDependencies>' ('<ValidatingItem' 'name='
 		//validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+ '</TestCase>'
 		public Group getGroup() { return cGroup; }
 		
@@ -2116,11 +2140,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Identifier>'
 		public Keyword getIdentifierKeyword_4() { return cIdentifierKeyword_4; }
 		
-		//identifier=VSVSFixedSection
+		//identifier=VSVSFixedTestSection
 		public Assignment getIdentifierAssignment_5() { return cIdentifierAssignment_5; }
 		
-		//VSVSFixedSection
-		public RuleCall getIdentifierVSVSFixedSectionParserRuleCall_5_0() { return cIdentifierVSVSFixedSectionParserRuleCall_5_0; }
+		//VSVSFixedTestSection
+		public RuleCall getIdentifierVSVSFixedTestSectionParserRuleCall_5_0() { return cIdentifierVSVSFixedTestSectionParserRuleCall_5_0; }
 		
 		//'</Identifier>'
 		public Keyword getIdentifierKeyword_6() { return cIdentifierKeyword_6; }
@@ -2128,11 +2152,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Inputs>'
 		public Keyword getInputsKeyword_7() { return cInputsKeyword_7; }
 		
-		//inputs=VSVSFixedSection
+		//inputs=VSVSFixedTestSection
 		public Assignment getInputsAssignment_8() { return cInputsAssignment_8; }
 		
-		//VSVSFixedSection
-		public RuleCall getInputsVSVSFixedSectionParserRuleCall_8_0() { return cInputsVSVSFixedSectionParserRuleCall_8_0; }
+		//VSVSFixedTestSection
+		public RuleCall getInputsVSVSFixedTestSectionParserRuleCall_8_0() { return cInputsVSVSFixedTestSectionParserRuleCall_8_0; }
 		
 		//'</Inputs>'
 		public Keyword getInputsKeyword_9() { return cInputsKeyword_9; }
@@ -2140,11 +2164,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Outputs>'
 		public Keyword getOutputsKeyword_10() { return cOutputsKeyword_10; }
 		
-		//outputs=VSVSFixedSection
+		//outputs=VSVSFixedTestSection
 		public Assignment getOutputsAssignment_11() { return cOutputsAssignment_11; }
 		
-		//VSVSFixedSection
-		public RuleCall getOutputsVSVSFixedSectionParserRuleCall_11_0() { return cOutputsVSVSFixedSectionParserRuleCall_11_0; }
+		//VSVSFixedTestSection
+		public RuleCall getOutputsVSVSFixedTestSectionParserRuleCall_11_0() { return cOutputsVSVSFixedTestSectionParserRuleCall_11_0; }
 		
 		//'</Outputs>'
 		public Keyword getOutputsKeyword_12() { return cOutputsKeyword_12; }
@@ -2152,11 +2176,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<PassFailCriteria>'
 		public Keyword getPassFailCriteriaKeyword_13() { return cPassFailCriteriaKeyword_13; }
 		
-		//passFailCriteria=VSVSFixedSection
+		//passFailCriteria=VSVSFixedTestSection
 		public Assignment getPassFailCriteriaAssignment_14() { return cPassFailCriteriaAssignment_14; }
 		
-		//VSVSFixedSection
-		public RuleCall getPassFailCriteriaVSVSFixedSectionParserRuleCall_14_0() { return cPassFailCriteriaVSVSFixedSectionParserRuleCall_14_0; }
+		//VSVSFixedTestSection
+		public RuleCall getPassFailCriteriaVSVSFixedTestSectionParserRuleCall_14_0() { return cPassFailCriteriaVSVSFixedTestSectionParserRuleCall_14_0; }
 		
 		//'</PassFailCriteria>'
 		public Keyword getPassFailCriteriaKeyword_15() { return cPassFailCriteriaKeyword_15; }
@@ -2164,11 +2188,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<EnvironmentalNeeds>'
 		public Keyword getEnvironmentalNeedsKeyword_16() { return cEnvironmentalNeedsKeyword_16; }
 		
-		//environmentalNeeds=VSVSFixedSection
+		//environmentalNeeds=VSVSFixedTestSection
 		public Assignment getEnvironmentalNeedsAssignment_17() { return cEnvironmentalNeedsAssignment_17; }
 		
-		//VSVSFixedSection
-		public RuleCall getEnvironmentalNeedsVSVSFixedSectionParserRuleCall_17_0() { return cEnvironmentalNeedsVSVSFixedSectionParserRuleCall_17_0; }
+		//VSVSFixedTestSection
+		public RuleCall getEnvironmentalNeedsVSVSFixedTestSectionParserRuleCall_17_0() { return cEnvironmentalNeedsVSVSFixedTestSectionParserRuleCall_17_0; }
 		
 		//'</EnvironmentalNeeds>'
 		public Keyword getEnvironmentalNeedsKeyword_18() { return cEnvironmentalNeedsKeyword_18; }
@@ -2176,11 +2200,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<SpecialConstraints>'
 		public Keyword getSpecialConstraintsKeyword_19() { return cSpecialConstraintsKeyword_19; }
 		
-		//specialConstraints=VSVSFixedSection
+		//specialConstraints=VSVSFixedTestSection
 		public Assignment getSpecialConstraintsAssignment_20() { return cSpecialConstraintsAssignment_20; }
 		
-		//VSVSFixedSection
-		public RuleCall getSpecialConstraintsVSVSFixedSectionParserRuleCall_20_0() { return cSpecialConstraintsVSVSFixedSectionParserRuleCall_20_0; }
+		//VSVSFixedTestSection
+		public RuleCall getSpecialConstraintsVSVSFixedTestSectionParserRuleCall_20_0() { return cSpecialConstraintsVSVSFixedTestSectionParserRuleCall_20_0; }
 		
 		//'</SpecialConstraints>'
 		public Keyword getSpecialConstraintsKeyword_21() { return cSpecialConstraintsKeyword_21; }
@@ -2188,11 +2212,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<InterfaceDependencies>'
 		public Keyword getInterfaceDependenciesKeyword_22() { return cInterfaceDependenciesKeyword_22; }
 		
-		//interfaceDependencies=VSVSFixedSection
+		//interfaceDependencies=VSVSFixedTestSection
 		public Assignment getInterfaceDependenciesAssignment_23() { return cInterfaceDependenciesAssignment_23; }
 		
-		//VSVSFixedSection
-		public RuleCall getInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0() { return cInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0; }
+		//VSVSFixedTestSection
+		public RuleCall getInterfaceDependenciesVSVSFixedTestSectionParserRuleCall_23_0() { return cInterfaceDependenciesVSVSFixedTestSectionParserRuleCall_23_0; }
 		
 		//'</InterfaceDependencies>'
 		public Keyword getInterfaceDependenciesKeyword_24() { return cInterfaceDependenciesKeyword_24; }
@@ -2231,11 +2255,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cIdentifierKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Assignment cIdentifierAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cIdentifierVSVSFixedSectionParserRuleCall_5_0 = (RuleCall)cIdentifierAssignment_5.eContents().get(0);
+		private final RuleCall cIdentifierVSVSFixedTestSectionParserRuleCall_5_0 = (RuleCall)cIdentifierAssignment_5.eContents().get(0);
 		private final Keyword cIdentifierKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		private final Keyword cPurposeKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cPurposeAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cPurposeVSVSFixedSectionParserRuleCall_8_0 = (RuleCall)cPurposeAssignment_8.eContents().get(0);
+		private final RuleCall cPurposeVSVSFixedTestSectionParserRuleCall_8_0 = (RuleCall)cPurposeAssignment_8.eContents().get(0);
 		private final Keyword cPurposeKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cTestCaseKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
@@ -2248,7 +2272,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cProcedureStepsVSVSProcedureStepsParserRuleCall_11_0 = (RuleCall)cProcedureStepsAssignment_11.eContents().get(0);
 		private final Keyword cTestScriptKeyword_12 = (Keyword)cGroup.eContents().get(12);
 		private final Assignment cTestScriptAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cTestScriptVSVSFixedSectionParserRuleCall_13_0 = (RuleCall)cTestScriptAssignment_13.eContents().get(0);
+		private final RuleCall cTestScriptVSVSFixedTestSectionParserRuleCall_13_0 = (RuleCall)cTestScriptAssignment_13.eContents().get(0);
 		private final Keyword cTestScriptKeyword_14 = (Keyword)cGroup.eContents().get(14);
 		private final Keyword cTestProcedureKeyword_15 = (Keyword)cGroup.eContents().get(15);
 		
@@ -2256,16 +2280,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'<TestProcedure'
 		//	'name=' name=STRING
 		//	'>'
-		//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-		//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+		//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		//	procedureSteps=VSVSProcedureSteps
-		//	'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
+		//	'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 		//	'</TestProcedure>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedSection '</Identifier>' '<Purpose>'
-		//purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
-		//procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSFixedSection '</TestScript>' '</TestProcedure>'
+		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedTestSection '</Identifier>' '<Purpose>'
+		//purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSFixedTestSection '</TestScript>' '</TestProcedure>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestProcedure'
@@ -2286,11 +2310,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Identifier>'
 		public Keyword getIdentifierKeyword_4() { return cIdentifierKeyword_4; }
 		
-		//identifier=VSVSFixedSection
+		//identifier=VSVSFixedTestSection
 		public Assignment getIdentifierAssignment_5() { return cIdentifierAssignment_5; }
 		
-		//VSVSFixedSection
-		public RuleCall getIdentifierVSVSFixedSectionParserRuleCall_5_0() { return cIdentifierVSVSFixedSectionParserRuleCall_5_0; }
+		//VSVSFixedTestSection
+		public RuleCall getIdentifierVSVSFixedTestSectionParserRuleCall_5_0() { return cIdentifierVSVSFixedTestSectionParserRuleCall_5_0; }
 		
 		//'</Identifier>'
 		public Keyword getIdentifierKeyword_6() { return cIdentifierKeyword_6; }
@@ -2298,11 +2322,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Purpose>'
 		public Keyword getPurposeKeyword_7() { return cPurposeKeyword_7; }
 		
-		//purpose=VSVSFixedSection
+		//purpose=VSVSFixedTestSection
 		public Assignment getPurposeAssignment_8() { return cPurposeAssignment_8; }
 		
-		//VSVSFixedSection
-		public RuleCall getPurposeVSVSFixedSectionParserRuleCall_8_0() { return cPurposeVSVSFixedSectionParserRuleCall_8_0; }
+		//VSVSFixedTestSection
+		public RuleCall getPurposeVSVSFixedTestSectionParserRuleCall_8_0() { return cPurposeVSVSFixedTestSectionParserRuleCall_8_0; }
 		
 		//'</Purpose>'
 		public Keyword getPurposeKeyword_9() { return cPurposeKeyword_9; }
@@ -2337,11 +2361,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<TestScript>'
 		public Keyword getTestScriptKeyword_12() { return cTestScriptKeyword_12; }
 		
-		//testScript=VSVSFixedSection
+		//testScript=VSVSFixedTestSection
 		public Assignment getTestScriptAssignment_13() { return cTestScriptAssignment_13; }
 		
-		//VSVSFixedSection
-		public RuleCall getTestScriptVSVSFixedSectionParserRuleCall_13_0() { return cTestScriptVSVSFixedSectionParserRuleCall_13_0; }
+		//VSVSFixedTestSection
+		public RuleCall getTestScriptVSVSFixedTestSectionParserRuleCall_13_0() { return cTestScriptVSVSFixedTestSectionParserRuleCall_13_0; }
 		
 		//'</TestScript>'
 		public Keyword getTestScriptKeyword_14() { return cTestScriptKeyword_14; }
@@ -5372,6 +5396,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DMergeTypeElements eDMergeType;
 	private final DApplicableDocumentElements pDApplicableDocument;
 	private final DReferenceDocumentElements pDReferenceDocument;
+	private final VSVSFixedTestSectionElements pVSVSFixedTestSection;
 	private final VSVSFixedSectionElements pVSVSFixedSection;
 	private final VSVSInstantiableSectionElements pVSVSInstantiableSection;
 	private final VSVSIntroductionElements pVSVSIntroduction;
@@ -5458,6 +5483,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.eDMergeType = new DMergeTypeElements();
 		this.pDApplicableDocument = new DApplicableDocumentElements();
 		this.pDReferenceDocument = new DReferenceDocumentElements();
+		this.pVSVSFixedTestSection = new VSVSFixedTestSectionElements();
 		this.pVSVSFixedSection = new VSVSFixedSectionElements();
 		this.pVSVSInstantiableSection = new VSVSInstantiableSectionElements();
 		this.pVSVSIntroduction = new VSVSIntroductionElements();
@@ -5810,6 +5836,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDReferenceDocumentAccess().getRule();
 	}
 	
+	//VSVSFixedTestSection:
+	//	{VSVSFixedTestSection} body=DBody?;
+	public VSVSFixedTestSectionElements getVSVSFixedTestSectionAccess() {
+		return pVSVSFixedTestSection;
+	}
+	
+	public ParserRule getVSVSFixedTestSectionRule() {
+		return getVSVSFixedTestSectionAccess().getRule();
+	}
+	
 	//VSVSFixedSection:
 	//	{VSVSFixedSection} body=DBody?
 	//	svsInstatiableSubsections+=VSVSInstantiableSection*;
@@ -6060,13 +6096,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<TestCase'
 	//	'name=' name=STRING
 	//	'>'
-	//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-	//	'<Inputs>' inputs=VSVSFixedSection '</Inputs>'
-	//	'<Outputs>' outputs=VSVSFixedSection '</Outputs>'
-	//	'<PassFailCriteria>' passFailCriteria=VSVSFixedSection '</PassFailCriteria>'
-	//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection '</EnvironmentalNeeds>'
-	//	'<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-	//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>' ('<ValidatingItem'
+	//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+	//	'<Inputs>' inputs=VSVSFixedTestSection '</Inputs>'
+	//	'<Outputs>' outputs=VSVSFixedTestSection '</Outputs>'
+	//	'<PassFailCriteria>' passFailCriteria=VSVSFixedTestSection '</PassFailCriteria>'
+	//	'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedTestSection '</EnvironmentalNeeds>'
+	//	'<SpecialConstraints>' specialConstraints=VSVSFixedTestSection '</SpecialConstraints>'
+	//	'<InterfaceDependencies>' interfaceDependencies=VSVSFixedTestSection '</InterfaceDependencies>' ('<ValidatingItem'
 	//	'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 	//	'</TestCase>';
 	public VSVSTestCaseElements getVSVSTestCaseAccess() {
@@ -6081,10 +6117,10 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<TestProcedure'
 	//	'name=' name=STRING
 	//	'>'
-	//	'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-	//	'<Purpose>' purpose=VSVSFixedSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+	//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+	//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 	//	procedureSteps=VSVSProcedureSteps
-	//	'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
+	//	'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 	//	'</TestProcedure>';
 	public VSVSTestProcedureElements getVSVSTestProcedureAccess() {
 		return pVSVSTestProcedure;

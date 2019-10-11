@@ -1120,6 +1120,52 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_DESIGN_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedTestSection()
+	 * @generated
+	 */
+	int VSVS_FIXED_TEST_SECTION = 15;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_FIXED_TEST_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_FIXED_TEST_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Fixed Test Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_FIXED_TEST_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>VSVS Fixed Test Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_FIXED_TEST_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestCasesImpl <em>VSVS Test Cases</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1127,7 +1173,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCases()
 	 * @generated
 	 */
-	int VSVS_TEST_CASES = 15;
+	int VSVS_TEST_CASES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1191,7 +1237,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCase()
 	 * @generated
 	 */
-	int VSVS_TEST_CASE = 16;
+	int VSVS_TEST_CASE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1318,7 +1364,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedures()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURES = 17;
+	int VSVS_TEST_PROCEDURES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1373,7 +1419,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedure()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURE = 18;
+	int VSVS_TEST_PROCEDURE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1464,7 +1510,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEPS = 19;
+	int VSVS_PROCEDURE_STEPS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1501,7 +1547,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureStep()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEP = 20;
+	int VSVS_PROCEDURE_STEP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1628,7 +1674,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUTS = 21;
+	int VSVS_STEP_INPUTS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Input level 3</b></em>' containment reference list.
@@ -1692,7 +1738,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUTS = 22;
+	int VSVS_STEP_OUTPUTS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
@@ -1783,7 +1829,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepSpecialPackets()
 	 * @generated
 	 */
-	int VSVS_STEP_SPECIAL_PACKETS = 23;
+	int VSVS_STEP_SPECIAL_PACKETS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Enable</b></em>' containment reference list.
@@ -1847,7 +1893,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepEnableDisable()
 	 * @generated
 	 */
-	int VSVS_STEP_ENABLE_DISABLE = 24;
+	int VSVS_STEP_ENABLE_DISABLE = 25;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1884,7 +1930,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentSteps()
 	 * @generated
 	 */
-	int VSVS_STEP_CONCURRENT_STEPS = 25;
+	int VSVS_STEP_CONCURRENT_STEPS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Next Step</b></em>' containment reference.
@@ -1930,7 +1976,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepNextStep()
 	 * @generated
 	 */
-	int VSVS_STEP_NEXT_STEP = 26;
+	int VSVS_STEP_NEXT_STEP = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1976,7 +2022,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentStep()
 	 * @generated
 	 */
-	int VSVS_STEP_CONCURRENT_STEP = 27;
+	int VSVS_STEP_CONCURRENT_STEP = 28;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2013,7 +2059,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInput()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT = 28;
+	int VSVS_STEP_INPUT = 29;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2077,7 +2123,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel3()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL3 = 29;
+	int VSVS_STEP_INPUT_LEVEL3 = 30;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2213,7 +2259,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel2()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL2 = 30;
+	int VSVS_STEP_INPUT_LEVEL2 = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2331,7 +2377,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel1()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL1 = 31;
+	int VSVS_STEP_INPUT_LEVEL1 = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2431,7 +2477,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel0()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL0 = 32;
+	int VSVS_STEP_INPUT_LEVEL0 = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2513,7 +2559,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutput()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT = 33;
+	int VSVS_STEP_OUTPUT = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2577,7 +2623,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel3()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL3 = 34;
+	int VSVS_STEP_OUTPUT_LEVEL3 = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2740,7 +2786,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel2()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL2 = 35;
+	int VSVS_STEP_OUTPUT_LEVEL2 = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2876,7 +2922,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel1()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL1 = 36;
+	int VSVS_STEP_OUTPUT_LEVEL1 = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2985,7 +3031,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel0()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL0 = 37;
+	int VSVS_STEP_OUTPUT_LEVEL0 = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3067,7 +3113,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepFilter()
 	 * @generated
 	 */
-	int VSVS_STEP_FILTER = 38;
+	int VSVS_STEP_FILTER = 39;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -3113,7 +3159,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAnalysisInspectionReview()
 	 * @generated
 	 */
-	int VSVS_ANALYSIS_INSPECTION_REVIEW = 39;
+	int VSVS_ANALYSIS_INSPECTION_REVIEW = 40;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3168,7 +3214,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestPlatformRequirements()
 	 * @generated
 	 */
-	int VSVS_TEST_PLATFORM_REQUIREMENTS = 40;
+	int VSVS_TEST_PLATFORM_REQUIREMENTS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3223,7 +3269,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAdditionalInformation()
 	 * @generated
 	 */
-	int VSVS_ADDITIONAL_INFORMATION = 41;
+	int VSVS_ADDITIONAL_INFORMATION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3278,7 +3324,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepMode()
 	 * @generated
 	 */
-	int VSVS_STEP_MODE = 42;
+	int VSVS_STEP_MODE = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit <em>VSVS Step Unit</em>}' enum.
@@ -3288,7 +3334,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepUnit()
 	 * @generated
 	 */
-	int VSVS_STEP_UNIT = 43;
+	int VSVS_STEP_UNIT = 44;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode <em>VSVS Step Checkmode</em>}' enum.
@@ -3298,7 +3344,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepCheckmode()
 	 * @generated
 	 */
-	int VSVS_STEP_CHECKMODE = 44;
+	int VSVS_STEP_CHECKMODE = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo <em>VSVS Step Yes No</em>}' enum.
@@ -3308,7 +3354,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepYesNo()
 	 * @generated
 	 */
-	int VSVS_STEP_YES_NO = 45;
+	int VSVS_STEP_YES_NO = 46;
 
 
 	/**
@@ -3878,6 +3924,27 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVSTestDesign_ApproachRefinements();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection <em>VSVS Fixed Test Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Fixed Test Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection
+	 * @generated
+	 */
+	EClass getVSVSFixedTestSection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody()
+	 * @see #getVSVSFixedTestSection()
+	 * @generated
+	 */
+	EReference getVSVSFixedTestSection_Body();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCases <em>VSVS Test Cases</em>}'.
@@ -5831,6 +5898,24 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = eINSTANCE.getVSVSTestDesign_ApproachRefinements();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedTestSection()
+		 * @generated
+		 */
+		EClass VSVS_FIXED_TEST_SECTION = eINSTANCE.getVSVSFixedTestSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_FIXED_TEST_SECTION__BODY = eINSTANCE.getVSVSFixedTestSection_Body();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestCasesImpl <em>VSVS Test Cases</em>}' class.

@@ -150,11 +150,15 @@ DReferenceDocument returns doc::DReferenceDocument:
 		('date=' date=STRING)?
 	'/>';
 
+VSVSFixedTestSection returns VSVSFixedTestSection:
+{VSVSFixedTestSection}
+	(body=DBody)?;
+
 VSVSFixedSection returns VSVSFixedSection:
 {VSVSFixedSection}
 	(body=DBody)?
 	(svsInstatiableSubsections+=VSVSInstantiableSection)*;
-
+	
 VSVSInstantiableSection returns VSVSInstantiableSection:
 	'<subsection'
 		'name=' name=STRING
@@ -275,13 +279,13 @@ VSVSTestCase returns VSVSTestCase:
 	'<TestCase'
 		'name=' name=STRING
 		'>'
-		'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-		'<Inputs>' inputs=VSVSFixedSection '</Inputs>'
-		'<Outputs>' outputs=VSVSFixedSection '</Outputs>'
-		'<PassFailCriteria>' passFailCriteria=VSVSFixedSection '</PassFailCriteria>'
-		'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedSection '</EnvironmentalNeeds>'
-		'<SpecialConstraints>' specialConstraints=VSVSFixedSection '</SpecialConstraints>'
-		'<InterfaceDependencies>' interfaceDependencies=VSVSFixedSection '</InterfaceDependencies>'
+		'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+		'<Inputs>' inputs=VSVSFixedTestSection '</Inputs>'
+		'<Outputs>' outputs=VSVSFixedTestSection '</Outputs>'
+		'<PassFailCriteria>' passFailCriteria=VSVSFixedTestSection '</PassFailCriteria>'
+		'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedTestSection '</EnvironmentalNeeds>'
+		'<SpecialConstraints>' specialConstraints=VSVSFixedTestSection '</SpecialConstraints>'
+		'<InterfaceDependencies>' interfaceDependencies=VSVSFixedTestSection '</InterfaceDependencies>'
 		('<ValidatingItem' 'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 	'</TestCase>';
 
@@ -289,11 +293,11 @@ VSVSTestProcedure returns VSVSTestProcedure:
 	'<TestProcedure'
 		'name=' name=STRING
 		'>'
-		'<Identifier>' identifier=VSVSFixedSection '</Identifier>'
-		'<Purpose>' purpose=VSVSFixedSection '</Purpose>'
+		'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
+		'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>'
 		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
 		procedureSteps=VSVSProcedureSteps
-		'<TestScript>' testScript=VSVSFixedSection '</TestScript>'
+		'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 	'</TestProcedure>';
 
 VSVSProcedureSteps returns VSVSProcedureSteps:

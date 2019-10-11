@@ -12,8 +12,7 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
@@ -80,7 +79,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedSection identifier;
+	protected VSVSFixedTestSection identifier;
 
 	/**
 	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' containment reference.
@@ -90,7 +89,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedSection purpose;
+	protected VSVSFixedTestSection purpose;
 
 	/**
 	 * The cached value of the '{@link #getProcedureSteps() <em>Procedure Steps</em>}' containment reference.
@@ -110,7 +109,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedSection testScript;
+	protected VSVSFixedTestSection testScript;
 
 	/**
 	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' reference list.
@@ -167,7 +166,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedSection getIdentifier() {
+	public VSVSFixedTestSection getIdentifier() {
 		return identifier;
 	}
 
@@ -176,8 +175,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIdentifier(VSVSFixedSection newIdentifier, NotificationChain msgs) {
-		VSVSFixedSection oldIdentifier = identifier;
+	public NotificationChain basicSetIdentifier(VSVSFixedTestSection newIdentifier, NotificationChain msgs) {
+		VSVSFixedTestSection oldIdentifier = identifier;
 		identifier = newIdentifier;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER, oldIdentifier, newIdentifier);
@@ -191,7 +190,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentifier(VSVSFixedSection newIdentifier) {
+	public void setIdentifier(VSVSFixedTestSection newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
 			if (identifier != null)
@@ -210,7 +209,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedSection getPurpose() {
+	public VSVSFixedTestSection getPurpose() {
 		return purpose;
 	}
 
@@ -219,8 +218,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPurpose(VSVSFixedSection newPurpose, NotificationChain msgs) {
-		VSVSFixedSection oldPurpose = purpose;
+	public NotificationChain basicSetPurpose(VSVSFixedTestSection newPurpose, NotificationChain msgs) {
+		VSVSFixedTestSection oldPurpose = purpose;
 		purpose = newPurpose;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__PURPOSE, oldPurpose, newPurpose);
@@ -234,7 +233,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurpose(VSVSFixedSection newPurpose) {
+	public void setPurpose(VSVSFixedTestSection newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
 			if (purpose != null)
@@ -296,7 +295,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedSection getTestScript() {
+	public VSVSFixedTestSection getTestScript() {
 		return testScript;
 	}
 
@@ -305,8 +304,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTestScript(VSVSFixedSection newTestScript, NotificationChain msgs) {
-		VSVSFixedSection oldTestScript = testScript;
+	public NotificationChain basicSetTestScript(VSVSFixedTestSection newTestScript, NotificationChain msgs) {
+		VSVSFixedTestSection oldTestScript = testScript;
 		testScript = newTestScript;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT, oldTestScript, newTestScript);
@@ -320,7 +319,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTestScript(VSVSFixedSection newTestScript) {
+	public void setTestScript(VSVSFixedTestSection newTestScript) {
 		if (newTestScript != testScript) {
 			NotificationChain msgs = null;
 			if (testScript != null)
@@ -403,16 +402,16 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setName((String)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
-				setIdentifier((VSVSFixedSection)newValue);
+				setIdentifier((VSVSFixedTestSection)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
-				setPurpose((VSVSFixedSection)newValue);
+				setPurpose((VSVSFixedTestSection)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
-				setTestScript((VSVSFixedSection)newValue);
+				setTestScript((VSVSFixedTestSection)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
 				getTestCase().clear();
@@ -434,16 +433,16 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setName(NAME_EDEFAULT);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
-				setIdentifier((VSVSFixedSection)null);
+				setIdentifier((VSVSFixedTestSection)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
-				setPurpose((VSVSFixedSection)null);
+				setPurpose((VSVSFixedTestSection)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
-				setTestScript((VSVSFixedSection)null);
+				setTestScript((VSVSFixedTestSection)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
 				getTestCase().clear();

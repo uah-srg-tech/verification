@@ -148,6 +148,10 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSTestDesignAdapter();
 			}
 			@Override
+			public Adapter caseVSVSFixedTestSection(VSVSFixedTestSection object) {
+				return createVSVSFixedTestSectionAdapter();
+			}
+			@Override
 			public Adapter caseVSVSTestCases(VSVSTestCases object) {
 				return createVSVSTestCasesAdapter();
 			}
@@ -518,6 +522,20 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVSTestDesignAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection <em>VSVS Fixed Test Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection
+	 * @generated
+	 */
+	public Adapter createVSVSFixedTestSectionAdapter() {
 		return null;
 	}
 

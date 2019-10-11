@@ -46,12 +46,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference.
-	 * @see #setIdentifier(VSVSFixedSection)
+	 * @see #setIdentifier(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_Identifier()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getIdentifier();
+	VSVSFixedTestSection getIdentifier();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getIdentifier <em>Identifier</em>}' containment reference.
@@ -61,7 +61,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getIdentifier()
 	 * @generated
 	 */
-	void setIdentifier(VSVSFixedSection value);
+	void setIdentifier(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
@@ -72,12 +72,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Inputs</em>' containment reference.
-	 * @see #setInputs(VSVSFixedSection)
+	 * @see #setInputs(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_Inputs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getInputs();
+	VSVSFixedTestSection getInputs();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getInputs <em>Inputs</em>}' containment reference.
@@ -87,7 +87,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getInputs()
 	 * @generated
 	 */
-	void setInputs(VSVSFixedSection value);
+	void setInputs(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference.
@@ -98,12 +98,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Outputs</em>' containment reference.
-	 * @see #setOutputs(VSVSFixedSection)
+	 * @see #setOutputs(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_Outputs()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getOutputs();
+	VSVSFixedTestSection getOutputs();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getOutputs <em>Outputs</em>}' containment reference.
@@ -113,7 +113,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getOutputs()
 	 * @generated
 	 */
-	void setOutputs(VSVSFixedSection value);
+	void setOutputs(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Pass Fail Criteria</b></em>' containment reference.
@@ -124,12 +124,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Pass Fail Criteria</em>' containment reference.
-	 * @see #setPassFailCriteria(VSVSFixedSection)
+	 * @see #setPassFailCriteria(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_PassFailCriteria()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getPassFailCriteria();
+	VSVSFixedTestSection getPassFailCriteria();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getPassFailCriteria <em>Pass Fail Criteria</em>}' containment reference.
@@ -139,7 +139,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getPassFailCriteria()
 	 * @generated
 	 */
-	void setPassFailCriteria(VSVSFixedSection value);
+	void setPassFailCriteria(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Environmental Needs</b></em>' containment reference.
@@ -150,12 +150,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Environmental Needs</em>' containment reference.
-	 * @see #setEnvironmentalNeeds(VSVSFixedSection)
+	 * @see #setEnvironmentalNeeds(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_EnvironmentalNeeds()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getEnvironmentalNeeds();
+	VSVSFixedTestSection getEnvironmentalNeeds();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getEnvironmentalNeeds <em>Environmental Needs</em>}' containment reference.
@@ -165,7 +165,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getEnvironmentalNeeds()
 	 * @generated
 	 */
-	void setEnvironmentalNeeds(VSVSFixedSection value);
+	void setEnvironmentalNeeds(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Special Constraints</b></em>' containment reference.
@@ -176,12 +176,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Special Constraints</em>' containment reference.
-	 * @see #setSpecialConstraints(VSVSFixedSection)
+	 * @see #setSpecialConstraints(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_SpecialConstraints()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getSpecialConstraints();
+	VSVSFixedTestSection getSpecialConstraints();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getSpecialConstraints <em>Special Constraints</em>}' containment reference.
@@ -191,7 +191,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getSpecialConstraints()
 	 * @generated
 	 */
-	void setSpecialConstraints(VSVSFixedSection value);
+	void setSpecialConstraints(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Interface Dependencies</b></em>' containment reference.
@@ -202,12 +202,12 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface Dependencies</em>' containment reference.
-	 * @see #setInterfaceDependencies(VSVSFixedSection)
+	 * @see #setInterfaceDependencies(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestCase_InterfaceDependencies()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getInterfaceDependencies();
+	VSVSFixedTestSection getInterfaceDependencies();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCase#getInterfaceDependencies <em>Interface Dependencies</em>}' containment reference.
@@ -217,6 +217,6 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @see #getInterfaceDependencies()
 	 * @generated
 	 */
-	void setInterfaceDependencies(VSVSFixedSection value);
+	void setInterfaceDependencies(VSVSFixedTestSection value);
 
 } // VSVSTestCase

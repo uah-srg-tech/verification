@@ -79,6 +79,7 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_TASK_IDENTIFICATION: return createVSVSTaskIdentification();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN: return createVSVSTestingSpecificationDesign();
 			case svsPackage.VSVS_TEST_DESIGN: return createVSVSTestDesign();
+			case svsPackage.VSVS_FIXED_TEST_SECTION: return createVSVSFixedTestSection();
 			case svsPackage.VSVS_TEST_CASES: return createVSVSTestCases();
 			case svsPackage.VSVS_TEST_CASE: return createVSVSTestCase();
 			case svsPackage.VSVS_TEST_PROCEDURES: return createVSVSTestProcedures();
@@ -290,6 +291,16 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSTestDesign createVSVSTestDesign() {
 		VSVSTestDesignImpl vsvsTestDesign = new VSVSTestDesignImpl();
 		return vsvsTestDesign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSFixedTestSection createVSVSFixedTestSection() {
+		VSVSFixedTestSectionImpl vsvsFixedTestSection = new VSVSFixedTestSectionImpl();
+		return vsvsFixedTestSection;
 	}
 
 	/**

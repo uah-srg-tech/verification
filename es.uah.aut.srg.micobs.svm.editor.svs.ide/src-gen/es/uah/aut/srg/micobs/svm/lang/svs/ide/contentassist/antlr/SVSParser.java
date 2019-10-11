@@ -84,6 +84,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7(), "rule__DReferenceDocument__Group_7__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_7_2(), "rule__DReferenceDocument__Group_7_2__0");
 					put(grammarAccess.getDReferenceDocumentAccess().getGroup_8(), "rule__DReferenceDocument__Group_8__0");
+					put(grammarAccess.getVSVSFixedTestSectionAccess().getGroup(), "rule__VSVSFixedTestSection__Group__0");
 					put(grammarAccess.getVSVSFixedSectionAccess().getGroup(), "rule__VSVSFixedSection__Group__0");
 					put(grammarAccess.getVSVSInstantiableSectionAccess().getGroup(), "rule__VSVSInstantiableSection__Group__0");
 					put(grammarAccess.getVSVSIntroductionAccess().getGroup(), "rule__VSVSIntroduction__Group__0");
@@ -237,6 +238,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDReferenceDocumentAccess().getIssueAssignment_7_1(), "rule__DReferenceDocument__IssueAssignment_7_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getRevisionAssignment_7_2_1(), "rule__DReferenceDocument__RevisionAssignment_7_2_1");
 					put(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1(), "rule__DReferenceDocument__DateAssignment_8_1");
+					put(grammarAccess.getVSVSFixedTestSectionAccess().getBodyAssignment_1(), "rule__VSVSFixedTestSection__BodyAssignment_1");
 					put(grammarAccess.getVSVSFixedSectionAccess().getBodyAssignment_1(), "rule__VSVSFixedSection__BodyAssignment_1");
 					put(grammarAccess.getVSVSFixedSectionAccess().getSvsInstatiableSubsectionsAssignment_2(), "rule__VSVSFixedSection__SvsInstatiableSubsectionsAssignment_2");
 					put(grammarAccess.getVSVSInstantiableSectionAccess().getNameAssignment_2(), "rule__VSVSInstantiableSection__NameAssignment_2");

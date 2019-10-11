@@ -203,6 +203,14 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVS_FIXED_TEST_SECTION: {
+				VSVSFixedTestSection vsvsFixedTestSection = (VSVSFixedTestSection)theEObject;
+				T result = caseVSVSFixedTestSection(vsvsFixedTestSection);
+				if (result == null) result = caseDFixedSection(vsvsFixedTestSection);
+				if (result == null) result = caseDAbstractSection(vsvsFixedTestSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_TEST_CASES: {
 				VSVSTestCases vsvsTestCases = (VSVSTestCases)theEObject;
 				T result = caseVSVSTestCases(vsvsTestCases);
@@ -619,6 +627,21 @@ public class svsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVSTestDesign(VSVSTestDesign object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Fixed Test Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Fixed Test Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSFixedTestSection(VSVSFixedTestSection object) {
 		return null;
 	}
 

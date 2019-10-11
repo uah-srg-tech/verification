@@ -71,12 +71,12 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Identifier</em>' containment reference.
-	 * @see #setIdentifier(VSVSFixedSection)
+	 * @see #setIdentifier(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_Identifier()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getIdentifier();
+	VSVSFixedTestSection getIdentifier();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getIdentifier <em>Identifier</em>}' containment reference.
@@ -86,7 +86,7 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @see #getIdentifier()
 	 * @generated
 	 */
-	void setIdentifier(VSVSFixedSection value);
+	void setIdentifier(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Purpose</b></em>' containment reference.
@@ -97,12 +97,12 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Purpose</em>' containment reference.
-	 * @see #setPurpose(VSVSFixedSection)
+	 * @see #setPurpose(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_Purpose()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSFixedSection getPurpose();
+	VSVSFixedTestSection getPurpose();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getPurpose <em>Purpose</em>}' containment reference.
@@ -112,7 +112,7 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @see #getPurpose()
 	 * @generated
 	 */
-	void setPurpose(VSVSFixedSection value);
+	void setPurpose(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Procedure Steps</b></em>' containment reference.
@@ -149,12 +149,12 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Test Script</em>' containment reference.
-	 * @see #setTestScript(VSVSFixedSection)
+	 * @see #setTestScript(VSVSFixedTestSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_TestScript()
 	 * @model containment="true"
 	 * @generated
 	 */
-	VSVSFixedSection getTestScript();
+	VSVSFixedTestSection getTestScript();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestScript <em>Test Script</em>}' containment reference.
@@ -164,7 +164,7 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @see #getTestScript()
 	 * @generated
 	 */
-	void setTestScript(VSVSFixedSection value);
+	void setTestScript(VSVSFixedTestSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Test Case</b></em>' reference list.

@@ -35,6 +35,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDefinition;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
@@ -161,6 +162,9 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case svsPackage.VSVS_FIXED_SECTION:
 				sequence_VSVSFixedSection(context, (VSVSFixedSection) semanticObject); 
+				return; 
+			case svsPackage.VSVS_FIXED_TEST_SECTION:
+				sequence_VSVSFixedTestSection(context, (VSVSFixedTestSection) semanticObject); 
 				return; 
 			case svsPackage.VSVS_INSTANTIABLE_SECTION:
 				sequence_VSVSInstantiableSection(context, (VSVSInstantiableSection) semanticObject); 
@@ -612,6 +616,18 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (body=DBody? svsInstatiableSubsections+=VSVSInstantiableSection*)
 	 */
 	protected void sequence_VSVSFixedSection(ISerializationContext context, VSVSFixedSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSFixedTestSection returns VSVSFixedTestSection
+	 *
+	 * Constraint:
+	 *     body=DBody?
+	 */
+	protected void sequence_VSVSFixedTestSection(ISerializationContext context, VSVSFixedTestSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1178,13 +1194,13 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         identifier=VSVSFixedSection 
-	 *         inputs=VSVSFixedSection 
-	 *         outputs=VSVSFixedSection 
-	 *         passFailCriteria=VSVSFixedSection 
-	 *         environmentalNeeds=VSVSFixedSection 
-	 *         specialConstraints=VSVSFixedSection 
-	 *         interfaceDependencies=VSVSFixedSection 
+	 *         identifier=VSVSFixedTestSection 
+	 *         inputs=VSVSFixedTestSection 
+	 *         outputs=VSVSFixedTestSection 
+	 *         passFailCriteria=VSVSFixedTestSection 
+	 *         environmentalNeeds=VSVSFixedTestSection 
+	 *         specialConstraints=VSVSFixedTestSection 
+	 *         interfaceDependencies=VSVSFixedTestSection 
 	 *         validatingItem+=[VTraceableDocumentAbstractItem|STRING]+
 	 *     )
 	 */
@@ -1251,11 +1267,11 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         identifier=VSVSFixedSection 
-	 *         purpose=VSVSFixedSection 
+	 *         identifier=VSVSFixedTestSection 
+	 *         purpose=VSVSFixedTestSection 
 	 *         testCase+=[VSVSTestCase|STRING]* 
 	 *         procedureSteps=VSVSProcedureSteps 
-	 *         testScript=VSVSFixedSection
+	 *         testScript=VSVSFixedTestSection
 	 *     )
 	 */
 	protected void sequence_VSVSTestProcedure(ISerializationContext context, VSVSTestProcedure semanticObject) {

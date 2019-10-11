@@ -532,6 +532,31 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+// Entry rule entryRuleVSVSFixedTestSection
+entryRuleVSVSFixedTestSection
+:
+{ before(grammarAccess.getVSVSFixedTestSectionRule()); }
+	 ruleVSVSFixedTestSection
+{ after(grammarAccess.getVSVSFixedTestSectionRule()); } 
+	 EOF 
+;
+
+// Rule VSVSFixedTestSection
+ruleVSVSFixedTestSection 
+	@init {
+		int stackSize = keepStackSize();
+	}
+	:
+	(
+		{ before(grammarAccess.getVSVSFixedTestSectionAccess().getGroup()); }
+		(rule__VSVSFixedTestSection__Group__0)
+		{ after(grammarAccess.getVSVSFixedTestSectionAccess().getGroup()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 // Entry rule entryRuleVSVSFixedSection
 entryRuleVSVSFixedSection
 :
@@ -5853,6 +5878,60 @@ rule__DReferenceDocument__Group_8__1__Impl
 	{ before(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1()); }
 	(rule__DReferenceDocument__DateAssignment_8_1)
 	{ after(grammarAccess.getDReferenceDocumentAccess().getDateAssignment_8_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VSVSFixedTestSection__Group__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSFixedTestSection__Group__0__Impl
+	rule__VSVSFixedTestSection__Group__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSFixedTestSection__Group__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSFixedTestSectionAccess().getVSVSFixedTestSectionAction_0()); }
+	()
+	{ after(grammarAccess.getVSVSFixedTestSectionAccess().getVSVSFixedTestSectionAction_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSFixedTestSection__Group__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSFixedTestSection__Group__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSFixedTestSection__Group__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSFixedTestSectionAccess().getBodyAssignment_1()); }
+	(rule__VSVSFixedTestSection__BodyAssignment_1)?
+	{ after(grammarAccess.getVSVSFixedTestSectionAccess().getBodyAssignment_1()); }
 )
 ;
 finally {
@@ -21961,6 +22040,21 @@ finally {
 	restoreStackSize(stackSize);
 }
 
+rule__VSVSFixedTestSection__BodyAssignment_1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getVSVSFixedTestSectionAccess().getBodyDBodyParserRuleCall_1_0()); }
+		ruleDBody
+		{ after(grammarAccess.getVSVSFixedTestSectionAccess().getBodyDBodyParserRuleCall_1_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
 rule__VSVSFixedSection__BodyAssignment_1
 	@init {
 		int stackSize = keepStackSize();
@@ -22597,9 +22691,9 @@ rule__VSVSTestCase__IdentifierAssignment_5
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getIdentifierVSVSFixedSectionParserRuleCall_5_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getIdentifierVSVSFixedSectionParserRuleCall_5_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getIdentifierVSVSFixedTestSectionParserRuleCall_5_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getIdentifierVSVSFixedTestSectionParserRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -22612,9 +22706,9 @@ rule__VSVSTestCase__InputsAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getInputsVSVSFixedSectionParserRuleCall_8_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getInputsVSVSFixedSectionParserRuleCall_8_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getInputsVSVSFixedTestSectionParserRuleCall_8_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getInputsVSVSFixedTestSectionParserRuleCall_8_0()); }
 	)
 ;
 finally {
@@ -22627,9 +22721,9 @@ rule__VSVSTestCase__OutputsAssignment_11
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getOutputsVSVSFixedSectionParserRuleCall_11_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getOutputsVSVSFixedSectionParserRuleCall_11_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getOutputsVSVSFixedTestSectionParserRuleCall_11_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getOutputsVSVSFixedTestSectionParserRuleCall_11_0()); }
 	)
 ;
 finally {
@@ -22642,9 +22736,9 @@ rule__VSVSTestCase__PassFailCriteriaAssignment_14
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getPassFailCriteriaVSVSFixedSectionParserRuleCall_14_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getPassFailCriteriaVSVSFixedSectionParserRuleCall_14_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getPassFailCriteriaVSVSFixedTestSectionParserRuleCall_14_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getPassFailCriteriaVSVSFixedTestSectionParserRuleCall_14_0()); }
 	)
 ;
 finally {
@@ -22657,9 +22751,9 @@ rule__VSVSTestCase__EnvironmentalNeedsAssignment_17
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getEnvironmentalNeedsVSVSFixedSectionParserRuleCall_17_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getEnvironmentalNeedsVSVSFixedSectionParserRuleCall_17_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getEnvironmentalNeedsVSVSFixedTestSectionParserRuleCall_17_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getEnvironmentalNeedsVSVSFixedTestSectionParserRuleCall_17_0()); }
 	)
 ;
 finally {
@@ -22672,9 +22766,9 @@ rule__VSVSTestCase__SpecialConstraintsAssignment_20
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getSpecialConstraintsVSVSFixedSectionParserRuleCall_20_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getSpecialConstraintsVSVSFixedSectionParserRuleCall_20_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getSpecialConstraintsVSVSFixedTestSectionParserRuleCall_20_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getSpecialConstraintsVSVSFixedTestSectionParserRuleCall_20_0()); }
 	)
 ;
 finally {
@@ -22687,9 +22781,9 @@ rule__VSVSTestCase__InterfaceDependenciesAssignment_23
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestCaseAccess().getInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestCaseAccess().getInterfaceDependenciesVSVSFixedSectionParserRuleCall_23_0()); }
+		{ before(grammarAccess.getVSVSTestCaseAccess().getInterfaceDependenciesVSVSFixedTestSectionParserRuleCall_23_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestCaseAccess().getInterfaceDependenciesVSVSFixedTestSectionParserRuleCall_23_0()); }
 	)
 ;
 finally {
@@ -22736,9 +22830,9 @@ rule__VSVSTestProcedure__IdentifierAssignment_5
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestProcedureAccess().getIdentifierVSVSFixedSectionParserRuleCall_5_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestProcedureAccess().getIdentifierVSVSFixedSectionParserRuleCall_5_0()); }
+		{ before(grammarAccess.getVSVSTestProcedureAccess().getIdentifierVSVSFixedTestSectionParserRuleCall_5_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestProcedureAccess().getIdentifierVSVSFixedTestSectionParserRuleCall_5_0()); }
 	)
 ;
 finally {
@@ -22751,9 +22845,9 @@ rule__VSVSTestProcedure__PurposeAssignment_8
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestProcedureAccess().getPurposeVSVSFixedSectionParserRuleCall_8_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestProcedureAccess().getPurposeVSVSFixedSectionParserRuleCall_8_0()); }
+		{ before(grammarAccess.getVSVSTestProcedureAccess().getPurposeVSVSFixedTestSectionParserRuleCall_8_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestProcedureAccess().getPurposeVSVSFixedTestSectionParserRuleCall_8_0()); }
 	)
 ;
 finally {
@@ -22800,9 +22894,9 @@ rule__VSVSTestProcedure__TestScriptAssignment_13
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_13_0()); }
-		ruleVSVSFixedSection
-		{ after(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedSectionParserRuleCall_13_0()); }
+		{ before(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedTestSectionParserRuleCall_13_0()); }
+		ruleVSVSFixedTestSection
+		{ after(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSFixedTestSectionParserRuleCall_13_0()); }
 	)
 ;
 finally {
