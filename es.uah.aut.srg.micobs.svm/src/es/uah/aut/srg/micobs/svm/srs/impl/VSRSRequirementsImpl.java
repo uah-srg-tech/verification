@@ -30,7 +30,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSResourcesRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWConfigurationDeliveryRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWMaintainabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWQualityRequirements;
-import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements;
+import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -63,7 +63,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSecurityPrivacy <em>Security Privacy</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getPortability <em>Portability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwQuality <em>Sw Quality</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwReliabilty <em>Sw Reliabilty</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwReliability <em>Sw Reliability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwMaintainability <em>Sw Maintainability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwSafety <em>Sw Safety</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSRequirementsImpl#getSwConfigurationDelivery <em>Sw Configuration Delivery</em>}</li>
@@ -186,14 +186,14 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 	protected VSRSSWQualityRequirements swQuality;
 
 	/**
-	 * The cached value of the '{@link #getSwReliabilty() <em>Sw Reliabilty</em>}' containment reference.
+	 * The cached value of the '{@link #getSwReliability() <em>Sw Reliability</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getSwReliabilty()
+	 * @see #getSwReliability()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSRSSWReliabiltyRequirements swReliabilty;
+	protected VSRSSWReliabilityRequirements swReliability;
 
 	/**
 	 * The cached value of the '{@link #getSwMaintainability() <em>Sw Maintainability</em>}' containment reference.
@@ -752,8 +752,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSRSSWReliabiltyRequirements getSwReliabilty() {
-		return swReliabilty;
+	public VSRSSWReliabilityRequirements getSwReliability() {
+		return swReliability;
 	}
 
 	/**
@@ -761,11 +761,11 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSwReliabilty(VSRSSWReliabiltyRequirements newSwReliabilty, NotificationChain msgs) {
-		VSRSSWReliabiltyRequirements oldSwReliabilty = swReliabilty;
-		swReliabilty = newSwReliabilty;
+	public NotificationChain basicSetSwReliability(VSRSSWReliabilityRequirements newSwReliability, NotificationChain msgs) {
+		VSRSSWReliabilityRequirements oldSwReliability = swReliability;
+		swReliability = newSwReliability;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY, oldSwReliabilty, newSwReliabilty);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY, oldSwReliability, newSwReliability);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -776,18 +776,18 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSwReliabilty(VSRSSWReliabiltyRequirements newSwReliabilty) {
-		if (newSwReliabilty != swReliabilty) {
+	public void setSwReliability(VSRSSWReliabilityRequirements newSwReliability) {
+		if (newSwReliability != swReliability) {
 			NotificationChain msgs = null;
-			if (swReliabilty != null)
-				msgs = ((InternalEObject)swReliabilty).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY, null, msgs);
-			if (newSwReliabilty != null)
-				msgs = ((InternalEObject)newSwReliabilty).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY, null, msgs);
-			msgs = basicSetSwReliabilty(newSwReliabilty, msgs);
+			if (swReliability != null)
+				msgs = ((InternalEObject)swReliability).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY, null, msgs);
+			if (newSwReliability != null)
+				msgs = ((InternalEObject)newSwReliability).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY, null, msgs);
+			msgs = basicSetSwReliability(newSwReliability, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY, newSwReliabilty, newSwReliabilty));
+			eNotify(new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY, newSwReliability, newSwReliability));
 	}
 
 	/**
@@ -1078,8 +1078,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 				return basicSetPortability(null, msgs);
 			case srsPackage.VSRS_REQUIREMENTS__SW_QUALITY:
 				return basicSetSwQuality(null, msgs);
-			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY:
-				return basicSetSwReliabilty(null, msgs);
+			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY:
+				return basicSetSwReliability(null, msgs);
 			case srsPackage.VSRS_REQUIREMENTS__SW_MAINTAINABILITY:
 				return basicSetSwMaintainability(null, msgs);
 			case srsPackage.VSRS_REQUIREMENTS__SW_SAFETY:
@@ -1126,8 +1126,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 				return getPortability();
 			case srsPackage.VSRS_REQUIREMENTS__SW_QUALITY:
 				return getSwQuality();
-			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY:
-				return getSwReliabilty();
+			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY:
+				return getSwReliability();
 			case srsPackage.VSRS_REQUIREMENTS__SW_MAINTAINABILITY:
 				return getSwMaintainability();
 			case srsPackage.VSRS_REQUIREMENTS__SW_SAFETY:
@@ -1185,8 +1185,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 			case srsPackage.VSRS_REQUIREMENTS__SW_QUALITY:
 				setSwQuality((VSRSSWQualityRequirements)newValue);
 				return;
-			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY:
-				setSwReliabilty((VSRSSWReliabiltyRequirements)newValue);
+			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY:
+				setSwReliability((VSRSSWReliabilityRequirements)newValue);
 				return;
 			case srsPackage.VSRS_REQUIREMENTS__SW_MAINTAINABILITY:
 				setSwMaintainability((VSRSSWMaintainabilityRequirements)newValue);
@@ -1251,8 +1251,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 			case srsPackage.VSRS_REQUIREMENTS__SW_QUALITY:
 				setSwQuality((VSRSSWQualityRequirements)null);
 				return;
-			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY:
-				setSwReliabilty((VSRSSWReliabiltyRequirements)null);
+			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY:
+				setSwReliability((VSRSSWReliabilityRequirements)null);
 				return;
 			case srsPackage.VSRS_REQUIREMENTS__SW_MAINTAINABILITY:
 				setSwMaintainability((VSRSSWMaintainabilityRequirements)null);
@@ -1306,8 +1306,8 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 				return portability != null;
 			case srsPackage.VSRS_REQUIREMENTS__SW_QUALITY:
 				return swQuality != null;
-			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILTY:
-				return swReliabilty != null;
+			case srsPackage.VSRS_REQUIREMENTS__SW_RELIABILITY:
+				return swReliability != null;
 			case srsPackage.VSRS_REQUIREMENTS__SW_MAINTAINABILITY:
 				return swMaintainability != null;
 			case srsPackage.VSRS_REQUIREMENTS__SW_SAFETY:
@@ -1337,7 +1337,7 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 		subsections.add((DAbstractSection) getSecurityPrivacy());
 		subsections.add((DAbstractSection) getPortability());
 		subsections.add((DAbstractSection) getSwQuality());
-		subsections.add((DAbstractSection) getSwReliabilty());
+		subsections.add((DAbstractSection) getSwReliability());
 		subsections.add((DAbstractSection) getSwMaintainability());
 		subsections.add((DAbstractSection) getSwSafety());
 		subsections.add((DAbstractSection) getSwConfigurationDelivery());

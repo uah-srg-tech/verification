@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS Design Requirements</b></em>'.
@@ -21,5 +22,4 @@ package es.uah.aut.srg.micobs.svm.sss;
  * @generated
  */
 public interface VSSSDesignRequirements extends VSSSAbstractRequirementSection {
-
 } // VSSSDesignRequirements

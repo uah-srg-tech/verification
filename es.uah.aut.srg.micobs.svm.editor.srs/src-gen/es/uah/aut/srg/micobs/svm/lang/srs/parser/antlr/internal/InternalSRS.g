@@ -2522,18 +2522,18 @@ ruleVSRSRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSRequirementsAccess().getSwReliabiltyVSRSSWReliabiltyRequirementsParserRuleCall_12_0());
+					newCompositeNode(grammarAccess.getVSRSRequirementsAccess().getSwReliabilityVSRSSWReliabilityRequirementsParserRuleCall_12_0());
 				}
-				lv_swReliabilty_12_0=ruleVSRSSWReliabiltyRequirements
+				lv_swReliability_12_0=ruleVSRSSWReliabilityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSRequirementsRule());
 					}
 					set(
 						$current,
-						"swReliabilty",
-						lv_swReliabilty_12_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSWReliabiltyRequirements");
+						"swReliability",
+						lv_swReliability_12_0,
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSWReliabilityRequirements");
 					afterParserOrEnumRuleCall();
 				}
 			)
@@ -3962,15 +3962,15 @@ ruleVSRSSWQualityRequirements returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleVSRSSWReliabiltyRequirements
-entryRuleVSRSSWReliabiltyRequirements returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSRSSWReliabiltyRequirementsRule()); }
-	iv_ruleVSRSSWReliabiltyRequirements=ruleVSRSSWReliabiltyRequirements
-	{ $current=$iv_ruleVSRSSWReliabiltyRequirements.current; }
+// Entry rule entryRuleVSRSSWReliabilityRequirements
+entryRuleVSRSSWReliabilityRequirements returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSRSSWReliabilityRequirementsRule()); }
+	iv_ruleVSRSSWReliabilityRequirements=ruleVSRSSWReliabilityRequirements
+	{ $current=$iv_ruleVSRSSWReliabilityRequirements.current; }
 	EOF;
 
-// Rule VSRSSWReliabiltyRequirements
-ruleVSRSSWReliabiltyRequirements returns [EObject current=null]
+// Rule VSRSSWReliabilityRequirements
+ruleVSRSSWReliabilityRequirements returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3984,23 +3984,23 @@ ruleVSRSSWReliabiltyRequirements returns [EObject current=null]
 			}
 			{
 				$current = forceCreateModelElement(
-					grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getVSRSSWReliabiltyRequirementsAction_0(),
+					grammarAccess.getVSRSSWReliabilityRequirementsAccess().getVSRSSWReliabilityRequirementsAction_0(),
 					$current);
 			}
 		)
-		otherlv_1='<SWReliabiltyRequirements>'
+		otherlv_1='<SWReliabilityRequirements>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSWReliabiltyRequirementsKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSWReliabilityRequirementsKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSectionDescriptionDBodyParserRuleCall_2_0());
 				}
 				lv_sectionDescription_2_0=ruleDBody
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabiltyRequirementsRule());
+						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabilityRequirementsRule());
 					}
 					set(
 						$current,
@@ -4014,12 +4014,12 @@ ruleVSRSSWReliabiltyRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSrsItemsVSRSDocumentItemParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSrsItemsVSRSDocumentItemParserRuleCall_3_0());
 				}
 				lv_srsItems_3_0=ruleVSRSDocumentItem
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabiltyRequirementsRule());
+						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabilityRequirementsRule());
 					}
 					add(
 						$current,
@@ -4033,12 +4033,12 @@ ruleVSRSSWReliabiltyRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0());
 				}
 				lv_srsRequirementSubsections_4_0=ruleVSRSInstantiableRequirementSection
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabiltyRequirementsRule());
+						$current = createModelElementForParent(grammarAccess.getVSRSSWReliabilityRequirementsRule());
 					}
 					add(
 						$current,
@@ -4049,9 +4049,9 @@ ruleVSRSSWReliabiltyRequirements returns [EObject current=null]
 				}
 			)
 		)*
-		otherlv_5='</SWReliabiltyRequirements>'
+		otherlv_5='</SWReliabilityRequirements>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSWReliabiltyRequirementsKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSWReliabilityRequirementsKeyword_5());
 		}
 	)
 ;

@@ -114,7 +114,7 @@
         eType="#//VSSSSecurityRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="safety" lowerBound="1"
         eType="#//VSSSSafetyRequirements" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="reliabiltyAvailability"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="reliabilityAvailability"
         lowerBound="1" eType="#//VSSSReliabilityAvailabilityRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quality" lowerBound="1"
         eType="#//VSSSQualityRequirements" containment="true"/>

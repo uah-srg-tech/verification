@@ -22,9 +22,9 @@ import es.uah.aut.srg.micobs.svm.srs.*;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
+
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
 
@@ -189,8 +189,8 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createVSRSSWQualityRequirementsAdapter();
 			}
 			@Override
-			public Adapter caseVSRSSWReliabiltyRequirements(VSRSSWReliabiltyRequirements object) {
-				return createVSRSSWReliabiltyRequirementsAdapter();
+			public Adapter caseVSRSSWReliabilityRequirements(VSRSSWReliabilityRequirements object) {
+				return createVSRSSWReliabilityRequirementsAdapter();
 			}
 			@Override
 			public Adapter caseVSRSSWMaintainabilityRequirements(VSRSSWMaintainabilityRequirements object) {
@@ -639,16 +639,16 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements <em>VSRSSW Reliabilty Requirements</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements <em>VSRSSW Reliability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements
 	 * @generated
 	 */
-	public Adapter createVSRSSWReliabiltyRequirementsAdapter() {
+	public Adapter createVSRSSWReliabilityRequirementsAdapter() {
 		return null;
 	}
 

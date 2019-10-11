@@ -30,7 +30,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getComputerResource <em>Computer Resource</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSecurity <em>Security</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSafety <em>Safety</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability <em>Reliabilty Availability</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabilityAvailability <em>Reliability Availability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getQuality <em>Quality</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getDesign <em>Design</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSoftwareOperations <em>Software Operations</em>}</li>
@@ -73,7 +73,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>General</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>General</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>General</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -99,7 +99,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Capabilities</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Capabilities</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Capabilities</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -125,7 +125,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>System Interface</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>System Interface</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>System Interface</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -151,7 +151,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Adaptation Missionization</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Adaptation Missionization</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Adaptation Missionization</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -177,7 +177,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Computer Resource</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Computer Resource</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Computer Resource</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -203,7 +203,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Security</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Security</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Security</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -229,7 +229,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Safety</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Safety</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Safety</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -252,36 +252,36 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	void setSafety(VSSSSafetyRequirements value);
 
 	/**
-	 * Returns the value of the '<em><b>Reliabilty Availability</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Reliability Availability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Reliabilty Availability</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Reliability Availability</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Reliabilty Availability</em>' containment reference.
-	 * @see #setReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements)
-	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_ReliabiltyAvailability()
+	 * @return the value of the '<em>Reliability Availability</em>' containment reference.
+	 * @see #setReliabilityAvailability(VSSSReliabilityAvailabilityRequirements)
+	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_ReliabilityAvailability()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSSSReliabilityAvailabilityRequirements getReliabiltyAvailability();
+	VSSSReliabilityAvailabilityRequirements getReliabilityAvailability();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability <em>Reliabilty Availability</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabilityAvailability <em>Reliability Availability</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Reliabilty Availability</em>' containment reference.
-	 * @see #getReliabiltyAvailability()
+	 * @param value the new value of the '<em>Reliability Availability</em>' containment reference.
+	 * @see #getReliabilityAvailability()
 	 * @generated
 	 */
-	void setReliabiltyAvailability(VSSSReliabilityAvailabilityRequirements value);
+	void setReliabilityAvailability(VSSSReliabilityAvailabilityRequirements value);
 
 	/**
 	 * Returns the value of the '<em><b>Quality</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Quality</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Quality</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -307,7 +307,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Design</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Design</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Design</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -333,7 +333,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Software Operations</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Software Operations</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Software Operations</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -359,7 +359,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>Software Maintenance</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Software Maintenance</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Software Maintenance</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -385,7 +385,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * Returns the value of the '<em><b>System Software Observability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>System Software Observability</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>System Software Observability</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

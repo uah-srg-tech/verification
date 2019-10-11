@@ -55,7 +55,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSResourcesRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWConfigurationDeliveryRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWMaintainabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWQualityRequirements;
-import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements;
+import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
@@ -216,8 +216,8 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case srsPackage.VSRSSW_QUALITY_REQUIREMENTS:
 				sequence_VSRSSWQualityRequirements(context, (VSRSSWQualityRequirements) semanticObject); 
 				return; 
-			case srsPackage.VSRSSW_RELIABILTY_REQUIREMENTS:
-				sequence_VSRSSWReliabiltyRequirements(context, (VSRSSWReliabiltyRequirements) semanticObject); 
+			case srsPackage.VSRSSW_RELIABILITY_REQUIREMENTS:
+				sequence_VSRSSWReliabilityRequirements(context, (VSRSSWReliabilityRequirements) semanticObject); 
 				return; 
 			case srsPackage.VSRSSW_SAFETY_REQUIREMENTS:
 				sequence_VSRSSWSafetyRequirements(context, (VSRSSWSafetyRequirements) semanticObject); 
@@ -761,7 +761,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         securityPrivacy=VSRSSecurityPrivacyRequirements 
 	 *         portability=VSRSPortabilityRequirements 
 	 *         swQuality=VSRSSWQualityRequirements 
-	 *         swReliabilty=VSRSSWReliabiltyRequirements 
+	 *         swReliability=VSRSSWReliabilityRequirements 
 	 *         swMaintainability=VSRSSWMaintainabilityRequirements 
 	 *         swSafety=VSRSSWSafetyRequirements 
 	 *         swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements 
@@ -825,12 +825,12 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VSRSSWReliabiltyRequirements returns VSRSSWReliabiltyRequirements
+	 *     VSRSSWReliabilityRequirements returns VSRSSWReliabilityRequirements
 	 *
 	 * Constraint:
 	 *     (sectionDescription=DBody? srsItems+=VSRSDocumentItem* srsRequirementSubsections+=VSRSInstantiableRequirementSection*)
 	 */
-	protected void sequence_VSRSSWReliabiltyRequirements(ISerializationContext context, VSRSSWReliabiltyRequirements semanticObject) {
+	protected void sequence_VSRSSWReliabilityRequirements(ISerializationContext context, VSRSSWReliabilityRequirements semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

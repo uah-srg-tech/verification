@@ -42,7 +42,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSResourcesRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWConfigurationDeliveryRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWMaintainabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWQualityRequirements;
-import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements;
+import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
@@ -248,7 +248,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsrsswReliabiltyRequirementsEClass = null;
+	private EClass vsrsswReliabilityRequirementsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -894,7 +894,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSRSRequirements_SwReliabilty() {
+	public EReference getVSRSRequirements_SwReliability() {
 		return (EReference)vsrsRequirementsEClass.getEStructuralFeatures().get(11);
 	}
 
@@ -1047,8 +1047,8 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSRSSWReliabiltyRequirements() {
-		return vsrsswReliabiltyRequirementsEClass;
+	public EClass getVSRSSWReliabilityRequirements() {
+		return vsrsswReliabilityRequirementsEClass;
 	}
 
 	/**
@@ -1275,7 +1275,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SECURITY_PRIVACY);
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__PORTABILITY);
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_QUALITY);
-		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_RELIABILTY);
+		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_RELIABILITY);
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_MAINTAINABILITY);
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_SAFETY);
 		createEReference(vsrsRequirementsEClass, VSRS_REQUIREMENTS__SW_CONFIGURATION_DELIVERY);
@@ -1303,7 +1303,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		vsrsswQualityRequirementsEClass = createEClass(VSRSSW_QUALITY_REQUIREMENTS);
 
-		vsrsswReliabiltyRequirementsEClass = createEClass(VSRSSW_RELIABILTY_REQUIREMENTS);
+		vsrsswReliabilityRequirementsEClass = createEClass(VSRSSW_RELIABILITY_REQUIREMENTS);
 
 		vsrsswMaintainabilityRequirementsEClass = createEClass(VSRSSW_MAINTAINABILITY_REQUIREMENTS);
 
@@ -1390,7 +1390,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		vsrsSecurityPrivacyRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsPortabilityRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsswQualityRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
-		vsrsswReliabiltyRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
+		vsrsswReliabilityRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsswMaintainabilityRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsswSafetyRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsswConfigurationDeliveryRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
@@ -1471,7 +1471,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEReference(getVSRSRequirements_SecurityPrivacy(), this.getVSRSSecurityPrivacyRequirements(), null, "securityPrivacy", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_Portability(), this.getVSRSPortabilityRequirements(), null, "portability", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_SwQuality(), this.getVSRSSWQualityRequirements(), null, "swQuality", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSRequirements_SwReliabilty(), this.getVSRSSWReliabiltyRequirements(), null, "swReliabilty", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSRequirements_SwReliability(), this.getVSRSSWReliabilityRequirements(), null, "swReliability", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_SwMaintainability(), this.getVSRSSWMaintainabilityRequirements(), null, "swMaintainability", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_SwSafety(), this.getVSRSSWSafetyRequirements(), null, "swSafety", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_SwConfigurationDelivery(), this.getVSRSSWConfigurationDeliveryRequirements(), null, "swConfigurationDelivery", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1499,7 +1499,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		initEClass(vsrsswQualityRequirementsEClass, VSRSSWQualityRequirements.class, "VSRSSWQualityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
-		initEClass(vsrsswReliabiltyRequirementsEClass, VSRSSWReliabiltyRequirements.class, "VSRSSWReliabiltyRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(vsrsswReliabilityRequirementsEClass, VSRSSWReliabilityRequirements.class, "VSRSSWReliabilityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsrsswMaintainabilityRequirementsEClass, VSRSSWMaintainabilityRequirements.class, "VSRSSWMaintainabilityRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -6234,7 +6234,7 @@ public class InternalSSSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSSSSpecificRequirements"
-    // InternalSSS.g:2317:1: ruleVSSSSpecificRequirements returns [EObject current=null] : (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' ) ;
+    // InternalSSS.g:2317:1: ruleVSSSSpecificRequirements returns [EObject current=null] : (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' ) ;
     public final EObject ruleVSSSSpecificRequirements() throws RecognitionException {
         EObject current = null;
 
@@ -6256,7 +6256,7 @@ public class InternalSSSParser extends AbstractInternalAntlrParser {
 
         EObject lv_safety_8_0 = null;
 
-        EObject lv_reliabiltyAvailability_9_0 = null;
+        EObject lv_reliabilityAvailability_9_0 = null;
 
         EObject lv_quality_10_0 = null;
 
@@ -6273,11 +6273,11 @@ public class InternalSSSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSSS.g:2323:2: ( (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' ) )
-            // InternalSSS.g:2324:2: (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' )
+            // InternalSSS.g:2323:2: ( (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' ) )
+            // InternalSSS.g:2324:2: (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' )
             {
-            // InternalSSS.g:2324:2: (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' )
-            // InternalSSS.g:2325:3: otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>'
+            // InternalSSS.g:2324:2: (otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>' )
+            // InternalSSS.g:2325:3: otherlv_0= '<SpecificRequirements>' ( (lv_sectionDescription_1_0= ruleDBody ) )? ( (lv_general_2_0= ruleVSSSGeneralRequirements ) ) ( (lv_capabilities_3_0= ruleVSSSCapabilitiesRequirements ) ) ( (lv_systemInterface_4_0= ruleVSSSSystemInterfaceRequirements ) ) ( (lv_adaptationMissionization_5_0= ruleVSSSAdaptationMissionizationRequirements ) ) ( (lv_computerResource_6_0= ruleVSSSComputerResourceRequirements ) ) ( (lv_security_7_0= ruleVSSSSecurityRequirements ) ) ( (lv_safety_8_0= ruleVSSSSafetyRequirements ) ) ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) ) ( (lv_quality_10_0= ruleVSSSQualityRequirements ) ) ( (lv_design_11_0= ruleVSSSDesignRequirements ) ) ( (lv_softwareOperations_12_0= ruleVSSSSoftwareOperationsRequirements ) ) ( (lv_softwareMaintenance_13_0= ruleVSSSSoftwareMaintenanceRequirements ) ) ( (lv_systemSoftwareObservability_14_0= ruleVSSSSystemSoftwareObservabilityRequirements ) ) otherlv_15= '</SpecificRequirements>'
             {
             otherlv_0=(Token)match(input,79,FollowSets000.FOLLOW_82); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -6576,19 +6576,19 @@ public class InternalSSSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSSS.g:2481:3: ( (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) )
-            // InternalSSS.g:2482:4: (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements )
+            // InternalSSS.g:2481:3: ( (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements ) )
+            // InternalSSS.g:2482:4: (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements )
             {
-            // InternalSSS.g:2482:4: (lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements )
-            // InternalSSS.g:2483:5: lv_reliabiltyAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements
+            // InternalSSS.g:2482:4: (lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements )
+            // InternalSSS.g:2483:5: lv_reliabilityAvailability_9_0= ruleVSSSReliabilityAvailabilityRequirements
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0());
+              					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_90);
-            lv_reliabiltyAvailability_9_0=ruleVSSSReliabilityAvailabilityRequirements();
+            lv_reliabilityAvailability_9_0=ruleVSSSReliabilityAvailabilityRequirements();
 
             state._fsp--;
             if (state.failed) return current;
@@ -6599,8 +6599,8 @@ public class InternalSSSParser extends AbstractInternalAntlrParser {
               					}
               					set(
               						current,
-              						"reliabiltyAvailability",
-              						lv_reliabiltyAvailability_9_0,
+              						"reliabilityAvailability",
+              						lv_reliabilityAvailability_9_0,
               						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSReliabilityAvailabilityRequirements");
               					afterParserOrEnumRuleCall();
               				

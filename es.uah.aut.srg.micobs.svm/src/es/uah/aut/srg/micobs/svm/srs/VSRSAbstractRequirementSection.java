@@ -12,7 +12,9 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
+
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
+
 import org.eclipse.emf.common.util.EList;
 
 /**

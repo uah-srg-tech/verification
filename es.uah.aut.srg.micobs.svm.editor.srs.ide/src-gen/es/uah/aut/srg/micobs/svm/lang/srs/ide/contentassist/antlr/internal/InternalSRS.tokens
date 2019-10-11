@@ -41,7 +41,7 @@
 '</SWConfigurationDeliveryRequirements>'=130
 '</SWMaintainabilityRequirements>'=126
 '</SWQualityRequirements>'=122
-'</SWReliabiltyRequirements>'=124
+'</SWReliabilityRequirements>'=124
 '</SWSafetyRequirements>'=128
 '</SecurityPrivacyRequirements>'=118
 '</SoftwareOverview>'=92
@@ -91,7 +91,7 @@
 '<SWConfigurationDeliveryRequirements>'=129
 '<SWMaintainabilityRequirements>'=125
 '<SWQualityRequirements>'=121
-'<SWReliabiltyRequirements>'=123
+'<SWReliabilityRequirements>'=123
 '<SWSafetyRequirements>'=127
 '<SecurityPrivacyRequirements>'=117
 '<SoftwareOverview>'=83

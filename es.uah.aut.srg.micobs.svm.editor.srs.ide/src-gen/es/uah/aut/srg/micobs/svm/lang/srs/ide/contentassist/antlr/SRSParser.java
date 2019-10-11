@@ -99,7 +99,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSSecurityPrivacyRequirementsAccess().getGroup(), "rule__VSRSSecurityPrivacyRequirements__Group__0");
 					put(grammarAccess.getVSRSPortabilityRequirementsAccess().getGroup(), "rule__VSRSPortabilityRequirements__Group__0");
 					put(grammarAccess.getVSRSSWQualityRequirementsAccess().getGroup(), "rule__VSRSSWQualityRequirements__Group__0");
-					put(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getGroup(), "rule__VSRSSWReliabiltyRequirements__Group__0");
+					put(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getGroup(), "rule__VSRSSWReliabilityRequirements__Group__0");
 					put(grammarAccess.getVSRSSWMaintainabilityRequirementsAccess().getGroup(), "rule__VSRSSWMaintainabilityRequirements__Group__0");
 					put(grammarAccess.getVSRSSWSafetyRequirementsAccess().getGroup(), "rule__VSRSSWSafetyRequirements__Group__0");
 					put(grammarAccess.getVSRSSWConfigurationDeliveryRequirementsAccess().getGroup(), "rule__VSRSSWConfigurationDeliveryRequirements__Group__0");
@@ -185,7 +185,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSRequirementsAccess().getSecurityPrivacyAssignment_9(), "rule__VSRSRequirements__SecurityPrivacyAssignment_9");
 					put(grammarAccess.getVSRSRequirementsAccess().getPortabilityAssignment_10(), "rule__VSRSRequirements__PortabilityAssignment_10");
 					put(grammarAccess.getVSRSRequirementsAccess().getSwQualityAssignment_11(), "rule__VSRSRequirements__SwQualityAssignment_11");
-					put(grammarAccess.getVSRSRequirementsAccess().getSwReliabiltyAssignment_12(), "rule__VSRSRequirements__SwReliabiltyAssignment_12");
+					put(grammarAccess.getVSRSRequirementsAccess().getSwReliabilityAssignment_12(), "rule__VSRSRequirements__SwReliabilityAssignment_12");
 					put(grammarAccess.getVSRSRequirementsAccess().getSwMaintainabilityAssignment_13(), "rule__VSRSRequirements__SwMaintainabilityAssignment_13");
 					put(grammarAccess.getVSRSRequirementsAccess().getSwSafetyAssignment_14(), "rule__VSRSRequirements__SwSafetyAssignment_14");
 					put(grammarAccess.getVSRSRequirementsAccess().getSwConfigurationDeliveryAssignment_15(), "rule__VSRSRequirements__SwConfigurationDeliveryAssignment_15");
@@ -232,9 +232,9 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSSWQualityRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSRSSWQualityRequirements__SectionDescriptionAssignment_2");
 					put(grammarAccess.getVSRSSWQualityRequirementsAccess().getSrsItemsAssignment_3(), "rule__VSRSSWQualityRequirements__SrsItemsAssignment_3");
 					put(grammarAccess.getVSRSSWQualityRequirementsAccess().getSrsRequirementSubsectionsAssignment_4(), "rule__VSRSSWQualityRequirements__SrsRequirementSubsectionsAssignment_4");
-					put(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSRSSWReliabiltyRequirements__SectionDescriptionAssignment_2");
-					put(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSrsItemsAssignment_3(), "rule__VSRSSWReliabiltyRequirements__SrsItemsAssignment_3");
-					put(grammarAccess.getVSRSSWReliabiltyRequirementsAccess().getSrsRequirementSubsectionsAssignment_4(), "rule__VSRSSWReliabiltyRequirements__SrsRequirementSubsectionsAssignment_4");
+					put(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSRSSWReliabilityRequirements__SectionDescriptionAssignment_2");
+					put(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSrsItemsAssignment_3(), "rule__VSRSSWReliabilityRequirements__SrsItemsAssignment_3");
+					put(grammarAccess.getVSRSSWReliabilityRequirementsAccess().getSrsRequirementSubsectionsAssignment_4(), "rule__VSRSSWReliabilityRequirements__SrsRequirementSubsectionsAssignment_4");
 					put(grammarAccess.getVSRSSWMaintainabilityRequirementsAccess().getSectionDescriptionAssignment_2(), "rule__VSRSSWMaintainabilityRequirements__SectionDescriptionAssignment_2");
 					put(grammarAccess.getVSRSSWMaintainabilityRequirementsAccess().getSrsItemsAssignment_3(), "rule__VSRSSWMaintainabilityRequirements__SrsItemsAssignment_3");
 					put(grammarAccess.getVSRSSWMaintainabilityRequirementsAccess().getSrsRequirementSubsectionsAssignment_4(), "rule__VSRSSWMaintainabilityRequirements__SrsRequirementSubsectionsAssignment_4");

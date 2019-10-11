@@ -2481,17 +2481,17 @@ ruleVSSSSpecificRequirements returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0());
 				}
-				lv_reliabiltyAvailability_9_0=ruleVSSSReliabilityAvailabilityRequirements
+				lv_reliabilityAvailability_9_0=ruleVSSSReliabilityAvailabilityRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSSSSpecificRequirementsRule());
 					}
 					set(
 						$current,
-						"reliabiltyAvailability",
-						lv_reliabiltyAvailability_9_0,
+						"reliabilityAvailability",
+						lv_reliabilityAvailability_9_0,
 						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.VSSSReliabilityAvailabilityRequirements");
 					afterParserOrEnumRuleCall();
 				}

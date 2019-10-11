@@ -1420,8 +1420,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cSecurityVSSSSecurityRequirementsParserRuleCall_7_0 = (RuleCall)cSecurityAssignment_7.eContents().get(0);
 		private final Assignment cSafetyAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cSafetyVSSSSafetyRequirementsParserRuleCall_8_0 = (RuleCall)cSafetyAssignment_8.eContents().get(0);
-		private final Assignment cReliabiltyAvailabilityAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0 = (RuleCall)cReliabiltyAvailabilityAssignment_9.eContents().get(0);
+		private final Assignment cReliabilityAvailabilityAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0 = (RuleCall)cReliabilityAvailabilityAssignment_9.eContents().get(0);
 		private final Assignment cQualityAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cQualityVSSSQualityRequirementsParserRuleCall_10_0 = (RuleCall)cQualityAssignment_10.eContents().get(0);
 		private final Assignment cDesignAssignment_11 = (Assignment)cGroup.eContents().get(11);
@@ -1444,7 +1444,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	computerResource=VSSSComputerResourceRequirements
 		//	security=VSSSSecurityRequirements
 		//	safety=VSSSSafetyRequirements
-		//	reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements
+		//	reliabilityAvailability=VSSSReliabilityAvailabilityRequirements
 		//	quality=VSSSQualityRequirements
 		//	design=VSSSDesignRequirements
 		//	softwareOperations=VSSSSoftwareOperationsRequirements
@@ -1457,7 +1457,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//capabilities=VSSSCapabilitiesRequirements systemInterface=VSSSSystemInterfaceRequirements
 		//adaptationMissionization=VSSSAdaptationMissionizationRequirements computerResource=VSSSComputerResourceRequirements
 		//security=VSSSSecurityRequirements safety=VSSSSafetyRequirements
-		//reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements quality=VSSSQualityRequirements
+		//reliabilityAvailability=VSSSReliabilityAvailabilityRequirements quality=VSSSQualityRequirements
 		//design=VSSSDesignRequirements softwareOperations=VSSSSoftwareOperationsRequirements
 		//softwareMaintenance=VSSSSoftwareMaintenanceRequirements
 		//systemSoftwareObservability=VSSSSystemSoftwareObservabilityRequirements '</SpecificRequirements>'
@@ -1514,11 +1514,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSSSSafetyRequirements
 		public RuleCall getSafetyVSSSSafetyRequirementsParserRuleCall_8_0() { return cSafetyVSSSSafetyRequirementsParserRuleCall_8_0; }
 		
-		//reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements
-		public Assignment getReliabiltyAvailabilityAssignment_9() { return cReliabiltyAvailabilityAssignment_9; }
+		//reliabilityAvailability=VSSSReliabilityAvailabilityRequirements
+		public Assignment getReliabilityAvailabilityAssignment_9() { return cReliabilityAvailabilityAssignment_9; }
 		
 		//VSSSReliabilityAvailabilityRequirements
-		public RuleCall getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0() { return cReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0; }
+		public RuleCall getReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0() { return cReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0; }
 		
 		//quality=VSSSQualityRequirements
 		public Assignment getQualityAssignment_10() { return cQualityAssignment_10; }
@@ -3462,7 +3462,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	computerResource=VSSSComputerResourceRequirements
 	//	security=VSSSSecurityRequirements
 	//	safety=VSSSSafetyRequirements
-	//	reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements
+	//	reliabilityAvailability=VSSSReliabilityAvailabilityRequirements
 	//	quality=VSSSQualityRequirements
 	//	design=VSSSDesignRequirements
 	//	softwareOperations=VSSSSoftwareOperationsRequirements

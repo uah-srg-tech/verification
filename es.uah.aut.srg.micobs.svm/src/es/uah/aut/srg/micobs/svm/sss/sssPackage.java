@@ -964,16 +964,6 @@ public interface sssPackage extends EPackage {
 	int VSSS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl
-	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSpecificRequirements()
-	 * @generated
-	 */
-	int VSSS_SPECIFIC_REQUIREMENTS = 14;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl <em>VSSS Instantiable Requirement Section</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1054,6 +1044,16 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl
+	 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSSpecificRequirements()
+	 * @generated
+	 */
+	int VSSS_SPECIFIC_REQUIREMENTS = 14;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1137,13 +1137,13 @@ public interface sssPackage extends EPackage {
 	int VSSS_SPECIFIC_REQUIREMENTS__SAFETY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
-	 * The feature id for the '<em><b>Reliabilty Availability</b></em>' containment reference.
+	 * The feature id for the '<em><b>Reliability Availability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
+	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILITY_AVAILABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Quality</b></em>' containment reference.
@@ -3149,6 +3149,38 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSAbstractRequirementSection_SssRequirementSubsections();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection <em>VSSS Instantiable Requirement Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSSS Instantiable Requirement Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection
+	 * @generated
+	 */
+	EClass getVSSSInstantiableRequirementSection();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription <em>Section Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Section Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription()
+	 * @see #getVSSSInstantiableRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableRequirementSection_SectionDescription();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems <em>Sss Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems()
+	 * @see #getVSSSInstantiableRequirementSection()
+	 * @generated
+	 */
+	EReference getVSSSInstantiableRequirementSection_SssItems();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements <em>VSSS Specific Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3247,15 +3279,15 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSSpecificRequirements_Safety();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability <em>Reliabilty Availability</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabilityAvailability <em>Reliability Availability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Reliabilty Availability</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabiltyAvailability()
+	 * @return the meta object for the containment reference '<em>Reliability Availability</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getReliabilityAvailability()
 	 * @see #getVSSSSpecificRequirements()
 	 * @generated
 	 */
-	EReference getVSSSSpecificRequirements_ReliabiltyAvailability();
+	EReference getVSSSSpecificRequirements_ReliabilityAvailability();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getQuality <em>Quality</em>}'.
@@ -3311,38 +3343,6 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSSSSpecificRequirements_SystemSoftwareObservability();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection <em>VSSS Instantiable Requirement Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSSS Instantiable Requirement Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection
-	 * @generated
-	 */
-	EClass getVSSSInstantiableRequirementSection();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription <em>Section Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Section Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSectionDescription()
-	 * @see #getVSSSInstantiableRequirementSection()
-	 * @generated
-	 */
-	EReference getVSSSInstantiableRequirementSection_SectionDescription();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems <em>Sss Items</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection#getSssItems()
-	 * @see #getVSSSInstantiableRequirementSection()
-	 * @generated
-	 */
-	EReference getVSSSInstantiableRequirementSection_SssItems();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSGeneralRequirements <em>VSSS General Requirements</em>}'.
@@ -4036,6 +4036,32 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_ABSTRACT_REQUIREMENT_SECTION__SSS_REQUIREMENT_SUBSECTIONS = eINSTANCE.getVSSSAbstractRequirementSection_SssRequirementSubsections();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl <em>VSSS Instantiable Requirement Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableRequirementSection()
+		 * @generated
+		 */
+		EClass VSSS_INSTANTIABLE_REQUIREMENT_SECTION = eINSTANCE.getVSSSInstantiableRequirementSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = eINSTANCE.getVSSSInstantiableRequirementSection_SectionDescription();
+
+		/**
+		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = eINSTANCE.getVSSSInstantiableRequirementSection_SssItems();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSpecificRequirementsImpl <em>VSSS Specific Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4110,12 +4136,12 @@ public interface sssPackage extends EPackage {
 		EReference VSSS_SPECIFIC_REQUIREMENTS__SAFETY = eINSTANCE.getVSSSSpecificRequirements_Safety();
 
 		/**
-		 * The meta object literal for the '<em><b>Reliabilty Availability</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Reliability Availability</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY = eINSTANCE.getVSSSSpecificRequirements_ReliabiltyAvailability();
+		EReference VSSS_SPECIFIC_REQUIREMENTS__RELIABILITY_AVAILABILITY = eINSTANCE.getVSSSSpecificRequirements_ReliabilityAvailability();
 
 		/**
 		 * The meta object literal for the '<em><b>Quality</b></em>' containment reference feature.
@@ -4156,32 +4182,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = eINSTANCE.getVSSSSpecificRequirements_SystemSoftwareObservability();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl <em>VSSS Instantiable Requirement Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.sss.impl.sssPackageImpl#getVSSSInstantiableRequirementSection()
-		 * @generated
-		 */
-		EClass VSSS_INSTANTIABLE_REQUIREMENT_SECTION = eINSTANCE.getVSSSInstantiableRequirementSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Section Description</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION = eINSTANCE.getVSSSInstantiableRequirementSection_SectionDescription();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Items</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS = eINSTANCE.getVSSSInstantiableRequirementSection_SssItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementsImpl <em>VSSS General Requirements</em>}' class.

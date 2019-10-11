@@ -305,7 +305,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getComputerResource());
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getSecurity());
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getSafety());
-		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getReliabiltyAvailability());
+		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getReliabilityAvailability());
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getQuality());
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getDesign());
 		groups.add((VTraceableDocumentAbstractGroup) getSpecificRequirementsSection().getSoftwareOperations());

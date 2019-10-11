@@ -1147,13 +1147,13 @@ public interface srsPackage extends EPackage {
 	int VSRS_REQUIREMENTS__SW_QUALITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
 
 	/**
-	 * The feature id for the '<em><b>Sw Reliabilty</b></em>' containment reference.
+	 * The feature id for the '<em><b>Sw Reliability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_RELIABILTY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
+	int VSRS_REQUIREMENTS__SW_RELIABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Sw Maintainability</b></em>' containment reference.
@@ -1958,14 +1958,14 @@ public interface srsPackage extends EPackage {
 	int VSRSSW_QUALITY_REQUIREMENTS_OPERATION_COUNT = VSRS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabiltyRequirementsImpl <em>VSRSSW Reliabilty Requirements</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabilityRequirementsImpl <em>VSRSSW Reliability Requirements</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabiltyRequirementsImpl
-	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWReliabiltyRequirements()
+	 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabilityRequirementsImpl
+	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWReliabilityRequirements()
 	 * @generated
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS = 25;
+	int VSRSSW_RELIABILITY_REQUIREMENTS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1974,7 +1974,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+	int VSRSSW_RELIABILITY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1983,7 +1983,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS__SUBSECTIONS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
+	int VSRSSW_RELIABILITY_REQUIREMENTS__SUBSECTIONS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -1992,7 +1992,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS__SECTION_DESCRIPTION = VSRS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
+	int VSRSSW_RELIABILITY_REQUIREMENTS__SECTION_DESCRIPTION = VSRS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Srs Items</b></em>' containment reference list.
@@ -2001,7 +2001,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS__SRS_ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_ITEMS;
+	int VSRSSW_RELIABILITY_REQUIREMENTS__SRS_ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_ITEMS;
 
 	/**
 	 * The feature id for the '<em><b>Srs Requirement Subsections</b></em>' containment reference list.
@@ -2010,25 +2010,25 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS__SRS_REQUIREMENT_SUBSECTIONS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_REQUIREMENT_SUBSECTIONS;
+	int VSRSSW_RELIABILITY_REQUIREMENTS__SRS_REQUIREMENT_SUBSECTIONS = VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_REQUIREMENT_SUBSECTIONS;
 
 	/**
-	 * The number of structural features of the '<em>VSRSSW Reliabilty Requirements</em>' class.
+	 * The number of structural features of the '<em>VSRSSW Reliability Requirements</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS_FEATURE_COUNT = VSRS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
+	int VSRSSW_RELIABILITY_REQUIREMENTS_FEATURE_COUNT = VSRS_ABSTRACT_REQUIREMENT_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of operations of the '<em>VSRSSW Reliabilty Requirements</em>' class.
+	 * The number of operations of the '<em>VSRSSW Reliability Requirements</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRSSW_RELIABILTY_REQUIREMENTS_OPERATION_COUNT = VSRS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
+	int VSRSSW_RELIABILITY_REQUIREMENTS_OPERATION_COUNT = VSRS_ABSTRACT_REQUIREMENT_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWMaintainabilityRequirementsImpl <em>VSRSSW Maintainability Requirements</em>}' class.
@@ -2632,7 +2632,6 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_LOGICAL_MODEL_OPERATION_COUNT = 0;
-
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes <em>VSRS Document Item Modes</em>}' enum.
@@ -3247,15 +3246,15 @@ public interface srsPackage extends EPackage {
 	EReference getVSRSRequirements_SwQuality();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliabilty <em>Sw Reliabilty</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliability <em>Sw Reliability</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sw Reliabilty</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliabilty()
+	 * @return the meta object for the containment reference '<em>Sw Reliability</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliability()
 	 * @see #getVSRSRequirements()
 	 * @generated
 	 */
-	EReference getVSRSRequirements_SwReliabilty();
+	EReference getVSRSRequirements_SwReliability();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwMaintainability <em>Sw Maintainability</em>}'.
@@ -3424,14 +3423,14 @@ public interface srsPackage extends EPackage {
 	EClass getVSRSSWQualityRequirements();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements <em>VSRSSW Reliabilty Requirements</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements <em>VSRSSW Reliability Requirements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSRSSW Reliabilty Requirements</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabiltyRequirements
+	 * @return the meta object for class '<em>VSRSSW Reliability Requirements</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements
 	 * @generated
 	 */
-	EClass getVSRSSWReliabiltyRequirements();
+	EClass getVSRSSWReliabilityRequirements();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSSWMaintainabilityRequirements <em>VSRSSW Maintainability Requirements</em>}'.
@@ -4079,12 +4078,12 @@ public interface srsPackage extends EPackage {
 		EReference VSRS_REQUIREMENTS__SW_QUALITY = eINSTANCE.getVSRSRequirements_SwQuality();
 
 		/**
-		 * The meta object literal for the '<em><b>Sw Reliabilty</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Sw Reliability</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSRS_REQUIREMENTS__SW_RELIABILTY = eINSTANCE.getVSRSRequirements_SwReliabilty();
+		EReference VSRS_REQUIREMENTS__SW_RELIABILITY = eINSTANCE.getVSRSRequirements_SwReliability();
 
 		/**
 		 * The meta object literal for the '<em><b>Sw Maintainability</b></em>' containment reference feature.
@@ -4235,14 +4234,14 @@ public interface srsPackage extends EPackage {
 		EClass VSRSSW_QUALITY_REQUIREMENTS = eINSTANCE.getVSRSSWQualityRequirements();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabiltyRequirementsImpl <em>VSRSSW Reliabilty Requirements</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabilityRequirementsImpl <em>VSRSSW Reliability Requirements</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabiltyRequirementsImpl
-		 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWReliabiltyRequirements()
+		 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWReliabilityRequirementsImpl
+		 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWReliabilityRequirements()
 		 * @generated
 		 */
-		EClass VSRSSW_RELIABILTY_REQUIREMENTS = eINSTANCE.getVSRSSWReliabiltyRequirements();
+		EClass VSRSSW_RELIABILITY_REQUIREMENTS = eINSTANCE.getVSRSSWReliabilityRequirements();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSWMaintainabilityRequirementsImpl <em>VSRSSW Maintainability Requirements</em>}' class.

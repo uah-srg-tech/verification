@@ -8,27 +8,27 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.sss.impl;
+package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.svm.sss.VSSSReliabiltyAvailabilityRequirements;
-import es.uah.aut.srg.micobs.svm.sss.sssPackage;
+import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements;
+import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSSS Reliabilty Availability Requirements</b></em>'.
+ * An implementation of the model object '<em><b>VSRSSW Reliability Requirements</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class VSSSReliabiltyAvailabilityRequirementsImpl extends VSSSAbstractRequirementSectionImpl implements VSSSReliabiltyAvailabilityRequirements {
+public class VSRSSWReliabilityRequirementsImpl extends VSRSAbstractRequirementSectionImpl implements VSRSSWReliabilityRequirements {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSSSReliabiltyAvailabilityRequirementsImpl() {
+	protected VSRSSWReliabilityRequirementsImpl() {
 		super();
 	}
 
@@ -39,7 +39,7 @@ public class VSSSReliabiltyAvailabilityRequirementsImpl extends VSSSAbstractRequ
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return sssPackage.Literals.VSSS_RELIABILTY_AVAILABILITY_REQUIREMENTS;
+		return srsPackage.Literals.VSRSSW_RELIABILITY_REQUIREMENTS;
 	}
 
-} //VSSSReliabiltyAvailabilityRequirementsImpl
+} //VSRSSWReliabilityRequirementsImpl

@@ -64,7 +64,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * Returns the value of the '<em><b>Verification Validation Process</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Verification Validation Process</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Verification Validation Process</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -90,7 +90,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * Returns the value of the '<em><b>Validation Approach</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Validation Approach</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Validation Approach</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -116,7 +116,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * Returns the value of the '<em><b>Validation</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Validation</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Validation</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
@@ -142,7 +142,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * Returns the value of the '<em><b>Verification</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Verification</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Verification</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

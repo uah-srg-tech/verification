@@ -33,7 +33,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSecurityPrivacy <em>Security Privacy</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getPortability <em>Portability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwQuality <em>Sw Quality</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliabilty <em>Sw Reliabilty</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliability <em>Sw Reliability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwMaintainability <em>Sw Maintainability</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwSafety <em>Sw Safety</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwConfigurationDelivery <em>Sw Configuration Delivery</em>}</li>
@@ -334,30 +334,30 @@ public interface VSRSRequirements extends DFixedSection {
 	void setSwQuality(VSRSSWQualityRequirements value);
 
 	/**
-	 * Returns the value of the '<em><b>Sw Reliabilty</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Sw Reliability</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Sw Reliabilty</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Sw Reliability</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sw Reliabilty</em>' containment reference.
-	 * @see #setSwReliabilty(VSRSSWReliabiltyRequirements)
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSRequirements_SwReliabilty()
+	 * @return the value of the '<em>Sw Reliability</em>' containment reference.
+	 * @see #setSwReliability(VSRSSWReliabilityRequirements)
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSRequirements_SwReliability()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSRSSWReliabiltyRequirements getSwReliabilty();
+	VSRSSWReliabilityRequirements getSwReliability();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliabilty <em>Sw Reliabilty</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSRequirements#getSwReliability <em>Sw Reliability</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sw Reliabilty</em>' containment reference.
-	 * @see #getSwReliabilty()
+	 * @param value the new value of the '<em>Sw Reliability</em>' containment reference.
+	 * @see #getSwReliability()
 	 * @generated
 	 */
-	void setSwReliabilty(VSRSSWReliabiltyRequirements value);
+	void setSwReliability(VSRSSWReliabilityRequirements value);
 
 	/**
 	 * Returns the value of the '<em><b>Sw Maintainability</b></em>' containment reference.

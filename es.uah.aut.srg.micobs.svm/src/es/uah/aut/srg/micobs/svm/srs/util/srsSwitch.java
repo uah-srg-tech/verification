@@ -22,9 +22,9 @@ import es.uah.aut.srg.micobs.svm.srs.*;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
-
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
+
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -318,14 +318,14 @@ public class srsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case srsPackage.VSRSSW_RELIABILTY_REQUIREMENTS: {
-				VSRSSWReliabiltyRequirements vsrsswReliabiltyRequirements = (VSRSSWReliabiltyRequirements)theEObject;
-				T result = caseVSRSSWReliabiltyRequirements(vsrsswReliabiltyRequirements);
-				if (result == null) result = caseVSRSAbstractRequirementSection(vsrsswReliabiltyRequirements);
-				if (result == null) result = caseVTraceableDocumentFixedGroup(vsrsswReliabiltyRequirements);
-				if (result == null) result = caseDFixedSection(vsrsswReliabiltyRequirements);
-				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsrsswReliabiltyRequirements);
-				if (result == null) result = caseDAbstractSection(vsrsswReliabiltyRequirements);
+			case srsPackage.VSRSSW_RELIABILITY_REQUIREMENTS: {
+				VSRSSWReliabilityRequirements vsrsswReliabilityRequirements = (VSRSSWReliabilityRequirements)theEObject;
+				T result = caseVSRSSWReliabilityRequirements(vsrsswReliabilityRequirements);
+				if (result == null) result = caseVSRSAbstractRequirementSection(vsrsswReliabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentFixedGroup(vsrsswReliabilityRequirements);
+				if (result == null) result = caseDFixedSection(vsrsswReliabilityRequirements);
+				if (result == null) result = caseVTraceableDocumentAbstractGroup(vsrsswReliabilityRequirements);
+				if (result == null) result = caseDAbstractSection(vsrsswReliabilityRequirements);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -796,17 +796,17 @@ public class srsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSRSSW Reliabilty Requirements</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSRSSW Reliability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSRSSW Reliabilty Requirements</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSRSSW Reliability Requirements</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSRSSWReliabiltyRequirements(VSRSSWReliabiltyRequirements object) {
+	public T caseVSRSSWReliabilityRequirements(VSRSSWReliabilityRequirements object) {
 		return null;
 	}
 

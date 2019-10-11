@@ -21176,26 +21176,26 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VSSSSpecificRequirements__Group__9__Impl"
-    // InternalSSS.g:6492:1: rule__VSSSSpecificRequirements__Group__9__Impl : ( ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 ) ) ;
+    // InternalSSS.g:6492:1: rule__VSSSSpecificRequirements__Group__9__Impl : ( ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 ) ) ;
     public final void rule__VSSSSpecificRequirements__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSSS.g:6496:1: ( ( ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 ) ) )
-            // InternalSSS.g:6497:1: ( ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 ) )
+            // InternalSSS.g:6496:1: ( ( ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 ) ) )
+            // InternalSSS.g:6497:1: ( ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 ) )
             {
-            // InternalSSS.g:6497:1: ( ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 ) )
-            // InternalSSS.g:6498:2: ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 )
+            // InternalSSS.g:6497:1: ( ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 ) )
+            // InternalSSS.g:6498:2: ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityAssignment_9()); 
+               before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityAssignment_9()); 
             }
-            // InternalSSS.g:6499:2: ( rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 )
-            // InternalSSS.g:6499:3: rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9
+            // InternalSSS.g:6499:2: ( rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 )
+            // InternalSSS.g:6499:3: rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9();
+            rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9();
 
             state._fsp--;
             if (state.failed) return ;
@@ -21203,7 +21203,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityAssignment_9()); 
+               after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityAssignment_9()); 
             }
 
             }
@@ -38095,9 +38095,9 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VSSSSpecificRequirements__SafetyAssignment_8"
 
 
-    // $ANTLR start "rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9"
-    // InternalSSS.g:11803:1: rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9 : ( ruleVSSSReliabilityAvailabilityRequirements ) ;
-    public final void rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9() throws RecognitionException {
+    // $ANTLR start "rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9"
+    // InternalSSS.g:11803:1: rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9 : ( ruleVSSSReliabilityAvailabilityRequirements ) ;
+    public final void rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -38109,7 +38109,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             // InternalSSS.g:11809:3: ruleVSSSReliabilityAvailabilityRequirements
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); 
+               before(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVSSSReliabilityAvailabilityRequirements();
@@ -38117,7 +38117,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); 
+               after(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityVSSSReliabilityAvailabilityRequirementsParserRuleCall_9_0()); 
             }
 
             }
@@ -38137,7 +38137,7 @@ public class InternalSSSParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9"
+    // $ANTLR end "rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9"
 
 
     // $ANTLR start "rule__VSSSSpecificRequirements__QualityAssignment_10"

@@ -246,7 +246,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSecurityPrivacy());
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getPortability());
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwQuality());
-		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwReliabilty());
+		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwReliability());
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwMaintainability());
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwSafety());
 		groups.add((VTraceableDocumentAbstractGroup) getRequirementsSection().getSwConfigurationDelivery());

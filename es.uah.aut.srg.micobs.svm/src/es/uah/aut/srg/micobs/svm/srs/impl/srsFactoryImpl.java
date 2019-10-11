@@ -88,7 +88,7 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 			case srsPackage.VSRS_SECURITY_PRIVACY_REQUIREMENTS: return createVSRSSecurityPrivacyRequirements();
 			case srsPackage.VSRS_PORTABILITY_REQUIREMENTS: return createVSRSPortabilityRequirements();
 			case srsPackage.VSRSSW_QUALITY_REQUIREMENTS: return createVSRSSWQualityRequirements();
-			case srsPackage.VSRSSW_RELIABILTY_REQUIREMENTS: return createVSRSSWReliabiltyRequirements();
+			case srsPackage.VSRSSW_RELIABILITY_REQUIREMENTS: return createVSRSSWReliabilityRequirements();
 			case srsPackage.VSRSSW_MAINTAINABILITY_REQUIREMENTS: return createVSRSSWMaintainabilityRequirements();
 			case srsPackage.VSRSSW_SAFETY_REQUIREMENTS: return createVSRSSWSafetyRequirements();
 			case srsPackage.VSRSSW_CONFIGURATION_DELIVERY_REQUIREMENTS: return createVSRSSWConfigurationDeliveryRequirements();
@@ -368,9 +368,9 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSRSSWReliabiltyRequirements createVSRSSWReliabiltyRequirements() {
-		VSRSSWReliabiltyRequirementsImpl vsrsswReliabiltyRequirements = new VSRSSWReliabiltyRequirementsImpl();
-		return vsrsswReliabiltyRequirements;
+	public VSRSSWReliabilityRequirements createVSRSSWReliabilityRequirements() {
+		VSRSSWReliabilityRequirementsImpl vsrsswReliabilityRequirements = new VSRSSWReliabilityRequirementsImpl();
+		return vsrsswReliabilityRequirements;
 	}
 
 	/**

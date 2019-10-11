@@ -198,7 +198,7 @@ VSRSRequirements returns VSRSRequirements:
 		securityPrivacy=VSRSSecurityPrivacyRequirements
 		portability=VSRSPortabilityRequirements
 		swQuality=VSRSSWQualityRequirements
-		swReliabilty=VSRSSWReliabiltyRequirements
+		swReliability=VSRSSWReliabilityRequirements
 		swMaintainability=VSRSSWMaintainabilityRequirements
 		swSafety=VSRSSWSafetyRequirements
 		swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements
@@ -319,13 +319,13 @@ VSRSSWQualityRequirements returns VSRSSWQualityRequirements:
 		(srsRequirementSubsections+=VSRSInstantiableRequirementSection)*
 	'</SWQualityRequirements>';
 
-VSRSSWReliabiltyRequirements returns VSRSSWReliabiltyRequirements:
-	{VSRSSWReliabiltyRequirements}
-	'<SWReliabiltyRequirements>'
+VSRSSWReliabilityRequirements returns VSRSSWReliabilityRequirements:
+	{VSRSSWReliabilityRequirements}
+	'<SWReliabilityRequirements>'
 		(sectionDescription=DBody)?
 		(srsItems+=VSRSDocumentItem)*
 		(srsRequirementSubsections+=VSRSInstantiableRequirementSection)*
-	'</SWReliabiltyRequirements>';
+	'</SWReliabilityRequirements>';
 
 VSRSSWMaintainabilityRequirements returns VSRSSWMaintainabilityRequirements:
 	{VSRSSWMaintainabilityRequirements}

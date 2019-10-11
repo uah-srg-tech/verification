@@ -163,14 +163,14 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsssSpecificRequirementsEClass = null;
+	private EClass vsssInstantiableRequirementSectionEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass vsssInstantiableRequirementSectionEClass = null;
+	private EClass vsssSpecificRequirementsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -776,6 +776,33 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVSSSInstantiableRequirementSection() {
+		return vsssInstantiableRequirementSectionEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSInstantiableRequirementSection_SectionDescription() {
+		return (EReference)vsssInstantiableRequirementSectionEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSSSInstantiableRequirementSection_SssItems() {
+		return (EReference)vsssInstantiableRequirementSectionEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVSSSSpecificRequirements() {
 		return vsssSpecificRequirementsEClass;
 	}
@@ -857,7 +884,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSSSSpecificRequirements_ReliabiltyAvailability() {
+	public EReference getVSSSSpecificRequirements_ReliabilityAvailability() {
 		return (EReference)vsssSpecificRequirementsEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -904,33 +931,6 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 	 */
 	public EReference getVSSSSpecificRequirements_SystemSoftwareObservability() {
 		return (EReference)vsssSpecificRequirementsEClass.getEStructuralFeatures().get(13);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSSSInstantiableRequirementSection() {
-		return vsssInstantiableRequirementSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSSSInstantiableRequirementSection_SectionDescription() {
-		return (EReference)vsssInstantiableRequirementSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSSSInstantiableRequirementSection_SssItems() {
-		return (EReference)vsssInstantiableRequirementSectionEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1291,7 +1291,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__SECURITY);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__SAFETY);
-		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__RELIABILTY_AVAILABILITY);
+		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__RELIABILITY_AVAILABILITY);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__QUALITY);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__DESIGN);
 		createEReference(vsssSpecificRequirementsEClass, VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS);
@@ -1489,7 +1489,7 @@ public class sssPackageImpl extends EPackageImpl implements sssPackage {
 		initEReference(getVSSSSpecificRequirements_ComputerResource(), this.getVSSSComputerResourceRequirements(), null, "computerResource", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Security(), this.getVSSSSecurityRequirements(), null, "security", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Safety(), this.getVSSSSafetyRequirements(), null, "safety", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSSSSpecificRequirements_ReliabiltyAvailability(), this.getVSSSReliabilityAvailabilityRequirements(), null, "reliabiltyAvailability", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSSSSpecificRequirements_ReliabilityAvailability(), this.getVSSSReliabilityAvailabilityRequirements(), null, "reliabilityAvailability", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Quality(), this.getVSSSQualityRequirements(), null, "quality", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_Design(), this.getVSSSDesignRequirements(), null, "design", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSSSSpecificRequirements_SoftwareOperations(), this.getVSSSSoftwareOperationsRequirements(), null, "softwareOperations", null, 1, 1, VSSSSpecificRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

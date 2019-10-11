@@ -180,7 +180,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getComputerResourceAssignment_6(), "rule__VSSSSpecificRequirements__ComputerResourceAssignment_6");
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getSecurityAssignment_7(), "rule__VSSSSpecificRequirements__SecurityAssignment_7");
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getSafetyAssignment_8(), "rule__VSSSSpecificRequirements__SafetyAssignment_8");
-					put(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabiltyAvailabilityAssignment_9(), "rule__VSSSSpecificRequirements__ReliabiltyAvailabilityAssignment_9");
+					put(grammarAccess.getVSSSSpecificRequirementsAccess().getReliabilityAvailabilityAssignment_9(), "rule__VSSSSpecificRequirements__ReliabilityAvailabilityAssignment_9");
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getQualityAssignment_10(), "rule__VSSSSpecificRequirements__QualityAssignment_10");
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getDesignAssignment_11(), "rule__VSSSSpecificRequirements__DesignAssignment_11");
 					put(grammarAccess.getVSSSSpecificRequirementsAccess().getSoftwareOperationsAssignment_12(), "rule__VSSSSpecificRequirements__SoftwareOperationsAssignment_12");

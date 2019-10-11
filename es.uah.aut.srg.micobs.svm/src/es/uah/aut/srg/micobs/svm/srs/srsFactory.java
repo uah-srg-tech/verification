@@ -237,13 +237,13 @@ public interface srsFactory extends EFactory {
 	VSRSSWQualityRequirements createVSRSSWQualityRequirements();
 
 	/**
-	 * Returns a new object of class '<em>VSRSSW Reliabilty Requirements</em>'.
+	 * Returns a new object of class '<em>VSRSSW Reliability Requirements</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSRSSW Reliabilty Requirements</em>'.
+	 * @return a new object of class '<em>VSRSSW Reliability Requirements</em>'.
 	 * @generated
 	 */
-	VSRSSWReliabiltyRequirements createVSRSSWReliabiltyRequirements();
+	VSRSSWReliabilityRequirements createVSRSSWReliabilityRequirements();
 
 	/**
 	 * Returns a new object of class '<em>VSRSSW Maintainability Requirements</em>'.

@@ -13,13 +13,13 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSRSSW Reliabilty Requirements</b></em>'.
+ * A representation of the model object '<em><b>VSRSSW Reliability Requirements</b></em>'.
  * <!-- end-user-doc -->
  *
  *
- * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSSWReliabiltyRequirements()
+ * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSSWReliabilityRequirements()
  * @model
  * @generated
  */
-public interface VSRSSWReliabiltyRequirements extends VSRSAbstractRequirementSection {
-} // VSRSSWReliabiltyRequirements
+public interface VSRSSWReliabilityRequirements extends VSRSAbstractRequirementSection {
+} // VSRSSWReliabilityRequirements

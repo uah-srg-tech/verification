@@ -822,7 +822,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         computerResource=VSSSComputerResourceRequirements 
 	 *         security=VSSSSecurityRequirements 
 	 *         safety=VSSSSafetyRequirements 
-	 *         reliabiltyAvailability=VSSSReliabilityAvailabilityRequirements 
+	 *         reliabilityAvailability=VSSSReliabilityAvailabilityRequirements 
 	 *         quality=VSSSQualityRequirements 
 	 *         design=VSSSDesignRequirements 
 	 *         softwareOperations=VSSSSoftwareOperationsRequirements 

@@ -218,9 +218,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSSpecificRequirements createVSSSSpecificRequirements() {
-		VSSSSpecificRequirementsImpl vsssSpecificRequirements = new VSSSSpecificRequirementsImpl();
-		return vsssSpecificRequirements;
+	public VSSSInstantiableRequirementSection createVSSSInstantiableRequirementSection() {
+		VSSSInstantiableRequirementSectionImpl vsssInstantiableRequirementSection = new VSSSInstantiableRequirementSectionImpl();
+		return vsssInstantiableRequirementSection;
 	}
 
 	/**
@@ -228,9 +228,9 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSSSInstantiableRequirementSection createVSSSInstantiableRequirementSection() {
-		VSSSInstantiableRequirementSectionImpl vsssInstantiableRequirementSection = new VSSSInstantiableRequirementSectionImpl();
-		return vsssInstantiableRequirementSection;
+	public VSSSSpecificRequirements createVSSSSpecificRequirements() {
+		VSSSSpecificRequirementsImpl vsssSpecificRequirements = new VSSSSpecificRequirementsImpl();
+		return vsssSpecificRequirements;
 	}
 
 	/**

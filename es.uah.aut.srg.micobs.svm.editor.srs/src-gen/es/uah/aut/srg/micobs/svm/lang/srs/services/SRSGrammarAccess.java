@@ -1426,8 +1426,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPortabilityVSRSPortabilityRequirementsParserRuleCall_10_0 = (RuleCall)cPortabilityAssignment_10.eContents().get(0);
 		private final Assignment cSwQualityAssignment_11 = (Assignment)cGroup.eContents().get(11);
 		private final RuleCall cSwQualityVSRSSWQualityRequirementsParserRuleCall_11_0 = (RuleCall)cSwQualityAssignment_11.eContents().get(0);
-		private final Assignment cSwReliabiltyAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cSwReliabiltyVSRSSWReliabiltyRequirementsParserRuleCall_12_0 = (RuleCall)cSwReliabiltyAssignment_12.eContents().get(0);
+		private final Assignment cSwReliabilityAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cSwReliabilityVSRSSWReliabilityRequirementsParserRuleCall_12_0 = (RuleCall)cSwReliabilityAssignment_12.eContents().get(0);
 		private final Assignment cSwMaintainabilityAssignment_13 = (Assignment)cGroup.eContents().get(13);
 		private final RuleCall cSwMaintainabilityVSRSSWMaintainabilityRequirementsParserRuleCall_13_0 = (RuleCall)cSwMaintainabilityAssignment_13.eContents().get(0);
 		private final Assignment cSwSafetyAssignment_14 = (Assignment)cGroup.eContents().get(14);
@@ -1455,7 +1455,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	securityPrivacy=VSRSSecurityPrivacyRequirements
 		//	portability=VSRSPortabilityRequirements
 		//	swQuality=VSRSSWQualityRequirements
-		//	swReliabilty=VSRSSWReliabiltyRequirements
+		//	swReliability=VSRSSWReliabilityRequirements
 		//	swMaintainability=VSRSSWMaintainabilityRequirements
 		//	swSafety=VSRSSWSafetyRequirements
 		//	swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements
@@ -1468,11 +1468,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Requirements>' sectionDescription=DBody? general=VSRSGeneralRequirements functional=VSRSFunctionalRequirements
 		//performance=VSRSPerformanceRequirements interface=VSRSInterfaceRequirements operational=VSRSOperationalRequirements
 		//resources=VSRSResourcesRequirements design=VSRSDesignRequirements securityPrivacy=VSRSSecurityPrivacyRequirements
-		//portability=VSRSPortabilityRequirements swQuality=VSRSSWQualityRequirements swReliabilty=VSRSSWReliabiltyRequirements
-		//swMaintainability=VSRSSWMaintainabilityRequirements swSafety=VSRSSWSafetyRequirements
-		//swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements dataDefinitionDB=VSRSDataDefinitionDBRequirements
-		//humanFactors=VSRSHumanFactorsRequirements adaptationInstallation=VSRSAdaptationInstallationRequirements
-		//'</Requirements>'
+		//portability=VSRSPortabilityRequirements swQuality=VSRSSWQualityRequirements
+		//swReliability=VSRSSWReliabilityRequirements swMaintainability=VSRSSWMaintainabilityRequirements
+		//swSafety=VSRSSWSafetyRequirements swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements
+		//dataDefinitionDB=VSRSDataDefinitionDBRequirements humanFactors=VSRSHumanFactorsRequirements
+		//adaptationInstallation=VSRSAdaptationInstallationRequirements '</Requirements>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Requirements>'
@@ -1544,11 +1544,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSSWQualityRequirements
 		public RuleCall getSwQualityVSRSSWQualityRequirementsParserRuleCall_11_0() { return cSwQualityVSRSSWQualityRequirementsParserRuleCall_11_0; }
 		
-		//swReliabilty=VSRSSWReliabiltyRequirements
-		public Assignment getSwReliabiltyAssignment_12() { return cSwReliabiltyAssignment_12; }
+		//swReliability=VSRSSWReliabilityRequirements
+		public Assignment getSwReliabilityAssignment_12() { return cSwReliabilityAssignment_12; }
 		
-		//VSRSSWReliabiltyRequirements
-		public RuleCall getSwReliabiltyVSRSSWReliabiltyRequirementsParserRuleCall_12_0() { return cSwReliabiltyVSRSSWReliabiltyRequirementsParserRuleCall_12_0; }
+		//VSRSSWReliabilityRequirements
+		public RuleCall getSwReliabilityVSRSSWReliabilityRequirementsParserRuleCall_12_0() { return cSwReliabilityVSRSSWReliabilityRequirementsParserRuleCall_12_0; }
 		
 		//swMaintainability=VSRSSWMaintainabilityRequirements
 		public Assignment getSwMaintainabilityAssignment_13() { return cSwMaintainabilityAssignment_13; }
@@ -2347,37 +2347,37 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</SWQualityRequirements>'
 		public Keyword getSWQualityRequirementsKeyword_5() { return cSWQualityRequirementsKeyword_5; }
 	}
-	public class VSRSSWReliabiltyRequirementsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSWReliabiltyRequirements");
+	public class VSRSSWReliabilityRequirementsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSWReliabilityRequirements");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSRSSWReliabiltyRequirementsAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cSWReliabiltyRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Action cVSRSSWReliabilityRequirementsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cSWReliabilityRequirementsKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSectionDescriptionAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cSectionDescriptionDBodyParserRuleCall_2_0 = (RuleCall)cSectionDescriptionAssignment_2.eContents().get(0);
 		private final Assignment cSrsItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cSrsItemsVSRSDocumentItemParserRuleCall_3_0 = (RuleCall)cSrsItemsAssignment_3.eContents().get(0);
 		private final Assignment cSrsRequirementSubsectionsAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0 = (RuleCall)cSrsRequirementSubsectionsAssignment_4.eContents().get(0);
-		private final Keyword cSWReliabiltyRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cSWReliabilityRequirementsKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//VSRSSWReliabiltyRequirements:
-		//	{VSRSSWReliabiltyRequirements}
-		//	'<SWReliabiltyRequirements>'
+		//VSRSSWReliabilityRequirements:
+		//	{VSRSSWReliabilityRequirements}
+		//	'<SWReliabilityRequirements>'
 		//	sectionDescription=DBody?
 		//	srsItems+=VSRSDocumentItem*
 		//	srsRequirementSubsections+=VSRSInstantiableRequirementSection*
-		//	'</SWReliabiltyRequirements>';
+		//	'</SWReliabilityRequirements>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSRSSWReliabiltyRequirements} '<SWReliabiltyRequirements>' sectionDescription=DBody? srsItems+=VSRSDocumentItem*
-		//srsRequirementSubsections+=VSRSInstantiableRequirementSection* '</SWReliabiltyRequirements>'
+		//{VSRSSWReliabilityRequirements} '<SWReliabilityRequirements>' sectionDescription=DBody? srsItems+=VSRSDocumentItem*
+		//srsRequirementSubsections+=VSRSInstantiableRequirementSection* '</SWReliabilityRequirements>'
 		public Group getGroup() { return cGroup; }
 		
-		//{VSRSSWReliabiltyRequirements}
-		public Action getVSRSSWReliabiltyRequirementsAction_0() { return cVSRSSWReliabiltyRequirementsAction_0; }
+		//{VSRSSWReliabilityRequirements}
+		public Action getVSRSSWReliabilityRequirementsAction_0() { return cVSRSSWReliabilityRequirementsAction_0; }
 		
-		//'<SWReliabiltyRequirements>'
-		public Keyword getSWReliabiltyRequirementsKeyword_1() { return cSWReliabiltyRequirementsKeyword_1; }
+		//'<SWReliabilityRequirements>'
+		public Keyword getSWReliabilityRequirementsKeyword_1() { return cSWReliabilityRequirementsKeyword_1; }
 		
 		//sectionDescription=DBody?
 		public Assignment getSectionDescriptionAssignment_2() { return cSectionDescriptionAssignment_2; }
@@ -2397,8 +2397,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSRSInstantiableRequirementSection
 		public RuleCall getSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0() { return cSrsRequirementSubsectionsVSRSInstantiableRequirementSectionParserRuleCall_4_0; }
 		
-		//'</SWReliabiltyRequirements>'
-		public Keyword getSWReliabiltyRequirementsKeyword_5() { return cSWReliabiltyRequirementsKeyword_5; }
+		//'</SWReliabilityRequirements>'
+		public Keyword getSWReliabilityRequirementsKeyword_5() { return cSWReliabilityRequirementsKeyword_5; }
 	}
 	public class VSRSSWMaintainabilityRequirementsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSWMaintainabilityRequirements");
@@ -3093,7 +3093,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSRSSecurityPrivacyRequirementsElements pVSRSSecurityPrivacyRequirements;
 	private final VSRSPortabilityRequirementsElements pVSRSPortabilityRequirements;
 	private final VSRSSWQualityRequirementsElements pVSRSSWQualityRequirements;
-	private final VSRSSWReliabiltyRequirementsElements pVSRSSWReliabiltyRequirements;
+	private final VSRSSWReliabilityRequirementsElements pVSRSSWReliabilityRequirements;
 	private final VSRSSWMaintainabilityRequirementsElements pVSRSSWMaintainabilityRequirements;
 	private final VSRSSWSafetyRequirementsElements pVSRSSWSafetyRequirements;
 	private final VSRSSWConfigurationDeliveryRequirementsElements pVSRSSWConfigurationDeliveryRequirements;
@@ -3159,7 +3159,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSRSSecurityPrivacyRequirements = new VSRSSecurityPrivacyRequirementsElements();
 		this.pVSRSPortabilityRequirements = new VSRSPortabilityRequirementsElements();
 		this.pVSRSSWQualityRequirements = new VSRSSWQualityRequirementsElements();
-		this.pVSRSSWReliabiltyRequirements = new VSRSSWReliabiltyRequirementsElements();
+		this.pVSRSSWReliabilityRequirements = new VSRSSWReliabilityRequirementsElements();
 		this.pVSRSSWMaintainabilityRequirements = new VSRSSWMaintainabilityRequirementsElements();
 		this.pVSRSSWSafetyRequirements = new VSRSSWSafetyRequirementsElements();
 		this.pVSRSSWConfigurationDeliveryRequirements = new VSRSSWConfigurationDeliveryRequirementsElements();
@@ -3570,7 +3570,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	securityPrivacy=VSRSSecurityPrivacyRequirements
 	//	portability=VSRSPortabilityRequirements
 	//	swQuality=VSRSSWQualityRequirements
-	//	swReliabilty=VSRSSWReliabiltyRequirements
+	//	swReliability=VSRSSWReliabilityRequirements
 	//	swMaintainability=VSRSSWMaintainabilityRequirements
 	//	swSafety=VSRSSWSafetyRequirements
 	//	swConfigurationDelivery=VSRSSWConfigurationDeliveryRequirements
@@ -3803,19 +3803,19 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSRSSWQualityRequirementsAccess().getRule();
 	}
 	
-	//VSRSSWReliabiltyRequirements:
-	//	{VSRSSWReliabiltyRequirements}
-	//	'<SWReliabiltyRequirements>'
+	//VSRSSWReliabilityRequirements:
+	//	{VSRSSWReliabilityRequirements}
+	//	'<SWReliabilityRequirements>'
 	//	sectionDescription=DBody?
 	//	srsItems+=VSRSDocumentItem*
 	//	srsRequirementSubsections+=VSRSInstantiableRequirementSection*
-	//	'</SWReliabiltyRequirements>';
-	public VSRSSWReliabiltyRequirementsElements getVSRSSWReliabiltyRequirementsAccess() {
-		return pVSRSSWReliabiltyRequirements;
+	//	'</SWReliabilityRequirements>';
+	public VSRSSWReliabilityRequirementsElements getVSRSSWReliabilityRequirementsAccess() {
+		return pVSRSSWReliabilityRequirements;
 	}
 	
-	public ParserRule getVSRSSWReliabiltyRequirementsRule() {
-		return getVSRSSWReliabiltyRequirementsAccess().getRule();
+	public ParserRule getVSRSSWReliabilityRequirementsRule() {
+		return getVSRSSWReliabilityRequirementsAccess().getRule();
 	}
 	
 	//VSRSSWMaintainabilityRequirements:
