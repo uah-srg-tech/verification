@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.DBody;
 
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
@@ -19,7 +20,8 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -183,4 +185,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 		return super.eIsSet(featureID);
 	}
 
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
+	}
 } //VSVSFixedTestSectionImpl
