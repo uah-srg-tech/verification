@@ -144,6 +144,14 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSTestingSpecificationDesignAdapter();
 			}
 			@Override
+			public Adapter caseVSVSScenariosSection(VSVSScenariosSection object) {
+				return createVSVSScenariosSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSScenarioSection(VSVSScenarioSection object) {
+				return createVSVSScenarioSectionAdapter();
+			}
+			@Override
 			public Adapter caseVSVSTestDesign(VSVSTestDesign object) {
 				return createVSVSTestDesignAdapter();
 			}
@@ -522,6 +530,34 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVSTestDesignAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection
+	 * @generated
+	 */
+	public Adapter createVSVSScenariosSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection <em>VSVS Scenario Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection
+	 * @generated
+	 */
+	public Adapter createVSVSScenarioSectionAdapter() {
 		return null;
 	}
 

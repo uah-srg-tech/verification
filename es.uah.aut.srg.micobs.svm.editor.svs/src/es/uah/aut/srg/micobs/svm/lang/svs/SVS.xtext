@@ -212,6 +212,7 @@ VSVSTaskIdentification returns VSVSTaskIdentification:
 VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign:
 	'<TestingSpecificationDesign>'
 		'<General>' general=VSVSFixedSection '</General>'
+		('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
 		(testDesigns+=VSVSTestDesign)+
 	'</TestingSpecificationDesign>';
 
@@ -275,6 +276,17 @@ VSVSTestDesign returns VSVSTestDesign:
 		'<ApproachRefinements>' approachRefinements=VSVSFixedSection '</ApproachRefinements>'
 	'</TestDesign>';
 
+VSVSScenariosSection returns VSVSScenariosSection:
+	scenarios+=VSVSScenarioSection(scenarios+=VSVSScenarioSection)+;
+
+VSVSScenarioSection returns VSVSScenarioSection:
+	'<Scenario'
+		'name=' name=STRING
+		'id=' id=UINT_STRING
+		'>'
+		body=DBody
+	'</Scenario>';
+
 VSVSTestCase returns VSVSTestCase:
 	'<TestCase'
 		'name=' name=STRING
@@ -295,7 +307,8 @@ VSVSTestProcedure returns VSVSTestProcedure:
 		'>'
 		'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
 		'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>'
-		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+		('<Scenario' 'ref='scenario=[VSVSScenarioSection|STRING] '/>')?
+		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 		procedureSteps=VSVSProcedureSteps
 		'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 	'</TestProcedure>';
@@ -304,8 +317,7 @@ VSVSProcedureSteps returns VSVSProcedureSteps:
 		'<ProcedureSteps'
 		'>'
 		(step+=VSVSProcedureStep)+
-		'</ProcedureSteps>' 
-	;
+		'</ProcedureSteps>';
 
 VSVSProcedureStep returns VSVSProcedureStep:
 	'<step'

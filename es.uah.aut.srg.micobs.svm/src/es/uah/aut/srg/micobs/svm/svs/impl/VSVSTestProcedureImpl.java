@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -43,6 +44,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getPurpose <em>Purpose</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getProcedureSteps <em>Procedure Steps</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestScript <em>Test Script</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestCase <em>Test Case</em>}</li>
@@ -90,6 +92,16 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @ordered
 	 */
 	protected VSVSFixedTestSection purpose;
+
+	/**
+	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScenario()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSScenarioSection scenario;
 
 	/**
 	 * The cached value of the '{@link #getProcedureSteps() <em>Procedure Steps</em>}' containment reference.
@@ -252,6 +264,44 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSScenarioSection getScenario() {
+		if (scenario != null && scenario.eIsProxy()) {
+			InternalEObject oldScenario = (InternalEObject)scenario;
+			scenario = (VSVSScenarioSection)eResolveProxy(oldScenario);
+			if (scenario != oldScenario) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_TEST_PROCEDURE__SCENARIO, oldScenario, scenario));
+			}
+		}
+		return scenario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSScenarioSection basicGetScenario() {
+		return scenario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScenario(VSVSScenarioSection newScenario) {
+		VSVSScenarioSection oldScenario = scenario;
+		scenario = newScenario;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__SCENARIO, oldScenario, scenario));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSVSProcedureSteps getProcedureSteps() {
 		return procedureSteps;
 	}
@@ -379,6 +429,9 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return getIdentifier();
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				return getPurpose();
+			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
+				if (resolve) return getScenario();
+				return basicGetScenario();
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				return getProcedureSteps();
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
@@ -406,6 +459,9 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				setPurpose((VSVSFixedTestSection)newValue);
+				return;
+			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
+				setScenario((VSVSScenarioSection)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)newValue);
@@ -438,6 +494,9 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				setPurpose((VSVSFixedTestSection)null);
 				return;
+			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
+				setScenario((VSVSScenarioSection)null);
+				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)null);
 				return;
@@ -465,6 +524,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return identifier != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
 				return purpose != null;
+			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
+				return scenario != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				return procedureSteps != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:

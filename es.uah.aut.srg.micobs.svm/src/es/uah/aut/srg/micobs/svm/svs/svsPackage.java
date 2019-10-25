@@ -1020,13 +1020,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The feature id for the '<em><b>Test Designs</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1035,7 +1044,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1054,7 +1063,117 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
 	 * @generated
 	 */
-	int VSVS_TEST_DESIGN = 14;
+	int VSVS_TEST_DESIGN = 16;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenariosSection()
+	 * @generated
+	 */
+	int VSVS_SCENARIOS_SECTION = 14;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIOS_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIOS_SECTION__SCENARIOS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Scenarios Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIOS_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>VSVS Scenarios Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIOS_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl <em>VSVS Scenario Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenarioSection()
+	 * @generated
+	 */
+	int VSVS_SCENARIO_SECTION = 15;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION__ID = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Body</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of structural features of the '<em>VSVS Scenario Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+
+	/**
+	 * The number of operations of the '<em>VSVS Scenario Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_SCENARIO_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1127,7 +1246,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedTestSection()
 	 * @generated
 	 */
-	int VSVS_FIXED_TEST_SECTION = 15;
+	int VSVS_FIXED_TEST_SECTION = 17;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1173,7 +1292,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCases()
 	 * @generated
 	 */
-	int VSVS_TEST_CASES = 16;
+	int VSVS_TEST_CASES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1237,7 +1356,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCase()
 	 * @generated
 	 */
-	int VSVS_TEST_CASE = 17;
+	int VSVS_TEST_CASE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1364,7 +1483,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedures()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURES = 18;
+	int VSVS_TEST_PROCEDURES = 20;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1419,7 +1538,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedure()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURE = 19;
+	int VSVS_TEST_PROCEDURE = 21;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1458,13 +1577,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
+	 * The feature id for the '<em><b>Scenario</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_PROCEDURE__SCENARIO = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+
+	/**
 	 * The feature id for the '<em><b>Procedure Steps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Test Script</b></em>' containment reference.
@@ -1473,7 +1601,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Test Case</b></em>' reference list.
@@ -1482,7 +1610,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_CASE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSVS_TEST_PROCEDURE__TEST_CASE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Procedure</em>' class.
@@ -1491,7 +1619,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Procedure</em>' class.
@@ -1510,7 +1638,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEPS = 20;
+	int VSVS_PROCEDURE_STEPS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
@@ -1547,7 +1675,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureStep()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEP = 21;
+	int VSVS_PROCEDURE_STEP = 23;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1674,7 +1802,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUTS = 22;
+	int VSVS_STEP_INPUTS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Input level 3</b></em>' containment reference list.
@@ -1738,7 +1866,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUTS = 23;
+	int VSVS_STEP_OUTPUTS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
@@ -1829,7 +1957,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepSpecialPackets()
 	 * @generated
 	 */
-	int VSVS_STEP_SPECIAL_PACKETS = 24;
+	int VSVS_STEP_SPECIAL_PACKETS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Enable</b></em>' containment reference list.
@@ -1893,7 +2021,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepEnableDisable()
 	 * @generated
 	 */
-	int VSVS_STEP_ENABLE_DISABLE = 25;
+	int VSVS_STEP_ENABLE_DISABLE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1930,7 +2058,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentSteps()
 	 * @generated
 	 */
-	int VSVS_STEP_CONCURRENT_STEPS = 26;
+	int VSVS_STEP_CONCURRENT_STEPS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Next Step</b></em>' containment reference.
@@ -1976,7 +2104,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepNextStep()
 	 * @generated
 	 */
-	int VSVS_STEP_NEXT_STEP = 27;
+	int VSVS_STEP_NEXT_STEP = 29;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2022,7 +2150,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConcurrentStep()
 	 * @generated
 	 */
-	int VSVS_STEP_CONCURRENT_STEP = 28;
+	int VSVS_STEP_CONCURRENT_STEP = 30;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -2059,7 +2187,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInput()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT = 29;
+	int VSVS_STEP_INPUT = 31;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2123,7 +2251,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel3()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL3 = 30;
+	int VSVS_STEP_INPUT_LEVEL3 = 32;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2259,7 +2387,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel2()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL2 = 31;
+	int VSVS_STEP_INPUT_LEVEL2 = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2377,7 +2505,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel1()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL1 = 32;
+	int VSVS_STEP_INPUT_LEVEL1 = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2477,7 +2605,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputLevel0()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUT_LEVEL0 = 33;
+	int VSVS_STEP_INPUT_LEVEL0 = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2559,7 +2687,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutput()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT = 34;
+	int VSVS_STEP_OUTPUT = 36;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2623,7 +2751,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel3()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL3 = 35;
+	int VSVS_STEP_OUTPUT_LEVEL3 = 37;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2786,7 +2914,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel2()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL2 = 36;
+	int VSVS_STEP_OUTPUT_LEVEL2 = 38;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2922,7 +3050,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel1()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL1 = 37;
+	int VSVS_STEP_OUTPUT_LEVEL1 = 39;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3031,7 +3159,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputLevel0()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUT_LEVEL0 = 38;
+	int VSVS_STEP_OUTPUT_LEVEL0 = 40;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3113,7 +3241,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepFilter()
 	 * @generated
 	 */
-	int VSVS_STEP_FILTER = 39;
+	int VSVS_STEP_FILTER = 41;
 
 	/**
 	 * The feature id for the '<em><b>Apply def filter</b></em>' attribute.
@@ -3159,7 +3287,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAnalysisInspectionReview()
 	 * @generated
 	 */
-	int VSVS_ANALYSIS_INSPECTION_REVIEW = 40;
+	int VSVS_ANALYSIS_INSPECTION_REVIEW = 42;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3214,7 +3342,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestPlatformRequirements()
 	 * @generated
 	 */
-	int VSVS_TEST_PLATFORM_REQUIREMENTS = 41;
+	int VSVS_TEST_PLATFORM_REQUIREMENTS = 43;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3269,7 +3397,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAdditionalInformation()
 	 * @generated
 	 */
-	int VSVS_ADDITIONAL_INFORMATION = 42;
+	int VSVS_ADDITIONAL_INFORMATION = 44;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3324,7 +3452,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepMode()
 	 * @generated
 	 */
-	int VSVS_STEP_MODE = 43;
+	int VSVS_STEP_MODE = 45;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit <em>VSVS Step Unit</em>}' enum.
@@ -3334,7 +3462,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepUnit()
 	 * @generated
 	 */
-	int VSVS_STEP_UNIT = 44;
+	int VSVS_STEP_UNIT = 46;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode <em>VSVS Step Checkmode</em>}' enum.
@@ -3344,7 +3472,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepCheckmode()
 	 * @generated
 	 */
-	int VSVS_STEP_CHECKMODE = 45;
+	int VSVS_STEP_CHECKMODE = 47;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepYesNo <em>VSVS Step Yes No</em>}' enum.
@@ -3354,7 +3482,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepYesNo()
 	 * @generated
 	 */
-	int VSVS_STEP_YES_NO = 46;
+	int VSVS_STEP_YES_NO = 48;
 
 
 	/**
@@ -3861,6 +3989,17 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestingSpecificationDesign_General();
 
 	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios <em>Scenarios</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Scenarios</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios()
+	 * @see #getVSVSTestingSpecificationDesign()
+	 * @generated
+	 */
+	EReference getVSVSTestingSpecificationDesign_Scenarios();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3924,6 +4063,70 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVSTestDesign_ApproachRefinements();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Scenarios Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection
+	 * @generated
+	 */
+	EClass getVSVSScenariosSection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection#getScenarios <em>Scenarios</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Scenarios</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection#getScenarios()
+	 * @see #getVSVSScenariosSection()
+	 * @generated
+	 */
+	EReference getVSVSScenariosSection_Scenarios();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection <em>VSVS Scenario Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Scenario Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection
+	 * @generated
+	 */
+	EClass getVSVSScenarioSection();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getName()
+	 * @see #getVSVSScenarioSection()
+	 * @generated
+	 */
+	EAttribute getVSVSScenarioSection_Name();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getId <em>Id</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Id</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getId()
+	 * @see #getVSVSScenarioSection()
+	 * @generated
+	 */
+	EAttribute getVSVSScenarioSection_Id();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getBody <em>Body</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Body</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getBody()
+	 * @see #getVSVSScenarioSection()
+	 * @generated
+	 */
+	EReference getVSVSScenarioSection_Body();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection <em>VSVS Fixed Test Section</em>}'.
@@ -4139,6 +4342,17 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVSTestProcedure_Purpose();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getScenario <em>Scenario</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scenario</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getScenario()
+	 * @see #getVSVSTestProcedure()
+	 * @generated
+	 */
+	EReference getVSVSTestProcedure_Scenario();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getProcedureSteps <em>Procedure Steps</em>}'.
@@ -5850,6 +6064,14 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = eINSTANCE.getVSVSTestingSpecificationDesign_General();
 
 		/**
+		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = eINSTANCE.getVSVSTestingSpecificationDesign_Scenarios();
+
+		/**
 		 * The meta object literal for the '<em><b>Test Designs</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -5898,6 +6120,58 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = eINSTANCE.getVSVSTestDesign_ApproachRefinements();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenariosSection()
+		 * @generated
+		 */
+		EClass VSVS_SCENARIOS_SECTION = eINSTANCE.getVSVSScenariosSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_SCENARIOS_SECTION__SCENARIOS = eINSTANCE.getVSVSScenariosSection_Scenarios();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl <em>VSVS Scenario Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenarioSection()
+		 * @generated
+		 */
+		EClass VSVS_SCENARIO_SECTION = eINSTANCE.getVSVSScenarioSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_SCENARIO_SECTION__NAME = eINSTANCE.getVSVSScenarioSection_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_SCENARIO_SECTION__ID = eINSTANCE.getVSVSScenarioSection_Id();
+
+		/**
+		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_SCENARIO_SECTION__BODY = eINSTANCE.getVSVSScenarioSection_Body();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
@@ -6068,6 +6342,14 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_TEST_PROCEDURE__PURPOSE = eINSTANCE.getVSVSTestProcedure_Purpose();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TEST_PROCEDURE__SCENARIO = eINSTANCE.getVSVSTestProcedure_Scenario();
 
 		/**
 		 * The meta object literal for the '<em><b>Procedure Steps</b></em>' containment reference feature.

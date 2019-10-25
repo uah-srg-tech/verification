@@ -1560,19 +1560,24 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGeneralAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cGeneralVSVSFixedSectionParserRuleCall_2_0 = (RuleCall)cGeneralAssignment_2.eContents().get(0);
 		private final Keyword cGeneralKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTestDesignsAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_4_0 = (RuleCall)cTestDesignsAssignment_4.eContents().get(0);
-		private final Keyword cTestingSpecificationDesignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cScenariosKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cScenariosAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_4_1_0 = (RuleCall)cScenariosAssignment_4_1.eContents().get(0);
+		private final Keyword cScenariosKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cTestDesignsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_5_0 = (RuleCall)cTestDesignsAssignment_5.eContents().get(0);
+		private final Keyword cTestingSpecificationDesignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSVSTestingSpecificationDesign:
 		//	'<TestingSpecificationDesign>'
-		//	'<General>' general=VSVSFixedSection '</General>'
+		//	'<General>' general=VSVSFixedSection '</General>' ('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
 		//	testDesigns+=VSVSTestDesign+
 		//	'</TestingSpecificationDesign>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' testDesigns+=VSVSTestDesign+
-		//'</TestingSpecificationDesign>'
+		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' ('<Scenarios>'
+		//scenarios=VSVSScenariosSection '</Scenarios>')? testDesigns+=VSVSTestDesign+ '</TestingSpecificationDesign>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestingSpecificationDesign>'
@@ -1590,14 +1595,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</General>'
 		public Keyword getGeneralKeyword_3() { return cGeneralKeyword_3; }
 		
+		//('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'<Scenarios>'
+		public Keyword getScenariosKeyword_4_0() { return cScenariosKeyword_4_0; }
+		
+		//scenarios=VSVSScenariosSection
+		public Assignment getScenariosAssignment_4_1() { return cScenariosAssignment_4_1; }
+		
+		//VSVSScenariosSection
+		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_4_1_0() { return cScenariosVSVSScenariosSectionParserRuleCall_4_1_0; }
+		
+		//'</Scenarios>'
+		public Keyword getScenariosKeyword_4_2() { return cScenariosKeyword_4_2; }
+		
 		//testDesigns+=VSVSTestDesign+
-		public Assignment getTestDesignsAssignment_4() { return cTestDesignsAssignment_4; }
+		public Assignment getTestDesignsAssignment_5() { return cTestDesignsAssignment_5; }
 		
 		//VSVSTestDesign
-		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_4_0() { return cTestDesignsVSVSTestDesignParserRuleCall_4_0; }
+		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_5_0() { return cTestDesignsVSVSTestDesignParserRuleCall_5_0; }
 		
 		//'</TestingSpecificationDesign>'
-		public Keyword getTestingSpecificationDesignKeyword_5() { return cTestingSpecificationDesignKeyword_5; }
+		public Keyword getTestingSpecificationDesignKeyword_6() { return cTestingSpecificationDesignKeyword_6; }
 	}
 	public class VSVSTestCasesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCases");
@@ -2053,6 +2073,93 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</TestDesign>'
 		public Keyword getTestDesignKeyword_13() { return cTestDesignKeyword_13; }
 	}
+	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cScenariosAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_0_0 = (RuleCall)cScenariosAssignment_0.eContents().get(0);
+		private final Assignment cScenariosAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_1_0 = (RuleCall)cScenariosAssignment_1.eContents().get(0);
+		
+		//VSVSScenariosSection:
+		//	scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+
+		public Group getGroup() { return cGroup; }
+		
+		//scenarios+=VSVSScenarioSection
+		public Assignment getScenariosAssignment_0() { return cScenariosAssignment_0; }
+		
+		//VSVSScenarioSection
+		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_0_0() { return cScenariosVSVSScenarioSectionParserRuleCall_0_0; }
+		
+		//scenarios+=VSVSScenarioSection+
+		public Assignment getScenariosAssignment_1() { return cScenariosAssignment_1; }
+		
+		//VSVSScenarioSection
+		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_1_0() { return cScenariosVSVSScenarioSectionParserRuleCall_1_0; }
+	}
+	public class VSVSScenarioSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenarioSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cScenarioKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBodyDBodyParserRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
+		private final Keyword cScenarioKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VSVSScenarioSection:
+		//	'<Scenario'
+		//	'name=' name=STRING
+		//	'id=' id=UINT_STRING
+		//	'>'
+		//	body=DBody
+		//	'</Scenario>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Scenario' 'name=' name=STRING 'id=' id=UINT_STRING '>' body=DBody '</Scenario>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Scenario'
+		public Keyword getScenarioKeyword_0() { return cScenarioKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'id='
+		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
+		
+		//id=UINT_STRING
+		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
+		
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//body=DBody
+		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
+		
+		//DBody
+		public RuleCall getBodyDBodyParserRuleCall_6_0() { return cBodyDBodyParserRuleCall_6_0; }
+		
+		//'</Scenario>'
+		public Keyword getScenarioKeyword_7() { return cScenarioKeyword_7; }
+	}
 	public class VSVSTestCaseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCase");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2262,34 +2369,43 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cPurposeVSVSFixedTestSectionParserRuleCall_8_0 = (RuleCall)cPurposeAssignment_8.eContents().get(0);
 		private final Keyword cPurposeKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cTestCaseKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Keyword cScenarioKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
 		private final Keyword cRefKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cTestCaseAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cTestCaseVSVSTestCaseCrossReference_10_2_0 = (CrossReference)cTestCaseAssignment_10_2.eContents().get(0);
-		private final RuleCall cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cTestCaseVSVSTestCaseCrossReference_10_2_0.eContents().get(1);
+		private final Assignment cScenarioAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
+		private final CrossReference cScenarioVSVSScenarioSectionCrossReference_10_2_0 = (CrossReference)cScenarioAssignment_10_2.eContents().get(0);
+		private final RuleCall cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cScenarioVSVSScenarioSectionCrossReference_10_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Assignment cProcedureStepsAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cProcedureStepsVSVSProcedureStepsParserRuleCall_11_0 = (RuleCall)cProcedureStepsAssignment_11.eContents().get(0);
-		private final Keyword cTestScriptKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cTestScriptAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cTestScriptVSVSFixedTestSectionParserRuleCall_13_0 = (RuleCall)cTestScriptAssignment_13.eContents().get(0);
-		private final Keyword cTestScriptKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Keyword cTestProcedureKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
+		private final Keyword cTestCaseKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
+		private final Keyword cRefKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
+		private final Assignment cTestCaseAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
+		private final CrossReference cTestCaseVSVSTestCaseCrossReference_11_2_0 = (CrossReference)cTestCaseAssignment_11_2.eContents().get(0);
+		private final RuleCall cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cTestCaseVSVSTestCaseCrossReference_11_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
+		private final Assignment cProcedureStepsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cProcedureStepsVSVSProcedureStepsParserRuleCall_12_0 = (RuleCall)cProcedureStepsAssignment_12.eContents().get(0);
+		private final Keyword cTestScriptKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cTestScriptAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cTestScriptVSVSFixedTestSectionParserRuleCall_14_0 = (RuleCall)cTestScriptAssignment_14.eContents().get(0);
+		private final Keyword cTestScriptKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cTestProcedureKeyword_16 = (Keyword)cGroup.eContents().get(16);
 		
 		//VSVSTestProcedure:
 		//	'<TestProcedure'
 		//	'name=' name=STRING
 		//	'>'
 		//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
-		//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING]
+		//	'/>')? ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 		//	procedureSteps=VSVSProcedureSteps
 		//	'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 		//	'</TestProcedure>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSFixedTestSection '</Identifier>' '<Purpose>'
-		//purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
-		//procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSFixedTestSection '</TestScript>' '</TestProcedure>'
+		//purpose=VSVSFixedTestSection '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')?
+		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+ procedureSteps=VSVSProcedureSteps '<TestScript>'
+		//testScript=VSVSFixedTestSection '</TestScript>' '</TestProcedure>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestProcedure'
@@ -2331,47 +2447,68 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Purpose>'
 		public Keyword getPurposeKeyword_9() { return cPurposeKeyword_9; }
 		
-		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+		//('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')?
 		public Group getGroup_10() { return cGroup_10; }
 		
-		//'<TestCase'
-		public Keyword getTestCaseKeyword_10_0() { return cTestCaseKeyword_10_0; }
+		//'<Scenario'
+		public Keyword getScenarioKeyword_10_0() { return cScenarioKeyword_10_0; }
 		
 		//'ref='
 		public Keyword getRefKeyword_10_1() { return cRefKeyword_10_1; }
 		
-		//testCase+=[VSVSTestCase|STRING]
-		public Assignment getTestCaseAssignment_10_2() { return cTestCaseAssignment_10_2; }
+		//scenario=[VSVSScenarioSection|STRING]
+		public Assignment getScenarioAssignment_10_2() { return cScenarioAssignment_10_2; }
 		
-		//[VSVSTestCase|STRING]
-		public CrossReference getTestCaseVSVSTestCaseCrossReference_10_2_0() { return cTestCaseVSVSTestCaseCrossReference_10_2_0; }
+		//[VSVSScenarioSection|STRING]
+		public CrossReference getScenarioVSVSScenarioSectionCrossReference_10_2_0() { return cScenarioVSVSScenarioSectionCrossReference_10_2_0; }
 		
 		//STRING
-		public RuleCall getTestCaseVSVSTestCaseSTRINGTerminalRuleCall_10_2_0_1() { return cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_10_2_0_1; }
+		public RuleCall getScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1() { return cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
 		
+		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
+		public Group getGroup_11() { return cGroup_11; }
+		
+		//'<TestCase'
+		public Keyword getTestCaseKeyword_11_0() { return cTestCaseKeyword_11_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_11_1() { return cRefKeyword_11_1; }
+		
+		//testCase+=[VSVSTestCase|STRING]
+		public Assignment getTestCaseAssignment_11_2() { return cTestCaseAssignment_11_2; }
+		
+		//[VSVSTestCase|STRING]
+		public CrossReference getTestCaseVSVSTestCaseCrossReference_11_2_0() { return cTestCaseVSVSTestCaseCrossReference_11_2_0; }
+		
+		//STRING
+		public RuleCall getTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1() { return cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
+		
 		//procedureSteps=VSVSProcedureSteps
-		public Assignment getProcedureStepsAssignment_11() { return cProcedureStepsAssignment_11; }
+		public Assignment getProcedureStepsAssignment_12() { return cProcedureStepsAssignment_12; }
 		
 		//VSVSProcedureSteps
-		public RuleCall getProcedureStepsVSVSProcedureStepsParserRuleCall_11_0() { return cProcedureStepsVSVSProcedureStepsParserRuleCall_11_0; }
+		public RuleCall getProcedureStepsVSVSProcedureStepsParserRuleCall_12_0() { return cProcedureStepsVSVSProcedureStepsParserRuleCall_12_0; }
 		
 		//'<TestScript>'
-		public Keyword getTestScriptKeyword_12() { return cTestScriptKeyword_12; }
+		public Keyword getTestScriptKeyword_13() { return cTestScriptKeyword_13; }
 		
 		//testScript=VSVSFixedTestSection
-		public Assignment getTestScriptAssignment_13() { return cTestScriptAssignment_13; }
+		public Assignment getTestScriptAssignment_14() { return cTestScriptAssignment_14; }
 		
 		//VSVSFixedTestSection
-		public RuleCall getTestScriptVSVSFixedTestSectionParserRuleCall_13_0() { return cTestScriptVSVSFixedTestSectionParserRuleCall_13_0; }
+		public RuleCall getTestScriptVSVSFixedTestSectionParserRuleCall_14_0() { return cTestScriptVSVSFixedTestSectionParserRuleCall_14_0; }
 		
 		//'</TestScript>'
-		public Keyword getTestScriptKeyword_14() { return cTestScriptKeyword_14; }
+		public Keyword getTestScriptKeyword_15() { return cTestScriptKeyword_15; }
 		
 		//'</TestProcedure>'
-		public Keyword getTestProcedureKeyword_15() { return cTestProcedureKeyword_15; }
+		public Keyword getTestProcedureKeyword_16() { return cTestProcedureKeyword_16; }
 	}
 	public class VSVSProcedureStepsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureSteps");
@@ -5415,6 +5552,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSDefinitionElements pVSVSDefinition;
 	private final VSVSAbbreviationElements pVSVSAbbreviation;
 	private final VSVSTestDesignElements pVSVSTestDesign;
+	private final VSVSScenariosSectionElements pVSVSScenariosSection;
+	private final VSVSScenarioSectionElements pVSVSScenarioSection;
 	private final VSVSTestCaseElements pVSVSTestCase;
 	private final VSVSTestProcedureElements pVSVSTestProcedure;
 	private final VSVSProcedureStepsElements pVSVSProcedureSteps;
@@ -5502,6 +5641,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSDefinition = new VSVSDefinitionElements();
 		this.pVSVSAbbreviation = new VSVSAbbreviationElements();
 		this.pVSVSTestDesign = new VSVSTestDesignElements();
+		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
+		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
 		this.pVSVSTestCase = new VSVSTestCaseElements();
 		this.pVSVSTestProcedure = new VSVSTestProcedureElements();
 		this.pVSVSProcedureSteps = new VSVSProcedureStepsElements();
@@ -5958,7 +6099,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSTestingSpecificationDesign:
 	//	'<TestingSpecificationDesign>'
-	//	'<General>' general=VSVSFixedSection '</General>'
+	//	'<General>' general=VSVSFixedSection '</General>' ('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
 	//	testDesigns+=VSVSTestDesign+
 	//	'</TestingSpecificationDesign>';
 	public VSVSTestingSpecificationDesignElements getVSVSTestingSpecificationDesignAccess() {
@@ -6092,6 +6233,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSTestDesignAccess().getRule();
 	}
 	
+	//VSVSScenariosSection:
+	//	scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+;
+	public VSVSScenariosSectionElements getVSVSScenariosSectionAccess() {
+		return pVSVSScenariosSection;
+	}
+	
+	public ParserRule getVSVSScenariosSectionRule() {
+		return getVSVSScenariosSectionAccess().getRule();
+	}
+	
+	//VSVSScenarioSection:
+	//	'<Scenario'
+	//	'name=' name=STRING
+	//	'id=' id=UINT_STRING
+	//	'>'
+	//	body=DBody
+	//	'</Scenario>';
+	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
+		return pVSVSScenarioSection;
+	}
+	
+	public ParserRule getVSVSScenarioSectionRule() {
+		return getVSVSScenarioSectionAccess().getRule();
+	}
+	
 	//VSVSTestCase:
 	//	'<TestCase'
 	//	'name=' name=STRING
@@ -6118,7 +6284,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name=' name=STRING
 	//	'>'
 	//	'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
-	//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')*
+	//	'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING]
+	//	'/>')? ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 	//	procedureSteps=VSVSProcedureSteps
 	//	'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
 	//	'</TestProcedure>';

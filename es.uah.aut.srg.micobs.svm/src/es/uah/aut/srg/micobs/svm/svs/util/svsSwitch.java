@@ -195,6 +195,22 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVS_SCENARIOS_SECTION: {
+				VSVSScenariosSection vsvsScenariosSection = (VSVSScenariosSection)theEObject;
+				T result = caseVSVSScenariosSection(vsvsScenariosSection);
+				if (result == null) result = caseDFixedSection(vsvsScenariosSection);
+				if (result == null) result = caseDAbstractSection(vsvsScenariosSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_SCENARIO_SECTION: {
+				VSVSScenarioSection vsvsScenarioSection = (VSVSScenarioSection)theEObject;
+				T result = caseVSVSScenarioSection(vsvsScenarioSection);
+				if (result == null) result = caseDFixedSection(vsvsScenarioSection);
+				if (result == null) result = caseDAbstractSection(vsvsScenarioSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_TEST_DESIGN: {
 				VSVSTestDesign vsvsTestDesign = (VSVSTestDesign)theEObject;
 				T result = caseVSVSTestDesign(vsvsTestDesign);
@@ -627,6 +643,36 @@ public class svsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVSTestDesign(VSVSTestDesign object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Scenarios Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Scenarios Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSScenariosSection(VSVSScenariosSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Scenario Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Scenario Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSScenarioSection(VSVSScenarioSection object) {
 		return null;
 	}
 

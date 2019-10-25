@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -42,6 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getGeneral <em>General</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getScenarios <em>Scenarios</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getTestDesigns <em>Test Designs</em>}</li>
  * </ul>
  *
@@ -57,6 +59,16 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * @ordered
 	 */
 	protected VSVSFixedSection general;
+
+	/**
+	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScenarios()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSScenariosSection scenarios;
 
 	/**
 	 * The cached value of the '{@link #getTestDesigns() <em>Test Designs</em>}' containment reference list.
@@ -135,6 +147,49 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSScenariosSection getScenarios() {
+		return scenarios;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetScenarios(VSVSScenariosSection newScenarios, NotificationChain msgs) {
+		VSVSScenariosSection oldScenarios = scenarios;
+		scenarios = newScenarios;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS, oldScenarios, newScenarios);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScenarios(VSVSScenariosSection newScenarios) {
+		if (newScenarios != scenarios) {
+			NotificationChain msgs = null;
+			if (scenarios != null)
+				msgs = ((InternalEObject)scenarios).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS, null, msgs);
+			if (newScenarios != null)
+				msgs = ((InternalEObject)newScenarios).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS, null, msgs);
+			msgs = basicSetScenarios(newScenarios, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS, newScenarios, newScenarios));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<VSVSTestDesign> getTestDesigns() {
 		if (testDesigns == null) {
 			testDesigns = new EObjectContainmentEList<VSVSTestDesign>(VSVSTestDesign.class, this, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS);
@@ -152,6 +207,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return basicSetGeneral(null, msgs);
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
+				return basicSetScenarios(null, msgs);
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				return ((InternalEList<?>)getTestDesigns()).basicRemove(otherEnd, msgs);
 		}
@@ -168,6 +225,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return getGeneral();
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
+				return getScenarios();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				return getTestDesigns();
 		}
@@ -185,6 +244,9 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)newValue);
+				return;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
+				setScenarios((VSVSScenariosSection)newValue);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				getTestDesigns().clear();
@@ -205,6 +267,9 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)null);
 				return;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
+				setScenarios((VSVSScenariosSection)null);
+				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				getTestDesigns().clear();
 				return;
@@ -222,6 +287,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return general != null;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
+				return scenarios != null;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				return testDesigns != null && !testDesigns.isEmpty();
 		}
@@ -232,6 +299,7 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
+		subsections.add((DAbstractSection) getScenarios());
 		
 		for(DAbstractSection procedure : getTestDesigns()) {
 			subsections.add(procedure);

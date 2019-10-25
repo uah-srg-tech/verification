@@ -94,8 +94,20 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSVSTestingSpecificationDesign" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
         eType="#//VSVSFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" eType="#//VSVSScenariosSection"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testDesigns" lowerBound="1"
         upperBound="-1" eType="#//VSVSTestDesign" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSScenariosSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
+        upperBound="-1" eType="#//VSVSScenarioSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSScenarioSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DBody"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSTestDesign" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doc.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -144,6 +156,7 @@
         eType="#//VSVSFixedTestSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="purpose" lowerBound="1"
         eType="#//VSVSFixedTestSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" eType="#//VSVSScenarioSection"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedureSteps" lowerBound="1"
         eType="#//VSVSProcedureSteps" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testScript" eType="#//VSVSFixedTestSection"

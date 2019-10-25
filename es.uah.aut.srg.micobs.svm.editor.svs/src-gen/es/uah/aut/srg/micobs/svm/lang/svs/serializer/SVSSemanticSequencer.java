@@ -41,6 +41,8 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps;
@@ -180,6 +182,12 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case svsPackage.VSVS_REFERENCE_DOCUMENTS:
 				sequence_VSVSReferenceDocuments(context, (VSVSReferenceDocuments) semanticObject); 
+				return; 
+			case svsPackage.VSVS_SCENARIO_SECTION:
+				sequence_VSVSScenarioSection(context, (VSVSScenarioSection) semanticObject); 
+				return; 
+			case svsPackage.VSVS_SCENARIOS_SECTION:
+				sequence_VSVSScenariosSection(context, (VSVSScenariosSection) semanticObject); 
 				return; 
 			case svsPackage.VSVS_SOFTWARE_OVERVIEW:
 				sequence_VSVSSoftwareOverview(context, (VSVSSoftwareOverview) semanticObject); 
@@ -699,6 +707,42 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     referenceDocuments+=DReferenceDocument*
 	 */
 	protected void sequence_VSVSReferenceDocuments(ISerializationContext context, VSVSReferenceDocuments semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSScenarioSection returns VSVSScenarioSection
+	 *
+	 * Constraint:
+	 *     (name=STRING id=UINT_STRING body=DBody)
+	 */
+	protected void sequence_VSVSScenarioSection(ISerializationContext context, VSVSScenarioSection semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__NAME));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__ID));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__BODY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SCENARIO_SECTION__BODY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSScenarioSectionAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVSVSScenarioSectionAccess().getIdUINT_STRINGTerminalRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSScenarioSectionAccess().getBodyDBodyParserRuleCall_6_0(), semanticObject.getBody());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSScenariosSection returns VSVSScenariosSection
+	 *
+	 * Constraint:
+	 *     (scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+)
+	 */
+	protected void sequence_VSVSScenariosSection(ISerializationContext context, VSVSScenariosSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1269,7 +1313,8 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         name=STRING 
 	 *         identifier=VSVSFixedTestSection 
 	 *         purpose=VSVSFixedTestSection 
-	 *         testCase+=[VSVSTestCase|STRING]* 
+	 *         scenario=[VSVSScenarioSection|STRING]? 
+	 *         testCase+=[VSVSTestCase|STRING]+ 
 	 *         procedureSteps=VSVSProcedureSteps 
 	 *         testScript=VSVSFixedTestSection
 	 *     )
@@ -1296,7 +1341,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign
 	 *
 	 * Constraint:
-	 *     (general=VSVSFixedSection testDesigns+=VSVSTestDesign+)
+	 *     (general=VSVSFixedSection scenarios=VSVSScenariosSection? testDesigns+=VSVSTestDesign+)
 	 */
 	protected void sequence_VSVSTestingSpecificationDesign(ISerializationContext context, VSVSTestingSpecificationDesign semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

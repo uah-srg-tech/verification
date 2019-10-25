@@ -11,52 +11,54 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
 import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
-import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
-import org.eclipse.emf.common.util.EList;
-import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
+import java.util.Collection;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
+
+import org.eclipse.emf.ecore.EClass;
+
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Fixed Test Section</b></em>'.
+ * An implementation of the model object '<em><b>VSVS Scenarios Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSFixedTestSection {
+public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSScenariosSection {
 	/**
-	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
+	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getBody()
+	 * @see #getScenarios()
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody body;
+	protected EList<VSVSScenarioSection> scenarios;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSFixedTestSectionImpl() {
+	protected VSVSScenariosSectionImpl() {
 		super();
 	}
 
@@ -67,7 +69,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_FIXED_TEST_SECTION;
+		return svsPackage.Literals.VSVS_SCENARIOS_SECTION;
 	}
 
 	/**
@@ -75,42 +77,11 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getBody() {
-		return body;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
-		DBody oldBody = body;
-		body = newBody;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_FIXED_TEST_SECTION__BODY, oldBody, newBody);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
+	public EList<VSVSScenarioSection> getScenarios() {
+		if (scenarios == null) {
+			scenarios = new EObjectContainmentEList<VSVSScenarioSection>(VSVSScenarioSection.class, this, svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS);
 		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setBody(DBody newBody) {
-		if (newBody != body) {
-			NotificationChain msgs = null;
-			if (body != null)
-				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_FIXED_TEST_SECTION__BODY, null, msgs);
-			if (newBody != null)
-				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_FIXED_TEST_SECTION__BODY, null, msgs);
-			msgs = basicSetBody(newBody, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_FIXED_TEST_SECTION__BODY, newBody, newBody));
+		return scenarios;
 	}
 
 	/**
@@ -121,8 +92,8 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
-				return basicSetBody(null, msgs);
+			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
+				return ((InternalEList<?>)getScenarios()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -135,8 +106,8 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
-				return getBody();
+			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
+				return getScenarios();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -146,11 +117,13 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
-				setBody((DBody)newValue);
+			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
+				getScenarios().clear();
+				getScenarios().addAll((Collection<? extends VSVSScenarioSection>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -164,8 +137,8 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
-				setBody((DBody)null);
+			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
+				getScenarios().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -179,14 +152,20 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
-				return body != null;
+			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
+				return scenarios != null && !scenarios.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
 	@Override
 	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		
+		for(DAbstractSection subsection : getScenarios()) {
+			subsections.add(subsection);
+		}
+		return subsections;
 	}
-} //VSVSFixedTestSectionImpl
+
+} //VSVSScenariosSectionImpl

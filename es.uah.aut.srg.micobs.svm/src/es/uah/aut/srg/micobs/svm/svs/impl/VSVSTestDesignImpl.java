@@ -386,11 +386,11 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 
 	@Override
 	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subections = new BasicEList<DAbstractSection>();
-		subections.add((DAbstractSection) getGeneral());
-		subections.add((DAbstractSection) getFeaturesToBeTested());
-		subections.add((DAbstractSection) getApproachRefinements());
-		return subections;
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getGeneral());
+		subsections.add((DAbstractSection) getFeaturesToBeTested());
+		subsections.add((DAbstractSection) getApproachRefinements());
+		return subsections;
 	}
 
 } //VSVSTestDesignImpl
