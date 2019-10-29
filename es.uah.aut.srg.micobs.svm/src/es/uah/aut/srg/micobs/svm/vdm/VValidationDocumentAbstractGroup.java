@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getItems <em>Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getDoc <em>Doc</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractGroup()
@@ -46,5 +47,31 @@ public interface VValidationDocumentAbstractGroup extends EObject {
 	 * @generated
 	 */
 	EList<VValidationDocumentAbstractItem> getItems();
+
+	/**
+	 * Returns the value of the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Doc</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Doc</em>' reference.
+	 * @see #setDoc(VValidationDocument)
+	 * @see es.uah.aut.srg.micobs.svm.vdm.vdmPackage#getVValidationDocumentAbstractGroup_Doc()
+	 * @model required="true" transient="true" volatile="true" derived="true"
+	 * @generated
+	 */
+	VValidationDocument getDoc();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getDoc <em>Doc</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Doc</em>' reference.
+	 * @see #getDoc()
+	 * @generated
+	 */
+	void setDoc(VValidationDocument value);
 
 } // VValidationDocumentAbstractGroup

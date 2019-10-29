@@ -230,6 +230,15 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getVValidationDocumentAbstractGroup_Doc() {
+		return (EReference)vValidationDocumentAbstractGroupEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getVValidationDocumentFixedGroup() {
 		return vValidationDocumentFixedGroupEClass;
 	}
@@ -318,6 +327,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 
 		vValidationDocumentAbstractGroupEClass = createEClass(VVALIDATION_DOCUMENT_ABSTRACT_GROUP);
 		createEReference(vValidationDocumentAbstractGroupEClass, VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS);
+		createEReference(vValidationDocumentAbstractGroupEClass, VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC);
 
 		vValidationDocumentFixedGroupEClass = createEClass(VVALIDATION_DOCUMENT_FIXED_GROUP);
 
@@ -377,6 +387,7 @@ public class vdmPackageImpl extends EPackageImpl implements vdmPackage {
 
 		initEClass(vValidationDocumentAbstractGroupEClass, VValidationDocumentAbstractGroup.class, "VValidationDocumentAbstractGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVValidationDocumentAbstractGroup_Items(), this.getVValidationDocumentAbstractItem(), null, "items", null, 0, -1, VValidationDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
+		initEReference(getVValidationDocumentAbstractGroup_Doc(), this.getVValidationDocument(), null, "doc", null, 1, 1, VValidationDocumentAbstractGroup.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vValidationDocumentFixedGroupEClass, VValidationDocumentFixedGroup.class, "VValidationDocumentFixedGroup", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.vdm.impl;
 
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
@@ -20,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -31,6 +33,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractGroupImpl#getDoc <em>Doc</em>}</li>
  * </ul>
  *
  * @generated
@@ -73,11 +76,47 @@ public class VValidationDocumentAbstractGroupImpl extends MinimalEObjectImpl.Con
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VValidationDocument getDoc() {
+		VValidationDocument doc = basicGetDoc();
+		return doc != null && doc.eIsProxy() ? (VValidationDocument)eResolveProxy((InternalEObject)doc) : doc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VValidationDocument basicGetDoc() {
+		// TODO: implement this method to return the 'Doc' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDoc(VValidationDocument newDoc) {
+		// TODO: implement this method to set the 'Doc' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return getItems();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC:
+				if (resolve) return getDoc();
+				return basicGetDoc();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -95,6 +134,9 @@ public class VValidationDocumentAbstractGroupImpl extends MinimalEObjectImpl.Con
 				getItems().clear();
 				getItems().addAll((Collection<? extends VValidationDocumentAbstractItem>)newValue);
 				return;
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC:
+				setDoc((VValidationDocument)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -110,6 +152,9 @@ public class VValidationDocumentAbstractGroupImpl extends MinimalEObjectImpl.Con
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				getItems().clear();
 				return;
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC:
+				setDoc((VValidationDocument)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -124,6 +169,8 @@ public class VValidationDocumentAbstractGroupImpl extends MinimalEObjectImpl.Con
 		switch (featureID) {
 			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return !getItems().isEmpty();
+			case vdmPackage.VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC:
+				return basicGetDoc() != null;
 		}
 		return super.eIsSet(featureID);
 	}

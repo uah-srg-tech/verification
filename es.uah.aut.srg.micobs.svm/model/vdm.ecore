@@ -18,6 +18,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="items" upperBound="-1"
         eType="#//VValidationDocumentAbstractItem" volatile="true" transient="true"
         derived="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="doc" lowerBound="1" eType="#//VValidationDocument"
+        volatile="true" transient="true" derived="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VValidationDocumentFixedGroup" eSuperTypes="#//VValidationDocumentAbstractGroup"/>
   <eClassifiers xsi:type="ecore:EClass" name="VValidationDocumentInstantiableGroup"

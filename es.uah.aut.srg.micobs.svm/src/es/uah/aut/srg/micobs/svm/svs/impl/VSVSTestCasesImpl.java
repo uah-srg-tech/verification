@@ -18,6 +18,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl;
 
@@ -29,6 +30,7 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -304,6 +306,12 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 			items.add(item);
 		}
 		return items;
+	}
+	
+	@Override
+	public VValidationDocument basicGetDoc() {
+		final EObject parent = eContainer();
+		return (VValidationDocument)parent.eContainer();
 	}
 
 } //VSVSTestCasesImpl

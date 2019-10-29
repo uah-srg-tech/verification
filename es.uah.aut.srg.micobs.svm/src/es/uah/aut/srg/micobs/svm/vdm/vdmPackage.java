@@ -175,13 +175,22 @@ public interface vdmPackage extends EPackage {
 	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS = 0;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC = 1;
+
+	/**
 	 * The number of structural features of the '<em>VValidation Document Abstract Group</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT = 1;
+	int VVALIDATION_DOCUMENT_ABSTRACT_GROUP_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>VValidation Document Abstract Group</em>' class.
@@ -210,6 +219,15 @@ public interface vdmPackage extends EPackage {
 	 * @ordered
 	 */
 	int VVALIDATION_DOCUMENT_FIXED_GROUP__ITEMS = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_FIXED_GROUP__DOC = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC;
 
 	/**
 	 * The number of structural features of the '<em>VValidation Document Fixed Group</em>' class.
@@ -247,6 +265,15 @@ public interface vdmPackage extends EPackage {
 	 * @ordered
 	 */
 	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__ITEMS = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VVALIDATION_DOCUMENT_INSTANTIABLE_GROUP__DOC = VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -449,6 +476,17 @@ public interface vdmPackage extends EPackage {
 	EReference getVValidationDocumentAbstractGroup_Items();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getDoc <em>Doc</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Doc</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup#getDoc()
+	 * @see #getVValidationDocumentAbstractGroup()
+	 * @generated
+	 */
+	EReference getVValidationDocumentAbstractGroup_Doc();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup <em>VValidation Document Fixed Group</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -617,6 +655,14 @@ public interface vdmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VVALIDATION_DOCUMENT_ABSTRACT_GROUP__ITEMS = eINSTANCE.getVValidationDocumentAbstractGroup_Items();
+
+		/**
+		 * The meta object literal for the '<em><b>Doc</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VVALIDATION_DOCUMENT_ABSTRACT_GROUP__DOC = eINSTANCE.getVValidationDocumentAbstractGroup_Doc();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl <em>VValidation Document Fixed Group</em>}' class.
