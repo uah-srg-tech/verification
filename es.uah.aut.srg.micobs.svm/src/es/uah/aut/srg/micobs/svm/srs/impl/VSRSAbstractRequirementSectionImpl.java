@@ -19,6 +19,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentFixedGroupImpl;
@@ -30,6 +31,7 @@ import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -346,6 +348,12 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 			}
 		}
 		return items;
+	}
+	
+	@Override
+	public VTraceableDocument basicGetDoc() {
+		final EObject parent = eContainer();
+		return (VTraceableDocument)parent.eContainer();
 	}
 
 } //VSRSAbstractRequirementSectionImpl

@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.tdm.impl;
 
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
@@ -18,6 +19,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
@@ -29,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractGroupImpl#getDoc <em>Doc</em>}</li>
  * </ul>
  *
  * @generated
@@ -71,11 +74,47 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTraceableDocument getDoc() {
+		VTraceableDocument doc = basicGetDoc();
+		return doc != null && doc.eIsProxy() ? (VTraceableDocument)eResolveProxy((InternalEObject)doc) : doc;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTraceableDocument basicGetDoc() {
+		// TODO: implement this method to return the 'Doc' reference
+		// -> do not perform proxy resolution
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDoc(VTraceableDocument newDoc) {
+		// TODO: implement this method to set the 'Doc' reference
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return getItems();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOC:
+				if (resolve) return getDoc();
+				return basicGetDoc();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -93,6 +132,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 				getItems().clear();
 				getItems().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOC:
+				setDoc((VTraceableDocument)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -108,6 +150,9 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				getItems().clear();
 				return;
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOC:
+				setDoc((VTraceableDocument)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -122,6 +167,8 @@ public abstract class VTraceableDocumentAbstractGroupImpl extends MinimalEObject
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__ITEMS:
 				return !getItems().isEmpty();
+			case tdmPackage.VTRACEABLE_DOCUMENT_ABSTRACT_GROUP__DOC:
+				return basicGetDoc() != null;
 		}
 		return super.eIsSet(featureID);
 	}
