@@ -8,11 +8,11 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.impl;
+package es.uah.aut.srg.micobs.svm.vcd.impl;
 
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItem;
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItems;
-import es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDItem;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDItems;
+import es.uah.aut.srg.micobs.svm.vcd.vcdPackage;
 
 import java.util.Collection;
 
@@ -30,34 +30,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VCDT Parent Items</b></em>'.
+ * An implementation of the model object '<em><b>VVCD Items</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTParentItemsImpl#getParentItem <em>Parent Item</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDItemsImpl#getItem <em>Item</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements VCDTParentItems {
+public class VVCDItemsImpl extends MinimalEObjectImpl.Container implements VVCDItems {
 	/**
-	 * The cached value of the '{@link #getParentItem() <em>Parent Item</em>}' containment reference list.
+	 * The cached value of the '{@link #getItem() <em>Item</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getParentItem()
+	 * @see #getItem()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VCDTParentItem> parentItem;
+	protected EList<VVCDItem> item;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VCDTParentItemsImpl() {
+	protected VVCDItemsImpl() {
 		super();
 	}
 
@@ -68,7 +68,7 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return vcdtPackage.Literals.VCDT_PARENT_ITEMS;
+		return vcdPackage.Literals.VVCD_ITEMS;
 	}
 
 	/**
@@ -76,11 +76,11 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VCDTParentItem> getParentItem() {
-		if (parentItem == null) {
-			parentItem = new EObjectContainmentEList<VCDTParentItem>(VCDTParentItem.class, this, vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM);
+	public EList<VVCDItem> getItem() {
+		if (item == null) {
+			item = new EObjectContainmentEList<VVCDItem>(VVCDItem.class, this, vcdPackage.VVCD_ITEMS__ITEM);
 		}
-		return parentItem;
+		return item;
 	}
 
 	/**
@@ -91,8 +91,8 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM:
-				return ((InternalEList<?>)getParentItem()).basicRemove(otherEnd, msgs);
+			case vcdPackage.VVCD_ITEMS__ITEM:
+				return ((InternalEList<?>)getItem()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -105,8 +105,8 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM:
-				return getParentItem();
+			case vcdPackage.VVCD_ITEMS__ITEM:
+				return getItem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -120,9 +120,9 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM:
-				getParentItem().clear();
-				getParentItem().addAll((Collection<? extends VCDTParentItem>)newValue);
+			case vcdPackage.VVCD_ITEMS__ITEM:
+				getItem().clear();
+				getItem().addAll((Collection<? extends VVCDItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +136,8 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM:
-				getParentItem().clear();
+			case vcdPackage.VVCD_ITEMS__ITEM:
+				getItem().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,10 +151,10 @@ public class VCDTParentItemsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_ITEMS__PARENT_ITEM:
-				return parentItem != null && !parentItem.isEmpty();
+			case vcdPackage.VVCD_ITEMS__ITEM:
+				return item != null && !item.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //VCDTParentItemsImpl
+} //VVCDItemsImpl

@@ -8,12 +8,12 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.impl;
+package es.uah.aut.srg.micobs.svm.vcd.impl;
 
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTItems;
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTList;
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItems;
-import es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDItems;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDList;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDParentItems;
+import es.uah.aut.srg.micobs.svm.vcd.vcdPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -26,20 +26,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VCDT List</b></em>'.
+ * An implementation of the model object '<em><b>VVCD List</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTListImpl#getDoc <em>Doc</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTListImpl#getItems <em>Items</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTListImpl#getParentItems <em>Parent Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDListImpl#getDoc <em>Doc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDListImpl#getItems <em>Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDListImpl#getParentItems <em>Parent Items</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTList {
+public class VVCDListImpl extends MinimalEObjectImpl.Container implements VVCDList {
 	/**
 	 * The default value of the '{@link #getDoc() <em>Doc</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -68,7 +68,7 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * @generated
 	 * @ordered
 	 */
-	protected VCDTItems items;
+	protected VVCDItems items;
 
 	/**
 	 * The cached value of the '{@link #getParentItems() <em>Parent Items</em>}' containment reference.
@@ -78,14 +78,14 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * @generated
 	 * @ordered
 	 */
-	protected VCDTParentItems parentItems;
+	protected VVCDParentItems parentItems;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VCDTListImpl() {
+	protected VVCDListImpl() {
 		super();
 	}
 
@@ -96,7 +96,7 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return vcdtPackage.Literals.VCDT_LIST;
+		return vcdPackage.Literals.VVCD_LIST;
 	}
 
 	/**
@@ -117,7 +117,7 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 		String oldDoc = doc;
 		doc = newDoc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_LIST__DOC, oldDoc, doc));
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_LIST__DOC, oldDoc, doc));
 	}
 
 	/**
@@ -125,7 +125,7 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTItems getItems() {
+	public VVCDItems getItems() {
 		return items;
 	}
 
@@ -134,11 +134,11 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetItems(VCDTItems newItems, NotificationChain msgs) {
-		VCDTItems oldItems = items;
+	public NotificationChain basicSetItems(VVCDItems newItems, NotificationChain msgs) {
+		VVCDItems oldItems = items;
 		items = newItems;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_LIST__ITEMS, oldItems, newItems);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_LIST__ITEMS, oldItems, newItems);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -149,18 +149,18 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setItems(VCDTItems newItems) {
+	public void setItems(VVCDItems newItems) {
 		if (newItems != items) {
 			NotificationChain msgs = null;
 			if (items != null)
-				msgs = ((InternalEObject)items).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - vcdtPackage.VCDT_LIST__ITEMS, null, msgs);
+				msgs = ((InternalEObject)items).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - vcdPackage.VVCD_LIST__ITEMS, null, msgs);
 			if (newItems != null)
-				msgs = ((InternalEObject)newItems).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - vcdtPackage.VCDT_LIST__ITEMS, null, msgs);
+				msgs = ((InternalEObject)newItems).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - vcdPackage.VVCD_LIST__ITEMS, null, msgs);
 			msgs = basicSetItems(newItems, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_LIST__ITEMS, newItems, newItems));
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_LIST__ITEMS, newItems, newItems));
 	}
 
 	/**
@@ -168,7 +168,7 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTParentItems getParentItems() {
+	public VVCDParentItems getParentItems() {
 		return parentItems;
 	}
 
@@ -177,11 +177,11 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetParentItems(VCDTParentItems newParentItems, NotificationChain msgs) {
-		VCDTParentItems oldParentItems = parentItems;
+	public NotificationChain basicSetParentItems(VVCDParentItems newParentItems, NotificationChain msgs) {
+		VVCDParentItems oldParentItems = parentItems;
 		parentItems = newParentItems;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_LIST__PARENT_ITEMS, oldParentItems, newParentItems);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_LIST__PARENT_ITEMS, oldParentItems, newParentItems);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -192,18 +192,18 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setParentItems(VCDTParentItems newParentItems) {
+	public void setParentItems(VVCDParentItems newParentItems) {
 		if (newParentItems != parentItems) {
 			NotificationChain msgs = null;
 			if (parentItems != null)
-				msgs = ((InternalEObject)parentItems).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - vcdtPackage.VCDT_LIST__PARENT_ITEMS, null, msgs);
+				msgs = ((InternalEObject)parentItems).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - vcdPackage.VVCD_LIST__PARENT_ITEMS, null, msgs);
 			if (newParentItems != null)
-				msgs = ((InternalEObject)newParentItems).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - vcdtPackage.VCDT_LIST__PARENT_ITEMS, null, msgs);
+				msgs = ((InternalEObject)newParentItems).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - vcdPackage.VVCD_LIST__PARENT_ITEMS, null, msgs);
 			msgs = basicSetParentItems(newParentItems, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_LIST__PARENT_ITEMS, newParentItems, newParentItems));
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_LIST__PARENT_ITEMS, newParentItems, newParentItems));
 	}
 
 	/**
@@ -214,9 +214,9 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_LIST__ITEMS:
+			case vcdPackage.VVCD_LIST__ITEMS:
 				return basicSetItems(null, msgs);
-			case vcdtPackage.VCDT_LIST__PARENT_ITEMS:
+			case vcdPackage.VVCD_LIST__PARENT_ITEMS:
 				return basicSetParentItems(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -230,11 +230,11 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_LIST__DOC:
+			case vcdPackage.VVCD_LIST__DOC:
 				return getDoc();
-			case vcdtPackage.VCDT_LIST__ITEMS:
+			case vcdPackage.VVCD_LIST__ITEMS:
 				return getItems();
-			case vcdtPackage.VCDT_LIST__PARENT_ITEMS:
+			case vcdPackage.VVCD_LIST__PARENT_ITEMS:
 				return getParentItems();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -248,14 +248,14 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_LIST__DOC:
+			case vcdPackage.VVCD_LIST__DOC:
 				setDoc((String)newValue);
 				return;
-			case vcdtPackage.VCDT_LIST__ITEMS:
-				setItems((VCDTItems)newValue);
+			case vcdPackage.VVCD_LIST__ITEMS:
+				setItems((VVCDItems)newValue);
 				return;
-			case vcdtPackage.VCDT_LIST__PARENT_ITEMS:
-				setParentItems((VCDTParentItems)newValue);
+			case vcdPackage.VVCD_LIST__PARENT_ITEMS:
+				setParentItems((VVCDParentItems)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -269,14 +269,14 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_LIST__DOC:
+			case vcdPackage.VVCD_LIST__DOC:
 				setDoc(DOC_EDEFAULT);
 				return;
-			case vcdtPackage.VCDT_LIST__ITEMS:
-				setItems((VCDTItems)null);
+			case vcdPackage.VVCD_LIST__ITEMS:
+				setItems((VVCDItems)null);
 				return;
-			case vcdtPackage.VCDT_LIST__PARENT_ITEMS:
-				setParentItems((VCDTParentItems)null);
+			case vcdPackage.VVCD_LIST__PARENT_ITEMS:
+				setParentItems((VVCDParentItems)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -290,11 +290,11 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_LIST__DOC:
+			case vcdPackage.VVCD_LIST__DOC:
 				return DOC_EDEFAULT == null ? doc != null : !DOC_EDEFAULT.equals(doc);
-			case vcdtPackage.VCDT_LIST__ITEMS:
+			case vcdPackage.VVCD_LIST__ITEMS:
 				return items != null;
-			case vcdtPackage.VCDT_LIST__PARENT_ITEMS:
+			case vcdPackage.VVCD_LIST__PARENT_ITEMS:
 				return parentItems != null;
 		}
 		return super.eIsSet(featureID);
@@ -316,4 +316,4 @@ public class VCDTListImpl extends MinimalEObjectImpl.Container implements VCDTLi
 		return result.toString();
 	}
 
-} //VCDTListImpl
+} //VVCDListImpl

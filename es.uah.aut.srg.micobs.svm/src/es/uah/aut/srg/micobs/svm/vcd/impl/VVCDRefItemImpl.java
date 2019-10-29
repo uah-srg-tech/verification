@@ -8,56 +8,58 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.impl;
+package es.uah.aut.srg.micobs.svm.vcd.impl;
 
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTItem;
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTItems;
-import es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDRefItem;
+import es.uah.aut.srg.micobs.svm.vcd.vcdPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VCDT Items</b></em>'.
+ * An implementation of the model object '<em><b>VVCD Ref Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTItemsImpl#getItem <em>Item</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDRefItemImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTItems {
+public class VVCDRefItemImpl extends MinimalEObjectImpl.Container implements VVCDRefItem {
 	/**
-	 * The cached value of the '{@link #getItem() <em>Item</em>}' containment reference list.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getItem()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VCDTItem> item;
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VCDTItemsImpl() {
+	protected VVCDRefItemImpl() {
 		super();
 	}
 
@@ -68,7 +70,7 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return vcdtPackage.Literals.VCDT_ITEMS;
+		return vcdPackage.Literals.VVCD_REF_ITEM;
 	}
 
 	/**
@@ -76,11 +78,8 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VCDTItem> getItem() {
-		if (item == null) {
-			item = new EObjectContainmentEList<VCDTItem>(VCDTItem.class, this, vcdtPackage.VCDT_ITEMS__ITEM);
-		}
-		return item;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -88,13 +87,11 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-			case vcdtPackage.VCDT_ITEMS__ITEM:
-				return ((InternalEList<?>)getItem()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_REF_ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -105,8 +102,8 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_ITEMS__ITEM:
-				return getItem();
+			case vcdPackage.VVCD_REF_ITEM__NAME:
+				return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -116,13 +113,11 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_ITEMS__ITEM:
-				getItem().clear();
-				getItem().addAll((Collection<? extends VCDTItem>)newValue);
+			case vcdPackage.VVCD_REF_ITEM__NAME:
+				setName((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -136,8 +131,8 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_ITEMS__ITEM:
-				getItem().clear();
+			case vcdPackage.VVCD_REF_ITEM__NAME:
+				setName(NAME_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -151,10 +146,26 @@ public class VCDTItemsImpl extends MinimalEObjectImpl.Container implements VCDTI
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_ITEMS__ITEM:
-				return item != null && !item.isEmpty();
+			case vcdPackage.VVCD_REF_ITEM__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //VCDTItemsImpl
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //VVCDRefItemImpl

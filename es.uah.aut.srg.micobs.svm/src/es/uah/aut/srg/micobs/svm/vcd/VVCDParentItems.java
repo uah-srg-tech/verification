@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt;
+package es.uah.aut.srg.micobs.svm.vcd;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -16,35 +16,35 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VCDT Items</b></em>'.
+ * A representation of the model object '<em><b>VVCD Parent Items</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTItems#getItem <em>Item</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItems#getParentItem <em>Parent Item</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTItems()
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItems()
  * @model
  * @generated
  */
-public interface VCDTItems extends EObject {
+public interface VVCDParentItems extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Item</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vcdt.VCDTItem}.
+	 * Returns the value of the '<em><b>Parent Item</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Item</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Parent Item</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Item</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTItems_Item()
+	 * @return the value of the '<em>Parent Item</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItems_ParentItem()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VCDTItem> getItem();
+	EList<VVCDParentItem> getParentItem();
 
-} // VCDTItems
+} // VVCDParentItems

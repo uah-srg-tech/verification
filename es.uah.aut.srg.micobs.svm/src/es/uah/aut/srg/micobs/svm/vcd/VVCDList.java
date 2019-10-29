@@ -8,29 +8,29 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt;
+package es.uah.aut.srg.micobs.svm.vcd;
 
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VCDT List</b></em>'.
+ * A representation of the model object '<em><b>VVCD List</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getDoc <em>Doc</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getItems <em>Items</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getParentItems <em>Parent Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getDoc <em>Doc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getItems <em>Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getParentItems <em>Parent Items</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTList()
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDList()
  * @model
  * @generated
  */
-public interface VCDTList extends EObject {
+public interface VVCDList extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Doc</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -41,14 +41,14 @@ public interface VCDTList extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Doc</em>' attribute.
 	 * @see #setDoc(String)
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTList_Doc()
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDList_Doc()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getDoc();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getDoc <em>Doc</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getDoc <em>Doc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Doc</em>' attribute.
@@ -66,22 +66,22 @@ public interface VCDTList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Items</em>' containment reference.
-	 * @see #setItems(VCDTItems)
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTList_Items()
+	 * @see #setItems(VVCDItems)
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDList_Items()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VCDTItems getItems();
+	VVCDItems getItems();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getItems <em>Items</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getItems <em>Items</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Items</em>' containment reference.
 	 * @see #getItems()
 	 * @generated
 	 */
-	void setItems(VCDTItems value);
+	void setItems(VVCDItems value);
 
 	/**
 	 * Returns the value of the '<em><b>Parent Items</b></em>' containment reference.
@@ -92,21 +92,21 @@ public interface VCDTList extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Items</em>' containment reference.
-	 * @see #setParentItems(VCDTParentItems)
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTList_ParentItems()
+	 * @see #setParentItems(VVCDParentItems)
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDList_ParentItems()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VCDTParentItems getParentItems();
+	VVCDParentItems getParentItems();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList#getParentItems <em>Parent Items</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList#getParentItems <em>Parent Items</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent Items</em>' containment reference.
 	 * @see #getParentItems()
 	 * @generated
 	 */
-	void setParentItems(VCDTParentItems value);
+	void setParentItems(VVCDParentItems value);
 
-} // VCDTList
+} // VVCDList

@@ -8,10 +8,10 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.impl;
+package es.uah.aut.srg.micobs.svm.vcd.impl;
 
-import es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem;
-import es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage;
+import es.uah.aut.srg.micobs.svm.vcd.VVCDParentRefItem;
+import es.uah.aut.srg.micobs.svm.vcd.vcdPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -22,19 +22,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VCDT Parent Ref Item</b></em>'.
+ * An implementation of the model object '<em><b>VVCD Parent Ref Item</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTParentRefItemImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.impl.VCDTParentRefItemImpl#getParentDoc <em>Parent Doc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDParentRefItemImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.impl.VVCDParentRefItemImpl#getParentDoc <em>Parent Doc</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implements VCDTParentRefItem {
+public class VVCDParentRefItemImpl extends MinimalEObjectImpl.Container implements VVCDParentRefItem {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -80,7 +80,7 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VCDTParentRefItemImpl() {
+	protected VVCDParentRefItemImpl() {
 		super();
 	}
 
@@ -91,7 +91,7 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return vcdtPackage.Literals.VCDT_PARENT_REF_ITEM;
+		return vcdPackage.Literals.VVCD_PARENT_REF_ITEM;
 	}
 
 	/**
@@ -112,7 +112,7 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_PARENT_REF_ITEM__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_PARENT_REF_ITEM__NAME, oldName, name));
 	}
 
 	/**
@@ -133,7 +133,7 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 		String oldParentDoc = parentDoc;
 		parentDoc = newParentDoc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, vcdtPackage.VCDT_PARENT_REF_ITEM__PARENT_DOC, oldParentDoc, parentDoc));
+			eNotify(new ENotificationImpl(this, Notification.SET, vcdPackage.VVCD_PARENT_REF_ITEM__PARENT_DOC, oldParentDoc, parentDoc));
 	}
 
 	/**
@@ -144,9 +144,9 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__NAME:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__NAME:
 				return getName();
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__PARENT_DOC:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__PARENT_DOC:
 				return getParentDoc();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -160,10 +160,10 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__NAME:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__NAME:
 				setName((String)newValue);
 				return;
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__PARENT_DOC:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__PARENT_DOC:
 				setParentDoc((String)newValue);
 				return;
 		}
@@ -178,10 +178,10 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__NAME:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__PARENT_DOC:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__PARENT_DOC:
 				setParentDoc(PARENT_DOC_EDEFAULT);
 				return;
 		}
@@ -196,9 +196,9 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__NAME:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case vcdtPackage.VCDT_PARENT_REF_ITEM__PARENT_DOC:
+			case vcdPackage.VVCD_PARENT_REF_ITEM__PARENT_DOC:
 				return PARENT_DOC_EDEFAULT == null ? parentDoc != null : !PARENT_DOC_EDEFAULT.equals(parentDoc);
 		}
 		return super.eIsSet(featureID);
@@ -222,4 +222,4 @@ public class VCDTParentRefItemImpl extends MinimalEObjectImpl.Container implemen
 		return result.toString();
 	}
 
-} //VCDTParentRefItemImpl
+} //VVCDParentRefItemImpl

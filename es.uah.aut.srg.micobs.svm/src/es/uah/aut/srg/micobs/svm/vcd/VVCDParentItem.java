@@ -8,28 +8,31 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt;
+package es.uah.aut.srg.micobs.svm.vcd;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VCDT Parent Ref Item</b></em>'.
+ * A representation of the model object '<em><b>VVCD Parent Item</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem#getParentDoc <em>Parent Doc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem#getParentDoc <em>Parent Doc</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem#getRefItem <em>Ref Item</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTParentRefItem()
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItem()
  * @model
  * @generated
  */
-public interface VCDTParentRefItem extends EObject {
+public interface VVCDParentItem extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,14 +43,14 @@ public interface VCDTParentRefItem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTParentRefItem_Name()
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItem_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -66,14 +69,14 @@ public interface VCDTParentRefItem extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parent Doc</em>' attribute.
 	 * @see #setParentDoc(String)
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage#getVCDTParentRefItem_ParentDoc()
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItem_ParentDoc()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getParentDoc();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem#getParentDoc <em>Parent Doc</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem#getParentDoc <em>Parent Doc</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Parent Doc</em>' attribute.
@@ -82,4 +85,20 @@ public interface VCDTParentRefItem extends EObject {
 	 */
 	void setParentDoc(String value);
 
-} // VCDTParentRefItem
+	/**
+	 * Returns the value of the '<em><b>Ref Item</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.vcd.VVCDRefItem}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Ref Item</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Ref Item</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage#getVVCDParentItem_RefItem()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	EList<VVCDRefItem> getRefItem();
+
+} // VVCDParentItem

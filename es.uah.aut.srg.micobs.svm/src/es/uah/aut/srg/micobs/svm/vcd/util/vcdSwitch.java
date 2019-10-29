@@ -8,9 +8,9 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.util;
+package es.uah.aut.srg.micobs.svm.vcd.util;
 
-import es.uah.aut.srg.micobs.svm.vcdt.*;
+import es.uah.aut.srg.micobs.svm.vcd.*;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -27,17 +27,17 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage
  * @generated
  */
-public class vcdtSwitch<T> extends Switch<T> {
+public class vcdSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static vcdtPackage modelPackage;
+	protected static vcdPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -45,9 +45,9 @@ public class vcdtSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public vcdtSwitch() {
+	public vcdSwitch() {
 		if (modelPackage == null) {
-			modelPackage = vcdtPackage.eINSTANCE;
+			modelPackage = vcdPackage.eINSTANCE;
 		}
 	}
 
@@ -74,45 +74,45 @@ public class vcdtSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case vcdtPackage.VCDT_LIST: {
-				VCDTList vcdtList = (VCDTList)theEObject;
-				T result = caseVCDTList(vcdtList);
+			case vcdPackage.VVCD_LIST: {
+				VVCDList vvcdList = (VVCDList)theEObject;
+				T result = caseVVCDList(vvcdList);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_ITEMS: {
-				VCDTItems vcdtItems = (VCDTItems)theEObject;
-				T result = caseVCDTItems(vcdtItems);
+			case vcdPackage.VVCD_ITEMS: {
+				VVCDItems vvcdItems = (VVCDItems)theEObject;
+				T result = caseVVCDItems(vvcdItems);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_ITEM: {
-				VCDTItem vcdtItem = (VCDTItem)theEObject;
-				T result = caseVCDTItem(vcdtItem);
+			case vcdPackage.VVCD_ITEM: {
+				VVCDItem vvcdItem = (VVCDItem)theEObject;
+				T result = caseVVCDItem(vvcdItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_PARENT_REF_ITEM: {
-				VCDTParentRefItem vcdtParentRefItem = (VCDTParentRefItem)theEObject;
-				T result = caseVCDTParentRefItem(vcdtParentRefItem);
+			case vcdPackage.VVCD_PARENT_REF_ITEM: {
+				VVCDParentRefItem vvcdParentRefItem = (VVCDParentRefItem)theEObject;
+				T result = caseVVCDParentRefItem(vvcdParentRefItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_PARENT_ITEMS: {
-				VCDTParentItems vcdtParentItems = (VCDTParentItems)theEObject;
-				T result = caseVCDTParentItems(vcdtParentItems);
+			case vcdPackage.VVCD_PARENT_ITEMS: {
+				VVCDParentItems vvcdParentItems = (VVCDParentItems)theEObject;
+				T result = caseVVCDParentItems(vvcdParentItems);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_PARENT_ITEM: {
-				VCDTParentItem vcdtParentItem = (VCDTParentItem)theEObject;
-				T result = caseVCDTParentItem(vcdtParentItem);
+			case vcdPackage.VVCD_PARENT_ITEM: {
+				VVCDParentItem vvcdParentItem = (VVCDParentItem)theEObject;
+				T result = caseVVCDParentItem(vvcdParentItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case vcdtPackage.VCDT_REF_ITEM: {
-				VCDTRefItem vcdtRefItem = (VCDTRefItem)theEObject;
-				T result = caseVCDTRefItem(vcdtRefItem);
+			case vcdPackage.VVCD_REF_ITEM: {
+				VVCDRefItem vvcdRefItem = (VVCDRefItem)theEObject;
+				T result = caseVVCDRefItem(vvcdRefItem);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -121,107 +121,107 @@ public class vcdtSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT List</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD List</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT List</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD List</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTList(VCDTList object) {
+	public T caseVVCDList(VVCDList object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Items</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Items</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Items</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Items</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTItems(VCDTItems object) {
+	public T caseVVCDItems(VVCDItems object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTItem(VCDTItem object) {
+	public T caseVVCDItem(VVCDItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Parent Ref Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Parent Ref Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Parent Ref Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Parent Ref Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTParentRefItem(VCDTParentRefItem object) {
+	public T caseVVCDParentRefItem(VVCDParentRefItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Parent Items</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Parent Items</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Parent Items</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Parent Items</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTParentItems(VCDTParentItems object) {
+	public T caseVVCDParentItems(VVCDParentItems object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Parent Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Parent Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Parent Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Parent Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTParentItem(VCDTParentItem object) {
+	public T caseVVCDParentItem(VVCDParentItem object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VCDT Ref Item</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VVCD Ref Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VCDT Ref Item</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VVCD Ref Item</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVCDTRefItem(VCDTRefItem object) {
+	public T caseVVCDRefItem(VVCDRefItem object) {
 		return null;
 	}
 
@@ -241,4 +241,4 @@ public class vcdtSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //vcdtSwitch
+} //vcdSwitch

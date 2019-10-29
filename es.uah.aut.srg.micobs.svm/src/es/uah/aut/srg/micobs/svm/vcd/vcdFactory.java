@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt;
+package es.uah.aut.srg.micobs.svm.vcd;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -17,80 +17,80 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage
  * @generated
  */
-public interface vcdtFactory extends EFactory {
+public interface vcdFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	vcdtFactory eINSTANCE = es.uah.aut.srg.micobs.svm.vcdt.impl.vcdtFactoryImpl.init();
+	vcdFactory eINSTANCE = es.uah.aut.srg.micobs.svm.vcd.impl.vcdFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>VCDT List</em>'.
+	 * Returns a new object of class '<em>VVCD List</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT List</em>'.
+	 * @return a new object of class '<em>VVCD List</em>'.
 	 * @generated
 	 */
-	VCDTList createVCDTList();
+	VVCDList createVVCDList();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Items</em>'.
+	 * Returns a new object of class '<em>VVCD Items</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Items</em>'.
+	 * @return a new object of class '<em>VVCD Items</em>'.
 	 * @generated
 	 */
-	VCDTItems createVCDTItems();
+	VVCDItems createVVCDItems();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Item</em>'.
+	 * Returns a new object of class '<em>VVCD Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Item</em>'.
+	 * @return a new object of class '<em>VVCD Item</em>'.
 	 * @generated
 	 */
-	VCDTItem createVCDTItem();
+	VVCDItem createVVCDItem();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Parent Ref Item</em>'.
+	 * Returns a new object of class '<em>VVCD Parent Ref Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Parent Ref Item</em>'.
+	 * @return a new object of class '<em>VVCD Parent Ref Item</em>'.
 	 * @generated
 	 */
-	VCDTParentRefItem createVCDTParentRefItem();
+	VVCDParentRefItem createVVCDParentRefItem();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Parent Items</em>'.
+	 * Returns a new object of class '<em>VVCD Parent Items</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Parent Items</em>'.
+	 * @return a new object of class '<em>VVCD Parent Items</em>'.
 	 * @generated
 	 */
-	VCDTParentItems createVCDTParentItems();
+	VVCDParentItems createVVCDParentItems();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Parent Item</em>'.
+	 * Returns a new object of class '<em>VVCD Parent Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Parent Item</em>'.
+	 * @return a new object of class '<em>VVCD Parent Item</em>'.
 	 * @generated
 	 */
-	VCDTParentItem createVCDTParentItem();
+	VVCDParentItem createVVCDParentItem();
 
 	/**
-	 * Returns a new object of class '<em>VCDT Ref Item</em>'.
+	 * Returns a new object of class '<em>VVCD Ref Item</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VCDT Ref Item</em>'.
+	 * @return a new object of class '<em>VVCD Ref Item</em>'.
 	 * @generated
 	 */
-	VCDTRefItem createVCDTRefItem();
+	VVCDRefItem createVVCDRefItem();
 
 	/**
 	 * Returns the package supported by this factory.
@@ -99,6 +99,6 @@ public interface vcdtFactory extends EFactory {
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	vcdtPackage getvcdtPackage();
+	vcdPackage getvcdPackage();
 
-} //vcdtFactory
+} //vcdFactory

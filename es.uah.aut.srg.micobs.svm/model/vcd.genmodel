@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2019 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
+    modelName="vcd" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>vcd.ecore</foreignModel>
+  <genPackages prefix="vcd" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
+      ecorePackage="vcd.ecore#/">
+    <genClasses ecoreClass="vcd.ecore#//vcdItems">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vcd.ecore#//vcdItems/sssRefItems"/>
+    </genClasses>
+    <genClasses ecoreClass="vcd.ecore#//vcdSRSitem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vcd.ecore#//vcdSRSitem/sssRefItems"/>
+    </genClasses>
+    <genClasses ecoreClass="vcd.ecore#//vcdSSSRefItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vcd.ecore#//vcdSSSRefItem/itemId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vcd.ecore#//vcdSSSRefItem/itemDoc"/>
+    </genClasses>
+    <genClasses ecoreClass="vcd.ecore#//vcdSSSitem">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference vcd.ecore#//vcdSSSitem/srsRefItems"/>
+    </genClasses>
+    <genClasses ecoreClass="vcd.ecore#//vcdSRSRefItem">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vcd.ecore#//vcdSRSRefItem/itemId"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute vcd.ecore#//vcdSRSRefItem/itemDoc"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

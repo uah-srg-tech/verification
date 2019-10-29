@@ -55,11 +55,11 @@
    </extension>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated vcdt -->
+      <!-- @generated vcd -->
       <package
-            uri="http://srg.aut.uah.es/micobs/svm/vcdt"
-            class="es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage"
-            genModel="model/vcdt.genmodel"/>
+            uri="http://srg.aut.uah.es/micobs/svm/vcd"
+            class="es.uah.aut.srg.micobs.svm.vcd.vcdPackage"
+            genModel="model/vcd.genmodel"/>
    </extension>
 
 </plugin>

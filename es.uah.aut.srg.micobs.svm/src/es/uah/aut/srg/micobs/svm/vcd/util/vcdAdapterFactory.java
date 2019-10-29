@@ -8,9 +8,9 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.util;
+package es.uah.aut.srg.micobs.svm.vcd.util;
 
-import es.uah.aut.srg.micobs.svm.vcdt.*;
+import es.uah.aut.srg.micobs.svm.vcd.*;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -24,17 +24,17 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.micobs.svm.vcdt.vcdtPackage
+ * @see es.uah.aut.srg.micobs.svm.vcd.vcdPackage
  * @generated
  */
-public class vcdtAdapterFactory extends AdapterFactoryImpl {
+public class vcdAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static vcdtPackage modelPackage;
+	protected static vcdPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -42,9 +42,9 @@ public class vcdtAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public vcdtAdapterFactory() {
+	public vcdAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = vcdtPackage.eINSTANCE;
+			modelPackage = vcdPackage.eINSTANCE;
 		}
 	}
 
@@ -73,35 +73,35 @@ public class vcdtAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected vcdtSwitch<Adapter> modelSwitch =
-		new vcdtSwitch<Adapter>() {
+	protected vcdSwitch<Adapter> modelSwitch =
+		new vcdSwitch<Adapter>() {
 			@Override
-			public Adapter caseVCDTList(VCDTList object) {
-				return createVCDTListAdapter();
+			public Adapter caseVVCDList(VVCDList object) {
+				return createVVCDListAdapter();
 			}
 			@Override
-			public Adapter caseVCDTItems(VCDTItems object) {
-				return createVCDTItemsAdapter();
+			public Adapter caseVVCDItems(VVCDItems object) {
+				return createVVCDItemsAdapter();
 			}
 			@Override
-			public Adapter caseVCDTItem(VCDTItem object) {
-				return createVCDTItemAdapter();
+			public Adapter caseVVCDItem(VVCDItem object) {
+				return createVVCDItemAdapter();
 			}
 			@Override
-			public Adapter caseVCDTParentRefItem(VCDTParentRefItem object) {
-				return createVCDTParentRefItemAdapter();
+			public Adapter caseVVCDParentRefItem(VVCDParentRefItem object) {
+				return createVVCDParentRefItemAdapter();
 			}
 			@Override
-			public Adapter caseVCDTParentItems(VCDTParentItems object) {
-				return createVCDTParentItemsAdapter();
+			public Adapter caseVVCDParentItems(VVCDParentItems object) {
+				return createVVCDParentItemsAdapter();
 			}
 			@Override
-			public Adapter caseVCDTParentItem(VCDTParentItem object) {
-				return createVCDTParentItemAdapter();
+			public Adapter caseVVCDParentItem(VVCDParentItem object) {
+				return createVVCDParentItemAdapter();
 			}
 			@Override
-			public Adapter caseVCDTRefItem(VCDTRefItem object) {
-				return createVCDTRefItemAdapter();
+			public Adapter caseVVCDRefItem(VVCDRefItem object) {
+				return createVVCDRefItemAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -124,100 +124,100 @@ public class vcdtAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTList <em>VCDT List</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDList <em>VVCD List</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTList
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDList
 	 * @generated
 	 */
-	public Adapter createVCDTListAdapter() {
+	public Adapter createVVCDListAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTItems <em>VCDT Items</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDItems <em>VVCD Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTItems
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDItems
 	 * @generated
 	 */
-	public Adapter createVCDTItemsAdapter() {
+	public Adapter createVVCDItemsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTItem <em>VCDT Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDItem <em>VVCD Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTItem
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDItem
 	 * @generated
 	 */
-	public Adapter createVCDTItemAdapter() {
+	public Adapter createVVCDItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem <em>VCDT Parent Ref Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentRefItem <em>VVCD Parent Ref Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTParentRefItem
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDParentRefItem
 	 * @generated
 	 */
-	public Adapter createVCDTParentRefItemAdapter() {
+	public Adapter createVVCDParentRefItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItems <em>VCDT Parent Items</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItems <em>VVCD Parent Items</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItems
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDParentItems
 	 * @generated
 	 */
-	public Adapter createVCDTParentItemsAdapter() {
+	public Adapter createVVCDParentItemsAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItem <em>VCDT Parent Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem <em>VVCD Parent Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTParentItem
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDParentItem
 	 * @generated
 	 */
-	public Adapter createVCDTParentItemAdapter() {
+	public Adapter createVVCDParentItemAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcdt.VCDTRefItem <em>VCDT Ref Item</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.vcd.VVCDRefItem <em>VVCD Ref Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.vcdt.VCDTRefItem
+	 * @see es.uah.aut.srg.micobs.svm.vcd.VVCDRefItem
 	 * @generated
 	 */
-	public Adapter createVCDTRefItemAdapter() {
+	public Adapter createVVCDRefItemAdapter() {
 		return null;
 	}
 
@@ -233,4 +233,4 @@ public class vcdtAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //vcdtAdapterFactory
+} //vcdAdapterFactory

@@ -8,9 +8,9 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.vcdt.impl;
+package es.uah.aut.srg.micobs.svm.vcd.impl;
 
-import es.uah.aut.srg.micobs.svm.vcdt.*;
+import es.uah.aut.srg.micobs.svm.vcd.*;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -26,24 +26,24 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
+public class vcdFactoryImpl extends EFactoryImpl implements vcdFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static vcdtFactory init() {
+	public static vcdFactory init() {
 		try {
-			vcdtFactory thevcdtFactory = (vcdtFactory)EPackage.Registry.INSTANCE.getEFactory(vcdtPackage.eNS_URI);
-			if (thevcdtFactory != null) {
-				return thevcdtFactory;
+			vcdFactory thevcdFactory = (vcdFactory)EPackage.Registry.INSTANCE.getEFactory(vcdPackage.eNS_URI);
+			if (thevcdFactory != null) {
+				return thevcdFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new vcdtFactoryImpl();
+		return new vcdFactoryImpl();
 	}
 
 	/**
@@ -52,7 +52,7 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public vcdtFactoryImpl() {
+	public vcdFactoryImpl() {
 		super();
 	}
 
@@ -64,13 +64,13 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case vcdtPackage.VCDT_LIST: return createVCDTList();
-			case vcdtPackage.VCDT_ITEMS: return createVCDTItems();
-			case vcdtPackage.VCDT_ITEM: return createVCDTItem();
-			case vcdtPackage.VCDT_PARENT_REF_ITEM: return createVCDTParentRefItem();
-			case vcdtPackage.VCDT_PARENT_ITEMS: return createVCDTParentItems();
-			case vcdtPackage.VCDT_PARENT_ITEM: return createVCDTParentItem();
-			case vcdtPackage.VCDT_REF_ITEM: return createVCDTRefItem();
+			case vcdPackage.VVCD_LIST: return createVVCDList();
+			case vcdPackage.VVCD_ITEMS: return createVVCDItems();
+			case vcdPackage.VVCD_ITEM: return createVVCDItem();
+			case vcdPackage.VVCD_PARENT_REF_ITEM: return createVVCDParentRefItem();
+			case vcdPackage.VVCD_PARENT_ITEMS: return createVVCDParentItems();
+			case vcdPackage.VVCD_PARENT_ITEM: return createVVCDParentItem();
+			case vcdPackage.VVCD_REF_ITEM: return createVVCDRefItem();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -81,9 +81,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTList createVCDTList() {
-		VCDTListImpl vcdtList = new VCDTListImpl();
-		return vcdtList;
+	public VVCDList createVVCDList() {
+		VVCDListImpl vvcdList = new VVCDListImpl();
+		return vvcdList;
 	}
 
 	/**
@@ -91,9 +91,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTItems createVCDTItems() {
-		VCDTItemsImpl vcdtItems = new VCDTItemsImpl();
-		return vcdtItems;
+	public VVCDItems createVVCDItems() {
+		VVCDItemsImpl vvcdItems = new VVCDItemsImpl();
+		return vvcdItems;
 	}
 
 	/**
@@ -101,9 +101,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTItem createVCDTItem() {
-		VCDTItemImpl vcdtItem = new VCDTItemImpl();
-		return vcdtItem;
+	public VVCDItem createVVCDItem() {
+		VVCDItemImpl vvcdItem = new VVCDItemImpl();
+		return vvcdItem;
 	}
 
 	/**
@@ -111,9 +111,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTParentRefItem createVCDTParentRefItem() {
-		VCDTParentRefItemImpl vcdtParentRefItem = new VCDTParentRefItemImpl();
-		return vcdtParentRefItem;
+	public VVCDParentRefItem createVVCDParentRefItem() {
+		VVCDParentRefItemImpl vvcdParentRefItem = new VVCDParentRefItemImpl();
+		return vvcdParentRefItem;
 	}
 
 	/**
@@ -121,9 +121,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTParentItems createVCDTParentItems() {
-		VCDTParentItemsImpl vcdtParentItems = new VCDTParentItemsImpl();
-		return vcdtParentItems;
+	public VVCDParentItems createVVCDParentItems() {
+		VVCDParentItemsImpl vvcdParentItems = new VVCDParentItemsImpl();
+		return vvcdParentItems;
 	}
 
 	/**
@@ -131,9 +131,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTParentItem createVCDTParentItem() {
-		VCDTParentItemImpl vcdtParentItem = new VCDTParentItemImpl();
-		return vcdtParentItem;
+	public VVCDParentItem createVVCDParentItem() {
+		VVCDParentItemImpl vvcdParentItem = new VVCDParentItemImpl();
+		return vvcdParentItem;
 	}
 
 	/**
@@ -141,9 +141,9 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VCDTRefItem createVCDTRefItem() {
-		VCDTRefItemImpl vcdtRefItem = new VCDTRefItemImpl();
-		return vcdtRefItem;
+	public VVCDRefItem createVVCDRefItem() {
+		VVCDRefItemImpl vvcdRefItem = new VVCDRefItemImpl();
+		return vvcdRefItem;
 	}
 
 	/**
@@ -151,8 +151,8 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public vcdtPackage getvcdtPackage() {
-		return (vcdtPackage)getEPackage();
+	public vcdPackage getvcdPackage() {
+		return (vcdPackage)getEPackage();
 	}
 
 	/**
@@ -162,8 +162,8 @@ public class vcdtFactoryImpl extends EFactoryImpl implements vcdtFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static vcdtPackage getPackage() {
-		return vcdtPackage.eINSTANCE;
+	public static vcdPackage getPackage() {
+		return vcdPackage.eINSTANCE;
 	}
 
-} //vcdtFactoryImpl
+} //vcdFactoryImpl
