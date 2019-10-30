@@ -17,6 +17,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentInstantiableGroupImpl;
 import java.util.Collection;
@@ -28,6 +29,7 @@ import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -295,6 +297,12 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 			items.add(item);
 		}
 		return items;
+	}
+	
+	@Override
+	public VTraceableDocument basicGetDoc() {
+		final EObject parent = eContainer().eContainer();
+		return (VTraceableDocument)parent.eContainer();
 	}
 	
 } //VSSSInstantiableRequirementSectionImpl
