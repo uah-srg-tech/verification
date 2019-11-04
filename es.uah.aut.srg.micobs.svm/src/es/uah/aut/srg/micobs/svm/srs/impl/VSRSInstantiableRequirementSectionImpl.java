@@ -10,11 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
-import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -62,7 +59,7 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody sectionDescription;
+	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
 
 	/**
 	 * The cached value of the '{@link #getSrsItems() <em>Srs Items</em>}' containment reference list.
@@ -103,7 +100,7 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getSectionDescription() {
+	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -112,8 +109,8 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
-		DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
+		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -127,7 +124,7 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(DBody newSectionDescription) {
+	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -198,10 +195,10 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
 				getSubsections().clear();
-				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
+				getSubsections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((DBody)newValue);
+				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SRS_ITEMS:
 				getSrsItems().clear();
@@ -223,7 +220,7 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 				getSubsections().clear();
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((DBody)null);
+				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SRS_ITEMS:
 				getSrsItems().clear();
@@ -257,13 +254,13 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DAbstractSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
 			switch (derivedFeatureID) {
-				case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
+				case srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS: return doctplPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == DInstantiableSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -278,13 +275,13 @@ public class VSRSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DAbstractSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
 			switch (baseFeatureID) {
-				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS;
+				case doctplPackage.DABSTRACT_SECTION__SUBSECTIONS: return srsPackage.VSRS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == DInstantiableSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

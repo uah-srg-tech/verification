@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS Specific Requirements</b></em>'.
@@ -42,7 +39,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * @model
  * @generated
  */
-public interface VSSSSpecificRequirements extends DFixedSection {
+public interface VSSSSpecificRequirements extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Section Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -52,12 +49,12 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Section Description</em>' containment reference.
-	 * @see #setSectionDescription(DBody)
+	 * @see #setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSSpecificRequirements_SectionDescription()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getSectionDescription();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSSpecificRequirements#getSectionDescription <em>Section Description</em>}' containment reference.
@@ -67,7 +64,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * @see #getSectionDescription()
 	 * @generated
 	 */
-	void setSectionDescription(DBody value);
+	void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>General</b></em>' containment reference.

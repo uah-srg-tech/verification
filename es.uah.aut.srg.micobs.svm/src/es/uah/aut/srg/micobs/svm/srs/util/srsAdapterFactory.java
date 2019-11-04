@@ -11,12 +11,6 @@
 package es.uah.aut.srg.micobs.svm.srs.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
-
 import es.uah.aut.srg.micobs.svm.srs.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
@@ -233,15 +227,15 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentAdapter();
 			}
 			@Override
-			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
+			public Adapter caseDDocumentTemplate(es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate object) {
 				return createDDocumentTemplateAdapter();
 			}
 			@Override
-			public Adapter caseDAbstractSection(DAbstractSection object) {
+			public Adapter caseDAbstractSection(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection object) {
 				return createDAbstractSectionAdapter();
 			}
 			@Override
-			public Adapter caseDFixedSection(DFixedSection object) {
+			public Adapter caseDFixedSection(es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection object) {
 				return createDFixedSectionAdapter();
 			}
 			@Override
@@ -249,7 +243,7 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createMCommonReferenceableObjAdapter();
 			}
 			@Override
-			public Adapter caseDInstantiableSection(DInstantiableSection object) {
+			public Adapter caseDInstantiableSection(es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection object) {
 				return createDInstantiableSectionAdapter();
 			}
 			@Override
@@ -793,13 +787,13 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate <em>DDocument Template</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate <em>DDocument Template</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate
 	 * @generated
 	 */
 	public Adapter createDDocumentTemplateAdapter() {
@@ -807,13 +801,13 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection <em>DAbstract Section</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection <em>DAbstract Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection
 	 * @generated
 	 */
 	public Adapter createDAbstractSectionAdapter() {
@@ -821,13 +815,13 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DFixedSection <em>DFixed Section</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection <em>DFixed Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DFixedSection
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection
 	 * @generated
 	 */
 	public Adapter createDFixedSectionAdapter() {
@@ -849,13 +843,13 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection <em>DInstantiable Section</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection <em>DInstantiable Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection
 	 * @generated
 	 */
 	public Adapter createDInstantiableSectionAdapter() {

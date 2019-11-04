@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -30,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSSystemModels extends DFixedSection {
+public interface VSSSSystemModels extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>System Models</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel}.

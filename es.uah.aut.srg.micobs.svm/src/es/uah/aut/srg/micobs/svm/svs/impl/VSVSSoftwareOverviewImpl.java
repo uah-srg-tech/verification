@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 import org.eclipse.emf.common.util.BasicEList;

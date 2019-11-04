@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -348,7 +347,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+	int VSVS_INSTANTIABLE_SECTION__SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -357,7 +356,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+	int VSVS_INSTANTIABLE_SECTION__NAME = doctplPackage.DINSTANTIABLE_SECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -366,7 +365,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+	int VSVS_INSTANTIABLE_SECTION__DESCRIPTION = doctplPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -375,7 +374,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+	int VSVS_INSTANTIABLE_SECTION__BODY = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list.
@@ -384,7 +383,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION__SVS_INSTATIABLE_SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSVS_INSTANTIABLE_SECTION__SVS_INSTATIABLE_SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Instantiable Section</em>' class.
@@ -393,7 +392,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+	int VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSVS Instantiable Section</em>' class.
@@ -402,7 +401,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INSTANTIABLE_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
+	int VSVS_INSTANTIABLE_SECTION_OPERATION_COUNT = doctplPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSIntroductionImpl <em>VSVS Introduction</em>}' class.
@@ -421,7 +420,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INTRODUCTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_INTRODUCTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list.
@@ -430,7 +429,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INTRODUCTION__SVS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_INTRODUCTION__SVS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Introduction</em>' class.
@@ -439,7 +438,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INTRODUCTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_INTRODUCTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Introduction</em>' class.
@@ -448,7 +447,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_INTRODUCTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_INTRODUCTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSApplicableDocumentsImpl <em>VSVS Applicable Documents</em>}' class.
@@ -467,7 +466,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_APPLICABLE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_APPLICABLE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' containment reference list.
@@ -476,7 +475,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Applicable Documents</em>' class.
@@ -485,7 +484,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Applicable Documents</em>' class.
@@ -494,7 +493,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSReferenceDocumentsImpl <em>VSVS Reference Documents</em>}' class.
@@ -513,7 +512,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_REFERENCE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_REFERENCE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' containment reference list.
@@ -522,7 +521,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Reference Documents</em>' class.
@@ -531,7 +530,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_REFERENCE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_REFERENCE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Reference Documents</em>' class.
@@ -540,7 +539,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_REFERENCE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_REFERENCE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTermsDefinitionsAbbreviationsImpl <em>VSVS Terms Definitions Abbreviations</em>}' class.
@@ -559,7 +558,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Terms</b></em>' containment reference list.
@@ -568,7 +567,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' containment reference list.
@@ -577,7 +576,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Abbreviations</b></em>' containment reference list.
@@ -586,7 +585,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Terms Definitions Abbreviations</em>' class.
@@ -595,7 +594,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSVS Terms Definitions Abbreviations</em>' class.
@@ -604,7 +603,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSAbstractBriefDescriptionImpl <em>VSVS Abstract Brief Description</em>}' class.
@@ -807,7 +806,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_FIXED_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -816,7 +815,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_FIXED_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list.
@@ -825,7 +824,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_SECTION__SVS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_FIXED_SECTION__SVS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Fixed Section</em>' class.
@@ -834,7 +833,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_FIXED_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSVS Fixed Section</em>' class.
@@ -843,7 +842,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_FIXED_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSoftwareOverviewImpl <em>VSVS Software Overview</em>}' class.
@@ -917,7 +916,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TASK_IDENTIFICATION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Task Criteria</b></em>' containment reference.
@@ -926,7 +925,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__TASK_CRITERIA = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TASK_IDENTIFICATION__TASK_CRITERIA = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Features To Be Tested</b></em>' containment reference.
@@ -935,7 +934,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__FEATURES_TO_BE_TESTED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TASK_IDENTIFICATION__FEATURES_TO_BE_TESTED = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features Not To Be Tested</b></em>' containment reference.
@@ -944,7 +943,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__FEATURES_NOT_TO_BE_TESTED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TASK_IDENTIFICATION__FEATURES_NOT_TO_BE_TESTED = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Test Pass Fail Criteria</b></em>' containment reference.
@@ -953,7 +952,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__TEST_PASS_FAIL_CRITERIA = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TASK_IDENTIFICATION__TEST_PASS_FAIL_CRITERIA = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Items Can Not Be Validated</b></em>' containment reference.
@@ -962,7 +961,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__ITEMS_CAN_NOT_BE_VALIDATED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TASK_IDENTIFICATION__ITEMS_CAN_NOT_BE_VALIDATED = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Manually Auto Generated Code</b></em>' containment reference.
@@ -971,7 +970,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION__MANUALLY_AUTO_GENERATED_CODE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSVS_TASK_IDENTIFICATION__MANUALLY_AUTO_GENERATED_CODE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Task Identification</em>' class.
@@ -980,7 +979,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSVS_TASK_IDENTIFICATION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>VSVS Task Identification</em>' class.
@@ -989,7 +988,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TASK_IDENTIFICATION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TASK_IDENTIFICATION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl <em>VSVS Testing Specification Design</em>}' class.
@@ -1008,7 +1007,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
@@ -1017,7 +1016,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference.
@@ -1026,7 +1025,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Test Designs</b></em>' containment reference list.
@@ -1035,7 +1034,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1044,7 +1043,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1053,7 +1052,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TESTING_SPECIFICATION_DESIGN_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
@@ -1082,7 +1081,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIOS_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_SCENARIOS_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference list.
@@ -1091,7 +1090,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIOS_SECTION__SCENARIOS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_SCENARIOS_SECTION__SCENARIOS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Scenarios Section</em>' class.
@@ -1100,7 +1099,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIOS_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_SCENARIOS_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Scenarios Section</em>' class.
@@ -1109,7 +1108,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIOS_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_SCENARIOS_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl <em>VSVS Scenario Section</em>}' class.
@@ -1128,7 +1127,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_SCENARIO_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1137,7 +1136,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_SCENARIO_SECTION__NAME = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
@@ -1146,7 +1145,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION__ID = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_SCENARIO_SECTION__ID = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1155,7 +1154,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_SCENARIO_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Scenario Section</em>' class.
@@ -1164,7 +1163,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_SCENARIO_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSVS Scenario Section</em>' class.
@@ -1173,7 +1172,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_SCENARIO_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_SCENARIO_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1182,7 +1181,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TEST_DESIGN__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1191,7 +1190,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_DESIGN__NAME = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
@@ -1200,7 +1199,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_DESIGN__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Features To Be Tested</b></em>' containment reference.
@@ -1209,7 +1208,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Approach Refinements</b></em>' containment reference.
@@ -1218,7 +1217,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Design</em>' class.
@@ -1227,7 +1226,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TEST_DESIGN_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Design</em>' class.
@@ -1236,7 +1235,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_DESIGN_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TEST_DESIGN_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
@@ -1255,7 +1254,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_FIXED_TEST_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1264,7 +1263,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_FIXED_TEST_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Fixed Test Section</em>' class.
@@ -1273,7 +1272,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_FIXED_TEST_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Fixed Test Section</em>' class.
@@ -1282,7 +1281,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_FIXED_TEST_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestCasesImpl <em>VSVS Test Cases</em>}' class.
@@ -1302,6 +1301,15 @@ public interface svsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSVS_TEST_CASES__ITEMS = vdmPackage.VVALIDATION_DOCUMENT_FIXED_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_CASES__DOC = vdmPackage.VVALIDATION_DOCUMENT_FIXED_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1492,7 +1500,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURES__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TEST_PROCEDURES__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
@@ -1501,7 +1509,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURES__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_PROCEDURES__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Test Procedures</b></em>' containment reference list.
@@ -1510,7 +1518,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURES__TEST_PROCEDURES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_PROCEDURES__TEST_PROCEDURES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Procedures</em>' class.
@@ -1519,7 +1527,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURES_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TEST_PROCEDURES_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Procedures</em>' class.
@@ -1528,7 +1536,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURES_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TEST_PROCEDURES_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl <em>VSVS Test Procedure</em>}' class.
@@ -1547,7 +1555,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TEST_PROCEDURE__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1556,7 +1564,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__NAME = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_PROCEDURE__NAME = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Identifier</b></em>' containment reference.
@@ -1565,7 +1573,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__IDENTIFIER = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_PROCEDURE__IDENTIFIER = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Purpose</b></em>' containment reference.
@@ -1574,7 +1582,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSVS_TEST_PROCEDURE__PURPOSE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Scenario</b></em>' reference.
@@ -1583,7 +1591,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__SCENARIO = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSVS_TEST_PROCEDURE__SCENARIO = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Procedure Steps</b></em>' containment reference.
@@ -1592,7 +1600,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Test Script</b></em>' containment reference.
@@ -1601,7 +1609,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Test Case</b></em>' reference list.
@@ -1610,7 +1618,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_CASE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSVS_TEST_PROCEDURE__TEST_CASE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Procedure</em>' class.
@@ -1619,7 +1627,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
+	int VSVS_TEST_PROCEDURE_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>VSVS Test Procedure</em>' class.
@@ -1628,7 +1636,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TEST_PROCEDURE_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl <em>VSVS Procedure Steps</em>}' class.

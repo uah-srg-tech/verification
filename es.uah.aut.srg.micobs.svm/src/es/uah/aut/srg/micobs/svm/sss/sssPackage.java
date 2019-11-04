@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -311,7 +310,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_INTRODUCTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
@@ -320,7 +319,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_INTRODUCTION__SSS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Introduction</em>' class.
@@ -329,7 +328,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_INTRODUCTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSSS Introduction</em>' class.
@@ -338,7 +337,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INTRODUCTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_INTRODUCTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSApplicableDocumentsImpl <em>VSSS Applicable Documents</em>}' class.
@@ -357,7 +356,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_APPLICABLE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_APPLICABLE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' containment reference list.
@@ -366,7 +365,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Applicable Documents</em>' class.
@@ -375,7 +374,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSSS Applicable Documents</em>' class.
@@ -384,7 +383,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSReferenceDocumentsImpl <em>VSSS Reference Documents</em>}' class.
@@ -403,7 +402,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_REFERENCE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_REFERENCE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' containment reference list.
@@ -412,7 +411,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Reference Documents</em>' class.
@@ -421,7 +420,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_REFERENCE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_REFERENCE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSSS Reference Documents</em>' class.
@@ -430,7 +429,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_REFERENCE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_REFERENCE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSTermsDefinitionsAbbreviationsImpl <em>VSSS Terms Definitions Abbreviations</em>}' class.
@@ -449,7 +448,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Terms</b></em>' containment reference list.
@@ -458,7 +457,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' containment reference list.
@@ -467,7 +466,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Abbreviations</b></em>' containment reference list.
@@ -476,7 +475,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Terms Definitions Abbreviations</em>' class.
@@ -485,7 +484,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSSS Terms Definitions Abbreviations</em>' class.
@@ -494,7 +493,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractBriefDescriptionImpl <em>VSSS Abstract Brief Description</em>}' class.
@@ -697,7 +696,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_FIXED_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_FIXED_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -706,7 +705,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_FIXED_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_FIXED_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
@@ -715,7 +714,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Fixed Section</em>' class.
@@ -724,7 +723,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_FIXED_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_FIXED_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSSS Fixed Section</em>' class.
@@ -733,7 +732,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_FIXED_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_FIXED_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableSectionImpl <em>VSSS Instantiable Section</em>}' class.
@@ -752,7 +751,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+	int VSSS_INSTANTIABLE_SECTION__SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -761,7 +760,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+	int VSSS_INSTANTIABLE_SECTION__NAME = doctplPackage.DINSTANTIABLE_SECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -770,7 +769,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+	int VSSS_INSTANTIABLE_SECTION__DESCRIPTION = doctplPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -779,7 +778,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+	int VSSS_INSTANTIABLE_SECTION__BODY = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Sss Instatiable Subsections</b></em>' containment reference list.
@@ -788,7 +787,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Instantiable Section</em>' class.
@@ -797,7 +796,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+	int VSSS_INSTANTIABLE_SECTION_FEATURE_COUNT = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSSS Instantiable Section</em>' class.
@@ -806,7 +805,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_INSTANTIABLE_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
+	int VSSS_INSTANTIABLE_SECTION_OPERATION_COUNT = doctplPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralDescriptionImpl <em>VSSS General Description</em>}' class.
@@ -825,7 +824,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_GENERAL_DESCRIPTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Product Perspective</b></em>' containment reference.
@@ -834,7 +833,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_GENERAL_DESCRIPTION__PRODUCT_PERSPECTIVE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>General Capabilities</b></em>' containment reference.
@@ -843,7 +842,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_GENERAL_DESCRIPTION__GENERAL_CAPABILITIES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>General Constraints</b></em>' containment reference.
@@ -852,7 +851,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_GENERAL_DESCRIPTION__GENERAL_CONSTRAINTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Operational Environment</b></em>' containment reference.
@@ -861,7 +860,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_GENERAL_DESCRIPTION__OPERATIONAL_ENVIRONMENT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Assumptions Dependencies</b></em>' containment reference.
@@ -870,7 +869,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_GENERAL_DESCRIPTION__ASSUMPTIONS_DEPENDENCIES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>VSSS General Description</em>' class.
@@ -879,7 +878,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSSS_GENERAL_DESCRIPTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>VSSS General Description</em>' class.
@@ -888,7 +887,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_GENERAL_DESCRIPTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_GENERAL_DESCRIPTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSAbstractRequirementSectionImpl <em>VSSS Abstract Requirement Section</em>}' class.
@@ -908,6 +907,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -981,6 +989,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_INSTANTIABLE_REQUIREMENT_SECTION__DOC = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1062,7 +1079,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_SPECIFIC_REQUIREMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -1071,7 +1088,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
@@ -1080,7 +1097,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_SPECIFIC_REQUIREMENTS__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Capabilities</b></em>' containment reference.
@@ -1089,7 +1106,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_SPECIFIC_REQUIREMENTS__CAPABILITIES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>System Interface</b></em>' containment reference.
@@ -1098,7 +1115,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_INTERFACE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Adaptation Missionization</b></em>' containment reference.
@@ -1107,7 +1124,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_SPECIFIC_REQUIREMENTS__ADAPTATION_MISSIONIZATION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Computer Resource</b></em>' containment reference.
@@ -1116,7 +1133,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSSS_SPECIFIC_REQUIREMENTS__COMPUTER_RESOURCE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Security</b></em>' containment reference.
@@ -1125,7 +1142,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SECURITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSSS_SPECIFIC_REQUIREMENTS__SECURITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Safety</b></em>' containment reference.
@@ -1134,7 +1151,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SAFETY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
+	int VSSS_SPECIFIC_REQUIREMENTS__SAFETY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reliability Availability</b></em>' containment reference.
@@ -1143,7 +1160,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILITY_AVAILABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
+	int VSSS_SPECIFIC_REQUIREMENTS__RELIABILITY_AVAILABILITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Quality</b></em>' containment reference.
@@ -1152,7 +1169,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__QUALITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
+	int VSSS_SPECIFIC_REQUIREMENTS__QUALITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Design</b></em>' containment reference.
@@ -1161,7 +1178,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__DESIGN = docPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
+	int VSSS_SPECIFIC_REQUIREMENTS__DESIGN = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Software Operations</b></em>' containment reference.
@@ -1170,7 +1187,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
+	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_OPERATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Software Maintenance</b></em>' containment reference.
@@ -1179,7 +1196,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
+	int VSSS_SPECIFIC_REQUIREMENTS__SOFTWARE_MAINTENANCE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>System Software Observability</b></em>' containment reference.
@@ -1188,7 +1205,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
+	int VSSS_SPECIFIC_REQUIREMENTS__SYSTEM_SOFTWARE_OBSERVABILITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Specific Requirements</em>' class.
@@ -1197,7 +1214,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 14;
+	int VSSS_SPECIFIC_REQUIREMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>VSSS Specific Requirements</em>' class.
@@ -1206,7 +1223,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SPECIFIC_REQUIREMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_SPECIFIC_REQUIREMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSGeneralRequirementsImpl <em>VSSS General Requirements</em>}' class.
@@ -1226,6 +1243,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_GENERAL_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_GENERAL_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1301,6 +1327,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_CAPABILITIES_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_CAPABILITIES_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1372,6 +1407,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_INTERFACE_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1447,6 +1491,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_ADAPTATION_MISSIONIZATION_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1518,6 +1571,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_COMPUTER_RESOURCE_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1593,6 +1655,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_SECURITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SECURITY_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1664,6 +1735,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_SAFETY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SAFETY_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1739,6 +1819,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_RELIABILITY_AVAILABILITY_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1810,6 +1899,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_QUALITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_QUALITY_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1885,6 +1983,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_DESIGN_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DESIGN_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1956,6 +2063,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_OPERATIONS_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2031,6 +2147,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SOFTWARE_MAINTENANCE_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2104,6 +2229,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2174,7 +2308,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -2183,7 +2317,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Verification Validation Process</b></em>' containment reference.
@@ -2192,7 +2326,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Validation Approach</b></em>' containment reference.
@@ -2201,7 +2335,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION_APPROACH = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Validation</b></em>' containment reference.
@@ -2210,7 +2344,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VALIDATION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Verification</b></em>' containment reference.
@@ -2219,7 +2353,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Verification Validation Integration Requirements</em>' class.
@@ -2228,7 +2362,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of operations of the '<em>VSSS Verification Validation Integration Requirements</em>' class.
@@ -2237,7 +2371,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSVerificationValidationProcessRequirementsImpl <em>VSSS Verification Validation Process Requirements</em>}' class.
@@ -2257,6 +2391,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_VALIDATION_PROCESS_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2332,6 +2475,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_VALIDATION_APPROACH__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_APPROACH__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2405,6 +2557,15 @@ public interface sssPackage extends EPackage {
 	int VSSS_VERIFICATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VERIFICATION_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2476,6 +2637,15 @@ public interface sssPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSSS_VALIDATION_REQUIREMENTS__ITEMS = VSSS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_VALIDATION_REQUIREMENTS__DOC = VSSS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2630,7 +2800,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_MODELS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSSS_SYSTEM_MODELS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>System Models</b></em>' containment reference list.
@@ -2639,7 +2809,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_MODELS__SYSTEM_MODELS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSSS_SYSTEM_MODELS__SYSTEM_MODELS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSSS System Models</em>' class.
@@ -2648,7 +2818,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_MODELS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSSS_SYSTEM_MODELS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSSS System Models</em>' class.
@@ -2657,7 +2827,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_SYSTEM_MODELS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSSS_SYSTEM_MODELS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSSystemModelImpl <em>VSSS System Model</em>}' class.

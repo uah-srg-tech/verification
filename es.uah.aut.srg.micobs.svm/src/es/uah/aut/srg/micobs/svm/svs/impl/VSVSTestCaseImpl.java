@@ -10,9 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -520,7 +520,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TEST_CASE__SUBSECTIONS:
 				getSubsections().clear();
-				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
+				getSubsections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__IDENTIFIER:
 				setIdentifier((VSVSFixedTestSection)newValue);
@@ -618,9 +618,9 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DAbstractSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
 			switch (derivedFeatureID) {
-				case svsPackage.VSVS_TEST_CASE__SUBSECTIONS: return docPackage.DABSTRACT_SECTION__SUBSECTIONS;
+				case svsPackage.VSVS_TEST_CASE__SUBSECTIONS: return doctplPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
@@ -639,9 +639,9 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DAbstractSection.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
 			switch (baseFeatureID) {
-				case docPackage.DABSTRACT_SECTION__SUBSECTIONS: return svsPackage.VSVS_TEST_CASE__SUBSECTIONS;
+				case doctplPackage.DABSTRACT_SECTION__SUBSECTIONS: return svsPackage.VSVS_TEST_CASE__SUBSECTIONS;
 				default: return -1;
 			}
 		}

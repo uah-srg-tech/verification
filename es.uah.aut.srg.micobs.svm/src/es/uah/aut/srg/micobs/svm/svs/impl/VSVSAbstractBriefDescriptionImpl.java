@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbstractBriefDescription;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 

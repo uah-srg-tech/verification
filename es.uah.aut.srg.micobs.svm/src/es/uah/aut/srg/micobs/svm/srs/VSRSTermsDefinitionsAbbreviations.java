@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -32,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSRSTermsDefinitionsAbbreviations extends DFixedSection {
+public interface VSRSTermsDefinitionsAbbreviations extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Terms</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.srs.VSRSTerm}.

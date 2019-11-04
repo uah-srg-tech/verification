@@ -1037,16 +1037,60 @@ ruleDFigureFromFile returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_5='width='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getDFigureFromFileAccess().getWidthKeyword_5());
+		}
 		(
-			otherlv_5='caption='
+			(
+				lv_width_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_width_6_0, grammarAccess.getDFigureFromFileAccess().getWidthUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDFigureFromFileRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"width",
+						lv_width_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='height='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDFigureFromFileAccess().getHeightKeyword_7());
+		}
+		(
+			(
+				lv_height_8_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_height_8_0, grammarAccess.getDFigureFromFileAccess().getHeightUINT_STRINGTerminalRuleCall_8_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDFigureFromFileRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"height",
+						lv_height_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_9='caption='
 			{
-				newLeafNode(otherlv_5, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_5_0());
+				newLeafNode(otherlv_9, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_9_0());
 			}
 			(
 				(
-					lv_caption_6_0=RULE_STRING
+					lv_caption_10_0=RULE_STRING
 					{
-						newLeafNode(lv_caption_6_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_5_1_0());
+						newLeafNode(lv_caption_10_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_9_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1055,15 +1099,15 @@ ruleDFigureFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_6_0,
+							lv_caption_10_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_7='/>'
+		otherlv_11='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_10());
 		}
 	)
 ;
@@ -1132,16 +1176,60 @@ ruleDTableFromFile returns [EObject current=null]
 				}
 			)
 		)
+		otherlv_5='width='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getDTableFromFileAccess().getWidthKeyword_5());
+		}
 		(
-			otherlv_5='caption='
+			(
+				lv_width_6_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_width_6_0, grammarAccess.getDTableFromFileAccess().getWidthUINT_STRINGTerminalRuleCall_6_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDTableFromFileRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"width",
+						lv_width_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_7='height='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDTableFromFileAccess().getHeightKeyword_7());
+		}
+		(
+			(
+				lv_height_8_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_height_8_0, grammarAccess.getDTableFromFileAccess().getHeightUINT_STRINGTerminalRuleCall_8_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDTableFromFileRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"height",
+						lv_height_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.sss.SSS.UINT_STRING");
+				}
+			)
+		)
+		(
+			otherlv_9='caption='
 			{
-				newLeafNode(otherlv_5, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_5_0());
+				newLeafNode(otherlv_9, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_9_0());
 			}
 			(
 				(
-					lv_caption_6_0=RULE_STRING
+					lv_caption_10_0=RULE_STRING
 					{
-						newLeafNode(lv_caption_6_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_5_1_0());
+						newLeafNode(lv_caption_10_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_9_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1150,15 +1238,15 @@ ruleDTableFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_6_0,
+							lv_caption_10_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_7='/>'
+		otherlv_11='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_10());
 		}
 	)
 ;

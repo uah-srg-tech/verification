@@ -10,11 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
@@ -43,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSSSReferenceDocuments {
+public class VSSSReferenceDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSReferenceDocuments {
 	/**
 	 * The cached value of the '{@link #getReferenceDocuments() <em>Reference Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -52,7 +48,7 @@ public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DReferenceDocument> referenceDocuments;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument> referenceDocuments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,9 +74,9 @@ public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DReferenceDocument> getReferenceDocuments() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument> getReferenceDocuments() {
 		if (referenceDocuments == null) {
-			referenceDocuments = new EObjectContainmentEList<DReferenceDocument>(DReferenceDocument.class, this, sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
+			referenceDocuments = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>(es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument.class, this, sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
 		}
 		return referenceDocuments;
 	}
@@ -124,7 +120,7 @@ public class VSSSReferenceDocumentsImpl extends DFixedSectionImpl implements VSS
 		switch (featureID) {
 			case sssPackage.VSSS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

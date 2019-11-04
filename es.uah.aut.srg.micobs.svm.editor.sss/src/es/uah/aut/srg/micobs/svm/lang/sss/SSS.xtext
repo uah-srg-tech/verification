@@ -4,7 +4,7 @@ grammar es.uah.aut.srg.micobs.svm.lang.sss.SSS with org.eclipse.xtext.common.Ter
 import "http://srg.aut.uah.es/micobs/svm/sss" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://srg.aut.uah.es/micobs/svm/tdm" as tdm
-import "http://srg.aut.uah.es/micobs/doctpl/doc" as doc
+import "http://srg.aut.uah.es/micobs/doctpl/doctpl" as doctpl
 
 VSSSDocument returns VSSSDocument:
 	'<SSS'
@@ -24,42 +24,42 @@ VSSSDocument returns VSSSDocument:
 		systemModelsSection=VSSSSystemModels
 	'</SSS>';
 
-DBody returns doc::DBody:
+DBody returns doctpl::DBody:
 	'<body>'
 		(bodyContent+=DBodyContent)+
 	'</body>';
 
-DBodyContent returns doc::DBodyContent:
+DBodyContent returns doctpl::DBodyContent:
 	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable;
 
-DParagraph returns doc::DParagraph:
+DParagraph returns doctpl::DParagraph:
 	'<paragraph>'
 		(paragraphContent+=DParagraphContent)+ 
 	'</paragraph>';
 
-DListItem returns doc::DListItem:
+DListItem returns doctpl::DListItem:
 	'<listItem>'
 		(paragraph+=DParagraph)+ 
 		('<sublist>' sublist=DListContent '</sublist>')?
 	'</listItem>';
 
-DListContent returns doc::DListContent:
+DListContent returns doctpl::DListContent:
 	DItemize | DEnumerate;
 
-DItemize returns doc::DItemize:
+DItemize returns doctpl::DItemize:
 	'<itemize>'
 		(items+=DListItem)+ 
 	'</itemize>';
 
-DEnumerate returns doc::DEnumerate:
+DEnumerate returns doctpl::DEnumerate:
 	'<enumerate>'
 		(items+=DListItem)+ 
 	'</enumerate>';
 
-DParagraphContent returns doc::DParagraphContent:
+DParagraphContent returns doctpl::DParagraphContent:
 	DRun | DHyperlink;
 
-DRun returns doc::DRun:
+DRun returns doctpl::DRun:
 	'<run'
 		('bold="true"')?
 		('italics="true"')?
@@ -68,34 +68,38 @@ DRun returns doc::DRun:
 		text=DText
 	'</run>';
 
-DHyperlink returns doc::DHyperlink:
+DHyperlink returns doctpl::DHyperlink:
 	'<hyperlink'
-		'reference=' reference=[doc::DReferenceableObject|STRING]
+		'reference=' reference=[doctpl::DReferenceableObject|STRING]
 	'>'
 		(run=DRun)?
 	'</hyperlink>';
 	
-DText returns doc::DText:
+DText returns doctpl::DText:
 	content=RUNTEXT;
 
 terminal RUNTEXT returns ecore::EString:
     '<text>' -> '</text>';
 
-DFigureFromFile returns doc::DFigureFromFile:
+DFigureFromFile returns doctpl::DFigureFromFile:
 	'<figureFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
+		'width=' width=UINT_STRING
+		'height=' height=UINT_STRING
 		('caption=' caption=STRING)?
 	'/>';
 
-DTableFromFile returns doc::DTableFromFile:
+DTableFromFile returns doctpl::DTableFromFile:
 	'<tableFromFile'
 		'name=' name=STRING
 		'referenceFile=' referenceFile=STRING
+		'width=' width=UINT_STRING
+		'height=' height=UINT_STRING
 		('caption=' caption=STRING)?
 	'/>';
 
-DBasicTable returns doc::DBasicTable: 
+DBasicTable returns doctpl::DBasicTable: 
 	'<basicTable'
 		'name=' name=STRING
 		('caption=' caption=STRING)?
@@ -103,12 +107,12 @@ DBasicTable returns doc::DBasicTable:
 		(rows+=DRow)+
 	'</basicTable>';
 
-DRow returns doc::DRow:
+DRow returns doctpl::DRow:
 	'<row>'
 		(cells+=DCell)+
 	'</row>';
 
-DCell returns doc::DCell:
+DCell returns doctpl::DCell:
 	'<cell'
 		('gridSpan=' gridSpan=UINT_STRING)?
 		('vMerge=' vMerge=DMergeType)?
@@ -116,10 +120,10 @@ DCell returns doc::DCell:
 		(bodyContent+=DBodyContent)+
 	'</cell>';
 
-enum DMergeType returns doc::DMergeType:
+enum DMergeType returns doctpl::DMergeType:
 	restart = '"restart"' | continue = '"continue"';
 
-DApplicableDocument returns doc::DApplicableDocument:
+DApplicableDocument returns doctpl::DApplicableDocument:
 	'<ApplicableDocument'
 		'name=' name=STRING
 		'title=' title=STRING
@@ -129,7 +133,7 @@ DApplicableDocument returns doc::DApplicableDocument:
 		('date=' date=STRING)?
 	'/>';
 
-DReferenceDocument returns doc::DReferenceDocument:
+DReferenceDocument returns doctpl::DReferenceDocument:
 	'<ReferenceDocument'
 		'name=' name=STRING
 		'title=' title=STRING

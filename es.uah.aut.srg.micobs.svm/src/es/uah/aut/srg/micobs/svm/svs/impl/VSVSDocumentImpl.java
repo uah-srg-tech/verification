@@ -10,14 +10,13 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
@@ -210,7 +209,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DAbstractFigure> svsFigures;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> svsFigures;
 
 	/**
 	 * The cached value of the '{@link #getSvsTables() <em>Svs Tables</em>}' containment reference list.
@@ -220,7 +219,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DAbstractTable> svsTables;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> svsTables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -827,9 +826,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractFigure> getSvsFigures() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSvsFigures() {
 		if (svsFigures == null) {
-			svsFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, svsPackage.VSVS_DOCUMENT__SVS_FIGURES);
+			svsFigures = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure.class, this, svsPackage.VSVS_DOCUMENT__SVS_FIGURES);
 		}
 		return svsFigures;
 	}
@@ -839,9 +838,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractTable> getSvsTables() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSvsTables() {
 		if (svsTables == null) {
-			svsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, svsPackage.VSVS_DOCUMENT__SVS_TABLES);
+			svsTables = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable.class, this, svsPackage.VSVS_DOCUMENT__SVS_TABLES);
 		}
 		return svsTables;
 	}
@@ -947,23 +946,23 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		switch (featureID) {
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__FIGURES:
 				getFigures().clear();
-				getFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
+				getFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__TABLES:
 				getTables().clear();
-				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
+				getTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				getSections().clear();
-				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
+				getSections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)newValue);
@@ -1003,11 +1002,11 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return;
 			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
 				getSvsFigures().clear();
-				getSvsFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
+				getSvsFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
 				getSvsTables().clear();
-				getSvsTables().addAll((Collection<? extends DAbstractTable>)newValue);
+				getSvsTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -1141,11 +1140,11 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == DDocumentTemplate.class) {
 			switch (derivedFeatureID) {
-				case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS: return docPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
-				case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS: return docPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
-				case svsPackage.VSVS_DOCUMENT__FIGURES: return docPackage.DDOCUMENT_TEMPLATE__FIGURES;
-				case svsPackage.VSVS_DOCUMENT__TABLES: return docPackage.DDOCUMENT_TEMPLATE__TABLES;
-				case svsPackage.VSVS_DOCUMENT__SECTIONS: return docPackage.DDOCUMENT_TEMPLATE__SECTIONS;
+				case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
+				case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
+				case svsPackage.VSVS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
+				case svsPackage.VSVS_DOCUMENT__TABLES: return doctplPackage.DDOCUMENT_TEMPLATE__TABLES;
+				case svsPackage.VSVS_DOCUMENT__SECTIONS: return doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS;
 				default: return -1;
 			}
 		}
@@ -1161,11 +1160,11 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == DDocumentTemplate.class) {
 			switch (baseFeatureID) {
-				case docPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS;
-				case docPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS;
-				case docPackage.DDOCUMENT_TEMPLATE__FIGURES: return svsPackage.VSVS_DOCUMENT__FIGURES;
-				case docPackage.DDOCUMENT_TEMPLATE__TABLES: return svsPackage.VSVS_DOCUMENT__TABLES;
-				case docPackage.DDOCUMENT_TEMPLATE__SECTIONS: return svsPackage.VSVS_DOCUMENT__SECTIONS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return svsPackage.VSVS_DOCUMENT__FIGURES;
+				case doctplPackage.DDOCUMENT_TEMPLATE__TABLES: return svsPackage.VSVS_DOCUMENT__TABLES;
+				case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS: return svsPackage.VSVS_DOCUMENT__SECTIONS;
 				default: return -1;
 			}
 		}

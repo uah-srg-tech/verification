@@ -10,11 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DInstantiableSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
@@ -44,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implements VSRSInstantiableSection {
+public class VSRSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl implements VSRSInstantiableSection {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -53,7 +49,7 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody body;
+	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody body;
 
 	/**
 	 * The cached value of the '{@link #getSrsInstatiableSubsections() <em>Srs Instatiable Subsections</em>}' containment reference list.
@@ -89,7 +85,7 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getBody() {
+	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody() {
 		return body;
 	}
 
@@ -98,8 +94,8 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
-		DBody oldBody = body;
+	public NotificationChain basicSetBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody, NotificationChain msgs) {
+		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_INSTANTIABLE_SECTION__BODY, oldBody, newBody);
@@ -113,7 +109,7 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBody(DBody newBody) {
+	public void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
@@ -181,7 +177,7 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
-				setBody((DBody)newValue);
+				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
 				getSrsInstatiableSubsections().clear();
@@ -200,7 +196,7 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__BODY:
-				setBody((DBody)null);
+				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
 				return;
 			case srsPackage.VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
 				getSrsInstatiableSubsections().clear();

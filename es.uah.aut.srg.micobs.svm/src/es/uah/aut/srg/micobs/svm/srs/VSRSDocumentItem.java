@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 import org.eclipse.emf.common.util.EList;
@@ -44,12 +42,12 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(DBody)
+	 * @see #setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
 	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocumentItem_Description()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getDescription();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getDescription();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getDescription <em>Description</em>}' containment reference.
@@ -59,7 +57,7 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(DBody value);
+	void setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Extended Description</b></em>' containment reference.
@@ -70,12 +68,12 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Extended Description</em>' containment reference.
-	 * @see #setExtendedDescription(DBody)
+	 * @see #setExtendedDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
 	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocumentItem_ExtendedDescription()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getExtendedDescription();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getExtendedDescription();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem#getExtendedDescription <em>Extended Description</em>}' containment reference.
@@ -85,7 +83,7 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * @see #getExtendedDescription()
 	 * @generated
 	 */
-	void setExtendedDescription(DBody value);
+	void setExtendedDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Mode</b></em>' attribute list.

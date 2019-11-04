@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModel;
 import es.uah.aut.srg.micobs.svm.srs.VSRSLogicalModels;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -42,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSLogicalModelsImpl extends DFixedSectionImpl implements VSRSLogicalModels {
+public class VSRSLogicalModelsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSLogicalModels {
 	/**
 	 * The cached value of the '{@link #getLogicalModels() <em>Logical Models</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

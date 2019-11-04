@@ -11,22 +11,22 @@
 package es.uah.aut.srg.micobs.svm.lang.svs.serializer;
 
 import com.google.inject.Inject;
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DBasicTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DCell;
-import es.uah.aut.srg.micobs.doctpl.doc.DEnumerate;
-import es.uah.aut.srg.micobs.doctpl.doc.DFigureFromFile;
-import es.uah.aut.srg.micobs.doctpl.doc.DHyperlink;
-import es.uah.aut.srg.micobs.doctpl.doc.DItemize;
-import es.uah.aut.srg.micobs.doctpl.doc.DListItem;
-import es.uah.aut.srg.micobs.doctpl.doc.DParagraph;
-import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DRow;
-import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-import es.uah.aut.srg.micobs.doctpl.doc.DTableFromFile;
-import es.uah.aut.srg.micobs.doctpl.doc.DText;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBasicTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DCell;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DEnumerate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DHyperlink;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DItemize;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DListItem;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.lang.svs.services.SVSGrammarAccess;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbbreviation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
@@ -94,51 +94,51 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		ParserRule rule = context.getParserRule();
 		Action action = context.getAssignedAction();
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
-		if (epackage == docPackage.eINSTANCE)
+		if (epackage == doctplPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
-			case docPackage.DAPPLICABLE_DOCUMENT:
+			case doctplPackage.DAPPLICABLE_DOCUMENT:
 				sequence_DApplicableDocument(context, (DApplicableDocument) semanticObject); 
 				return; 
-			case docPackage.DBASIC_TABLE:
+			case doctplPackage.DBASIC_TABLE:
 				sequence_DBasicTable(context, (DBasicTable) semanticObject); 
 				return; 
-			case docPackage.DBODY:
+			case doctplPackage.DBODY:
 				sequence_DBody(context, (DBody) semanticObject); 
 				return; 
-			case docPackage.DCELL:
+			case doctplPackage.DCELL:
 				sequence_DCell(context, (DCell) semanticObject); 
 				return; 
-			case docPackage.DENUMERATE:
+			case doctplPackage.DENUMERATE:
 				sequence_DEnumerate(context, (DEnumerate) semanticObject); 
 				return; 
-			case docPackage.DFIGURE_FROM_FILE:
+			case doctplPackage.DFIGURE_FROM_FILE:
 				sequence_DFigureFromFile(context, (DFigureFromFile) semanticObject); 
 				return; 
-			case docPackage.DHYPERLINK:
+			case doctplPackage.DHYPERLINK:
 				sequence_DHyperlink(context, (DHyperlink) semanticObject); 
 				return; 
-			case docPackage.DITEMIZE:
+			case doctplPackage.DITEMIZE:
 				sequence_DItemize(context, (DItemize) semanticObject); 
 				return; 
-			case docPackage.DLIST_ITEM:
+			case doctplPackage.DLIST_ITEM:
 				sequence_DListItem(context, (DListItem) semanticObject); 
 				return; 
-			case docPackage.DPARAGRAPH:
+			case doctplPackage.DPARAGRAPH:
 				sequence_DParagraph(context, (DParagraph) semanticObject); 
 				return; 
-			case docPackage.DREFERENCE_DOCUMENT:
+			case doctplPackage.DREFERENCE_DOCUMENT:
 				sequence_DReferenceDocument(context, (DReferenceDocument) semanticObject); 
 				return; 
-			case docPackage.DROW:
+			case doctplPackage.DROW:
 				sequence_DRow(context, (DRow) semanticObject); 
 				return; 
-			case docPackage.DRUN:
+			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
 				return; 
-			case docPackage.DTABLE_FROM_FILE:
+			case doctplPackage.DTABLE_FROM_FILE:
 				sequence_DTableFromFile(context, (DTableFromFile) semanticObject); 
 				return; 
-			case docPackage.DTEXT:
+			case doctplPackage.DTEXT:
 				sequence_DText(context, (DText) semanticObject); 
 				return; 
 			}
@@ -374,7 +374,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DFigureFromFile returns DFigureFromFile
 	 *
 	 * Constraint:
-	 *     (name=STRING referenceFile=STRING caption=STRING?)
+	 *     (name=STRING referenceFile=STRING width=UINT_STRING height=UINT_STRING caption=STRING?)
 	 */
 	protected void sequence_DFigureFromFile(ISerializationContext context, DFigureFromFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -467,8 +467,8 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DRUN__TEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DRUN__TEXT));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DRUN__TEXT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DRUN__TEXT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_5_0(), semanticObject.getText());
@@ -482,7 +482,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DTableFromFile returns DTableFromFile
 	 *
 	 * Constraint:
-	 *     (name=STRING referenceFile=STRING caption=STRING?)
+	 *     (name=STRING referenceFile=STRING width=UINT_STRING height=UINT_STRING caption=STRING?)
 	 */
 	protected void sequence_DTableFromFile(ISerializationContext context, DTableFromFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -498,8 +498,8 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_DText(ISerializationContext context, DText semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, docPackage.Literals.DTEXT__CONTENT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, docPackage.Literals.DTEXT__CONTENT));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DTEXT__CONTENT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DTEXT__CONTENT));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDTextAccess().getContentRUNTEXTTerminalRuleCall_0(), semanticObject.getContent());

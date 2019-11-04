@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -39,7 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntroduction {
+public class VSSSIntroductionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSIntroduction {
 	/**
 	 * The cached value of the '{@link #getSssInstatiableSubsections() <em>Sss Instatiable Subsections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

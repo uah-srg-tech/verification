@@ -10,10 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements;
@@ -47,7 +44,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixedSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
+public class VSSSVerificationValidationIntegrationRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSVerificationValidationIntegrationRequirements {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -56,7 +53,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody sectionDescription;
+	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
 
 	/**
 	 * The cached value of the '{@link #getVerificationValidationProcess() <em>Verification Validation Process</em>}' containment reference.
@@ -122,7 +119,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getSectionDescription() {
+	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -131,8 +128,8 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
-		DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
+		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -146,7 +143,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(DBody newSectionDescription) {
+	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -385,7 +382,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((DBody)newValue);
+				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)newValue);
@@ -412,7 +409,7 @@ public class VSSSVerificationValidationIntegrationRequirementsImpl extends DFixe
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((DBody)null);
+				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
 				return;
 			case sssPackage.VSSS_VERIFICATION_VALIDATION_INTEGRATION_REQUIREMENTS__VERIFICATION_VALIDATION_PROCESS:
 				setVerificationValidationProcess((VSSSVerificationValidationProcessRequirements)null);

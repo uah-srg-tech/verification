@@ -10,14 +10,12 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocument;
 import es.uah.aut.srg.micobs.svm.srs.VSRSIntroduction;
@@ -150,7 +148,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DAbstractFigure> srsFigures;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> srsFigures;
 
 	/**
 	 * The cached value of the '{@link #getSrsTables() <em>Srs Tables</em>}' containment reference list.
@@ -160,7 +158,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DAbstractTable> srsTables;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> srsTables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -562,9 +560,9 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractFigure> getSrsFigures() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSrsFigures() {
 		if (srsFigures == null) {
-			srsFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, srsPackage.VSRS_DOCUMENT__SRS_FIGURES);
+			srsFigures = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure.class, this, srsPackage.VSRS_DOCUMENT__SRS_FIGURES);
 		}
 		return srsFigures;
 	}
@@ -574,9 +572,9 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractTable> getSrsTables() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSrsTables() {
 		if (srsTables == null) {
-			srsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, srsPackage.VSRS_DOCUMENT__SRS_TABLES);
+			srsTables = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable.class, this, srsPackage.VSRS_DOCUMENT__SRS_TABLES);
 		}
 		return srsTables;
 	}
@@ -662,23 +660,23 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		switch (featureID) {
 			case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__FIGURES:
 				getFigures().clear();
-				getFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
+				getFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__TABLES:
 				getTables().clear();
-				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
+				getTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				getSections().clear();
-				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
+				getSections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSRSIntroduction)newValue);
@@ -703,11 +701,11 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return;
 			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
 				getSrsFigures().clear();
-				getSrsFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
+				getSrsFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
 				getSrsTables().clear();
-				getSrsTables().addAll((Collection<? extends DAbstractTable>)newValue);
+				getSrsTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -814,13 +812,13 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == DDocumentTemplate.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
 			switch (derivedFeatureID) {
-				case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS: return docPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
-				case srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS: return docPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
-				case srsPackage.VSRS_DOCUMENT__FIGURES: return docPackage.DDOCUMENT_TEMPLATE__FIGURES;
-				case srsPackage.VSRS_DOCUMENT__TABLES: return docPackage.DDOCUMENT_TEMPLATE__TABLES;
-				case srsPackage.VSRS_DOCUMENT__SECTIONS: return docPackage.DDOCUMENT_TEMPLATE__SECTIONS;
+				case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
+				case srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
+				case srsPackage.VSRS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
+				case srsPackage.VSRS_DOCUMENT__TABLES: return doctplPackage.DDOCUMENT_TEMPLATE__TABLES;
+				case srsPackage.VSRS_DOCUMENT__SECTIONS: return doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS;
 				default: return -1;
 			}
 		}
@@ -834,13 +832,13 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == DDocumentTemplate.class) {
+		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
 			switch (baseFeatureID) {
-				case docPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS;
-				case docPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS;
-				case docPackage.DDOCUMENT_TEMPLATE__FIGURES: return srsPackage.VSRS_DOCUMENT__FIGURES;
-				case docPackage.DDOCUMENT_TEMPLATE__TABLES: return srsPackage.VSRS_DOCUMENT__TABLES;
-				case docPackage.DDOCUMENT_TEMPLATE__SECTIONS: return srsPackage.VSRS_DOCUMENT__SECTIONS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return srsPackage.VSRS_DOCUMENT__FIGURES;
+				case doctplPackage.DDOCUMENT_TEMPLATE__TABLES: return srsPackage.VSRS_DOCUMENT__TABLES;
+				case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS: return srsPackage.VSRS_DOCUMENT__SECTIONS;
 				default: return -1;
 			}
 		}

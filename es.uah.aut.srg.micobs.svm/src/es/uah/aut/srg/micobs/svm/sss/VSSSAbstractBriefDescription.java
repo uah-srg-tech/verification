@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -67,12 +65,12 @@ public interface VSSSAbstractBriefDescription extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
-	 * @see #setDescription(DRun)
+	 * @see #setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DRun)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSAbstractBriefDescription_Description()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	DRun getDescription();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DRun getDescription();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription#getDescription <em>Description</em>}' containment reference.
@@ -82,6 +80,6 @@ public interface VSSSAbstractBriefDescription extends EObject {
 	 * @see #getDescription()
 	 * @generated
 	 */
-	void setDescription(DRun value);
+	void setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DRun value);
 
 } // VSSSAbstractBriefDescription

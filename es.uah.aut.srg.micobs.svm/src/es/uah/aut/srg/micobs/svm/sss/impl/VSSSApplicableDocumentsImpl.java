@@ -10,11 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
@@ -43,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSApplicableDocumentsImpl extends DFixedSectionImpl implements VSSSApplicableDocuments {
+public class VSSSApplicableDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSApplicableDocuments {
 	/**
 	 * The cached value of the '{@link #getApplicableDocuments() <em>Applicable Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -52,7 +48,7 @@ public class VSSSApplicableDocumentsImpl extends DFixedSectionImpl implements VS
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<DApplicableDocument> applicableDocuments;
+	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument> applicableDocuments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -78,9 +74,9 @@ public class VSSSApplicableDocumentsImpl extends DFixedSectionImpl implements VS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DApplicableDocument> getApplicableDocuments() {
+	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument> getApplicableDocuments() {
 		if (applicableDocuments == null) {
-			applicableDocuments = new EObjectContainmentEList<DApplicableDocument>(DApplicableDocument.class, this, sssPackage.VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS);
+			applicableDocuments = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>(es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument.class, this, sssPackage.VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS);
 		}
 		return applicableDocuments;
 	}
@@ -124,7 +120,7 @@ public class VSSSApplicableDocumentsImpl extends DFixedSectionImpl implements VS
 		switch (featureID) {
 			case sssPackage.VSSS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -24,7 +24,7 @@ public abstract class AbstractSRSValidator extends AbstractDeclarativeValidator 
 	protected List<EPackage> getEPackages() {
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/micobs/svm/srs"));
-		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/micobs/doctpl/doc"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/micobs/doctpl/doctpl"));
 		return result;
 	}
 	

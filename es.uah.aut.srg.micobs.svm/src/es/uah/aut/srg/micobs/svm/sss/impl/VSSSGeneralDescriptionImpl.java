@@ -10,9 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -43,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSSSGeneralDescription {
+public class VSSSGeneralDescriptionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSGeneralDescription {
 	/**
 	 * The cached value of the '{@link #getProductPerspective() <em>Product Perspective</em>}' containment reference.
 	 * <!-- begin-user-doc -->

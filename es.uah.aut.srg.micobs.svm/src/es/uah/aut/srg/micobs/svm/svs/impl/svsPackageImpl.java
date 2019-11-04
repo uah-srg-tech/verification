@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbbreviation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbstractBriefDescription;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
@@ -479,7 +478,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		docPackage.eINSTANCE.eClass();
+		doctplPackage.eINSTANCE.eClass();
 		exportPackage.eINSTANCE.eClass();
 		filterPackage.eINSTANCE.eClass();
 		importPackage.eINSTANCE.eClass();
@@ -2601,7 +2600,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Obtain other dependent packages
 		vdmPackage thevdmPackage = (vdmPackage)EPackage.Registry.INSTANCE.getEPackage(vdmPackage.eNS_URI);
-		docPackage thedocPackage = (docPackage)EPackage.Registry.INSTANCE.getEPackage(docPackage.eNS_URI);
+		doctplPackage thedoctplPackage = (doctplPackage)EPackage.Registry.INSTANCE.getEPackage(doctplPackage.eNS_URI);
 		formatPackage theformatPackage = (formatPackage)EPackage.Registry.INSTANCE.getEPackage(formatPackage.eNS_URI);
 		exportPackage theexportPackage = (exportPackage)EPackage.Registry.INSTANCE.getEPackage(exportPackage.eNS_URI);
 		importPackage theimportPackage = (importPackage)EPackage.Registry.INSTANCE.getEPackage(importPackage.eNS_URI);
@@ -2613,29 +2612,29 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Add supertypes to classes
 		vsvsDocumentEClass.getESuperTypes().add(thevdmPackage.getVValidationDocument());
-		vsvsDocumentEClass.getESuperTypes().add(thedocPackage.getDDocumentTemplate());
-		vsvsInstantiableSectionEClass.getESuperTypes().add(thedocPackage.getDInstantiableSection());
-		vsvsIntroductionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsApplicableDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsReferenceDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsTermsDefinitionsAbbreviationsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsDocumentEClass.getESuperTypes().add(thedoctplPackage.getDDocumentTemplate());
+		vsvsInstantiableSectionEClass.getESuperTypes().add(thedoctplPackage.getDInstantiableSection());
+		vsvsIntroductionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsApplicableDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsReferenceDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsTermsDefinitionsAbbreviationsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTermEClass.getESuperTypes().add(this.getVSVSAbstractBriefDescription());
 		vsvsDefinitionEClass.getESuperTypes().add(this.getVSVSAbstractBriefDescription());
 		vsvsAbbreviationEClass.getESuperTypes().add(this.getVSVSAbstractBriefDescription());
-		vsvsFixedSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsFixedSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsSoftwareOverviewEClass.getESuperTypes().add(this.getVSVSFixedSection());
-		vsvsTaskIdentificationEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsTestingSpecificationDesignEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsScenariosSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsScenarioSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsTestDesignEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsFixedTestSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsTaskIdentificationEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsTestingSpecificationDesignEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsScenariosSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsScenarioSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsTestDesignEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsFixedTestSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestCasesEClass.getESuperTypes().add(thevdmPackage.getVValidationDocumentFixedGroup());
-		vsvsTestCasesEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsTestCasesEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestCaseEClass.getESuperTypes().add(thevdmPackage.getVValidationDocumentAbstractItem());
-		vsvsTestCaseEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsTestProceduresEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsvsTestProcedureEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsvsTestCaseEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsTestProceduresEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsTestProcedureEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsStepInputLevel3EClass.getESuperTypes().add(this.getVSVSStepInput());
 		vsvsStepInputLevel2EClass.getESuperTypes().add(this.getVSVSStepInput());
 		vsvsStepInputLevel1EClass.getESuperTypes().add(this.getVSVSStepInput());
@@ -2662,21 +2661,21 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSDocument_AnalysisInspectionReviewSection(), this.getVSVSAnalysisInspectionReview(), null, "analysisInspectionReviewSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_TestPlatformRequirementsSection(), this.getVSVSTestPlatformRequirements(), null, "testPlatformRequirementsSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_AdditionalInformationSection(), this.getVSVSAdditionalInformation(), null, "additionalInformationSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSDocument_SvsFigures(), thedocPackage.getDAbstractFigure(), null, "svsFigures", null, 0, -1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSDocument_SvsTables(), thedocPackage.getDAbstractTable(), null, "svsTables", null, 0, -1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSDocument_SvsFigures(), thedoctplPackage.getDAbstractFigure(), null, "svsFigures", null, 0, -1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSDocument_SvsTables(), thedoctplPackage.getDAbstractTable(), null, "svsTables", null, 0, -1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsInstantiableSectionEClass, VSVSInstantiableSection.class, "VSVSInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSVSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSInstantiableSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSVSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSInstantiableSection_SvsInstatiableSubsections(), this.getVSVSInstantiableSection(), null, "svsInstatiableSubsections", null, 0, -1, VSVSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsIntroductionEClass, VSVSIntroduction.class, "VSVSIntroduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSIntroduction_SvsInstatiableSubsections(), this.getVSVSInstantiableSection(), null, "svsInstatiableSubsections", null, 1, -1, VSVSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsApplicableDocumentsEClass, VSVSApplicableDocuments.class, "VSVSApplicableDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSApplicableDocuments_ApplicableDocuments(), thedocPackage.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, VSVSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSApplicableDocuments_ApplicableDocuments(), thedoctplPackage.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, VSVSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsReferenceDocumentsEClass, VSVSReferenceDocuments.class, "VSVSReferenceDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSReferenceDocuments_ReferenceDocuments(), thedocPackage.getDReferenceDocument(), null, "referenceDocuments", null, 0, -1, VSVSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSReferenceDocuments_ReferenceDocuments(), thedoctplPackage.getDReferenceDocument(), null, "referenceDocuments", null, 0, -1, VSVSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTermsDefinitionsAbbreviationsEClass, VSVSTermsDefinitionsAbbreviations.class, "VSVSTermsDefinitionsAbbreviations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTermsDefinitionsAbbreviations_Terms(), this.getVSVSTerm(), null, "terms", null, 0, -1, VSVSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2685,7 +2684,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsAbstractBriefDescriptionEClass, VSVSAbstractBriefDescription.class, "VSVSAbstractBriefDescription", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSAbstractBriefDescription_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSAbstractBriefDescription_Description(), thedocPackage.getDRun(), null, "description", null, 1, 1, VSVSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSAbstractBriefDescription_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VSVSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTermEClass, VSVSTerm.class, "VSVSTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -2694,7 +2693,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEClass(vsvsAbbreviationEClass, VSVSAbbreviation.class, "VSVSAbbreviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsvsFixedSectionEClass, VSVSFixedSection.class, "VSVSFixedSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSVSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSFixedSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSVSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSFixedSection_SvsInstatiableSubsections(), this.getVSVSInstantiableSection(), null, "svsInstatiableSubsections", null, 0, -1, VSVSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsSoftwareOverviewEClass, VSVSSoftwareOverview.class, "VSVSSoftwareOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -2718,7 +2717,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEClass(vsvsScenarioSectionEClass, VSVSScenarioSection.class, "VSVSScenarioSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSScenarioSection_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSScenarioSection_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSScenarioSection_Body(), thedocPackage.getDBody(), null, "body", null, 1, 1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSScenarioSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 1, 1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestDesignEClass, VSVSTestDesign.class, "VSVSTestDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSTestDesign_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2727,7 +2726,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSTestDesign_ApproachRefinements(), this.getVSVSFixedSection(), null, "approachRefinements", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsFixedTestSectionEClass, VSVSFixedTestSection.class, "VSVSFixedTestSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSFixedTestSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSVSFixedTestSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSFixedTestSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSVSFixedTestSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestCasesEClass, VSVSTestCases.class, "VSVSTestCases", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestCases_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestCases.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

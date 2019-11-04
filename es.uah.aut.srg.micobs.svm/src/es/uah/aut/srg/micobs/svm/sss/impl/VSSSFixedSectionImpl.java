@@ -10,11 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-
-import es.uah.aut.srg.micobs.doctpl.doc.impl.DFixedSectionImpl;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -48,7 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixedSection {
+public class VSSSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSFixedSection {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -57,7 +53,7 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	 * @generated
 	 * @ordered
 	 */
-	protected DBody body;
+	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody body;
 
 	/**
 	 * The cached value of the '{@link #getSssInstatiableSubsections() <em>Sss Instatiable Subsections</em>}' containment reference list.
@@ -93,7 +89,7 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DBody getBody() {
+	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody() {
 		return body;
 	}
 
@@ -102,8 +98,8 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
-		DBody oldBody = body;
+	public NotificationChain basicSetBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody, NotificationChain msgs) {
+		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_FIXED_SECTION__BODY, oldBody, newBody);
@@ -117,7 +113,7 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBody(DBody newBody) {
+	public void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
@@ -185,7 +181,7 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_FIXED_SECTION__BODY:
-				setBody((DBody)newValue);
+				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
 				return;
 			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();
@@ -204,7 +200,7 @@ public class VSSSFixedSectionImpl extends DFixedSectionImpl implements VSSSFixed
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_FIXED_SECTION__BODY:
-				setBody((DBody)null);
+				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
 				return;
 			case sssPackage.VSSS_FIXED_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();

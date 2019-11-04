@@ -10,10 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 
 import org.eclipse.emf.common.util.EList;
@@ -43,7 +39,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
+public interface VSSSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate {
 	/**
 	 * Returns the value of the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -254,7 +250,7 @@ public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 
 	/**
 	 * Returns the value of the '<em><b>Sss Figures</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sss Figures</em>' containment reference list isn't clear,
@@ -266,11 +262,11 @@ public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DAbstractFigure> getSssFigures();
+	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSssFigures();
 
 	/**
 	 * Returns the value of the '<em><b>Sss Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Sss Tables</em>' containment reference list isn't clear,
@@ -282,6 +278,6 @@ public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DAbstractTable> getSssTables();
+	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSssTables();
 
 } // VSSSDocument

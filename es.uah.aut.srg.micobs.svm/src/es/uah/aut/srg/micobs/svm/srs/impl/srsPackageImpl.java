@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAbbreviation;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAbstractBriefDescription;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAbstractRequirementSection;
@@ -367,7 +366,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		docPackage.eINSTANCE.eClass();
+		doctplPackage.eINSTANCE.eClass();
 		tdmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects
@@ -1356,7 +1355,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		// Obtain other dependent packages
 		tdmPackage thetdmPackage = (tdmPackage)EPackage.Registry.INSTANCE.getEPackage(tdmPackage.eNS_URI);
-		docPackage thedocPackage = (docPackage)EPackage.Registry.INSTANCE.getEPackage(docPackage.eNS_URI);
+		doctplPackage thedoctplPackage = (doctplPackage)EPackage.Registry.INSTANCE.getEPackage(doctplPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -1364,22 +1363,22 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		// Add supertypes to classes
 		vsrsDocumentEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocument());
-		vsrsDocumentEClass.getESuperTypes().add(thedocPackage.getDDocumentTemplate());
-		vsrsIntroductionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsrsApplicableDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsrsReferenceDocumentsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsrsTermsDefinitionsAbbreviationsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsDocumentEClass.getESuperTypes().add(thedoctplPackage.getDDocumentTemplate());
+		vsrsIntroductionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsrsApplicableDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsrsReferenceDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsrsTermsDefinitionsAbbreviationsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsrsTermEClass.getESuperTypes().add(this.getVSRSAbstractBriefDescription());
 		vsrsDefinitionEClass.getESuperTypes().add(this.getVSRSAbstractBriefDescription());
 		vsrsAbbreviationEClass.getESuperTypes().add(this.getVSRSAbstractBriefDescription());
-		vsrsFixedSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
-		vsrsInstantiableSectionEClass.getESuperTypes().add(thedocPackage.getDInstantiableSection());
-		vsrsSoftwareOverviewEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsFixedSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsrsInstantiableSectionEClass.getESuperTypes().add(thedoctplPackage.getDInstantiableSection());
+		vsrsSoftwareOverviewEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsrsAbstractRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentFixedGroup());
-		vsrsAbstractRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsAbstractRequirementSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsrsInstantiableRequirementSectionEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentInstantiableGroup());
-		vsrsInstantiableRequirementSectionEClass.getESuperTypes().add(thedocPackage.getDInstantiableSection());
-		vsrsRequirementsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsInstantiableRequirementSectionEClass.getESuperTypes().add(thedoctplPackage.getDInstantiableSection());
+		vsrsRequirementsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsrsGeneralRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsFunctionalRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsPerformanceRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
@@ -1398,7 +1397,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		vsrsHumanFactorsRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsAdaptationInstallationRequirementsEClass.getESuperTypes().add(this.getVSRSAbstractRequirementSection());
 		vsrsDocumentItemEClass.getESuperTypes().add(thetdmPackage.getVTraceableDocumentAbstractItem());
-		vsrsLogicalModelsEClass.getESuperTypes().add(thedocPackage.getDFixedSection());
+		vsrsLogicalModelsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsrsDocumentEClass, VSRSDocument.class, "VSRSDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1409,17 +1408,17 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEReference(getVSRSDocument_SoftwareOverviewSection(), this.getVSRSSoftwareOverview(), null, "softwareOverviewSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_RequirementsSection(), this.getVSRSRequirements(), null, "requirementsSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSDocument_LogicalModelsSection(), this.getVSRSLogicalModels(), null, "logicalModelsSection", null, 1, 1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSDocument_SrsFigures(), thedocPackage.getDAbstractFigure(), null, "srsFigures", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSDocument_SrsTables(), thedocPackage.getDAbstractTable(), null, "srsTables", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSDocument_SrsFigures(), thedoctplPackage.getDAbstractFigure(), null, "srsFigures", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSDocument_SrsTables(), thedoctplPackage.getDAbstractTable(), null, "srsTables", null, 0, -1, VSRSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsIntroductionEClass, VSRSIntroduction.class, "VSRSIntroduction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSIntroduction_SrsInstatiableSubsections(), this.getVSRSInstantiableSection(), null, "srsInstatiableSubsections", null, 1, -1, VSRSIntroduction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsApplicableDocumentsEClass, VSRSApplicableDocuments.class, "VSRSApplicableDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSApplicableDocuments_ApplicableDocuments(), thedocPackage.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, VSRSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSApplicableDocuments_ApplicableDocuments(), thedoctplPackage.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, VSRSApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsReferenceDocumentsEClass, VSRSReferenceDocuments.class, "VSRSReferenceDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSReferenceDocuments_ReferenceDocuments(), thedocPackage.getDReferenceDocument(), null, "referenceDocuments", null, 0, -1, VSRSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSReferenceDocuments_ReferenceDocuments(), thedoctplPackage.getDReferenceDocument(), null, "referenceDocuments", null, 0, -1, VSRSReferenceDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsTermsDefinitionsAbbreviationsEClass, VSRSTermsDefinitionsAbbreviations.class, "VSRSTermsDefinitionsAbbreviations", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSRSTermsDefinitionsAbbreviations_Terms(), this.getVSRSTerm(), null, "terms", null, 0, -1, VSRSTermsDefinitionsAbbreviations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1428,7 +1427,7 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 
 		initEClass(vsrsAbstractBriefDescriptionEClass, VSRSAbstractBriefDescription.class, "VSRSAbstractBriefDescription", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSRSAbstractBriefDescription_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSRSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSAbstractBriefDescription_Description(), thedocPackage.getDRun(), null, "description", null, 1, 1, VSRSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSAbstractBriefDescription_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VSRSAbstractBriefDescription.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsTermEClass, VSRSTerm.class, "VSRSTerm", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -1437,11 +1436,11 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEClass(vsrsAbbreviationEClass, VSRSAbbreviation.class, "VSRSAbbreviation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsrsFixedSectionEClass, VSRSFixedSection.class, "VSRSFixedSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSFixedSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSFixedSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSFixedSection_SrsInstatiableSubsections(), this.getVSRSInstantiableSection(), null, "srsInstatiableSubsections", null, 0, -1, VSRSFixedSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsInstantiableSectionEClass, VSRSInstantiableSection.class, "VSRSInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSInstantiableSection_Body(), thedocPackage.getDBody(), null, "body", null, 0, 1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSInstantiableSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSInstantiableSection_SrsInstatiableSubsections(), this.getVSRSInstantiableSection(), null, "srsInstatiableSubsections", null, 0, -1, VSRSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsSoftwareOverviewEClass, VSRSSoftwareOverview.class, "VSRSSoftwareOverview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1451,16 +1450,16 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEReference(getVSRSSoftwareOverview_Constraints(), this.getVSRSFixedSection(), null, "constraints", null, 1, 1, VSRSSoftwareOverview.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsAbstractRequirementSectionEClass, VSRSAbstractRequirementSection.class, "VSRSAbstractRequirementSection", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSAbstractRequirementSection_SectionDescription(), thedocPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSAbstractRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSAbstractRequirementSection_SectionDescription(), thedoctplPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSAbstractRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSAbstractRequirementSection_SrsItems(), this.getVSRSDocumentItem(), null, "srsItems", null, 0, -1, VSRSAbstractRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSAbstractRequirementSection_SrsRequirementSubsections(), this.getVSRSInstantiableRequirementSection(), null, "srsRequirementSubsections", null, 0, -1, VSRSAbstractRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsInstantiableRequirementSectionEClass, VSRSInstantiableRequirementSection.class, "VSRSInstantiableRequirementSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSInstantiableRequirementSection_SectionDescription(), thedocPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSInstantiableRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSInstantiableRequirementSection_SectionDescription(), thedoctplPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSInstantiableRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSInstantiableRequirementSection_SrsItems(), this.getVSRSDocumentItem(), null, "srsItems", null, 0, -1, VSRSInstantiableRequirementSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsRequirementsEClass, VSRSRequirements.class, "VSRSRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSRequirements_SectionDescription(), thedocPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSRequirements_SectionDescription(), thedoctplPackage.getDBody(), null, "sectionDescription", null, 0, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_General(), this.getVSRSGeneralRequirements(), null, "general", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_Functional(), this.getVSRSFunctionalRequirements(), null, "functional", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSRSRequirements_Performance(), this.getVSRSPerformanceRequirements(), null, "performance", null, 1, 1, VSRSRequirements.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1514,8 +1513,8 @@ public class srsPackageImpl extends EPackageImpl implements srsPackage {
 		initEClass(vsrsAdaptationInstallationRequirementsEClass, VSRSAdaptationInstallationRequirements.class, "VSRSAdaptationInstallationRequirements", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsrsDocumentItemEClass, VSRSDocumentItem.class, "VSRSDocumentItem", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSRSDocumentItem_Description(), thedocPackage.getDBody(), null, "description", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSRSDocumentItem_ExtendedDescription(), thedocPackage.getDBody(), null, "extendedDescription", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSDocumentItem_Description(), thedoctplPackage.getDBody(), null, "description", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSRSDocumentItem_ExtendedDescription(), thedoctplPackage.getDBody(), null, "extendedDescription", null, 0, 1, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSRSDocumentItem_Mode(), this.getVSRSDocumentItemModes(), "mode", null, 0, 5, VSRSDocumentItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsrsLogicalModelsEClass, VSRSLogicalModels.class, "VSRSLogicalModels", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -10,10 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 
 import org.eclipse.emf.common.util.EList;
@@ -362,7 +361,7 @@ public interface VSVSDocument extends VValidationDocument, DDocumentTemplate {
 
 	/**
 	 * Returns the value of the '<em><b>Svs Figures</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractFigure}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Svs Figures</em>' containment reference list isn't clear,
@@ -378,7 +377,7 @@ public interface VSVSDocument extends VValidationDocument, DDocumentTemplate {
 
 	/**
 	 * Returns the value of the '<em><b>Svs Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DAbstractTable}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Svs Tables</em>' containment reference list isn't clear,

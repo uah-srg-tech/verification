@@ -11,12 +11,10 @@
 package es.uah.aut.srg.micobs.svm.svs.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.*;
 
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;

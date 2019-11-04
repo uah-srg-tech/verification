@@ -4,7 +4,7 @@
     modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
     modelName="Srs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doc.genmodel#//doc tdm.genmodel#//tdm"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.genmodel#//doctpl tdm.genmodel#//tdm"
     operationReflection="true" importOrganizing="true">
   <foreignModel>srs.ecore</foreignModel>
   <genPackages prefix="srs" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"

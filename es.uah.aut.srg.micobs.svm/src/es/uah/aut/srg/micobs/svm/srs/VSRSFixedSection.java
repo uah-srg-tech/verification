@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -32,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSRSFixedSection extends DFixedSection {
+public interface VSRSFixedSection extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -42,12 +39,12 @@ public interface VSRSFixedSection extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
-	 * @see #setBody(DBody)
+	 * @see #setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
 	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSFixedSection_Body()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getBody();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection#getBody <em>Body</em>}' containment reference.
@@ -57,7 +54,7 @@ public interface VSRSFixedSection extends DFixedSection {
 	 * @see #getBody()
 	 * @generated
 	 */
-	void setBody(DBody value);
+	void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.

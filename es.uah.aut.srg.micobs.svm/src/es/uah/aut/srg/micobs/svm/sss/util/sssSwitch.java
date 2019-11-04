@@ -11,12 +11,6 @@
 package es.uah.aut.srg.micobs.svm.sss.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
-
-import es.uah.aut.srg.micobs.doctpl.doc.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DInstantiableSection;
-
 import es.uah.aut.srg.micobs.svm.sss.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
@@ -994,7 +988,7 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDDocumentTemplate(DDocumentTemplate object) {
+	public T caseDDocumentTemplate(es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate object) {
 		return null;
 	}
 
@@ -1009,7 +1003,7 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDAbstractSection(DAbstractSection object) {
+	public T caseDAbstractSection(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection object) {
 		return null;
 	}
 
@@ -1024,7 +1018,7 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDFixedSection(DFixedSection object) {
+	public T caseDFixedSection(es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection object) {
 		return null;
 	}
 
@@ -1054,7 +1048,7 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseDInstantiableSection(DInstantiableSection object) {
+	public T caseDInstantiableSection(es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection object) {
 		return null;
 	}
 

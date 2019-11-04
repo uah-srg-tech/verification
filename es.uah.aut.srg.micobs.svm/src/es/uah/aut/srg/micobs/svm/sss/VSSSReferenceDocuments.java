@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-import es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -31,10 +28,10 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSReferenceDocuments extends DFixedSection {
+public interface VSSSReferenceDocuments extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Reference Documents</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DReferenceDocument}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Reference Documents</em>' containment reference list isn't clear,
@@ -46,6 +43,6 @@ public interface VSSSReferenceDocuments extends DFixedSection {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<DReferenceDocument> getReferenceDocuments();
+	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument> getReferenceDocuments();
 
 } // VSSSReferenceDocuments

@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DRun;
-
 import es.uah.aut.srg.micobs.svm.sss.VSSSAbstractBriefDescription;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
@@ -67,7 +65,7 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 	 * @generated
 	 * @ordered
 	 */
-	protected DRun description;
+	protected es.uah.aut.srg.micobs.doctpl.doctpl.DRun description;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -114,7 +112,7 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public DRun getDescription() {
+	public es.uah.aut.srg.micobs.doctpl.doctpl.DRun getDescription() {
 		return description;
 	}
 
@@ -123,8 +121,8 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(DRun newDescription, NotificationChain msgs) {
-		DRun oldDescription = description;
+	public NotificationChain basicSetDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DRun newDescription, NotificationChain msgs) {
+		es.uah.aut.srg.micobs.doctpl.doctpl.DRun oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION, oldDescription, newDescription);
@@ -138,7 +136,7 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(DRun newDescription) {
+	public void setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DRun newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
 			if (description != null)
@@ -194,7 +192,7 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 				setName((String)newValue);
 				return;
 			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
-				setDescription((DRun)newValue);
+				setDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DRun)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -212,7 +210,7 @@ public abstract class VSSSAbstractBriefDescriptionImpl extends MinimalEObjectImp
 				setName(NAME_EDEFAULT);
 				return;
 			case sssPackage.VSSS_ABSTRACT_BRIEF_DESCRIPTION__DESCRIPTION:
-				setDescription((DRun)null);
+				setDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DRun)null);
 				return;
 		}
 		super.eUnset(featureID);

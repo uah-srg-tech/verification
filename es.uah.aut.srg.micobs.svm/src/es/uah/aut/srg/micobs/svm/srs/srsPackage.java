@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.docPackage;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -303,7 +302,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INTRODUCTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_INTRODUCTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.
@@ -312,7 +311,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INTRODUCTION__SRS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_INTRODUCTION__SRS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Introduction</em>' class.
@@ -321,7 +320,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INTRODUCTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_INTRODUCTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSRS Introduction</em>' class.
@@ -330,7 +329,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INTRODUCTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_INTRODUCTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSApplicableDocumentsImpl <em>VSRS Applicable Documents</em>}' class.
@@ -349,7 +348,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_APPLICABLE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_APPLICABLE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' containment reference list.
@@ -358,7 +357,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Applicable Documents</em>' class.
@@ -367,7 +366,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_APPLICABLE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSRS Applicable Documents</em>' class.
@@ -376,7 +375,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_APPLICABLE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSReferenceDocumentsImpl <em>VSRS Reference Documents</em>}' class.
@@ -395,7 +394,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REFERENCE_DOCUMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_REFERENCE_DOCUMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' containment reference list.
@@ -404,7 +403,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Reference Documents</em>' class.
@@ -413,7 +412,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REFERENCE_DOCUMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_REFERENCE_DOCUMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSRS Reference Documents</em>' class.
@@ -422,7 +421,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REFERENCE_DOCUMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_REFERENCE_DOCUMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTermsDefinitionsAbbreviationsImpl <em>VSRS Terms Definitions Abbreviations</em>}' class.
@@ -441,7 +440,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Terms</b></em>' containment reference list.
@@ -450,7 +449,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__TERMS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Definitions</b></em>' containment reference list.
@@ -459,7 +458,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__DEFINITIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Abbreviations</b></em>' containment reference list.
@@ -468,7 +467,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS__ABBREVIATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Terms Definitions Abbreviations</em>' class.
@@ -477,7 +476,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSRS Terms Definitions Abbreviations</em>' class.
@@ -486,7 +485,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSAbstractBriefDescriptionImpl <em>VSRS Abstract Brief Description</em>}' class.
@@ -689,7 +688,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_FIXED_SECTION__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_FIXED_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -698,7 +697,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_FIXED_SECTION__BODY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_FIXED_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.
@@ -707,7 +706,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_FIXED_SECTION__SRS_INSTATIABLE_SUBSECTIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_FIXED_SECTION__SRS_INSTATIABLE_SUBSECTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Fixed Section</em>' class.
@@ -716,7 +715,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_FIXED_SECTION_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSRS_FIXED_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSRS Fixed Section</em>' class.
@@ -725,7 +724,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_FIXED_SECTION_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_FIXED_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSInstantiableSectionImpl <em>VSRS Instantiable Section</em>}' class.
@@ -744,7 +743,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION__SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
+	int VSRS_INSTANTIABLE_SECTION__SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -753,7 +752,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION__NAME = docPackage.DINSTANTIABLE_SECTION__NAME;
+	int VSRS_INSTANTIABLE_SECTION__NAME = doctplPackage.DINSTANTIABLE_SECTION__NAME;
 
 	/**
 	 * The feature id for the '<em><b>Description</b></em>' attribute.
@@ -762,7 +761,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION__DESCRIPTION = docPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
+	int VSRS_INSTANTIABLE_SECTION__DESCRIPTION = doctplPackage.DINSTANTIABLE_SECTION__DESCRIPTION;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -771,7 +770,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION__BODY = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
+	int VSRS_INSTANTIABLE_SECTION__BODY = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.
@@ -780,7 +779,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
+	int VSRS_INSTANTIABLE_SECTION__SRS_INSTATIABLE_SUBSECTIONS = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Instantiable Section</em>' class.
@@ -789,7 +788,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION_FEATURE_COUNT = docPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
+	int VSRS_INSTANTIABLE_SECTION_FEATURE_COUNT = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSRS Instantiable Section</em>' class.
@@ -798,7 +797,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_INSTANTIABLE_SECTION_OPERATION_COUNT = docPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
+	int VSRS_INSTANTIABLE_SECTION_OPERATION_COUNT = doctplPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSSoftwareOverviewImpl <em>VSRS Software Overview</em>}' class.
@@ -817,7 +816,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_SOFTWARE_OVERVIEW__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Function Purpose</b></em>' containment reference.
@@ -826,7 +825,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_SOFTWARE_OVERVIEW__FUNCTION_PURPOSE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Environmental Considerations</b></em>' containment reference.
@@ -835,7 +834,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_SOFTWARE_OVERVIEW__ENVIRONMENTAL_CONSIDERATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Relation Other Systems</b></em>' containment reference.
@@ -844,7 +843,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSRS_SOFTWARE_OVERVIEW__RELATION_OTHER_SYSTEMS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Constraints</b></em>' containment reference.
@@ -853,7 +852,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSRS_SOFTWARE_OVERVIEW__CONSTRAINTS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Software Overview</em>' class.
@@ -862,7 +861,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSRS_SOFTWARE_OVERVIEW_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>VSRS Software Overview</em>' class.
@@ -871,7 +870,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_SOFTWARE_OVERVIEW_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_SOFTWARE_OVERVIEW_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSAbstractRequirementSectionImpl <em>VSRS Abstract Requirement Section</em>}' class.
@@ -891,6 +890,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC = tdmPackage.VTRACEABLE_DOCUMENT_FIXED_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -964,6 +972,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__ITEMS = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION__DOC = tdmPackage.VTRACEABLE_DOCUMENT_INSTANTIABLE_GROUP__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1045,7 +1062,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_REQUIREMENTS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Section Description</b></em>' containment reference.
@@ -1054,7 +1071,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SECTION_DESCRIPTION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_REQUIREMENTS__SECTION_DESCRIPTION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>General</b></em>' containment reference.
@@ -1063,7 +1080,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__GENERAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_REQUIREMENTS__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Functional</b></em>' containment reference.
@@ -1072,7 +1089,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__FUNCTIONAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+	int VSRS_REQUIREMENTS__FUNCTIONAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Performance</b></em>' containment reference.
@@ -1081,7 +1098,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__PERFORMANCE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
+	int VSRS_REQUIREMENTS__PERFORMANCE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Interface</b></em>' containment reference.
@@ -1090,7 +1107,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__INTERFACE = docPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSRS_REQUIREMENTS__INTERFACE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Operational</b></em>' containment reference.
@@ -1099,7 +1116,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__OPERATIONAL = docPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSRS_REQUIREMENTS__OPERATIONAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Resources</b></em>' containment reference.
@@ -1108,7 +1125,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__RESOURCES = docPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSRS_REQUIREMENTS__RESOURCES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Design</b></em>' containment reference.
@@ -1117,7 +1134,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__DESIGN = docPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
+	int VSRS_REQUIREMENTS__DESIGN = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Security Privacy</b></em>' containment reference.
@@ -1126,7 +1143,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SECURITY_PRIVACY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
+	int VSRS_REQUIREMENTS__SECURITY_PRIVACY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Portability</b></em>' containment reference.
@@ -1135,7 +1152,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__PORTABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
+	int VSRS_REQUIREMENTS__PORTABILITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Sw Quality</b></em>' containment reference.
@@ -1144,7 +1161,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_QUALITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
+	int VSRS_REQUIREMENTS__SW_QUALITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Sw Reliability</b></em>' containment reference.
@@ -1153,7 +1170,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_RELIABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
+	int VSRS_REQUIREMENTS__SW_RELIABILITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Sw Maintainability</b></em>' containment reference.
@@ -1162,7 +1179,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_MAINTAINABILITY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
+	int VSRS_REQUIREMENTS__SW_MAINTAINABILITY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Sw Safety</b></em>' containment reference.
@@ -1171,7 +1188,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_SAFETY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
+	int VSRS_REQUIREMENTS__SW_SAFETY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Sw Configuration Delivery</b></em>' containment reference.
@@ -1180,7 +1197,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__SW_CONFIGURATION_DELIVERY = docPackage.DFIXED_SECTION_FEATURE_COUNT + 14;
+	int VSRS_REQUIREMENTS__SW_CONFIGURATION_DELIVERY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Data Definition DB</b></em>' containment reference.
@@ -1189,7 +1206,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__DATA_DEFINITION_DB = docPackage.DFIXED_SECTION_FEATURE_COUNT + 15;
+	int VSRS_REQUIREMENTS__DATA_DEFINITION_DB = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Human Factors</b></em>' containment reference.
@@ -1198,7 +1215,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__HUMAN_FACTORS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 16;
+	int VSRS_REQUIREMENTS__HUMAN_FACTORS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Adaptation Installation</b></em>' containment reference.
@@ -1207,7 +1224,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS__ADAPTATION_INSTALLATION = docPackage.DFIXED_SECTION_FEATURE_COUNT + 17;
+	int VSRS_REQUIREMENTS__ADAPTATION_INSTALLATION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Requirements</em>' class.
@@ -1216,7 +1233,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 18;
+	int VSRS_REQUIREMENTS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>VSRS Requirements</em>' class.
@@ -1225,7 +1242,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_REQUIREMENTS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_REQUIREMENTS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSGeneralRequirementsImpl <em>VSRS General Requirements</em>}' class.
@@ -1245,6 +1262,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_GENERAL_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_GENERAL_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1320,6 +1346,15 @@ public interface srsPackage extends EPackage {
 	int VSRS_FUNCTIONAL_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_FUNCTIONAL_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1391,6 +1426,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_PERFORMANCE_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_PERFORMANCE_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1466,6 +1510,15 @@ public interface srsPackage extends EPackage {
 	int VSRS_INTERFACE_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_INTERFACE_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1537,6 +1590,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_OPERATIONAL_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_OPERATIONAL_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1612,6 +1674,15 @@ public interface srsPackage extends EPackage {
 	int VSRS_RESOURCES_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_RESOURCES_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1683,6 +1754,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_DESIGN_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DESIGN_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1758,6 +1838,15 @@ public interface srsPackage extends EPackage {
 	int VSRS_SECURITY_PRIVACY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_SECURITY_PRIVACY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1829,6 +1918,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_PORTABILITY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_PORTABILITY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1904,6 +2002,15 @@ public interface srsPackage extends EPackage {
 	int VSRSSW_QUALITY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSSW_QUALITY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1975,6 +2082,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRSSW_RELIABILITY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSSW_RELIABILITY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2050,6 +2166,15 @@ public interface srsPackage extends EPackage {
 	int VSRSSW_MAINTAINABILITY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSSW_MAINTAINABILITY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2121,6 +2246,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRSSW_SAFETY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSSW_SAFETY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2196,6 +2330,15 @@ public interface srsPackage extends EPackage {
 	int VSRSSW_CONFIGURATION_DELIVERY_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSSW_CONFIGURATION_DELIVERY_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2267,6 +2410,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_DATA_DEFINITION_DB_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DATA_DEFINITION_DB_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2342,6 +2494,15 @@ public interface srsPackage extends EPackage {
 	int VSRS_HUMAN_FACTORS_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
 
 	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_HUMAN_FACTORS_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2413,6 +2574,15 @@ public interface srsPackage extends EPackage {
 	 * @ordered
 	 */
 	int VSRS_ADAPTATION_INSTALLATION_REQUIREMENTS__ITEMS = VSRS_ABSTRACT_REQUIREMENT_SECTION__ITEMS;
+
+	/**
+	 * The feature id for the '<em><b>Doc</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_ADAPTATION_INSTALLATION_REQUIREMENTS__DOC = VSRS_ABSTRACT_REQUIREMENT_SECTION__DOC;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2576,7 +2746,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_LOGICAL_MODELS__SUBSECTIONS = docPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSRS_LOGICAL_MODELS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
 	 * The feature id for the '<em><b>Logical Models</b></em>' containment reference list.
@@ -2585,7 +2755,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_LOGICAL_MODELS__LOGICAL_MODELS = docPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSRS_LOGICAL_MODELS__LOGICAL_MODELS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Logical Models</em>' class.
@@ -2594,7 +2764,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_LOGICAL_MODELS_FEATURE_COUNT = docPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSRS_LOGICAL_MODELS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSRS Logical Models</em>' class.
@@ -2603,7 +2773,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_LOGICAL_MODELS_OPERATION_COUNT = docPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSRS_LOGICAL_MODELS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSLogicalModelImpl <em>VSRS Logical Model</em>}' class.

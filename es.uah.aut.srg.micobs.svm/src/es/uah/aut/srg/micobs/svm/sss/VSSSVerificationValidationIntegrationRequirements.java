@@ -10,9 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DBody;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS Verification Validation Integration Requirements</b></em>'.
@@ -33,7 +30,7 @@ import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
  * @model
  * @generated
  */
-public interface VSSSVerificationValidationIntegrationRequirements extends DFixedSection {
+public interface VSSSVerificationValidationIntegrationRequirements extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Section Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -43,12 +40,12 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Section Description</em>' containment reference.
-	 * @see #setSectionDescription(DBody)
+	 * @see #setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
 	 * @see es.uah.aut.srg.micobs.svm.sss.sssPackage#getVSSSVerificationValidationIntegrationRequirements_SectionDescription()
 	 * @model containment="true"
 	 * @generated
 	 */
-	DBody getSectionDescription();
+	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements#getSectionDescription <em>Section Description</em>}' containment reference.
@@ -58,7 +55,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * @see #getSectionDescription()
 	 * @generated
 	 */
-	void setSectionDescription(DBody value);
+	void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Verification Validation Process</b></em>' containment reference.

@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument;
-import es.uah.aut.srg.micobs.doctpl.doc.DFixedSection;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -34,7 +33,7 @@ import org.eclipse.emf.common.util.EList;
 public interface VSVSApplicableDocuments extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Applicable Documents</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doc.DApplicableDocument}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Applicable Documents</em>' containment reference list isn't clear,

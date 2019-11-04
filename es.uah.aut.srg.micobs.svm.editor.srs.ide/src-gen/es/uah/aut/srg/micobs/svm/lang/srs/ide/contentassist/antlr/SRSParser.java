@@ -59,9 +59,9 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDRunAccess().getGroup(), "rule__DRun__Group__0");
 					put(grammarAccess.getDHyperlinkAccess().getGroup(), "rule__DHyperlink__Group__0");
 					put(grammarAccess.getDFigureFromFileAccess().getGroup(), "rule__DFigureFromFile__Group__0");
-					put(grammarAccess.getDFigureFromFileAccess().getGroup_5(), "rule__DFigureFromFile__Group_5__0");
+					put(grammarAccess.getDFigureFromFileAccess().getGroup_9(), "rule__DFigureFromFile__Group_9__0");
 					put(grammarAccess.getDTableFromFileAccess().getGroup(), "rule__DTableFromFile__Group__0");
-					put(grammarAccess.getDTableFromFileAccess().getGroup_5(), "rule__DTableFromFile__Group_5__0");
+					put(grammarAccess.getDTableFromFileAccess().getGroup_9(), "rule__DTableFromFile__Group_9__0");
 					put(grammarAccess.getDBasicTableAccess().getGroup(), "rule__DBasicTable__Group__0");
 					put(grammarAccess.getDBasicTableAccess().getGroup_3(), "rule__DBasicTable__Group_3__0");
 					put(grammarAccess.getDRowAccess().getGroup(), "rule__DRow__Group__0");
@@ -136,10 +136,14 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDTextAccess().getContentAssignment(), "rule__DText__ContentAssignment");
 					put(grammarAccess.getDFigureFromFileAccess().getNameAssignment_2(), "rule__DFigureFromFile__NameAssignment_2");
 					put(grammarAccess.getDFigureFromFileAccess().getReferenceFileAssignment_4(), "rule__DFigureFromFile__ReferenceFileAssignment_4");
-					put(grammarAccess.getDFigureFromFileAccess().getCaptionAssignment_5_1(), "rule__DFigureFromFile__CaptionAssignment_5_1");
+					put(grammarAccess.getDFigureFromFileAccess().getWidthAssignment_6(), "rule__DFigureFromFile__WidthAssignment_6");
+					put(grammarAccess.getDFigureFromFileAccess().getHeightAssignment_8(), "rule__DFigureFromFile__HeightAssignment_8");
+					put(grammarAccess.getDFigureFromFileAccess().getCaptionAssignment_9_1(), "rule__DFigureFromFile__CaptionAssignment_9_1");
 					put(grammarAccess.getDTableFromFileAccess().getNameAssignment_2(), "rule__DTableFromFile__NameAssignment_2");
 					put(grammarAccess.getDTableFromFileAccess().getReferenceFileAssignment_4(), "rule__DTableFromFile__ReferenceFileAssignment_4");
-					put(grammarAccess.getDTableFromFileAccess().getCaptionAssignment_5_1(), "rule__DTableFromFile__CaptionAssignment_5_1");
+					put(grammarAccess.getDTableFromFileAccess().getWidthAssignment_6(), "rule__DTableFromFile__WidthAssignment_6");
+					put(grammarAccess.getDTableFromFileAccess().getHeightAssignment_8(), "rule__DTableFromFile__HeightAssignment_8");
+					put(grammarAccess.getDTableFromFileAccess().getCaptionAssignment_9_1(), "rule__DTableFromFile__CaptionAssignment_9_1");
 					put(grammarAccess.getDBasicTableAccess().getNameAssignment_2(), "rule__DBasicTable__NameAssignment_2");
 					put(grammarAccess.getDBasicTableAccess().getCaptionAssignment_3_1(), "rule__DBasicTable__CaptionAssignment_3_1");
 					put(grammarAccess.getDBasicTableAccess().getRowsAssignment_5(), "rule__DBasicTable__RowsAssignment_5");
