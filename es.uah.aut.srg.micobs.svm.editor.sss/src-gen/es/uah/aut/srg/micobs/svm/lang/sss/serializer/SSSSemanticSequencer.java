@@ -262,7 +262,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DBasicTable returns DBasicTable
 	 *
 	 * Constraint:
-	 *     (name=STRING caption=STRING? rows+=DRow+)
+	 *     (name=STRING width=UINT_STRING? alignment=DAlignment? caption=STRING? rows+=DRow+)
 	 */
 	protected void sequence_DBasicTable(ISerializationContext context, DBasicTable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -286,7 +286,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCell returns DCell
 	 *
 	 * Constraint:
-	 *     (gridSpan=UINT_STRING? vMerge=DMergeType? bodyContent+=DBodyContent+)
+	 *     (gridSpan=UINT_STRING? vMerge=DMergeType? width=UINT_STRING? shadow=STRING? bodyContent+=DBodyContent+)
 	 */
 	protected void sequence_DCell(ISerializationContext context, DCell semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -300,7 +300,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DEnumerate returns DEnumerate
 	 *
 	 * Constraint:
-	 *     items+=DListItem+
+	 *     (alignment=DAlignment? items+=DListItem+)
 	 */
 	protected void sequence_DEnumerate(ISerializationContext context, DEnumerate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -313,7 +313,14 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DFigureFromFile returns DFigureFromFile
 	 *
 	 * Constraint:
-	 *     (name=STRING referenceFile=STRING width=UINT_STRING height=UINT_STRING caption=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         referenceFile=STRING 
+	 *         width=UINT_STRING 
+	 *         height=UINT_STRING 
+	 *         alignment=DAlignment? 
+	 *         caption=STRING?
+	 *     )
 	 */
 	protected void sequence_DFigureFromFile(ISerializationContext context, DFigureFromFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -340,7 +347,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DItemize returns DItemize
 	 *
 	 * Constraint:
-	 *     items+=DListItem+
+	 *     (alignment=DAlignment? items+=DListItem+)
 	 */
 	protected void sequence_DItemize(ISerializationContext context, DItemize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -365,7 +372,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DParagraph returns DParagraph
 	 *
 	 * Constraint:
-	 *     paragraphContent+=DParagraphContent+
+	 *     (alignment=DAlignment? paragraphContent+=DParagraphContent+)
 	 */
 	protected void sequence_DParagraph(ISerializationContext context, DParagraph semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -421,7 +428,14 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DTableFromFile returns DTableFromFile
 	 *
 	 * Constraint:
-	 *     (name=STRING referenceFile=STRING width=UINT_STRING height=UINT_STRING caption=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         referenceFile=STRING 
+	 *         width=UINT_STRING 
+	 *         height=UINT_STRING 
+	 *         alignment=DAlignment? 
+	 *         caption=STRING?
+	 *     )
 	 */
 	protected void sequence_DTableFromFile(ISerializationContext context, DTableFromFile semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

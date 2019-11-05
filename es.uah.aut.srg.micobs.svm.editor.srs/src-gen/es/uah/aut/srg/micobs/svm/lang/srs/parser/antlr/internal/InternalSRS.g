@@ -530,16 +530,45 @@ ruleDParagraph returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<paragraph>'
+		otherlv_0='<paragraph'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDParagraphAccess().getParagraphKeyword_0());
 		}
 		(
+			otherlv_1='alignment='
+			{
+				newLeafNode(otherlv_1, grammarAccess.getDParagraphAccess().getAlignmentKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDParagraphAccess().getAlignmentDAlignmentEnumRuleCall_1_1_0());
+					}
+					lv_alignment_2_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDParagraphRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDParagraphAccess().getGreaterThanSignKeyword_2());
+		}
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_3_0());
 				}
-				lv_paragraphContent_1_0=ruleDParagraphContent
+				lv_paragraphContent_4_0=ruleDParagraphContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDParagraphRule());
@@ -547,15 +576,15 @@ ruleDParagraph returns [EObject current=null]
 					add(
 						$current,
 						"paragraphContent",
-						lv_paragraphContent_1_0,
+						lv_paragraphContent_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DParagraphContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_2='</paragraph>'
+		otherlv_5='</paragraph>'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDParagraphAccess().getParagraphKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getDParagraphAccess().getParagraphKeyword_4());
 		}
 	)
 ;
@@ -693,16 +722,45 @@ ruleDItemize returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<itemize>'
+		otherlv_0='<itemize'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDItemizeAccess().getItemizeKeyword_0());
 		}
 		(
+			otherlv_1='alignment='
+			{
+				newLeafNode(otherlv_1, grammarAccess.getDItemizeAccess().getAlignmentKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDItemizeAccess().getAlignmentDAlignmentEnumRuleCall_1_1_0());
+					}
+					lv_alignment_2_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDItemizeRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDItemizeAccess().getGreaterThanSignKeyword_2());
+		}
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDItemizeAccess().getItemsDListItemParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDItemizeAccess().getItemsDListItemParserRuleCall_3_0());
 				}
-				lv_items_1_0=ruleDListItem
+				lv_items_4_0=ruleDListItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDItemizeRule());
@@ -710,15 +768,15 @@ ruleDItemize returns [EObject current=null]
 					add(
 						$current,
 						"items",
-						lv_items_1_0,
+						lv_items_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DListItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_2='</itemize>'
+		otherlv_5='</itemize>'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDItemizeAccess().getItemizeKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getDItemizeAccess().getItemizeKeyword_4());
 		}
 	)
 ;
@@ -739,16 +797,45 @@ ruleDEnumerate returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<enumerate>'
+		otherlv_0='<enumerate'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getDEnumerateAccess().getEnumerateKeyword_0());
 		}
 		(
+			otherlv_1='alignment='
+			{
+				newLeafNode(otherlv_1, grammarAccess.getDEnumerateAccess().getAlignmentKeyword_1_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDEnumerateAccess().getAlignmentDAlignmentEnumRuleCall_1_1_0());
+					}
+					lv_alignment_2_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDEnumerateRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDEnumerateAccess().getGreaterThanSignKeyword_2());
+		}
+		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDEnumerateAccess().getItemsDListItemParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDEnumerateAccess().getItemsDListItemParserRuleCall_3_0());
 				}
-				lv_items_1_0=ruleDListItem
+				lv_items_4_0=ruleDListItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDEnumerateRule());
@@ -756,15 +843,15 @@ ruleDEnumerate returns [EObject current=null]
 					add(
 						$current,
 						"items",
-						lv_items_1_0,
+						lv_items_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DListItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_2='</enumerate>'
+		otherlv_5='</enumerate>'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDEnumerateAccess().getEnumerateKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getDEnumerateAccess().getEnumerateKeyword_4());
 		}
 	)
 ;
@@ -1093,15 +1180,40 @@ ruleDFigureFromFile returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_9='caption='
+			otherlv_9='alignment='
 			{
-				newLeafNode(otherlv_9, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_9_0());
+				newLeafNode(otherlv_9, grammarAccess.getDFigureFromFileAccess().getAlignmentKeyword_9_0());
 			}
 			(
 				(
-					lv_caption_10_0=RULE_STRING
 					{
-						newLeafNode(lv_caption_10_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_9_1_0());
+						newCompositeNode(grammarAccess.getDFigureFromFileAccess().getAlignmentDAlignmentEnumRuleCall_9_1_0());
+					}
+					lv_alignment_10_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDFigureFromFileRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_11='caption='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_10_0());
+			}
+			(
+				(
+					lv_caption_12_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_12_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1110,15 +1222,15 @@ ruleDFigureFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_10_0,
+							lv_caption_12_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_11='/>'
+		otherlv_13='/>'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_10());
+			newLeafNode(otherlv_13, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_11());
 		}
 	)
 ;
@@ -1232,15 +1344,40 @@ ruleDTableFromFile returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_9='caption='
+			otherlv_9='alignment='
 			{
-				newLeafNode(otherlv_9, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_9_0());
+				newLeafNode(otherlv_9, grammarAccess.getDTableFromFileAccess().getAlignmentKeyword_9_0());
 			}
 			(
 				(
-					lv_caption_10_0=RULE_STRING
 					{
-						newLeafNode(lv_caption_10_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_9_1_0());
+						newCompositeNode(grammarAccess.getDTableFromFileAccess().getAlignmentDAlignmentEnumRuleCall_9_1_0());
+					}
+					lv_alignment_10_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDTableFromFileRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_11='caption='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_10_0());
+			}
+			(
+				(
+					lv_caption_12_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_12_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_10_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1249,15 +1386,15 @@ ruleDTableFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_10_0,
+							lv_caption_12_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_11='/>'
+		otherlv_13='/>'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_10());
+			newLeafNode(otherlv_13, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_11());
 		}
 	)
 ;
@@ -1305,15 +1442,64 @@ ruleDBasicTable returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_3='caption='
+			otherlv_3='width='
 			{
-				newLeafNode(otherlv_3, grammarAccess.getDBasicTableAccess().getCaptionKeyword_3_0());
+				newLeafNode(otherlv_3, grammarAccess.getDBasicTableAccess().getWidthKeyword_3_0());
 			}
 			(
 				(
-					lv_caption_4_0=RULE_STRING
+					lv_width_4_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_caption_4_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_3_1_0());
+						newLeafNode(lv_width_4_0, grammarAccess.getDBasicTableAccess().getWidthUINT_STRINGTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDBasicTableRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"width",
+							lv_width_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_5='alignment='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDBasicTableAccess().getAlignmentKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDBasicTableAccess().getAlignmentDAlignmentEnumRuleCall_4_1_0());
+					}
+					lv_alignment_6_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDBasicTableRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_7='caption='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDBasicTableAccess().getCaptionKeyword_5_0());
+			}
+			(
+				(
+					lv_caption_8_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_8_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_5_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1322,22 +1508,22 @@ ruleDBasicTable returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_4_0,
+							lv_caption_8_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_5='>'
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_9, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_6());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_7_0());
 				}
-				lv_rows_6_0=ruleDRow
+				lv_rows_10_0=ruleDRow
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDBasicTableRule());
@@ -1345,15 +1531,15 @@ ruleDBasicTable returns [EObject current=null]
 					add(
 						$current,
 						"rows",
-						lv_rows_6_0,
+						lv_rows_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRow");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_7='</basicTable>'
+		otherlv_11='</basicTable>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_8());
 		}
 	)
 ;
@@ -1473,16 +1659,64 @@ ruleDCell returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_5='>'
+		(
+			otherlv_5='width='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDCellAccess().getWidthKeyword_3_0());
+			}
+			(
+				(
+					lv_width_6_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_width_6_0, grammarAccess.getDCellAccess().getWidthUINT_STRINGTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDCellRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"width",
+							lv_width_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.UINT_STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_7='shadow='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDCellAccess().getShadowKeyword_4_0());
+			}
+			(
+				(
+					lv_shadow_8_0=RULE_STRING
+					{
+						newLeafNode(lv_shadow_8_0, grammarAccess.getDCellAccess().getShadowSTRINGTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDCellRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"shadow",
+							lv_shadow_8_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDCellAccess().getGreaterThanSignKeyword_3());
+			newLeafNode(otherlv_9, grammarAccess.getDCellAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDCellAccess().getBodyContentDBodyContentParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDCellAccess().getBodyContentDBodyContentParserRuleCall_6_0());
 				}
-				lv_bodyContent_6_0=ruleDBodyContent
+				lv_bodyContent_10_0=ruleDBodyContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDCellRule());
@@ -1490,15 +1724,15 @@ ruleDCell returns [EObject current=null]
 					add(
 						$current,
 						"bodyContent",
-						lv_bodyContent_6_0,
+						lv_bodyContent_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBodyContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_7='</cell>'
+		otherlv_11='</cell>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDCellAccess().getCellKeyword_5());
+			newLeafNode(otherlv_11, grammarAccess.getDCellAccess().getCellKeyword_7());
 		}
 	)
 ;
@@ -4933,6 +5167,49 @@ ruleVSRSLogicalModel returns [EObject current=null]
 		{
 			newLeafNode(otherlv_1, grammarAccess.getVSRSLogicalModelAccess().getLogicalModelKeyword_1());
 		}
+	)
+;
+
+// Rule DAlignment
+ruleDAlignment returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"left"'
+			{
+				$current = grammarAccess.getDAlignmentAccess().getLeftEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getDAlignmentAccess().getLeftEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"center"'
+			{
+				$current = grammarAccess.getDAlignmentAccess().getCenterEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getDAlignmentAccess().getCenterEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='"right"'
+			{
+				$current = grammarAccess.getDAlignmentAccess().getRightEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getDAlignmentAccess().getRightEnumLiteralDeclaration_2());
+			}
+		)
+		    |
+		(
+			enumLiteral_3='"justified"'
+			{
+				$current = grammarAccess.getDAlignmentAccess().getJustifiedEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_3, grammarAccess.getDAlignmentAccess().getJustifiedEnumLiteralDeclaration_3());
+			}
+		)
 	)
 ;
 

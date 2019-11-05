@@ -270,30 +270,51 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DParagraph");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cParagraphKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cParagraphContentAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParagraphContentDParagraphContentParserRuleCall_1_0 = (RuleCall)cParagraphContentAssignment_1.eContents().get(0);
-		private final Keyword cParagraphKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cAlignmentKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAlignmentAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_1_1_0 = (RuleCall)cAlignmentAssignment_1_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cParagraphContentAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cParagraphContentDParagraphContentParserRuleCall_3_0 = (RuleCall)cParagraphContentAssignment_3.eContents().get(0);
+		private final Keyword cParagraphKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//DParagraph doctpl::DParagraph:
-		//	'<paragraph>'
+		//	'<paragraph' ('alignment=' alignment=DAlignment)?
+		//	'>'
 		//	paragraphContent+=DParagraphContent+
 		//	'</paragraph>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<paragraph>' paragraphContent+=DParagraphContent+ '</paragraph>'
+		//'<paragraph' ('alignment=' alignment=DAlignment)? '>' paragraphContent+=DParagraphContent+ '</paragraph>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<paragraph>'
+		//'<paragraph'
 		public Keyword getParagraphKeyword_0() { return cParagraphKeyword_0; }
 		
+		//('alignment=' alignment=DAlignment)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'alignment='
+		public Keyword getAlignmentKeyword_1_0() { return cAlignmentKeyword_1_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_1_1() { return cAlignmentAssignment_1_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_1_1_0() { return cAlignmentDAlignmentEnumRuleCall_1_1_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_2() { return cGreaterThanSignKeyword_2; }
+		
 		//paragraphContent+=DParagraphContent+
-		public Assignment getParagraphContentAssignment_1() { return cParagraphContentAssignment_1; }
+		public Assignment getParagraphContentAssignment_3() { return cParagraphContentAssignment_3; }
 		
 		//DParagraphContent
-		public RuleCall getParagraphContentDParagraphContentParserRuleCall_1_0() { return cParagraphContentDParagraphContentParserRuleCall_1_0; }
+		public RuleCall getParagraphContentDParagraphContentParserRuleCall_3_0() { return cParagraphContentDParagraphContentParserRuleCall_3_0; }
 		
 		//'</paragraph>'
-		public Keyword getParagraphKeyword_2() { return cParagraphKeyword_2; }
+		public Keyword getParagraphKeyword_4() { return cParagraphKeyword_4; }
 	}
 	public class DListItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DListItem");
@@ -367,59 +388,101 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DItemize");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cItemizeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cItemsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cItemsDListItemParserRuleCall_1_0 = (RuleCall)cItemsAssignment_1.eContents().get(0);
-		private final Keyword cItemizeKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cAlignmentKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAlignmentAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_1_1_0 = (RuleCall)cAlignmentAssignment_1_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cItemsDListItemParserRuleCall_3_0 = (RuleCall)cItemsAssignment_3.eContents().get(0);
+		private final Keyword cItemizeKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//DItemize doctpl::DItemize:
-		//	'<itemize>'
+		//	'<itemize' ('alignment=' alignment=DAlignment)?
+		//	'>'
 		//	items+=DListItem+
 		//	'</itemize>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<itemize>' items+=DListItem+ '</itemize>'
+		//'<itemize' ('alignment=' alignment=DAlignment)? '>' items+=DListItem+ '</itemize>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<itemize>'
+		//'<itemize'
 		public Keyword getItemizeKeyword_0() { return cItemizeKeyword_0; }
 		
+		//('alignment=' alignment=DAlignment)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'alignment='
+		public Keyword getAlignmentKeyword_1_0() { return cAlignmentKeyword_1_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_1_1() { return cAlignmentAssignment_1_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_1_1_0() { return cAlignmentDAlignmentEnumRuleCall_1_1_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_2() { return cGreaterThanSignKeyword_2; }
+		
 		//items+=DListItem+
-		public Assignment getItemsAssignment_1() { return cItemsAssignment_1; }
+		public Assignment getItemsAssignment_3() { return cItemsAssignment_3; }
 		
 		//DListItem
-		public RuleCall getItemsDListItemParserRuleCall_1_0() { return cItemsDListItemParserRuleCall_1_0; }
+		public RuleCall getItemsDListItemParserRuleCall_3_0() { return cItemsDListItemParserRuleCall_3_0; }
 		
 		//'</itemize>'
-		public Keyword getItemizeKeyword_2() { return cItemizeKeyword_2; }
+		public Keyword getItemizeKeyword_4() { return cItemizeKeyword_4; }
 	}
 	public class DEnumerateElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DEnumerate");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cEnumerateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cItemsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cItemsDListItemParserRuleCall_1_0 = (RuleCall)cItemsAssignment_1.eContents().get(0);
-		private final Keyword cEnumerateKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cAlignmentKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cAlignmentAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_1_1_0 = (RuleCall)cAlignmentAssignment_1_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cItemsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cItemsDListItemParserRuleCall_3_0 = (RuleCall)cItemsAssignment_3.eContents().get(0);
+		private final Keyword cEnumerateKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//DEnumerate doctpl::DEnumerate:
-		//	'<enumerate>'
+		//	'<enumerate' ('alignment=' alignment=DAlignment)?
+		//	'>'
 		//	items+=DListItem+
 		//	'</enumerate>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<enumerate>' items+=DListItem+ '</enumerate>'
+		//'<enumerate' ('alignment=' alignment=DAlignment)? '>' items+=DListItem+ '</enumerate>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<enumerate>'
+		//'<enumerate'
 		public Keyword getEnumerateKeyword_0() { return cEnumerateKeyword_0; }
 		
+		//('alignment=' alignment=DAlignment)?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'alignment='
+		public Keyword getAlignmentKeyword_1_0() { return cAlignmentKeyword_1_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_1_1() { return cAlignmentAssignment_1_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_1_1_0() { return cAlignmentDAlignmentEnumRuleCall_1_1_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_2() { return cGreaterThanSignKeyword_2; }
+		
 		//items+=DListItem+
-		public Assignment getItemsAssignment_1() { return cItemsAssignment_1; }
+		public Assignment getItemsAssignment_3() { return cItemsAssignment_3; }
 		
 		//DListItem
-		public RuleCall getItemsDListItemParserRuleCall_1_0() { return cItemsDListItemParserRuleCall_1_0; }
+		public RuleCall getItemsDListItemParserRuleCall_3_0() { return cItemsDListItemParserRuleCall_3_0; }
 		
 		//'</enumerate>'
-		public Keyword getEnumerateKeyword_2() { return cEnumerateKeyword_2; }
+		public Keyword getEnumerateKeyword_4() { return cEnumerateKeyword_4; }
 	}
 	public class DParagraphContentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DParagraphContent");
@@ -572,22 +635,26 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cHeightAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cHeightUINT_STRINGTerminalRuleCall_8_0 = (RuleCall)cHeightAssignment_8.eContents().get(0);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cCaptionKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cCaptionAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cCaptionAssignment_9_1.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cAlignmentKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cAlignmentAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_9_1_0 = (RuleCall)cAlignmentAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cCaptionKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cCaptionAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_10_1_0 = (RuleCall)cCaptionAssignment_10_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//DFigureFromFile doctpl::DFigureFromFile:
 		//	'<figureFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING
 		//	'width=' width=UINT_STRING
-		//	'height=' height=UINT_STRING ('caption=' caption=STRING)?
+		//	'height=' height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<figureFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING 'width=' width=UINT_STRING 'height='
-		//height=UINT_STRING ('caption=' caption=STRING)? '/>'
+		//height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<figureFromFile'
@@ -629,20 +696,32 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//UINT_STRING
 		public RuleCall getHeightUINT_STRINGTerminalRuleCall_8_0() { return cHeightUINT_STRINGTerminalRuleCall_8_0; }
 		
-		//('caption=' caption=STRING)?
+		//('alignment=' alignment=DAlignment)?
 		public Group getGroup_9() { return cGroup_9; }
 		
+		//'alignment='
+		public Keyword getAlignmentKeyword_9_0() { return cAlignmentKeyword_9_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_9_1() { return cAlignmentAssignment_9_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_9_1_0() { return cAlignmentDAlignmentEnumRuleCall_9_1_0; }
+		
+		//('caption=' caption=STRING)?
+		public Group getGroup_10() { return cGroup_10; }
+		
 		//'caption='
-		public Keyword getCaptionKeyword_9_0() { return cCaptionKeyword_9_0; }
+		public Keyword getCaptionKeyword_10_0() { return cCaptionKeyword_10_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_9_1() { return cCaptionAssignment_9_1; }
+		public Assignment getCaptionAssignment_10_1() { return cCaptionAssignment_10_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_9_1_0() { return cCaptionSTRINGTerminalRuleCall_9_1_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_10_1_0() { return cCaptionSTRINGTerminalRuleCall_10_1_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10() { return cSolidusGreaterThanSignKeyword_10; }
+		public Keyword getSolidusGreaterThanSignKeyword_11() { return cSolidusGreaterThanSignKeyword_11; }
 	}
 	public class DTableFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DTableFromFile");
@@ -661,22 +740,26 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cHeightAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cHeightUINT_STRINGTerminalRuleCall_8_0 = (RuleCall)cHeightAssignment_8.eContents().get(0);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cCaptionKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cCaptionAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cCaptionAssignment_9_1.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cAlignmentKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cAlignmentAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_9_1_0 = (RuleCall)cAlignmentAssignment_9_1.eContents().get(0);
+		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
+		private final Keyword cCaptionKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
+		private final Assignment cCaptionAssignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_10_1_0 = (RuleCall)cCaptionAssignment_10_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//DTableFromFile doctpl::DTableFromFile:
 		//	'<tableFromFile'
 		//	'name=' name=STRING
 		//	'referenceFile=' referenceFile=STRING
 		//	'width=' width=UINT_STRING
-		//	'height=' height=UINT_STRING ('caption=' caption=STRING)?
+		//	'height=' height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<tableFromFile' 'name=' name=STRING 'referenceFile=' referenceFile=STRING 'width=' width=UINT_STRING 'height='
-		//height=UINT_STRING ('caption=' caption=STRING)? '/>'
+		//height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<tableFromFile'
@@ -718,20 +801,32 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//UINT_STRING
 		public RuleCall getHeightUINT_STRINGTerminalRuleCall_8_0() { return cHeightUINT_STRINGTerminalRuleCall_8_0; }
 		
-		//('caption=' caption=STRING)?
+		//('alignment=' alignment=DAlignment)?
 		public Group getGroup_9() { return cGroup_9; }
 		
+		//'alignment='
+		public Keyword getAlignmentKeyword_9_0() { return cAlignmentKeyword_9_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_9_1() { return cAlignmentAssignment_9_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_9_1_0() { return cAlignmentDAlignmentEnumRuleCall_9_1_0; }
+		
+		//('caption=' caption=STRING)?
+		public Group getGroup_10() { return cGroup_10; }
+		
 		//'caption='
-		public Keyword getCaptionKeyword_9_0() { return cCaptionKeyword_9_0; }
+		public Keyword getCaptionKeyword_10_0() { return cCaptionKeyword_10_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_9_1() { return cCaptionAssignment_9_1; }
+		public Assignment getCaptionAssignment_10_1() { return cCaptionAssignment_10_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_9_1_0() { return cCaptionSTRINGTerminalRuleCall_9_1_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_10_1_0() { return cCaptionSTRINGTerminalRuleCall_10_1_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10() { return cSolidusGreaterThanSignKeyword_10; }
+		public Keyword getSolidusGreaterThanSignKeyword_11() { return cSolidusGreaterThanSignKeyword_11; }
 	}
 	public class DBasicTableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DBasicTable");
@@ -741,23 +836,32 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cCaptionKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cCaptionAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cCaptionSTRINGTerminalRuleCall_3_1_0 = (RuleCall)cCaptionAssignment_3_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cRowsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cRowsDRowParserRuleCall_5_0 = (RuleCall)cRowsAssignment_5.eContents().get(0);
-		private final Keyword cBasicTableKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cWidthKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cWidthAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cWidthUINT_STRINGTerminalRuleCall_3_1_0 = (RuleCall)cWidthAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cAlignmentKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cAlignmentAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_4_1_0 = (RuleCall)cAlignmentAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cCaptionKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cCaptionAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cCaptionSTRINGTerminalRuleCall_5_1_0 = (RuleCall)cCaptionAssignment_5_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cRowsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cRowsDRowParserRuleCall_7_0 = (RuleCall)cRowsAssignment_7.eContents().get(0);
+		private final Keyword cBasicTableKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DBasicTable doctpl::DBasicTable:
 		//	'<basicTable'
-		//	'name=' name=STRING ('caption=' caption=STRING)?
+		//	'name=' name=STRING ('width=' width=UINT_STRING)? ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 		//	'>'
 		//	rows+=DRow+
 		//	'</basicTable>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<basicTable' 'name=' name=STRING ('caption=' caption=STRING)? '>' rows+=DRow+ '</basicTable>'
+		//'<basicTable' 'name=' name=STRING ('width=' width=UINT_STRING)? ('alignment=' alignment=DAlignment)? ('caption='
+		//caption=STRING)? '>' rows+=DRow+ '</basicTable>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<basicTable'
@@ -772,29 +876,53 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//('caption=' caption=STRING)?
+		//('width=' width=UINT_STRING)?
 		public Group getGroup_3() { return cGroup_3; }
 		
+		//'width='
+		public Keyword getWidthKeyword_3_0() { return cWidthKeyword_3_0; }
+		
+		//width=UINT_STRING
+		public Assignment getWidthAssignment_3_1() { return cWidthAssignment_3_1; }
+		
+		//UINT_STRING
+		public RuleCall getWidthUINT_STRINGTerminalRuleCall_3_1_0() { return cWidthUINT_STRINGTerminalRuleCall_3_1_0; }
+		
+		//('alignment=' alignment=DAlignment)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'alignment='
+		public Keyword getAlignmentKeyword_4_0() { return cAlignmentKeyword_4_0; }
+		
+		//alignment=DAlignment
+		public Assignment getAlignmentAssignment_4_1() { return cAlignmentAssignment_4_1; }
+		
+		//DAlignment
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_4_1_0() { return cAlignmentDAlignmentEnumRuleCall_4_1_0; }
+		
+		//('caption=' caption=STRING)?
+		public Group getGroup_5() { return cGroup_5; }
+		
 		//'caption='
-		public Keyword getCaptionKeyword_3_0() { return cCaptionKeyword_3_0; }
+		public Keyword getCaptionKeyword_5_0() { return cCaptionKeyword_5_0; }
 		
 		//caption=STRING
-		public Assignment getCaptionAssignment_3_1() { return cCaptionAssignment_3_1; }
+		public Assignment getCaptionAssignment_5_1() { return cCaptionAssignment_5_1; }
 		
 		//STRING
-		public RuleCall getCaptionSTRINGTerminalRuleCall_3_1_0() { return cCaptionSTRINGTerminalRuleCall_3_1_0; }
+		public RuleCall getCaptionSTRINGTerminalRuleCall_5_1_0() { return cCaptionSTRINGTerminalRuleCall_5_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
+		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
 		
 		//rows+=DRow+
-		public Assignment getRowsAssignment_5() { return cRowsAssignment_5; }
+		public Assignment getRowsAssignment_7() { return cRowsAssignment_7; }
 		
 		//DRow
-		public RuleCall getRowsDRowParserRuleCall_5_0() { return cRowsDRowParserRuleCall_5_0; }
+		public RuleCall getRowsDRowParserRuleCall_7_0() { return cRowsDRowParserRuleCall_7_0; }
 		
 		//'</basicTable>'
-		public Keyword getBasicTableKeyword_6() { return cBasicTableKeyword_6; }
+		public Keyword getBasicTableKeyword_8() { return cBasicTableKeyword_8; }
 	}
 	public class DRowElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DRow");
@@ -837,19 +965,29 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVMergeKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
 		private final Assignment cVMergeAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
 		private final RuleCall cVMergeDMergeTypeEnumRuleCall_2_1_0 = (RuleCall)cVMergeAssignment_2_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cBodyContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cBodyContentDBodyContentParserRuleCall_4_0 = (RuleCall)cBodyContentAssignment_4.eContents().get(0);
-		private final Keyword cCellKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cWidthKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cWidthAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cWidthUINT_STRINGTerminalRuleCall_3_1_0 = (RuleCall)cWidthAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cShadowKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cShadowAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cShadowSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cShadowAssignment_4_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBodyContentAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBodyContentDBodyContentParserRuleCall_6_0 = (RuleCall)cBodyContentAssignment_6.eContents().get(0);
+		private final Keyword cCellKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//DCell doctpl::DCell:
-		//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)?
+		//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)? ('width=' width=UINT_STRING)? ('shadow='
+		//	shadow=STRING)?
 		//	'>'
 		//	bodyContent+=DBodyContent+
 		//	'</cell>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)? '>' bodyContent+=DBodyContent+ '</cell>'
+		//'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)? ('width=' width=UINT_STRING)? ('shadow='
+		//shadow=STRING)? '>' bodyContent+=DBodyContent+ '</cell>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<cell'
@@ -879,17 +1017,41 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//DMergeType
 		public RuleCall getVMergeDMergeTypeEnumRuleCall_2_1_0() { return cVMergeDMergeTypeEnumRuleCall_2_1_0; }
 		
+		//('width=' width=UINT_STRING)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'width='
+		public Keyword getWidthKeyword_3_0() { return cWidthKeyword_3_0; }
+		
+		//width=UINT_STRING
+		public Assignment getWidthAssignment_3_1() { return cWidthAssignment_3_1; }
+		
+		//UINT_STRING
+		public RuleCall getWidthUINT_STRINGTerminalRuleCall_3_1_0() { return cWidthUINT_STRINGTerminalRuleCall_3_1_0; }
+		
+		//('shadow=' shadow=STRING)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'shadow='
+		public Keyword getShadowKeyword_4_0() { return cShadowKeyword_4_0; }
+		
+		//shadow=STRING
+		public Assignment getShadowAssignment_4_1() { return cShadowAssignment_4_1; }
+		
+		//STRING
+		public RuleCall getShadowSTRINGTerminalRuleCall_4_1_0() { return cShadowSTRINGTerminalRuleCall_4_1_0; }
+		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
 		//bodyContent+=DBodyContent+
-		public Assignment getBodyContentAssignment_4() { return cBodyContentAssignment_4; }
+		public Assignment getBodyContentAssignment_6() { return cBodyContentAssignment_6; }
 		
 		//DBodyContent
-		public RuleCall getBodyContentDBodyContentParserRuleCall_4_0() { return cBodyContentDBodyContentParserRuleCall_4_0; }
+		public RuleCall getBodyContentDBodyContentParserRuleCall_6_0() { return cBodyContentDBodyContentParserRuleCall_6_0; }
 		
 		//'</cell>'
-		public Keyword getCellKeyword_5() { return cCellKeyword_5; }
+		public Keyword getCellKeyword_7() { return cCellKeyword_7; }
 	}
 	public class DApplicableDocumentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DApplicableDocument");
@@ -2889,6 +3051,49 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getSystemModelKeyword_1() { return cSystemModelKeyword_1; }
 	}
 	
+	public class DAlignmentElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DAlignment");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cLeftEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cLeftLeftKeyword_0_0 = (Keyword)cLeftEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cCenterEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cCenterCenterKeyword_1_0 = (Keyword)cCenterEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cRightEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cRightRightKeyword_2_0 = (Keyword)cRightEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cJustifiedEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cJustifiedJustifiedKeyword_3_0 = (Keyword)cJustifiedEnumLiteralDeclaration_3.eContents().get(0);
+		
+		//enum DAlignment returns doctpl::DAlignment:
+		//	left='"left"' | center='"center"' | right='"right"' | justified='"justified"';
+		public EnumRule getRule() { return rule; }
+		
+		//left='"left"' | center='"center"' | right='"right"' | justified='"justified"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//left='"left"'
+		public EnumLiteralDeclaration getLeftEnumLiteralDeclaration_0() { return cLeftEnumLiteralDeclaration_0; }
+		
+		//'"left"'
+		public Keyword getLeftLeftKeyword_0_0() { return cLeftLeftKeyword_0_0; }
+		
+		//center='"center"'
+		public EnumLiteralDeclaration getCenterEnumLiteralDeclaration_1() { return cCenterEnumLiteralDeclaration_1; }
+		
+		//'"center"'
+		public Keyword getCenterCenterKeyword_1_0() { return cCenterCenterKeyword_1_0; }
+		
+		//right='"right"'
+		public EnumLiteralDeclaration getRightEnumLiteralDeclaration_2() { return cRightEnumLiteralDeclaration_2; }
+		
+		//'"right"'
+		public Keyword getRightRightKeyword_2_0() { return cRightRightKeyword_2_0; }
+		
+		//justified='"justified"'
+		public EnumLiteralDeclaration getJustifiedEnumLiteralDeclaration_3() { return cJustifiedEnumLiteralDeclaration_3; }
+		
+		//'"justified"'
+		public Keyword getJustifiedJustifiedKeyword_3_0() { return cJustifiedJustifiedKeyword_3_0; }
+	}
 	public class DMergeTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DMergeType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -2999,6 +3204,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSSSDocumentElements pVSSSDocument;
 	private final DBodyElements pDBody;
 	private final DBodyContentElements pDBodyContent;
+	private final DAlignmentElements eDAlignment;
 	private final DParagraphElements pDParagraph;
 	private final DListItemElements pDListItem;
 	private final DListContentElements pDListContent;
@@ -3065,6 +3271,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSSSDocument = new VSSSDocumentElements();
 		this.pDBody = new DBodyElements();
 		this.pDBodyContent = new DBodyContentElements();
+		this.eDAlignment = new DAlignmentElements();
 		this.pDParagraph = new DParagraphElements();
 		this.pDListItem = new DListItemElements();
 		this.pDListContent = new DListContentElements();
@@ -3194,8 +3401,19 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDBodyContentAccess().getRule();
 	}
 	
+	//enum DAlignment returns doctpl::DAlignment:
+	//	left='"left"' | center='"center"' | right='"right"' | justified='"justified"';
+	public DAlignmentElements getDAlignmentAccess() {
+		return eDAlignment;
+	}
+	
+	public EnumRule getDAlignmentRule() {
+		return getDAlignmentAccess().getRule();
+	}
+	
 	//DParagraph doctpl::DParagraph:
-	//	'<paragraph>'
+	//	'<paragraph' ('alignment=' alignment=DAlignment)?
+	//	'>'
 	//	paragraphContent+=DParagraphContent+
 	//	'</paragraph>'
 	public DParagraphElements getDParagraphAccess() {
@@ -3229,7 +3447,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DItemize doctpl::DItemize:
-	//	'<itemize>'
+	//	'<itemize' ('alignment=' alignment=DAlignment)?
+	//	'>'
 	//	items+=DListItem+
 	//	'</itemize>'
 	public DItemizeElements getDItemizeAccess() {
@@ -3241,7 +3460,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DEnumerate doctpl::DEnumerate:
-	//	'<enumerate>'
+	//	'<enumerate' ('alignment=' alignment=DAlignment)?
+	//	'>'
 	//	items+=DListItem+
 	//	'</enumerate>'
 	public DEnumerateElements getDEnumerateAccess() {
@@ -3313,7 +3533,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING
 	//	'width=' width=UINT_STRING
-	//	'height=' height=UINT_STRING ('caption=' caption=STRING)?
+	//	'height=' height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 	//	'/>'
 	public DFigureFromFileElements getDFigureFromFileAccess() {
 		return pDFigureFromFile;
@@ -3328,7 +3548,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name=' name=STRING
 	//	'referenceFile=' referenceFile=STRING
 	//	'width=' width=UINT_STRING
-	//	'height=' height=UINT_STRING ('caption=' caption=STRING)?
+	//	'height=' height=UINT_STRING ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 	//	'/>'
 	public DTableFromFileElements getDTableFromFileAccess() {
 		return pDTableFromFile;
@@ -3340,7 +3560,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DBasicTable doctpl::DBasicTable:
 	//	'<basicTable'
-	//	'name=' name=STRING ('caption=' caption=STRING)?
+	//	'name=' name=STRING ('width=' width=UINT_STRING)? ('alignment=' alignment=DAlignment)? ('caption=' caption=STRING)?
 	//	'>'
 	//	rows+=DRow+
 	//	'</basicTable>'
@@ -3365,7 +3585,8 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DCell doctpl::DCell:
-	//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)?
+	//	'<cell' ('gridSpan=' gridSpan=UINT_STRING)? ('vMerge=' vMerge=DMergeType)? ('width=' width=UINT_STRING)? ('shadow='
+	//	shadow=STRING)?
 	//	'>'
 	//	bodyContent+=DBodyContent+
 	//	'</cell>'

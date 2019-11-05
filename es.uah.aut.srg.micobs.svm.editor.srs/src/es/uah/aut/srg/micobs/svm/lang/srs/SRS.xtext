@@ -32,8 +32,13 @@ DBody returns doctpl::DBody:
 DBodyContent returns doctpl::DBodyContent:
 	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable;
 
+enum DAlignment returns doctpl::DAlignment:
+	left = '"left"' | center = '"center"' | right = '"right"' | justified = '"justified"';
+	
 DParagraph returns doctpl::DParagraph:
-	'<paragraph>'
+	'<paragraph'
+		('alignment=' alignment=DAlignment)?
+		'>'
 		(paragraphContent+=DParagraphContent)+ 
 	'</paragraph>';
 
@@ -47,12 +52,16 @@ DListContent returns doctpl::DListContent:
 	DItemize | DEnumerate;
 
 DItemize returns doctpl::DItemize:
-	'<itemize>'
+	'<itemize'
+		('alignment=' alignment=DAlignment)?
+		'>'
 		(items+=DListItem)+ 
 	'</itemize>';
 
 DEnumerate returns doctpl::DEnumerate:
-	'<enumerate>'
+	'<enumerate'
+		('alignment=' alignment=DAlignment)?
+		'>'
 		(items+=DListItem)+ 
 	'</enumerate>';
 
@@ -87,6 +96,7 @@ DFigureFromFile returns doctpl::DFigureFromFile:
 		'referenceFile=' referenceFile=STRING
 		'width=' width=UINT_STRING
 		'height=' height=UINT_STRING
+		('alignment=' alignment=DAlignment)?
 		('caption=' caption=STRING)?
 	'/>';
 
@@ -96,12 +106,15 @@ DTableFromFile returns doctpl::DTableFromFile:
 		'referenceFile=' referenceFile=STRING
 		'width=' width=UINT_STRING
 		'height=' height=UINT_STRING
+		('alignment=' alignment=DAlignment)?
 		('caption=' caption=STRING)?
 	'/>';
 
 DBasicTable returns doctpl::DBasicTable: 
 	'<basicTable'
 		'name=' name=STRING
+		('width=' width=UINT_STRING)?
+		('alignment=' alignment=DAlignment)?
 		('caption=' caption=STRING)?
 	'>'
 		(rows+=DRow)+
@@ -116,6 +129,8 @@ DCell returns doctpl::DCell:
 	'<cell'
 		('gridSpan=' gridSpan=UINT_STRING)?
 		('vMerge=' vMerge=DMergeType)?
+		('width=' width=UINT_STRING)?
+		('shadow=' shadow=STRING)?
 	'>'
 		(bodyContent+=DBodyContent)+
 	'</cell>';
