@@ -66,6 +66,7 @@ public class SRSSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'bold="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? '>' tab=DTab
 	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? '>' text=DText
 	 */
 	protected void emit_DRun_BoldTrueKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -77,6 +78,7 @@ public class SRSSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'italics="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? '>' tab=DTab
 	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? '>' text=DText
 	 */
 	protected void emit_DRun_ItalicsTrueKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -88,6 +90,7 @@ public class SRSSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'underline="true"'?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) '>' tab=DTab
 	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) '>' text=DText
 	 */
 	protected void emit_DRun_UnderlineTrueKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {

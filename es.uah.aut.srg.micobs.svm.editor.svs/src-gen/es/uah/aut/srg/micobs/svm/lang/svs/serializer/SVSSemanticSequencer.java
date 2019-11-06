@@ -24,6 +24,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
@@ -134,6 +135,9 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
+				return; 
+			case doctplPackage.DTAB:
+				sequence_DTab(context, (DTab) semanticObject); 
 				return; 
 			case doctplPackage.DTABLE_FROM_FILE:
 				sequence_DTableFromFile(context, (DTableFromFile) semanticObject); 
@@ -433,7 +437,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DParagraph returns DParagraph
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? paragraphContent+=DParagraphContent+)
+	 *     (style=STRING? alignment=DAlignment? paragraphContent+=DParagraphContent+)
 	 */
 	protected void sequence_DParagraph(ISerializationContext context, DParagraph semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -470,16 +474,22 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DRun returns DRun
 	 *
 	 * Constraint:
-	 *     text=DText
+	 *     (tab=DTab? text=DText)
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DRUN__TEXT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DRUN__TEXT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_5_0(), semanticObject.getText());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTab returns DTab
+	 *
+	 * Constraint:
+	 *     {DTab}
+	 */
+	protected void sequence_DTab(ISerializationContext context, DTab semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

@@ -630,16 +630,40 @@ ruleDParagraph returns [EObject current=null]
 			newLeafNode(otherlv_0, grammarAccess.getDParagraphAccess().getParagraphKeyword_0());
 		}
 		(
-			otherlv_1='alignment='
+			otherlv_1='style='
 			{
-				newLeafNode(otherlv_1, grammarAccess.getDParagraphAccess().getAlignmentKeyword_1_0());
+				newLeafNode(otherlv_1, grammarAccess.getDParagraphAccess().getStyleKeyword_1_0());
+			}
+			(
+				(
+					lv_style_2_0=RULE_STRING
+					{
+						newLeafNode(lv_style_2_0, grammarAccess.getDParagraphAccess().getStyleSTRINGTerminalRuleCall_1_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDParagraphRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"style",
+							lv_style_2_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_3='alignment='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDParagraphAccess().getAlignmentKeyword_2_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDParagraphAccess().getAlignmentDAlignmentEnumRuleCall_1_1_0());
+						newCompositeNode(grammarAccess.getDParagraphAccess().getAlignmentDAlignmentEnumRuleCall_2_1_0());
 					}
-					lv_alignment_2_0=ruleDAlignment
+					lv_alignment_4_0=ruleDAlignment
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDParagraphRule());
@@ -647,23 +671,23 @@ ruleDParagraph returns [EObject current=null]
 						set(
 							$current,
 							"alignment",
-							lv_alignment_2_0,
+							lv_alignment_4_0,
 							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DAlignment");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
 		)?
-		otherlv_3='>'
+		otherlv_5='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getDParagraphAccess().getGreaterThanSignKeyword_2());
+			newLeafNode(otherlv_5, grammarAccess.getDParagraphAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_3_0());
+					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_4_0());
 				}
-				lv_paragraphContent_4_0=ruleDParagraphContent
+				lv_paragraphContent_6_0=ruleDParagraphContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDParagraphRule());
@@ -671,15 +695,15 @@ ruleDParagraph returns [EObject current=null]
 					add(
 						$current,
 						"paragraphContent",
-						lv_paragraphContent_4_0,
+						lv_paragraphContent_6_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DParagraphContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_5='</paragraph>'
+		otherlv_7='</paragraph>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDParagraphAccess().getParagraphKeyword_4());
+			newLeafNode(otherlv_7, grammarAccess.getDParagraphAccess().getParagraphKeyword_5());
 		}
 	)
 ;
@@ -1038,9 +1062,28 @@ ruleDRun returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDRunAccess().getTabDTabParserRuleCall_5_0());
 				}
-				lv_text_5_0=ruleDText
+				lv_tab_5_0=ruleDTab
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDRunRule());
+					}
+					set(
+						$current,
+						"tab",
+						lv_tab_5_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DTab");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_6_0());
+				}
+				lv_text_6_0=ruleDText
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRunRule());
@@ -1048,15 +1091,15 @@ ruleDRun returns [EObject current=null]
 					set(
 						$current,
 						"text",
-						lv_text_5_0,
+						lv_text_6_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DText");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6='</run>'
+		otherlv_7='</run>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getDRunAccess().getRunKeyword_6());
+			newLeafNode(otherlv_7, grammarAccess.getDRunAccess().getRunKeyword_7());
 		}
 	)
 ;
@@ -1127,6 +1170,39 @@ ruleDHyperlink returns [EObject current=null]
 		otherlv_5='</hyperlink>'
 		{
 			newLeafNode(otherlv_5, grammarAccess.getDHyperlinkAccess().getHyperlinkKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleDTab
+entryRuleDTab returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTabRule()); }
+	iv_ruleDTab=ruleDTab
+	{ $current=$iv_ruleDTab.current; }
+	EOF;
+
+// Rule DTab
+ruleDTab returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDTabAccess().getDTabAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<tab/>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDTabAccess().getTabKeyword_1());
 		}
 	)
 ;

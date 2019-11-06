@@ -271,50 +271,67 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cParagraphKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cAlignmentKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final Assignment cAlignmentAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
-		private final RuleCall cAlignmentDAlignmentEnumRuleCall_1_1_0 = (RuleCall)cAlignmentAssignment_1_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cParagraphContentAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cParagraphContentDParagraphContentParserRuleCall_3_0 = (RuleCall)cParagraphContentAssignment_3.eContents().get(0);
-		private final Keyword cParagraphKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cStyleKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cStyleAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cStyleSTRINGTerminalRuleCall_1_1_0 = (RuleCall)cStyleAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cAlignmentKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cAlignmentAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cAlignmentDAlignmentEnumRuleCall_2_1_0 = (RuleCall)cAlignmentAssignment_2_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cParagraphContentAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cParagraphContentDParagraphContentParserRuleCall_4_0 = (RuleCall)cParagraphContentAssignment_4.eContents().get(0);
+		private final Keyword cParagraphKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//DParagraph doctpl::DParagraph:
-		//	'<paragraph' ('alignment=' alignment=DAlignment)?
+		//	'<paragraph' ('style=' style=STRING)? ('alignment=' alignment=DAlignment)?
 		//	'>'
 		//	paragraphContent+=DParagraphContent+
 		//	'</paragraph>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<paragraph' ('alignment=' alignment=DAlignment)? '>' paragraphContent+=DParagraphContent+ '</paragraph>'
+		//'<paragraph' ('style=' style=STRING)? ('alignment=' alignment=DAlignment)? '>' paragraphContent+=DParagraphContent+
+		//'</paragraph>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<paragraph'
 		public Keyword getParagraphKeyword_0() { return cParagraphKeyword_0; }
 		
-		//('alignment=' alignment=DAlignment)?
+		//('style=' style=STRING)?
 		public Group getGroup_1() { return cGroup_1; }
 		
+		//'style='
+		public Keyword getStyleKeyword_1_0() { return cStyleKeyword_1_0; }
+		
+		//style=STRING
+		public Assignment getStyleAssignment_1_1() { return cStyleAssignment_1_1; }
+		
+		//STRING
+		public RuleCall getStyleSTRINGTerminalRuleCall_1_1_0() { return cStyleSTRINGTerminalRuleCall_1_1_0; }
+		
+		//('alignment=' alignment=DAlignment)?
+		public Group getGroup_2() { return cGroup_2; }
+		
 		//'alignment='
-		public Keyword getAlignmentKeyword_1_0() { return cAlignmentKeyword_1_0; }
+		public Keyword getAlignmentKeyword_2_0() { return cAlignmentKeyword_2_0; }
 		
 		//alignment=DAlignment
-		public Assignment getAlignmentAssignment_1_1() { return cAlignmentAssignment_1_1; }
+		public Assignment getAlignmentAssignment_2_1() { return cAlignmentAssignment_2_1; }
 		
 		//DAlignment
-		public RuleCall getAlignmentDAlignmentEnumRuleCall_1_1_0() { return cAlignmentDAlignmentEnumRuleCall_1_1_0; }
+		public RuleCall getAlignmentDAlignmentEnumRuleCall_2_1_0() { return cAlignmentDAlignmentEnumRuleCall_2_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_2() { return cGreaterThanSignKeyword_2; }
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
 		//paragraphContent+=DParagraphContent+
-		public Assignment getParagraphContentAssignment_3() { return cParagraphContentAssignment_3; }
+		public Assignment getParagraphContentAssignment_4() { return cParagraphContentAssignment_4; }
 		
 		//DParagraphContent
-		public RuleCall getParagraphContentDParagraphContentParserRuleCall_3_0() { return cParagraphContentDParagraphContentParserRuleCall_3_0; }
+		public RuleCall getParagraphContentDParagraphContentParserRuleCall_4_0() { return cParagraphContentDParagraphContentParserRuleCall_4_0; }
 		
 		//'</paragraph>'
-		public Keyword getParagraphKeyword_4() { return cParagraphKeyword_4; }
+		public Keyword getParagraphKeyword_5() { return cParagraphKeyword_5; }
 	}
 	public class DListItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DListItem");
@@ -511,9 +528,11 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cItalicsTrueKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cUnderlineTrueKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cTextAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTextDTextParserRuleCall_5_0 = (RuleCall)cTextAssignment_5.eContents().get(0);
-		private final Keyword cRunKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cTabAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTabDTabParserRuleCall_5_0 = (RuleCall)cTabAssignment_5.eContents().get(0);
+		private final Assignment cTextAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cTextDTextParserRuleCall_6_0 = (RuleCall)cTextAssignment_6.eContents().get(0);
+		private final Keyword cRunKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//DRun doctpl::DRun:
 		//	'<run'
@@ -521,11 +540,12 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'italics="true"'?
 		//	'underline="true"'?
 		//	'>'
+		//	tab=DTab?
 		//	text=DText
 		//	'</run>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? '>' text=DText '</run>'
+		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? '>' tab=DTab? text=DText '</run>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<run'
@@ -543,14 +563,20 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
 		
+		//tab=DTab?
+		public Assignment getTabAssignment_5() { return cTabAssignment_5; }
+		
+		//DTab
+		public RuleCall getTabDTabParserRuleCall_5_0() { return cTabDTabParserRuleCall_5_0; }
+		
 		//text=DText
-		public Assignment getTextAssignment_5() { return cTextAssignment_5; }
+		public Assignment getTextAssignment_6() { return cTextAssignment_6; }
 		
 		//DText
-		public RuleCall getTextDTextParserRuleCall_5_0() { return cTextDTextParserRuleCall_5_0; }
+		public RuleCall getTextDTextParserRuleCall_6_0() { return cTextDTextParserRuleCall_6_0; }
 		
 		//'</run>'
-		public Keyword getRunKeyword_6() { return cRunKeyword_6; }
+		public Keyword getRunKeyword_7() { return cRunKeyword_7; }
 	}
 	public class DHyperlinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DHyperlink");
@@ -602,6 +628,26 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'</hyperlink>'
 		public Keyword getHyperlinkKeyword_5() { return cHyperlinkKeyword_5; }
+	}
+	public class DTabElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DTab");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cDTabAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cTabKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		
+		//DTab doctpl::DTab:
+		//	{doctpl::DTab}
+		//	'<tab/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{doctpl::DTab} '<tab/>'
+		public Group getGroup() { return cGroup; }
+		
+		//{doctpl::DTab}
+		public Action getDTabAction_0() { return cDTabAction_0; }
+		
+		//'<tab/>'
+		public Keyword getTabKeyword_1() { return cTabKeyword_1; }
 	}
 	public class DTextElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.DText");
@@ -3213,6 +3259,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DParagraphContentElements pDParagraphContent;
 	private final DRunElements pDRun;
 	private final DHyperlinkElements pDHyperlink;
+	private final DTabElements pDTab;
 	private final DTextElements pDText;
 	private final TerminalRule tRUNTEXT;
 	private final DFigureFromFileElements pDFigureFromFile;
@@ -3280,6 +3327,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDParagraphContent = new DParagraphContentElements();
 		this.pDRun = new DRunElements();
 		this.pDHyperlink = new DHyperlinkElements();
+		this.pDTab = new DTabElements();
 		this.pDText = new DTextElements();
 		this.tRUNTEXT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.sss.SSS.RUNTEXT");
 		this.pDFigureFromFile = new DFigureFromFileElements();
@@ -3412,7 +3460,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DParagraph doctpl::DParagraph:
-	//	'<paragraph' ('alignment=' alignment=DAlignment)?
+	//	'<paragraph' ('style=' style=STRING)? ('alignment=' alignment=DAlignment)?
 	//	'>'
 	//	paragraphContent+=DParagraphContent+
 	//	'</paragraph>'
@@ -3488,6 +3536,7 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'italics="true"'?
 	//	'underline="true"'?
 	//	'>'
+	//	tab=DTab?
 	//	text=DText
 	//	'</run>'
 	public DRunElements getDRunAccess() {
@@ -3510,6 +3559,17 @@ public class SSSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDHyperlinkRule() {
 		return getDHyperlinkAccess().getRule();
+	}
+	
+	//DTab doctpl::DTab:
+	//	{doctpl::DTab}
+	//	'<tab/>'
+	public DTabElements getDTabAccess() {
+		return pDTab;
+	}
+	
+	public ParserRule getDTabRule() {
+		return getDTabAccess().getRule();
 	}
 	
 	//DText doctpl::DText:

@@ -37,6 +37,7 @@ enum DAlignment returns doctpl::DAlignment:
 
 DParagraph returns doctpl::DParagraph:
 	'<paragraph'
+		('style=' style=STRING)?
 		('alignment=' alignment=DAlignment)?
 		'>'
 		(paragraphContent+=DParagraphContent)+ 
@@ -74,6 +75,7 @@ DRun returns doctpl::DRun:
 		('italics="true"')?
 		('underline="true"')?
 	'>'
+		(tab=DTab)?
 		text=DText
 	'</run>';
 
@@ -83,6 +85,10 @@ DHyperlink returns doctpl::DHyperlink:
 	'>'
 		(run=DRun)?
 	'</hyperlink>';
+	
+DTab returns doctpl::DTab:
+{doctpl::DTab}
+    '<tab/>';
 	
 DText returns doctpl::DText:
 	content=RUNTEXT;

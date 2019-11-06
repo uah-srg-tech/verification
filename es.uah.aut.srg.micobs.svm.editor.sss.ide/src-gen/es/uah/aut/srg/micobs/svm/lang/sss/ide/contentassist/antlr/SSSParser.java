@@ -52,6 +52,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDBodyAccess().getGroup(), "rule__DBody__Group__0");
 					put(grammarAccess.getDParagraphAccess().getGroup(), "rule__DParagraph__Group__0");
 					put(grammarAccess.getDParagraphAccess().getGroup_1(), "rule__DParagraph__Group_1__0");
+					put(grammarAccess.getDParagraphAccess().getGroup_2(), "rule__DParagraph__Group_2__0");
 					put(grammarAccess.getDListItemAccess().getGroup(), "rule__DListItem__Group__0");
 					put(grammarAccess.getDListItemAccess().getGroup_2(), "rule__DListItem__Group_2__0");
 					put(grammarAccess.getDItemizeAccess().getGroup(), "rule__DItemize__Group__0");
@@ -60,6 +61,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDEnumerateAccess().getGroup_1(), "rule__DEnumerate__Group_1__0");
 					put(grammarAccess.getDRunAccess().getGroup(), "rule__DRun__Group__0");
 					put(grammarAccess.getDHyperlinkAccess().getGroup(), "rule__DHyperlink__Group__0");
+					put(grammarAccess.getDTabAccess().getGroup(), "rule__DTab__Group__0");
 					put(grammarAccess.getDFigureFromFileAccess().getGroup(), "rule__DFigureFromFile__Group__0");
 					put(grammarAccess.getDFigureFromFileAccess().getGroup_9(), "rule__DFigureFromFile__Group_9__0");
 					put(grammarAccess.getDFigureFromFileAccess().getGroup_10(), "rule__DFigureFromFile__Group_10__0");
@@ -132,15 +134,17 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSSSDocumentAccess().getVerificationValidationIntegrationSectionAssignment_18(), "rule__VSSSDocument__VerificationValidationIntegrationSectionAssignment_18");
 					put(grammarAccess.getVSSSDocumentAccess().getSystemModelsSectionAssignment_19(), "rule__VSSSDocument__SystemModelsSectionAssignment_19");
 					put(grammarAccess.getDBodyAccess().getBodyContentAssignment_1(), "rule__DBody__BodyContentAssignment_1");
-					put(grammarAccess.getDParagraphAccess().getAlignmentAssignment_1_1(), "rule__DParagraph__AlignmentAssignment_1_1");
-					put(grammarAccess.getDParagraphAccess().getParagraphContentAssignment_3(), "rule__DParagraph__ParagraphContentAssignment_3");
+					put(grammarAccess.getDParagraphAccess().getStyleAssignment_1_1(), "rule__DParagraph__StyleAssignment_1_1");
+					put(grammarAccess.getDParagraphAccess().getAlignmentAssignment_2_1(), "rule__DParagraph__AlignmentAssignment_2_1");
+					put(grammarAccess.getDParagraphAccess().getParagraphContentAssignment_4(), "rule__DParagraph__ParagraphContentAssignment_4");
 					put(grammarAccess.getDListItemAccess().getParagraphAssignment_1(), "rule__DListItem__ParagraphAssignment_1");
 					put(grammarAccess.getDListItemAccess().getSublistAssignment_2_1(), "rule__DListItem__SublistAssignment_2_1");
 					put(grammarAccess.getDItemizeAccess().getAlignmentAssignment_1_1(), "rule__DItemize__AlignmentAssignment_1_1");
 					put(grammarAccess.getDItemizeAccess().getItemsAssignment_3(), "rule__DItemize__ItemsAssignment_3");
 					put(grammarAccess.getDEnumerateAccess().getAlignmentAssignment_1_1(), "rule__DEnumerate__AlignmentAssignment_1_1");
 					put(grammarAccess.getDEnumerateAccess().getItemsAssignment_3(), "rule__DEnumerate__ItemsAssignment_3");
-					put(grammarAccess.getDRunAccess().getTextAssignment_5(), "rule__DRun__TextAssignment_5");
+					put(grammarAccess.getDRunAccess().getTabAssignment_5(), "rule__DRun__TabAssignment_5");
+					put(grammarAccess.getDRunAccess().getTextAssignment_6(), "rule__DRun__TextAssignment_6");
 					put(grammarAccess.getDHyperlinkAccess().getReferenceAssignment_2(), "rule__DHyperlink__ReferenceAssignment_2");
 					put(grammarAccess.getDHyperlinkAccess().getRunAssignment_4(), "rule__DHyperlink__RunAssignment_4");
 					put(grammarAccess.getDTextAccess().getContentAssignment(), "rule__DText__ContentAssignment");
