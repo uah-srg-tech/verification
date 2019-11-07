@@ -16,6 +16,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VValidationMethod;
 import es.uah.aut.srg.micobs.svm.tdm.tdmFactory;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
@@ -69,6 +70,13 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * @generated
 	 */
 	private EClass vTraceableDocumentAbstractItemEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vTraceableParentDocumentEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -308,6 +316,33 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getVTraceableParentDocument() {
+		return vTraceableParentDocumentEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTraceableParentDocument_Document() {
+		return (EReference)vTraceableParentDocumentEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTraceableParentDocument_NotApplicableItems() {
+		return (EReference)vTraceableParentDocumentEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getVValidationMethod() {
 		return vValidationMethodEEnum;
 	}
@@ -363,6 +398,10 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__GROUP);
 		createEReference(vTraceableDocumentAbstractItemEClass, VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM);
 
+		vTraceableParentDocumentEClass = createEClass(VTRACEABLE_PARENT_DOCUMENT);
+		createEReference(vTraceableParentDocumentEClass, VTRACEABLE_PARENT_DOCUMENT__DOCUMENT);
+		createEReference(vTraceableParentDocumentEClass, VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS);
+
 		// Create enums
 		vValidationMethodEEnum = createEEnum(VVALIDATION_METHOD);
 	}
@@ -409,7 +448,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEAttribute(getVTraceableDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocument_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTraceableDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVTraceableDocument_Parents(), this.getVTraceableDocument(), null, "parents", null, 0, -1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTraceableDocument_Parents(), this.getVTraceableParentDocument(), null, "parents", null, 0, -1, VTraceableDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocument_Groups(), this.getVTraceableDocumentAbstractGroup(), null, "groups", null, 1, -1, VTraceableDocument.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTraceableDocumentAbstractGroupEClass, VTraceableDocumentAbstractGroup.class, "VTraceableDocumentAbstractGroup", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -425,6 +464,10 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 		initEAttribute(getVTraceableDocumentAbstractItem_ValidationMethod(), this.getVValidationMethod(), "validationMethod", null, 1, 1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_Group(), this.getVTraceableDocumentAbstractGroup(), null, "group", null, 1, 1, VTraceableDocumentAbstractItem.class, IS_TRANSIENT, IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, IS_DERIVED, IS_ORDERED);
 		initEReference(getVTraceableDocumentAbstractItem_ParentItem(), this.getVTraceableDocumentAbstractItem(), null, "parentItem", null, 0, -1, VTraceableDocumentAbstractItem.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vTraceableParentDocumentEClass, VTraceableParentDocument.class, "VTraceableParentDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVTraceableParentDocument_Document(), this.getVTraceableDocument(), null, "document", null, 1, 1, VTraceableParentDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTraceableParentDocument_NotApplicableItems(), this.getVTraceableDocumentAbstractItem(), null, "notApplicableItems", null, 0, -1, VTraceableParentDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(vValidationMethodEEnum, VValidationMethod.class, "VValidationMethod");

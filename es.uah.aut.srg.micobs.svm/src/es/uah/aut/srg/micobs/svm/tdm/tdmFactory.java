@@ -30,6 +30,15 @@ public interface tdmFactory extends EFactory {
 	tdmFactory eINSTANCE = es.uah.aut.srg.micobs.svm.tdm.impl.tdmFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>VTraceable Parent Document</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTraceable Parent Document</em>'.
+	 * @generated
+	 */
+	VTraceableParentDocument createVTraceableParentDocument();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

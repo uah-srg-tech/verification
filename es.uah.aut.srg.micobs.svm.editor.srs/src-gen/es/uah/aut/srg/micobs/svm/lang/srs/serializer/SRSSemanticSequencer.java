@@ -63,6 +63,8 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument;
+import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -237,6 +239,12 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case srsPackage.VSRS_TERMS_DEFINITIONS_ABBREVIATIONS:
 				sequence_VSRSTermsDefinitionsAbbreviations(context, (VSRSTermsDefinitionsAbbreviations) semanticObject); 
+				return; 
+			}
+		else if (epackage == tdmPackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT:
+				sequence_VTraceableParentDocument(context, (VTraceableParentDocument) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -585,7 +593,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         issue=UINT_STRING 
 	 *         revision=UINT_STRING 
 	 *         date=STRING 
-	 *         parents+=[VTraceableDocument|STRING]* 
+	 *         parents+=VTraceableParentDocument* 
 	 *         introductionSection=VSRSIntroduction 
 	 *         applicableDocumentsSection=VSRSApplicableDocuments 
 	 *         referenceDocumentsSection=VSRSReferenceDocuments 
@@ -944,6 +952,18 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (terms+=VSRSTerm* definitions+=VSRSDefinition* abbreviations+=VSRSAbbreviation*)
 	 */
 	protected void sequence_VSRSTermsDefinitionsAbbreviations(ISerializationContext context, VSRSTermsDefinitionsAbbreviations semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VTraceableParentDocument returns VTraceableParentDocument
+	 *
+	 * Constraint:
+	 *     (document=[VTraceableDocument|STRING] notApplicableItems+=[VTraceableDocumentAbstractItem|ID]*)
+	 */
+	protected void sequence_VTraceableParentDocument(ISerializationContext context, VTraceableParentDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

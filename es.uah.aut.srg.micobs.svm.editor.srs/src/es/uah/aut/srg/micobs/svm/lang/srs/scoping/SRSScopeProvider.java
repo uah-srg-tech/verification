@@ -28,6 +28,7 @@ import com.google.common.collect.Iterables;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument;
 
 /**
  * This class contains custom scoping description.
@@ -62,8 +63,8 @@ public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 		
 		Collection<VTraceableDocumentAbstractItem> items = new HashSet<VTraceableDocumentAbstractItem>();
 		
-		for(VTraceableDocument doc : srsDoc.getParents()) {
-			for(VTraceableDocumentAbstractGroup group : doc.getGroups()) {
+		for(VTraceableParentDocument docParent : srsDoc.getParents()) {
+			for(VTraceableDocumentAbstractGroup group : docParent.getDocument().getGroups()) {
 				items.addAll(group.getItems());
 			}
 		}

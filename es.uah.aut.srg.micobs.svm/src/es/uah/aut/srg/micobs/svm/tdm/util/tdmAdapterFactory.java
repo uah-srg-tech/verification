@@ -97,6 +97,10 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentAbstractItemAdapter();
 			}
 			@Override
+			public Adapter caseVTraceableParentDocument(VTraceableParentDocument object) {
+				return createVTraceableParentDocumentAdapter();
+			}
+			@Override
 			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
 				return createMCommonReferenceableObjAdapter();
 			}
@@ -187,6 +191,20 @@ public class tdmAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTraceableDocumentAbstractItemAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument <em>VTraceable Parent Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument
+	 * @generated
+	 */
+	public Adapter createVTraceableParentDocumentAdapter() {
 		return null;
 	}
 

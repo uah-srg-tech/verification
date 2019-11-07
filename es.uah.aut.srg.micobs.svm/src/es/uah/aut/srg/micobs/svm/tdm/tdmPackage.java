@@ -121,7 +121,7 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT__DATE = 4;
 
 	/**
-	 * The feature id for the '<em><b>Parents</b></em>' reference list.
+	 * The feature id for the '<em><b>Parents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -377,6 +377,52 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_DOCUMENT_ABSTRACT_ITEM_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl <em>VTraceable Parent Document</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl
+	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVTraceableParentDocument()
+	 * @generated
+	 */
+	int VTRACEABLE_PARENT_DOCUMENT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Document</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_PARENT_DOCUMENT__DOCUMENT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Not Applicable Items</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS = 1;
+
+	/**
+	 * The number of structural features of the '<em>VTraceable Parent Document</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_PARENT_DOCUMENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>VTraceable Parent Document</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTRACEABLE_PARENT_DOCUMENT_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -384,7 +430,7 @@ public interface tdmPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVValidationMethod()
 	 * @generated
 	 */
-	int VVALIDATION_METHOD = 5;
+	int VVALIDATION_METHOD = 6;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument <em>VTraceable Document</em>}'.
@@ -452,10 +498,10 @@ public interface tdmPackage extends EPackage {
 	EAttribute getVTraceableDocument_Date();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents <em>Parents</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Parents</em>'.
+	 * @return the meta object for the containment reference list '<em>Parents</em>'.
 	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument#getParents()
 	 * @see #getVTraceableDocument()
 	 * @generated
@@ -580,6 +626,38 @@ public interface tdmPackage extends EPackage {
 	EReference getVTraceableDocumentAbstractItem_ParentItem();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument <em>VTraceable Parent Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTraceable Parent Document</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument
+	 * @generated
+	 */
+	EClass getVTraceableParentDocument();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getDocument <em>Document</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Document</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getDocument()
+	 * @see #getVTraceableParentDocument()
+	 * @generated
+	 */
+	EReference getVTraceableParentDocument_Document();
+
+	/**
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItems <em>Not Applicable Items</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Not Applicable Items</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItems()
+	 * @see #getVTraceableParentDocument()
+	 * @generated
+	 */
+	EReference getVTraceableParentDocument_NotApplicableItems();
+
+	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -663,7 +741,7 @@ public interface tdmPackage extends EPackage {
 		EAttribute VTRACEABLE_DOCUMENT__DATE = eINSTANCE.getVTraceableDocument_Date();
 
 		/**
-		 * The meta object literal for the '<em><b>Parents</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Parents</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -765,6 +843,32 @@ public interface tdmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTRACEABLE_DOCUMENT_ABSTRACT_ITEM__PARENT_ITEM = eINSTANCE.getVTraceableDocumentAbstractItem_ParentItem();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl <em>VTraceable Parent Document</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl
+		 * @see es.uah.aut.srg.micobs.svm.tdm.impl.tdmPackageImpl#getVTraceableParentDocument()
+		 * @generated
+		 */
+		EClass VTRACEABLE_PARENT_DOCUMENT = eINSTANCE.getVTraceableParentDocument();
+
+		/**
+		 * The meta object literal for the '<em><b>Document</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTRACEABLE_PARENT_DOCUMENT__DOCUMENT = eINSTANCE.getVTraceableParentDocument_Document();
+
+		/**
+		 * The meta object literal for the '<em><b>Not Applicable Items</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS = eINSTANCE.getVTraceableParentDocument_NotApplicableItems();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.

@@ -12,20 +12,24 @@ package es.uah.aut.srg.micobs.svm.tdm.impl;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument;
 import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -148,14 +152,14 @@ public abstract class VTraceableDocumentImpl extends MinimalEObjectImpl.Containe
 	protected String date = DATE_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getParents() <em>Parents</em>}' reference list.
+	 * The cached value of the '{@link #getParents() <em>Parents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getParents()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocument> parents;
+	protected EList<VTraceableParentDocument> parents;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -286,9 +290,9 @@ public abstract class VTraceableDocumentImpl extends MinimalEObjectImpl.Containe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocument> getParents() {
+	public EList<VTraceableParentDocument> getParents() {
 		if (parents == null) {
-			parents = new EObjectResolvingEList<VTraceableDocument>(VTraceableDocument.class, this, tdmPackage.VTRACEABLE_DOCUMENT__PARENTS);
+			parents = new EObjectContainmentEList<VTraceableParentDocument>(VTraceableParentDocument.class, this, tdmPackage.VTRACEABLE_DOCUMENT__PARENTS);
 		}
 		return parents;
 	}
@@ -304,6 +308,20 @@ public abstract class VTraceableDocumentImpl extends MinimalEObjectImpl.Containe
 		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
 		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
 		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
+				return ((InternalEList<?>)getParents()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -358,7 +376,7 @@ public abstract class VTraceableDocumentImpl extends MinimalEObjectImpl.Containe
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__PARENTS:
 				getParents().clear();
-				getParents().addAll((Collection<? extends VTraceableDocument>)newValue);
+				getParents().addAll((Collection<? extends VTraceableParentDocument>)newValue);
 				return;
 			case tdmPackage.VTRACEABLE_DOCUMENT__GROUPS:
 				getGroups().clear();

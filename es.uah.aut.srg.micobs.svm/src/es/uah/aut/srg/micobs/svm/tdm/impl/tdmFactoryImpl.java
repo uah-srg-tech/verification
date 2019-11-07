@@ -65,6 +65,7 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT: return createVTraceableParentDocument();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -98,6 +99,16 @@ public class tdmFactoryImpl extends EFactoryImpl implements tdmFactory {
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTraceableParentDocument createVTraceableParentDocument() {
+		VTraceableParentDocumentImpl vTraceableParentDocument = new VTraceableParentDocumentImpl();
+		return vTraceableParentDocument;
 	}
 
 	/**

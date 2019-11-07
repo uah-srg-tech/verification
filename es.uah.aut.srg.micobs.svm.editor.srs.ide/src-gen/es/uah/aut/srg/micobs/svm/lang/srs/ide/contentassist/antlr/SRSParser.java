@@ -50,7 +50,8 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVValidationMethodAccess().getAlternatives(), "rule__VValidationMethod__Alternatives");
 					put(grammarAccess.getVSRSDocumentItemModesAccess().getAlternatives(), "rule__VSRSDocumentItemModes__Alternatives");
 					put(grammarAccess.getVSRSDocumentAccess().getGroup(), "rule__VSRSDocument__Group__0");
-					put(grammarAccess.getVSRSDocumentAccess().getGroup_12(), "rule__VSRSDocument__Group_12__0");
+					put(grammarAccess.getVTraceableParentDocumentAccess().getGroup(), "rule__VTraceableParentDocument__Group__0");
+					put(grammarAccess.getVTraceableParentDocumentAccess().getGroup_4(), "rule__VTraceableParentDocument__Group_4__0");
 					put(grammarAccess.getDBodyAccess().getGroup(), "rule__DBody__Group__0");
 					put(grammarAccess.getDParagraphAccess().getGroup(), "rule__DParagraph__Group__0");
 					put(grammarAccess.getDParagraphAccess().getGroup_1(), "rule__DParagraph__Group_1__0");
@@ -128,7 +129,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentAccess().getIssueAssignment_6(), "rule__VSRSDocument__IssueAssignment_6");
 					put(grammarAccess.getVSRSDocumentAccess().getRevisionAssignment_8(), "rule__VSRSDocument__RevisionAssignment_8");
 					put(grammarAccess.getVSRSDocumentAccess().getDateAssignment_10(), "rule__VSRSDocument__DateAssignment_10");
-					put(grammarAccess.getVSRSDocumentAccess().getParentsAssignment_12_2(), "rule__VSRSDocument__ParentsAssignment_12_2");
+					put(grammarAccess.getVSRSDocumentAccess().getParentsAssignment_12(), "rule__VSRSDocument__ParentsAssignment_12");
 					put(grammarAccess.getVSRSDocumentAccess().getIntroductionSectionAssignment_13(), "rule__VSRSDocument__IntroductionSectionAssignment_13");
 					put(grammarAccess.getVSRSDocumentAccess().getApplicableDocumentsSectionAssignment_14(), "rule__VSRSDocument__ApplicableDocumentsSectionAssignment_14");
 					put(grammarAccess.getVSRSDocumentAccess().getReferenceDocumentsSectionAssignment_15(), "rule__VSRSDocument__ReferenceDocumentsSectionAssignment_15");
@@ -136,6 +137,8 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentAccess().getSoftwareOverviewSectionAssignment_17(), "rule__VSRSDocument__SoftwareOverviewSectionAssignment_17");
 					put(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionAssignment_18(), "rule__VSRSDocument__RequirementsSectionAssignment_18");
 					put(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_19(), "rule__VSRSDocument__LogicalModelsSectionAssignment_19");
+					put(grammarAccess.getVTraceableParentDocumentAccess().getDocumentAssignment_2(), "rule__VTraceableParentDocument__DocumentAssignment_2");
+					put(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsAssignment_4_1(), "rule__VTraceableParentDocument__NotApplicableItemsAssignment_4_1");
 					put(grammarAccess.getDBodyAccess().getBodyContentAssignment_1(), "rule__DBody__BodyContentAssignment_1");
 					put(grammarAccess.getDParagraphAccess().getStyleAssignment_1_1(), "rule__DParagraph__StyleAssignment_1_1");
 					put(grammarAccess.getDParagraphAccess().getAlignmentAssignment_2_1(), "rule__DParagraph__AlignmentAssignment_2_1");

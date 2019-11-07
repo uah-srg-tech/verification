@@ -209,41 +209,30 @@ ruleVSRSDocument returns [EObject current=null]
 			newLeafNode(otherlv_11, grammarAccess.getVSRSDocumentAccess().getGreaterThanSignKeyword_11());
 		}
 		(
-			otherlv_12='<parent'
-			{
-				newLeafNode(otherlv_12, grammarAccess.getVSRSDocumentAccess().getParentKeyword_12_0());
-			}
-			otherlv_13='name='
-			{
-				newLeafNode(otherlv_13, grammarAccess.getVSRSDocumentAccess().getNameKeyword_12_1());
-			}
 			(
-				(
-					{
-						/* */
+				{
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getParentsVTraceableParentDocumentParserRuleCall_12_0());
+				}
+				lv_parents_12_0=ruleVTraceableParentDocument
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
 					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVSRSDocumentRule());
-						}
-					}
-					otherlv_14=RULE_STRING
-					{
-						newLeafNode(otherlv_14, grammarAccess.getVSRSDocumentAccess().getParentsVTraceableDocumentCrossReference_12_2_0());
-					}
-				)
+					add(
+						$current,
+						"parents",
+						lv_parents_12_0,
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VTraceableParentDocument");
+					afterParserOrEnumRuleCall();
+				}
 			)
-			otherlv_15='/>'
-			{
-				newLeafNode(otherlv_15, grammarAccess.getVSRSDocumentAccess().getSolidusGreaterThanSignKeyword_12_3());
-			}
 		)*
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getIntroductionSectionVSRSIntroductionParserRuleCall_13_0());
 				}
-				lv_introductionSection_16_0=ruleVSRSIntroduction
+				lv_introductionSection_13_0=ruleVSRSIntroduction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -251,7 +240,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"introductionSection",
-						lv_introductionSection_16_0,
+						lv_introductionSection_13_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSIntroduction");
 					afterParserOrEnumRuleCall();
 				}
@@ -262,7 +251,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_14_0());
 				}
-				lv_applicableDocumentsSection_17_0=ruleVSRSApplicableDocuments
+				lv_applicableDocumentsSection_14_0=ruleVSRSApplicableDocuments
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -270,7 +259,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"applicableDocumentsSection",
-						lv_applicableDocumentsSection_17_0,
+						lv_applicableDocumentsSection_14_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSApplicableDocuments");
 					afterParserOrEnumRuleCall();
 				}
@@ -281,7 +270,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_15_0());
 				}
-				lv_referenceDocumentsSection_18_0=ruleVSRSReferenceDocuments
+				lv_referenceDocumentsSection_15_0=ruleVSRSReferenceDocuments
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -289,7 +278,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"referenceDocumentsSection",
-						lv_referenceDocumentsSection_18_0,
+						lv_referenceDocumentsSection_15_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSReferenceDocuments");
 					afterParserOrEnumRuleCall();
 				}
@@ -300,7 +289,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_16_0());
 				}
-				lv_termsDefinitionsAbbreviationsSection_19_0=ruleVSRSTermsDefinitionsAbbreviations
+				lv_termsDefinitionsAbbreviationsSection_16_0=ruleVSRSTermsDefinitionsAbbreviations
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -308,7 +297,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"termsDefinitionsAbbreviationsSection",
-						lv_termsDefinitionsAbbreviationsSection_19_0,
+						lv_termsDefinitionsAbbreviationsSection_16_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTermsDefinitionsAbbreviations");
 					afterParserOrEnumRuleCall();
 				}
@@ -319,7 +308,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0());
 				}
-				lv_softwareOverviewSection_20_0=ruleVSRSSoftwareOverview
+				lv_softwareOverviewSection_17_0=ruleVSRSSoftwareOverview
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -327,7 +316,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"softwareOverviewSection",
-						lv_softwareOverviewSection_20_0,
+						lv_softwareOverviewSection_17_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSoftwareOverview");
 					afterParserOrEnumRuleCall();
 				}
@@ -338,7 +327,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionVSRSRequirementsParserRuleCall_18_0());
 				}
-				lv_requirementsSection_21_0=ruleVSRSRequirements
+				lv_requirementsSection_18_0=ruleVSRSRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -346,7 +335,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"requirementsSection",
-						lv_requirementsSection_21_0,
+						lv_requirementsSection_18_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -357,7 +346,7 @@ ruleVSRSDocument returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0());
 				}
-				lv_logicalModelsSection_22_0=ruleVSRSLogicalModels
+				lv_logicalModelsSection_19_0=ruleVSRSLogicalModels
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -365,15 +354,92 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"logicalModelsSection",
-						lv_logicalModelsSection_22_0,
+						lv_logicalModelsSection_19_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSLogicalModels");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_23='</SRS>'
+		otherlv_20='</SRS>'
 		{
-			newLeafNode(otherlv_23, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20());
+			newLeafNode(otherlv_20, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20());
+		}
+	)
+;
+
+// Entry rule entryRuleVTraceableParentDocument
+entryRuleVTraceableParentDocument returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVTraceableParentDocumentRule()); }
+	iv_ruleVTraceableParentDocument=ruleVTraceableParentDocument
+	{ $current=$iv_ruleVTraceableParentDocument.current; }
+	EOF;
+
+// Rule VTraceableParentDocument
+ruleVTraceableParentDocument returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<parent'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_0());
+		}
+		otherlv_1='document='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVTraceableParentDocumentAccess().getDocumentKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTraceableParentDocumentRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVTraceableParentDocumentAccess().getDocumentVTraceableDocumentCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVTraceableParentDocumentAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			otherlv_4='<notApplicableItems'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsKeyword_4_0());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVTraceableParentDocumentRule());
+						}
+					}
+					otherlv_5=RULE_ID
+					{
+						newLeafNode(otherlv_5, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0());
+					}
+				)
+			)
+			otherlv_6='/>'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_2());
+			}
+		)*
+		otherlv_7='</parent>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_5());
 		}
 	)
 ;

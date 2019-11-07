@@ -54,13 +54,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDateAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cDateSTRINGTerminalRuleCall_10_0 = (RuleCall)cDateAssignment_10.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cParentKeyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Keyword cNameKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cParentsAssignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final CrossReference cParentsVTraceableDocumentCrossReference_12_2_0 = (CrossReference)cParentsAssignment_12_2.eContents().get(0);
-		private final RuleCall cParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cParentsVTraceableDocumentCrossReference_12_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
+		private final Assignment cParentsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cParentsVTraceableParentDocumentParserRuleCall_12_0 = (RuleCall)cParentsAssignment_12.eContents().get(0);
 		private final Assignment cIntroductionSectionAssignment_13 = (Assignment)cGroup.eContents().get(13);
 		private final RuleCall cIntroductionSectionVSRSIntroductionParserRuleCall_13_0 = (RuleCall)cIntroductionSectionAssignment_13.eContents().get(0);
 		private final Assignment cApplicableDocumentsSectionAssignment_14 = (Assignment)cGroup.eContents().get(14);
@@ -84,7 +79,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'issue=' issue=UINT_STRING
 		//	'revision=' revision=UINT_STRING
 		//	'date=' date=STRING
-		//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+		//	'>'
+		//	parents+=VTraceableParentDocument*
 		//	introductionSection=VSRSIntroduction
 		//	applicableDocumentsSection=VSRSApplicableDocuments
 		//	referenceDocumentsSection=VSRSReferenceDocuments
@@ -96,9 +92,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<SRS' 'name=' name=STRING 'id=' id=STRING 'issue=' issue=UINT_STRING 'revision=' revision=UINT_STRING 'date='
-		//date=STRING '>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
-		//introductionSection=VSRSIntroduction applicableDocumentsSection=VSRSApplicableDocuments
-		//referenceDocumentsSection=VSRSReferenceDocuments
+		//date=STRING '>' parents+=VTraceableParentDocument* introductionSection=VSRSIntroduction
+		//applicableDocumentsSection=VSRSApplicableDocuments referenceDocumentsSection=VSRSReferenceDocuments
 		//termsDefinitionsAbbreviationsSection=VSRSTermsDefinitionsAbbreviations softwareOverviewSection=VSRSSoftwareOverview
 		//requirementsSection=VSRSRequirements logicalModelsSection=VSRSLogicalModels '</SRS>'
 		public Group getGroup() { return cGroup; }
@@ -154,26 +149,11 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_11() { return cGreaterThanSignKeyword_11; }
 		
-		//('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
-		public Group getGroup_12() { return cGroup_12; }
+		//parents+=VTraceableParentDocument*
+		public Assignment getParentsAssignment_12() { return cParentsAssignment_12; }
 		
-		//'<parent'
-		public Keyword getParentKeyword_12_0() { return cParentKeyword_12_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_12_1() { return cNameKeyword_12_1; }
-		
-		//parents+=[tdm::VTraceableDocument|STRING]
-		public Assignment getParentsAssignment_12_2() { return cParentsAssignment_12_2; }
-		
-		//[tdm::VTraceableDocument|STRING]
-		public CrossReference getParentsVTraceableDocumentCrossReference_12_2_0() { return cParentsVTraceableDocumentCrossReference_12_2_0; }
-		
-		//STRING
-		public RuleCall getParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1() { return cParentsVTraceableDocumentSTRINGTerminalRuleCall_12_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
+		//VTraceableParentDocument
+		public RuleCall getParentsVTraceableParentDocumentParserRuleCall_12_0() { return cParentsVTraceableParentDocumentParserRuleCall_12_0; }
 		
 		//introductionSection=VSRSIntroduction
 		public Assignment getIntroductionSectionAssignment_13() { return cIntroductionSectionAssignment_13; }
@@ -219,6 +199,72 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'</SRS>'
 		public Keyword getSRSKeyword_20() { return cSRSKeyword_20; }
+	}
+	public class VTraceableParentDocumentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VTraceableParentDocument");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cParentKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cDocumentKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cDocumentAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cDocumentVTraceableDocumentCrossReference_2_0 = (CrossReference)cDocumentAssignment_2.eContents().get(0);
+		private final RuleCall cDocumentVTraceableDocumentSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cDocumentVTraceableDocumentCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cNotApplicableItemsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cNotApplicableItemsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0 = (CrossReference)cNotApplicableItemsAssignment_4_1.eContents().get(0);
+		private final RuleCall cNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1 = (RuleCall)cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Keyword cParentKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VTraceableParentDocument tdm::VTraceableParentDocument:
+		//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
+		//	notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+		//	'</parent>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
+		//notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')* '</parent>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<parent'
+		public Keyword getParentKeyword_0() { return cParentKeyword_0; }
+		
+		//'document='
+		public Keyword getDocumentKeyword_1() { return cDocumentKeyword_1; }
+		
+		//document=[tdm::VTraceableDocument|STRING]
+		public Assignment getDocumentAssignment_2() { return cDocumentAssignment_2; }
+		
+		//[tdm::VTraceableDocument|STRING]
+		public CrossReference getDocumentVTraceableDocumentCrossReference_2_0() { return cDocumentVTraceableDocumentCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getDocumentVTraceableDocumentSTRINGTerminalRuleCall_2_0_1() { return cDocumentVTraceableDocumentSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//('<notApplicableItems' notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'<notApplicableItems'
+		public Keyword getNotApplicableItemsKeyword_4_0() { return cNotApplicableItemsKeyword_4_0; }
+		
+		//notApplicableItems+=[tdm::VTraceableDocumentAbstractItem]
+		public Assignment getNotApplicableItemsAssignment_4_1() { return cNotApplicableItemsAssignment_4_1; }
+		
+		//[tdm::VTraceableDocumentAbstractItem]
+		public CrossReference getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0() { return cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0; }
+		
+		//ID
+		public RuleCall getNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1() { return cNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_4_2() { return cSolidusGreaterThanSignKeyword_4_2; }
+		
+		//'</parent>'
+		public Keyword getParentKeyword_5() { return cParentKeyword_5; }
 	}
 	public class DBodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DBody");
@@ -3355,6 +3401,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final VSRSDocumentElements pVSRSDocument;
+	private final VTraceableParentDocumentElements pVTraceableParentDocument;
 	private final DBodyElements pDBody;
 	private final DBodyContentElements pDBodyContent;
 	private final DAlignmentElements eDAlignment;
@@ -3423,6 +3470,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pVSRSDocument = new VSRSDocumentElements();
+		this.pVTraceableParentDocument = new VTraceableParentDocumentElements();
 		this.pDBody = new DBodyElements();
 		this.pDBodyContent = new DBodyContentElements();
 		this.eDAlignment = new DAlignmentElements();
@@ -3516,7 +3564,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'issue=' issue=UINT_STRING
 	//	'revision=' revision=UINT_STRING
 	//	'date=' date=STRING
-	//	'>' ('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+	//	'>'
+	//	parents+=VTraceableParentDocument*
 	//	introductionSection=VSRSIntroduction
 	//	applicableDocumentsSection=VSRSApplicableDocuments
 	//	referenceDocumentsSection=VSRSReferenceDocuments
@@ -3531,6 +3580,18 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSRSDocumentRule() {
 		return getVSRSDocumentAccess().getRule();
+	}
+	
+	//VTraceableParentDocument tdm::VTraceableParentDocument:
+	//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
+	//	notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+	//	'</parent>'
+	public VTraceableParentDocumentElements getVTraceableParentDocumentAccess() {
+		return pVTraceableParentDocument;
+	}
+	
+	public ParserRule getVTraceableParentDocumentRule() {
+		return getVTraceableParentDocumentAccess().getRule();
 	}
 	
 	//DBody doctpl::DBody:

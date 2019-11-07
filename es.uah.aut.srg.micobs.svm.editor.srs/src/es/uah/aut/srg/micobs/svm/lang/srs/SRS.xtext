@@ -14,7 +14,7 @@ VSRSDocument returns VSRSDocument:
 		'revision=' revision=UINT_STRING
 		'date=' date=STRING
 		'>'
-		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+		(parents+=VTraceableParentDocument)*
 		introductionSection=VSRSIntroduction
 		applicableDocumentsSection=VSRSApplicableDocuments
 		referenceDocumentsSection=VSRSReferenceDocuments
@@ -23,6 +23,12 @@ VSRSDocument returns VSRSDocument:
 		requirementsSection=VSRSRequirements
 		logicalModelsSection=VSRSLogicalModels
 	'</SRS>';
+
+VTraceableParentDocument returns tdm::VTraceableParentDocument: 
+	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>'
+	('<notApplicableItems' notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+	'</parent>';
+
 
 DBody returns doctpl::DBody:
 	'<body>'
