@@ -47,7 +47,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VTraceableParentDocument">
     <eStructuralFeatures xsi:type="ecore:EReference" name="document" lowerBound="1"
         eType="#//VTraceableDocument"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="notApplicableItems" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="notApplicableItem" upperBound="-1"
         eType="#//VTraceableDocumentAbstractItem"/>
   </eClassifiers>
 </ecore:EPackage>

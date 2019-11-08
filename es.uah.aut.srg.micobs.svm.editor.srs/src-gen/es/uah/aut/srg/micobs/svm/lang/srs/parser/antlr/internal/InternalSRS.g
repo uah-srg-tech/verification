@@ -412,9 +412,13 @@ ruleVTraceableParentDocument returns [EObject current=null]
 			newLeafNode(otherlv_3, grammarAccess.getVTraceableParentDocumentAccess().getGreaterThanSignKeyword_3());
 		}
 		(
-			otherlv_4='<notApplicableItems'
+			otherlv_4='<notApplicableItem'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsKeyword_4_0());
+				newLeafNode(otherlv_4, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemKeyword_4_0());
+			}
+			otherlv_5='item='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVTraceableParentDocumentAccess().getItemKeyword_4_1());
 			}
 			(
 				(
@@ -426,20 +430,20 @@ ruleVTraceableParentDocument returns [EObject current=null]
 							$current = createModelElement(grammarAccess.getVTraceableParentDocumentRule());
 						}
 					}
-					otherlv_5=RULE_ID
+					otherlv_6=RULE_STRING
 					{
-						newLeafNode(otherlv_5, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0());
+						newLeafNode(otherlv_6, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0());
 					}
 				)
 			)
-			otherlv_6='/>'
+			otherlv_7='/>'
 			{
-				newLeafNode(otherlv_6, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_2());
+				newLeafNode(otherlv_7, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_3());
 			}
 		)*
-		otherlv_7='</parent>'
+		otherlv_8='</parent>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_5());
+			newLeafNode(otherlv_8, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_5());
 		}
 	)
 ;

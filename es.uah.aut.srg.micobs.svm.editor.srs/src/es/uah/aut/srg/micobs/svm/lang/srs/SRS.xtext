@@ -26,7 +26,7 @@ VSRSDocument returns VSRSDocument:
 
 VTraceableParentDocument returns tdm::VTraceableParentDocument: 
 	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>'
-	('<notApplicableItems' notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+	('<notApplicableItem' 'item=' notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 	'</parent>';
 
 

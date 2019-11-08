@@ -2430,9 +2430,9 @@ rule__VTraceableParentDocument__Group_4__0__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsKeyword_4_0()); }
-	'<notApplicableItems'
-	{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsKeyword_4_0()); }
+	{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemKeyword_4_0()); }
+	'<notApplicableItem'
+	{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemKeyword_4_0()); }
 )
 ;
 finally {
@@ -2457,9 +2457,9 @@ rule__VTraceableParentDocument__Group_4__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsAssignment_4_1()); }
-	(rule__VTraceableParentDocument__NotApplicableItemsAssignment_4_1)
-	{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsAssignment_4_1()); }
+	{ before(grammarAccess.getVTraceableParentDocumentAccess().getItemKeyword_4_1()); }
+	'item='
+	{ after(grammarAccess.getVTraceableParentDocumentAccess().getItemKeyword_4_1()); }
 )
 ;
 finally {
@@ -2472,6 +2472,7 @@ rule__VTraceableParentDocument__Group_4__2
 	}
 :
 	rule__VTraceableParentDocument__Group_4__2__Impl
+	rule__VTraceableParentDocument__Group_4__3
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -2483,9 +2484,35 @@ rule__VTraceableParentDocument__Group_4__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_2()); }
+	{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemAssignment_4_2()); }
+	(rule__VTraceableParentDocument__NotApplicableItemAssignment_4_2)
+	{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemAssignment_4_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTraceableParentDocument__Group_4__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTraceableParentDocument__Group_4__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTraceableParentDocument__Group_4__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_3()); }
 	'/>'
-	{ after(grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_2()); }
+	{ after(grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_3()); }
 )
 ;
 finally {
@@ -12706,19 +12733,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTraceableParentDocument__NotApplicableItemsAssignment_4_1
+rule__VTraceableParentDocument__NotApplicableItemAssignment_4_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0()); }
+		{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0()); }
 		(
-			{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1()); }
-			RULE_ID
-			{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1()); }
+			{ before(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_4_2_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_4_2_0_1()); }
 		)
-		{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0()); }
+		{ after(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0()); }
 	)
 ;
 finally {

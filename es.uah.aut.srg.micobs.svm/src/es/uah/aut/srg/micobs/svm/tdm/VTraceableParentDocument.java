@@ -24,7 +24,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getDocument <em>Document</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItems <em>Not Applicable Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItem <em>Not Applicable Item</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableParentDocument()
@@ -59,19 +59,19 @@ public interface VTraceableParentDocument extends EObject {
 	void setDocument(VTraceableDocument value);
 
 	/**
-	 * Returns the value of the '<em><b>Not Applicable Items</b></em>' reference list.
+	 * Returns the value of the '<em><b>Not Applicable Item</b></em>' reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Not Applicable Items</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Not Applicable Item</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Not Applicable Items</em>' reference list.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableParentDocument_NotApplicableItems()
+	 * @return the value of the '<em>Not Applicable Item</em>' reference list.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.tdmPackage#getVTraceableParentDocument_NotApplicableItem()
 	 * @model
 	 * @generated
 	 */
-	EList<VTraceableDocumentAbstractItem> getNotApplicableItems();
+	EList<VTraceableDocumentAbstractItem> getNotApplicableItem();
 
 } // VTraceableParentDocument

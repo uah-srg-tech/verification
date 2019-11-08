@@ -961,7 +961,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VTraceableParentDocument returns VTraceableParentDocument
 	 *
 	 * Constraint:
-	 *     (document=[VTraceableDocument|STRING] notApplicableItems+=[VTraceableDocumentAbstractItem|ID]*)
+	 *     (document=[VTraceableDocument|STRING] notApplicableItem+=[VTraceableDocumentAbstractItem|STRING]*)
 	 */
 	protected void sequence_VTraceableParentDocument(ISerializationContext context, VTraceableParentDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

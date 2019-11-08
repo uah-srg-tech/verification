@@ -334,7 +334,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTraceableParentDocument_NotApplicableItems() {
+	public EReference getVTraceableParentDocument_NotApplicableItem() {
 		return (EReference)vTraceableParentDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -400,7 +400,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 
 		vTraceableParentDocumentEClass = createEClass(VTRACEABLE_PARENT_DOCUMENT);
 		createEReference(vTraceableParentDocumentEClass, VTRACEABLE_PARENT_DOCUMENT__DOCUMENT);
-		createEReference(vTraceableParentDocumentEClass, VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS);
+		createEReference(vTraceableParentDocumentEClass, VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM);
 
 		// Create enums
 		vValidationMethodEEnum = createEEnum(VVALIDATION_METHOD);
@@ -467,7 +467,7 @@ public class tdmPackageImpl extends EPackageImpl implements tdmPackage {
 
 		initEClass(vTraceableParentDocumentEClass, VTraceableParentDocument.class, "VTraceableParentDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVTraceableParentDocument_Document(), this.getVTraceableDocument(), null, "document", null, 1, 1, VTraceableParentDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVTraceableParentDocument_NotApplicableItems(), this.getVTraceableDocumentAbstractItem(), null, "notApplicableItems", null, 0, -1, VTraceableParentDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTraceableParentDocument_NotApplicableItem(), this.getVTraceableDocumentAbstractItem(), null, "notApplicableItem", null, 0, -1, VTraceableParentDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(vValidationMethodEEnum, VValidationMethod.class, "VValidationMethod");

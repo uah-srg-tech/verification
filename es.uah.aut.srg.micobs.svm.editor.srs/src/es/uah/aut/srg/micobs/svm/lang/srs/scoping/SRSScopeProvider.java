@@ -59,7 +59,7 @@ public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
-	public IScope scope_VTraceableDocumentAbstractItem(VTraceableDocument srsDoc, EReference reference) {
+	public IScope scope_VTraceableDocumentAbstractItem_parentItem(VTraceableDocument srsDoc, EReference reference) {
 		
 		Collection<VTraceableDocumentAbstractItem> items = new HashSet<VTraceableDocumentAbstractItem>();
 		

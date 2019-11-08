@@ -38,7 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl#getDocument <em>Document</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl#getNotApplicableItems <em>Not Applicable Items</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableParentDocumentImpl#getNotApplicableItem <em>Not Applicable Item</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +55,14 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 	protected VTraceableDocument document;
 
 	/**
-	 * The cached value of the '{@link #getNotApplicableItems() <em>Not Applicable Items</em>}' reference list.
+	 * The cached value of the '{@link #getNotApplicableItem() <em>Not Applicable Item</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getNotApplicableItems()
+	 * @see #getNotApplicableItem()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTraceableDocumentAbstractItem> notApplicableItems;
+	protected EList<VTraceableDocumentAbstractItem> notApplicableItem;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -126,11 +126,11 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTraceableDocumentAbstractItem> getNotApplicableItems() {
-		if (notApplicableItems == null) {
-			notApplicableItems = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS);
+	public EList<VTraceableDocumentAbstractItem> getNotApplicableItem() {
+		if (notApplicableItem == null) {
+			notApplicableItem = new EObjectResolvingEList<VTraceableDocumentAbstractItem>(VTraceableDocumentAbstractItem.class, this, tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM);
 		}
-		return notApplicableItems;
+		return notApplicableItem;
 	}
 
 	/**
@@ -144,8 +144,8 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__DOCUMENT:
 				if (resolve) return getDocument();
 				return basicGetDocument();
-			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS:
-				return getNotApplicableItems();
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM:
+				return getNotApplicableItem();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,9 +162,9 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__DOCUMENT:
 				setDocument((VTraceableDocument)newValue);
 				return;
-			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS:
-				getNotApplicableItems().clear();
-				getNotApplicableItems().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM:
+				getNotApplicableItem().clear();
+				getNotApplicableItem().addAll((Collection<? extends VTraceableDocumentAbstractItem>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,8 +181,8 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__DOCUMENT:
 				setDocument((VTraceableDocument)null);
 				return;
-			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS:
-				getNotApplicableItems().clear();
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM:
+				getNotApplicableItem().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -198,8 +198,8 @@ public class VTraceableParentDocumentImpl extends MinimalEObjectImpl.Container i
 		switch (featureID) {
 			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__DOCUMENT:
 				return document != null;
-			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS:
-				return notApplicableItems != null && !notApplicableItems.isEmpty();
+			case tdmPackage.VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM:
+				return notApplicableItem != null && !notApplicableItem.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

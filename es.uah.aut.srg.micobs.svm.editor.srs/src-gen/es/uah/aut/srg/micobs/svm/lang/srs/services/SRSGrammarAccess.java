@@ -210,21 +210,22 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDocumentVTraceableDocumentSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cDocumentVTraceableDocumentCrossReference_2_0.eContents().get(1);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cNotApplicableItemsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cNotApplicableItemsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0 = (CrossReference)cNotApplicableItemsAssignment_4_1.eContents().get(0);
-		private final RuleCall cNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1 = (RuleCall)cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Keyword cNotApplicableItemKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cItemKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cNotApplicableItemAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0 = (CrossReference)cNotApplicableItemAssignment_4_2.eContents().get(0);
+		private final RuleCall cNotApplicableItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		private final Keyword cParentKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VTraceableParentDocument tdm::VTraceableParentDocument:
-		//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
-		//	notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+		//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItem' 'item='
+		//	notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 		//	'</parent>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
-		//notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')* '</parent>'
+		//'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItem' 'item='
+		//notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')* '</parent>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<parent'
@@ -245,23 +246,26 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//('<notApplicableItems' notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+		//('<notApplicableItem' 'item=' notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 		public Group getGroup_4() { return cGroup_4; }
 		
-		//'<notApplicableItems'
-		public Keyword getNotApplicableItemsKeyword_4_0() { return cNotApplicableItemsKeyword_4_0; }
+		//'<notApplicableItem'
+		public Keyword getNotApplicableItemKeyword_4_0() { return cNotApplicableItemKeyword_4_0; }
 		
-		//notApplicableItems+=[tdm::VTraceableDocumentAbstractItem]
-		public Assignment getNotApplicableItemsAssignment_4_1() { return cNotApplicableItemsAssignment_4_1; }
+		//'item='
+		public Keyword getItemKeyword_4_1() { return cItemKeyword_4_1; }
 		
-		//[tdm::VTraceableDocumentAbstractItem]
-		public CrossReference getNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0() { return cNotApplicableItemsVTraceableDocumentAbstractItemCrossReference_4_1_0; }
+		//notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING]
+		public Assignment getNotApplicableItemAssignment_4_2() { return cNotApplicableItemAssignment_4_2; }
 		
-		//ID
-		public RuleCall getNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1() { return cNotApplicableItemsVTraceableDocumentAbstractItemIDTerminalRuleCall_4_1_0_1; }
+		//[tdm::VTraceableDocumentAbstractItem|STRING]
+		public CrossReference getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0() { return cNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0; }
+		
+		//STRING
+		public RuleCall getNotApplicableItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_4_2_0_1() { return cNotApplicableItemVTraceableDocumentAbstractItemSTRINGTerminalRuleCall_4_2_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4_2() { return cSolidusGreaterThanSignKeyword_4_2; }
+		public Keyword getSolidusGreaterThanSignKeyword_4_3() { return cSolidusGreaterThanSignKeyword_4_3; }
 		
 		//'</parent>'
 		public Keyword getParentKeyword_5() { return cParentKeyword_5; }
@@ -3583,8 +3587,8 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VTraceableParentDocument tdm::VTraceableParentDocument:
-	//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItems'
-	//	notApplicableItems+=[tdm::VTraceableDocumentAbstractItem] '/>')*
+	//	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>' ('<notApplicableItem' 'item='
+	//	notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
 	//	'</parent>'
 	public VTraceableParentDocumentElements getVTraceableParentDocumentAccess() {
 		return pVTraceableParentDocument;

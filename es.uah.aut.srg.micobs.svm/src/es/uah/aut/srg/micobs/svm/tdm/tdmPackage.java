@@ -396,13 +396,13 @@ public interface tdmPackage extends EPackage {
 	int VTRACEABLE_PARENT_DOCUMENT__DOCUMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Not Applicable Items</b></em>' reference list.
+	 * The feature id for the '<em><b>Not Applicable Item</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS = 1;
+	int VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM = 1;
 
 	/**
 	 * The number of structural features of the '<em>VTraceable Parent Document</em>' class.
@@ -647,15 +647,15 @@ public interface tdmPackage extends EPackage {
 	EReference getVTraceableParentDocument_Document();
 
 	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItems <em>Not Applicable Items</em>}'.
+	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItem <em>Not Applicable Item</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Not Applicable Items</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItems()
+	 * @return the meta object for the reference list '<em>Not Applicable Item</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tdm.VTraceableParentDocument#getNotApplicableItem()
 	 * @see #getVTraceableParentDocument()
 	 * @generated
 	 */
-	EReference getVTraceableParentDocument_NotApplicableItems();
+	EReference getVTraceableParentDocument_NotApplicableItem();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}'.
@@ -863,12 +863,12 @@ public interface tdmPackage extends EPackage {
 		EReference VTRACEABLE_PARENT_DOCUMENT__DOCUMENT = eINSTANCE.getVTraceableParentDocument_Document();
 
 		/**
-		 * The meta object literal for the '<em><b>Not Applicable Items</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Not Applicable Item</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEMS = eINSTANCE.getVTraceableParentDocument_NotApplicableItems();
+		EReference VTRACEABLE_PARENT_DOCUMENT__NOT_APPLICABLE_ITEM = eINSTANCE.getVTraceableParentDocument_NotApplicableItem();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.tdm.VValidationMethod <em>VValidation Method</em>}' enum.

@@ -138,7 +138,7 @@ public class SRSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionAssignment_18(), "rule__VSRSDocument__RequirementsSectionAssignment_18");
 					put(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionAssignment_19(), "rule__VSRSDocument__LogicalModelsSectionAssignment_19");
 					put(grammarAccess.getVTraceableParentDocumentAccess().getDocumentAssignment_2(), "rule__VTraceableParentDocument__DocumentAssignment_2");
-					put(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemsAssignment_4_1(), "rule__VTraceableParentDocument__NotApplicableItemsAssignment_4_1");
+					put(grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemAssignment_4_2(), "rule__VTraceableParentDocument__NotApplicableItemAssignment_4_2");
 					put(grammarAccess.getDBodyAccess().getBodyContentAssignment_1(), "rule__DBody__BodyContentAssignment_1");
 					put(grammarAccess.getDParagraphAccess().getStyleAssignment_1_1(), "rule__DParagraph__StyleAssignment_1_1");
 					put(grammarAccess.getDParagraphAccess().getAlignmentAssignment_2_1(), "rule__DParagraph__AlignmentAssignment_2_1");
