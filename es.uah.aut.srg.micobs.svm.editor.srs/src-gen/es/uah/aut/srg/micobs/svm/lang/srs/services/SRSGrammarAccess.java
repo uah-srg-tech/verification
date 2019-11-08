@@ -627,25 +627,29 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cBoldTrueKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Keyword cItalicsTrueKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cUnderlineTrueKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cTabAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTabDTabParserRuleCall_5_0 = (RuleCall)cTabAssignment_5.eContents().get(0);
-		private final Assignment cTextAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cTextDTextParserRuleCall_6_0 = (RuleCall)cTextAssignment_6.eContents().get(0);
-		private final Keyword cRunKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cColorKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cColorAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cColorSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cColorAssignment_4_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cTabAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cTabDTabParserRuleCall_6_0 = (RuleCall)cTabAssignment_6.eContents().get(0);
+		private final Assignment cTextAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cTextDTextParserRuleCall_7_0 = (RuleCall)cTextAssignment_7.eContents().get(0);
+		private final Keyword cRunKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DRun doctpl::DRun:
 		//	'<run'
 		//	'bold="true"'?
 		//	'italics="true"'?
-		//	'underline="true"'?
+		//	'underline="true"'? ('color=' color=STRING)?
 		//	'>'
 		//	tab=DTab?
 		//	text=DText
 		//	'</run>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? '>' tab=DTab? text=DText '</run>'
+		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? ('color=' color=STRING)? '>' tab=DTab? text=DText '</run>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<run'
@@ -660,23 +664,35 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'underline="true"'?
 		public Keyword getUnderlineTrueKeyword_3() { return cUnderlineTrueKeyword_3; }
 		
+		//('color=' color=STRING)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'color='
+		public Keyword getColorKeyword_4_0() { return cColorKeyword_4_0; }
+		
+		//color=STRING
+		public Assignment getColorAssignment_4_1() { return cColorAssignment_4_1; }
+		
+		//STRING
+		public RuleCall getColorSTRINGTerminalRuleCall_4_1_0() { return cColorSTRINGTerminalRuleCall_4_1_0; }
+		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_4() { return cGreaterThanSignKeyword_4; }
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
 		//tab=DTab?
-		public Assignment getTabAssignment_5() { return cTabAssignment_5; }
+		public Assignment getTabAssignment_6() { return cTabAssignment_6; }
 		
 		//DTab
-		public RuleCall getTabDTabParserRuleCall_5_0() { return cTabDTabParserRuleCall_5_0; }
+		public RuleCall getTabDTabParserRuleCall_6_0() { return cTabDTabParserRuleCall_6_0; }
 		
 		//text=DText
-		public Assignment getTextAssignment_6() { return cTextAssignment_6; }
+		public Assignment getTextAssignment_7() { return cTextAssignment_7; }
 		
 		//DText
-		public RuleCall getTextDTextParserRuleCall_6_0() { return cTextDTextParserRuleCall_6_0; }
+		public RuleCall getTextDTextParserRuleCall_7_0() { return cTextDTextParserRuleCall_7_0; }
 		
 		//'</run>'
-		public Keyword getRunKeyword_7() { return cRunKeyword_7; }
+		public Keyword getRunKeyword_8() { return cRunKeyword_8; }
 	}
 	public class DHyperlinkElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DHyperlink");
@@ -3759,7 +3775,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<run'
 	//	'bold="true"'?
 	//	'italics="true"'?
-	//	'underline="true"'?
+	//	'underline="true"'? ('color=' color=STRING)?
 	//	'>'
 	//	tab=DTab?
 	//	text=DText

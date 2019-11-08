@@ -82,6 +82,7 @@ DRun returns doctpl::DRun:
 		('bold="true"')?
 		('italics="true"')?
 		('underline="true"')?
+		('color=' color=STRING)?
 	'>'
 		(tab=DTab)?
 		text=DText

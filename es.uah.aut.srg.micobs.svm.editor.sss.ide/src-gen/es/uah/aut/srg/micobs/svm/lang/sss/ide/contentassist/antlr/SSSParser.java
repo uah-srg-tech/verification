@@ -61,6 +61,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDEnumerateAccess().getGroup_1(), "rule__DEnumerate__Group_1__0");
 					put(grammarAccess.getDEnumerateAccess().getGroup_2(), "rule__DEnumerate__Group_2__0");
 					put(grammarAccess.getDRunAccess().getGroup(), "rule__DRun__Group__0");
+					put(grammarAccess.getDRunAccess().getGroup_4(), "rule__DRun__Group_4__0");
 					put(grammarAccess.getDHyperlinkAccess().getGroup(), "rule__DHyperlink__Group__0");
 					put(grammarAccess.getDTabAccess().getGroup(), "rule__DTab__Group__0");
 					put(grammarAccess.getDFigureFromFileAccess().getGroup(), "rule__DFigureFromFile__Group__0");
@@ -149,8 +150,9 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDEnumerateAccess().getAlignmentAssignment_1_1(), "rule__DEnumerate__AlignmentAssignment_1_1");
 					put(grammarAccess.getDEnumerateAccess().getStyleAssignment_2_1(), "rule__DEnumerate__StyleAssignment_2_1");
 					put(grammarAccess.getDEnumerateAccess().getItemsAssignment_4(), "rule__DEnumerate__ItemsAssignment_4");
-					put(grammarAccess.getDRunAccess().getTabAssignment_5(), "rule__DRun__TabAssignment_5");
-					put(grammarAccess.getDRunAccess().getTextAssignment_6(), "rule__DRun__TextAssignment_6");
+					put(grammarAccess.getDRunAccess().getColorAssignment_4_1(), "rule__DRun__ColorAssignment_4_1");
+					put(grammarAccess.getDRunAccess().getTabAssignment_6(), "rule__DRun__TabAssignment_6");
+					put(grammarAccess.getDRunAccess().getTextAssignment_7(), "rule__DRun__TextAssignment_7");
 					put(grammarAccess.getDHyperlinkAccess().getReferenceAssignment_2(), "rule__DHyperlink__ReferenceAssignment_2");
 					put(grammarAccess.getDHyperlinkAccess().getRunAssignment_4(), "rule__DHyperlink__RunAssignment_4");
 					put(grammarAccess.getDTextAccess().getContentAssignment(), "rule__DText__ContentAssignment");

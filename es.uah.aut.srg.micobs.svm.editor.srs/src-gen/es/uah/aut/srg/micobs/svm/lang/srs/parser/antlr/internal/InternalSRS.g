@@ -1078,16 +1078,40 @@ ruleDRun returns [EObject current=null]
 				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
 			}
 		)?
-		otherlv_4='>'
+		(
+			otherlv_4='color='
+			{
+				newLeafNode(otherlv_4, grammarAccess.getDRunAccess().getColorKeyword_4_0());
+			}
+			(
+				(
+					lv_color_5_0=RULE_STRING
+					{
+						newLeafNode(lv_color_5_0, grammarAccess.getDRunAccess().getColorSTRINGTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDRunRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"color",
+							lv_color_5_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_6='>'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getDRunAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_6, grammarAccess.getDRunAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDRunAccess().getTabDTabParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDRunAccess().getTabDTabParserRuleCall_6_0());
 				}
-				lv_tab_5_0=ruleDTab
+				lv_tab_7_0=ruleDTab
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRunRule());
@@ -1095,7 +1119,7 @@ ruleDRun returns [EObject current=null]
 					set(
 						$current,
 						"tab",
-						lv_tab_5_0,
+						lv_tab_7_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DTab");
 					afterParserOrEnumRuleCall();
 				}
@@ -1104,9 +1128,9 @@ ruleDRun returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_7_0());
 				}
-				lv_text_6_0=ruleDText
+				lv_text_8_0=ruleDText
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRunRule());
@@ -1114,15 +1138,15 @@ ruleDRun returns [EObject current=null]
 					set(
 						$current,
 						"text",
-						lv_text_6_0,
+						lv_text_8_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DText");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='</run>'
+		otherlv_9='</run>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDRunAccess().getRunKeyword_7());
+			newLeafNode(otherlv_9, grammarAccess.getDRunAccess().getRunKeyword_8());
 		}
 	)
 ;
