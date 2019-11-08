@@ -83,4 +83,31 @@ public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 		});
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
+
+	public IScope scope_VTraceableParentDocument_notApplicableItem(VTraceableParentDocument srsParentDoc, EReference reference) {
+		
+		Collection<VTraceableDocumentAbstractItem> items = new HashSet<VTraceableDocumentAbstractItem>();
+		
+		if(srsParentDoc.getDocument() != null)
+		{
+			VTraceableDocument doc = srsParentDoc.getDocument();
+			for(VTraceableDocumentAbstractGroup group : doc.getGroups()) {
+				items.addAll(group.getItems());
+			}
+		}
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VTraceableDocumentAbstractItem, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTraceableDocumentAbstractItem from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
 }
