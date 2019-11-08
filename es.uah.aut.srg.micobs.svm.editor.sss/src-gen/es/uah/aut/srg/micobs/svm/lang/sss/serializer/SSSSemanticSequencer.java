@@ -266,7 +266,14 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DBasicTable returns DBasicTable
 	 *
 	 * Constraint:
-	 *     (name=STRING width=UINT_STRING? alignment=DAlignment? caption=STRING? rows+=DRow+)
+	 *     (
+	 *         name=STRING 
+	 *         width=UINT_STRING? 
+	 *         alignment=DAlignment? 
+	 *         style=STRING? 
+	 *         caption=STRING? 
+	 *         rows+=DRow+
+	 *     )
 	 */
 	protected void sequence_DBasicTable(ISerializationContext context, DBasicTable semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -290,7 +297,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DCell returns DCell
 	 *
 	 * Constraint:
-	 *     (gridSpan=UINT_STRING? vMerge=DMergeType? width=UINT_STRING? shadow=STRING? bodyContent+=DBodyContent+)
+	 *     (colSpan=UINT_STRING? rowSpan=UINT_STRING? width=UINT_STRING? shadow=STRING? bodyContent+=DBodyContent+)
 	 */
 	protected void sequence_DCell(ISerializationContext context, DCell semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -304,7 +311,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DEnumerate returns DEnumerate
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? items+=DListItem+)
+	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DEnumerate(ISerializationContext context, DEnumerate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -323,6 +330,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         width=UINT_STRING 
 	 *         height=UINT_STRING 
 	 *         alignment=DAlignment? 
+	 *         style=STRING? 
 	 *         caption=STRING?
 	 *     )
 	 */
@@ -351,7 +359,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DItemize returns DItemize
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? items+=DListItem+)
+	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DItemize(ISerializationContext context, DItemize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -444,6 +452,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         width=UINT_STRING 
 	 *         height=UINT_STRING 
 	 *         alignment=DAlignment? 
+	 *         style=STRING? 
 	 *         caption=STRING?
 	 *     )
 	 */
