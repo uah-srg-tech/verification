@@ -209,7 +209,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> svsFigures;
+	protected EList<DAbstractFigure> svsFigures;
 
 	/**
 	 * The cached value of the '{@link #getSvsTables() <em>Svs Tables</em>}' containment reference list.
@@ -219,7 +219,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> svsTables;
+	protected EList<DAbstractTable> svsTables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -826,9 +826,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSvsFigures() {
+	public EList<DAbstractFigure> getSvsFigures() {
 		if (svsFigures == null) {
-			svsFigures = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure.class, this, svsPackage.VSVS_DOCUMENT__SVS_FIGURES);
+			svsFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, svsPackage.VSVS_DOCUMENT__SVS_FIGURES);
 		}
 		return svsFigures;
 	}
@@ -838,9 +838,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSvsTables() {
+	public EList<DAbstractTable> getSvsTables() {
 		if (svsTables == null) {
-			svsTables = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable.class, this, svsPackage.VSVS_DOCUMENT__SVS_TABLES);
+			svsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, svsPackage.VSVS_DOCUMENT__SVS_TABLES);
 		}
 		return svsTables;
 	}
@@ -946,23 +946,23 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		switch (featureID) {
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__FIGURES:
 				getFigures().clear();
-				getFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__TABLES:
 				getTables().clear();
-				getTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				getSections().clear();
-				getSections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)newValue);
@@ -1002,11 +1002,11 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return;
 			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
 				getSvsFigures().clear();
-				getSvsFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getSvsFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
 				getSvsTables().clear();
-				getSvsTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getSvsTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

@@ -12524,30 +12524,24 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepInputs"
-    // InternalSVS.g:4865:1: ruleVSVSStepInputs returns [EObject current=null] : ( () otherlv_1= '<inputs>' ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+ otherlv_6= '</inputs>' ) ;
+    // InternalSVS.g:4865:1: ruleVSVSStepInputs returns [EObject current=null] : ( () otherlv_1= '<inputs>' ( (lv_input_2_0= ruleVSVSStepInput ) )+ otherlv_3= '</inputs>' ) ;
     public final EObject ruleVSVSStepInputs() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        Token otherlv_6=null;
-        EObject lv_input_level_3_2_0 = null;
-
-        EObject lv_input_level_2_3_0 = null;
-
-        EObject lv_input_level_1_4_0 = null;
-
-        EObject lv_input_level_0_5_0 = null;
+        Token otherlv_3=null;
+        EObject lv_input_2_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSVS.g:4871:2: ( ( () otherlv_1= '<inputs>' ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+ otherlv_6= '</inputs>' ) )
-            // InternalSVS.g:4872:2: ( () otherlv_1= '<inputs>' ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+ otherlv_6= '</inputs>' )
+            // InternalSVS.g:4871:2: ( ( () otherlv_1= '<inputs>' ( (lv_input_2_0= ruleVSVSStepInput ) )+ otherlv_3= '</inputs>' ) )
+            // InternalSVS.g:4872:2: ( () otherlv_1= '<inputs>' ( (lv_input_2_0= ruleVSVSStepInput ) )+ otherlv_3= '</inputs>' )
             {
-            // InternalSVS.g:4872:2: ( () otherlv_1= '<inputs>' ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+ otherlv_6= '</inputs>' )
-            // InternalSVS.g:4873:3: () otherlv_1= '<inputs>' ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+ otherlv_6= '</inputs>'
+            // InternalSVS.g:4872:2: ( () otherlv_1= '<inputs>' ( (lv_input_2_0= ruleVSVSStepInput ) )+ otherlv_3= '</inputs>' )
+            // InternalSVS.g:4873:3: () otherlv_1= '<inputs>' ( (lv_input_2_0= ruleVSVSStepInput ) )+ otherlv_3= '</inputs>'
             {
             // InternalSVS.g:4873:3: ()
             // InternalSVS.g:4874:4: 
@@ -12573,194 +12567,48 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_1());
               		
             }
-            // InternalSVS.g:4887:3: ( ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) ) | ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) ) | ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) ) | ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) ) )+
+            // InternalSVS.g:4887:3: ( (lv_input_2_0= ruleVSVSStepInput ) )+
             int cnt80=0;
             loop80:
             do {
-                int alt80=5;
-                switch ( input.LA(1) ) {
-                case 164:
-                    {
-                    alt80=1;
-                    }
-                    break;
-                case 179:
-                    {
-                    alt80=2;
-                    }
-                    break;
-                case 182:
-                    {
-                    alt80=3;
-                    }
-                    break;
-                case 185:
-                    {
-                    alt80=4;
-                    }
-                    break;
+                int alt80=2;
+                int LA80_0 = input.LA(1);
 
+                if ( (LA80_0==164||LA80_0==179||LA80_0==182||LA80_0==185) ) {
+                    alt80=1;
                 }
+
 
                 switch (alt80) {
             	case 1 :
-            	    // InternalSVS.g:4888:4: ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) )
+            	    // InternalSVS.g:4888:4: (lv_input_2_0= ruleVSVSStepInput )
             	    {
-            	    // InternalSVS.g:4888:4: ( (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 ) )
-            	    // InternalSVS.g:4889:5: (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 )
-            	    {
-            	    // InternalSVS.g:4889:5: (lv_input_level_3_2_0= ruleVSVSStepInputLevel3 )
-            	    // InternalSVS.g:4890:6: lv_input_level_3_2_0= ruleVSVSStepInputLevel3
+            	    // InternalSVS.g:4888:4: (lv_input_2_0= ruleVSVSStepInput )
+            	    // InternalSVS.g:4889:5: lv_input_2_0= ruleVSVSStepInput
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_3VSVSStepInputLevel3ParserRuleCall_2_0_0());
-            	      					
+            	      					newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInputVSVSStepInputParserRuleCall_2_0());
+            	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_178);
-            	    lv_input_level_3_2_0=ruleVSVSStepInputLevel3();
+            	    lv_input_2_0=ruleVSVSStepInput();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"input_level_3",
-            	      							lv_input_level_3_2_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel3");
-            	      						afterParserOrEnumRuleCall();
-            	      					
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"input",
+            	      						lv_input_2_0,
+            	      						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // InternalSVS.g:4908:4: ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) )
-            	    {
-            	    // InternalSVS.g:4908:4: ( (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 ) )
-            	    // InternalSVS.g:4909:5: (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 )
-            	    {
-            	    // InternalSVS.g:4909:5: (lv_input_level_2_3_0= ruleVSVSStepInputLevel2 )
-            	    // InternalSVS.g:4910:6: lv_input_level_2_3_0= ruleVSVSStepInputLevel2
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_2VSVSStepInputLevel2ParserRuleCall_2_1_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_178);
-            	    lv_input_level_2_3_0=ruleVSVSStepInputLevel2();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"input_level_2",
-            	      							lv_input_level_2_3_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel2");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // InternalSVS.g:4928:4: ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) )
-            	    {
-            	    // InternalSVS.g:4928:4: ( (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 ) )
-            	    // InternalSVS.g:4929:5: (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 )
-            	    {
-            	    // InternalSVS.g:4929:5: (lv_input_level_1_4_0= ruleVSVSStepInputLevel1 )
-            	    // InternalSVS.g:4930:6: lv_input_level_1_4_0= ruleVSVSStepInputLevel1
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_1VSVSStepInputLevel1ParserRuleCall_2_2_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_178);
-            	    lv_input_level_1_4_0=ruleVSVSStepInputLevel1();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"input_level_1",
-            	      							lv_input_level_1_4_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel1");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // InternalSVS.g:4948:4: ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) )
-            	    {
-            	    // InternalSVS.g:4948:4: ( (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 ) )
-            	    // InternalSVS.g:4949:5: (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 )
-            	    {
-            	    // InternalSVS.g:4949:5: (lv_input_level_0_5_0= ruleVSVSStepInputLevel0 )
-            	    // InternalSVS.g:4950:6: lv_input_level_0_5_0= ruleVSVSStepInputLevel0
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInput_level_0VSVSStepInputLevel0ParserRuleCall_2_3_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_178);
-            	    lv_input_level_0_5_0=ruleVSVSStepInputLevel0();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"input_level_0",
-            	      							lv_input_level_0_5_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel0");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
 
             	    }
 
@@ -12778,10 +12626,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                 cnt80++;
             } while (true);
 
-            otherlv_6=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_3=(Token)match(input,153,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_3());
               		
             }
 
@@ -12809,7 +12657,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepOutputs"
-    // InternalSVS.g:4976:1: entryRuleVSVSStepOutputs returns [EObject current=null] : iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF ;
+    // InternalSVS.g:4914:1: entryRuleVSVSStepOutputs returns [EObject current=null] : iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF ;
     public final EObject entryRuleVSVSStepOutputs() throws RecognitionException {
         EObject current = null;
 
@@ -12817,8 +12665,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:4976:56: (iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF )
-            // InternalSVS.g:4977:2: iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF
+            // InternalSVS.g:4914:56: (iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF )
+            // InternalSVS.g:4915:2: iv_ruleVSVSStepOutputs= ruleVSVSStepOutputs EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepOutputsRule()); 
@@ -12849,7 +12697,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepOutputs"
-    // InternalSVS.g:4983:1: ruleVSVSStepOutputs returns [EObject current=null] : (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+ otherlv_12= '</outputs>' ) ;
+    // InternalSVS.g:4921:1: ruleVSVSStepOutputs returns [EObject current=null] : (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( (lv_output_8_0= ruleVSVSStepOutput ) )+ otherlv_9= '</outputs>' ) ;
     public final EObject ruleVSVSStepOutputs() throws RecognitionException {
         EObject current = null;
 
@@ -12859,29 +12707,23 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         Token lv_valid_time_interval_value_4_0=null;
         Token otherlv_5=null;
         Token otherlv_7=null;
-        Token otherlv_12=null;
+        Token otherlv_9=null;
         Enumerator lv_checkmode_2_0 = null;
 
         Enumerator lv_valid_time_interval_unit_6_0 = null;
 
-        EObject lv_output_level_3_8_0 = null;
-
-        EObject lv_output_level_2_9_0 = null;
-
-        EObject lv_output_level_1_10_0 = null;
-
-        EObject lv_output_level_0_11_0 = null;
+        EObject lv_output_8_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalSVS.g:4989:2: ( (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+ otherlv_12= '</outputs>' ) )
-            // InternalSVS.g:4990:2: (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+ otherlv_12= '</outputs>' )
+            // InternalSVS.g:4927:2: ( (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( (lv_output_8_0= ruleVSVSStepOutput ) )+ otherlv_9= '</outputs>' ) )
+            // InternalSVS.g:4928:2: (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( (lv_output_8_0= ruleVSVSStepOutput ) )+ otherlv_9= '</outputs>' )
             {
-            // InternalSVS.g:4990:2: (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+ otherlv_12= '</outputs>' )
-            // InternalSVS.g:4991:3: otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+ otherlv_12= '</outputs>'
+            // InternalSVS.g:4928:2: (otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( (lv_output_8_0= ruleVSVSStepOutput ) )+ otherlv_9= '</outputs>' )
+            // InternalSVS.g:4929:3: otherlv_0= '<outputs' otherlv_1= 'checkmode=' ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) ) otherlv_3= 'valid_time_interval_value=' ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) ) otherlv_5= 'valid_time_interval_unit=' ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) ) otherlv_7= '>' ( (lv_output_8_0= ruleVSVSStepOutput ) )+ otherlv_9= '</outputs>'
             {
             otherlv_0=(Token)match(input,154,FollowSets000.FOLLOW_179); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12895,11 +12737,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputsAccess().getCheckmodeKeyword_1());
               		
             }
-            // InternalSVS.g:4999:3: ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) )
-            // InternalSVS.g:5000:4: (lv_checkmode_2_0= ruleVSVSStepCheckmode )
+            // InternalSVS.g:4937:3: ( (lv_checkmode_2_0= ruleVSVSStepCheckmode ) )
+            // InternalSVS.g:4938:4: (lv_checkmode_2_0= ruleVSVSStepCheckmode )
             {
-            // InternalSVS.g:5000:4: (lv_checkmode_2_0= ruleVSVSStepCheckmode )
-            // InternalSVS.g:5001:5: lv_checkmode_2_0= ruleVSVSStepCheckmode
+            // InternalSVS.g:4938:4: (lv_checkmode_2_0= ruleVSVSStepCheckmode )
+            // InternalSVS.g:4939:5: lv_checkmode_2_0= ruleVSVSStepCheckmode
             {
             if ( state.backtracking==0 ) {
 
@@ -12936,11 +12778,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueKeyword_3());
               		
             }
-            // InternalSVS.g:5022:3: ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:5023:4: (lv_valid_time_interval_value_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:4960:3: ( (lv_valid_time_interval_value_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:4961:4: (lv_valid_time_interval_value_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:5023:4: (lv_valid_time_interval_value_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:5024:5: lv_valid_time_interval_value_4_0= RULE_UINT_STRING
+            // InternalSVS.g:4961:4: (lv_valid_time_interval_value_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:4962:5: lv_valid_time_interval_value_4_0= RULE_UINT_STRING
             {
             lv_valid_time_interval_value_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_182); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -12972,11 +12814,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_unitKeyword_5());
               		
             }
-            // InternalSVS.g:5044:3: ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) )
-            // InternalSVS.g:5045:4: (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit )
+            // InternalSVS.g:4982:3: ( (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit ) )
+            // InternalSVS.g:4983:4: (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit )
             {
-            // InternalSVS.g:5045:4: (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit )
-            // InternalSVS.g:5046:5: lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit
+            // InternalSVS.g:4983:4: (lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit )
+            // InternalSVS.g:4984:5: lv_valid_time_interval_unit_6_0= ruleVSVSStepUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -13013,194 +12855,48 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputsAccess().getGreaterThanSignKeyword_7());
               		
             }
-            // InternalSVS.g:5067:3: ( ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) ) | ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) ) | ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) ) | ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) ) )+
+            // InternalSVS.g:5005:3: ( (lv_output_8_0= ruleVSVSStepOutput ) )+
             int cnt81=0;
             loop81:
             do {
-                int alt81=5;
-                switch ( input.LA(1) ) {
-                case 188:
-                    {
-                    alt81=1;
-                    }
-                    break;
-                case 195:
-                    {
-                    alt81=2;
-                    }
-                    break;
-                case 197:
-                    {
-                    alt81=3;
-                    }
-                    break;
-                case 199:
-                    {
-                    alt81=4;
-                    }
-                    break;
+                int alt81=2;
+                int LA81_0 = input.LA(1);
 
+                if ( (LA81_0==188||LA81_0==195||LA81_0==197||LA81_0==199) ) {
+                    alt81=1;
                 }
+
 
                 switch (alt81) {
             	case 1 :
-            	    // InternalSVS.g:5068:4: ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) )
+            	    // InternalSVS.g:5006:4: (lv_output_8_0= ruleVSVSStepOutput )
             	    {
-            	    // InternalSVS.g:5068:4: ( (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 ) )
-            	    // InternalSVS.g:5069:5: (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 )
-            	    {
-            	    // InternalSVS.g:5069:5: (lv_output_level_3_8_0= ruleVSVSStepOutputLevel3 )
-            	    // InternalSVS.g:5070:6: lv_output_level_3_8_0= ruleVSVSStepOutputLevel3
+            	    // InternalSVS.g:5006:4: (lv_output_8_0= ruleVSVSStepOutput )
+            	    // InternalSVS.g:5007:5: lv_output_8_0= ruleVSVSStepOutput
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_3VSVSStepOutputLevel3ParserRuleCall_8_0_0());
-            	      					
+            	      					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutputVSVSStepOutputParserRuleCall_8_0());
+            	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_185);
-            	    lv_output_level_3_8_0=ruleVSVSStepOutputLevel3();
+            	    lv_output_8_0=ruleVSVSStepOutput();
 
             	    state._fsp--;
             	    if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"output_level_3",
-            	      							lv_output_level_3_8_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel3");
-            	      						afterParserOrEnumRuleCall();
-            	      					
+            	      					if (current==null) {
+            	      						current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+            	      					}
+            	      					add(
+            	      						current,
+            	      						"output",
+            	      						lv_output_8_0,
+            	      						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutput");
+            	      					afterParserOrEnumRuleCall();
+            	      				
             	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 2 :
-            	    // InternalSVS.g:5088:4: ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) )
-            	    {
-            	    // InternalSVS.g:5088:4: ( (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 ) )
-            	    // InternalSVS.g:5089:5: (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 )
-            	    {
-            	    // InternalSVS.g:5089:5: (lv_output_level_2_9_0= ruleVSVSStepOutputLevel2 )
-            	    // InternalSVS.g:5090:6: lv_output_level_2_9_0= ruleVSVSStepOutputLevel2
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_2VSVSStepOutputLevel2ParserRuleCall_8_1_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_185);
-            	    lv_output_level_2_9_0=ruleVSVSStepOutputLevel2();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"output_level_2",
-            	      							lv_output_level_2_9_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel2");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 3 :
-            	    // InternalSVS.g:5108:4: ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) )
-            	    {
-            	    // InternalSVS.g:5108:4: ( (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 ) )
-            	    // InternalSVS.g:5109:5: (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 )
-            	    {
-            	    // InternalSVS.g:5109:5: (lv_output_level_1_10_0= ruleVSVSStepOutputLevel1 )
-            	    // InternalSVS.g:5110:6: lv_output_level_1_10_0= ruleVSVSStepOutputLevel1
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_1VSVSStepOutputLevel1ParserRuleCall_8_2_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_185);
-            	    lv_output_level_1_10_0=ruleVSVSStepOutputLevel1();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"output_level_1",
-            	      							lv_output_level_1_10_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel1");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-            	case 4 :
-            	    // InternalSVS.g:5128:4: ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) )
-            	    {
-            	    // InternalSVS.g:5128:4: ( (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 ) )
-            	    // InternalSVS.g:5129:5: (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 )
-            	    {
-            	    // InternalSVS.g:5129:5: (lv_output_level_0_11_0= ruleVSVSStepOutputLevel0 )
-            	    // InternalSVS.g:5130:6: lv_output_level_0_11_0= ruleVSVSStepOutputLevel0
-            	    {
-            	    if ( state.backtracking==0 ) {
-
-            	      						newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutput_level_0VSVSStepOutputLevel0ParserRuleCall_8_3_0());
-            	      					
-            	    }
-            	    pushFollow(FollowSets000.FOLLOW_185);
-            	    lv_output_level_0_11_0=ruleVSVSStepOutputLevel0();
-
-            	    state._fsp--;
-            	    if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      						if (current==null) {
-            	      							current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
-            	      						}
-            	      						add(
-            	      							current,
-            	      							"output_level_0",
-            	      							lv_output_level_0_11_0,
-            	      							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel0");
-            	      						afterParserOrEnumRuleCall();
-            	      					
-            	    }
-
-            	    }
-
 
             	    }
 
@@ -13218,10 +12914,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                 cnt81++;
             } while (true);
 
-            otherlv_12=(Token)match(input,158,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_9=(Token)match(input,158,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_12, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_9());
+              			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_9());
               		
             }
 
@@ -13249,7 +12945,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepSpecialPackets"
-    // InternalSVS.g:5156:1: entryRuleVSVSStepSpecialPackets returns [EObject current=null] : iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF ;
+    // InternalSVS.g:5032:1: entryRuleVSVSStepSpecialPackets returns [EObject current=null] : iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF ;
     public final EObject entryRuleVSVSStepSpecialPackets() throws RecognitionException {
         EObject current = null;
 
@@ -13257,8 +12953,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:5156:63: (iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF )
-            // InternalSVS.g:5157:2: iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF
+            // InternalSVS.g:5032:63: (iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF )
+            // InternalSVS.g:5033:2: iv_ruleVSVSStepSpecialPackets= ruleVSVSStepSpecialPackets EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepSpecialPacketsRule()); 
@@ -13289,7 +12985,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepSpecialPackets"
-    // InternalSVS.g:5163:1: ruleVSVSStepSpecialPackets returns [EObject current=null] : ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' ) ;
+    // InternalSVS.g:5039:1: ruleVSVSStepSpecialPackets returns [EObject current=null] : ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' ) ;
     public final EObject ruleVSVSStepSpecialPackets() throws RecognitionException {
         EObject current = null;
 
@@ -13308,14 +13004,14 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:5169:2: ( ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' ) )
-            // InternalSVS.g:5170:2: ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' )
+            // InternalSVS.g:5045:2: ( ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' ) )
+            // InternalSVS.g:5046:2: ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' )
             {
-            // InternalSVS.g:5170:2: ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' )
-            // InternalSVS.g:5171:3: () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>'
+            // InternalSVS.g:5046:2: ( () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>' )
+            // InternalSVS.g:5047:3: () otherlv_1= '<specialPackets>' ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+ otherlv_6= '</specialPackets>'
             {
-            // InternalSVS.g:5171:3: ()
-            // InternalSVS.g:5172:4: 
+            // InternalSVS.g:5047:3: ()
+            // InternalSVS.g:5048:4: 
             {
             if ( state.backtracking==0 ) {
 
@@ -13338,7 +13034,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepSpecialPacketsAccess().getSpecialPacketsKeyword_1());
               		
             }
-            // InternalSVS.g:5185:3: ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+
+            // InternalSVS.g:5061:3: ( ( (lv_enable_2_0= ruleVSVSStepEnable ) ) | ( (lv_disable_3_0= ruleVSVSStepDisable ) ) | ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) ) | ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) ) )+
             int cnt82=0;
             loop82:
             do {
@@ -13369,13 +13065,13 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
                 switch (alt82) {
             	case 1 :
-            	    // InternalSVS.g:5186:4: ( (lv_enable_2_0= ruleVSVSStepEnable ) )
+            	    // InternalSVS.g:5062:4: ( (lv_enable_2_0= ruleVSVSStepEnable ) )
             	    {
-            	    // InternalSVS.g:5186:4: ( (lv_enable_2_0= ruleVSVSStepEnable ) )
-            	    // InternalSVS.g:5187:5: (lv_enable_2_0= ruleVSVSStepEnable )
+            	    // InternalSVS.g:5062:4: ( (lv_enable_2_0= ruleVSVSStepEnable ) )
+            	    // InternalSVS.g:5063:5: (lv_enable_2_0= ruleVSVSStepEnable )
             	    {
-            	    // InternalSVS.g:5187:5: (lv_enable_2_0= ruleVSVSStepEnable )
-            	    // InternalSVS.g:5188:6: lv_enable_2_0= ruleVSVSStepEnable
+            	    // InternalSVS.g:5063:5: (lv_enable_2_0= ruleVSVSStepEnable )
+            	    // InternalSVS.g:5064:6: lv_enable_2_0= ruleVSVSStepEnable
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13410,13 +13106,13 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalSVS.g:5206:4: ( (lv_disable_3_0= ruleVSVSStepDisable ) )
+            	    // InternalSVS.g:5082:4: ( (lv_disable_3_0= ruleVSVSStepDisable ) )
             	    {
-            	    // InternalSVS.g:5206:4: ( (lv_disable_3_0= ruleVSVSStepDisable ) )
-            	    // InternalSVS.g:5207:5: (lv_disable_3_0= ruleVSVSStepDisable )
+            	    // InternalSVS.g:5082:4: ( (lv_disable_3_0= ruleVSVSStepDisable ) )
+            	    // InternalSVS.g:5083:5: (lv_disable_3_0= ruleVSVSStepDisable )
             	    {
-            	    // InternalSVS.g:5207:5: (lv_disable_3_0= ruleVSVSStepDisable )
-            	    // InternalSVS.g:5208:6: lv_disable_3_0= ruleVSVSStepDisable
+            	    // InternalSVS.g:5083:5: (lv_disable_3_0= ruleVSVSStepDisable )
+            	    // InternalSVS.g:5084:6: lv_disable_3_0= ruleVSVSStepDisable
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13451,13 +13147,13 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalSVS.g:5226:4: ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) )
+            	    // InternalSVS.g:5102:4: ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) )
             	    {
-            	    // InternalSVS.g:5226:4: ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) )
-            	    // InternalSVS.g:5227:5: (lv_enable_print_4_0= ruleVSVSStepEnablePrint )
+            	    // InternalSVS.g:5102:4: ( (lv_enable_print_4_0= ruleVSVSStepEnablePrint ) )
+            	    // InternalSVS.g:5103:5: (lv_enable_print_4_0= ruleVSVSStepEnablePrint )
             	    {
-            	    // InternalSVS.g:5227:5: (lv_enable_print_4_0= ruleVSVSStepEnablePrint )
-            	    // InternalSVS.g:5228:6: lv_enable_print_4_0= ruleVSVSStepEnablePrint
+            	    // InternalSVS.g:5103:5: (lv_enable_print_4_0= ruleVSVSStepEnablePrint )
+            	    // InternalSVS.g:5104:6: lv_enable_print_4_0= ruleVSVSStepEnablePrint
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13492,13 +13188,13 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalSVS.g:5246:4: ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) )
+            	    // InternalSVS.g:5122:4: ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) )
             	    {
-            	    // InternalSVS.g:5246:4: ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) )
-            	    // InternalSVS.g:5247:5: (lv_disable_print_5_0= ruleVSVSStepDisablePrint )
+            	    // InternalSVS.g:5122:4: ( (lv_disable_print_5_0= ruleVSVSStepDisablePrint ) )
+            	    // InternalSVS.g:5123:5: (lv_disable_print_5_0= ruleVSVSStepDisablePrint )
             	    {
-            	    // InternalSVS.g:5247:5: (lv_disable_print_5_0= ruleVSVSStepDisablePrint )
-            	    // InternalSVS.g:5248:6: lv_disable_print_5_0= ruleVSVSStepDisablePrint
+            	    // InternalSVS.g:5123:5: (lv_disable_print_5_0= ruleVSVSStepDisablePrint )
+            	    // InternalSVS.g:5124:6: lv_disable_print_5_0= ruleVSVSStepDisablePrint
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13574,7 +13270,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepConcurrentSteps"
-    // InternalSVS.g:5274:1: entryRuleVSVSStepConcurrentSteps returns [EObject current=null] : iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF ;
+    // InternalSVS.g:5150:1: entryRuleVSVSStepConcurrentSteps returns [EObject current=null] : iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF ;
     public final EObject entryRuleVSVSStepConcurrentSteps() throws RecognitionException {
         EObject current = null;
 
@@ -13582,8 +13278,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:5274:64: (iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF )
-            // InternalSVS.g:5275:2: iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF
+            // InternalSVS.g:5150:64: (iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF )
+            // InternalSVS.g:5151:2: iv_ruleVSVSStepConcurrentSteps= ruleVSVSStepConcurrentSteps EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepConcurrentStepsRule()); 
@@ -13614,7 +13310,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepConcurrentSteps"
-    // InternalSVS.g:5281:1: ruleVSVSStepConcurrentSteps returns [EObject current=null] : (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' ) ;
+    // InternalSVS.g:5157:1: ruleVSVSStepConcurrentSteps returns [EObject current=null] : (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' ) ;
     public final EObject ruleVSVSStepConcurrentSteps() throws RecognitionException {
         EObject current = null;
 
@@ -13631,11 +13327,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:5287:2: ( (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' ) )
-            // InternalSVS.g:5288:2: (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' )
+            // InternalSVS.g:5163:2: ( (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' ) )
+            // InternalSVS.g:5164:2: (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' )
             {
-            // InternalSVS.g:5288:2: (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' )
-            // InternalSVS.g:5289:3: otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>'
+            // InternalSVS.g:5164:2: (otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>' )
+            // InternalSVS.g:5165:3: otherlv_0= '<concurrent_steps' otherlv_1= 'nextStep=' ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) ) otherlv_3= '>' ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+ otherlv_5= '</concurrent_steps>'
             {
             otherlv_0=(Token)match(input,161,FollowSets000.FOLLOW_188); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13649,11 +13345,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConcurrentStepsAccess().getNextStepKeyword_1());
               		
             }
-            // InternalSVS.g:5297:3: ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) )
-            // InternalSVS.g:5298:4: (lv_nextStep_2_0= ruleVSVSStepNextStep )
+            // InternalSVS.g:5173:3: ( (lv_nextStep_2_0= ruleVSVSStepNextStep ) )
+            // InternalSVS.g:5174:4: (lv_nextStep_2_0= ruleVSVSStepNextStep )
             {
-            // InternalSVS.g:5298:4: (lv_nextStep_2_0= ruleVSVSStepNextStep )
-            // InternalSVS.g:5299:5: lv_nextStep_2_0= ruleVSVSStepNextStep
+            // InternalSVS.g:5174:4: (lv_nextStep_2_0= ruleVSVSStepNextStep )
+            // InternalSVS.g:5175:5: lv_nextStep_2_0= ruleVSVSStepNextStep
             {
             if ( state.backtracking==0 ) {
 
@@ -13690,7 +13386,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConcurrentStepsAccess().getGreaterThanSignKeyword_3());
               		
             }
-            // InternalSVS.g:5320:3: ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+
+            // InternalSVS.g:5196:3: ( (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep ) )+
             int cnt83=0;
             loop83:
             do {
@@ -13704,10 +13400,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
                 switch (alt83) {
             	case 1 :
-            	    // InternalSVS.g:5321:4: (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep )
+            	    // InternalSVS.g:5197:4: (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep )
             	    {
-            	    // InternalSVS.g:5321:4: (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep )
-            	    // InternalSVS.g:5322:5: lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep
+            	    // InternalSVS.g:5197:4: (lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep )
+            	    // InternalSVS.g:5198:5: lv_concurrent_step_4_0= ruleVSVSStepConcurrentStep
             	    {
             	    if ( state.backtracking==0 ) {
 
@@ -13779,8 +13475,233 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleVSVSStepConcurrentSteps"
 
 
+    // $ANTLR start "entryRuleVSVSStepInput"
+    // InternalSVS.g:5223:1: entryRuleVSVSStepInput returns [EObject current=null] : iv_ruleVSVSStepInput= ruleVSVSStepInput EOF ;
+    public final EObject entryRuleVSVSStepInput() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVSVSStepInput = null;
+
+
+        try {
+            // InternalSVS.g:5223:54: (iv_ruleVSVSStepInput= ruleVSVSStepInput EOF )
+            // InternalSVS.g:5224:2: iv_ruleVSVSStepInput= ruleVSVSStepInput EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getVSVSStepInputRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleVSVSStepInput=ruleVSVSStepInput();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleVSVSStepInput; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVSVSStepInput"
+
+
+    // $ANTLR start "ruleVSVSStepInput"
+    // InternalSVS.g:5230:1: ruleVSVSStepInput returns [EObject current=null] : (this_VSVSStepInputLevel3_0= ruleVSVSStepInputLevel3 | this_VSVSStepInputLevel2_1= ruleVSVSStepInputLevel2 | this_VSVSStepInputLevel1_2= ruleVSVSStepInputLevel1 | this_VSVSStepInputLevel0_3= ruleVSVSStepInputLevel0 ) ;
+    public final EObject ruleVSVSStepInput() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_VSVSStepInputLevel3_0 = null;
+
+        EObject this_VSVSStepInputLevel2_1 = null;
+
+        EObject this_VSVSStepInputLevel1_2 = null;
+
+        EObject this_VSVSStepInputLevel0_3 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalSVS.g:5236:2: ( (this_VSVSStepInputLevel3_0= ruleVSVSStepInputLevel3 | this_VSVSStepInputLevel2_1= ruleVSVSStepInputLevel2 | this_VSVSStepInputLevel1_2= ruleVSVSStepInputLevel1 | this_VSVSStepInputLevel0_3= ruleVSVSStepInputLevel0 ) )
+            // InternalSVS.g:5237:2: (this_VSVSStepInputLevel3_0= ruleVSVSStepInputLevel3 | this_VSVSStepInputLevel2_1= ruleVSVSStepInputLevel2 | this_VSVSStepInputLevel1_2= ruleVSVSStepInputLevel1 | this_VSVSStepInputLevel0_3= ruleVSVSStepInputLevel0 )
+            {
+            // InternalSVS.g:5237:2: (this_VSVSStepInputLevel3_0= ruleVSVSStepInputLevel3 | this_VSVSStepInputLevel2_1= ruleVSVSStepInputLevel2 | this_VSVSStepInputLevel1_2= ruleVSVSStepInputLevel1 | this_VSVSStepInputLevel0_3= ruleVSVSStepInputLevel0 )
+            int alt84=4;
+            switch ( input.LA(1) ) {
+            case 164:
+                {
+                alt84=1;
+                }
+                break;
+            case 179:
+                {
+                alt84=2;
+                }
+                break;
+            case 182:
+                {
+                alt84=3;
+                }
+                break;
+            case 185:
+                {
+                alt84=4;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 84, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt84) {
+                case 1 :
+                    // InternalSVS.g:5238:3: this_VSVSStepInputLevel3_0= ruleVSVSStepInputLevel3
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepInputAccess().getVSVSStepInputLevel3ParserRuleCall_0());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepInputLevel3_0=ruleVSVSStepInputLevel3();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepInputLevel3_0;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalSVS.g:5250:3: this_VSVSStepInputLevel2_1= ruleVSVSStepInputLevel2
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepInputAccess().getVSVSStepInputLevel2ParserRuleCall_1());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepInputLevel2_1=ruleVSVSStepInputLevel2();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepInputLevel2_1;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalSVS.g:5262:3: this_VSVSStepInputLevel1_2= ruleVSVSStepInputLevel1
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepInputAccess().getVSVSStepInputLevel1ParserRuleCall_2());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepInputLevel1_2=ruleVSVSStepInputLevel1();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepInputLevel1_2;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // InternalSVS.g:5274:3: this_VSVSStepInputLevel0_3= ruleVSVSStepInputLevel0
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepInputAccess().getVSVSStepInputLevel0ParserRuleCall_3());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepInputLevel0_3=ruleVSVSStepInputLevel0();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepInputLevel0_3;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVSVSStepInput"
+
+
     // $ANTLR start "entryRuleVSVSStepInputLevel3"
-    // InternalSVS.g:5347:1: entryRuleVSVSStepInputLevel3 returns [EObject current=null] : iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF ;
+    // InternalSVS.g:5289:1: entryRuleVSVSStepInputLevel3 returns [EObject current=null] : iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF ;
     public final EObject entryRuleVSVSStepInputLevel3() throws RecognitionException {
         EObject current = null;
 
@@ -13788,8 +13709,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:5347:60: (iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF )
-            // InternalSVS.g:5348:2: iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF
+            // InternalSVS.g:5289:60: (iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF )
+            // InternalSVS.g:5290:2: iv_ruleVSVSStepInputLevel3= ruleVSVSStepInputLevel3 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepInputLevel3Rule()); 
@@ -13820,7 +13741,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepInputLevel3"
-    // InternalSVS.g:5354:1: ruleVSVSStepInputLevel3 returns [EObject current=null] : (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' ) ;
+    // InternalSVS.g:5296:1: ruleVSVSStepInputLevel3 returns [EObject current=null] : (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' ) ;
     public final EObject ruleVSVSStepInputLevel3() throws RecognitionException {
         EObject current = null;
 
@@ -13871,11 +13792,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:5360:2: ( (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' ) )
-            // InternalSVS.g:5361:2: (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' )
+            // InternalSVS.g:5302:2: ( (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' ) )
+            // InternalSVS.g:5303:2: (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' )
             {
-            // InternalSVS.g:5361:2: (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' )
-            // InternalSVS.g:5362:3: otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>'
+            // InternalSVS.g:5303:2: (otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>' )
+            // InternalSVS.g:5304:3: otherlv_0= '<input_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )? otherlv_13= '<app_to_level3' ( (otherlv_14= RULE_STRING ) ) otherlv_15= '/>' (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )? (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )? (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )? (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )? otherlv_40= '</input_level_3>'
             {
             otherlv_0=(Token)match(input,164,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13889,11 +13810,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel3Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:5370:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:5371:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5312:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:5313:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:5371:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:5372:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:5313:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5314:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13925,11 +13846,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel3Access().getIfRefKeyword_3());
               		
             }
-            // InternalSVS.g:5392:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:5393:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5334:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:5335:4: (lv_ifRef_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:5393:4: (lv_ifRef_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:5394:5: lv_ifRef_4_0= RULE_UINT_STRING
+            // InternalSVS.g:5335:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5336:5: lv_ifRef_4_0= RULE_UINT_STRING
             {
             lv_ifRef_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13961,11 +13882,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel3Access().getDelay_valueKeyword_5());
               		
             }
-            // InternalSVS.g:5414:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:5415:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:5356:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:5357:4: (lv_delay_value_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:5415:4: (lv_delay_value_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:5416:5: lv_delay_value_6_0= RULE_UINT_STRING
+            // InternalSVS.g:5357:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:5358:5: lv_delay_value_6_0= RULE_UINT_STRING
             {
             lv_delay_value_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_194); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -13997,11 +13918,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel3Access().getDelay_unitKeyword_7());
               		
             }
-            // InternalSVS.g:5436:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
-            // InternalSVS.g:5437:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:5378:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
+            // InternalSVS.g:5379:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
             {
-            // InternalSVS.g:5437:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
-            // InternalSVS.g:5438:5: lv_delay_unit_8_0= ruleVSVSStepUnit
+            // InternalSVS.g:5379:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:5380:5: lv_delay_unit_8_0= ruleVSVSStepUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -14038,16 +13959,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel3Access().getGreaterThanSignKeyword_9());
               		
             }
-            // InternalSVS.g:5459:3: (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // InternalSVS.g:5401:3: (otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>' )?
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA84_0==168) ) {
-                alt84=1;
+            if ( (LA85_0==168) ) {
+                alt85=1;
             }
-            switch (alt84) {
+            switch (alt85) {
                 case 1 :
-                    // InternalSVS.g:5460:4: otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>'
+                    // InternalSVS.g:5402:4: otherlv_10= '<level3' ( (otherlv_11= RULE_STRING ) ) otherlv_12= '/>'
                     {
                     otherlv_10=(Token)match(input,168,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14055,11 +13976,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_10, grammarAccess.getVSVSStepInputLevel3Access().getLevel3Keyword_10_0());
                       			
                     }
-                    // InternalSVS.g:5464:4: ( (otherlv_11= RULE_STRING ) )
-                    // InternalSVS.g:5465:5: (otherlv_11= RULE_STRING )
+                    // InternalSVS.g:5406:4: ( (otherlv_11= RULE_STRING ) )
+                    // InternalSVS.g:5407:5: (otherlv_11= RULE_STRING )
                     {
-                    // InternalSVS.g:5465:5: (otherlv_11= RULE_STRING )
-                    // InternalSVS.g:5466:6: otherlv_11= RULE_STRING
+                    // InternalSVS.g:5407:5: (otherlv_11= RULE_STRING )
+                    // InternalSVS.g:5408:6: otherlv_11= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14103,11 +14024,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_13, grammarAccess.getVSVSStepInputLevel3Access().getApp_to_level3Keyword_11());
               		
             }
-            // InternalSVS.g:5489:3: ( (otherlv_14= RULE_STRING ) )
-            // InternalSVS.g:5490:4: (otherlv_14= RULE_STRING )
+            // InternalSVS.g:5431:3: ( (otherlv_14= RULE_STRING ) )
+            // InternalSVS.g:5432:4: (otherlv_14= RULE_STRING )
             {
-            // InternalSVS.g:5490:4: (otherlv_14= RULE_STRING )
-            // InternalSVS.g:5491:5: otherlv_14= RULE_STRING
+            // InternalSVS.g:5432:4: (otherlv_14= RULE_STRING )
+            // InternalSVS.g:5433:5: otherlv_14= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -14139,16 +14060,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel3Access().getSolidusGreaterThanSignKeyword_13());
               		
             }
-            // InternalSVS.g:5509:3: (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )?
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            // InternalSVS.g:5451:3: (otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>' )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA85_0==170) ) {
-                alt85=1;
+            if ( (LA86_0==170) ) {
+                alt86=1;
             }
-            switch (alt85) {
+            switch (alt86) {
                 case 1 :
-                    // InternalSVS.g:5510:4: otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>'
+                    // InternalSVS.g:5452:4: otherlv_16= '<level2' otherlv_17= 'format=' ( (otherlv_18= RULE_STRING ) ) otherlv_19= '/>'
                     {
                     otherlv_16=(Token)match(input,170,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14162,11 +14083,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_14_1());
                       			
                     }
-                    // InternalSVS.g:5518:4: ( (otherlv_18= RULE_STRING ) )
-                    // InternalSVS.g:5519:5: (otherlv_18= RULE_STRING )
+                    // InternalSVS.g:5460:4: ( (otherlv_18= RULE_STRING ) )
+                    // InternalSVS.g:5461:5: (otherlv_18= RULE_STRING )
                     {
-                    // InternalSVS.g:5519:5: (otherlv_18= RULE_STRING )
-                    // InternalSVS.g:5520:6: otherlv_18= RULE_STRING
+                    // InternalSVS.g:5461:5: (otherlv_18= RULE_STRING )
+                    // InternalSVS.g:5462:6: otherlv_18= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14204,16 +14125,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5539:3: (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // InternalSVS.g:5481:3: (otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>' )?
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA86_0==172) ) {
-                alt86=1;
+            if ( (LA87_0==172) ) {
+                alt87=1;
             }
-            switch (alt86) {
+            switch (alt87) {
                 case 1 :
-                    // InternalSVS.g:5540:4: otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>'
+                    // InternalSVS.g:5482:4: otherlv_20= '<level3_to_level2' otherlv_21= 'export=' ( (otherlv_22= RULE_STRING ) ) otherlv_23= '/>'
                     {
                     otherlv_20=(Token)match(input,172,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14227,11 +14148,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_21, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_15_1());
                       			
                     }
-                    // InternalSVS.g:5548:4: ( (otherlv_22= RULE_STRING ) )
-                    // InternalSVS.g:5549:5: (otherlv_22= RULE_STRING )
+                    // InternalSVS.g:5490:4: ( (otherlv_22= RULE_STRING ) )
+                    // InternalSVS.g:5491:5: (otherlv_22= RULE_STRING )
                     {
-                    // InternalSVS.g:5549:5: (otherlv_22= RULE_STRING )
-                    // InternalSVS.g:5550:6: otherlv_22= RULE_STRING
+                    // InternalSVS.g:5491:5: (otherlv_22= RULE_STRING )
+                    // InternalSVS.g:5492:6: otherlv_22= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14269,16 +14190,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5569:3: (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
-            int alt87=2;
-            int LA87_0 = input.LA(1);
+            // InternalSVS.g:5511:3: (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
+            int alt88=2;
+            int LA88_0 = input.LA(1);
 
-            if ( (LA87_0==174) ) {
-                alt87=1;
+            if ( (LA88_0==174) ) {
+                alt88=1;
             }
-            switch (alt87) {
+            switch (alt88) {
                 case 1 :
-                    // InternalSVS.g:5570:4: otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
+                    // InternalSVS.g:5512:4: otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
                     {
                     otherlv_24=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14292,11 +14213,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_25, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_16_1());
                       			
                     }
-                    // InternalSVS.g:5578:4: ( (otherlv_26= RULE_STRING ) )
-                    // InternalSVS.g:5579:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:5520:4: ( (otherlv_26= RULE_STRING ) )
+                    // InternalSVS.g:5521:5: (otherlv_26= RULE_STRING )
                     {
-                    // InternalSVS.g:5579:5: (otherlv_26= RULE_STRING )
-                    // InternalSVS.g:5580:6: otherlv_26= RULE_STRING
+                    // InternalSVS.g:5521:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:5522:6: otherlv_26= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14334,16 +14255,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5599:3: (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
-            int alt88=2;
-            int LA88_0 = input.LA(1);
+            // InternalSVS.g:5541:3: (otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
+            int alt89=2;
+            int LA89_0 = input.LA(1);
 
-            if ( (LA88_0==175) ) {
-                alt88=1;
+            if ( (LA89_0==175) ) {
+                alt89=1;
             }
-            switch (alt88) {
+            switch (alt89) {
                 case 1 :
-                    // InternalSVS.g:5600:4: otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
+                    // InternalSVS.g:5542:4: otherlv_28= '<level2_to_level1' otherlv_29= 'export=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
                     {
                     otherlv_28=(Token)match(input,175,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14357,11 +14278,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_29, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_17_1());
                       			
                     }
-                    // InternalSVS.g:5608:4: ( (otherlv_30= RULE_STRING ) )
-                    // InternalSVS.g:5609:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:5550:4: ( (otherlv_30= RULE_STRING ) )
+                    // InternalSVS.g:5551:5: (otherlv_30= RULE_STRING )
                     {
-                    // InternalSVS.g:5609:5: (otherlv_30= RULE_STRING )
-                    // InternalSVS.g:5610:6: otherlv_30= RULE_STRING
+                    // InternalSVS.g:5551:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:5552:6: otherlv_30= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14399,16 +14320,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5629:3: (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )?
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // InternalSVS.g:5571:3: (otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>' )?
+            int alt90=2;
+            int LA90_0 = input.LA(1);
 
-            if ( (LA89_0==176) ) {
-                alt89=1;
+            if ( (LA90_0==176) ) {
+                alt90=1;
             }
-            switch (alt89) {
+            switch (alt90) {
                 case 1 :
-                    // InternalSVS.g:5630:4: otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>'
+                    // InternalSVS.g:5572:4: otherlv_32= '<level0' otherlv_33= 'format=' ( (otherlv_34= RULE_STRING ) ) otherlv_35= '/>'
                     {
                     otherlv_32=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14422,11 +14343,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_33, grammarAccess.getVSVSStepInputLevel3Access().getFormatKeyword_18_1());
                       			
                     }
-                    // InternalSVS.g:5638:4: ( (otherlv_34= RULE_STRING ) )
-                    // InternalSVS.g:5639:5: (otherlv_34= RULE_STRING )
+                    // InternalSVS.g:5580:4: ( (otherlv_34= RULE_STRING ) )
+                    // InternalSVS.g:5581:5: (otherlv_34= RULE_STRING )
                     {
-                    // InternalSVS.g:5639:5: (otherlv_34= RULE_STRING )
-                    // InternalSVS.g:5640:6: otherlv_34= RULE_STRING
+                    // InternalSVS.g:5581:5: (otherlv_34= RULE_STRING )
+                    // InternalSVS.g:5582:6: otherlv_34= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14464,16 +14385,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5659:3: (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )?
-            int alt90=2;
-            int LA90_0 = input.LA(1);
+            // InternalSVS.g:5601:3: (otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>' )?
+            int alt91=2;
+            int LA91_0 = input.LA(1);
 
-            if ( (LA90_0==177) ) {
-                alt90=1;
+            if ( (LA91_0==177) ) {
+                alt91=1;
             }
-            switch (alt90) {
+            switch (alt91) {
                 case 1 :
-                    // InternalSVS.g:5660:4: otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>'
+                    // InternalSVS.g:5602:4: otherlv_36= '<level1_to_level0' otherlv_37= 'export=' ( (otherlv_38= RULE_STRING ) ) otherlv_39= '/>'
                     {
                     otherlv_36=(Token)match(input,177,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14487,11 +14408,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_37, grammarAccess.getVSVSStepInputLevel3Access().getExportKeyword_19_1());
                       			
                     }
-                    // InternalSVS.g:5668:4: ( (otherlv_38= RULE_STRING ) )
-                    // InternalSVS.g:5669:5: (otherlv_38= RULE_STRING )
+                    // InternalSVS.g:5610:4: ( (otherlv_38= RULE_STRING ) )
+                    // InternalSVS.g:5611:5: (otherlv_38= RULE_STRING )
                     {
-                    // InternalSVS.g:5669:5: (otherlv_38= RULE_STRING )
-                    // InternalSVS.g:5670:6: otherlv_38= RULE_STRING
+                    // InternalSVS.g:5611:5: (otherlv_38= RULE_STRING )
+                    // InternalSVS.g:5612:6: otherlv_38= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14560,7 +14481,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepInputLevel2"
-    // InternalSVS.g:5697:1: entryRuleVSVSStepInputLevel2 returns [EObject current=null] : iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF ;
+    // InternalSVS.g:5639:1: entryRuleVSVSStepInputLevel2 returns [EObject current=null] : iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF ;
     public final EObject entryRuleVSVSStepInputLevel2() throws RecognitionException {
         EObject current = null;
 
@@ -14568,8 +14489,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:5697:60: (iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF )
-            // InternalSVS.g:5698:2: iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF
+            // InternalSVS.g:5639:60: (iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF )
+            // InternalSVS.g:5640:2: iv_ruleVSVSStepInputLevel2= ruleVSVSStepInputLevel2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepInputLevel2Rule()); 
@@ -14600,7 +14521,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepInputLevel2"
-    // InternalSVS.g:5704:1: ruleVSVSStepInputLevel2 returns [EObject current=null] : (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' ) ;
+    // InternalSVS.g:5646:1: ruleVSVSStepInputLevel2 returns [EObject current=null] : (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' ) ;
     public final EObject ruleVSVSStepInputLevel2() throws RecognitionException {
         EObject current = null;
 
@@ -14645,11 +14566,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:5710:2: ( (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' ) )
-            // InternalSVS.g:5711:2: (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' )
+            // InternalSVS.g:5652:2: ( (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' ) )
+            // InternalSVS.g:5653:2: (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' )
             {
-            // InternalSVS.g:5711:2: (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' )
-            // InternalSVS.g:5712:3: otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>'
+            // InternalSVS.g:5653:2: (otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>' )
+            // InternalSVS.g:5654:3: otherlv_0= '<input_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level2' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )? (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )? otherlv_34= '</input_level_2>'
             {
             otherlv_0=(Token)match(input,179,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14663,11 +14584,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel2Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:5720:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:5721:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5662:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:5663:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:5721:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:5722:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:5663:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5664:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14699,11 +14620,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel2Access().getIfRefKeyword_3());
               		
             }
-            // InternalSVS.g:5742:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:5743:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5684:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:5685:4: (lv_ifRef_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:5743:4: (lv_ifRef_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:5744:5: lv_ifRef_4_0= RULE_UINT_STRING
+            // InternalSVS.g:5685:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5686:5: lv_ifRef_4_0= RULE_UINT_STRING
             {
             lv_ifRef_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14735,11 +14656,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel2Access().getDelay_valueKeyword_5());
               		
             }
-            // InternalSVS.g:5764:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:5765:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:5706:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:5707:4: (lv_delay_value_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:5765:4: (lv_delay_value_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:5766:5: lv_delay_value_6_0= RULE_UINT_STRING
+            // InternalSVS.g:5707:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:5708:5: lv_delay_value_6_0= RULE_UINT_STRING
             {
             lv_delay_value_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_194); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -14771,11 +14692,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel2Access().getDelay_unitKeyword_7());
               		
             }
-            // InternalSVS.g:5786:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
-            // InternalSVS.g:5787:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:5728:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
+            // InternalSVS.g:5729:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
             {
-            // InternalSVS.g:5787:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
-            // InternalSVS.g:5788:5: lv_delay_unit_8_0= ruleVSVSStepUnit
+            // InternalSVS.g:5729:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:5730:5: lv_delay_unit_8_0= ruleVSVSStepUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -14812,16 +14733,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel2Access().getGreaterThanSignKeyword_9());
               		
             }
-            // InternalSVS.g:5809:3: (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // InternalSVS.g:5751:3: (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt92=2;
+            int LA92_0 = input.LA(1);
 
-            if ( (LA91_0==170) ) {
-                alt91=1;
+            if ( (LA92_0==170) ) {
+                alt92=1;
             }
-            switch (alt91) {
+            switch (alt92) {
                 case 1 :
-                    // InternalSVS.g:5810:4: otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:5752:4: otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,170,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14835,11 +14756,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_10_1());
                       			
                     }
-                    // InternalSVS.g:5818:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:5819:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:5760:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:5761:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:5819:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:5820:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:5761:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:5762:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14889,11 +14810,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_12());
               		
             }
-            // InternalSVS.g:5847:3: ( (otherlv_16= RULE_STRING ) )
-            // InternalSVS.g:5848:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:5789:3: ( (otherlv_16= RULE_STRING ) )
+            // InternalSVS.g:5790:4: (otherlv_16= RULE_STRING )
             {
-            // InternalSVS.g:5848:4: (otherlv_16= RULE_STRING )
-            // InternalSVS.g:5849:5: otherlv_16= RULE_STRING
+            // InternalSVS.g:5790:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:5791:5: otherlv_16= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -14925,16 +14846,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel2Access().getSolidusGreaterThanSignKeyword_14());
               		
             }
-            // InternalSVS.g:5867:3: (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )?
-            int alt92=2;
-            int LA92_0 = input.LA(1);
+            // InternalSVS.g:5809:3: (otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )?
+            int alt93=2;
+            int LA93_0 = input.LA(1);
 
-            if ( (LA92_0==174) ) {
-                alt92=1;
+            if ( (LA93_0==174) ) {
+                alt93=1;
             }
-            switch (alt92) {
+            switch (alt93) {
                 case 1 :
-                    // InternalSVS.g:5868:4: otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>'
+                    // InternalSVS.g:5810:4: otherlv_18= '<level1' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>'
                     {
                     otherlv_18=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -14948,11 +14869,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_19, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_15_1());
                       			
                     }
-                    // InternalSVS.g:5876:4: ( (otherlv_20= RULE_STRING ) )
-                    // InternalSVS.g:5877:5: (otherlv_20= RULE_STRING )
+                    // InternalSVS.g:5818:4: ( (otherlv_20= RULE_STRING ) )
+                    // InternalSVS.g:5819:5: (otherlv_20= RULE_STRING )
                     {
-                    // InternalSVS.g:5877:5: (otherlv_20= RULE_STRING )
-                    // InternalSVS.g:5878:6: otherlv_20= RULE_STRING
+                    // InternalSVS.g:5819:5: (otherlv_20= RULE_STRING )
+                    // InternalSVS.g:5820:6: otherlv_20= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -14990,16 +14911,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5897:3: (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )?
-            int alt93=2;
-            int LA93_0 = input.LA(1);
+            // InternalSVS.g:5839:3: (otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )?
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( (LA93_0==175) ) {
-                alt93=1;
+            if ( (LA94_0==175) ) {
+                alt94=1;
             }
-            switch (alt93) {
+            switch (alt94) {
                 case 1 :
-                    // InternalSVS.g:5898:4: otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>'
+                    // InternalSVS.g:5840:4: otherlv_22= '<level2_to_level1' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>'
                     {
                     otherlv_22=(Token)match(input,175,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15013,11 +14934,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_23, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_16_1());
                       			
                     }
-                    // InternalSVS.g:5906:4: ( (otherlv_24= RULE_STRING ) )
-                    // InternalSVS.g:5907:5: (otherlv_24= RULE_STRING )
+                    // InternalSVS.g:5848:4: ( (otherlv_24= RULE_STRING ) )
+                    // InternalSVS.g:5849:5: (otherlv_24= RULE_STRING )
                     {
-                    // InternalSVS.g:5907:5: (otherlv_24= RULE_STRING )
-                    // InternalSVS.g:5908:6: otherlv_24= RULE_STRING
+                    // InternalSVS.g:5849:5: (otherlv_24= RULE_STRING )
+                    // InternalSVS.g:5850:6: otherlv_24= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15055,16 +14976,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5927:3: (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )?
-            int alt94=2;
-            int LA94_0 = input.LA(1);
+            // InternalSVS.g:5869:3: (otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>' )?
+            int alt95=2;
+            int LA95_0 = input.LA(1);
 
-            if ( (LA94_0==176) ) {
-                alt94=1;
+            if ( (LA95_0==176) ) {
+                alt95=1;
             }
-            switch (alt94) {
+            switch (alt95) {
                 case 1 :
-                    // InternalSVS.g:5928:4: otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>'
+                    // InternalSVS.g:5870:4: otherlv_26= '<level0' otherlv_27= 'format=' ( (otherlv_28= RULE_STRING ) ) otherlv_29= '/>'
                     {
                     otherlv_26=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15078,11 +14999,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_27, grammarAccess.getVSVSStepInputLevel2Access().getFormatKeyword_17_1());
                       			
                     }
-                    // InternalSVS.g:5936:4: ( (otherlv_28= RULE_STRING ) )
-                    // InternalSVS.g:5937:5: (otherlv_28= RULE_STRING )
+                    // InternalSVS.g:5878:4: ( (otherlv_28= RULE_STRING ) )
+                    // InternalSVS.g:5879:5: (otherlv_28= RULE_STRING )
                     {
-                    // InternalSVS.g:5937:5: (otherlv_28= RULE_STRING )
-                    // InternalSVS.g:5938:6: otherlv_28= RULE_STRING
+                    // InternalSVS.g:5879:5: (otherlv_28= RULE_STRING )
+                    // InternalSVS.g:5880:6: otherlv_28= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15120,16 +15041,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:5957:3: (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )?
-            int alt95=2;
-            int LA95_0 = input.LA(1);
+            // InternalSVS.g:5899:3: (otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>' )?
+            int alt96=2;
+            int LA96_0 = input.LA(1);
 
-            if ( (LA95_0==177) ) {
-                alt95=1;
+            if ( (LA96_0==177) ) {
+                alt96=1;
             }
-            switch (alt95) {
+            switch (alt96) {
                 case 1 :
-                    // InternalSVS.g:5958:4: otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>'
+                    // InternalSVS.g:5900:4: otherlv_30= '<level1_to_level0' otherlv_31= 'export=' ( (otherlv_32= RULE_STRING ) ) otherlv_33= '/>'
                     {
                     otherlv_30=(Token)match(input,177,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15143,11 +15064,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_31, grammarAccess.getVSVSStepInputLevel2Access().getExportKeyword_18_1());
                       			
                     }
-                    // InternalSVS.g:5966:4: ( (otherlv_32= RULE_STRING ) )
-                    // InternalSVS.g:5967:5: (otherlv_32= RULE_STRING )
+                    // InternalSVS.g:5908:4: ( (otherlv_32= RULE_STRING ) )
+                    // InternalSVS.g:5909:5: (otherlv_32= RULE_STRING )
                     {
-                    // InternalSVS.g:5967:5: (otherlv_32= RULE_STRING )
-                    // InternalSVS.g:5968:6: otherlv_32= RULE_STRING
+                    // InternalSVS.g:5909:5: (otherlv_32= RULE_STRING )
+                    // InternalSVS.g:5910:6: otherlv_32= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15216,7 +15137,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepInputLevel1"
-    // InternalSVS.g:5995:1: entryRuleVSVSStepInputLevel1 returns [EObject current=null] : iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF ;
+    // InternalSVS.g:5937:1: entryRuleVSVSStepInputLevel1 returns [EObject current=null] : iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF ;
     public final EObject entryRuleVSVSStepInputLevel1() throws RecognitionException {
         EObject current = null;
 
@@ -15224,8 +15145,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:5995:60: (iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF )
-            // InternalSVS.g:5996:2: iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF
+            // InternalSVS.g:5937:60: (iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF )
+            // InternalSVS.g:5938:2: iv_ruleVSVSStepInputLevel1= ruleVSVSStepInputLevel1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepInputLevel1Rule()); 
@@ -15256,7 +15177,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepInputLevel1"
-    // InternalSVS.g:6002:1: ruleVSVSStepInputLevel1 returns [EObject current=null] : (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' ) ;
+    // InternalSVS.g:5944:1: ruleVSVSStepInputLevel1 returns [EObject current=null] : (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' ) ;
     public final EObject ruleVSVSStepInputLevel1() throws RecognitionException {
         EObject current = null;
 
@@ -15293,11 +15214,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:6008:2: ( (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' ) )
-            // InternalSVS.g:6009:2: (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' )
+            // InternalSVS.g:5950:2: ( (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' ) )
+            // InternalSVS.g:5951:2: (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' )
             {
-            // InternalSVS.g:6009:2: (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' )
-            // InternalSVS.g:6010:3: otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>'
+            // InternalSVS.g:5951:2: (otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>' )
+            // InternalSVS.g:5952:3: otherlv_0= '<input_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level1' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )? (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )? otherlv_26= '</input_level_1>'
             {
             otherlv_0=(Token)match(input,182,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15311,11 +15232,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel1Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:6018:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:6019:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5960:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:5961:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:6019:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:6020:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:5961:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:5962:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15347,11 +15268,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel1Access().getIfRefKeyword_3());
               		
             }
-            // InternalSVS.g:6040:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6041:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5982:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:5983:4: (lv_ifRef_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6041:4: (lv_ifRef_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:6042:5: lv_ifRef_4_0= RULE_UINT_STRING
+            // InternalSVS.g:5983:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:5984:5: lv_ifRef_4_0= RULE_UINT_STRING
             {
             lv_ifRef_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15383,11 +15304,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel1Access().getDelay_valueKeyword_5());
               		
             }
-            // InternalSVS.g:6062:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6063:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6004:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6005:4: (lv_delay_value_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6063:4: (lv_delay_value_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:6064:5: lv_delay_value_6_0= RULE_UINT_STRING
+            // InternalSVS.g:6005:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6006:5: lv_delay_value_6_0= RULE_UINT_STRING
             {
             lv_delay_value_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_194); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15419,11 +15340,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel1Access().getDelay_unitKeyword_7());
               		
             }
-            // InternalSVS.g:6084:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
-            // InternalSVS.g:6085:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:6026:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
+            // InternalSVS.g:6027:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
             {
-            // InternalSVS.g:6085:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
-            // InternalSVS.g:6086:5: lv_delay_unit_8_0= ruleVSVSStepUnit
+            // InternalSVS.g:6027:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:6028:5: lv_delay_unit_8_0= ruleVSVSStepUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -15460,16 +15381,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel1Access().getGreaterThanSignKeyword_9());
               		
             }
-            // InternalSVS.g:6107:3: (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // InternalSVS.g:6049:3: (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( (LA96_0==174) ) {
-                alt96=1;
+            if ( (LA97_0==174) ) {
+                alt97=1;
             }
-            switch (alt96) {
+            switch (alt97) {
                 case 1 :
-                    // InternalSVS.g:6108:4: otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:6050:4: otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15483,11 +15404,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel1Access().getFormatKeyword_10_1());
                       			
                     }
-                    // InternalSVS.g:6116:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:6117:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6058:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:6059:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:6117:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:6118:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:6059:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6060:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15537,11 +15458,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel1Access().getExportKeyword_12());
               		
             }
-            // InternalSVS.g:6145:3: ( (otherlv_16= RULE_STRING ) )
-            // InternalSVS.g:6146:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:6087:3: ( (otherlv_16= RULE_STRING ) )
+            // InternalSVS.g:6088:4: (otherlv_16= RULE_STRING )
             {
-            // InternalSVS.g:6146:4: (otherlv_16= RULE_STRING )
-            // InternalSVS.g:6147:5: otherlv_16= RULE_STRING
+            // InternalSVS.g:6088:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:6089:5: otherlv_16= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -15573,16 +15494,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_17, grammarAccess.getVSVSStepInputLevel1Access().getSolidusGreaterThanSignKeyword_14());
               		
             }
-            // InternalSVS.g:6165:3: (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )?
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // InternalSVS.g:6107:3: (otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>' )?
+            int alt98=2;
+            int LA98_0 = input.LA(1);
 
-            if ( (LA97_0==176) ) {
-                alt97=1;
+            if ( (LA98_0==176) ) {
+                alt98=1;
             }
-            switch (alt97) {
+            switch (alt98) {
                 case 1 :
-                    // InternalSVS.g:6166:4: otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>'
+                    // InternalSVS.g:6108:4: otherlv_18= '<level0' otherlv_19= 'format=' ( (otherlv_20= RULE_STRING ) ) otherlv_21= '/>'
                     {
                     otherlv_18=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15596,11 +15517,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_19, grammarAccess.getVSVSStepInputLevel1Access().getFormatKeyword_15_1());
                       			
                     }
-                    // InternalSVS.g:6174:4: ( (otherlv_20= RULE_STRING ) )
-                    // InternalSVS.g:6175:5: (otherlv_20= RULE_STRING )
+                    // InternalSVS.g:6116:4: ( (otherlv_20= RULE_STRING ) )
+                    // InternalSVS.g:6117:5: (otherlv_20= RULE_STRING )
                     {
-                    // InternalSVS.g:6175:5: (otherlv_20= RULE_STRING )
-                    // InternalSVS.g:6176:6: otherlv_20= RULE_STRING
+                    // InternalSVS.g:6117:5: (otherlv_20= RULE_STRING )
+                    // InternalSVS.g:6118:6: otherlv_20= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15638,16 +15559,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6195:3: (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )?
-            int alt98=2;
-            int LA98_0 = input.LA(1);
+            // InternalSVS.g:6137:3: (otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>' )?
+            int alt99=2;
+            int LA99_0 = input.LA(1);
 
-            if ( (LA98_0==177) ) {
-                alt98=1;
+            if ( (LA99_0==177) ) {
+                alt99=1;
             }
-            switch (alt98) {
+            switch (alt99) {
                 case 1 :
-                    // InternalSVS.g:6196:4: otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>'
+                    // InternalSVS.g:6138:4: otherlv_22= '<level1_to_level0' otherlv_23= 'export=' ( (otherlv_24= RULE_STRING ) ) otherlv_25= '/>'
                     {
                     otherlv_22=(Token)match(input,177,FollowSets000.FOLLOW_200); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15661,11 +15582,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_23, grammarAccess.getVSVSStepInputLevel1Access().getExportKeyword_16_1());
                       			
                     }
-                    // InternalSVS.g:6204:4: ( (otherlv_24= RULE_STRING ) )
-                    // InternalSVS.g:6205:5: (otherlv_24= RULE_STRING )
+                    // InternalSVS.g:6146:4: ( (otherlv_24= RULE_STRING ) )
+                    // InternalSVS.g:6147:5: (otherlv_24= RULE_STRING )
                     {
-                    // InternalSVS.g:6205:5: (otherlv_24= RULE_STRING )
-                    // InternalSVS.g:6206:6: otherlv_24= RULE_STRING
+                    // InternalSVS.g:6147:5: (otherlv_24= RULE_STRING )
+                    // InternalSVS.g:6148:6: otherlv_24= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -15734,7 +15655,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepInputLevel0"
-    // InternalSVS.g:6233:1: entryRuleVSVSStepInputLevel0 returns [EObject current=null] : iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF ;
+    // InternalSVS.g:6175:1: entryRuleVSVSStepInputLevel0 returns [EObject current=null] : iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF ;
     public final EObject entryRuleVSVSStepInputLevel0() throws RecognitionException {
         EObject current = null;
 
@@ -15742,8 +15663,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:6233:60: (iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF )
-            // InternalSVS.g:6234:2: iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF
+            // InternalSVS.g:6175:60: (iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF )
+            // InternalSVS.g:6176:2: iv_ruleVSVSStepInputLevel0= ruleVSVSStepInputLevel0 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepInputLevel0Rule()); 
@@ -15774,7 +15695,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepInputLevel0"
-    // InternalSVS.g:6240:1: ruleVSVSStepInputLevel0 returns [EObject current=null] : (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' ) ;
+    // InternalSVS.g:6182:1: ruleVSVSStepInputLevel0 returns [EObject current=null] : (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' ) ;
     public final EObject ruleVSVSStepInputLevel0() throws RecognitionException {
         EObject current = null;
 
@@ -15803,11 +15724,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:6246:2: ( (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' ) )
-            // InternalSVS.g:6247:2: (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' )
+            // InternalSVS.g:6188:2: ( (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' ) )
+            // InternalSVS.g:6189:2: (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' )
             {
-            // InternalSVS.g:6247:2: (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' )
-            // InternalSVS.g:6248:3: otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>'
+            // InternalSVS.g:6189:2: (otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>' )
+            // InternalSVS.g:6190:3: otherlv_0= '<input_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'ifRef=' ( (lv_ifRef_4_0= RULE_UINT_STRING ) ) otherlv_5= 'delay_value=' ( (lv_delay_value_6_0= RULE_UINT_STRING ) ) otherlv_7= 'delay_unit=' ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) ) otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? otherlv_14= '<app_to_level0' otherlv_15= 'export=' ( (otherlv_16= RULE_STRING ) ) otherlv_17= '/>' otherlv_18= '</input_level_0>'
             {
             otherlv_0=(Token)match(input,185,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15821,11 +15742,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputLevel0Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:6256:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:6257:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6198:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:6199:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:6257:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:6258:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:6199:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6200:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15857,11 +15778,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputLevel0Access().getIfRefKeyword_3());
               		
             }
-            // InternalSVS.g:6278:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6279:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6220:3: ( (lv_ifRef_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6221:4: (lv_ifRef_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6279:4: (lv_ifRef_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:6280:5: lv_ifRef_4_0= RULE_UINT_STRING
+            // InternalSVS.g:6221:4: (lv_ifRef_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6222:5: lv_ifRef_4_0= RULE_UINT_STRING
             {
             lv_ifRef_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_193); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15893,11 +15814,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputLevel0Access().getDelay_valueKeyword_5());
               		
             }
-            // InternalSVS.g:6300:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6301:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6242:3: ( (lv_delay_value_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6243:4: (lv_delay_value_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6301:4: (lv_delay_value_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:6302:5: lv_delay_value_6_0= RULE_UINT_STRING
+            // InternalSVS.g:6243:4: (lv_delay_value_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6244:5: lv_delay_value_6_0= RULE_UINT_STRING
             {
             lv_delay_value_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_194); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15929,11 +15850,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputLevel0Access().getDelay_unitKeyword_7());
               		
             }
-            // InternalSVS.g:6322:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
-            // InternalSVS.g:6323:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:6264:3: ( (lv_delay_unit_8_0= ruleVSVSStepUnit ) )
+            // InternalSVS.g:6265:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
             {
-            // InternalSVS.g:6323:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
-            // InternalSVS.g:6324:5: lv_delay_unit_8_0= ruleVSVSStepUnit
+            // InternalSVS.g:6265:4: (lv_delay_unit_8_0= ruleVSVSStepUnit )
+            // InternalSVS.g:6266:5: lv_delay_unit_8_0= ruleVSVSStepUnit
             {
             if ( state.backtracking==0 ) {
 
@@ -15970,16 +15891,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputLevel0Access().getGreaterThanSignKeyword_9());
               		
             }
-            // InternalSVS.g:6345:3: (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt99=2;
-            int LA99_0 = input.LA(1);
+            // InternalSVS.g:6287:3: (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt100=2;
+            int LA100_0 = input.LA(1);
 
-            if ( (LA99_0==176) ) {
-                alt99=1;
+            if ( (LA100_0==176) ) {
+                alt100=1;
             }
-            switch (alt99) {
+            switch (alt100) {
                 case 1 :
-                    // InternalSVS.g:6346:4: otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:6288:4: otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15993,11 +15914,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepInputLevel0Access().getFormatKeyword_10_1());
                       			
                     }
-                    // InternalSVS.g:6354:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:6355:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6296:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:6297:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:6355:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:6356:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:6297:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6298:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16047,11 +15968,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_15, grammarAccess.getVSVSStepInputLevel0Access().getExportKeyword_12());
               		
             }
-            // InternalSVS.g:6383:3: ( (otherlv_16= RULE_STRING ) )
-            // InternalSVS.g:6384:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:6325:3: ( (otherlv_16= RULE_STRING ) )
+            // InternalSVS.g:6326:4: (otherlv_16= RULE_STRING )
             {
-            // InternalSVS.g:6384:4: (otherlv_16= RULE_STRING )
-            // InternalSVS.g:6385:5: otherlv_16= RULE_STRING
+            // InternalSVS.g:6326:4: (otherlv_16= RULE_STRING )
+            // InternalSVS.g:6327:5: otherlv_16= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -16113,8 +16034,233 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleVSVSStepInputLevel0"
 
 
+    // $ANTLR start "entryRuleVSVSStepOutput"
+    // InternalSVS.g:6353:1: entryRuleVSVSStepOutput returns [EObject current=null] : iv_ruleVSVSStepOutput= ruleVSVSStepOutput EOF ;
+    public final EObject entryRuleVSVSStepOutput() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleVSVSStepOutput = null;
+
+
+        try {
+            // InternalSVS.g:6353:55: (iv_ruleVSVSStepOutput= ruleVSVSStepOutput EOF )
+            // InternalSVS.g:6354:2: iv_ruleVSVSStepOutput= ruleVSVSStepOutput EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getVSVSStepOutputRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleVSVSStepOutput=ruleVSVSStepOutput();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleVSVSStepOutput; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleVSVSStepOutput"
+
+
+    // $ANTLR start "ruleVSVSStepOutput"
+    // InternalSVS.g:6360:1: ruleVSVSStepOutput returns [EObject current=null] : (this_VSVSStepOutputLevel3_0= ruleVSVSStepOutputLevel3 | this_VSVSStepOutputLevel2_1= ruleVSVSStepOutputLevel2 | this_VSVSStepOutputLevel1_2= ruleVSVSStepOutputLevel1 | this_VSVSStepOutputLevel0_3= ruleVSVSStepOutputLevel0 ) ;
+    public final EObject ruleVSVSStepOutput() throws RecognitionException {
+        EObject current = null;
+
+        EObject this_VSVSStepOutputLevel3_0 = null;
+
+        EObject this_VSVSStepOutputLevel2_1 = null;
+
+        EObject this_VSVSStepOutputLevel1_2 = null;
+
+        EObject this_VSVSStepOutputLevel0_3 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalSVS.g:6366:2: ( (this_VSVSStepOutputLevel3_0= ruleVSVSStepOutputLevel3 | this_VSVSStepOutputLevel2_1= ruleVSVSStepOutputLevel2 | this_VSVSStepOutputLevel1_2= ruleVSVSStepOutputLevel1 | this_VSVSStepOutputLevel0_3= ruleVSVSStepOutputLevel0 ) )
+            // InternalSVS.g:6367:2: (this_VSVSStepOutputLevel3_0= ruleVSVSStepOutputLevel3 | this_VSVSStepOutputLevel2_1= ruleVSVSStepOutputLevel2 | this_VSVSStepOutputLevel1_2= ruleVSVSStepOutputLevel1 | this_VSVSStepOutputLevel0_3= ruleVSVSStepOutputLevel0 )
+            {
+            // InternalSVS.g:6367:2: (this_VSVSStepOutputLevel3_0= ruleVSVSStepOutputLevel3 | this_VSVSStepOutputLevel2_1= ruleVSVSStepOutputLevel2 | this_VSVSStepOutputLevel1_2= ruleVSVSStepOutputLevel1 | this_VSVSStepOutputLevel0_3= ruleVSVSStepOutputLevel0 )
+            int alt101=4;
+            switch ( input.LA(1) ) {
+            case 188:
+                {
+                alt101=1;
+                }
+                break;
+            case 195:
+                {
+                alt101=2;
+                }
+                break;
+            case 197:
+                {
+                alt101=3;
+                }
+                break;
+            case 199:
+                {
+                alt101=4;
+                }
+                break;
+            default:
+                if (state.backtracking>0) {state.failed=true; return current;}
+                NoViableAltException nvae =
+                    new NoViableAltException("", 101, 0, input);
+
+                throw nvae;
+            }
+
+            switch (alt101) {
+                case 1 :
+                    // InternalSVS.g:6368:3: this_VSVSStepOutputLevel3_0= ruleVSVSStepOutputLevel3
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepOutputAccess().getVSVSStepOutputLevel3ParserRuleCall_0());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepOutputLevel3_0=ruleVSVSStepOutputLevel3();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepOutputLevel3_0;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 2 :
+                    // InternalSVS.g:6380:3: this_VSVSStepOutputLevel2_1= ruleVSVSStepOutputLevel2
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepOutputAccess().getVSVSStepOutputLevel2ParserRuleCall_1());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepOutputLevel2_1=ruleVSVSStepOutputLevel2();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepOutputLevel2_1;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalSVS.g:6392:3: this_VSVSStepOutputLevel1_2= ruleVSVSStepOutputLevel1
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepOutputAccess().getVSVSStepOutputLevel1ParserRuleCall_2());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepOutputLevel1_2=ruleVSVSStepOutputLevel1();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepOutputLevel1_2;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 4 :
+                    // InternalSVS.g:6404:3: this_VSVSStepOutputLevel0_3= ruleVSVSStepOutputLevel0
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getVSVSStepOutputAccess().getVSVSStepOutputLevel0ParserRuleCall_3());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_VSVSStepOutputLevel0_3=ruleVSVSStepOutputLevel0();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_VSVSStepOutputLevel0_3;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleVSVSStepOutput"
+
+
     // $ANTLR start "entryRuleVSVSStepOutputLevel3"
-    // InternalSVS.g:6411:1: entryRuleVSVSStepOutputLevel3 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF ;
+    // InternalSVS.g:6419:1: entryRuleVSVSStepOutputLevel3 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF ;
     public final EObject entryRuleVSVSStepOutputLevel3() throws RecognitionException {
         EObject current = null;
 
@@ -16122,8 +16268,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:6411:61: (iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF )
-            // InternalSVS.g:6412:2: iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF
+            // InternalSVS.g:6419:61: (iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF )
+            // InternalSVS.g:6420:2: iv_ruleVSVSStepOutputLevel3= ruleVSVSStepOutputLevel3 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepOutputLevel3Rule()); 
@@ -16154,7 +16300,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepOutputLevel3"
-    // InternalSVS.g:6418:1: ruleVSVSStepOutputLevel3 returns [EObject current=null] : (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' ) ;
+    // InternalSVS.g:6426:1: ruleVSVSStepOutputLevel3 returns [EObject current=null] : (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' ) ;
     public final EObject ruleVSVSStepOutputLevel3() throws RecognitionException {
         EObject current = null;
 
@@ -16210,11 +16356,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:6424:2: ( (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' ) )
-            // InternalSVS.g:6425:2: (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' )
+            // InternalSVS.g:6432:2: ( (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' ) )
+            // InternalSVS.g:6433:2: (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' )
             {
-            // InternalSVS.g:6425:2: (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' )
-            // InternalSVS.g:6426:3: otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>'
+            // InternalSVS.g:6433:2: (otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>' )
+            // InternalSVS.g:6434:3: otherlv_0= '<output_level_3' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) ) (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) ) (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) ) (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )? (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )? ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) ) otherlv_42= '</output_level_3>'
             {
             otherlv_0=(Token)match(input,188,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -16228,11 +16374,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel3Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:6434:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:6435:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6442:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:6443:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:6435:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:6436:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:6443:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6444:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -16264,11 +16410,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel3Access().getIdKeyword_3());
               		
             }
-            // InternalSVS.g:6456:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6457:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6464:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6465:4: (lv_id_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6457:4: (lv_id_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:6458:5: lv_id_4_0= RULE_UINT_STRING
+            // InternalSVS.g:6465:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6466:5: lv_id_4_0= RULE_UINT_STRING
             {
             lv_id_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -16300,11 +16446,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel3Access().getIfRefKeyword_5());
               		
             }
-            // InternalSVS.g:6478:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6479:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6486:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6487:4: (lv_ifRef_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6479:4: (lv_ifRef_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:6480:5: lv_ifRef_6_0= RULE_UINT_STRING
+            // InternalSVS.g:6487:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6488:5: lv_ifRef_6_0= RULE_UINT_STRING
             {
             lv_ifRef_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_221); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -16330,16 +16476,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6496:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
-            int alt100=2;
-            int LA100_0 = input.LA(1);
+            // InternalSVS.g:6504:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
+            int alt102=2;
+            int LA102_0 = input.LA(1);
 
-            if ( (LA100_0==189) ) {
-                alt100=1;
+            if ( (LA102_0==189) ) {
+                alt102=1;
             }
-            switch (alt100) {
+            switch (alt102) {
                 case 1 :
-                    // InternalSVS.g:6497:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:6505:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
                     {
                     otherlv_7=(Token)match(input,189,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16347,11 +16493,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel3Access().getOptionalKeyword_7_0());
                       			
                     }
-                    // InternalSVS.g:6501:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
-                    // InternalSVS.g:6502:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:6509:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:6510:5: (lv_optional_8_0= RULE_UINT_STRING )
                     {
-                    // InternalSVS.g:6502:5: (lv_optional_8_0= RULE_UINT_STRING )
-                    // InternalSVS.g:6503:6: lv_optional_8_0= RULE_UINT_STRING
+                    // InternalSVS.g:6510:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:6511:6: lv_optional_8_0= RULE_UINT_STRING
                     {
                     lv_optional_8_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16389,16 +16535,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel3Access().getGreaterThanSignKeyword_8());
               		
             }
-            // InternalSVS.g:6524:3: (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt101=2;
-            int LA101_0 = input.LA(1);
+            // InternalSVS.g:6532:3: (otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt103=2;
+            int LA103_0 = input.LA(1);
 
-            if ( (LA101_0==168) ) {
-                alt101=1;
+            if ( (LA103_0==168) ) {
+                alt103=1;
             }
-            switch (alt101) {
+            switch (alt103) {
                 case 1 :
-                    // InternalSVS.g:6525:4: otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:6533:4: otherlv_10= '<level3' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,168,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16412,11 +16558,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_9_1());
                       			
                     }
-                    // InternalSVS.g:6533:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:6534:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6541:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:6542:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:6534:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:6535:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:6542:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6543:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16454,11 +16600,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6554:3: ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) )
-            // InternalSVS.g:6555:4: (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter )
+            // InternalSVS.g:6562:3: ( (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter ) )
+            // InternalSVS.g:6563:4: (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter )
             {
-            // InternalSVS.g:6555:4: (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter )
-            // InternalSVS.g:6556:5: lv_level3_filter_14_0= ruleVSVSStepLevel3Filter
+            // InternalSVS.g:6563:4: (lv_level3_filter_14_0= ruleVSVSStepLevel3Filter )
+            // InternalSVS.g:6564:5: lv_level3_filter_14_0= ruleVSVSStepLevel3Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -16489,16 +16635,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6573:3: (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
-            int alt102=2;
-            int LA102_0 = input.LA(1);
+            // InternalSVS.g:6581:3: (otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
+            int alt104=2;
+            int LA104_0 = input.LA(1);
 
-            if ( (LA102_0==170) ) {
-                alt102=1;
+            if ( (LA104_0==170) ) {
+                alt104=1;
             }
-            switch (alt102) {
+            switch (alt104) {
                 case 1 :
-                    // InternalSVS.g:6574:4: otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
+                    // InternalSVS.g:6582:4: otherlv_15= '<level2' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
                     {
                     otherlv_15=(Token)match(input,170,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16512,11 +16658,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_11_1());
                       			
                     }
-                    // InternalSVS.g:6582:4: ( (otherlv_17= RULE_STRING ) )
-                    // InternalSVS.g:6583:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:6590:4: ( (otherlv_17= RULE_STRING ) )
+                    // InternalSVS.g:6591:5: (otherlv_17= RULE_STRING )
                     {
-                    // InternalSVS.g:6583:5: (otherlv_17= RULE_STRING )
-                    // InternalSVS.g:6584:6: otherlv_17= RULE_STRING
+                    // InternalSVS.g:6591:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:6592:6: otherlv_17= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16554,16 +16700,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6603:3: (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
-            int alt103=2;
-            int LA103_0 = input.LA(1);
+            // InternalSVS.g:6611:3: (otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
+            int alt105=2;
+            int LA105_0 = input.LA(1);
 
-            if ( (LA103_0==190) ) {
-                alt103=1;
+            if ( (LA105_0==190) ) {
+                alt105=1;
             }
-            switch (alt103) {
+            switch (alt105) {
                 case 1 :
-                    // InternalSVS.g:6604:4: otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
+                    // InternalSVS.g:6612:4: otherlv_19= '<level3_from_level2' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
                     {
                     otherlv_19=(Token)match(input,190,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16577,11 +16723,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_12_1());
                       			
                     }
-                    // InternalSVS.g:6612:4: ( (otherlv_21= RULE_STRING ) )
-                    // InternalSVS.g:6613:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:6620:4: ( (otherlv_21= RULE_STRING ) )
+                    // InternalSVS.g:6621:5: (otherlv_21= RULE_STRING )
                     {
-                    // InternalSVS.g:6613:5: (otherlv_21= RULE_STRING )
-                    // InternalSVS.g:6614:6: otherlv_21= RULE_STRING
+                    // InternalSVS.g:6621:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:6622:6: otherlv_21= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16619,11 +16765,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6633:3: ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) )
-            // InternalSVS.g:6634:4: (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter )
+            // InternalSVS.g:6641:3: ( (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter ) )
+            // InternalSVS.g:6642:4: (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter )
             {
-            // InternalSVS.g:6634:4: (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter )
-            // InternalSVS.g:6635:5: lv_level2_filter_23_0= ruleVSVSStepLevel2Filter
+            // InternalSVS.g:6642:4: (lv_level2_filter_23_0= ruleVSVSStepLevel2Filter )
+            // InternalSVS.g:6643:5: lv_level2_filter_23_0= ruleVSVSStepLevel2Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -16654,16 +16800,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6652:3: (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
-            int alt104=2;
-            int LA104_0 = input.LA(1);
+            // InternalSVS.g:6660:3: (otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
+            int alt106=2;
+            int LA106_0 = input.LA(1);
 
-            if ( (LA104_0==174) ) {
-                alt104=1;
+            if ( (LA106_0==174) ) {
+                alt106=1;
             }
-            switch (alt104) {
+            switch (alt106) {
                 case 1 :
-                    // InternalSVS.g:6653:4: otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
+                    // InternalSVS.g:6661:4: otherlv_24= '<level1' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
                     {
                     otherlv_24=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16677,11 +16823,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_25, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_14_1());
                       			
                     }
-                    // InternalSVS.g:6661:4: ( (otherlv_26= RULE_STRING ) )
-                    // InternalSVS.g:6662:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:6669:4: ( (otherlv_26= RULE_STRING ) )
+                    // InternalSVS.g:6670:5: (otherlv_26= RULE_STRING )
                     {
-                    // InternalSVS.g:6662:5: (otherlv_26= RULE_STRING )
-                    // InternalSVS.g:6663:6: otherlv_26= RULE_STRING
+                    // InternalSVS.g:6670:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:6671:6: otherlv_26= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16719,16 +16865,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6682:3: (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
-            int alt105=2;
-            int LA105_0 = input.LA(1);
+            // InternalSVS.g:6690:3: (otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
+            int alt107=2;
+            int LA107_0 = input.LA(1);
 
-            if ( (LA105_0==192) ) {
-                alt105=1;
+            if ( (LA107_0==192) ) {
+                alt107=1;
             }
-            switch (alt105) {
+            switch (alt107) {
                 case 1 :
-                    // InternalSVS.g:6683:4: otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
+                    // InternalSVS.g:6691:4: otherlv_28= '<level2_from_level1' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
                     {
                     otherlv_28=(Token)match(input,192,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16742,11 +16888,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_29, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_15_1());
                       			
                     }
-                    // InternalSVS.g:6691:4: ( (otherlv_30= RULE_STRING ) )
-                    // InternalSVS.g:6692:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:6699:4: ( (otherlv_30= RULE_STRING ) )
+                    // InternalSVS.g:6700:5: (otherlv_30= RULE_STRING )
                     {
-                    // InternalSVS.g:6692:5: (otherlv_30= RULE_STRING )
-                    // InternalSVS.g:6693:6: otherlv_30= RULE_STRING
+                    // InternalSVS.g:6700:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:6701:6: otherlv_30= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16784,11 +16930,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6712:3: ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) )
-            // InternalSVS.g:6713:4: (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:6720:3: ( (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter ) )
+            // InternalSVS.g:6721:4: (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter )
             {
-            // InternalSVS.g:6713:4: (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter )
-            // InternalSVS.g:6714:5: lv_level1_filter_32_0= ruleVSVSStepLevel1Filter
+            // InternalSVS.g:6721:4: (lv_level1_filter_32_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:6722:5: lv_level1_filter_32_0= ruleVSVSStepLevel1Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -16819,16 +16965,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6731:3: (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )?
-            int alt106=2;
-            int LA106_0 = input.LA(1);
+            // InternalSVS.g:6739:3: (otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>' )?
+            int alt108=2;
+            int LA108_0 = input.LA(1);
 
-            if ( (LA106_0==176) ) {
-                alt106=1;
+            if ( (LA108_0==176) ) {
+                alt108=1;
             }
-            switch (alt106) {
+            switch (alt108) {
                 case 1 :
-                    // InternalSVS.g:6732:4: otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>'
+                    // InternalSVS.g:6740:4: otherlv_33= '<level0' otherlv_34= 'format=' ( (otherlv_35= RULE_STRING ) ) otherlv_36= '/>'
                     {
                     otherlv_33=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16842,11 +16988,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_34, grammarAccess.getVSVSStepOutputLevel3Access().getFormatKeyword_17_1());
                       			
                     }
-                    // InternalSVS.g:6740:4: ( (otherlv_35= RULE_STRING ) )
-                    // InternalSVS.g:6741:5: (otherlv_35= RULE_STRING )
+                    // InternalSVS.g:6748:4: ( (otherlv_35= RULE_STRING ) )
+                    // InternalSVS.g:6749:5: (otherlv_35= RULE_STRING )
                     {
-                    // InternalSVS.g:6741:5: (otherlv_35= RULE_STRING )
-                    // InternalSVS.g:6742:6: otherlv_35= RULE_STRING
+                    // InternalSVS.g:6749:5: (otherlv_35= RULE_STRING )
+                    // InternalSVS.g:6750:6: otherlv_35= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16884,16 +17030,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6761:3: (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )?
-            int alt107=2;
-            int LA107_0 = input.LA(1);
+            // InternalSVS.g:6769:3: (otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>' )?
+            int alt109=2;
+            int LA109_0 = input.LA(1);
 
-            if ( (LA107_0==193) ) {
-                alt107=1;
+            if ( (LA109_0==193) ) {
+                alt109=1;
             }
-            switch (alt107) {
+            switch (alt109) {
                 case 1 :
-                    // InternalSVS.g:6762:4: otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>'
+                    // InternalSVS.g:6770:4: otherlv_37= '<level1_from_level0' otherlv_38= 'import=' ( (otherlv_39= RULE_STRING ) ) otherlv_40= '/>'
                     {
                     otherlv_37=(Token)match(input,193,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -16907,11 +17053,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_38, grammarAccess.getVSVSStepOutputLevel3Access().getImportKeyword_18_1());
                       			
                     }
-                    // InternalSVS.g:6770:4: ( (otherlv_39= RULE_STRING ) )
-                    // InternalSVS.g:6771:5: (otherlv_39= RULE_STRING )
+                    // InternalSVS.g:6778:4: ( (otherlv_39= RULE_STRING ) )
+                    // InternalSVS.g:6779:5: (otherlv_39= RULE_STRING )
                     {
-                    // InternalSVS.g:6771:5: (otherlv_39= RULE_STRING )
-                    // InternalSVS.g:6772:6: otherlv_39= RULE_STRING
+                    // InternalSVS.g:6779:5: (otherlv_39= RULE_STRING )
+                    // InternalSVS.g:6780:6: otherlv_39= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -16949,11 +17095,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6791:3: ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) )
-            // InternalSVS.g:6792:4: (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:6799:3: ( (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter ) )
+            // InternalSVS.g:6800:4: (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter )
             {
-            // InternalSVS.g:6792:4: (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter )
-            // InternalSVS.g:6793:5: lv_level0_filter_41_0= ruleVSVSStepLevel0Filter
+            // InternalSVS.g:6800:4: (lv_level0_filter_41_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:6801:5: lv_level0_filter_41_0= ruleVSVSStepLevel0Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -17015,7 +17161,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepOutputLevel2"
-    // InternalSVS.g:6818:1: entryRuleVSVSStepOutputLevel2 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF ;
+    // InternalSVS.g:6826:1: entryRuleVSVSStepOutputLevel2 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF ;
     public final EObject entryRuleVSVSStepOutputLevel2() throws RecognitionException {
         EObject current = null;
 
@@ -17023,8 +17169,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:6818:61: (iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF )
-            // InternalSVS.g:6819:2: iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF
+            // InternalSVS.g:6826:61: (iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF )
+            // InternalSVS.g:6827:2: iv_ruleVSVSStepOutputLevel2= ruleVSVSStepOutputLevel2 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepOutputLevel2Rule()); 
@@ -17055,7 +17201,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepOutputLevel2"
-    // InternalSVS.g:6825:1: ruleVSVSStepOutputLevel2 returns [EObject current=null] : (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' ) ;
+    // InternalSVS.g:6833:1: ruleVSVSStepOutputLevel2 returns [EObject current=null] : (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' ) ;
     public final EObject ruleVSVSStepOutputLevel2() throws RecognitionException {
         EObject current = null;
 
@@ -17101,11 +17247,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:6831:2: ( (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' ) )
-            // InternalSVS.g:6832:2: (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' )
+            // InternalSVS.g:6839:2: ( (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' ) )
+            // InternalSVS.g:6840:2: (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' )
             {
-            // InternalSVS.g:6832:2: (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' )
-            // InternalSVS.g:6833:3: otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>'
+            // InternalSVS.g:6840:2: (otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>' )
+            // InternalSVS.g:6841:3: otherlv_0= '<output_level_2' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) ) (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) ) (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )? (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )? ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) ) otherlv_33= '</output_level_2>'
             {
             otherlv_0=(Token)match(input,195,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17119,11 +17265,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel2Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:6841:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:6842:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6849:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:6850:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:6842:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:6843:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:6850:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:6851:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17155,11 +17301,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel2Access().getIdKeyword_3());
               		
             }
-            // InternalSVS.g:6863:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6864:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6871:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6872:4: (lv_id_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6864:4: (lv_id_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:6865:5: lv_id_4_0= RULE_UINT_STRING
+            // InternalSVS.g:6872:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:6873:5: lv_id_4_0= RULE_UINT_STRING
             {
             lv_id_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17191,11 +17337,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel2Access().getIfRefKeyword_5());
               		
             }
-            // InternalSVS.g:6885:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:6886:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6893:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:6894:4: (lv_ifRef_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:6886:4: (lv_ifRef_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:6887:5: lv_ifRef_6_0= RULE_UINT_STRING
+            // InternalSVS.g:6894:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:6895:5: lv_ifRef_6_0= RULE_UINT_STRING
             {
             lv_ifRef_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_221); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17221,16 +17367,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6903:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
-            int alt108=2;
-            int LA108_0 = input.LA(1);
+            // InternalSVS.g:6911:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
+            int alt110=2;
+            int LA110_0 = input.LA(1);
 
-            if ( (LA108_0==189) ) {
-                alt108=1;
+            if ( (LA110_0==189) ) {
+                alt110=1;
             }
-            switch (alt108) {
+            switch (alt110) {
                 case 1 :
-                    // InternalSVS.g:6904:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:6912:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
                     {
                     otherlv_7=(Token)match(input,189,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17238,11 +17384,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel2Access().getOptionalKeyword_7_0());
                       			
                     }
-                    // InternalSVS.g:6908:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
-                    // InternalSVS.g:6909:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:6916:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:6917:5: (lv_optional_8_0= RULE_UINT_STRING )
                     {
-                    // InternalSVS.g:6909:5: (lv_optional_8_0= RULE_UINT_STRING )
-                    // InternalSVS.g:6910:6: lv_optional_8_0= RULE_UINT_STRING
+                    // InternalSVS.g:6917:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:6918:6: lv_optional_8_0= RULE_UINT_STRING
                     {
                     lv_optional_8_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17280,16 +17426,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel2Access().getGreaterThanSignKeyword_8());
               		
             }
-            // InternalSVS.g:6931:3: (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt109=2;
-            int LA109_0 = input.LA(1);
+            // InternalSVS.g:6939:3: (otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt111=2;
+            int LA111_0 = input.LA(1);
 
-            if ( (LA109_0==170) ) {
-                alt109=1;
+            if ( (LA111_0==170) ) {
+                alt111=1;
             }
-            switch (alt109) {
+            switch (alt111) {
                 case 1 :
-                    // InternalSVS.g:6932:4: otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:6940:4: otherlv_10= '<level2' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,170,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17303,11 +17449,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_9_1());
                       			
                     }
-                    // InternalSVS.g:6940:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:6941:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6948:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:6949:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:6941:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:6942:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:6949:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:6950:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17345,11 +17491,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6961:3: ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) )
-            // InternalSVS.g:6962:4: (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter )
+            // InternalSVS.g:6969:3: ( (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter ) )
+            // InternalSVS.g:6970:4: (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter )
             {
-            // InternalSVS.g:6962:4: (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter )
-            // InternalSVS.g:6963:5: lv_level2_filter_14_0= ruleVSVSStepLevel2Filter
+            // InternalSVS.g:6970:4: (lv_level2_filter_14_0= ruleVSVSStepLevel2Filter )
+            // InternalSVS.g:6971:5: lv_level2_filter_14_0= ruleVSVSStepLevel2Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -17380,16 +17526,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:6980:3: (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
-            int alt110=2;
-            int LA110_0 = input.LA(1);
+            // InternalSVS.g:6988:3: (otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
+            int alt112=2;
+            int LA112_0 = input.LA(1);
 
-            if ( (LA110_0==174) ) {
-                alt110=1;
+            if ( (LA112_0==174) ) {
+                alt112=1;
             }
-            switch (alt110) {
+            switch (alt112) {
                 case 1 :
-                    // InternalSVS.g:6981:4: otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
+                    // InternalSVS.g:6989:4: otherlv_15= '<level1' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
                     {
                     otherlv_15=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17403,11 +17549,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_11_1());
                       			
                     }
-                    // InternalSVS.g:6989:4: ( (otherlv_17= RULE_STRING ) )
-                    // InternalSVS.g:6990:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:6997:4: ( (otherlv_17= RULE_STRING ) )
+                    // InternalSVS.g:6998:5: (otherlv_17= RULE_STRING )
                     {
-                    // InternalSVS.g:6990:5: (otherlv_17= RULE_STRING )
-                    // InternalSVS.g:6991:6: otherlv_17= RULE_STRING
+                    // InternalSVS.g:6998:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:6999:6: otherlv_17= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17445,16 +17591,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7010:3: (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
-            int alt111=2;
-            int LA111_0 = input.LA(1);
+            // InternalSVS.g:7018:3: (otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
+            int alt113=2;
+            int LA113_0 = input.LA(1);
 
-            if ( (LA111_0==192) ) {
-                alt111=1;
+            if ( (LA113_0==192) ) {
+                alt113=1;
             }
-            switch (alt111) {
+            switch (alt113) {
                 case 1 :
-                    // InternalSVS.g:7011:4: otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
+                    // InternalSVS.g:7019:4: otherlv_19= '<level2_from_level1' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
                     {
                     otherlv_19=(Token)match(input,192,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17468,11 +17614,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel2Access().getImportKeyword_12_1());
                       			
                     }
-                    // InternalSVS.g:7019:4: ( (otherlv_21= RULE_STRING ) )
-                    // InternalSVS.g:7020:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:7027:4: ( (otherlv_21= RULE_STRING ) )
+                    // InternalSVS.g:7028:5: (otherlv_21= RULE_STRING )
                     {
-                    // InternalSVS.g:7020:5: (otherlv_21= RULE_STRING )
-                    // InternalSVS.g:7021:6: otherlv_21= RULE_STRING
+                    // InternalSVS.g:7028:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:7029:6: otherlv_21= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17510,11 +17656,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7040:3: ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) )
-            // InternalSVS.g:7041:4: (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:7048:3: ( (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter ) )
+            // InternalSVS.g:7049:4: (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter )
             {
-            // InternalSVS.g:7041:4: (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter )
-            // InternalSVS.g:7042:5: lv_level1_filter_23_0= ruleVSVSStepLevel1Filter
+            // InternalSVS.g:7049:4: (lv_level1_filter_23_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:7050:5: lv_level1_filter_23_0= ruleVSVSStepLevel1Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -17545,16 +17691,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7059:3: (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
-            int alt112=2;
-            int LA112_0 = input.LA(1);
+            // InternalSVS.g:7067:3: (otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>' )?
+            int alt114=2;
+            int LA114_0 = input.LA(1);
 
-            if ( (LA112_0==176) ) {
-                alt112=1;
+            if ( (LA114_0==176) ) {
+                alt114=1;
             }
-            switch (alt112) {
+            switch (alt114) {
                 case 1 :
-                    // InternalSVS.g:7060:4: otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
+                    // InternalSVS.g:7068:4: otherlv_24= '<level0' otherlv_25= 'format=' ( (otherlv_26= RULE_STRING ) ) otherlv_27= '/>'
                     {
                     otherlv_24=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17568,11 +17714,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_25, grammarAccess.getVSVSStepOutputLevel2Access().getFormatKeyword_14_1());
                       			
                     }
-                    // InternalSVS.g:7068:4: ( (otherlv_26= RULE_STRING ) )
-                    // InternalSVS.g:7069:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:7076:4: ( (otherlv_26= RULE_STRING ) )
+                    // InternalSVS.g:7077:5: (otherlv_26= RULE_STRING )
                     {
-                    // InternalSVS.g:7069:5: (otherlv_26= RULE_STRING )
-                    // InternalSVS.g:7070:6: otherlv_26= RULE_STRING
+                    // InternalSVS.g:7077:5: (otherlv_26= RULE_STRING )
+                    // InternalSVS.g:7078:6: otherlv_26= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17610,16 +17756,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7089:3: (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
-            int alt113=2;
-            int LA113_0 = input.LA(1);
+            // InternalSVS.g:7097:3: (otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>' )?
+            int alt115=2;
+            int LA115_0 = input.LA(1);
 
-            if ( (LA113_0==193) ) {
-                alt113=1;
+            if ( (LA115_0==193) ) {
+                alt115=1;
             }
-            switch (alt113) {
+            switch (alt115) {
                 case 1 :
-                    // InternalSVS.g:7090:4: otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
+                    // InternalSVS.g:7098:4: otherlv_28= '<level1_from_level0' otherlv_29= 'import=' ( (otherlv_30= RULE_STRING ) ) otherlv_31= '/>'
                     {
                     otherlv_28=(Token)match(input,193,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17633,11 +17779,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_29, grammarAccess.getVSVSStepOutputLevel2Access().getImportKeyword_15_1());
                       			
                     }
-                    // InternalSVS.g:7098:4: ( (otherlv_30= RULE_STRING ) )
-                    // InternalSVS.g:7099:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:7106:4: ( (otherlv_30= RULE_STRING ) )
+                    // InternalSVS.g:7107:5: (otherlv_30= RULE_STRING )
                     {
-                    // InternalSVS.g:7099:5: (otherlv_30= RULE_STRING )
-                    // InternalSVS.g:7100:6: otherlv_30= RULE_STRING
+                    // InternalSVS.g:7107:5: (otherlv_30= RULE_STRING )
+                    // InternalSVS.g:7108:6: otherlv_30= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -17675,11 +17821,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7119:3: ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) )
-            // InternalSVS.g:7120:4: (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7127:3: ( (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter ) )
+            // InternalSVS.g:7128:4: (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter )
             {
-            // InternalSVS.g:7120:4: (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter )
-            // InternalSVS.g:7121:5: lv_level0_filter_32_0= ruleVSVSStepLevel0Filter
+            // InternalSVS.g:7128:4: (lv_level0_filter_32_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7129:5: lv_level0_filter_32_0= ruleVSVSStepLevel0Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -17741,7 +17887,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepOutputLevel1"
-    // InternalSVS.g:7146:1: entryRuleVSVSStepOutputLevel1 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF ;
+    // InternalSVS.g:7154:1: entryRuleVSVSStepOutputLevel1 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF ;
     public final EObject entryRuleVSVSStepOutputLevel1() throws RecognitionException {
         EObject current = null;
 
@@ -17749,8 +17895,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7146:61: (iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF )
-            // InternalSVS.g:7147:2: iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF
+            // InternalSVS.g:7154:61: (iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF )
+            // InternalSVS.g:7155:2: iv_ruleVSVSStepOutputLevel1= ruleVSVSStepOutputLevel1 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepOutputLevel1Rule()); 
@@ -17781,7 +17927,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepOutputLevel1"
-    // InternalSVS.g:7153:1: ruleVSVSStepOutputLevel1 returns [EObject current=null] : (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' ) ;
+    // InternalSVS.g:7161:1: ruleVSVSStepOutputLevel1 returns [EObject current=null] : (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' ) ;
     public final EObject ruleVSVSStepOutputLevel1() throws RecognitionException {
         EObject current = null;
 
@@ -17817,11 +17963,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7159:2: ( (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' ) )
-            // InternalSVS.g:7160:2: (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' )
+            // InternalSVS.g:7167:2: ( (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' ) )
+            // InternalSVS.g:7168:2: (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' )
             {
-            // InternalSVS.g:7160:2: (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' )
-            // InternalSVS.g:7161:3: otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>'
+            // InternalSVS.g:7168:2: (otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>' )
+            // InternalSVS.g:7169:3: otherlv_0= '<output_level_1' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) ) (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )? (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )? ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) ) otherlv_24= '</output_level_1>'
             {
             otherlv_0=(Token)match(input,197,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17835,11 +17981,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel1Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:7169:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:7170:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:7177:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:7178:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:7170:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:7171:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:7178:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:7179:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17871,11 +18017,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel1Access().getIdKeyword_3());
               		
             }
-            // InternalSVS.g:7191:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7192:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:7199:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7200:4: (lv_id_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7192:4: (lv_id_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:7193:5: lv_id_4_0= RULE_UINT_STRING
+            // InternalSVS.g:7200:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:7201:5: lv_id_4_0= RULE_UINT_STRING
             {
             lv_id_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17907,11 +18053,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel1Access().getIfRefKeyword_5());
               		
             }
-            // InternalSVS.g:7213:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7214:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:7221:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7222:4: (lv_ifRef_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7214:4: (lv_ifRef_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:7215:5: lv_ifRef_6_0= RULE_UINT_STRING
+            // InternalSVS.g:7222:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:7223:5: lv_ifRef_6_0= RULE_UINT_STRING
             {
             lv_ifRef_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_221); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17937,16 +18083,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7231:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
-            int alt114=2;
-            int LA114_0 = input.LA(1);
+            // InternalSVS.g:7239:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
+            int alt116=2;
+            int LA116_0 = input.LA(1);
 
-            if ( (LA114_0==189) ) {
-                alt114=1;
+            if ( (LA116_0==189) ) {
+                alt116=1;
             }
-            switch (alt114) {
+            switch (alt116) {
                 case 1 :
-                    // InternalSVS.g:7232:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:7240:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
                     {
                     otherlv_7=(Token)match(input,189,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17954,11 +18100,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel1Access().getOptionalKeyword_7_0());
                       			
                     }
-                    // InternalSVS.g:7236:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
-                    // InternalSVS.g:7237:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:7244:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:7245:5: (lv_optional_8_0= RULE_UINT_STRING )
                     {
-                    // InternalSVS.g:7237:5: (lv_optional_8_0= RULE_UINT_STRING )
-                    // InternalSVS.g:7238:6: lv_optional_8_0= RULE_UINT_STRING
+                    // InternalSVS.g:7245:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:7246:6: lv_optional_8_0= RULE_UINT_STRING
                     {
                     lv_optional_8_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -17996,16 +18142,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel1Access().getGreaterThanSignKeyword_8());
               		
             }
-            // InternalSVS.g:7259:3: (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt115=2;
-            int LA115_0 = input.LA(1);
+            // InternalSVS.g:7267:3: (otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt117=2;
+            int LA117_0 = input.LA(1);
 
-            if ( (LA115_0==174) ) {
-                alt115=1;
+            if ( (LA117_0==174) ) {
+                alt117=1;
             }
-            switch (alt115) {
+            switch (alt117) {
                 case 1 :
-                    // InternalSVS.g:7260:4: otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:7268:4: otherlv_10= '<level1' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,174,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18019,11 +18165,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel1Access().getFormatKeyword_9_1());
                       			
                     }
-                    // InternalSVS.g:7268:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:7269:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:7276:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:7277:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:7269:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:7270:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:7277:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:7278:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18061,11 +18207,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7289:3: ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) )
-            // InternalSVS.g:7290:4: (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:7297:3: ( (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter ) )
+            // InternalSVS.g:7298:4: (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter )
             {
-            // InternalSVS.g:7290:4: (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter )
-            // InternalSVS.g:7291:5: lv_level1_filter_14_0= ruleVSVSStepLevel1Filter
+            // InternalSVS.g:7298:4: (lv_level1_filter_14_0= ruleVSVSStepLevel1Filter )
+            // InternalSVS.g:7299:5: lv_level1_filter_14_0= ruleVSVSStepLevel1Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -18096,16 +18242,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7308:3: (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
-            int alt116=2;
-            int LA116_0 = input.LA(1);
+            // InternalSVS.g:7316:3: (otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>' )?
+            int alt118=2;
+            int LA118_0 = input.LA(1);
 
-            if ( (LA116_0==176) ) {
-                alt116=1;
+            if ( (LA118_0==176) ) {
+                alt118=1;
             }
-            switch (alt116) {
+            switch (alt118) {
                 case 1 :
-                    // InternalSVS.g:7309:4: otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
+                    // InternalSVS.g:7317:4: otherlv_15= '<level0' otherlv_16= 'format=' ( (otherlv_17= RULE_STRING ) ) otherlv_18= '/>'
                     {
                     otherlv_15=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18119,11 +18265,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_16, grammarAccess.getVSVSStepOutputLevel1Access().getFormatKeyword_11_1());
                       			
                     }
-                    // InternalSVS.g:7317:4: ( (otherlv_17= RULE_STRING ) )
-                    // InternalSVS.g:7318:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:7325:4: ( (otherlv_17= RULE_STRING ) )
+                    // InternalSVS.g:7326:5: (otherlv_17= RULE_STRING )
                     {
-                    // InternalSVS.g:7318:5: (otherlv_17= RULE_STRING )
-                    // InternalSVS.g:7319:6: otherlv_17= RULE_STRING
+                    // InternalSVS.g:7326:5: (otherlv_17= RULE_STRING )
+                    // InternalSVS.g:7327:6: otherlv_17= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18161,16 +18307,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7338:3: (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
-            int alt117=2;
-            int LA117_0 = input.LA(1);
+            // InternalSVS.g:7346:3: (otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>' )?
+            int alt119=2;
+            int LA119_0 = input.LA(1);
 
-            if ( (LA117_0==193) ) {
-                alt117=1;
+            if ( (LA119_0==193) ) {
+                alt119=1;
             }
-            switch (alt117) {
+            switch (alt119) {
                 case 1 :
-                    // InternalSVS.g:7339:4: otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
+                    // InternalSVS.g:7347:4: otherlv_19= '<level1_from_level0' otherlv_20= 'import=' ( (otherlv_21= RULE_STRING ) ) otherlv_22= '/>'
                     {
                     otherlv_19=(Token)match(input,193,FollowSets000.FOLLOW_224); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18184,11 +18330,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_20, grammarAccess.getVSVSStepOutputLevel1Access().getImportKeyword_12_1());
                       			
                     }
-                    // InternalSVS.g:7347:4: ( (otherlv_21= RULE_STRING ) )
-                    // InternalSVS.g:7348:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:7355:4: ( (otherlv_21= RULE_STRING ) )
+                    // InternalSVS.g:7356:5: (otherlv_21= RULE_STRING )
                     {
-                    // InternalSVS.g:7348:5: (otherlv_21= RULE_STRING )
-                    // InternalSVS.g:7349:6: otherlv_21= RULE_STRING
+                    // InternalSVS.g:7356:5: (otherlv_21= RULE_STRING )
+                    // InternalSVS.g:7357:6: otherlv_21= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18226,11 +18372,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7368:3: ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) )
-            // InternalSVS.g:7369:4: (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7376:3: ( (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter ) )
+            // InternalSVS.g:7377:4: (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter )
             {
-            // InternalSVS.g:7369:4: (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter )
-            // InternalSVS.g:7370:5: lv_level0_filter_23_0= ruleVSVSStepLevel0Filter
+            // InternalSVS.g:7377:4: (lv_level0_filter_23_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7378:5: lv_level0_filter_23_0= ruleVSVSStepLevel0Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -18292,7 +18438,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepOutputLevel0"
-    // InternalSVS.g:7395:1: entryRuleVSVSStepOutputLevel0 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF ;
+    // InternalSVS.g:7403:1: entryRuleVSVSStepOutputLevel0 returns [EObject current=null] : iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF ;
     public final EObject entryRuleVSVSStepOutputLevel0() throws RecognitionException {
         EObject current = null;
 
@@ -18300,8 +18446,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7395:61: (iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF )
-            // InternalSVS.g:7396:2: iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF
+            // InternalSVS.g:7403:61: (iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF )
+            // InternalSVS.g:7404:2: iv_ruleVSVSStepOutputLevel0= ruleVSVSStepOutputLevel0 EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepOutputLevel0Rule()); 
@@ -18332,7 +18478,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepOutputLevel0"
-    // InternalSVS.g:7402:1: ruleVSVSStepOutputLevel0 returns [EObject current=null] : (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' ) ;
+    // InternalSVS.g:7410:1: ruleVSVSStepOutputLevel0 returns [EObject current=null] : (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' ) ;
     public final EObject ruleVSVSStepOutputLevel0() throws RecognitionException {
         EObject current = null;
 
@@ -18358,11 +18504,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7408:2: ( (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' ) )
-            // InternalSVS.g:7409:2: (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' )
+            // InternalSVS.g:7416:2: ( (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' ) )
+            // InternalSVS.g:7417:2: (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' )
             {
-            // InternalSVS.g:7409:2: (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' )
-            // InternalSVS.g:7410:3: otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>'
+            // InternalSVS.g:7417:2: (otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>' )
+            // InternalSVS.g:7418:3: otherlv_0= '<output_level_0' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'id=' ( (lv_id_4_0= RULE_UINT_STRING ) ) otherlv_5= 'ifRef=' ( (lv_ifRef_6_0= RULE_UINT_STRING ) ) (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )? otherlv_9= '>' (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )? ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) ) otherlv_15= '</output_level_0>'
             {
             otherlv_0=(Token)match(input,199,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18376,11 +18522,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputLevel0Access().getNameKeyword_1());
               		
             }
-            // InternalSVS.g:7418:3: ( (lv_name_2_0= RULE_STRING ) )
-            // InternalSVS.g:7419:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:7426:3: ( (lv_name_2_0= RULE_STRING ) )
+            // InternalSVS.g:7427:4: (lv_name_2_0= RULE_STRING )
             {
-            // InternalSVS.g:7419:4: (lv_name_2_0= RULE_STRING )
-            // InternalSVS.g:7420:5: lv_name_2_0= RULE_STRING
+            // InternalSVS.g:7427:4: (lv_name_2_0= RULE_STRING )
+            // InternalSVS.g:7428:5: lv_name_2_0= RULE_STRING
             {
             lv_name_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18412,11 +18558,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputLevel0Access().getIdKeyword_3());
               		
             }
-            // InternalSVS.g:7440:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7441:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:7448:3: ( (lv_id_4_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7449:4: (lv_id_4_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7441:4: (lv_id_4_0= RULE_UINT_STRING )
-            // InternalSVS.g:7442:5: lv_id_4_0= RULE_UINT_STRING
+            // InternalSVS.g:7449:4: (lv_id_4_0= RULE_UINT_STRING )
+            // InternalSVS.g:7450:5: lv_id_4_0= RULE_UINT_STRING
             {
             lv_id_4_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_192); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18448,11 +18594,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputLevel0Access().getIfRefKeyword_5());
               		
             }
-            // InternalSVS.g:7462:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7463:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:7470:3: ( (lv_ifRef_6_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7471:4: (lv_ifRef_6_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7463:4: (lv_ifRef_6_0= RULE_UINT_STRING )
-            // InternalSVS.g:7464:5: lv_ifRef_6_0= RULE_UINT_STRING
+            // InternalSVS.g:7471:4: (lv_ifRef_6_0= RULE_UINT_STRING )
+            // InternalSVS.g:7472:5: lv_ifRef_6_0= RULE_UINT_STRING
             {
             lv_ifRef_6_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_221); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18478,16 +18624,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7480:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
-            int alt118=2;
-            int LA118_0 = input.LA(1);
+            // InternalSVS.g:7488:3: (otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) ) )?
+            int alt120=2;
+            int LA120_0 = input.LA(1);
 
-            if ( (LA118_0==189) ) {
-                alt118=1;
+            if ( (LA120_0==189) ) {
+                alt120=1;
             }
-            switch (alt118) {
+            switch (alt120) {
                 case 1 :
-                    // InternalSVS.g:7481:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:7489:4: otherlv_7= 'optional=' ( (lv_optional_8_0= RULE_UINT_STRING ) )
                     {
                     otherlv_7=(Token)match(input,189,FollowSets000.FOLLOW_7); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18495,11 +18641,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputLevel0Access().getOptionalKeyword_7_0());
                       			
                     }
-                    // InternalSVS.g:7485:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
-                    // InternalSVS.g:7486:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:7493:4: ( (lv_optional_8_0= RULE_UINT_STRING ) )
+                    // InternalSVS.g:7494:5: (lv_optional_8_0= RULE_UINT_STRING )
                     {
-                    // InternalSVS.g:7486:5: (lv_optional_8_0= RULE_UINT_STRING )
-                    // InternalSVS.g:7487:6: lv_optional_8_0= RULE_UINT_STRING
+                    // InternalSVS.g:7494:5: (lv_optional_8_0= RULE_UINT_STRING )
+                    // InternalSVS.g:7495:6: lv_optional_8_0= RULE_UINT_STRING
                     {
                     lv_optional_8_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18537,16 +18683,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputLevel0Access().getGreaterThanSignKeyword_8());
               		
             }
-            // InternalSVS.g:7508:3: (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
-            int alt119=2;
-            int LA119_0 = input.LA(1);
+            // InternalSVS.g:7516:3: (otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>' )?
+            int alt121=2;
+            int LA121_0 = input.LA(1);
 
-            if ( (LA119_0==176) ) {
-                alt119=1;
+            if ( (LA121_0==176) ) {
+                alt121=1;
             }
-            switch (alt119) {
+            switch (alt121) {
                 case 1 :
-                    // InternalSVS.g:7509:4: otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
+                    // InternalSVS.g:7517:4: otherlv_10= '<level0' otherlv_11= 'format=' ( (otherlv_12= RULE_STRING ) ) otherlv_13= '/>'
                     {
                     otherlv_10=(Token)match(input,176,FollowSets000.FOLLOW_198); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18560,11 +18706,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_11, grammarAccess.getVSVSStepOutputLevel0Access().getFormatKeyword_9_1());
                       			
                     }
-                    // InternalSVS.g:7517:4: ( (otherlv_12= RULE_STRING ) )
-                    // InternalSVS.g:7518:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:7525:4: ( (otherlv_12= RULE_STRING ) )
+                    // InternalSVS.g:7526:5: (otherlv_12= RULE_STRING )
                     {
-                    // InternalSVS.g:7518:5: (otherlv_12= RULE_STRING )
-                    // InternalSVS.g:7519:6: otherlv_12= RULE_STRING
+                    // InternalSVS.g:7526:5: (otherlv_12= RULE_STRING )
+                    // InternalSVS.g:7527:6: otherlv_12= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18602,11 +18748,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7538:3: ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) )
-            // InternalSVS.g:7539:4: (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7546:3: ( (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter ) )
+            // InternalSVS.g:7547:4: (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter )
             {
-            // InternalSVS.g:7539:4: (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter )
-            // InternalSVS.g:7540:5: lv_level0_filter_14_0= ruleVSVSStepLevel0Filter
+            // InternalSVS.g:7547:4: (lv_level0_filter_14_0= ruleVSVSStepLevel0Filter )
+            // InternalSVS.g:7548:5: lv_level0_filter_14_0= ruleVSVSStepLevel0Filter
             {
             if ( state.backtracking==0 ) {
 
@@ -18668,7 +18814,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepLevel3Filter"
-    // InternalSVS.g:7565:1: entryRuleVSVSStepLevel3Filter returns [EObject current=null] : iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF ;
+    // InternalSVS.g:7573:1: entryRuleVSVSStepLevel3Filter returns [EObject current=null] : iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF ;
     public final EObject entryRuleVSVSStepLevel3Filter() throws RecognitionException {
         EObject current = null;
 
@@ -18676,8 +18822,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7565:61: (iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF )
-            // InternalSVS.g:7566:2: iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF
+            // InternalSVS.g:7573:61: (iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF )
+            // InternalSVS.g:7574:2: iv_ruleVSVSStepLevel3Filter= ruleVSVSStepLevel3Filter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepLevel3FilterRule()); 
@@ -18708,7 +18854,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepLevel3Filter"
-    // InternalSVS.g:7572:1: ruleVSVSStepLevel3Filter returns [EObject current=null] : (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
+    // InternalSVS.g:7580:1: ruleVSVSStepLevel3Filter returns [EObject current=null] : (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
     public final EObject ruleVSVSStepLevel3Filter() throws RecognitionException {
         EObject current = null;
 
@@ -18724,11 +18870,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7578:2: ( (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
-            // InternalSVS.g:7579:2: (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7586:2: ( (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
+            // InternalSVS.g:7587:2: (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
             {
-            // InternalSVS.g:7579:2: (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
-            // InternalSVS.g:7580:3: otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
+            // InternalSVS.g:7587:2: (otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7588:3: otherlv_0= '<level3_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
             {
             otherlv_0=(Token)match(input,201,FollowSets000.FOLLOW_231); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18742,11 +18888,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel3FilterAccess().getApply_def_filterKeyword_1());
               		
             }
-            // InternalSVS.g:7588:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
-            // InternalSVS.g:7589:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7596:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
+            // InternalSVS.g:7597:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
             {
-            // InternalSVS.g:7589:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
-            // InternalSVS.g:7590:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
+            // InternalSVS.g:7597:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7598:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
             {
             if ( state.backtracking==0 ) {
 
@@ -18777,16 +18923,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7607:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
-            int alt120=2;
-            int LA120_0 = input.LA(1);
+            // InternalSVS.g:7615:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
+            int alt122=2;
+            int LA122_0 = input.LA(1);
 
-            if ( (LA120_0==203) ) {
-                alt120=1;
+            if ( (LA122_0==203) ) {
+                alt122=1;
             }
-            switch (alt120) {
+            switch (alt122) {
                 case 1 :
-                    // InternalSVS.g:7608:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7616:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
                     {
                     otherlv_3=(Token)match(input,203,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18794,11 +18940,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel3FilterAccess().getExtra_filterKeyword_3_0());
                       			
                     }
-                    // InternalSVS.g:7612:4: ( (otherlv_4= RULE_STRING ) )
-                    // InternalSVS.g:7613:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7620:4: ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7621:5: (otherlv_4= RULE_STRING )
                     {
-                    // InternalSVS.g:7613:5: (otherlv_4= RULE_STRING )
-                    // InternalSVS.g:7614:6: otherlv_4= RULE_STRING
+                    // InternalSVS.g:7621:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7622:6: otherlv_4= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -18861,7 +19007,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepLevel2Filter"
-    // InternalSVS.g:7637:1: entryRuleVSVSStepLevel2Filter returns [EObject current=null] : iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF ;
+    // InternalSVS.g:7645:1: entryRuleVSVSStepLevel2Filter returns [EObject current=null] : iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF ;
     public final EObject entryRuleVSVSStepLevel2Filter() throws RecognitionException {
         EObject current = null;
 
@@ -18869,8 +19015,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7637:61: (iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF )
-            // InternalSVS.g:7638:2: iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF
+            // InternalSVS.g:7645:61: (iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF )
+            // InternalSVS.g:7646:2: iv_ruleVSVSStepLevel2Filter= ruleVSVSStepLevel2Filter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepLevel2FilterRule()); 
@@ -18901,7 +19047,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepLevel2Filter"
-    // InternalSVS.g:7644:1: ruleVSVSStepLevel2Filter returns [EObject current=null] : (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
+    // InternalSVS.g:7652:1: ruleVSVSStepLevel2Filter returns [EObject current=null] : (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
     public final EObject ruleVSVSStepLevel2Filter() throws RecognitionException {
         EObject current = null;
 
@@ -18917,11 +19063,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7650:2: ( (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
-            // InternalSVS.g:7651:2: (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7658:2: ( (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
+            // InternalSVS.g:7659:2: (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
             {
-            // InternalSVS.g:7651:2: (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
-            // InternalSVS.g:7652:3: otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
+            // InternalSVS.g:7659:2: (otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7660:3: otherlv_0= '<level2_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
             {
             otherlv_0=(Token)match(input,204,FollowSets000.FOLLOW_231); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -18935,11 +19081,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel2FilterAccess().getApply_def_filterKeyword_1());
               		
             }
-            // InternalSVS.g:7660:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
-            // InternalSVS.g:7661:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7668:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
+            // InternalSVS.g:7669:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
             {
-            // InternalSVS.g:7661:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
-            // InternalSVS.g:7662:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
+            // InternalSVS.g:7669:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7670:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
             {
             if ( state.backtracking==0 ) {
 
@@ -18970,16 +19116,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7679:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
-            int alt121=2;
-            int LA121_0 = input.LA(1);
+            // InternalSVS.g:7687:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
+            int alt123=2;
+            int LA123_0 = input.LA(1);
 
-            if ( (LA121_0==203) ) {
-                alt121=1;
+            if ( (LA123_0==203) ) {
+                alt123=1;
             }
-            switch (alt121) {
+            switch (alt123) {
                 case 1 :
-                    // InternalSVS.g:7680:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7688:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
                     {
                     otherlv_3=(Token)match(input,203,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -18987,11 +19133,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel2FilterAccess().getExtra_filterKeyword_3_0());
                       			
                     }
-                    // InternalSVS.g:7684:4: ( (otherlv_4= RULE_STRING ) )
-                    // InternalSVS.g:7685:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7692:4: ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7693:5: (otherlv_4= RULE_STRING )
                     {
-                    // InternalSVS.g:7685:5: (otherlv_4= RULE_STRING )
-                    // InternalSVS.g:7686:6: otherlv_4= RULE_STRING
+                    // InternalSVS.g:7693:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7694:6: otherlv_4= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19054,7 +19200,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepLevel1Filter"
-    // InternalSVS.g:7709:1: entryRuleVSVSStepLevel1Filter returns [EObject current=null] : iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF ;
+    // InternalSVS.g:7717:1: entryRuleVSVSStepLevel1Filter returns [EObject current=null] : iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF ;
     public final EObject entryRuleVSVSStepLevel1Filter() throws RecognitionException {
         EObject current = null;
 
@@ -19062,8 +19208,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7709:61: (iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF )
-            // InternalSVS.g:7710:2: iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF
+            // InternalSVS.g:7717:61: (iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF )
+            // InternalSVS.g:7718:2: iv_ruleVSVSStepLevel1Filter= ruleVSVSStepLevel1Filter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepLevel1FilterRule()); 
@@ -19094,7 +19240,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepLevel1Filter"
-    // InternalSVS.g:7716:1: ruleVSVSStepLevel1Filter returns [EObject current=null] : (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
+    // InternalSVS.g:7724:1: ruleVSVSStepLevel1Filter returns [EObject current=null] : (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
     public final EObject ruleVSVSStepLevel1Filter() throws RecognitionException {
         EObject current = null;
 
@@ -19110,11 +19256,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7722:2: ( (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
-            // InternalSVS.g:7723:2: (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7730:2: ( (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
+            // InternalSVS.g:7731:2: (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
             {
-            // InternalSVS.g:7723:2: (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
-            // InternalSVS.g:7724:3: otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
+            // InternalSVS.g:7731:2: (otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7732:3: otherlv_0= '<level1_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
             {
             otherlv_0=(Token)match(input,205,FollowSets000.FOLLOW_231); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19128,11 +19274,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel1FilterAccess().getApply_def_filterKeyword_1());
               		
             }
-            // InternalSVS.g:7732:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
-            // InternalSVS.g:7733:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7740:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
+            // InternalSVS.g:7741:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
             {
-            // InternalSVS.g:7733:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
-            // InternalSVS.g:7734:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
+            // InternalSVS.g:7741:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7742:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
             {
             if ( state.backtracking==0 ) {
 
@@ -19163,16 +19309,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7751:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
-            int alt122=2;
-            int LA122_0 = input.LA(1);
+            // InternalSVS.g:7759:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
+            int alt124=2;
+            int LA124_0 = input.LA(1);
 
-            if ( (LA122_0==203) ) {
-                alt122=1;
+            if ( (LA124_0==203) ) {
+                alt124=1;
             }
-            switch (alt122) {
+            switch (alt124) {
                 case 1 :
-                    // InternalSVS.g:7752:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7760:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
                     {
                     otherlv_3=(Token)match(input,203,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19180,11 +19326,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel1FilterAccess().getExtra_filterKeyword_3_0());
                       			
                     }
-                    // InternalSVS.g:7756:4: ( (otherlv_4= RULE_STRING ) )
-                    // InternalSVS.g:7757:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7764:4: ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7765:5: (otherlv_4= RULE_STRING )
                     {
-                    // InternalSVS.g:7757:5: (otherlv_4= RULE_STRING )
-                    // InternalSVS.g:7758:6: otherlv_4= RULE_STRING
+                    // InternalSVS.g:7765:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7766:6: otherlv_4= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19247,7 +19393,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepLevel0Filter"
-    // InternalSVS.g:7781:1: entryRuleVSVSStepLevel0Filter returns [EObject current=null] : iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF ;
+    // InternalSVS.g:7789:1: entryRuleVSVSStepLevel0Filter returns [EObject current=null] : iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF ;
     public final EObject entryRuleVSVSStepLevel0Filter() throws RecognitionException {
         EObject current = null;
 
@@ -19255,8 +19401,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7781:61: (iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF )
-            // InternalSVS.g:7782:2: iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF
+            // InternalSVS.g:7789:61: (iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF )
+            // InternalSVS.g:7790:2: iv_ruleVSVSStepLevel0Filter= ruleVSVSStepLevel0Filter EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepLevel0FilterRule()); 
@@ -19287,7 +19433,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepLevel0Filter"
-    // InternalSVS.g:7788:1: ruleVSVSStepLevel0Filter returns [EObject current=null] : (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
+    // InternalSVS.g:7796:1: ruleVSVSStepLevel0Filter returns [EObject current=null] : (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) ;
     public final EObject ruleVSVSStepLevel0Filter() throws RecognitionException {
         EObject current = null;
 
@@ -19303,11 +19449,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7794:2: ( (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
-            // InternalSVS.g:7795:2: (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7802:2: ( (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' ) )
+            // InternalSVS.g:7803:2: (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
             {
-            // InternalSVS.g:7795:2: (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
-            // InternalSVS.g:7796:3: otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
+            // InternalSVS.g:7803:2: (otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>' )
+            // InternalSVS.g:7804:3: otherlv_0= '<level0_filter' otherlv_1= 'apply_def_filter=' ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) ) (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )? otherlv_5= '/>'
             {
             otherlv_0=(Token)match(input,206,FollowSets000.FOLLOW_231); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19321,11 +19467,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepLevel0FilterAccess().getApply_def_filterKeyword_1());
               		
             }
-            // InternalSVS.g:7804:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
-            // InternalSVS.g:7805:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7812:3: ( (lv_apply_def_filter_2_0= ruleVSVSStepYesNo ) )
+            // InternalSVS.g:7813:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
             {
-            // InternalSVS.g:7805:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
-            // InternalSVS.g:7806:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
+            // InternalSVS.g:7813:4: (lv_apply_def_filter_2_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:7814:5: lv_apply_def_filter_2_0= ruleVSVSStepYesNo
             {
             if ( state.backtracking==0 ) {
 
@@ -19356,16 +19502,16 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:7823:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
-            int alt123=2;
-            int LA123_0 = input.LA(1);
+            // InternalSVS.g:7831:3: (otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) ) )?
+            int alt125=2;
+            int LA125_0 = input.LA(1);
 
-            if ( (LA123_0==203) ) {
-                alt123=1;
+            if ( (LA125_0==203) ) {
+                alt125=1;
             }
-            switch (alt123) {
+            switch (alt125) {
                 case 1 :
-                    // InternalSVS.g:7824:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7832:4: otherlv_3= 'extra_filter=' ( (otherlv_4= RULE_STRING ) )
                     {
                     otherlv_3=(Token)match(input,203,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -19373,11 +19519,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                       				newLeafNode(otherlv_3, grammarAccess.getVSVSStepLevel0FilterAccess().getExtra_filterKeyword_3_0());
                       			
                     }
-                    // InternalSVS.g:7828:4: ( (otherlv_4= RULE_STRING ) )
-                    // InternalSVS.g:7829:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7836:4: ( (otherlv_4= RULE_STRING ) )
+                    // InternalSVS.g:7837:5: (otherlv_4= RULE_STRING )
                     {
-                    // InternalSVS.g:7829:5: (otherlv_4= RULE_STRING )
-                    // InternalSVS.g:7830:6: otherlv_4= RULE_STRING
+                    // InternalSVS.g:7837:5: (otherlv_4= RULE_STRING )
+                    // InternalSVS.g:7838:6: otherlv_4= RULE_STRING
                     {
                     if ( state.backtracking==0 ) {
 
@@ -19440,7 +19586,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepEnable"
-    // InternalSVS.g:7853:1: entryRuleVSVSStepEnable returns [EObject current=null] : iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF ;
+    // InternalSVS.g:7861:1: entryRuleVSVSStepEnable returns [EObject current=null] : iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF ;
     public final EObject entryRuleVSVSStepEnable() throws RecognitionException {
         EObject current = null;
 
@@ -19448,8 +19594,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7853:55: (iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF )
-            // InternalSVS.g:7854:2: iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF
+            // InternalSVS.g:7861:55: (iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF )
+            // InternalSVS.g:7862:2: iv_ruleVSVSStepEnable= ruleVSVSStepEnable EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepEnableRule()); 
@@ -19480,7 +19626,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepEnable"
-    // InternalSVS.g:7860:1: ruleVSVSStepEnable returns [EObject current=null] : (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalSVS.g:7868:1: ruleVSVSStepEnable returns [EObject current=null] : (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleVSVSStepEnable() throws RecognitionException {
         EObject current = null;
 
@@ -19493,11 +19639,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7866:2: ( (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
-            // InternalSVS.g:7867:2: (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7874:2: ( (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
+            // InternalSVS.g:7875:2: (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalSVS.g:7867:2: (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
-            // InternalSVS.g:7868:3: otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
+            // InternalSVS.g:7875:2: (otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7876:3: otherlv_0= '<enable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,207,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19511,11 +19657,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepEnableAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:7876:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7877:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7884:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7885:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7877:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:7878:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:7885:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7886:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19572,7 +19718,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepDisable"
-    // InternalSVS.g:7902:1: entryRuleVSVSStepDisable returns [EObject current=null] : iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF ;
+    // InternalSVS.g:7910:1: entryRuleVSVSStepDisable returns [EObject current=null] : iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF ;
     public final EObject entryRuleVSVSStepDisable() throws RecognitionException {
         EObject current = null;
 
@@ -19580,8 +19726,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7902:56: (iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF )
-            // InternalSVS.g:7903:2: iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF
+            // InternalSVS.g:7910:56: (iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF )
+            // InternalSVS.g:7911:2: iv_ruleVSVSStepDisable= ruleVSVSStepDisable EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepDisableRule()); 
@@ -19612,7 +19758,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepDisable"
-    // InternalSVS.g:7909:1: ruleVSVSStepDisable returns [EObject current=null] : (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalSVS.g:7917:1: ruleVSVSStepDisable returns [EObject current=null] : (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleVSVSStepDisable() throws RecognitionException {
         EObject current = null;
 
@@ -19625,11 +19771,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7915:2: ( (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
-            // InternalSVS.g:7916:2: (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7923:2: ( (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
+            // InternalSVS.g:7924:2: (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalSVS.g:7916:2: (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
-            // InternalSVS.g:7917:3: otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
+            // InternalSVS.g:7924:2: (otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7925:3: otherlv_0= '<disable' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,208,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19643,11 +19789,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepDisableAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:7925:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7926:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7933:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7934:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7926:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:7927:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:7934:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7935:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19704,7 +19850,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepEnablePrint"
-    // InternalSVS.g:7951:1: entryRuleVSVSStepEnablePrint returns [EObject current=null] : iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF ;
+    // InternalSVS.g:7959:1: entryRuleVSVSStepEnablePrint returns [EObject current=null] : iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF ;
     public final EObject entryRuleVSVSStepEnablePrint() throws RecognitionException {
         EObject current = null;
 
@@ -19712,8 +19858,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:7951:60: (iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF )
-            // InternalSVS.g:7952:2: iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF
+            // InternalSVS.g:7959:60: (iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF )
+            // InternalSVS.g:7960:2: iv_ruleVSVSStepEnablePrint= ruleVSVSStepEnablePrint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepEnablePrintRule()); 
@@ -19744,7 +19890,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepEnablePrint"
-    // InternalSVS.g:7958:1: ruleVSVSStepEnablePrint returns [EObject current=null] : (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalSVS.g:7966:1: ruleVSVSStepEnablePrint returns [EObject current=null] : (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleVSVSStepEnablePrint() throws RecognitionException {
         EObject current = null;
 
@@ -19757,11 +19903,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:7964:2: ( (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
-            // InternalSVS.g:7965:2: (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7972:2: ( (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
+            // InternalSVS.g:7973:2: (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalSVS.g:7965:2: (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
-            // InternalSVS.g:7966:3: otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
+            // InternalSVS.g:7973:2: (otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:7974:3: otherlv_0= '<enable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,209,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19775,11 +19921,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepEnablePrintAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:7974:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:7975:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7982:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:7983:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:7975:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:7976:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:7983:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:7984:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19836,7 +19982,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepDisablePrint"
-    // InternalSVS.g:8000:1: entryRuleVSVSStepDisablePrint returns [EObject current=null] : iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF ;
+    // InternalSVS.g:8008:1: entryRuleVSVSStepDisablePrint returns [EObject current=null] : iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF ;
     public final EObject entryRuleVSVSStepDisablePrint() throws RecognitionException {
         EObject current = null;
 
@@ -19844,8 +19990,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8000:61: (iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF )
-            // InternalSVS.g:8001:2: iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF
+            // InternalSVS.g:8008:61: (iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF )
+            // InternalSVS.g:8009:2: iv_ruleVSVSStepDisablePrint= ruleVSVSStepDisablePrint EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepDisablePrintRule()); 
@@ -19876,7 +20022,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepDisablePrint"
-    // InternalSVS.g:8007:1: ruleVSVSStepDisablePrint returns [EObject current=null] : (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalSVS.g:8015:1: ruleVSVSStepDisablePrint returns [EObject current=null] : (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleVSVSStepDisablePrint() throws RecognitionException {
         EObject current = null;
 
@@ -19889,11 +20035,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8013:2: ( (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
-            // InternalSVS.g:8014:2: (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:8021:2: ( (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
+            // InternalSVS.g:8022:2: (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalSVS.g:8014:2: (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
-            // InternalSVS.g:8015:3: otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
+            // InternalSVS.g:8022:2: (otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:8023:3: otherlv_0= '<disable_print' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,210,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19907,11 +20053,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepDisablePrintAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:8023:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:8024:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8031:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:8032:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:8024:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:8025:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:8032:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8033:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -19968,7 +20114,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepNextStep"
-    // InternalSVS.g:8049:1: entryRuleVSVSStepNextStep returns [EObject current=null] : iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF ;
+    // InternalSVS.g:8057:1: entryRuleVSVSStepNextStep returns [EObject current=null] : iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF ;
     public final EObject entryRuleVSVSStepNextStep() throws RecognitionException {
         EObject current = null;
 
@@ -19976,8 +20122,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8049:57: (iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF )
-            // InternalSVS.g:8050:2: iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF
+            // InternalSVS.g:8057:57: (iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF )
+            // InternalSVS.g:8058:2: iv_ruleVSVSStepNextStep= ruleVSVSStepNextStep EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepNextStepRule()); 
@@ -20008,7 +20154,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepNextStep"
-    // InternalSVS.g:8056:1: ruleVSVSStepNextStep returns [EObject current=null] : (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' ) ;
+    // InternalSVS.g:8064:1: ruleVSVSStepNextStep returns [EObject current=null] : (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' ) ;
     public final EObject ruleVSVSStepNextStep() throws RecognitionException {
         EObject current = null;
 
@@ -20024,11 +20170,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8062:2: ( (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' ) )
-            // InternalSVS.g:8063:2: (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' )
+            // InternalSVS.g:8070:2: ( (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' ) )
+            // InternalSVS.g:8071:2: (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' )
             {
-            // InternalSVS.g:8063:2: (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' )
-            // InternalSVS.g:8064:3: otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>'
+            // InternalSVS.g:8071:2: (otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>' )
+            // InternalSVS.g:8072:3: otherlv_0= '<nextStep' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= 'isConcurrent=' ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) ) otherlv_5= '/>'
             {
             otherlv_0=(Token)match(input,211,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20042,11 +20188,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepNextStepAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:8072:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:8073:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8080:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:8081:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:8073:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:8074:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:8081:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8082:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_234); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20078,11 +20224,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepNextStepAccess().getIsConcurrentKeyword_3());
               		
             }
-            // InternalSVS.g:8094:3: ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) )
-            // InternalSVS.g:8095:4: (lv_isConcurrent_4_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:8102:3: ( (lv_isConcurrent_4_0= ruleVSVSStepYesNo ) )
+            // InternalSVS.g:8103:4: (lv_isConcurrent_4_0= ruleVSVSStepYesNo )
             {
-            // InternalSVS.g:8095:4: (lv_isConcurrent_4_0= ruleVSVSStepYesNo )
-            // InternalSVS.g:8096:5: lv_isConcurrent_4_0= ruleVSVSStepYesNo
+            // InternalSVS.g:8103:4: (lv_isConcurrent_4_0= ruleVSVSStepYesNo )
+            // InternalSVS.g:8104:5: lv_isConcurrent_4_0= ruleVSVSStepYesNo
             {
             if ( state.backtracking==0 ) {
 
@@ -20144,7 +20290,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVSVSStepConcurrentStep"
-    // InternalSVS.g:8121:1: entryRuleVSVSStepConcurrentStep returns [EObject current=null] : iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF ;
+    // InternalSVS.g:8129:1: entryRuleVSVSStepConcurrentStep returns [EObject current=null] : iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF ;
     public final EObject entryRuleVSVSStepConcurrentStep() throws RecognitionException {
         EObject current = null;
 
@@ -20152,8 +20298,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8121:63: (iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF )
-            // InternalSVS.g:8122:2: iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF
+            // InternalSVS.g:8129:63: (iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF )
+            // InternalSVS.g:8130:2: iv_ruleVSVSStepConcurrentStep= ruleVSVSStepConcurrentStep EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVSVSStepConcurrentStepRule()); 
@@ -20184,7 +20330,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepConcurrentStep"
-    // InternalSVS.g:8128:1: ruleVSVSStepConcurrentStep returns [EObject current=null] : (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalSVS.g:8136:1: ruleVSVSStepConcurrentStep returns [EObject current=null] : (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleVSVSStepConcurrentStep() throws RecognitionException {
         EObject current = null;
 
@@ -20197,11 +20343,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8134:2: ( (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
-            // InternalSVS.g:8135:2: (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:8142:2: ( (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' ) )
+            // InternalSVS.g:8143:2: (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalSVS.g:8135:2: (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
-            // InternalSVS.g:8136:3: otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
+            // InternalSVS.g:8143:2: (otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>' )
+            // InternalSVS.g:8144:3: otherlv_0= '<concurrent_step' otherlv_1= 'id=' ( (lv_id_2_0= RULE_UINT_STRING ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,213,FollowSets000.FOLLOW_5); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20215,11 +20361,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConcurrentStepAccess().getIdKeyword_1());
               		
             }
-            // InternalSVS.g:8144:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
-            // InternalSVS.g:8145:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8152:3: ( (lv_id_2_0= RULE_UINT_STRING ) )
+            // InternalSVS.g:8153:4: (lv_id_2_0= RULE_UINT_STRING )
             {
-            // InternalSVS.g:8145:4: (lv_id_2_0= RULE_UINT_STRING )
-            // InternalSVS.g:8146:5: lv_id_2_0= RULE_UINT_STRING
+            // InternalSVS.g:8153:4: (lv_id_2_0= RULE_UINT_STRING )
+            // InternalSVS.g:8154:5: lv_id_2_0= RULE_UINT_STRING
             {
             lv_id_2_0=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20276,7 +20422,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleQualifiedName"
-    // InternalSVS.g:8170:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
+    // InternalSVS.g:8178:1: entryRuleQualifiedName returns [String current=null] : iv_ruleQualifiedName= ruleQualifiedName EOF ;
     public final String entryRuleQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -20284,8 +20430,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8170:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
-            // InternalSVS.g:8171:2: iv_ruleQualifiedName= ruleQualifiedName EOF
+            // InternalSVS.g:8178:53: (iv_ruleQualifiedName= ruleQualifiedName EOF )
+            // InternalSVS.g:8179:2: iv_ruleQualifiedName= ruleQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getQualifiedNameRule()); 
@@ -20316,7 +20462,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleQualifiedName"
-    // InternalSVS.g:8177:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
+    // InternalSVS.g:8185:1: ruleQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) ;
     public final AntlrDatatypeRuleToken ruleQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -20328,11 +20474,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8183:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
-            // InternalSVS.g:8184:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalSVS.g:8191:2: ( (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* ) )
+            // InternalSVS.g:8192:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             {
-            // InternalSVS.g:8184:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
-            // InternalSVS.g:8185:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
+            // InternalSVS.g:8192:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
+            // InternalSVS.g:8193:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
             this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_235); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -20345,20 +20491,20 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newLeafNode(this_ID_0, grammarAccess.getQualifiedNameAccess().getIDTerminalRuleCall_0());
               		
             }
-            // InternalSVS.g:8192:3: (kw= '.' this_ID_2= RULE_ID )*
-            loop124:
+            // InternalSVS.g:8200:3: (kw= '.' this_ID_2= RULE_ID )*
+            loop126:
             do {
-                int alt124=2;
-                int LA124_0 = input.LA(1);
+                int alt126=2;
+                int LA126_0 = input.LA(1);
 
-                if ( (LA124_0==214) ) {
-                    alt124=1;
+                if ( (LA126_0==214) ) {
+                    alt126=1;
                 }
 
 
-                switch (alt124) {
+                switch (alt126) {
             	case 1 :
-            	    // InternalSVS.g:8193:4: kw= '.' this_ID_2= RULE_ID
+            	    // InternalSVS.g:8201:4: kw= '.' this_ID_2= RULE_ID
             	    {
             	    kw=(Token)match(input,214,FollowSets000.FOLLOW_236); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -20383,7 +20529,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop124;
+            	    break loop126;
                 }
             } while (true);
 
@@ -20412,7 +20558,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersion"
-    // InternalSVS.g:8210:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
+    // InternalSVS.g:8218:1: entryRuleVersion returns [String current=null] : iv_ruleVersion= ruleVersion EOF ;
     public final String entryRuleVersion() throws RecognitionException {
         String current = null;
 
@@ -20420,8 +20566,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8210:47: (iv_ruleVersion= ruleVersion EOF )
-            // InternalSVS.g:8211:2: iv_ruleVersion= ruleVersion EOF
+            // InternalSVS.g:8218:47: (iv_ruleVersion= ruleVersion EOF )
+            // InternalSVS.g:8219:2: iv_ruleVersion= ruleVersion EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionRule()); 
@@ -20452,7 +20598,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersion"
-    // InternalSVS.g:8217:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
+    // InternalSVS.g:8225:1: ruleVersion returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) ;
     public final AntlrDatatypeRuleToken ruleVersion() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -20468,46 +20614,46 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8223:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
-            // InternalSVS.g:8224:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalSVS.g:8231:2: ( ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* ) )
+            // InternalSVS.g:8232:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
             {
-            // InternalSVS.g:8224:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
-            // InternalSVS.g:8225:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            // InternalSVS.g:8232:2: ( (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )* )
+            // InternalSVS.g:8233:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) ) (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
             {
-            // InternalSVS.g:8225:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
-            int alt126=2;
-            int LA126_0 = input.LA(1);
+            // InternalSVS.g:8233:3: (this_INT_0= RULE_INT | ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID ) )
+            int alt128=2;
+            int LA128_0 = input.LA(1);
 
-            if ( (LA126_0==RULE_INT) ) {
-                int LA126_1 = input.LA(2);
+            if ( (LA128_0==RULE_INT) ) {
+                int LA128_1 = input.LA(2);
 
-                if ( (LA126_1==RULE_ID) ) {
-                    alt126=2;
+                if ( (LA128_1==RULE_ID) ) {
+                    alt128=2;
                 }
-                else if ( (LA126_1==EOF||LA126_1==214||LA126_1==216) ) {
-                    alt126=1;
+                else if ( (LA128_1==EOF||LA128_1==214||LA128_1==216) ) {
+                    alt128=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 126, 1, input);
+                        new NoViableAltException("", 128, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA126_0==RULE_ID) ) {
-                alt126=2;
+            else if ( (LA128_0==RULE_ID) ) {
+                alt128=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 126, 0, input);
+                    new NoViableAltException("", 128, 0, input);
 
                 throw nvae;
             }
-            switch (alt126) {
+            switch (alt128) {
                 case 1 :
-                    // InternalSVS.g:8226:4: this_INT_0= RULE_INT
+                    // InternalSVS.g:8234:4: this_INT_0= RULE_INT
                     {
                     this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_235); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20524,21 +20670,21 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8234:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalSVS.g:8242:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
                     {
-                    // InternalSVS.g:8234:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
-                    // InternalSVS.g:8235:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
+                    // InternalSVS.g:8242:4: ( (this_INT_1= RULE_INT )? this_ID_2= RULE_ID )
+                    // InternalSVS.g:8243:5: (this_INT_1= RULE_INT )? this_ID_2= RULE_ID
                     {
-                    // InternalSVS.g:8235:5: (this_INT_1= RULE_INT )?
-                    int alt125=2;
-                    int LA125_0 = input.LA(1);
+                    // InternalSVS.g:8243:5: (this_INT_1= RULE_INT )?
+                    int alt127=2;
+                    int LA127_0 = input.LA(1);
 
-                    if ( (LA125_0==RULE_INT) ) {
-                        alt125=1;
+                    if ( (LA127_0==RULE_INT) ) {
+                        alt127=1;
                     }
-                    switch (alt125) {
+                    switch (alt127) {
                         case 1 :
-                            // InternalSVS.g:8236:6: this_INT_1= RULE_INT
+                            // InternalSVS.g:8244:6: this_INT_1= RULE_INT
                             {
                             this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_236); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
@@ -20577,20 +20723,20 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalSVS.g:8253:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
-            loop129:
+            // InternalSVS.g:8261:3: (kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) ) )*
+            loop131:
             do {
-                int alt129=2;
-                int LA129_0 = input.LA(1);
+                int alt131=2;
+                int LA131_0 = input.LA(1);
 
-                if ( (LA129_0==214) ) {
-                    alt129=1;
+                if ( (LA131_0==214) ) {
+                    alt131=1;
                 }
 
 
-                switch (alt129) {
+                switch (alt131) {
             	case 1 :
-            	    // InternalSVS.g:8254:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    // InternalSVS.g:8262:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
             	    kw=(Token)match(input,214,FollowSets000.FOLLOW_237); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
@@ -20599,40 +20745,40 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	      				newLeafNode(kw, grammarAccess.getVersionAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    // InternalSVS.g:8259:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
-            	    int alt128=2;
-            	    int LA128_0 = input.LA(1);
+            	    // InternalSVS.g:8267:4: (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
+            	    int alt130=2;
+            	    int LA130_0 = input.LA(1);
 
-            	    if ( (LA128_0==RULE_INT) ) {
-            	        int LA128_1 = input.LA(2);
+            	    if ( (LA130_0==RULE_INT) ) {
+            	        int LA130_1 = input.LA(2);
 
-            	        if ( (LA128_1==RULE_ID) ) {
-            	            alt128=2;
+            	        if ( (LA130_1==RULE_ID) ) {
+            	            alt130=2;
             	        }
-            	        else if ( (LA128_1==EOF||LA128_1==214||LA128_1==216) ) {
-            	            alt128=1;
+            	        else if ( (LA130_1==EOF||LA130_1==214||LA130_1==216) ) {
+            	            alt130=1;
             	        }
             	        else {
             	            if (state.backtracking>0) {state.failed=true; return current;}
             	            NoViableAltException nvae =
-            	                new NoViableAltException("", 128, 1, input);
+            	                new NoViableAltException("", 130, 1, input);
 
             	            throw nvae;
             	        }
             	    }
-            	    else if ( (LA128_0==RULE_ID) ) {
-            	        alt128=2;
+            	    else if ( (LA130_0==RULE_ID) ) {
+            	        alt130=2;
             	    }
             	    else {
             	        if (state.backtracking>0) {state.failed=true; return current;}
             	        NoViableAltException nvae =
-            	            new NoViableAltException("", 128, 0, input);
+            	            new NoViableAltException("", 130, 0, input);
 
             	        throw nvae;
             	    }
-            	    switch (alt128) {
+            	    switch (alt130) {
             	        case 1 :
-            	            // InternalSVS.g:8260:5: this_INT_4= RULE_INT
+            	            // InternalSVS.g:8268:5: this_INT_4= RULE_INT
             	            {
             	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_235); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
@@ -20649,21 +20795,21 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	            }
             	            break;
             	        case 2 :
-            	            // InternalSVS.g:8268:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalSVS.g:8276:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
             	            {
-            	            // InternalSVS.g:8268:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
-            	            // InternalSVS.g:8269:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
+            	            // InternalSVS.g:8276:5: ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID )
+            	            // InternalSVS.g:8277:6: (this_INT_5= RULE_INT )? this_ID_6= RULE_ID
             	            {
-            	            // InternalSVS.g:8269:6: (this_INT_5= RULE_INT )?
-            	            int alt127=2;
-            	            int LA127_0 = input.LA(1);
+            	            // InternalSVS.g:8277:6: (this_INT_5= RULE_INT )?
+            	            int alt129=2;
+            	            int LA129_0 = input.LA(1);
 
-            	            if ( (LA127_0==RULE_INT) ) {
-            	                alt127=1;
+            	            if ( (LA129_0==RULE_INT) ) {
+            	                alt129=1;
             	            }
-            	            switch (alt127) {
+            	            switch (alt129) {
             	                case 1 :
-            	                    // InternalSVS.g:8270:7: this_INT_5= RULE_INT
+            	                    // InternalSVS.g:8278:7: this_INT_5= RULE_INT
             	                    {
             	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_236); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
@@ -20707,7 +20853,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop129;
+            	    break loop131;
                 }
             } while (true);
 
@@ -20736,7 +20882,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleVersionedQualifiedName"
-    // InternalSVS.g:8292:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
+    // InternalSVS.g:8300:1: entryRuleVersionedQualifiedName returns [String current=null] : iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF ;
     public final String entryRuleVersionedQualifiedName() throws RecognitionException {
         String current = null;
 
@@ -20744,8 +20890,8 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalSVS.g:8292:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
-            // InternalSVS.g:8293:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
+            // InternalSVS.g:8300:62: (iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF )
+            // InternalSVS.g:8301:2: iv_ruleVersionedQualifiedName= ruleVersionedQualifiedName EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getVersionedQualifiedNameRule()); 
@@ -20776,7 +20922,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVersionedQualifiedName"
-    // InternalSVS.g:8299:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
+    // InternalSVS.g:8307:1: ruleVersionedQualifiedName returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) ;
     public final AntlrDatatypeRuleToken ruleVersionedQualifiedName() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -20790,11 +20936,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8305:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
-            // InternalSVS.g:8306:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalSVS.g:8313:2: ( (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' ) )
+            // InternalSVS.g:8314:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
             {
-            // InternalSVS.g:8306:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
-            // InternalSVS.g:8307:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
+            // InternalSVS.g:8314:2: (this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')' )
+            // InternalSVS.g:8315:3: this_QualifiedName_0= ruleQualifiedName kw= '(' this_Version_2= ruleVersion kw= ')'
             {
             if ( state.backtracking==0 ) {
 
@@ -20875,7 +21021,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDAlignment"
-    // InternalSVS.g:8341:1: ruleDAlignment returns [Enumerator current=null] : ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) ) ;
+    // InternalSVS.g:8349:1: ruleDAlignment returns [Enumerator current=null] : ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) ) ;
     public final Enumerator ruleDAlignment() throws RecognitionException {
         Enumerator current = null;
 
@@ -20888,46 +21034,46 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8347:2: ( ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) ) )
-            // InternalSVS.g:8348:2: ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) )
+            // InternalSVS.g:8355:2: ( ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) ) )
+            // InternalSVS.g:8356:2: ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) )
             {
-            // InternalSVS.g:8348:2: ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) )
-            int alt130=4;
+            // InternalSVS.g:8356:2: ( (enumLiteral_0= '\"left\"' ) | (enumLiteral_1= '\"center\"' ) | (enumLiteral_2= '\"right\"' ) | (enumLiteral_3= '\"justified\"' ) )
+            int alt132=4;
             switch ( input.LA(1) ) {
             case 217:
                 {
-                alt130=1;
+                alt132=1;
                 }
                 break;
             case 218:
                 {
-                alt130=2;
+                alt132=2;
                 }
                 break;
             case 219:
                 {
-                alt130=3;
+                alt132=3;
                 }
                 break;
             case 220:
                 {
-                alt130=4;
+                alt132=4;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 130, 0, input);
+                    new NoViableAltException("", 132, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt130) {
+            switch (alt132) {
                 case 1 :
-                    // InternalSVS.g:8349:3: (enumLiteral_0= '\"left\"' )
+                    // InternalSVS.g:8357:3: (enumLiteral_0= '\"left\"' )
                     {
-                    // InternalSVS.g:8349:3: (enumLiteral_0= '\"left\"' )
-                    // InternalSVS.g:8350:4: enumLiteral_0= '\"left\"'
+                    // InternalSVS.g:8357:3: (enumLiteral_0= '\"left\"' )
+                    // InternalSVS.g:8358:4: enumLiteral_0= '\"left\"'
                     {
                     enumLiteral_0=(Token)match(input,217,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20943,10 +21089,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8357:3: (enumLiteral_1= '\"center\"' )
+                    // InternalSVS.g:8365:3: (enumLiteral_1= '\"center\"' )
                     {
-                    // InternalSVS.g:8357:3: (enumLiteral_1= '\"center\"' )
-                    // InternalSVS.g:8358:4: enumLiteral_1= '\"center\"'
+                    // InternalSVS.g:8365:3: (enumLiteral_1= '\"center\"' )
+                    // InternalSVS.g:8366:4: enumLiteral_1= '\"center\"'
                     {
                     enumLiteral_1=(Token)match(input,218,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20962,10 +21108,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSVS.g:8365:3: (enumLiteral_2= '\"right\"' )
+                    // InternalSVS.g:8373:3: (enumLiteral_2= '\"right\"' )
                     {
-                    // InternalSVS.g:8365:3: (enumLiteral_2= '\"right\"' )
-                    // InternalSVS.g:8366:4: enumLiteral_2= '\"right\"'
+                    // InternalSVS.g:8373:3: (enumLiteral_2= '\"right\"' )
+                    // InternalSVS.g:8374:4: enumLiteral_2= '\"right\"'
                     {
                     enumLiteral_2=(Token)match(input,219,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -20981,10 +21127,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalSVS.g:8373:3: (enumLiteral_3= '\"justified\"' )
+                    // InternalSVS.g:8381:3: (enumLiteral_3= '\"justified\"' )
                     {
-                    // InternalSVS.g:8373:3: (enumLiteral_3= '\"justified\"' )
-                    // InternalSVS.g:8374:4: enumLiteral_3= '\"justified\"'
+                    // InternalSVS.g:8381:3: (enumLiteral_3= '\"justified\"' )
+                    // InternalSVS.g:8382:4: enumLiteral_3= '\"justified\"'
                     {
                     enumLiteral_3=(Token)match(input,220,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21024,7 +21170,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepMode"
-    // InternalSVS.g:8384:1: ruleVSVSStepMode returns [Enumerator current=null] : ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) ) ;
+    // InternalSVS.g:8392:1: ruleVSVSStepMode returns [Enumerator current=null] : ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) ) ;
     public final Enumerator ruleVSVSStepMode() throws RecognitionException {
         Enumerator current = null;
 
@@ -21036,41 +21182,41 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8390:2: ( ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) ) )
-            // InternalSVS.g:8391:2: ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) )
+            // InternalSVS.g:8398:2: ( ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) ) )
+            // InternalSVS.g:8399:2: ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) )
             {
-            // InternalSVS.g:8391:2: ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) )
-            int alt131=3;
+            // InternalSVS.g:8399:2: ( (enumLiteral_0= '\"continuous\"' ) | (enumLiteral_1= '\"manual\"' ) | (enumLiteral_2= '\"concurrent\"' ) )
+            int alt133=3;
             switch ( input.LA(1) ) {
             case 221:
                 {
-                alt131=1;
+                alt133=1;
                 }
                 break;
             case 222:
                 {
-                alt131=2;
+                alt133=2;
                 }
                 break;
             case 223:
                 {
-                alt131=3;
+                alt133=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 131, 0, input);
+                    new NoViableAltException("", 133, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt131) {
+            switch (alt133) {
                 case 1 :
-                    // InternalSVS.g:8392:3: (enumLiteral_0= '\"continuous\"' )
+                    // InternalSVS.g:8400:3: (enumLiteral_0= '\"continuous\"' )
                     {
-                    // InternalSVS.g:8392:3: (enumLiteral_0= '\"continuous\"' )
-                    // InternalSVS.g:8393:4: enumLiteral_0= '\"continuous\"'
+                    // InternalSVS.g:8400:3: (enumLiteral_0= '\"continuous\"' )
+                    // InternalSVS.g:8401:4: enumLiteral_0= '\"continuous\"'
                     {
                     enumLiteral_0=(Token)match(input,221,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21086,10 +21232,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8400:3: (enumLiteral_1= '\"manual\"' )
+                    // InternalSVS.g:8408:3: (enumLiteral_1= '\"manual\"' )
                     {
-                    // InternalSVS.g:8400:3: (enumLiteral_1= '\"manual\"' )
-                    // InternalSVS.g:8401:4: enumLiteral_1= '\"manual\"'
+                    // InternalSVS.g:8408:3: (enumLiteral_1= '\"manual\"' )
+                    // InternalSVS.g:8409:4: enumLiteral_1= '\"manual\"'
                     {
                     enumLiteral_1=(Token)match(input,222,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21105,10 +21251,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSVS.g:8408:3: (enumLiteral_2= '\"concurrent\"' )
+                    // InternalSVS.g:8416:3: (enumLiteral_2= '\"concurrent\"' )
                     {
-                    // InternalSVS.g:8408:3: (enumLiteral_2= '\"concurrent\"' )
-                    // InternalSVS.g:8409:4: enumLiteral_2= '\"concurrent\"'
+                    // InternalSVS.g:8416:3: (enumLiteral_2= '\"concurrent\"' )
+                    // InternalSVS.g:8417:4: enumLiteral_2= '\"concurrent\"'
                     {
                     enumLiteral_2=(Token)match(input,223,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21148,7 +21294,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepUnit"
-    // InternalSVS.g:8419:1: ruleVSVSStepUnit returns [Enumerator current=null] : ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) ) ;
+    // InternalSVS.g:8427:1: ruleVSVSStepUnit returns [Enumerator current=null] : ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) ) ;
     public final Enumerator ruleVSVSStepUnit() throws RecognitionException {
         Enumerator current = null;
 
@@ -21159,32 +21305,32 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8425:2: ( ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) ) )
-            // InternalSVS.g:8426:2: ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) )
+            // InternalSVS.g:8433:2: ( ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) ) )
+            // InternalSVS.g:8434:2: ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) )
             {
-            // InternalSVS.g:8426:2: ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) )
-            int alt132=2;
-            int LA132_0 = input.LA(1);
+            // InternalSVS.g:8434:2: ( (enumLiteral_0= '\"miliseconds\"' ) | (enumLiteral_1= '\"seconds\"' ) )
+            int alt134=2;
+            int LA134_0 = input.LA(1);
 
-            if ( (LA132_0==224) ) {
-                alt132=1;
+            if ( (LA134_0==224) ) {
+                alt134=1;
             }
-            else if ( (LA132_0==225) ) {
-                alt132=2;
+            else if ( (LA134_0==225) ) {
+                alt134=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 132, 0, input);
+                    new NoViableAltException("", 134, 0, input);
 
                 throw nvae;
             }
-            switch (alt132) {
+            switch (alt134) {
                 case 1 :
-                    // InternalSVS.g:8427:3: (enumLiteral_0= '\"miliseconds\"' )
+                    // InternalSVS.g:8435:3: (enumLiteral_0= '\"miliseconds\"' )
                     {
-                    // InternalSVS.g:8427:3: (enumLiteral_0= '\"miliseconds\"' )
-                    // InternalSVS.g:8428:4: enumLiteral_0= '\"miliseconds\"'
+                    // InternalSVS.g:8435:3: (enumLiteral_0= '\"miliseconds\"' )
+                    // InternalSVS.g:8436:4: enumLiteral_0= '\"miliseconds\"'
                     {
                     enumLiteral_0=(Token)match(input,224,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21200,10 +21346,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8435:3: (enumLiteral_1= '\"seconds\"' )
+                    // InternalSVS.g:8443:3: (enumLiteral_1= '\"seconds\"' )
                     {
-                    // InternalSVS.g:8435:3: (enumLiteral_1= '\"seconds\"' )
-                    // InternalSVS.g:8436:4: enumLiteral_1= '\"seconds\"'
+                    // InternalSVS.g:8443:3: (enumLiteral_1= '\"seconds\"' )
+                    // InternalSVS.g:8444:4: enumLiteral_1= '\"seconds\"'
                     {
                     enumLiteral_1=(Token)match(input,225,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21243,7 +21389,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepCheckmode"
-    // InternalSVS.g:8446:1: ruleVSVSStepCheckmode returns [Enumerator current=null] : ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) ) ;
+    // InternalSVS.g:8454:1: ruleVSVSStepCheckmode returns [Enumerator current=null] : ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) ) ;
     public final Enumerator ruleVSVSStepCheckmode() throws RecognitionException {
         Enumerator current = null;
 
@@ -21255,41 +21401,41 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8452:2: ( ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) ) )
-            // InternalSVS.g:8453:2: ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) )
+            // InternalSVS.g:8460:2: ( ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) ) )
+            // InternalSVS.g:8461:2: ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) )
             {
-            // InternalSVS.g:8453:2: ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) )
-            int alt133=3;
+            // InternalSVS.g:8461:2: ( (enumLiteral_0= '\"all\"' ) | (enumLiteral_1= '\"allunsorted\"' ) | (enumLiteral_2= '\"any\"' ) )
+            int alt135=3;
             switch ( input.LA(1) ) {
             case 226:
                 {
-                alt133=1;
+                alt135=1;
                 }
                 break;
             case 227:
                 {
-                alt133=2;
+                alt135=2;
                 }
                 break;
             case 228:
                 {
-                alt133=3;
+                alt135=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 133, 0, input);
+                    new NoViableAltException("", 135, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt133) {
+            switch (alt135) {
                 case 1 :
-                    // InternalSVS.g:8454:3: (enumLiteral_0= '\"all\"' )
+                    // InternalSVS.g:8462:3: (enumLiteral_0= '\"all\"' )
                     {
-                    // InternalSVS.g:8454:3: (enumLiteral_0= '\"all\"' )
-                    // InternalSVS.g:8455:4: enumLiteral_0= '\"all\"'
+                    // InternalSVS.g:8462:3: (enumLiteral_0= '\"all\"' )
+                    // InternalSVS.g:8463:4: enumLiteral_0= '\"all\"'
                     {
                     enumLiteral_0=(Token)match(input,226,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21305,10 +21451,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8462:3: (enumLiteral_1= '\"allunsorted\"' )
+                    // InternalSVS.g:8470:3: (enumLiteral_1= '\"allunsorted\"' )
                     {
-                    // InternalSVS.g:8462:3: (enumLiteral_1= '\"allunsorted\"' )
-                    // InternalSVS.g:8463:4: enumLiteral_1= '\"allunsorted\"'
+                    // InternalSVS.g:8470:3: (enumLiteral_1= '\"allunsorted\"' )
+                    // InternalSVS.g:8471:4: enumLiteral_1= '\"allunsorted\"'
                     {
                     enumLiteral_1=(Token)match(input,227,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21324,10 +21470,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalSVS.g:8470:3: (enumLiteral_2= '\"any\"' )
+                    // InternalSVS.g:8478:3: (enumLiteral_2= '\"any\"' )
                     {
-                    // InternalSVS.g:8470:3: (enumLiteral_2= '\"any\"' )
-                    // InternalSVS.g:8471:4: enumLiteral_2= '\"any\"'
+                    // InternalSVS.g:8478:3: (enumLiteral_2= '\"any\"' )
+                    // InternalSVS.g:8479:4: enumLiteral_2= '\"any\"'
                     {
                     enumLiteral_2=(Token)match(input,228,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21367,7 +21513,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepYesNo"
-    // InternalSVS.g:8481:1: ruleVSVSStepYesNo returns [Enumerator current=null] : ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) ) ;
+    // InternalSVS.g:8489:1: ruleVSVSStepYesNo returns [Enumerator current=null] : ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) ) ;
     public final Enumerator ruleVSVSStepYesNo() throws RecognitionException {
         Enumerator current = null;
 
@@ -21378,32 +21524,32 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:8487:2: ( ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) ) )
-            // InternalSVS.g:8488:2: ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) )
+            // InternalSVS.g:8495:2: ( ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) ) )
+            // InternalSVS.g:8496:2: ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) )
             {
-            // InternalSVS.g:8488:2: ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) )
-            int alt134=2;
-            int LA134_0 = input.LA(1);
+            // InternalSVS.g:8496:2: ( (enumLiteral_0= '\"yes\"' ) | (enumLiteral_1= '\"no\"' ) )
+            int alt136=2;
+            int LA136_0 = input.LA(1);
 
-            if ( (LA134_0==229) ) {
-                alt134=1;
+            if ( (LA136_0==229) ) {
+                alt136=1;
             }
-            else if ( (LA134_0==230) ) {
-                alt134=2;
+            else if ( (LA136_0==230) ) {
+                alt136=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 134, 0, input);
+                    new NoViableAltException("", 136, 0, input);
 
                 throw nvae;
             }
-            switch (alt134) {
+            switch (alt136) {
                 case 1 :
-                    // InternalSVS.g:8489:3: (enumLiteral_0= '\"yes\"' )
+                    // InternalSVS.g:8497:3: (enumLiteral_0= '\"yes\"' )
                     {
-                    // InternalSVS.g:8489:3: (enumLiteral_0= '\"yes\"' )
-                    // InternalSVS.g:8490:4: enumLiteral_0= '\"yes\"'
+                    // InternalSVS.g:8497:3: (enumLiteral_0= '\"yes\"' )
+                    // InternalSVS.g:8498:4: enumLiteral_0= '\"yes\"'
                     {
                     enumLiteral_0=(Token)match(input,229,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -21419,10 +21565,10 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalSVS.g:8497:3: (enumLiteral_1= '\"no\"' )
+                    // InternalSVS.g:8505:3: (enumLiteral_1= '\"no\"' )
                     {
-                    // InternalSVS.g:8497:3: (enumLiteral_1= '\"no\"' )
-                    // InternalSVS.g:8498:4: enumLiteral_1= '\"no\"'
+                    // InternalSVS.g:8505:3: (enumLiteral_1= '\"no\"' )
+                    // InternalSVS.g:8506:4: enumLiteral_1= '\"no\"'
                     {
                     enumLiteral_1=(Token)match(input,230,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {

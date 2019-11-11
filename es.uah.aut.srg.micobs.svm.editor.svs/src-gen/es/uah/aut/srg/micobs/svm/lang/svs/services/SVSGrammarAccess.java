@@ -3070,26 +3070,18 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVSVSStepInputsAction_0 = (Action)cGroup.eContents().get(0);
 		private final Keyword cInputsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cInput_level_3Assignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cInput_level_3VSVSStepInputLevel3ParserRuleCall_2_0_0 = (RuleCall)cInput_level_3Assignment_2_0.eContents().get(0);
-		private final Assignment cInput_level_2Assignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cInput_level_2VSVSStepInputLevel2ParserRuleCall_2_1_0 = (RuleCall)cInput_level_2Assignment_2_1.eContents().get(0);
-		private final Assignment cInput_level_1Assignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
-		private final RuleCall cInput_level_1VSVSStepInputLevel1ParserRuleCall_2_2_0 = (RuleCall)cInput_level_1Assignment_2_2.eContents().get(0);
-		private final Assignment cInput_level_0Assignment_2_3 = (Assignment)cAlternatives_2.eContents().get(3);
-		private final RuleCall cInput_level_0VSVSStepInputLevel0ParserRuleCall_2_3_0 = (RuleCall)cInput_level_0Assignment_2_3.eContents().get(0);
+		private final Assignment cInputAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cInputVSVSStepInputParserRuleCall_2_0 = (RuleCall)cInputAssignment_2.eContents().get(0);
 		private final Keyword cInputsKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSStepInputs:
 		//	{VSVSStepInputs}
-		//	'<inputs>' (input_level_3+=VSVSStepInputLevel3 | input_level_2+=VSVSStepInputLevel2 |
-		//	input_level_1+=VSVSStepInputLevel1 | input_level_0+=VSVSStepInputLevel0)+
+		//	'<inputs>'
+		//	input+=VSVSStepInput+
 		//	'</inputs>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSStepInputs} '<inputs>' (input_level_3+=VSVSStepInputLevel3 | input_level_2+=VSVSStepInputLevel2 |
-		//input_level_1+=VSVSStepInputLevel1 | input_level_0+=VSVSStepInputLevel0)+ '</inputs>'
+		//{VSVSStepInputs} '<inputs>' input+=VSVSStepInput+ '</inputs>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSVSStepInputs}
@@ -3098,33 +3090,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'<inputs>'
 		public Keyword getInputsKeyword_1() { return cInputsKeyword_1; }
 		
-		//(input_level_3+=VSVSStepInputLevel3 | input_level_2+=VSVSStepInputLevel2 | input_level_1+=VSVSStepInputLevel1 |
-		//input_level_0+=VSVSStepInputLevel0)+
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		//input+=VSVSStepInput+
+		public Assignment getInputAssignment_2() { return cInputAssignment_2; }
 		
-		//input_level_3+=VSVSStepInputLevel3
-		public Assignment getInput_level_3Assignment_2_0() { return cInput_level_3Assignment_2_0; }
-		
-		//VSVSStepInputLevel3
-		public RuleCall getInput_level_3VSVSStepInputLevel3ParserRuleCall_2_0_0() { return cInput_level_3VSVSStepInputLevel3ParserRuleCall_2_0_0; }
-		
-		//input_level_2+=VSVSStepInputLevel2
-		public Assignment getInput_level_2Assignment_2_1() { return cInput_level_2Assignment_2_1; }
-		
-		//VSVSStepInputLevel2
-		public RuleCall getInput_level_2VSVSStepInputLevel2ParserRuleCall_2_1_0() { return cInput_level_2VSVSStepInputLevel2ParserRuleCall_2_1_0; }
-		
-		//input_level_1+=VSVSStepInputLevel1
-		public Assignment getInput_level_1Assignment_2_2() { return cInput_level_1Assignment_2_2; }
-		
-		//VSVSStepInputLevel1
-		public RuleCall getInput_level_1VSVSStepInputLevel1ParserRuleCall_2_2_0() { return cInput_level_1VSVSStepInputLevel1ParserRuleCall_2_2_0; }
-		
-		//input_level_0+=VSVSStepInputLevel0
-		public Assignment getInput_level_0Assignment_2_3() { return cInput_level_0Assignment_2_3; }
-		
-		//VSVSStepInputLevel0
-		public RuleCall getInput_level_0VSVSStepInputLevel0ParserRuleCall_2_3_0() { return cInput_level_0VSVSStepInputLevel0ParserRuleCall_2_3_0; }
+		//VSVSStepInput
+		public RuleCall getInputVSVSStepInputParserRuleCall_2_0() { return cInputVSVSStepInputParserRuleCall_2_0; }
 		
 		//'</inputs>'
 		public Keyword getInputsKeyword_3() { return cInputsKeyword_3; }
@@ -3143,15 +3113,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValid_time_interval_unitAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0 = (RuleCall)cValid_time_interval_unitAssignment_6.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Alternatives cAlternatives_8 = (Alternatives)cGroup.eContents().get(8);
-		private final Assignment cOutput_level_3Assignment_8_0 = (Assignment)cAlternatives_8.eContents().get(0);
-		private final RuleCall cOutput_level_3VSVSStepOutputLevel3ParserRuleCall_8_0_0 = (RuleCall)cOutput_level_3Assignment_8_0.eContents().get(0);
-		private final Assignment cOutput_level_2Assignment_8_1 = (Assignment)cAlternatives_8.eContents().get(1);
-		private final RuleCall cOutput_level_2VSVSStepOutputLevel2ParserRuleCall_8_1_0 = (RuleCall)cOutput_level_2Assignment_8_1.eContents().get(0);
-		private final Assignment cOutput_level_1Assignment_8_2 = (Assignment)cAlternatives_8.eContents().get(2);
-		private final RuleCall cOutput_level_1VSVSStepOutputLevel1ParserRuleCall_8_2_0 = (RuleCall)cOutput_level_1Assignment_8_2.eContents().get(0);
-		private final Assignment cOutput_level_0Assignment_8_3 = (Assignment)cAlternatives_8.eContents().get(3);
-		private final RuleCall cOutput_level_0VSVSStepOutputLevel0ParserRuleCall_8_3_0 = (RuleCall)cOutput_level_0Assignment_8_3.eContents().get(0);
+		private final Assignment cOutputAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOutputVSVSStepOutputParserRuleCall_8_0 = (RuleCall)cOutputAssignment_8.eContents().get(0);
 		private final Keyword cOutputsKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VSVSStepOutputs:
@@ -3159,15 +3122,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'checkmode=' checkmode=VSVSStepCheckmode
 		//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
-		//	'>' (output_level_3+=VSVSStepOutputLevel3 | output_level_2+=VSVSStepOutputLevel2 |
-		//	output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
+		//	'>'
+		//	output+=VSVSStepOutput+
 		//	'</outputs>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<outputs' 'checkmode=' checkmode=VSVSStepCheckmode 'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-		//'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit '>' (output_level_3+=VSVSStepOutputLevel3 |
-		//output_level_2+=VSVSStepOutputLevel2 | output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
-		//'</outputs>'
+		//'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit '>' output+=VSVSStepOutput+ '</outputs>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<outputs'
@@ -3203,33 +3164,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
 		
-		//(output_level_3+=VSVSStepOutputLevel3 | output_level_2+=VSVSStepOutputLevel2 | output_level_1+=VSVSStepOutputLevel1 |
-		//output_level_0+=VSVSStepOutputLevel0)+
-		public Alternatives getAlternatives_8() { return cAlternatives_8; }
+		//output+=VSVSStepOutput+
+		public Assignment getOutputAssignment_8() { return cOutputAssignment_8; }
 		
-		//output_level_3+=VSVSStepOutputLevel3
-		public Assignment getOutput_level_3Assignment_8_0() { return cOutput_level_3Assignment_8_0; }
-		
-		//VSVSStepOutputLevel3
-		public RuleCall getOutput_level_3VSVSStepOutputLevel3ParserRuleCall_8_0_0() { return cOutput_level_3VSVSStepOutputLevel3ParserRuleCall_8_0_0; }
-		
-		//output_level_2+=VSVSStepOutputLevel2
-		public Assignment getOutput_level_2Assignment_8_1() { return cOutput_level_2Assignment_8_1; }
-		
-		//VSVSStepOutputLevel2
-		public RuleCall getOutput_level_2VSVSStepOutputLevel2ParserRuleCall_8_1_0() { return cOutput_level_2VSVSStepOutputLevel2ParserRuleCall_8_1_0; }
-		
-		//output_level_1+=VSVSStepOutputLevel1
-		public Assignment getOutput_level_1Assignment_8_2() { return cOutput_level_1Assignment_8_2; }
-		
-		//VSVSStepOutputLevel1
-		public RuleCall getOutput_level_1VSVSStepOutputLevel1ParserRuleCall_8_2_0() { return cOutput_level_1VSVSStepOutputLevel1ParserRuleCall_8_2_0; }
-		
-		//output_level_0+=VSVSStepOutputLevel0
-		public Assignment getOutput_level_0Assignment_8_3() { return cOutput_level_0Assignment_8_3; }
-		
-		//VSVSStepOutputLevel0
-		public RuleCall getOutput_level_0VSVSStepOutputLevel0ParserRuleCall_8_3_0() { return cOutput_level_0VSVSStepOutputLevel0ParserRuleCall_8_3_0; }
+		//VSVSStepOutput
+		public RuleCall getOutputVSVSStepOutputParserRuleCall_8_0() { return cOutputVSVSStepOutputParserRuleCall_8_0; }
 		
 		//'</outputs>'
 		public Keyword getOutputsKeyword_9() { return cOutputsKeyword_9; }
@@ -3345,6 +3284,33 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'</concurrent_steps>'
 		public Keyword getConcurrent_stepsKeyword_5() { return cConcurrent_stepsKeyword_5; }
+	}
+	public class VSVSStepInputElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cVSVSStepInputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cVSVSStepInputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cVSVSStepInputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cVSVSStepInputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//VSVSStepInput:
+		//	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//VSVSStepInputLevel3
+		public RuleCall getVSVSStepInputLevel3ParserRuleCall_0() { return cVSVSStepInputLevel3ParserRuleCall_0; }
+		
+		//VSVSStepInputLevel2
+		public RuleCall getVSVSStepInputLevel2ParserRuleCall_1() { return cVSVSStepInputLevel2ParserRuleCall_1; }
+		
+		//VSVSStepInputLevel1
+		public RuleCall getVSVSStepInputLevel1ParserRuleCall_2() { return cVSVSStepInputLevel1ParserRuleCall_2; }
+		
+		//VSVSStepInputLevel0
+		public RuleCall getVSVSStepInputLevel0ParserRuleCall_3() { return cVSVSStepInputLevel0ParserRuleCall_3; }
 	}
 	public class VSVSStepInputLevel3Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel3");
@@ -4224,6 +4190,33 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'</input_level_0>'
 		public Keyword getInput_level_0Keyword_15() { return cInput_level_0Keyword_15; }
+	}
+	public class VSVSStepOutputElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutput");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cVSVSStepOutputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cVSVSStepOutputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cVSVSStepOutputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		private final RuleCall cVSVSStepOutputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
+		
+		//VSVSStepOutput:
+		//	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//VSVSStepOutputLevel3
+		public RuleCall getVSVSStepOutputLevel3ParserRuleCall_0() { return cVSVSStepOutputLevel3ParserRuleCall_0; }
+		
+		//VSVSStepOutputLevel2
+		public RuleCall getVSVSStepOutputLevel2ParserRuleCall_1() { return cVSVSStepOutputLevel2ParserRuleCall_1; }
+		
+		//VSVSStepOutputLevel1
+		public RuleCall getVSVSStepOutputLevel1ParserRuleCall_2() { return cVSVSStepOutputLevel1ParserRuleCall_2; }
+		
+		//VSVSStepOutputLevel0
+		public RuleCall getVSVSStepOutputLevel0ParserRuleCall_3() { return cVSVSStepOutputLevel0ParserRuleCall_3; }
 	}
 	public class VSVSStepOutputLevel3Elements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel3");
@@ -5941,12 +5934,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSStepOutputsElements pVSVSStepOutputs;
 	private final VSVSStepSpecialPacketsElements pVSVSStepSpecialPackets;
 	private final VSVSStepConcurrentStepsElements pVSVSStepConcurrentSteps;
+	private final VSVSStepInputElements pVSVSStepInput;
 	private final VSVSStepInputLevel3Elements pVSVSStepInputLevel3;
 	private final VSVSStepInputLevel2Elements pVSVSStepInputLevel2;
 	private final VSVSStepInputLevel1Elements pVSVSStepInputLevel1;
 	private final VSVSStepInputLevel0Elements pVSVSStepInputLevel0;
 	private final VSVSStepUnitElements eVSVSStepUnit;
 	private final VSVSStepCheckmodeElements eVSVSStepCheckmode;
+	private final VSVSStepOutputElements pVSVSStepOutput;
 	private final VSVSStepOutputLevel3Elements pVSVSStepOutputLevel3;
 	private final VSVSStepOutputLevel2Elements pVSVSStepOutputLevel2;
 	private final VSVSStepOutputLevel1Elements pVSVSStepOutputLevel1;
@@ -6031,12 +6026,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSStepOutputs = new VSVSStepOutputsElements();
 		this.pVSVSStepSpecialPackets = new VSVSStepSpecialPacketsElements();
 		this.pVSVSStepConcurrentSteps = new VSVSStepConcurrentStepsElements();
+		this.pVSVSStepInput = new VSVSStepInputElements();
 		this.pVSVSStepInputLevel3 = new VSVSStepInputLevel3Elements();
 		this.pVSVSStepInputLevel2 = new VSVSStepInputLevel2Elements();
 		this.pVSVSStepInputLevel1 = new VSVSStepInputLevel1Elements();
 		this.pVSVSStepInputLevel0 = new VSVSStepInputLevel0Elements();
 		this.eVSVSStepUnit = new VSVSStepUnitElements();
 		this.eVSVSStepCheckmode = new VSVSStepCheckmodeElements();
+		this.pVSVSStepOutput = new VSVSStepOutputElements();
 		this.pVSVSStepOutputLevel3 = new VSVSStepOutputLevel3Elements();
 		this.pVSVSStepOutputLevel2 = new VSVSStepOutputLevel2Elements();
 		this.pVSVSStepOutputLevel1 = new VSVSStepOutputLevel1Elements();
@@ -6745,8 +6742,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepInputs:
 	//	{VSVSStepInputs}
-	//	'<inputs>' (input_level_3+=VSVSStepInputLevel3 | input_level_2+=VSVSStepInputLevel2 |
-	//	input_level_1+=VSVSStepInputLevel1 | input_level_0+=VSVSStepInputLevel0)+
+	//	'<inputs>'
+	//	input+=VSVSStepInput+
 	//	'</inputs>';
 	public VSVSStepInputsElements getVSVSStepInputsAccess() {
 		return pVSVSStepInputs;
@@ -6761,8 +6758,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'checkmode=' checkmode=VSVSStepCheckmode
 	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
-	//	'>' (output_level_3+=VSVSStepOutputLevel3 | output_level_2+=VSVSStepOutputLevel2 |
-	//	output_level_1+=VSVSStepOutputLevel1 | output_level_0+=VSVSStepOutputLevel0)+
+	//	'>'
+	//	output+=VSVSStepOutput+
 	//	'</outputs>';
 	public VSVSStepOutputsElements getVSVSStepOutputsAccess() {
 		return pVSVSStepOutputs;
@@ -6797,6 +6794,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVSStepConcurrentStepsRule() {
 		return getVSVSStepConcurrentStepsAccess().getRule();
+	}
+	
+	//VSVSStepInput:
+	//	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
+	public VSVSStepInputElements getVSVSStepInputAccess() {
+		return pVSVSStepInput;
+	}
+	
+	public ParserRule getVSVSStepInputRule() {
+		return getVSVSStepInputAccess().getRule();
 	}
 	
 	//VSVSStepInputLevel3:
@@ -6897,6 +6904,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public EnumRule getVSVSStepCheckmodeRule() {
 		return getVSVSStepCheckmodeAccess().getRule();
+	}
+	
+	//VSVSStepOutput:
+	//	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
+	public VSVSStepOutputElements getVSVSStepOutputAccess() {
+		return pVSVSStepOutput;
+	}
+	
+	public ParserRule getVSVSStepOutputRule() {
+		return getVSVSStepOutputAccess().getRule();
 	}
 	
 	//VSVSStepOutputLevel3:

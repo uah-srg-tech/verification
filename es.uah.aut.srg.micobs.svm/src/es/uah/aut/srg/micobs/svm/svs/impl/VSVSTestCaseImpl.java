@@ -520,7 +520,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TEST_CASE__SUBSECTIONS:
 				getSubsections().clear();
-				getSubsections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__IDENTIFIER:
 				setIdentifier((VSVSFixedTestSection)newValue);
@@ -618,7 +618,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (derivedFeatureID) {
 				case svsPackage.VSVS_TEST_CASE__SUBSECTIONS: return doctplPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
@@ -639,7 +639,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (baseFeatureID) {
 				case doctplPackage.DABSTRACT_SECTION__SUBSECTIONS: return svsPackage.VSVS_TEST_CASE__SUBSECTIONS;
 				default: return -1;

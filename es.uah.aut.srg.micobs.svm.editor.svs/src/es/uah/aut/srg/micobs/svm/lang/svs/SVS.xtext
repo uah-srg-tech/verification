@@ -371,10 +371,7 @@ enum VSVSStepMode returns VSVSStepMode:
 VSVSStepInputs returns VSVSStepInputs:
 	{VSVSStepInputs}
 	'<inputs>'
-		((input_level_3+=VSVSStepInputLevel3) |
-		 (input_level_2+=VSVSStepInputLevel2) |
-		 (input_level_1+=VSVSStepInputLevel1) |
-		 (input_level_0+=VSVSStepInputLevel0))+
+		(input+=VSVSStepInput)+
 	'</inputs>'
 ;
 
@@ -384,10 +381,7 @@ VSVSStepOutputs returns VSVSStepOutputs:
 		'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
 		'>'
-		((output_level_3+=VSVSStepOutputLevel3) |
-		 (output_level_2+=VSVSStepOutputLevel2) |
-		 (output_level_1+=VSVSStepOutputLevel1) |
-		 (output_level_0+=VSVSStepOutputLevel0))+
+		(output+=VSVSStepOutput)+
 	'</outputs>'
 ;
 
@@ -408,6 +402,9 @@ VSVSStepConcurrentSteps returns VSVSStepConcurrentSteps:
 		(concurrent_step+=VSVSStepConcurrentStep)+ 
 	'</concurrent_steps>'
 ;
+
+VSVSStepInput returns VSVSStepInput:
+	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
 
 VSVSStepInputLevel3 returns VSVSStepInputLevel3:
 	'<input_level_3'
@@ -477,6 +474,9 @@ enum VSVSStepCheckmode returns VSVSStepCheckmode:
 	all = '"all"' | allunsorted = '"allunsorted"' | any = '"any"'
 ;
 
+VSVSStepOutput returns VSVSStepOutput:
+	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
+	
 VSVSStepOutputLevel3 returns VSVSStepOutputLevel3:
 	'<output_level_3'
 		'name=' name=STRING

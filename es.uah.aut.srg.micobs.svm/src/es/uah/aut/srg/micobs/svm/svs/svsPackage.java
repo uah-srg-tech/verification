@@ -1813,40 +1813,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_STEP_INPUTS = 24;
 
 	/**
-	 * The feature id for the '<em><b>Input level 3</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Input</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_STEP_INPUTS__INPUT_LEVEL_3 = 0;
-
-	/**
-	 * The feature id for the '<em><b>Input level 2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_INPUTS__INPUT_LEVEL_2 = 1;
-
-	/**
-	 * The feature id for the '<em><b>Input level 1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_INPUTS__INPUT_LEVEL_1 = 2;
-
-	/**
-	 * The feature id for the '<em><b>Input level 0</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_INPUTS__INPUT_LEVEL_0 = 3;
+	int VSVS_STEP_INPUTS__INPUT = 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Step Inputs</em>' class.
@@ -1855,7 +1828,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_STEP_INPUTS_FEATURE_COUNT = 4;
+	int VSVS_STEP_INPUTS_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Step Inputs</em>' class.
@@ -1904,40 +1877,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT = 2;
 
 	/**
-	 * The feature id for the '<em><b>Output level 3</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Output</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3 = 3;
-
-	/**
-	 * The feature id for the '<em><b>Output level 2</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2 = 4;
-
-	/**
-	 * The feature id for the '<em><b>Output level 1</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1 = 5;
-
-	/**
-	 * The feature id for the '<em><b>Output level 0</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0 = 6;
+	int VSVS_STEP_OUTPUTS__OUTPUT = 3;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Step Outputs</em>' class.
@@ -1946,7 +1892,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_STEP_OUTPUTS_FEATURE_COUNT = 7;
+	int VSVS_STEP_OUTPUTS_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>VSVS Step Outputs</em>' class.
@@ -4558,48 +4504,15 @@ public interface svsPackage extends EPackage {
 	EClass getVSVSStepInputs();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_3 <em>Input level 3</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput <em>Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 3</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_3()
+	 * @return the meta object for the containment reference list '<em>Input</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput()
 	 * @see #getVSVSStepInputs()
 	 * @generated
 	 */
-	EReference getVSVSStepInputs_Input_level_3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_2 <em>Input level 2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 2</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_2()
-	 * @see #getVSVSStepInputs()
-	 * @generated
-	 */
-	EReference getVSVSStepInputs_Input_level_2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_1 <em>Input level 1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 1</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_1()
-	 * @see #getVSVSStepInputs()
-	 * @generated
-	 */
-	EReference getVSVSStepInputs_Input_level_1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_0 <em>Input level 0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Input level 0</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput_level_0()
-	 * @see #getVSVSStepInputs()
-	 * @generated
-	 */
-	EReference getVSVSStepInputs_Input_level_0();
+	EReference getVSVSStepInputs_Input();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs <em>VSVS Step Outputs</em>}'.
@@ -4645,48 +4558,15 @@ public interface svsPackage extends EPackage {
 	EAttribute getVSVSStepOutputs_Valid_time_interval_unit();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_3 <em>Output level 3</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput <em>Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 3</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_3()
+	 * @return the meta object for the containment reference list '<em>Output</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput()
 	 * @see #getVSVSStepOutputs()
 	 * @generated
 	 */
-	EReference getVSVSStepOutputs_Output_level_3();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_2 <em>Output level 2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 2</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_2()
-	 * @see #getVSVSStepOutputs()
-	 * @generated
-	 */
-	EReference getVSVSStepOutputs_Output_level_2();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_1 <em>Output level 1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 1</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_1()
-	 * @see #getVSVSStepOutputs()
-	 * @generated
-	 */
-	EReference getVSVSStepOutputs_Output_level_1();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_0 <em>Output level 0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Output level 0</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_0()
-	 * @see #getVSVSStepOutputs()
-	 * @generated
-	 */
-	EReference getVSVSStepOutputs_Output_level_0();
+	EReference getVSVSStepOutputs_Output();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets <em>VSVS Step Special Packets</em>}'.
@@ -6510,36 +6390,12 @@ public interface svsPackage extends EPackage {
 		EClass VSVS_STEP_INPUTS = eINSTANCE.getVSVSStepInputs();
 
 		/**
-		 * The meta object literal for the '<em><b>Input level 3</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Input</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_3 = eINSTANCE.getVSVSStepInputs_Input_level_3();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_2 = eINSTANCE.getVSVSStepInputs_Input_level_2();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_1 = eINSTANCE.getVSVSStepInputs_Input_level_1();
-
-		/**
-		 * The meta object literal for the '<em><b>Input level 0</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_INPUTS__INPUT_LEVEL_0 = eINSTANCE.getVSVSStepInputs_Input_level_0();
+		EReference VSVS_STEP_INPUTS__INPUT = eINSTANCE.getVSVSStepInputs_Input();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl <em>VSVS Step Outputs</em>}' class.
@@ -6576,36 +6432,12 @@ public interface svsPackage extends EPackage {
 		EAttribute VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT = eINSTANCE.getVSVSStepOutputs_Valid_time_interval_unit();
 
 		/**
-		 * The meta object literal for the '<em><b>Output level 3</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Output</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3 = eINSTANCE.getVSVSStepOutputs_Output_level_3();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 2</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2 = eINSTANCE.getVSVSStepOutputs_Output_level_2();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 1</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1 = eINSTANCE.getVSVSStepOutputs_Output_level_1();
-
-		/**
-		 * The meta object literal for the '<em><b>Output level 0</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0 = eINSTANCE.getVSVSStepOutputs_Output_level_0();
+		EReference VSVS_STEP_OUTPUTS__OUTPUT = eINSTANCE.getVSVSStepOutputs_Output();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepSpecialPacketsImpl <em>VSVS Step Special Packets</em>}' class.

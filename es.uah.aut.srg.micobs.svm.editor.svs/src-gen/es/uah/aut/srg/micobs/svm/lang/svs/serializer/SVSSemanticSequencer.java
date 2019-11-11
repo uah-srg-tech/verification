@@ -896,6 +896,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepInput returns VSVSStepInputLevel0
 	 *     VSVSStepInputLevel0 returns VSVSStepInputLevel0
 	 *
 	 * Constraint:
@@ -915,6 +916,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepInput returns VSVSStepInputLevel1
 	 *     VSVSStepInputLevel1 returns VSVSStepInputLevel1
 	 *
 	 * Constraint:
@@ -936,6 +938,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepInput returns VSVSStepInputLevel2
 	 *     VSVSStepInputLevel2 returns VSVSStepInputLevel2
 	 *
 	 * Constraint:
@@ -959,6 +962,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepInput returns VSVSStepInputLevel3
 	 *     VSVSStepInputLevel3 returns VSVSStepInputLevel3
 	 *
 	 * Constraint:
@@ -987,7 +991,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepInputs returns VSVSStepInputs
 	 *
 	 * Constraint:
-	 *     (input_level_3+=VSVSStepInputLevel3 | input_level_2+=VSVSStepInputLevel2 | input_level_1+=VSVSStepInputLevel1 | input_level_0+=VSVSStepInputLevel0)+
+	 *     input+=VSVSStepInput+
 	 */
 	protected void sequence_VSVSStepInputs(ISerializationContext context, VSVSStepInputs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1065,6 +1069,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepOutput returns VSVSStepOutputLevel0
 	 *     VSVSStepOutputLevel0 returns VSVSStepOutputLevel0
 	 *
 	 * Constraint:
@@ -1084,6 +1089,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepOutput returns VSVSStepOutputLevel1
 	 *     VSVSStepOutputLevel1 returns VSVSStepOutputLevel1
 	 *
 	 * Constraint:
@@ -1106,6 +1112,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepOutput returns VSVSStepOutputLevel2
 	 *     VSVSStepOutputLevel2 returns VSVSStepOutputLevel2
 	 *
 	 * Constraint:
@@ -1131,6 +1138,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSStepOutput returns VSVSStepOutputLevel3
 	 *     VSVSStepOutputLevel3 returns VSVSStepOutputLevel3
 	 *
 	 * Constraint:
@@ -1162,17 +1170,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepOutputs returns VSVSStepOutputs
 	 *
 	 * Constraint:
-	 *     (
-	 *         checkmode=VSVSStepCheckmode 
-	 *         valid_time_interval_value=UINT_STRING 
-	 *         valid_time_interval_unit=VSVSStepUnit 
-	 *         (
-	 *             output_level_3+=VSVSStepOutputLevel3 | 
-	 *             output_level_2+=VSVSStepOutputLevel2 | 
-	 *             output_level_1+=VSVSStepOutputLevel1 | 
-	 *             output_level_0+=VSVSStepOutputLevel0
-	 *         )+
-	 *     )
+	 *     (checkmode=VSVSStepCheckmode valid_time_interval_value=UINT_STRING valid_time_interval_unit=VSVSStepUnit output+=VSVSStepOutput+)
 	 */
 	protected void sequence_VSVSStepOutputs(ISerializationContext context, VSVSStepOutputs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

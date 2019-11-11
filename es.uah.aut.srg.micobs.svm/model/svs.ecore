@@ -193,14 +193,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepInputs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_3" upperBound="-1"
-        eType="#//VSVSStepInputLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_2" upperBound="-1"
-        eType="#//VSVSStepInputLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_1" upperBound="-1"
-        eType="#//VSVSStepInputLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input_level_0" upperBound="-1"
-        eType="#//VSVSStepInputLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="input" upperBound="-1"
+        eType="#//VSVSStepInput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VSVSStepUnit">
     <eLiterals name="miliseconds"/>
@@ -218,14 +212,8 @@
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_unit"
         lowerBound="1" eType="#//VSVSStepUnit" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_3" upperBound="-1"
-        eType="#//VSVSStepOutputLevel3" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_2" upperBound="-1"
-        eType="#//VSVSStepOutputLevel2" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_1" upperBound="-1"
-        eType="#//VSVSStepOutputLevel1" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_level_0" upperBound="-1"
-        eType="#//VSVSStepOutputLevel0" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="output" upperBound="-1"
+        eType="#//VSVSStepOutput" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepSpecialPackets">
     <eStructuralFeatures xsi:type="ecore:EReference" name="enable" upperBound="-1"

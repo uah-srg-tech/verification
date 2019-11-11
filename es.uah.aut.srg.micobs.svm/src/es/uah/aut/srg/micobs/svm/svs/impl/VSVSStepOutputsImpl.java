@@ -11,10 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -46,10 +43,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getCheckmode <em>Checkmode</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getValid_time_interval_value <em>Valid time interval value</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getValid_time_interval_unit <em>Valid time interval unit</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getOutput_level_3 <em>Output level 3</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getOutput_level_2 <em>Output level 2</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getOutput_level_1 <em>Output level 1</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getOutput_level_0 <em>Output level 0</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepOutputsImpl#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @generated
@@ -134,44 +128,14 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	protected boolean valid_time_interval_unitESet;
 
 	/**
-	 * The cached value of the '{@link #getOutput_level_3() <em>Output level 3</em>}' containment reference list.
+	 * The cached value of the '{@link #getOutput() <em>Output</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_3()
+	 * @see #getOutput()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSVSStepOutputLevel3> output_level_3;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_2() <em>Output level 2</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_2()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VSVSStepOutputLevel2> output_level_2;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_1() <em>Output level 1</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_1()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VSVSStepOutputLevel1> output_level_1;
-
-	/**
-	 * The cached value of the '{@link #getOutput_level_0() <em>Output level 0</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOutput_level_0()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VSVSStepOutputLevel0> output_level_0;
+	protected EList<VSVSStepOutput> output;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -310,47 +274,11 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSVSStepOutputLevel3> getOutput_level_3() {
-		if (output_level_3 == null) {
-			output_level_3 = new EObjectContainmentEList<VSVSStepOutputLevel3>(VSVSStepOutputLevel3.class, this, svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3);
+	public EList<VSVSStepOutput> getOutput() {
+		if (output == null) {
+			output = new EObjectContainmentEList<VSVSStepOutput>(VSVSStepOutput.class, this, svsPackage.VSVS_STEP_OUTPUTS__OUTPUT);
 		}
-		return output_level_3;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<VSVSStepOutputLevel2> getOutput_level_2() {
-		if (output_level_2 == null) {
-			output_level_2 = new EObjectContainmentEList<VSVSStepOutputLevel2>(VSVSStepOutputLevel2.class, this, svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2);
-		}
-		return output_level_2;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<VSVSStepOutputLevel1> getOutput_level_1() {
-		if (output_level_1 == null) {
-			output_level_1 = new EObjectContainmentEList<VSVSStepOutputLevel1>(VSVSStepOutputLevel1.class, this, svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1);
-		}
-		return output_level_1;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<VSVSStepOutputLevel0> getOutput_level_0() {
-		if (output_level_0 == null) {
-			output_level_0 = new EObjectContainmentEList<VSVSStepOutputLevel0>(VSVSStepOutputLevel0.class, this, svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0);
-		}
-		return output_level_0;
+		return output;
 	}
 
 	/**
@@ -361,14 +289,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3:
-				return ((InternalEList<?>)getOutput_level_3()).basicRemove(otherEnd, msgs);
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2:
-				return ((InternalEList<?>)getOutput_level_2()).basicRemove(otherEnd, msgs);
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1:
-				return ((InternalEList<?>)getOutput_level_1()).basicRemove(otherEnd, msgs);
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0:
-				return ((InternalEList<?>)getOutput_level_0()).basicRemove(otherEnd, msgs);
+			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
+				return ((InternalEList<?>)getOutput()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -387,14 +309,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 				return getValid_time_interval_value();
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				return getValid_time_interval_unit();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3:
-				return getOutput_level_3();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2:
-				return getOutput_level_2();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1:
-				return getOutput_level_1();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0:
-				return getOutput_level_0();
+			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
+				return getOutput();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -417,21 +333,9 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				setValid_time_interval_unit((VSVSStepUnit)newValue);
 				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3:
-				getOutput_level_3().clear();
-				getOutput_level_3().addAll((Collection<? extends VSVSStepOutputLevel3>)newValue);
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2:
-				getOutput_level_2().clear();
-				getOutput_level_2().addAll((Collection<? extends VSVSStepOutputLevel2>)newValue);
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1:
-				getOutput_level_1().clear();
-				getOutput_level_1().addAll((Collection<? extends VSVSStepOutputLevel1>)newValue);
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0:
-				getOutput_level_0().clear();
-				getOutput_level_0().addAll((Collection<? extends VSVSStepOutputLevel0>)newValue);
+			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
+				getOutput().clear();
+				getOutput().addAll((Collection<? extends VSVSStepOutput>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -454,17 +358,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				unsetValid_time_interval_unit();
 				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3:
-				getOutput_level_3().clear();
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2:
-				getOutput_level_2().clear();
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1:
-				getOutput_level_1().clear();
-				return;
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0:
-				getOutput_level_0().clear();
+			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
+				getOutput().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -484,14 +379,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 				return VALID_TIME_INTERVAL_VALUE_EDEFAULT == null ? valid_time_interval_value != null : !VALID_TIME_INTERVAL_VALUE_EDEFAULT.equals(valid_time_interval_value);
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
 				return isSetValid_time_interval_unit();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_3:
-				return output_level_3 != null && !output_level_3.isEmpty();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_2:
-				return output_level_2 != null && !output_level_2.isEmpty();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_1:
-				return output_level_1 != null && !output_level_1.isEmpty();
-			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT_LEVEL_0:
-				return output_level_0 != null && !output_level_0.isEmpty();
+			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
+				return output != null && !output.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

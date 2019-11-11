@@ -26,10 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getCheckmode <em>Checkmode</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_value <em>Valid time interval value</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_3 <em>Output level 3</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_2 <em>Output level 2</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_1 <em>Output level 1</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput_level_0 <em>Output level 0</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getOutput <em>Output</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs()
@@ -176,67 +173,19 @@ public interface VSVSStepOutputs extends EObject {
 	boolean isSetValid_time_interval_unit();
 
 	/**
-	 * Returns the value of the '<em><b>Output level 3</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3}.
+	 * Returns the value of the '<em><b>Output</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output level 3</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Output</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output level 3</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output_level_3()
+	 * @return the value of the '<em>Output</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<VSVSStepOutputLevel3> getOutput_level_3();
-
-	/**
-	 * Returns the value of the '<em><b>Output level 2</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output level 2</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output level 2</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output_level_2()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<VSVSStepOutputLevel2> getOutput_level_2();
-
-	/**
-	 * Returns the value of the '<em><b>Output level 1</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output level 1</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output level 1</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output_level_1()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<VSVSStepOutputLevel1> getOutput_level_1();
-
-	/**
-	 * Returns the value of the '<em><b>Output level 0</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Output level 0</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output level 0</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output_level_0()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<VSVSStepOutputLevel0> getOutput_level_0();
+	EList<VSVSStepOutput> getOutput();
 
 } // VSVSStepOutputs
