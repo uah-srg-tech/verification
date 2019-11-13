@@ -482,7 +482,14 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DRun returns DRun
 	 *
 	 * Constraint:
-	 *     (color=STRING? tab=DTab? text=DText)
+	 *     (
+	 *         bold=DRunAttributes? 
+	 *         italics=DRunAttributes? 
+	 *         underline=DRunAttributes? 
+	 *         color=STRING? 
+	 *         tab=DTab? 
+	 *         text=DText
+	 *     )
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

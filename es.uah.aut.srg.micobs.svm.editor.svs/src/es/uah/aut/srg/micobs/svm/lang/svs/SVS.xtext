@@ -82,11 +82,14 @@ DEnumerate returns doctpl::DEnumerate:
 DParagraphContent returns doctpl::DParagraphContent:
 	DRun | DHyperlink;
 
+enum DRunAttributes returns doctpl::DRunAttributes:
+	TRUE = '"true"' | FALSE = '"false"';
+
 DRun returns doctpl::DRun:
 	'<run'
-		('bold="true"')?
-		('italics="true"')?
-		('underline="true"')?
+		('bold=' bold=DRunAttributes)?
+		('italics=' italics=DRunAttributes)?
+		('underline=' underline=DRunAttributes)?
 		('color=' color=STRING)?
 	'>'
 		(tab=DTab)?

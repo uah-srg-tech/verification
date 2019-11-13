@@ -46,6 +46,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDListContentAccess().getAlternatives(), "rule__DListContent__Alternatives");
 					put(grammarAccess.getDParagraphContentAccess().getAlternatives(), "rule__DParagraphContent__Alternatives");
 					put(grammarAccess.getDAlignmentAccess().getAlternatives(), "rule__DAlignment__Alternatives");
+					put(grammarAccess.getDRunAttributesAccess().getAlternatives(), "rule__DRunAttributes__Alternatives");
 					put(grammarAccess.getVValidationMethodAccess().getAlternatives(), "rule__VValidationMethod__Alternatives");
 					put(grammarAccess.getVSSSDocumentAccess().getGroup(), "rule__VSSSDocument__Group__0");
 					put(grammarAccess.getDBodyAccess().getGroup(), "rule__DBody__Group__0");
@@ -61,6 +62,9 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDEnumerateAccess().getGroup_1(), "rule__DEnumerate__Group_1__0");
 					put(grammarAccess.getDEnumerateAccess().getGroup_2(), "rule__DEnumerate__Group_2__0");
 					put(grammarAccess.getDRunAccess().getGroup(), "rule__DRun__Group__0");
+					put(grammarAccess.getDRunAccess().getGroup_1(), "rule__DRun__Group_1__0");
+					put(grammarAccess.getDRunAccess().getGroup_2(), "rule__DRun__Group_2__0");
+					put(grammarAccess.getDRunAccess().getGroup_3(), "rule__DRun__Group_3__0");
 					put(grammarAccess.getDRunAccess().getGroup_4(), "rule__DRun__Group_4__0");
 					put(grammarAccess.getDHyperlinkAccess().getGroup(), "rule__DHyperlink__Group__0");
 					put(grammarAccess.getDTabAccess().getGroup(), "rule__DTab__Group__0");
@@ -150,6 +154,9 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDEnumerateAccess().getAlignmentAssignment_1_1(), "rule__DEnumerate__AlignmentAssignment_1_1");
 					put(grammarAccess.getDEnumerateAccess().getStyleAssignment_2_1(), "rule__DEnumerate__StyleAssignment_2_1");
 					put(grammarAccess.getDEnumerateAccess().getItemsAssignment_4(), "rule__DEnumerate__ItemsAssignment_4");
+					put(grammarAccess.getDRunAccess().getBoldAssignment_1_1(), "rule__DRun__BoldAssignment_1_1");
+					put(grammarAccess.getDRunAccess().getItalicsAssignment_2_1(), "rule__DRun__ItalicsAssignment_2_1");
+					put(grammarAccess.getDRunAccess().getUnderlineAssignment_3_1(), "rule__DRun__UnderlineAssignment_3_1");
 					put(grammarAccess.getDRunAccess().getColorAssignment_4_1(), "rule__DRun__ColorAssignment_4_1");
 					put(grammarAccess.getDRunAccess().getTabAssignment_6(), "rule__DRun__TabAssignment_6");
 					put(grammarAccess.getDRunAccess().getTextAssignment_7(), "rule__DRun__TextAssignment_7");

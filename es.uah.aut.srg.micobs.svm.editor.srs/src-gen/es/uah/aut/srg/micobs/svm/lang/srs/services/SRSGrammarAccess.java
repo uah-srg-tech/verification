@@ -624,9 +624,18 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRun");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cRunKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cBoldTrueKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cItalicsTrueKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cUnderlineTrueKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cBoldKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cBoldAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cBoldDRunAttributesEnumRuleCall_1_1_0 = (RuleCall)cBoldAssignment_1_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Keyword cItalicsKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
+		private final Assignment cItalicsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cItalicsDRunAttributesEnumRuleCall_2_1_0 = (RuleCall)cItalicsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cUnderlineKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cUnderlineAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cUnderlineDRunAttributesEnumRuleCall_3_1_0 = (RuleCall)cUnderlineAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cColorKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cColorAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
@@ -639,30 +648,56 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRunKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//DRun doctpl::DRun:
-		//	'<run'
-		//	'bold="true"'?
-		//	'italics="true"'?
-		//	'underline="true"'? ('color=' color=STRING)?
+		//	'<run' ('bold=' bold=DRunAttributes)? ('italics=' italics=DRunAttributes)? ('underline=' underline=DRunAttributes)?
+		//	('color=' color=STRING)?
 		//	'>'
 		//	tab=DTab?
 		//	text=DText
 		//	'</run>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<run' 'bold="true"'? 'italics="true"'? 'underline="true"'? ('color=' color=STRING)? '>' tab=DTab? text=DText '</run>'
+		//'<run' ('bold=' bold=DRunAttributes)? ('italics=' italics=DRunAttributes)? ('underline=' underline=DRunAttributes)?
+		//('color=' color=STRING)? '>' tab=DTab? text=DText '</run>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<run'
 		public Keyword getRunKeyword_0() { return cRunKeyword_0; }
 		
-		//'bold="true"'?
-		public Keyword getBoldTrueKeyword_1() { return cBoldTrueKeyword_1; }
+		//('bold=' bold=DRunAttributes)?
+		public Group getGroup_1() { return cGroup_1; }
 		
-		//'italics="true"'?
-		public Keyword getItalicsTrueKeyword_2() { return cItalicsTrueKeyword_2; }
+		//'bold='
+		public Keyword getBoldKeyword_1_0() { return cBoldKeyword_1_0; }
 		
-		//'underline="true"'?
-		public Keyword getUnderlineTrueKeyword_3() { return cUnderlineTrueKeyword_3; }
+		//bold=DRunAttributes
+		public Assignment getBoldAssignment_1_1() { return cBoldAssignment_1_1; }
+		
+		//DRunAttributes
+		public RuleCall getBoldDRunAttributesEnumRuleCall_1_1_0() { return cBoldDRunAttributesEnumRuleCall_1_1_0; }
+		
+		//('italics=' italics=DRunAttributes)?
+		public Group getGroup_2() { return cGroup_2; }
+		
+		//'italics='
+		public Keyword getItalicsKeyword_2_0() { return cItalicsKeyword_2_0; }
+		
+		//italics=DRunAttributes
+		public Assignment getItalicsAssignment_2_1() { return cItalicsAssignment_2_1; }
+		
+		//DRunAttributes
+		public RuleCall getItalicsDRunAttributesEnumRuleCall_2_1_0() { return cItalicsDRunAttributesEnumRuleCall_2_1_0; }
+		
+		//('underline=' underline=DRunAttributes)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'underline='
+		public Keyword getUnderlineKeyword_3_0() { return cUnderlineKeyword_3_0; }
+		
+		//underline=DRunAttributes
+		public Assignment getUnderlineAssignment_3_1() { return cUnderlineAssignment_3_1; }
+		
+		//DRunAttributes
+		public RuleCall getUnderlineDRunAttributesEnumRuleCall_3_1_0() { return cUnderlineDRunAttributesEnumRuleCall_3_1_0; }
 		
 		//('color=' color=STRING)?
 		public Group getGroup_4() { return cGroup_4; }
@@ -3344,6 +3379,33 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"justified"'
 		public Keyword getJustifiedJustifiedKeyword_3_0() { return cJustifiedJustifiedKeyword_3_0; }
 	}
+	public class DRunAttributesElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRunAttributes");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cTRUEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cTRUETrueKeyword_0_0 = (Keyword)cTRUEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cFALSEEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cFALSEFalseKeyword_1_0 = (Keyword)cFALSEEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum DRunAttributes returns doctpl::DRunAttributes:
+		//	TRUE='"true"' | FALSE='"false"';
+		public EnumRule getRule() { return rule; }
+		
+		//TRUE='"true"' | FALSE='"false"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TRUE='"true"'
+		public EnumLiteralDeclaration getTRUEEnumLiteralDeclaration_0() { return cTRUEEnumLiteralDeclaration_0; }
+		
+		//'"true"'
+		public Keyword getTRUETrueKeyword_0_0() { return cTRUETrueKeyword_0_0; }
+		
+		//FALSE='"false"'
+		public EnumLiteralDeclaration getFALSEEnumLiteralDeclaration_1() { return cFALSEEnumLiteralDeclaration_1; }
+		
+		//'"false"'
+		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
+	}
 	public class VValidationMethodElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.VValidationMethod");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -3487,6 +3549,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DItemizeElements pDItemize;
 	private final DEnumerateElements pDEnumerate;
 	private final DParagraphContentElements pDParagraphContent;
+	private final DRunAttributesElements eDRunAttributes;
 	private final DRunElements pDRun;
 	private final DHyperlinkElements pDHyperlink;
 	private final DTextElements pDText;
@@ -3555,6 +3618,7 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDItemize = new DItemizeElements();
 		this.pDEnumerate = new DEnumerateElements();
 		this.pDParagraphContent = new DParagraphContentElements();
+		this.eDRunAttributes = new DRunAttributesElements();
 		this.pDRun = new DRunElements();
 		this.pDHyperlink = new DHyperlinkElements();
 		this.pDText = new DTextElements();
@@ -3771,11 +3835,19 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDParagraphContentAccess().getRule();
 	}
 	
+	//enum DRunAttributes returns doctpl::DRunAttributes:
+	//	TRUE='"true"' | FALSE='"false"';
+	public DRunAttributesElements getDRunAttributesAccess() {
+		return eDRunAttributes;
+	}
+	
+	public EnumRule getDRunAttributesRule() {
+		return getDRunAttributesAccess().getRule();
+	}
+	
 	//DRun doctpl::DRun:
-	//	'<run'
-	//	'bold="true"'?
-	//	'italics="true"'?
-	//	'underline="true"'? ('color=' color=STRING)?
+	//	'<run' ('bold=' bold=DRunAttributes)? ('italics=' italics=DRunAttributes)? ('underline=' underline=DRunAttributes)?
+	//	('color=' color=STRING)?
 	//	'>'
 	//	tab=DTab?
 	//	text=DText

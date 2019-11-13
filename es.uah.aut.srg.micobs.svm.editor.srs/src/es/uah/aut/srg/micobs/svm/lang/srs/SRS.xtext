@@ -37,7 +37,7 @@ DBody returns doctpl::DBody:
 
 DBodyContent returns doctpl::DBodyContent:
 	DParagraph | DItemize | DEnumerate | DFigureFromFile | DTableFromFile | DBasicTable;
-
+		
 enum DAlignment returns doctpl::DAlignment:
 	left = '"left"' | center = '"center"' | right = '"right"' | justified = '"justified"';
 	
@@ -77,11 +77,14 @@ DEnumerate returns doctpl::DEnumerate:
 DParagraphContent returns doctpl::DParagraphContent:
 	DRun | DHyperlink;
 
+enum DRunAttributes returns doctpl::DRunAttributes:
+	TRUE = '"true"' | FALSE = '"false"';
+
 DRun returns doctpl::DRun:
 	'<run'
-		('bold="true"')?
-		('italics="true"')?
-		('underline="true"')?
+		('bold=' bold=DRunAttributes)?
+		('italics=' italics=DRunAttributes)?
+		('underline=' underline=DRunAttributes)?
 		('color=' color=STRING)?
 	'>'
 		(tab=DTab)?

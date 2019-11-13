@@ -1086,33 +1086,90 @@ ruleDRun returns [EObject current=null]
 			newLeafNode(otherlv_0, grammarAccess.getDRunAccess().getRunKeyword_0());
 		}
 		(
-			otherlv_1='bold="true"'
+			otherlv_1='bold='
 			{
-				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldTrueKeyword_1());
-			}
-		)?
-		(
-			otherlv_2='italics="true"'
-			{
-				newLeafNode(otherlv_2, grammarAccess.getDRunAccess().getItalicsTrueKeyword_2());
-			}
-		)?
-		(
-			otherlv_3='underline="true"'
-			{
-				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
-			}
-		)?
-		(
-			otherlv_4='color='
-			{
-				newLeafNode(otherlv_4, grammarAccess.getDRunAccess().getColorKeyword_4_0());
+				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldKeyword_1_0());
 			}
 			(
 				(
-					lv_color_5_0=RULE_STRING
 					{
-						newLeafNode(lv_color_5_0, grammarAccess.getDRunAccess().getColorSTRINGTerminalRuleCall_4_1_0());
+						newCompositeNode(grammarAccess.getDRunAccess().getBoldDRunAttributesEnumRuleCall_1_1_0());
+					}
+					lv_bold_2_0=ruleDRunAttributes
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDRunRule());
+						}
+						set(
+							$current,
+							"bold",
+							lv_bold_2_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRunAttributes");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_3='italics='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getItalicsKeyword_2_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDRunAccess().getItalicsDRunAttributesEnumRuleCall_2_1_0());
+					}
+					lv_italics_4_0=ruleDRunAttributes
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDRunRule());
+						}
+						set(
+							$current,
+							"italics",
+							lv_italics_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRunAttributes");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_5='underline='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDRunAccess().getUnderlineKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getDRunAccess().getUnderlineDRunAttributesEnumRuleCall_3_1_0());
+					}
+					lv_underline_6_0=ruleDRunAttributes
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDRunRule());
+						}
+						set(
+							$current,
+							"underline",
+							lv_underline_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRunAttributes");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_7='color='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDRunAccess().getColorKeyword_4_0());
+			}
+			(
+				(
+					lv_color_8_0=RULE_STRING
+					{
+						newLeafNode(lv_color_8_0, grammarAccess.getDRunAccess().getColorSTRINGTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1121,22 +1178,22 @@ ruleDRun returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"color",
-							lv_color_5_0,
+							lv_color_8_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_6='>'
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getDRunAccess().getGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_9, grammarAccess.getDRunAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getDRunAccess().getTabDTabParserRuleCall_6_0());
 				}
-				lv_tab_7_0=ruleDTab
+				lv_tab_10_0=ruleDTab
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRunRule());
@@ -1144,7 +1201,7 @@ ruleDRun returns [EObject current=null]
 					set(
 						$current,
 						"tab",
-						lv_tab_7_0,
+						lv_tab_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DTab");
 					afterParserOrEnumRuleCall();
 				}
@@ -1155,7 +1212,7 @@ ruleDRun returns [EObject current=null]
 				{
 					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_7_0());
 				}
-				lv_text_8_0=ruleDText
+				lv_text_11_0=ruleDText
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDRunRule());
@@ -1163,15 +1220,15 @@ ruleDRun returns [EObject current=null]
 					set(
 						$current,
 						"text",
-						lv_text_8_0,
+						lv_text_11_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DText");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_9='</run>'
+		otherlv_12='</run>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDRunAccess().getRunKeyword_8());
+			newLeafNode(otherlv_12, grammarAccess.getDRunAccess().getRunKeyword_8());
 		}
 	)
 ;
@@ -8383,6 +8440,33 @@ ruleDAlignment returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getDAlignmentAccess().getJustifiedEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_3, grammarAccess.getDAlignmentAccess().getJustifiedEnumLiteralDeclaration_3());
+			}
+		)
+	)
+;
+
+// Rule DRunAttributes
+ruleDRunAttributes returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"true"'
+			{
+				$current = grammarAccess.getDRunAttributesAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getDRunAttributesAccess().getTRUEEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"false"'
+			{
+				$current = grammarAccess.getDRunAttributesAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getDRunAttributesAccess().getFALSEEnumLiteralDeclaration_1());
 			}
 		)
 	)

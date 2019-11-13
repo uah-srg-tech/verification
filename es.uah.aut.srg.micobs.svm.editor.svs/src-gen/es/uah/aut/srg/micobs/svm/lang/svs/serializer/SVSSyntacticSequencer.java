@@ -18,8 +18,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
-import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
 import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 
@@ -27,16 +25,10 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class SVSSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected SVSGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_DRun_BoldTrueKeyword_1_q;
-	protected AbstractElementAlias match_DRun_ItalicsTrueKeyword_2_q;
-	protected AbstractElementAlias match_DRun_UnderlineTrueKeyword_3_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (SVSGrammarAccess) access;
-		match_DRun_BoldTrueKeyword_1_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getBoldTrueKeyword_1());
-		match_DRun_ItalicsTrueKeyword_2_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getItalicsTrueKeyword_2());
-		match_DRun_UnderlineTrueKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDRunAccess().getUnderlineTrueKeyword_3());
 	}
 	
 	@Override
@@ -51,53 +43,8 @@ public class SVSSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_DRun_BoldTrueKeyword_1_q.equals(syntax))
-				emit_DRun_BoldTrueKeyword_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DRun_ItalicsTrueKeyword_2_q.equals(syntax))
-				emit_DRun_ItalicsTrueKeyword_2_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DRun_UnderlineTrueKeyword_3_q.equals(syntax))
-				emit_DRun_UnderlineTrueKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else acceptNodes(getLastNavigableState(), syntaxNodes);
+			acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     'bold="true"'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? '>' tab=DTab
-	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? '>' text=DText
-	 *     (rule start) '<run' (ambiguity) 'italics="true"'? 'underline="true"'? 'color=' color=STRING
-	 */
-	protected void emit_DRun_BoldTrueKeyword_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'italics="true"'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? '>' tab=DTab
-	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? '>' text=DText
-	 *     (rule start) '<run' 'bold="true"'? (ambiguity) 'underline="true"'? 'color=' color=STRING
-	 */
-	protected void emit_DRun_ItalicsTrueKeyword_2_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'underline="true"'?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) '>' tab=DTab
-	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) '>' text=DText
-	 *     (rule start) '<run' 'bold="true"'? 'italics="true"'? (ambiguity) 'color=' color=STRING
-	 */
-	protected void emit_DRun_UnderlineTrueKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 }
