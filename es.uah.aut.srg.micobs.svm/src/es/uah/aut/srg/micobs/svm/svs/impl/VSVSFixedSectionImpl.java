@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
@@ -22,7 +23,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -226,6 +227,16 @@ public class VSVSFixedSectionImpl extends DFixedSectionImpl implements VSVSFixed
 				return svsInstatiableSubsections != null && !svsInstatiableSubsections.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		
+		for(DAbstractSection subsection : getSvsInstatiableSubsections()) {
+			subsections.add(subsection);
+		}
+		return subsections;
 	}
 
 } //VSVSFixedSectionImpl
