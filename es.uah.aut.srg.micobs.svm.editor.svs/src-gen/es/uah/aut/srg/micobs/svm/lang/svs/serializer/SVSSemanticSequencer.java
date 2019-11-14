@@ -36,7 +36,6 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDefinition;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
@@ -67,6 +66,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestPlatformRequirements;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures;
@@ -168,9 +168,6 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case svsPackage.VSVS_FIXED_SECTION:
 				sequence_VSVSFixedSection(context, (VSVSFixedSection) semanticObject); 
-				return; 
-			case svsPackage.VSVS_FIXED_TEST_SECTION:
-				sequence_VSVSFixedTestSection(context, (VSVSFixedTestSection) semanticObject); 
 				return; 
 			case svsPackage.VSVS_INSTANTIABLE_SECTION:
 				sequence_VSVSInstantiableSection(context, (VSVSInstantiableSection) semanticObject); 
@@ -292,6 +289,9 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case svsPackage.VSVS_TEST_DESIGN:
 				sequence_VSVSTestDesign(context, (VSVSTestDesign) semanticObject); 
 				return; 
+			case svsPackage.VSVS_TEST_INFO:
+				sequence_VSVSTestInfo(context, (VSVSTestInfo) semanticObject); 
+				return; 
 			case svsPackage.VSVS_TEST_PLATFORM_REQUIREMENTS:
 				sequence_VSVSTestPlatformRequirements(context, (VSVSTestPlatformRequirements) semanticObject); 
 				return; 
@@ -372,7 +372,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DEnumerate returns DEnumerate
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DEnumerate(ISerializationContext context, DEnumerate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -420,7 +420,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DItemize returns DItemize
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DItemize(ISerializationContext context, DItemize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -445,7 +445,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DParagraph returns DParagraph
 	 *
 	 * Constraint:
-	 *     (style=STRING? alignment=DAlignment? paragraphContent+=DParagraphContent+)
+	 *     (name=STRING? style=STRING? alignment=DAlignment? paragraphContent+=DParagraphContent+)
 	 */
 	protected void sequence_DParagraph(ISerializationContext context, DParagraph semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -664,18 +664,6 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (body=DBody? svsInstatiableSubsections+=VSVSInstantiableSection*)
 	 */
 	protected void sequence_VSVSFixedSection(ISerializationContext context, VSVSFixedSection semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VSVSFixedTestSection returns VSVSFixedTestSection
-	 *
-	 * Constraint:
-	 *     body=DBody?
-	 */
-	protected void sequence_VSVSFixedTestSection(ISerializationContext context, VSVSFixedTestSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1276,13 +1264,13 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         identifier=VSVSFixedTestSection 
-	 *         inputs=VSVSFixedTestSection 
-	 *         outputs=VSVSFixedTestSection 
-	 *         passFailCriteria=VSVSFixedTestSection 
-	 *         environmentalNeeds=VSVSFixedTestSection 
-	 *         specialConstraints=VSVSFixedTestSection 
-	 *         interfaceDependencies=VSVSFixedTestSection 
+	 *         identifier=VSVSTestInfo 
+	 *         inputs=VSVSTestInfo 
+	 *         outputs=VSVSTestInfo 
+	 *         passFailCriteria=VSVSTestInfo 
+	 *         environmentalNeeds=VSVSTestInfo 
+	 *         specialConstraints=VSVSTestInfo 
+	 *         interfaceDependencies=VSVSTestInfo 
 	 *         validatingItem+=[VTraceableDocumentAbstractItem|STRING]+
 	 *     )
 	 */
@@ -1332,6 +1320,18 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSTestInfo returns VSVSTestInfo
+	 *
+	 * Constraint:
+	 *     body=DBody?
+	 */
+	protected void sequence_VSVSTestInfo(ISerializationContext context, VSVSTestInfo semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VSVSTestPlatformRequirements returns VSVSTestPlatformRequirements
 	 *
 	 * Constraint:
@@ -1349,12 +1349,12 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         identifier=VSVSFixedTestSection 
-	 *         purpose=VSVSFixedTestSection 
+	 *         identifier=VSVSTestInfo 
+	 *         purpose=VSVSTestInfo 
 	 *         scenario=[VSVSScenarioSection|STRING]? 
 	 *         testCase+=[VSVSTestCase|STRING]+ 
 	 *         procedureSteps=VSVSProcedureSteps 
-	 *         testScript=VSVSFixedTestSection
+	 *         testScript=VSVSTestInfo
 	 *     )
 	 */
 	protected void sequence_VSVSTestProcedure(ISerializationContext context, VSVSTestProcedure semanticObject) {

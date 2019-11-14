@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -48,7 +49,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody description;
+	protected DBody description;
 	/**
 	 * The cached value of the '{@link #getExtendedDescription() <em>Extended Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -57,7 +58,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody extendedDescription;
+	protected DBody extendedDescription;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -82,7 +83,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getDescription() {
+	public DBody getDescription() {
 		return description;
 	}
 
@@ -91,8 +92,8 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldDescription = description;
+	public NotificationChain basicSetDescription(DBody newDescription, NotificationChain msgs) {
+		DBody oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__DESCRIPTION, oldDescription, newDescription);
@@ -106,7 +107,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newDescription) {
+	public void setDescription(DBody newDescription) {
 		if (newDescription != description) {
 			NotificationChain msgs = null;
 			if (description != null)
@@ -125,7 +126,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getExtendedDescription() {
+	public DBody getExtendedDescription() {
 		return extendedDescription;
 	}
 
@@ -134,8 +135,8 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetExtendedDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newExtendedDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldExtendedDescription = extendedDescription;
+	public NotificationChain basicSetExtendedDescription(DBody newExtendedDescription, NotificationChain msgs) {
+		DBody oldExtendedDescription = extendedDescription;
 		extendedDescription = newExtendedDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION, oldExtendedDescription, newExtendedDescription);
@@ -149,7 +150,7 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setExtendedDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newExtendedDescription) {
+	public void setExtendedDescription(DBody newExtendedDescription) {
 		if (newExtendedDescription != extendedDescription) {
 			NotificationChain msgs = null;
 			if (extendedDescription != null)
@@ -204,10 +205,10 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_DOCUMENT_ITEM__DESCRIPTION:
-				setDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setDescription((DBody)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION:
-				setExtendedDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setExtendedDescription((DBody)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -222,10 +223,10 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_DOCUMENT_ITEM__DESCRIPTION:
-				setDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setDescription((DBody)null);
 				return;
 			case sssPackage.VSSS_DOCUMENT_ITEM__EXTENDED_DESCRIPTION:
-				setExtendedDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setExtendedDescription((DBody)null);
 				return;
 		}
 		super.eUnset(featureID);

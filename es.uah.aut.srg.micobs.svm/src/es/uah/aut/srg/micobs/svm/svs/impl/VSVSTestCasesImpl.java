@@ -13,19 +13,19 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
-import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
+
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -90,16 +90,18 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 	protected EClass eStaticClass() {
 		return svsPackage.Literals.VSVS_TEST_CASES;
 	}
-	
-	@Override
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getGeneral());
-		
-		for(DAbstractSection procedure : getTestCases()) {
-			subsections.add(procedure);
-		}
-		return subsections;
+		// TODO: implement this method to return the 'Subsections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -294,21 +296,6 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-
-	@Override
-	public EList<VValidationDocumentAbstractItem> getItems() {
-		EList<VValidationDocumentAbstractItem> items = new BasicEList<VValidationDocumentAbstractItem>();
-		
-		for(VValidationDocumentAbstractItem item : getTestCases()) {
-			items.add(item);
-		}
-		return items;
-	}
-	
-	@Override
-	public VValidationDocument basicGetDoc() {
-		return (VValidationDocument)eContainer();
 	}
 
 } //VSVSTestCasesImpl

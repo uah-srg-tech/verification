@@ -10,12 +10,12 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
@@ -23,7 +23,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -81,7 +81,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection identifier;
+	protected VSVSTestInfo identifier;
 
 	/**
 	 * The cached value of the '{@link #getPurpose() <em>Purpose</em>}' containment reference.
@@ -91,7 +91,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection purpose;
+	protected VSVSTestInfo purpose;
 
 	/**
 	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
@@ -121,7 +121,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection testScript;
+	protected VSVSTestInfo testScript;
 
 	/**
 	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' reference list.
@@ -178,7 +178,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getIdentifier() {
+	public VSVSTestInfo getIdentifier() {
 		return identifier;
 	}
 
@@ -187,8 +187,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIdentifier(VSVSFixedTestSection newIdentifier, NotificationChain msgs) {
-		VSVSFixedTestSection oldIdentifier = identifier;
+	public NotificationChain basicSetIdentifier(VSVSTestInfo newIdentifier, NotificationChain msgs) {
+		VSVSTestInfo oldIdentifier = identifier;
 		identifier = newIdentifier;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER, oldIdentifier, newIdentifier);
@@ -202,7 +202,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentifier(VSVSFixedTestSection newIdentifier) {
+	public void setIdentifier(VSVSTestInfo newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
 			if (identifier != null)
@@ -221,7 +221,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getPurpose() {
+	public VSVSTestInfo getPurpose() {
 		return purpose;
 	}
 
@@ -230,8 +230,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPurpose(VSVSFixedTestSection newPurpose, NotificationChain msgs) {
-		VSVSFixedTestSection oldPurpose = purpose;
+	public NotificationChain basicSetPurpose(VSVSTestInfo newPurpose, NotificationChain msgs) {
+		VSVSTestInfo oldPurpose = purpose;
 		purpose = newPurpose;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__PURPOSE, oldPurpose, newPurpose);
@@ -245,7 +245,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPurpose(VSVSFixedTestSection newPurpose) {
+	public void setPurpose(VSVSTestInfo newPurpose) {
 		if (newPurpose != purpose) {
 			NotificationChain msgs = null;
 			if (purpose != null)
@@ -345,7 +345,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getTestScript() {
+	public VSVSTestInfo getTestScript() {
 		return testScript;
 	}
 
@@ -354,8 +354,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTestScript(VSVSFixedTestSection newTestScript, NotificationChain msgs) {
-		VSVSFixedTestSection oldTestScript = testScript;
+	public NotificationChain basicSetTestScript(VSVSTestInfo newTestScript, NotificationChain msgs) {
+		VSVSTestInfo oldTestScript = testScript;
 		testScript = newTestScript;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT, oldTestScript, newTestScript);
@@ -369,7 +369,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTestScript(VSVSFixedTestSection newTestScript) {
+	public void setTestScript(VSVSTestInfo newTestScript) {
 		if (newTestScript != testScript) {
 			NotificationChain msgs = null;
 			if (testScript != null)
@@ -455,10 +455,10 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setName((String)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
-				setIdentifier((VSVSFixedTestSection)newValue);
+				setIdentifier((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
-				setPurpose((VSVSFixedTestSection)newValue);
+				setPurpose((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				setScenario((VSVSScenarioSection)newValue);
@@ -467,7 +467,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setProcedureSteps((VSVSProcedureSteps)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
-				setTestScript((VSVSFixedTestSection)newValue);
+				setTestScript((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
 				getTestCase().clear();
@@ -489,10 +489,10 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setName(NAME_EDEFAULT);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__IDENTIFIER:
-				setIdentifier((VSVSFixedTestSection)null);
+				setIdentifier((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PURPOSE:
-				setPurpose((VSVSFixedTestSection)null);
+				setPurpose((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				setScenario((VSVSScenarioSection)null);
@@ -501,7 +501,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setProcedureSteps((VSVSProcedureSteps)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
-				setTestScript((VSVSFixedTestSection)null);
+				setTestScript((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
 				getTestCase().clear();
@@ -550,15 +550,6 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 		result.append(name);
 		result.append(')');
 		return result.toString();
-	}
-
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subections = new BasicEList<DAbstractSection>();
-		subections.add((DAbstractSection) getIdentifier());
-		subections.add((DAbstractSection) getPurpose());
-		subections.add((DAbstractSection) getTestScript());
-		return subections;
 	}
 
 } //VSVSTestProcedureImpl

@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -40,7 +41,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSRSSoftwareOverviewImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSSoftwareOverview {
+public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSSoftwareOverview {
 	/**
 	 * The cached value of the '{@link #getFunctionPurpose() <em>Function Purpose</em>}' containment reference.
 	 * <!-- begin-user-doc -->

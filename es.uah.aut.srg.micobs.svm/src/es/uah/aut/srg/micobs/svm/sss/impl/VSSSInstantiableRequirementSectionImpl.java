@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection;
@@ -58,7 +60,7 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
+	protected DBody sectionDescription;
 	/**
 	 * The cached value of the '{@link #getSssItems() <em>Sss Items</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -98,7 +100,7 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
+	public DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -107,8 +109,8 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -122,7 +124,7 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
+	public void setSectionDescription(DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -193,10 +195,10 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 		switch (featureID) {
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS:
 				getSubsections().clear();
-				getSubsections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setSectionDescription((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS:
 				getSssItems().clear();
@@ -218,7 +220,7 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 				getSubsections().clear();
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setSectionDescription((DBody)null);
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SSS_ITEMS:
 				getSssItems().clear();
@@ -252,13 +254,13 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (derivedFeatureID) {
 				case sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS: return doctplPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection.class) {
+		if (baseClass == DInstantiableSection.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -273,13 +275,13 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (baseFeatureID) {
 				case doctplPackage.DABSTRACT_SECTION__SUBSECTIONS: return sssPackage.VSSS_INSTANTIABLE_REQUIREMENT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection.class) {
+		if (baseClass == DInstantiableSection.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}

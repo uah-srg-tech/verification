@@ -81,7 +81,7 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_SCENARIOS_SECTION: return createVSVSScenariosSection();
 			case svsPackage.VSVS_SCENARIO_SECTION: return createVSVSScenarioSection();
 			case svsPackage.VSVS_TEST_DESIGN: return createVSVSTestDesign();
-			case svsPackage.VSVS_FIXED_TEST_SECTION: return createVSVSFixedTestSection();
+			case svsPackage.VSVS_TEST_INFO: return createVSVSTestInfo();
 			case svsPackage.VSVS_TEST_CASES: return createVSVSTestCases();
 			case svsPackage.VSVS_TEST_CASE: return createVSVSTestCase();
 			case svsPackage.VSVS_TEST_PROCEDURES: return createVSVSTestProcedures();
@@ -290,16 +290,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSTestDesign createVSVSTestDesign() {
-		VSVSTestDesignImpl vsvsTestDesign = new VSVSTestDesignImpl();
-		return vsvsTestDesign;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public VSVSScenariosSection createVSVSScenariosSection() {
 		VSVSScenariosSectionImpl vsvsScenariosSection = new VSVSScenariosSectionImpl();
 		return vsvsScenariosSection;
@@ -320,9 +310,19 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection createVSVSFixedTestSection() {
-		VSVSFixedTestSectionImpl vsvsFixedTestSection = new VSVSFixedTestSectionImpl();
-		return vsvsFixedTestSection;
+	public VSVSTestDesign createVSVSTestDesign() {
+		VSVSTestDesignImpl vsvsTestDesign = new VSVSTestDesignImpl();
+		return vsvsTestDesign;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSTestInfo createVSVSTestInfo() {
+		VSVSTestInfoImpl vsvsTestInfo = new VSVSTestInfoImpl();
+		return vsvsTestInfo;
 	}
 
 	/**

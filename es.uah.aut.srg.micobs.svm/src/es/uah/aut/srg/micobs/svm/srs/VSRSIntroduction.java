@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +29,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSRSIntroduction extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
+public interface VSRSIntroduction extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection}.

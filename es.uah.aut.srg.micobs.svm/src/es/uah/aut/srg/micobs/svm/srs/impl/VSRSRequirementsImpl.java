@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAdaptationInstallationRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDataDefinitionDBRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDesignRequirements;
@@ -70,7 +72,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSRequirements {
+public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequirements {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -79,7 +81,7 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
+	protected DBody sectionDescription;
 
 	/**
 	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference.
@@ -275,7 +277,7 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
+	public DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -284,8 +286,8 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_REQUIREMENTS__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -299,7 +301,7 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
+	public void setSectionDescription(DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -1149,7 +1151,7 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case srsPackage.VSRS_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setSectionDescription((DBody)newValue);
 				return;
 			case srsPackage.VSRS_REQUIREMENTS__GENERAL:
 				setGeneral((VSRSGeneralRequirements)newValue);
@@ -1215,7 +1217,7 @@ public class VSRSRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case srsPackage.VSRS_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setSectionDescription((DBody)null);
 				return;
 			case srsPackage.VSRS_REQUIREMENTS__GENERAL:
 				setGeneral((VSRSGeneralRequirements)null);

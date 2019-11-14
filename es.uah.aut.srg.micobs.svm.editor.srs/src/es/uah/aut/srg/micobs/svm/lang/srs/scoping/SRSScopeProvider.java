@@ -110,4 +110,5 @@ public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 		});
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
+	
 }

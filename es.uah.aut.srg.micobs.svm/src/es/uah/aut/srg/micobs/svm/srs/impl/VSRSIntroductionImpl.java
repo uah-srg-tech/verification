@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSIntroduction;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -40,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSIntroductionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSIntroduction {
+public class VSRSIntroductionImpl extends DFixedSectionImpl implements VSRSIntroduction {
 	/**
 	 * The cached value of the '{@link #getSrsInstatiableSubsections() <em>Srs Instatiable Subsections</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
@@ -39,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSApplicableDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSApplicableDocuments {
+public class VSRSApplicableDocumentsImpl extends DFixedSectionImpl implements VSRSApplicableDocuments {
 	/**
 	 * The cached value of the '{@link #getApplicableDocuments() <em>Applicable Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -48,7 +50,7 @@ public class VSRSApplicableDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument> applicableDocuments;
+	protected EList<DApplicableDocument> applicableDocuments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,9 +76,9 @@ public class VSRSApplicableDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument> getApplicableDocuments() {
+	public EList<DApplicableDocument> getApplicableDocuments() {
 		if (applicableDocuments == null) {
-			applicableDocuments = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>(es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument.class, this, srsPackage.VSRS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS);
+			applicableDocuments = new EObjectContainmentEList<DApplicableDocument>(DApplicableDocument.class, this, srsPackage.VSRS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS);
 		}
 		return applicableDocuments;
 	}
@@ -120,7 +122,7 @@ public class VSRSApplicableDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.do
 		switch (featureID) {
 			case srsPackage.VSRS_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

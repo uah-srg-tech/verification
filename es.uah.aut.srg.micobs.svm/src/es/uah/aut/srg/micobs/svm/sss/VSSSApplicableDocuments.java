@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -28,7 +30,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSApplicableDocuments extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
+public interface VSSSApplicableDocuments extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Applicable Documents</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument}.
@@ -43,6 +45,6 @@ public interface VSSSApplicableDocuments extends es.uah.aut.srg.micobs.doctpl.do
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument> getApplicableDocuments();
+	EList<DApplicableDocument> getApplicableDocuments();
 
 } // VSSSApplicableDocuments

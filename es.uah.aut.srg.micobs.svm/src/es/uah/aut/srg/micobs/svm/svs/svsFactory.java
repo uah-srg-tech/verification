@@ -147,15 +147,6 @@ public interface svsFactory extends EFactory {
 	VSVSTestingSpecificationDesign createVSVSTestingSpecificationDesign();
 
 	/**
-	 * Returns a new object of class '<em>VSVS Test Design</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVS Test Design</em>'.
-	 * @generated
-	 */
-	VSVSTestDesign createVSVSTestDesign();
-
-	/**
 	 * Returns a new object of class '<em>VSVS Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -174,13 +165,22 @@ public interface svsFactory extends EFactory {
 	VSVSScenarioSection createVSVSScenarioSection();
 
 	/**
-	 * Returns a new object of class '<em>VSVS Fixed Test Section</em>'.
+	 * Returns a new object of class '<em>VSVS Test Design</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVS Fixed Test Section</em>'.
+	 * @return a new object of class '<em>VSVS Test Design</em>'.
 	 * @generated
 	 */
-	VSVSFixedTestSection createVSVSFixedTestSection();
+	VSVSTestDesign createVSVSTestDesign();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Test Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Test Info</em>'.
+	 * @generated
+	 */
+	VSVSTestInfo createVSVSTestInfo();
 
 	/**
 	 * Returns a new object of class '<em>VSVS Test Cases</em>'.

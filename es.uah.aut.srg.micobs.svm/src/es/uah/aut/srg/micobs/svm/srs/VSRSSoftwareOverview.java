@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSRS Software Overview</b></em>'.
@@ -29,7 +31,7 @@ package es.uah.aut.srg.micobs.svm.srs;
  * @model
  * @generated
  */
-public interface VSRSSoftwareOverview extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
+public interface VSRSSoftwareOverview extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Function Purpose</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

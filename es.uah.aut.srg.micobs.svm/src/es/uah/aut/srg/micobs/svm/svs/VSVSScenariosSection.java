@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -35,7 +36,7 @@ public interface VSVSScenariosSection extends DFixedSection {
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Scenarios</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Scenarios</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->

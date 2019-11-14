@@ -14,6 +14,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSApplicableDocuments;
@@ -39,7 +41,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -148,7 +149,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> srsFigures;
+	protected EList<DFigureFromFile> srsFigures;
 
 	/**
 	 * The cached value of the '{@link #getSrsTables() <em>Srs Tables</em>}' containment reference list.
@@ -158,7 +159,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> srsTables;
+	protected EList<DAbstractTable> srsTables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -560,9 +561,9 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSrsFigures() {
+	public EList<DFigureFromFile> getSrsFigures() {
 		if (srsFigures == null) {
-			srsFigures = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure.class, this, srsPackage.VSRS_DOCUMENT__SRS_FIGURES);
+			srsFigures = new EObjectContainmentEList<DFigureFromFile>(DFigureFromFile.class, this, srsPackage.VSRS_DOCUMENT__SRS_FIGURES);
 		}
 		return srsFigures;
 	}
@@ -572,9 +573,9 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSrsTables() {
+	public EList<DAbstractTable> getSrsTables() {
 		if (srsTables == null) {
-			srsTables = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable.class, this, srsPackage.VSRS_DOCUMENT__SRS_TABLES);
+			srsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, srsPackage.VSRS_DOCUMENT__SRS_TABLES);
 		}
 		return srsTables;
 	}
@@ -660,23 +661,23 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		switch (featureID) {
 			case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__FIGURES:
 				getFigures().clear();
-				getFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__TABLES:
 				getTables().clear();
-				getTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				getSections().clear();
-				getSections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSRSIntroduction)newValue);
@@ -701,11 +702,11 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return;
 			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
 				getSrsFigures().clear();
-				getSrsFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getSrsFigures().addAll((Collection<? extends DFigureFromFile>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
 				getSrsTables().clear();
-				getSrsTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getSrsTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -812,7 +813,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
+		if (baseClass == DDocumentTemplate.class) {
 			switch (derivedFeatureID) {
 				case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
 				case srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
@@ -832,7 +833,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
+		if (baseClass == DDocumentTemplate.class) {
 			switch (baseFeatureID) {
 				case doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS;
 				case doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return srsPackage.VSRS_DOCUMENT__REFERENCE_DOCUMENTS;

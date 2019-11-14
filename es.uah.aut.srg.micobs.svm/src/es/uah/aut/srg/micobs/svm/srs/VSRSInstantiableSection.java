@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -29,7 +31,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSRSInstantiableSection extends es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection {
+public interface VSRSInstantiableSection extends DInstantiableSection {
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -39,12 +41,12 @@ public interface VSRSInstantiableSection extends es.uah.aut.srg.micobs.doctpl.do
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
-	 * @see #setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody)
+	 * @see #setBody(DBody)
 	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSInstantiableSection_Body()
 	 * @model containment="true"
 	 * @generated
 	 */
-	es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody();
+	DBody getBody();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection#getBody <em>Body</em>}' containment reference.
@@ -54,7 +56,7 @@ public interface VSRSInstantiableSection extends es.uah.aut.srg.micobs.doctpl.do
 	 * @see #getBody()
 	 * @generated
 	 */
-	void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody value);
+	void setBody(DBody value);
 
 	/**
 	 * Returns the value of the '<em><b>Srs Instatiable Subsections</b></em>' containment reference list.

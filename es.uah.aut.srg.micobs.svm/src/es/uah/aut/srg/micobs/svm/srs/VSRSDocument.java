@@ -10,8 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
-
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -38,7 +40,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSRSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate {
+public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	/**
 	 * Returns the value of the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -223,7 +225,7 @@ public interface VSRSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.
 
 	/**
 	 * Returns the value of the '<em><b>Srs Figures</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure}.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Srs Figures</em>' containment reference list isn't clear,
@@ -235,7 +237,7 @@ public interface VSRSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSrsFigures();
+	EList<DFigureFromFile> getSrsFigures();
 
 	/**
 	 * Returns the value of the '<em><b>Srs Tables</b></em>' containment reference list.
@@ -251,6 +253,6 @@ public interface VSRSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSrsTables();
+	EList<DAbstractTable> getSrsTables();
 
 } // VSRSDocument

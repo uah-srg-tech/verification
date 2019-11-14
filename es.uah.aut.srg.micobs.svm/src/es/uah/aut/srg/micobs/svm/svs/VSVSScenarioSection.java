@@ -32,7 +32,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
  * @generated
  */
 public interface VSVSScenarioSection extends DFixedSection {
-
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -110,4 +109,5 @@ public interface VSVSScenarioSection extends DFixedSection {
 	 * @generated
 	 */
 	void setBody(DBody value);
+
 } // VSVSScenarioSection

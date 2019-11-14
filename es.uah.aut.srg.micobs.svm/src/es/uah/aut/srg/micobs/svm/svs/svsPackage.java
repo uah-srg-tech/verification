@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
+
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -1055,16 +1056,6 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
-	 * @generated
-	 */
-	int VSVS_TEST_DESIGN = 16;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1175,6 +1166,16 @@ public interface svsPackage extends EPackage {
 	int VSVS_SCENARIO_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
+	 * @generated
+	 */
+	int VSVS_TEST_DESIGN = 16;
+
+	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1238,23 +1239,14 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_DESIGN_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestInfoImpl <em>VSVS Test Info</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedTestSection()
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestInfoImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestInfo()
 	 * @generated
 	 */
-	int VSVS_FIXED_TEST_SECTION = 17;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_FIXED_TEST_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+	int VSVS_TEST_INFO = 17;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1263,25 +1255,25 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION__BODY = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VSVS_TEST_INFO__BODY = 0;
 
 	/**
-	 * The number of structural features of the '<em>VSVS Fixed Test Section</em>' class.
+	 * The number of structural features of the '<em>VSVS Test Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_TEST_INFO_FEATURE_COUNT = 1;
 
 	/**
-	 * The number of operations of the '<em>VSVS Fixed Test Section</em>' class.
+	 * The number of operations of the '<em>VSVS Test Info</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_FIXED_TEST_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+	int VSVS_TEST_INFO_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestCasesImpl <em>VSVS Test Cases</em>}' class.
@@ -3965,60 +3957,6 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestingSpecificationDesign_TestDesigns();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign <em>VSVS Test Design</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Test Design</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign
-	 * @generated
-	 */
-	EClass getVSVSTestDesign();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName()
-	 * @see #getVSVSTestDesign()
-	 * @generated
-	 */
-	EAttribute getVSVSTestDesign_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getGeneral <em>General</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>General</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getGeneral()
-	 * @see #getVSVSTestDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestDesign_General();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getFeaturesToBeTested <em>Features To Be Tested</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Features To Be Tested</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getFeaturesToBeTested()
-	 * @see #getVSVSTestDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestDesign_FeaturesToBeTested();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getApproachRefinements <em>Approach Refinements</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Approach Refinements</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getApproachRefinements()
-	 * @see #getVSVSTestDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestDesign_ApproachRefinements();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -4083,25 +4021,79 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSScenarioSection_Body();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection <em>VSVS Fixed Test Section</em>}'.
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign <em>VSVS Test Design</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Fixed Test Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection
+	 * @return the meta object for class '<em>VSVS Test Design</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign
 	 * @generated
 	 */
-	EClass getVSVSFixedTestSection();
+	EClass getVSVSTestDesign();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody <em>Body</em>}'.
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getName()
+	 * @see #getVSVSTestDesign()
+	 * @generated
+	 */
+	EAttribute getVSVSTestDesign_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getGeneral <em>General</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>General</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getGeneral()
+	 * @see #getVSVSTestDesign()
+	 * @generated
+	 */
+	EReference getVSVSTestDesign_General();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getFeaturesToBeTested <em>Features To Be Tested</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Features To Be Tested</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getFeaturesToBeTested()
+	 * @see #getVSVSTestDesign()
+	 * @generated
+	 */
+	EReference getVSVSTestDesign_FeaturesToBeTested();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getApproachRefinements <em>Approach Refinements</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Approach Refinements</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign#getApproachRefinements()
+	 * @see #getVSVSTestDesign()
+	 * @generated
+	 */
+	EReference getVSVSTestDesign_ApproachRefinements();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo <em>VSVS Test Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVS Test Info</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo
+	 * @generated
+	 */
+	EClass getVSVSTestInfo();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo#getBody <em>Body</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference '<em>Body</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody()
-	 * @see #getVSVSFixedTestSection()
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo#getBody()
+	 * @see #getVSVSTestInfo()
 	 * @generated
 	 */
-	EReference getVSVSFixedTestSection_Body();
+	EReference getVSVSTestInfo_Body();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestCases <em>VSVS Test Cases</em>}'.
@@ -5968,48 +5960,6 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = eINSTANCE.getVSVSTestingSpecificationDesign_TestDesigns();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
-		 * @generated
-		 */
-		EClass VSVS_TEST_DESIGN = eINSTANCE.getVSVSTestDesign();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_TEST_DESIGN__NAME = eINSTANCE.getVSVSTestDesign_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>General</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TEST_DESIGN__GENERAL = eINSTANCE.getVSVSTestDesign_General();
-
-		/**
-		 * The meta object literal for the '<em><b>Features To Be Tested</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = eINSTANCE.getVSVSTestDesign_FeaturesToBeTested();
-
-		/**
-		 * The meta object literal for the '<em><b>Approach Refinements</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = eINSTANCE.getVSVSTestDesign_ApproachRefinements();
-
-		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -6062,14 +6012,56 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_SCENARIO_SECTION__BODY = eINSTANCE.getVSVSScenarioSection_Body();
 
 		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl <em>VSVS Fixed Test Section</em>}' class.
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedTestSection()
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
 		 * @generated
 		 */
-		EClass VSVS_FIXED_TEST_SECTION = eINSTANCE.getVSVSFixedTestSection();
+		EClass VSVS_TEST_DESIGN = eINSTANCE.getVSVSTestDesign();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VSVS_TEST_DESIGN__NAME = eINSTANCE.getVSVSTestDesign_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>General</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TEST_DESIGN__GENERAL = eINSTANCE.getVSVSTestDesign_General();
+
+		/**
+		 * The meta object literal for the '<em><b>Features To Be Tested</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TEST_DESIGN__FEATURES_TO_BE_TESTED = eINSTANCE.getVSVSTestDesign_FeaturesToBeTested();
+
+		/**
+		 * The meta object literal for the '<em><b>Approach Refinements</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_TEST_DESIGN__APPROACH_REFINEMENTS = eINSTANCE.getVSVSTestDesign_ApproachRefinements();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestInfoImpl <em>VSVS Test Info</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestInfoImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestInfo()
+		 * @generated
+		 */
+		EClass VSVS_TEST_INFO = eINSTANCE.getVSVSTestInfo();
 
 		/**
 		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
@@ -6077,7 +6069,7 @@ public interface svsPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_FIXED_TEST_SECTION__BODY = eINSTANCE.getVSVSFixedTestSection_Body();
+		EReference VSVS_TEST_INFO__BODY = eINSTANCE.getVSVSTestInfo_Body();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestCasesImpl <em>VSVS Test Cases</em>}' class.

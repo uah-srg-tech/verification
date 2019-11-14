@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>VSSS General Description</b></em>'.
@@ -30,7 +32,7 @@ package es.uah.aut.srg.micobs.svm.sss;
  * @model
  * @generated
  */
-public interface VSSSGeneralDescription extends es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection {
+public interface VSSSGeneralDescription extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Product Perspective</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

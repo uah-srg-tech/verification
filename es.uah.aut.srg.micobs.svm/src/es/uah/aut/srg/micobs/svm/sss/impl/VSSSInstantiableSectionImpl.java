@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
 
@@ -40,7 +42,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl implements VSSSInstantiableSection {
+public class VSSSInstantiableSectionImpl extends DInstantiableSectionImpl implements VSSSInstantiableSection {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -49,7 +51,7 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody body;
+	protected DBody body;
 
 	/**
 	 * The cached value of the '{@link #getSssInstatiableSubsections() <em>Sss Instatiable Subsections</em>}' containment reference list.
@@ -85,7 +87,7 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody() {
+	public DBody getBody() {
 		return body;
 	}
 
@@ -94,8 +96,8 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldBody = body;
+	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
+		DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_INSTANTIABLE_SECTION__BODY, oldBody, newBody);
@@ -109,7 +111,7 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody) {
+	public void setBody(DBody newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
@@ -177,7 +179,7 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
-				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setBody((DBody)newValue);
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();
@@ -196,7 +198,7 @@ public class VSSSInstantiableSectionImpl extends es.uah.aut.srg.micobs.doctpl.do
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_INSTANTIABLE_SECTION__BODY:
-				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setBody((DBody)null);
 				return;
 			case sssPackage.VSSS_INSTANTIABLE_SECTION__SSS_INSTATIABLE_SUBSECTIONS:
 				getSssInstatiableSubsections().clear();

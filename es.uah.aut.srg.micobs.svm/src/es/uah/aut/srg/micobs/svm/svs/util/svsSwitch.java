@@ -11,10 +11,12 @@
 package es.uah.aut.srg.micobs.svm.svs.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
+
 import es.uah.aut.srg.micobs.svm.svs.*;
 
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
@@ -217,11 +219,9 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case svsPackage.VSVS_FIXED_TEST_SECTION: {
-				VSVSFixedTestSection vsvsFixedTestSection = (VSVSFixedTestSection)theEObject;
-				T result = caseVSVSFixedTestSection(vsvsFixedTestSection);
-				if (result == null) result = caseDFixedSection(vsvsFixedTestSection);
-				if (result == null) result = caseDAbstractSection(vsvsFixedTestSection);
+			case svsPackage.VSVS_TEST_INFO: {
+				VSVSTestInfo vsvsTestInfo = (VSVSTestInfo)theEObject;
+				T result = caseVSVSTestInfo(vsvsTestInfo);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -630,21 +630,6 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVS Test Design</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVS Test Design</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSVSTestDesign(VSVSTestDesign object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSVS Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -675,17 +660,32 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVS Fixed Test Section</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Test Design</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVS Fixed Test Section</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Test Design</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSVSFixedTestSection(VSVSFixedTestSection object) {
+	public T caseVSVSTestDesign(VSVSTestDesign object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Test Info</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Test Info</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSTestInfo(VSVSTestInfo object) {
 		return null;
 	}
 

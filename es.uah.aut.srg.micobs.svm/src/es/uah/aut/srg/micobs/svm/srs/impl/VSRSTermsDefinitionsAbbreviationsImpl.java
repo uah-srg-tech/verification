@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAbbreviation;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDefinition;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
@@ -44,7 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSTermsDefinitionsAbbreviationsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSTermsDefinitionsAbbreviations {
+public class VSRSTermsDefinitionsAbbreviationsImpl extends DFixedSectionImpl implements VSRSTermsDefinitionsAbbreviations {
 	/**
 	 * The cached value of the '{@link #getTerms() <em>Terms</em>}' containment reference list.
 	 * <!-- begin-user-doc -->

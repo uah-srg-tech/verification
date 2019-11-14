@@ -48,6 +48,7 @@ enum DAlignment returns doctpl::DAlignment:
 
 DParagraph returns doctpl::DParagraph:
 	'<paragraph'
+		('name=' name=STRING)?
 		('style=' style=STRING)?
 		('alignment=' alignment=DAlignment)?
 		'>'
@@ -65,6 +66,7 @@ DListContent returns doctpl::DListContent:
 
 DItemize returns doctpl::DItemize:
 	'<itemize'
+		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
 		'>'
@@ -73,6 +75,7 @@ DItemize returns doctpl::DItemize:
 
 DEnumerate returns doctpl::DEnumerate:
 	'<enumerate'
+		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
 		'>'
@@ -181,8 +184,8 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('date=' date=STRING)?
 	'/>';
 
-VSVSFixedTestSection returns VSVSFixedTestSection:
-{VSVSFixedTestSection}
+VSVSTestInfo returns VSVSTestInfo:
+{VSVSTestInfo}
 	(body=DBody)?;
 
 VSVSFixedSection returns VSVSFixedSection:
@@ -322,13 +325,13 @@ VSVSTestCase returns VSVSTestCase:
 	'<TestCase'
 		'name=' name=STRING
 		'>'
-		'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
-		'<Inputs>' inputs=VSVSFixedTestSection '</Inputs>'
-		'<Outputs>' outputs=VSVSFixedTestSection '</Outputs>'
-		'<PassFailCriteria>' passFailCriteria=VSVSFixedTestSection '</PassFailCriteria>'
-		'<EnvironmentalNeeds>' environmentalNeeds=VSVSFixedTestSection '</EnvironmentalNeeds>'
-		'<SpecialConstraints>' specialConstraints=VSVSFixedTestSection '</SpecialConstraints>'
-		'<InterfaceDependencies>' interfaceDependencies=VSVSFixedTestSection '</InterfaceDependencies>'
+		'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
+		'<Inputs>' inputs=VSVSTestInfo '</Inputs>'
+		'<Outputs>' outputs=VSVSTestInfo '</Outputs>'
+		'<PassFailCriteria>' passFailCriteria=VSVSTestInfo '</PassFailCriteria>'
+		'<EnvironmentalNeeds>' environmentalNeeds=VSVSTestInfo '</EnvironmentalNeeds>'
+		'<SpecialConstraints>' specialConstraints=VSVSTestInfo '</SpecialConstraints>'
+		'<InterfaceDependencies>' interfaceDependencies=VSVSTestInfo '</InterfaceDependencies>'
 		('<ValidatingItem' 'name=' validatingItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+
 	'</TestCase>';
 
@@ -336,12 +339,12 @@ VSVSTestProcedure returns VSVSTestProcedure:
 	'<TestProcedure'
 		'name=' name=STRING
 		'>'
-		'<Identifier>' identifier=VSVSFixedTestSection '</Identifier>'
-		'<Purpose>' purpose=VSVSFixedTestSection '</Purpose>'
+		'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
+		'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
 		('<Scenario' 'ref='scenario=[VSVSScenarioSection|STRING] '/>')?
 		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 		procedureSteps=VSVSProcedureSteps
-		'<TestScript>' testScript=VSVSFixedTestSection '</TestScript>'
+		'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
 	'</TestProcedure>';
 
 VSVSProcedureSteps returns VSVSProcedureSteps:

@@ -37,6 +37,7 @@ enum DAlignment returns doctpl::DAlignment:
 
 DParagraph returns doctpl::DParagraph:
 	'<paragraph'
+		('name=' name=STRING)?
 		('style=' style=STRING)?
 		('alignment=' alignment=DAlignment)?
 		'>'
@@ -54,6 +55,7 @@ DListContent returns doctpl::DListContent:
 
 DItemize returns doctpl::DItemize:
 	'<itemize'
+		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
 		'>'
@@ -62,6 +64,7 @@ DItemize returns doctpl::DItemize:
 
 DEnumerate returns doctpl::DEnumerate:
 	'<enumerate'
+		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
 		'>'

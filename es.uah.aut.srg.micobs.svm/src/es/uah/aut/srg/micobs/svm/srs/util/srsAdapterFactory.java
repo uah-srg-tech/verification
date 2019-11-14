@@ -11,6 +11,10 @@
 package es.uah.aut.srg.micobs.svm.srs.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.*;
 
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
@@ -227,15 +231,15 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createVTraceableDocumentAdapter();
 			}
 			@Override
-			public Adapter caseDDocumentTemplate(es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate object) {
+			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
 				return createDDocumentTemplateAdapter();
 			}
 			@Override
-			public Adapter caseDAbstractSection(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection object) {
+			public Adapter caseDAbstractSection(DAbstractSection object) {
 				return createDAbstractSectionAdapter();
 			}
 			@Override
-			public Adapter caseDFixedSection(es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection object) {
+			public Adapter caseDFixedSection(DFixedSection object) {
 				return createDFixedSectionAdapter();
 			}
 			@Override
@@ -243,7 +247,7 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createMCommonReferenceableObjAdapter();
 			}
 			@Override
-			public Adapter caseDInstantiableSection(es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection object) {
+			public Adapter caseDInstantiableSection(DInstantiableSection object) {
 				return createDInstantiableSectionAdapter();
 			}
 			@Override

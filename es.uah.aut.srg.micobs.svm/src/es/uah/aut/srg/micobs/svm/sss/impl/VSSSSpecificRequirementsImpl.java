@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements;
@@ -62,7 +64,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSSSSpecificRequirements {
+public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements VSSSSpecificRequirements {
 	/**
 	 * The cached value of the '{@link #getSectionDescription() <em>Section Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -71,7 +73,7 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
+	protected DBody sectionDescription;
 
 	/**
 	 * The cached value of the '{@link #getGeneral() <em>General</em>}' containment reference.
@@ -227,7 +229,7 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
+	public DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -236,8 +238,8 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -251,7 +253,7 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
+	public void setSectionDescription(DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -913,7 +915,7 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setSectionDescription((DBody)newValue);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				setGeneral((VSSSGeneralRequirements)newValue);
@@ -967,7 +969,7 @@ public class VSSSSpecificRequirementsImpl extends es.uah.aut.srg.micobs.doctpl.d
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setSectionDescription((DBody)null);
 				return;
 			case sssPackage.VSSS_SPECIFIC_REQUIREMENTS__GENERAL:
 				setGeneral((VSSSGeneralRequirements)null);

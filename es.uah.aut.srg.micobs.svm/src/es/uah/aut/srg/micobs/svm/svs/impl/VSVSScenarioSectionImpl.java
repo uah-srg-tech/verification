@@ -10,18 +10,19 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
@@ -49,6 +50,7 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -58,6 +60,7 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -67,6 +70,7 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -76,6 +80,7 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -299,11 +304,5 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 		result.append(')');
 		return result.toString();
 	}
-
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
-	}
-
 
 } //VSVSScenarioSectionImpl

@@ -314,7 +314,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DEnumerate returns DEnumerate
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DEnumerate(ISerializationContext context, DEnumerate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -362,7 +362,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DItemize returns DItemize
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
 	 */
 	protected void sequence_DItemize(ISerializationContext context, DItemize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -387,7 +387,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DParagraph returns DParagraph
 	 *
 	 * Constraint:
-	 *     (alignment=DAlignment? style=STRING? paragraphContent+=DParagraphContent+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? paragraphContent+=DParagraphContent+)
 	 */
 	protected void sequence_DParagraph(ISerializationContext context, DParagraph semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

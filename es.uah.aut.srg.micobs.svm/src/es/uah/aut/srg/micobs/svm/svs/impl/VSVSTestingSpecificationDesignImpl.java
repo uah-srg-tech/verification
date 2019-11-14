@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
@@ -22,7 +22,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -292,18 +292,6 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 				return testDesigns != null && !testDesigns.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-	
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getGeneral());
-		subsections.add((DAbstractSection) getScenarios());
-		
-		for(DAbstractSection procedure : getTestDesigns()) {
-			subsections.add(procedure);
-		}
-		return subsections;
 	}
 
 } //VSVSTestingSpecificationDesignImpl

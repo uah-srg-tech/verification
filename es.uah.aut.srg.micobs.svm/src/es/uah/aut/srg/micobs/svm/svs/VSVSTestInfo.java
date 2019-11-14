@@ -11,25 +11,26 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+
+import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSVS Fixed Test Section</b></em>'.
+ * A representation of the model object '<em><b>VSVS Test Info</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo#getBody <em>Body</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSFixedTestSection()
+ * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestInfo()
  * @model
  * @generated
  */
-public interface VSVSFixedTestSection extends DFixedSection {
+public interface VSVSTestInfo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -40,14 +41,14 @@ public interface VSVSFixedTestSection extends DFixedSection {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Body</em>' containment reference.
 	 * @see #setBody(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSFixedTestSection_Body()
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestInfo_Body()
 	 * @model containment="true"
 	 * @generated
 	 */
 	DBody getBody();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection#getBody <em>Body</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo#getBody <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Body</em>' containment reference.
@@ -56,4 +57,4 @@ public interface VSVSFixedTestSection extends DFixedSection {
 	 */
 	void setBody(DBody value);
 
-} // VSVSFixedTestSection
+} // VSVSTestInfo

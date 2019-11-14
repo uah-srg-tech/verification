@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 
@@ -39,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSReferenceDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSReferenceDocuments {
+public class VSRSReferenceDocumentsImpl extends DFixedSectionImpl implements VSRSReferenceDocuments {
 	/**
 	 * The cached value of the '{@link #getReferenceDocuments() <em>Reference Documents</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -48,7 +50,7 @@ public class VSRSReferenceDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doc
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument> referenceDocuments;
+	protected EList<DReferenceDocument> referenceDocuments;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -74,9 +76,9 @@ public class VSRSReferenceDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument> getReferenceDocuments() {
+	public EList<DReferenceDocument> getReferenceDocuments() {
 		if (referenceDocuments == null) {
-			referenceDocuments = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>(es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument.class, this, srsPackage.VSRS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
+			referenceDocuments = new EObjectContainmentEList<DReferenceDocument>(DReferenceDocument.class, this, srsPackage.VSRS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS);
 		}
 		return referenceDocuments;
 	}
@@ -120,7 +122,7 @@ public class VSRSReferenceDocumentsImpl extends es.uah.aut.srg.micobs.doctpl.doc
 		switch (featureID) {
 			case srsPackage.VSRS_REFERENCE_DOCUMENTS__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);

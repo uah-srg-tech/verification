@@ -10,6 +10,9 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 
 import org.eclipse.emf.common.util.EList;
@@ -39,7 +42,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface VSSSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate {
+public interface VSSSDocument extends VTraceableDocument, DDocumentTemplate {
 	/**
 	 * Returns the value of the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
@@ -262,7 +265,7 @@ public interface VSSSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSssFigures();
+	EList<DAbstractFigure> getSssFigures();
 
 	/**
 	 * Returns the value of the '<em><b>Sss Tables</b></em>' containment reference list.
@@ -278,6 +281,6 @@ public interface VSSSDocument extends VTraceableDocument, es.uah.aut.srg.micobs.
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSssTables();
+	EList<DAbstractTable> getSssTables();
 
 } // VSSSDocument

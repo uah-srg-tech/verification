@@ -10,16 +10,17 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -155,11 +156,6 @@ public class VSVSReferenceDocumentsImpl extends DFixedSectionImpl implements VSV
 				return referenceDocuments != null && !referenceDocuments.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-	
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
 	}
 
 } //VSVSReferenceDocumentsImpl

@@ -10,8 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbbreviation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDefinition;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTerm;
@@ -21,7 +21,7 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -229,11 +229,6 @@ public class VSVSTermsDefinitionsAbbreviationsImpl extends DFixedSectionImpl imp
 				return abbreviations != null && !abbreviations.isEmpty();
 		}
 		return super.eIsSet(featureID);
-	}
-	
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
 	}
 
 } //VSVSTermsDefinitionsAbbreviationsImpl

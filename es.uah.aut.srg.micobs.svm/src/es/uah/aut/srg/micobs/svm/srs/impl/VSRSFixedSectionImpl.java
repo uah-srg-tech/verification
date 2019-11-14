@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -44,7 +46,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl implements VSRSFixedSection {
+public class VSRSFixedSectionImpl extends DFixedSectionImpl implements VSRSFixedSection {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -53,7 +55,7 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody body;
+	protected DBody body;
 
 	/**
 	 * The cached value of the '{@link #getSrsInstatiableSubsections() <em>Srs Instatiable Subsections</em>}' containment reference list.
@@ -89,7 +91,7 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getBody() {
+	public DBody getBody() {
 		return body;
 	}
 
@@ -98,8 +100,8 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldBody = body;
+	public NotificationChain basicSetBody(DBody newBody, NotificationChain msgs) {
+		DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_FIXED_SECTION__BODY, oldBody, newBody);
@@ -113,7 +115,7 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setBody(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newBody) {
+	public void setBody(DBody newBody) {
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
@@ -181,7 +183,7 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case srsPackage.VSRS_FIXED_SECTION__BODY:
-				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setBody((DBody)newValue);
 				return;
 			case srsPackage.VSRS_FIXED_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
 				getSrsInstatiableSubsections().clear();
@@ -200,7 +202,7 @@ public class VSRSFixedSectionImpl extends es.uah.aut.srg.micobs.doctpl.doctpl.im
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case srsPackage.VSRS_FIXED_SECTION__BODY:
-				setBody((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setBody((DBody)null);
 				return;
 			case srsPackage.VSRS_FIXED_SECTION__SRS_INSTATIABLE_SUBSECTIONS:
 				getSrsInstatiableSubsections().clear();

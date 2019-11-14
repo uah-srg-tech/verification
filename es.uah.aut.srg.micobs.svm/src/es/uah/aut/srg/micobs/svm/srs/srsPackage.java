@@ -124,7 +124,7 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT__DATE = tdmPackage.VTRACEABLE_DOCUMENT__DATE;
 
 	/**
-	 * The feature id for the '<em><b>Parents</b></em>' reference list.
+	 * The feature id for the '<em><b>Parents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

@@ -11,10 +11,12 @@
 package es.uah.aut.srg.micobs.svm.svs.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
+
 import es.uah.aut.srg.micobs.svm.svs.*;
 
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
@@ -154,8 +156,8 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSTestDesignAdapter();
 			}
 			@Override
-			public Adapter caseVSVSFixedTestSection(VSVSFixedTestSection object) {
-				return createVSVSFixedTestSectionAdapter();
+			public Adapter caseVSVSTestInfo(VSVSTestInfo object) {
+				return createVSVSTestInfoAdapter();
 			}
 			@Override
 			public Adapter caseVSVSTestCases(VSVSTestCases object) {
@@ -518,20 +520,6 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign <em>VSVS Test Design</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign
-	 * @generated
-	 */
-	public Adapter createVSVSTestDesignAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -560,16 +548,30 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection <em>VSVS Fixed Test Section</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign <em>VSVS Test Design</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign
 	 * @generated
 	 */
-	public Adapter createVSVSFixedTestSectionAdapter() {
+	public Adapter createVSVSTestDesignAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo <em>VSVS Test Info</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo
+	 * @generated
+	 */
+	public Adapter createVSVSTestInfoAdapter() {
 		return null;
 	}
 

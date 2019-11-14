@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
@@ -158,7 +159,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> sssFigures;
+	protected EList<DAbstractFigure> sssFigures;
 
 	/**
 	 * The cached value of the '{@link #getSssTables() <em>Sss Tables</em>}' containment reference list.
@@ -168,7 +169,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> sssTables;
+	protected EList<DAbstractTable> sssTables;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -614,9 +615,9 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure> getSssFigures() {
+	public EList<DAbstractFigure> getSssFigures() {
 		if (sssFigures == null) {
-			sssFigures = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure.class, this, sssPackage.VSSS_DOCUMENT__SSS_FIGURES);
+			sssFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, sssPackage.VSSS_DOCUMENT__SSS_FIGURES);
 		}
 		return sssFigures;
 	}
@@ -626,9 +627,9 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable> getSssTables() {
+	public EList<DAbstractTable> getSssTables() {
 		if (sssTables == null) {
-			sssTables = new EObjectContainmentEList<es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>(es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable.class, this, sssPackage.VSSS_DOCUMENT__SSS_TABLES);
+			sssTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, sssPackage.VSSS_DOCUMENT__SSS_TABLES);
 		}
 		return sssTables;
 	}
@@ -718,23 +719,23 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 		switch (featureID) {
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
-				getApplicableDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument>)newValue);
+				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS:
 				getReferenceDocuments().clear();
-				getReferenceDocuments().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument>)newValue);
+				getReferenceDocuments().addAll((Collection<? extends DReferenceDocument>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__FIGURES:
 				getFigures().clear();
-				getFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__TABLES:
 				getTables().clear();
-				getTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__SECTIONS:
 				getSections().clear();
-				getSections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSSSIntroduction)newValue);
@@ -762,11 +763,11 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return;
 			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
 				getSssFigures().clear();
-				getSssFigures().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure>)newValue);
+				getSssFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
 				return;
 			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
 				getSssTables().clear();
-				getSssTables().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable>)newValue);
+				getSssTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -878,7 +879,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
+		if (baseClass == DDocumentTemplate.class) {
 			switch (derivedFeatureID) {
 				case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
 				case sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
@@ -898,7 +899,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate.class) {
+		if (baseClass == DDocumentTemplate.class) {
 			switch (baseFeatureID) {
 				case doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS;
 				case doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return sssPackage.VSSS_DOCUMENT__REFERENCE_DOCUMENTS;

@@ -10,35 +10,34 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
+
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
-import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Fixed Test Section</b></em>'.
+ * An implementation of the model object '<em><b>VSVS Test Info</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSFixedTestSectionImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestInfoImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSFixedTestSection {
+public class VSVSTestInfoImpl extends MinimalEObjectImpl.Container implements VSVSTestInfo {
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -54,7 +53,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSFixedTestSectionImpl() {
+	protected VSVSTestInfoImpl() {
 		super();
 	}
 
@@ -65,7 +64,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_FIXED_TEST_SECTION;
+		return svsPackage.Literals.VSVS_TEST_INFO;
 	}
 
 	/**
@@ -86,7 +85,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 		DBody oldBody = body;
 		body = newBody;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_FIXED_TEST_SECTION__BODY, oldBody, newBody);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_INFO__BODY, oldBody, newBody);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -101,14 +100,14 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 		if (newBody != body) {
 			NotificationChain msgs = null;
 			if (body != null)
-				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_FIXED_TEST_SECTION__BODY, null, msgs);
+				msgs = ((InternalEObject)body).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TEST_INFO__BODY, null, msgs);
 			if (newBody != null)
-				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_FIXED_TEST_SECTION__BODY, null, msgs);
+				msgs = ((InternalEObject)newBody).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TEST_INFO__BODY, null, msgs);
 			msgs = basicSetBody(newBody, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_FIXED_TEST_SECTION__BODY, newBody, newBody));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_INFO__BODY, newBody, newBody));
 	}
 
 	/**
@@ -119,7 +118,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
+			case svsPackage.VSVS_TEST_INFO__BODY:
 				return basicSetBody(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -133,7 +132,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
+			case svsPackage.VSVS_TEST_INFO__BODY:
 				return getBody();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -147,7 +146,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
+			case svsPackage.VSVS_TEST_INFO__BODY:
 				setBody((DBody)newValue);
 				return;
 		}
@@ -162,7 +161,7 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
+			case svsPackage.VSVS_TEST_INFO__BODY:
 				setBody((DBody)null);
 				return;
 		}
@@ -177,14 +176,10 @@ public class VSVSFixedTestSectionImpl extends DFixedSectionImpl implements VSVSF
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_FIXED_TEST_SECTION__BODY:
+			case svsPackage.VSVS_TEST_INFO__BODY:
 				return body != null;
 		}
 		return super.eIsSet(featureID);
 	}
 
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
-	}
-} //VSVSFixedTestSectionImpl
+} //VSVSTestInfoImpl

@@ -13,17 +13,18 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
-import es.uah.aut.srg.micobs.svm.svs.VSVSFixedTestSection;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
+
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentAbstractItemImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -60,7 +61,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection identifier;
+	protected VSVSTestInfo identifier;
 
 	/**
 	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
@@ -70,7 +71,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection inputs;
+	protected VSVSTestInfo inputs;
 
 	/**
 	 * The cached value of the '{@link #getOutputs() <em>Outputs</em>}' containment reference.
@@ -80,7 +81,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection outputs;
+	protected VSVSTestInfo outputs;
 
 	/**
 	 * The cached value of the '{@link #getPassFailCriteria() <em>Pass Fail Criteria</em>}' containment reference.
@@ -90,7 +91,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection passFailCriteria;
+	protected VSVSTestInfo passFailCriteria;
 
 	/**
 	 * The cached value of the '{@link #getEnvironmentalNeeds() <em>Environmental Needs</em>}' containment reference.
@@ -100,7 +101,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection environmentalNeeds;
+	protected VSVSTestInfo environmentalNeeds;
 
 	/**
 	 * The cached value of the '{@link #getSpecialConstraints() <em>Special Constraints</em>}' containment reference.
@@ -110,7 +111,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection specialConstraints;
+	protected VSVSTestInfo specialConstraints;
 
 	/**
 	 * The cached value of the '{@link #getInterfaceDependencies() <em>Interface Dependencies</em>}' containment reference.
@@ -120,7 +121,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSFixedTestSection interfaceDependencies;
+	protected VSVSTestInfo interfaceDependencies;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -141,17 +142,17 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 		return svsPackage.Literals.VSVS_TEST_CASE;
 	}
 
-	@Override
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subections = new BasicEList<DAbstractSection>();
-		subections.add((DAbstractSection) getIdentifier());
-		subections.add((DAbstractSection) getInputs());
-		subections.add((DAbstractSection) getOutputs());
-		subections.add((DAbstractSection) getPassFailCriteria());
-		subections.add((DAbstractSection) getEnvironmentalNeeds());
-		subections.add((DAbstractSection) getSpecialConstraints());
-		subections.add((DAbstractSection) getInterfaceDependencies());
-		return subections;
+		// TODO: implement this method to return the 'Subsections' reference list
+		// Ensure that you remove @generated or mark it @generated NOT
+		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
+		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
+		throw new UnsupportedOperationException();
 	}
 
 	/**
@@ -159,7 +160,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getIdentifier() {
+	public VSVSTestInfo getIdentifier() {
 		return identifier;
 	}
 
@@ -168,8 +169,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetIdentifier(VSVSFixedTestSection newIdentifier, NotificationChain msgs) {
-		VSVSFixedTestSection oldIdentifier = identifier;
+	public NotificationChain basicSetIdentifier(VSVSTestInfo newIdentifier, NotificationChain msgs) {
+		VSVSTestInfo oldIdentifier = identifier;
 		identifier = newIdentifier;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__IDENTIFIER, oldIdentifier, newIdentifier);
@@ -183,7 +184,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIdentifier(VSVSFixedTestSection newIdentifier) {
+	public void setIdentifier(VSVSTestInfo newIdentifier) {
 		if (newIdentifier != identifier) {
 			NotificationChain msgs = null;
 			if (identifier != null)
@@ -202,7 +203,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getInputs() {
+	public VSVSTestInfo getInputs() {
 		return inputs;
 	}
 
@@ -211,8 +212,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInputs(VSVSFixedTestSection newInputs, NotificationChain msgs) {
-		VSVSFixedTestSection oldInputs = inputs;
+	public NotificationChain basicSetInputs(VSVSTestInfo newInputs, NotificationChain msgs) {
+		VSVSTestInfo oldInputs = inputs;
 		inputs = newInputs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__INPUTS, oldInputs, newInputs);
@@ -226,7 +227,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputs(VSVSFixedTestSection newInputs) {
+	public void setInputs(VSVSTestInfo newInputs) {
 		if (newInputs != inputs) {
 			NotificationChain msgs = null;
 			if (inputs != null)
@@ -245,7 +246,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getOutputs() {
+	public VSVSTestInfo getOutputs() {
 		return outputs;
 	}
 
@@ -254,8 +255,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetOutputs(VSVSFixedTestSection newOutputs, NotificationChain msgs) {
-		VSVSFixedTestSection oldOutputs = outputs;
+	public NotificationChain basicSetOutputs(VSVSTestInfo newOutputs, NotificationChain msgs) {
+		VSVSTestInfo oldOutputs = outputs;
 		outputs = newOutputs;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__OUTPUTS, oldOutputs, newOutputs);
@@ -269,7 +270,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutputs(VSVSFixedTestSection newOutputs) {
+	public void setOutputs(VSVSTestInfo newOutputs) {
 		if (newOutputs != outputs) {
 			NotificationChain msgs = null;
 			if (outputs != null)
@@ -288,7 +289,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getPassFailCriteria() {
+	public VSVSTestInfo getPassFailCriteria() {
 		return passFailCriteria;
 	}
 
@@ -297,8 +298,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetPassFailCriteria(VSVSFixedTestSection newPassFailCriteria, NotificationChain msgs) {
-		VSVSFixedTestSection oldPassFailCriteria = passFailCriteria;
+	public NotificationChain basicSetPassFailCriteria(VSVSTestInfo newPassFailCriteria, NotificationChain msgs) {
+		VSVSTestInfo oldPassFailCriteria = passFailCriteria;
 		passFailCriteria = newPassFailCriteria;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__PASS_FAIL_CRITERIA, oldPassFailCriteria, newPassFailCriteria);
@@ -312,7 +313,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPassFailCriteria(VSVSFixedTestSection newPassFailCriteria) {
+	public void setPassFailCriteria(VSVSTestInfo newPassFailCriteria) {
 		if (newPassFailCriteria != passFailCriteria) {
 			NotificationChain msgs = null;
 			if (passFailCriteria != null)
@@ -331,7 +332,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getEnvironmentalNeeds() {
+	public VSVSTestInfo getEnvironmentalNeeds() {
 		return environmentalNeeds;
 	}
 
@@ -340,8 +341,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetEnvironmentalNeeds(VSVSFixedTestSection newEnvironmentalNeeds, NotificationChain msgs) {
-		VSVSFixedTestSection oldEnvironmentalNeeds = environmentalNeeds;
+	public NotificationChain basicSetEnvironmentalNeeds(VSVSTestInfo newEnvironmentalNeeds, NotificationChain msgs) {
+		VSVSTestInfo oldEnvironmentalNeeds = environmentalNeeds;
 		environmentalNeeds = newEnvironmentalNeeds;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__ENVIRONMENTAL_NEEDS, oldEnvironmentalNeeds, newEnvironmentalNeeds);
@@ -355,7 +356,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEnvironmentalNeeds(VSVSFixedTestSection newEnvironmentalNeeds) {
+	public void setEnvironmentalNeeds(VSVSTestInfo newEnvironmentalNeeds) {
 		if (newEnvironmentalNeeds != environmentalNeeds) {
 			NotificationChain msgs = null;
 			if (environmentalNeeds != null)
@@ -374,7 +375,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getSpecialConstraints() {
+	public VSVSTestInfo getSpecialConstraints() {
 		return specialConstraints;
 	}
 
@@ -383,8 +384,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSpecialConstraints(VSVSFixedTestSection newSpecialConstraints, NotificationChain msgs) {
-		VSVSFixedTestSection oldSpecialConstraints = specialConstraints;
+	public NotificationChain basicSetSpecialConstraints(VSVSTestInfo newSpecialConstraints, NotificationChain msgs) {
+		VSVSTestInfo oldSpecialConstraints = specialConstraints;
 		specialConstraints = newSpecialConstraints;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__SPECIAL_CONSTRAINTS, oldSpecialConstraints, newSpecialConstraints);
@@ -398,7 +399,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSpecialConstraints(VSVSFixedTestSection newSpecialConstraints) {
+	public void setSpecialConstraints(VSVSTestInfo newSpecialConstraints) {
 		if (newSpecialConstraints != specialConstraints) {
 			NotificationChain msgs = null;
 			if (specialConstraints != null)
@@ -417,7 +418,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSFixedTestSection getInterfaceDependencies() {
+	public VSVSTestInfo getInterfaceDependencies() {
 		return interfaceDependencies;
 	}
 
@@ -426,8 +427,8 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInterfaceDependencies(VSVSFixedTestSection newInterfaceDependencies, NotificationChain msgs) {
-		VSVSFixedTestSection oldInterfaceDependencies = interfaceDependencies;
+	public NotificationChain basicSetInterfaceDependencies(VSVSTestInfo newInterfaceDependencies, NotificationChain msgs) {
+		VSVSTestInfo oldInterfaceDependencies = interfaceDependencies;
 		interfaceDependencies = newInterfaceDependencies;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_CASE__INTERFACE_DEPENDENCIES, oldInterfaceDependencies, newInterfaceDependencies);
@@ -441,7 +442,7 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInterfaceDependencies(VSVSFixedTestSection newInterfaceDependencies) {
+	public void setInterfaceDependencies(VSVSTestInfo newInterfaceDependencies) {
 		if (newInterfaceDependencies != interfaceDependencies) {
 			NotificationChain msgs = null;
 			if (interfaceDependencies != null)
@@ -523,25 +524,25 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__IDENTIFIER:
-				setIdentifier((VSVSFixedTestSection)newValue);
+				setIdentifier((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__INPUTS:
-				setInputs((VSVSFixedTestSection)newValue);
+				setInputs((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__OUTPUTS:
-				setOutputs((VSVSFixedTestSection)newValue);
+				setOutputs((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__PASS_FAIL_CRITERIA:
-				setPassFailCriteria((VSVSFixedTestSection)newValue);
+				setPassFailCriteria((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__ENVIRONMENTAL_NEEDS:
-				setEnvironmentalNeeds((VSVSFixedTestSection)newValue);
+				setEnvironmentalNeeds((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__SPECIAL_CONSTRAINTS:
-				setSpecialConstraints((VSVSFixedTestSection)newValue);
+				setSpecialConstraints((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_CASE__INTERFACE_DEPENDENCIES:
-				setInterfaceDependencies((VSVSFixedTestSection)newValue);
+				setInterfaceDependencies((VSVSTestInfo)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -559,25 +560,25 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 				getSubsections().clear();
 				return;
 			case svsPackage.VSVS_TEST_CASE__IDENTIFIER:
-				setIdentifier((VSVSFixedTestSection)null);
+				setIdentifier((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__INPUTS:
-				setInputs((VSVSFixedTestSection)null);
+				setInputs((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__OUTPUTS:
-				setOutputs((VSVSFixedTestSection)null);
+				setOutputs((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__PASS_FAIL_CRITERIA:
-				setPassFailCriteria((VSVSFixedTestSection)null);
+				setPassFailCriteria((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__ENVIRONMENTAL_NEEDS:
-				setEnvironmentalNeeds((VSVSFixedTestSection)null);
+				setEnvironmentalNeeds((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__SPECIAL_CONSTRAINTS:
-				setSpecialConstraints((VSVSFixedTestSection)null);
+				setSpecialConstraints((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_CASE__INTERFACE_DEPENDENCIES:
-				setInterfaceDependencies((VSVSFixedTestSection)null);
+				setInterfaceDependencies((VSVSTestInfo)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -651,11 +652,6 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-	}
-	
-	@Override
-	public VValidationDocumentAbstractGroup basicGetGroup() {
-		return (VValidationDocumentAbstractGroup)eContainer();
 	}
 
 } //VSVSTestCaseImpl

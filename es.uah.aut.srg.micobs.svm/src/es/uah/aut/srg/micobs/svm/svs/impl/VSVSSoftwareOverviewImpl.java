@@ -10,11 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-import org.eclipse.emf.common.util.BasicEList;
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -43,15 +40,6 @@ public class VSVSSoftwareOverviewImpl extends VSVSFixedSectionImpl implements VS
 	@Override
 	protected EClass eStaticClass() {
 		return svsPackage.Literals.VSVS_SOFTWARE_OVERVIEW;
-	}
-
-	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		
-		for(DAbstractSection subsection : getSvsInstatiableSubsections()) {
-			subsections.add(subsection);
-		}
-		return subsections;
 	}
 
 } //VSVSSoftwareOverviewImpl

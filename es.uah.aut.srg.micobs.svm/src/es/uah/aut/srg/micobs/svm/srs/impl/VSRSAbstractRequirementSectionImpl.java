@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
@@ -61,7 +63,7 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 * @generated
 	 * @ordered
 	 */
-	protected es.uah.aut.srg.micobs.doctpl.doctpl.DBody sectionDescription;
+	protected DBody sectionDescription;
 
 	/**
 	 * The cached value of the '{@link #getSrsItems() <em>Srs Items</em>}' containment reference list.
@@ -107,7 +109,7 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public es.uah.aut.srg.micobs.doctpl.doctpl.DBody getSectionDescription() {
+	public DBody getSectionDescription() {
 		return sectionDescription;
 	}
 
@@ -116,8 +118,8 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription, NotificationChain msgs) {
-		es.uah.aut.srg.micobs.doctpl.doctpl.DBody oldSectionDescription = sectionDescription;
+	public NotificationChain basicSetSectionDescription(DBody newSectionDescription, NotificationChain msgs) {
+		DBody oldSectionDescription = sectionDescription;
 		sectionDescription = newSectionDescription;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION, oldSectionDescription, newSectionDescription);
@@ -131,7 +133,7 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSectionDescription(es.uah.aut.srg.micobs.doctpl.doctpl.DBody newSectionDescription) {
+	public void setSectionDescription(DBody newSectionDescription) {
 		if (newSectionDescription != sectionDescription) {
 			NotificationChain msgs = null;
 			if (sectionDescription != null)
@@ -218,10 +220,10 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 		switch (featureID) {
 			case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS:
 				getSubsections().clear();
-				getSubsections().addAll((Collection<? extends es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection>)newValue);
+				getSubsections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
 			case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)newValue);
+				setSectionDescription((DBody)newValue);
 				return;
 			case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_ITEMS:
 				getSrsItems().clear();
@@ -247,7 +249,7 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 				getSubsections().clear();
 				return;
 			case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SECTION_DESCRIPTION:
-				setSectionDescription((es.uah.aut.srg.micobs.doctpl.doctpl.DBody)null);
+				setSectionDescription((DBody)null);
 				return;
 			case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SRS_ITEMS:
 				getSrsItems().clear();
@@ -286,13 +288,13 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 */
 	@Override
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (derivedFeatureID) {
 				case srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS: return doctplPackage.DABSTRACT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection.class) {
+		if (baseClass == DFixedSection.class) {
 			switch (derivedFeatureID) {
 				default: return -1;
 			}
@@ -307,13 +309,13 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 	 */
 	@Override
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection.class) {
+		if (baseClass == DAbstractSection.class) {
 			switch (baseFeatureID) {
 				case doctplPackage.DABSTRACT_SECTION__SUBSECTIONS: return srsPackage.VSRS_ABSTRACT_REQUIREMENT_SECTION__SUBSECTIONS;
 				default: return -1;
 			}
 		}
-		if (baseClass == es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection.class) {
+		if (baseClass == DFixedSection.class) {
 			switch (baseFeatureID) {
 				default: return -1;
 			}
