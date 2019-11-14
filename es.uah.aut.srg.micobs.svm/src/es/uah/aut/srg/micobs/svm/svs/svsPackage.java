@@ -1641,13 +1641,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_PROCEDURE_STEPS = 22;
 
 	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
 	 * The feature id for the '<em><b>Step</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS__STEP = 0;
+	int VSVS_PROCEDURE_STEPS__STEP = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Procedure Steps</em>' class.
@@ -1656,7 +1665,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = 1;
+	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>VSVS Procedure Steps</em>' class.
@@ -1665,7 +1674,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS_OPERATION_COUNT = 0;
+	int VSVS_PROCEDURE_STEPS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl <em>VSVS Procedure Step</em>}' class.

@@ -164,7 +164,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="testCase" lowerBound="1"
         upperBound="-1" eType="#//VSVSTestCase"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureSteps">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureSteps" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="1900"
         eType="#//VSVSProcedureStep" containment="true"/>
   </eClassifiers>

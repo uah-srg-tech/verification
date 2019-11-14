@@ -14,7 +14,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
-
 import org.eclipse.emf.common.util.EList;
 
 /**

@@ -263,6 +263,8 @@ public class svsSwitch<T> extends Switch<T> {
 			case svsPackage.VSVS_PROCEDURE_STEPS: {
 				VSVSProcedureSteps vsvsProcedureSteps = (VSVSProcedureSteps)theEObject;
 				T result = caseVSVSProcedureSteps(vsvsProcedureSteps);
+				if (result == null) result = caseDFixedSection(vsvsProcedureSteps);
+				if (result == null) result = caseDAbstractSection(vsvsProcedureSteps);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}

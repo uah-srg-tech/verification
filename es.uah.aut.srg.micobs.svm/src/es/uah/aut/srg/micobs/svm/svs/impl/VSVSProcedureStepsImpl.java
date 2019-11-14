@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -17,14 +19,11 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
-
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -41,7 +40,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *
  * @generated
  */
-public class VSVSProcedureStepsImpl extends MinimalEObjectImpl.Container implements VSVSProcedureSteps {
+public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSProcedureSteps {
 	/**
 	 * The cached value of the '{@link #getStep() <em>Step</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
@@ -155,6 +154,11 @@ public class VSVSProcedureStepsImpl extends MinimalEObjectImpl.Container impleme
 				return step != null && !step.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSVSProcedureStepsImpl

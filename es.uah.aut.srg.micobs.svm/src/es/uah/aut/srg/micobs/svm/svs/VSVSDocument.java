@@ -15,7 +15,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
-
 import org.eclipse.emf.common.util.EList;
 
 /**

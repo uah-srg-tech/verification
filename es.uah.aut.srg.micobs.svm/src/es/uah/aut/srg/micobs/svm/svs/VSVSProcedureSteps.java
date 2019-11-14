@@ -10,9 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import org.eclipse.emf.common.util.EList;
-
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,7 +29,7 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface VSVSProcedureSteps extends EObject {
+public interface VSVSProcedureSteps extends DFixedSection {
 	/**
 	 * Returns the value of the '<em><b>Step</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep}.

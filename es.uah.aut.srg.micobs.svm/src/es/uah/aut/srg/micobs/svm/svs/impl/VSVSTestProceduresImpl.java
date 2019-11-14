@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
@@ -21,7 +22,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -225,6 +226,14 @@ public class VSVSTestProceduresImpl extends DFixedSectionImpl implements VSVSTes
 				return testProcedures != null && !testProcedures.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getGeneral());
+		subsections.add((DAbstractSection) getTestProcedures());
+		return subsections;
 	}
 
 } //VSVSTestProceduresImpl

@@ -2575,6 +2575,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		vsvsTestCaseEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestProceduresEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestProcedureEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
+		vsvsProcedureStepsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsStepInputLevel3EClass.getESuperTypes().add(this.getVSVSStepInput());
 		vsvsStepInputLevel2EClass.getESuperTypes().add(this.getVSVSStepInput());
 		vsvsStepInputLevel1EClass.getESuperTypes().add(this.getVSVSStepInput());

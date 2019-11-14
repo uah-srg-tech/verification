@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
@@ -21,7 +22,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -225,6 +226,11 @@ public class VSVSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 				return svsInstatiableSubsections != null && !svsInstatiableSubsections.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSVSInstantiableSectionImpl
