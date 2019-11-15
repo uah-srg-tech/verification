@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
@@ -20,7 +21,7 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -156,6 +157,11 @@ public class VSVSApplicableDocumentsImpl extends DFixedSectionImpl implements VS
 				return applicableDocuments != null && !applicableDocuments.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSVSApplicableDocumentsImpl

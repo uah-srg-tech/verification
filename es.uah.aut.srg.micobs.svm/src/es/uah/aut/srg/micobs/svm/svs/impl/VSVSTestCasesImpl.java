@@ -18,7 +18,8 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentFixedGroupImpl;
 
 import java.util.Collection;
@@ -89,14 +90,6 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 	@Override
 	protected EClass eStaticClass() {
 		return svsPackage.Literals.VSVS_TEST_CASES;
-	}
-
-	@Override
-	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		subsections.add((DAbstractSection) getGeneral());
-		subsections.add((DAbstractSection) getTestCases());
-		return subsections;
 	}
 
 	/**
@@ -293,5 +286,29 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
 	}
 
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getGeneral());
+		for(DFixedSection testCase : getTestCases()) {
+			subsections.add(testCase);
+		}
+		return subsections;
+	}
+
+	@Override
+	public EList<VValidationDocumentAbstractItem> getItems() {
+		EList<VValidationDocumentAbstractItem> items = new BasicEList<VValidationDocumentAbstractItem>();
+		
+		for(VValidationDocumentAbstractItem item : getTestCases()) {
+			items.add(item);
+		}
+		return items;
+	}
+
+	@Override
+	public VValidationDocument basicGetDoc() {
+		return (VValidationDocument)eContainer();
+	}
 
 } //VSVSTestCasesImpl

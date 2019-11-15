@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
@@ -300,7 +301,9 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
 		subsections.add((DAbstractSection) getScenarios());
-		subsections.add((DAbstractSection) getTestDesigns());
+		for(DFixedSection testDesign : getTestDesigns()) {
+			subsections.add(testDesign);
+		}
 		return subsections;
 	}
 

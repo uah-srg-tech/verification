@@ -17,7 +17,6 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
-
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
@@ -32,14 +31,14 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestPlatformRequirements;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.vdm.impl.VValidationDocumentImpl;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -240,69 +239,68 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		return svsPackage.Literals.VSVS_DOCUMENT;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
-		// TODO: implement this method to return the 'Applicable Documents' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
-	}
+		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+		for(DApplicableDocument appdoc : getApplicableDocumentsSection().getApplicableDocuments()) {
+			appdocs.add(appdoc);
+		}
+		return appdocs;
+	}
+	
+	@Override
 	public EList<DReferenceDocument> getReferenceDocuments() {
-		// TODO: implement this method to return the 'Reference Documents' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
+
+		for(DReferenceDocument refdoc : getReferenceDocumentsSection().getReferenceDocuments()) {
+			refdocs.add(refdoc);
+		}
+		return refdocs;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<DAbstractFigure> getFigures() {
-		// TODO: implement this method to return the 'Figures' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
+
+		for(DAbstractFigure figure : getSvsFigures()) {
+			figures.add(figure);
+		}
+		return figures;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<DAbstractTable> getTables() {
-		// TODO: implement this method to return the 'Tables' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
+
+		for(DAbstractTable table : getSvsTables()) {
+			tables.add(table);
+		}
+		return tables;
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
+	@Override
 	public EList<DAbstractSection> getSections() {
-		// TODO: implement this method to return the 'Sections' reference list
-		// Ensure that you remove @generated or mark it @generated NOT
-		// The list is expected to implement org.eclipse.emf.ecore.util.InternalEList and org.eclipse.emf.ecore.EStructuralFeature.Setting
-		// so it's likely that an appropriate subclass of org.eclipse.emf.ecore.util.EcoreEList should be used.
-		throw new UnsupportedOperationException();
+		EList<DAbstractSection> sections = new BasicEList<DAbstractSection>();
+		sections.add((DAbstractSection) getIntroductionSection());
+		sections.add((DAbstractSection) getApplicableDocumentsSection());
+		sections.add((DAbstractSection) getReferenceDocumentsSection());
+		sections.add((DAbstractSection) getTermsDefinitionsAbbreviationsSection());
+		sections.add((DAbstractSection) getSoftwareOverviewSection());
+		sections.add((DAbstractSection) getTaskIdentificationSection());
+		sections.add((DAbstractSection) getTestingSpecificationDesignSection());
+		sections.add((DAbstractSection) getTestCasesSection());
+		sections.add((DAbstractSection) getTestProceduresSection());
+		sections.add((DAbstractSection) getAnalysisInspectionReviewSection());
+		sections.add((DAbstractSection) getTestPlatformRequirementsSection());
+		sections.add((DAbstractSection) getAdditionalInformationSection());
+		return sections;
+	}
+	@Override
+	public EList<VValidationDocumentAbstractGroup> getGroups() {
+		EList<VValidationDocumentAbstractGroup> groups = new BasicEList<VValidationDocumentAbstractGroup>();
+		groups.add((VValidationDocumentAbstractGroup) getTestCasesSection());
+		return groups;
 	}
 
 	/**

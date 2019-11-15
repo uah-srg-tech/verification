@@ -10,6 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
@@ -19,7 +20,8 @@ import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
+import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -303,6 +305,11 @@ public class VSVSScenarioSectionImpl extends DFixedSectionImpl implements VSVSSc
 		result.append(id);
 		result.append(')');
 		return result.toString();
+	}
+	
+	@Override
+	public EList<DAbstractSection> getSubsections() {
+		return ECollections.emptyEList();
 	}
 
 } //VSVSScenarioSectionImpl

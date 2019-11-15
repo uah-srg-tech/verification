@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
@@ -232,7 +233,9 @@ public class VSVSTestProceduresImpl extends DFixedSectionImpl implements VSVSTes
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
-		subsections.add((DAbstractSection) getTestProcedures());
+		for(DFixedSection testProcedure : getTestProcedures()) {
+			subsections.add(testProcedure);
+		}
 		return subsections;
 	}
 
