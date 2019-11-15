@@ -49,8 +49,9 @@ enum DAlignment returns doctpl::DAlignment:
 DParagraph returns doctpl::DParagraph:
 	'<paragraph'
 		('name=' name=STRING)?
-		('style=' style=STRING)?
 		('alignment=' alignment=DAlignment)?
+		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		'>'
 		(paragraphContent+=DParagraphContent)+ 
 	'</paragraph>';
@@ -69,6 +70,7 @@ DItemize returns doctpl::DItemize:
 		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		'>'
 		(items+=DListItem)+ 
 	'</itemize>';
@@ -78,6 +80,7 @@ DEnumerate returns doctpl::DEnumerate:
 		('name=' name=STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		'>'
 		(items+=DListItem)+ 
 	'</enumerate>';
@@ -106,12 +109,12 @@ DHyperlink returns doctpl::DHyperlink:
 		(run=DRun)?
 	'</hyperlink>';
 	
+DText returns doctpl::DText:
+	content=RUNTEXT;
+	
 DTab returns doctpl::DTab:
 {doctpl::DTab}
     '<tab/>';
-	
-DText returns doctpl::DText:
-	content=RUNTEXT;
 
 terminal RUNTEXT returns ecore::EString:
     '<text>' -> '</text>';
@@ -124,6 +127,7 @@ DFigureFromFile returns doctpl::DFigureFromFile:
 		'height=' height=UINT_STRING
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		('caption=' caption=STRING)?
 	'/>';
 
@@ -135,6 +139,7 @@ DTableFromFile returns doctpl::DTableFromFile:
 		'height=' height=UINT_STRING
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		('caption=' caption=STRING)?
 	'/>';
 
@@ -144,6 +149,7 @@ DBasicTable returns doctpl::DBasicTable:
 		('width=' width=UINT_STRING)?
 		('alignment=' alignment=DAlignment)?
 		('style=' style=STRING)?
+		('indent=' indent=REAL_STRING)?
 		('caption=' caption=STRING)?
 	'>'
 		(rows+=DRow)+
@@ -640,3 +646,6 @@ INTEGER returns ecore::EString:
 	
 terminal UINT_STRING returns ecore::EString:
 	('"' ('0'..'9')+ '"');
+	
+terminal REAL_STRING returns ecore::EString:
+	('"' ('0'..'9')+ ('.' ('0'..'9')+)? '"');

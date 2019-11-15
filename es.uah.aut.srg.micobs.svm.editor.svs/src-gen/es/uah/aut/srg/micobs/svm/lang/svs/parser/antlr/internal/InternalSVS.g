@@ -654,15 +654,40 @@ ruleDParagraph returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_3='style='
+			otherlv_3='alignment='
 			{
-				newLeafNode(otherlv_3, grammarAccess.getDParagraphAccess().getStyleKeyword_2_0());
+				newLeafNode(otherlv_3, grammarAccess.getDParagraphAccess().getAlignmentKeyword_2_0());
 			}
 			(
 				(
-					lv_style_4_0=RULE_STRING
 					{
-						newLeafNode(lv_style_4_0, grammarAccess.getDParagraphAccess().getStyleSTRINGTerminalRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getDParagraphAccess().getAlignmentDAlignmentEnumRuleCall_2_1_0());
+					}
+					lv_alignment_4_0=ruleDAlignment
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getDParagraphRule());
+						}
+						set(
+							$current,
+							"alignment",
+							lv_alignment_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DAlignment");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_5='style='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getDParagraphAccess().getStyleKeyword_3_0());
+			}
+			(
+				(
+					lv_style_6_0=RULE_STRING
+					{
+						newLeafNode(lv_style_6_0, grammarAccess.getDParagraphAccess().getStyleSTRINGTerminalRuleCall_3_1_0());
 					}
 					{
 						if ($current==null) {
@@ -671,47 +696,46 @@ ruleDParagraph returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"style",
-							lv_style_4_0,
+							lv_style_6_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
 		(
-			otherlv_5='alignment='
+			otherlv_7='indent='
 			{
-				newLeafNode(otherlv_5, grammarAccess.getDParagraphAccess().getAlignmentKeyword_3_0());
+				newLeafNode(otherlv_7, grammarAccess.getDParagraphAccess().getIndentKeyword_4_0());
 			}
 			(
 				(
+					lv_indent_8_0=RULE_REAL_STRING
 					{
-						newCompositeNode(grammarAccess.getDParagraphAccess().getAlignmentDAlignmentEnumRuleCall_3_1_0());
+						newLeafNode(lv_indent_8_0, grammarAccess.getDParagraphAccess().getIndentREAL_STRINGTerminalRuleCall_4_1_0());
 					}
-					lv_alignment_6_0=ruleDAlignment
 					{
 						if ($current==null) {
-							$current = createModelElementForParent(grammarAccess.getDParagraphRule());
+							$current = createModelElement(grammarAccess.getDParagraphRule());
 						}
-						set(
+						setWithLastConsumed(
 							$current,
-							"alignment",
-							lv_alignment_6_0,
-							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DAlignment");
-						afterParserOrEnumRuleCall();
+							"indent",
+							lv_indent_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
 					}
 				)
 			)
 		)?
-		otherlv_7='>'
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDParagraphAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_9, grammarAccess.getDParagraphAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDParagraphAccess().getParagraphContentDParagraphContentParserRuleCall_6_0());
 				}
-				lv_paragraphContent_8_0=ruleDParagraphContent
+				lv_paragraphContent_10_0=ruleDParagraphContent
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDParagraphRule());
@@ -719,15 +743,15 @@ ruleDParagraph returns [EObject current=null]
 					add(
 						$current,
 						"paragraphContent",
-						lv_paragraphContent_8_0,
+						lv_paragraphContent_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DParagraphContent");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_9='</paragraph>'
+		otherlv_11='</paragraph>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDParagraphAccess().getParagraphKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDParagraphAccess().getParagraphKeyword_7());
 		}
 	)
 ;
@@ -942,16 +966,40 @@ ruleDItemize returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_7='>'
+		(
+			otherlv_7='indent='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDItemizeAccess().getIndentKeyword_4_0());
+			}
+			(
+				(
+					lv_indent_8_0=RULE_REAL_STRING
+					{
+						newLeafNode(lv_indent_8_0, grammarAccess.getDItemizeAccess().getIndentREAL_STRINGTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDItemizeRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indent",
+							lv_indent_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDItemizeAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_9, grammarAccess.getDItemizeAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDItemizeAccess().getItemsDListItemParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDItemizeAccess().getItemsDListItemParserRuleCall_6_0());
 				}
-				lv_items_8_0=ruleDListItem
+				lv_items_10_0=ruleDListItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDItemizeRule());
@@ -959,15 +1007,15 @@ ruleDItemize returns [EObject current=null]
 					add(
 						$current,
 						"items",
-						lv_items_8_0,
+						lv_items_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DListItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_9='</itemize>'
+		otherlv_11='</itemize>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDItemizeAccess().getItemizeKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDItemizeAccess().getItemizeKeyword_7());
 		}
 	)
 ;
@@ -1065,16 +1113,40 @@ ruleDEnumerate returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_7='>'
+		(
+			otherlv_7='indent='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getDEnumerateAccess().getIndentKeyword_4_0());
+			}
+			(
+				(
+					lv_indent_8_0=RULE_REAL_STRING
+					{
+						newLeafNode(lv_indent_8_0, grammarAccess.getDEnumerateAccess().getIndentREAL_STRINGTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDEnumerateRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indent",
+							lv_indent_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getDEnumerateAccess().getGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_9, grammarAccess.getDEnumerateAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDEnumerateAccess().getItemsDListItemParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDEnumerateAccess().getItemsDListItemParserRuleCall_6_0());
 				}
-				lv_items_8_0=ruleDListItem
+				lv_items_10_0=ruleDListItem
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDEnumerateRule());
@@ -1082,15 +1154,15 @@ ruleDEnumerate returns [EObject current=null]
 					add(
 						$current,
 						"items",
-						lv_items_8_0,
+						lv_items_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DListItem");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_9='</enumerate>'
+		otherlv_11='</enumerate>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getDEnumerateAccess().getEnumerateKeyword_6());
+			newLeafNode(otherlv_11, grammarAccess.getDEnumerateAccess().getEnumerateKeyword_7());
 		}
 	)
 ;
@@ -1375,39 +1447,6 @@ ruleDHyperlink returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleDTab
-entryRuleDTab returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDTabRule()); }
-	iv_ruleDTab=ruleDTab
-	{ $current=$iv_ruleDTab.current; }
-	EOF;
-
-// Rule DTab
-ruleDTab returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getDTabAccess().getDTabAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='<tab/>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDTabAccess().getTabKeyword_1());
-		}
-	)
-;
-
 // Entry rule entryRuleDText
 entryRuleDText returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getDTextRule()); }
@@ -1440,6 +1479,39 @@ ruleDText returns [EObject current=null]
 					"es.uah.aut.srg.micobs.svm.lang.svs.SVS.RUNTEXT");
 			}
 		)
+	)
+;
+
+// Entry rule entryRuleDTab
+entryRuleDTab returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTabRule()); }
+	iv_ruleDTab=ruleDTab
+	{ $current=$iv_ruleDTab.current; }
+	EOF;
+
+// Rule DTab
+ruleDTab returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDTabAccess().getDTabAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<tab/>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDTabAccess().getTabKeyword_1());
+		}
 	)
 ;
 
@@ -1601,15 +1673,39 @@ ruleDFigureFromFile returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_13='caption='
+			otherlv_13='indent='
 			{
-				newLeafNode(otherlv_13, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_11_0());
+				newLeafNode(otherlv_13, grammarAccess.getDFigureFromFileAccess().getIndentKeyword_11_0());
 			}
 			(
 				(
-					lv_caption_14_0=RULE_STRING
+					lv_indent_14_0=RULE_REAL_STRING
 					{
-						newLeafNode(lv_caption_14_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_11_1_0());
+						newLeafNode(lv_indent_14_0, grammarAccess.getDFigureFromFileAccess().getIndentREAL_STRINGTerminalRuleCall_11_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDFigureFromFileRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indent",
+							lv_indent_14_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_15='caption='
+			{
+				newLeafNode(otherlv_15, grammarAccess.getDFigureFromFileAccess().getCaptionKeyword_12_0());
+			}
+			(
+				(
+					lv_caption_16_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_16_0, grammarAccess.getDFigureFromFileAccess().getCaptionSTRINGTerminalRuleCall_12_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1618,15 +1714,15 @@ ruleDFigureFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_14_0,
+							lv_caption_16_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_15='/>'
+		otherlv_17='/>'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_12());
+			newLeafNode(otherlv_17, grammarAccess.getDFigureFromFileAccess().getSolidusGreaterThanSignKeyword_13());
 		}
 	)
 ;
@@ -1789,15 +1885,39 @@ ruleDTableFromFile returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_13='caption='
+			otherlv_13='indent='
 			{
-				newLeafNode(otherlv_13, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_11_0());
+				newLeafNode(otherlv_13, grammarAccess.getDTableFromFileAccess().getIndentKeyword_11_0());
 			}
 			(
 				(
-					lv_caption_14_0=RULE_STRING
+					lv_indent_14_0=RULE_REAL_STRING
 					{
-						newLeafNode(lv_caption_14_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_11_1_0());
+						newLeafNode(lv_indent_14_0, grammarAccess.getDTableFromFileAccess().getIndentREAL_STRINGTerminalRuleCall_11_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDTableFromFileRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indent",
+							lv_indent_14_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_15='caption='
+			{
+				newLeafNode(otherlv_15, grammarAccess.getDTableFromFileAccess().getCaptionKeyword_12_0());
+			}
+			(
+				(
+					lv_caption_16_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_16_0, grammarAccess.getDTableFromFileAccess().getCaptionSTRINGTerminalRuleCall_12_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1806,15 +1926,15 @@ ruleDTableFromFile returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_14_0,
+							lv_caption_16_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_15='/>'
+		otherlv_17='/>'
 		{
-			newLeafNode(otherlv_15, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_12());
+			newLeafNode(otherlv_17, grammarAccess.getDTableFromFileAccess().getSolidusGreaterThanSignKeyword_13());
 		}
 	)
 ;
@@ -1935,15 +2055,39 @@ ruleDBasicTable returns [EObject current=null]
 			)
 		)?
 		(
-			otherlv_9='caption='
+			otherlv_9='indent='
 			{
-				newLeafNode(otherlv_9, grammarAccess.getDBasicTableAccess().getCaptionKeyword_6_0());
+				newLeafNode(otherlv_9, grammarAccess.getDBasicTableAccess().getIndentKeyword_6_0());
 			}
 			(
 				(
-					lv_caption_10_0=RULE_STRING
+					lv_indent_10_0=RULE_REAL_STRING
 					{
-						newLeafNode(lv_caption_10_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_6_1_0());
+						newLeafNode(lv_indent_10_0, grammarAccess.getDBasicTableAccess().getIndentREAL_STRINGTerminalRuleCall_6_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDBasicTableRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"indent",
+							lv_indent_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+					}
+				)
+			)
+		)?
+		(
+			otherlv_11='caption='
+			{
+				newLeafNode(otherlv_11, grammarAccess.getDBasicTableAccess().getCaptionKeyword_7_0());
+			}
+			(
+				(
+					lv_caption_12_0=RULE_STRING
+					{
+						newLeafNode(lv_caption_12_0, grammarAccess.getDBasicTableAccess().getCaptionSTRINGTerminalRuleCall_7_1_0());
 					}
 					{
 						if ($current==null) {
@@ -1952,22 +2096,22 @@ ruleDBasicTable returns [EObject current=null]
 						setWithLastConsumed(
 							$current,
 							"caption",
-							lv_caption_10_0,
+							lv_caption_12_0,
 							"org.eclipse.xtext.common.Terminals.STRING");
 					}
 				)
 			)
 		)?
-		otherlv_11='>'
+		otherlv_13='>'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_13, grammarAccess.getDBasicTableAccess().getGreaterThanSignKeyword_8());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getDBasicTableAccess().getRowsDRowParserRuleCall_9_0());
 				}
-				lv_rows_12_0=ruleDRow
+				lv_rows_14_0=ruleDRow
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDBasicTableRule());
@@ -1975,15 +2119,15 @@ ruleDBasicTable returns [EObject current=null]
 					add(
 						$current,
 						"rows",
-						lv_rows_12_0,
+						lv_rows_14_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRow");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_13='</basicTable>'
+		otherlv_15='</basicTable>'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_9());
+			newLeafNode(otherlv_15, grammarAccess.getDBasicTableAccess().getBasicTableKeyword_10());
 		}
 	)
 ;
@@ -8673,6 +8817,8 @@ RULE_RUNTEXT : '<text>' ( options {greedy=false;} : . )*'</text>';
 RULE_HEXADECIMAL : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 
 RULE_UINT_STRING : '"' ('0'..'9')+ '"';
+
+RULE_REAL_STRING : '"' ('0'..'9')+ ('.' ('0'..'9')+)? '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

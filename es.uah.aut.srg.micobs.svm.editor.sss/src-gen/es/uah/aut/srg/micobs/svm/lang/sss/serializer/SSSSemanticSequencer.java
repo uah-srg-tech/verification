@@ -271,6 +271,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         width=UINT_STRING? 
 	 *         alignment=DAlignment? 
 	 *         style=STRING? 
+	 *         indent=REAL_STRING? 
 	 *         caption=STRING? 
 	 *         rows+=DRow+
 	 *     )
@@ -311,7 +312,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DEnumerate returns DEnumerate
 	 *
 	 * Constraint:
-	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? indent=REAL_STRING? items+=DListItem+)
 	 */
 	protected void sequence_DEnumerate(ISerializationContext context, DEnumerate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -331,6 +332,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         height=UINT_STRING 
 	 *         alignment=DAlignment? 
 	 *         style=STRING? 
+	 *         indent=REAL_STRING? 
 	 *         caption=STRING?
 	 *     )
 	 */
@@ -359,7 +361,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DItemize returns DItemize
 	 *
 	 * Constraint:
-	 *     (name=STRING? alignment=DAlignment? style=STRING? items+=DListItem+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? indent=REAL_STRING? items+=DListItem+)
 	 */
 	protected void sequence_DItemize(ISerializationContext context, DItemize semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -384,7 +386,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DParagraph returns DParagraph
 	 *
 	 * Constraint:
-	 *     (name=STRING? style=STRING? alignment=DAlignment? paragraphContent+=DParagraphContent+)
+	 *     (name=STRING? alignment=DAlignment? style=STRING? indent=REAL_STRING? paragraphContent+=DParagraphContent+)
 	 */
 	protected void sequence_DParagraph(ISerializationContext context, DParagraph semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -460,6 +462,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         height=UINT_STRING 
 	 *         alignment=DAlignment? 
 	 *         style=STRING? 
+	 *         indent=REAL_STRING? 
 	 *         caption=STRING?
 	 *     )
 	 */
