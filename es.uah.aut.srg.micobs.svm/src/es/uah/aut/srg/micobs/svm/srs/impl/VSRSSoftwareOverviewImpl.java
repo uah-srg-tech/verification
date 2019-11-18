@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
@@ -389,6 +390,22 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 		subsections.add((DAbstractSection) getRelationOtherSystems());
 		subsections.add((DAbstractSection) getConstraints());
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		
+		for(DAbstractSection subsection : getSubsections()) {
+			VSRSFixedSection fixedSubsection = (VSRSFixedSection)subsection;
+			EList<DReferenceableObject> subObjects = fixedSubsection.getReferenceableObjects(ReferenceableObjectType);
+
+			for(DReferenceableObject object : subObjects) {
+				objects.add(object);
+			};
+		}
+		return objects;
 	}
 
 } //VSRSSoftwareOverviewImpl

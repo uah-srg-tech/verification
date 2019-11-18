@@ -12,6 +12,8 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -19,6 +21,7 @@ import es.uah.aut.srg.micobs.svm.srs.srsPackage;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
@@ -226,6 +229,28 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		return ECollections.emptyEList();
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getBody() != null) {
+			for(DBodyContent bodyContent : getBody().getBodyContent()) {
+				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
+						(((DReferenceableObject)bodyContent).getName() != null)) {
+					objects.add((DReferenceableObject)bodyContent);
+				}
+			}
+		}
+		for(VSRSInstantiableSection instSubsection : getSrsInstatiableSubsections()) {
+			EList<DReferenceableObject> subObjects = instSubsection.getReferenceableObjects(ReferenceableObjectType);
+
+			for(DReferenceableObject object : subObjects) {
+				objects.add(object);
+			};
+		}
+		return objects;
 	}
 
 } //VSRSInstantiableSectionImpl

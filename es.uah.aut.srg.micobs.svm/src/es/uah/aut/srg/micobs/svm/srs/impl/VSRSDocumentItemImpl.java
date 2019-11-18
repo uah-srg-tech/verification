@@ -11,6 +11,8 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItem;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocumentItemModes;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -19,6 +21,7 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -311,6 +314,27 @@ public class VSRSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 		else {
 			return (VTraceableDocumentAbstractGroup)eContainer();
 		}
+	}
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getDescription() != null) {
+			for(DBodyContent bodyContent : getDescription().getBodyContent()) {
+				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
+						(((DReferenceableObject)bodyContent).getName() != null)) {
+					objects.add((DReferenceableObject)bodyContent);
+				}
+			}
+		}
+		if(getExtendedDescription() != null) {
+			for(DBodyContent bodyContent : getExtendedDescription().getBodyContent()) {
+				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
+						(((DReferenceableObject)bodyContent).getName() != null)) {
+					objects.add((DReferenceableObject)bodyContent);
+				}
+			}
+		}
+		return objects;
 	}
 
 } //VSRSDocumentItemImpl

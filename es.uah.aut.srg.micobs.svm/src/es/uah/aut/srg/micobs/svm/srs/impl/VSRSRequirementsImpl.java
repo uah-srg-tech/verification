@@ -12,7 +12,10 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+import es.uah.aut.srg.micobs.svm.srs.VSRSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSAdaptationInstallationRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDataDefinitionDBRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDesignRequirements;
@@ -1343,6 +1346,28 @@ public class VSRSRequirementsImpl extends DFixedSectionImpl implements VSRSRequi
 		subsections.add((DAbstractSection) getHumanFactors());
 		subsections.add((DAbstractSection) getAdaptationInstallation());
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getSectionDescription() != null) {
+			for(DBodyContent bodyContent : getSectionDescription().getBodyContent()) {
+				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
+						(((DReferenceableObject)bodyContent).getName() != null)) {
+					objects.add((DReferenceableObject)bodyContent);
+				}
+			}
+		}
+		for(DAbstractSection subsection : getSubsections()) {
+			VSRSAbstractRequirementSection reqSection = (VSRSAbstractRequirementSection)subsection;
+			EList<DReferenceableObject> subObjects = reqSection.getReferenceableObjects(ReferenceableObjectType);
+			for(DReferenceableObject object : subObjects) {
+				objects.add(object);
+			};
+		}
+		return objects;
 	}
 
 } //VSRSRequirementsImpl

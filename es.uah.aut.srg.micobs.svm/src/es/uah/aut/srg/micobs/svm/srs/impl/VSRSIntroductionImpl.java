@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.srs.VSRSIntroduction;
@@ -167,4 +168,19 @@ public class VSRSIntroductionImpl extends DFixedSectionImpl implements VSRSIntro
 		return subsections;
 	}
 
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		
+		for(VSRSInstantiableSection subsection : getSrsInstatiableSubsections()) {
+			VSRSInstantiableSection instSubsection = (VSRSInstantiableSection)subsection;
+			EList<DReferenceableObject> subObjects = instSubsection.getReferenceableObjects(ReferenceableObjectType);
+
+			for(DReferenceableObject object : subObjects) {
+				objects.add(object);
+			};
+		}
+		return objects;
+	}
 } //VSRSIntroductionImpl

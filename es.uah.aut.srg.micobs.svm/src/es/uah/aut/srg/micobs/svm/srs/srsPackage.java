@@ -250,31 +250,13 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
-	 * The feature id for the '<em><b>Srs Figures</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__SRS_FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Srs Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__SRS_TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
-
-	/**
 	 * The number of structural features of the '<em>VSRS Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
+	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of operations of the '<em>VSRS Document</em>' class.
@@ -2902,28 +2884,6 @@ public interface srsPackage extends EPackage {
 	EReference getVSRSDocument_LogicalModelsSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsFigures <em>Srs Figures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Srs Figures</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsFigures()
-	 * @see #getVSRSDocument()
-	 * @generated
-	 */
-	EReference getVSRSDocument_SrsFigures();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsTables <em>Srs Tables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Srs Tables</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsTables()
-	 * @see #getVSRSDocument()
-	 * @generated
-	 */
-	EReference getVSRSDocument_SrsTables();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSIntroduction <em>VSRS Introduction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3834,22 +3794,6 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = eINSTANCE.getVSRSDocument_LogicalModelsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Srs Figures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSRS_DOCUMENT__SRS_FIGURES = eINSTANCE.getVSRSDocument_SrsFigures();
-
-		/**
-		 * The meta object literal for the '<em><b>Srs Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSRS_DOCUMENT__SRS_TABLES = eINSTANCE.getVSRSDocument_SrsTables();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSIntroductionImpl <em>VSRS Introduction</em>}' class.

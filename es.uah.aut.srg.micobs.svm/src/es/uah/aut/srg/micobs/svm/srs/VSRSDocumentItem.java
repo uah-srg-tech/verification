@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 import org.eclipse.emf.common.util.EList;
@@ -103,5 +104,7 @@ public interface VSRSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * @generated
 	 */
 	EList<VSRSDocumentItemModes> getMode();
+
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 
 } // VSRSDocumentItem

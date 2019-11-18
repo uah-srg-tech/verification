@@ -12,6 +12,8 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -73,5 +75,7 @@ public interface VSRSInstantiableSection extends DInstantiableSection {
 	 * @generated
 	 */
 	EList<VSRSInstantiableSection> getSrsInstatiableSubsections();
+
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 
 } // VSRSInstantiableSection

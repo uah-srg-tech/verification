@@ -10,8 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -515,4 +518,5 @@ public interface VSRSRequirements extends DFixedSection {
 	 */
 	void setAdaptationInstallation(VSRSAdaptationInstallationRequirements value);
 
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 } // VSRSRequirements

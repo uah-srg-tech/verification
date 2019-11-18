@@ -10,11 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.srs;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile;
-import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import org.eclipse.emf.common.util.EList;
+
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
+import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,8 +32,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSoftwareOverviewSection <em>Software Overview Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getRequirementsSection <em>Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getLogicalModelsSection <em>Logical Models Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsFigures <em>Srs Figures</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getSrsTables <em>Srs Tables</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument()
@@ -222,37 +220,7 @@ public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	 * @generated
 	 */
 	void setLogicalModelsSection(VSRSLogicalModels value);
-
-	/**
-	 * Returns the value of the '<em><b>Srs Figures</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Srs Figures</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Srs Figures</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_SrsFigures()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DFigureFromFile> getSrsFigures();
-
-	/**
-	 * Returns the value of the '<em><b>Srs Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Srs Tables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Srs Tables</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_SrsTables()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DAbstractTable> getSrsTables();
+	
+	EList<DParagraph> getParagraphs();
 
 } // VSRSDocument

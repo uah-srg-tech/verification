@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentInstantiableGroup;
 
 import org.eclipse.emf.common.util.EList;
@@ -75,5 +76,7 @@ public interface VSRSInstantiableRequirementSection extends VTraceableDocumentIn
 	 * @generated
 	 */
 	EList<VSRSDocumentItem> getSrsItems();
+
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 
 } // VSRSInstantiableRequirementSection

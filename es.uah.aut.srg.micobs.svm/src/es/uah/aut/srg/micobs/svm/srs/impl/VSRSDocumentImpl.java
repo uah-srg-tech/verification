@@ -15,8 +15,9 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DFigureFromFile;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.srs.VSRSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocument;
@@ -41,8 +42,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -64,8 +63,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSoftwareOverviewSection <em>Software Overview Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getRequirementsSection <em>Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getLogicalModelsSection <em>Logical Models Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSrsFigures <em>Srs Figures</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSrsTables <em>Srs Tables</em>}</li>
  * </ul>
  *
  * @generated
@@ -142,26 +139,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	protected VSRSLogicalModels logicalModelsSection;
 
 	/**
-	 * The cached value of the '{@link #getSrsFigures() <em>Srs Figures</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSrsFigures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DFigureFromFile> srsFigures;
-
-	/**
-	 * The cached value of the '{@link #getSrsTables() <em>Srs Tables</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSrsTables()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DAbstractTable> srsTables;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -200,24 +177,47 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		return refdocs;
 	}
 
+	protected EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+
+		objects.addAll(getIntroductionSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getSoftwareOverviewSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getRequirementsSection().getReferenceableObjects(ReferenceableObjectType));
+		return objects;
+	}
+	
 	@Override
 	public EList<DAbstractFigure> getFigures() {
 		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
-
-		for(DAbstractFigure figure : getSrsFigures()) {
-			figures.add(figure);
-		}
+		EList<DReferenceableObject> objects = getReferenceableObjects("DFigureFromFile");
+		for(DReferenceableObject object : objects) {
+			figures.add((DAbstractFigure)object);
+		};
 		return figures;
 	}
 
 	@Override
 	public EList<DAbstractTable> getTables() {
 		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
-
-		for(DAbstractTable table : getSrsTables()) {
-			tables.add(table);
-		}
+		EList<DReferenceableObject> basicObjects = getReferenceableObjects("DBasicTable");
+		for(DReferenceableObject object : basicObjects) {
+			tables.add((DAbstractTable)object);
+		};
+		EList<DReferenceableObject> fromFileObjects = getReferenceableObjects("DTableFromFile");
+		for(DReferenceableObject object : fromFileObjects) {
+			tables.add((DAbstractTable)object);
+		};
 		return tables;
+	}
+
+	@Override
+	public EList<DParagraph> getParagraphs() {
+		EList<DParagraph> paragraphs = new BasicEList<DParagraph>();
+		EList<DReferenceableObject> objects = getReferenceableObjects("DParagraph");
+		for(DReferenceableObject object : objects) {
+			paragraphs.add((DParagraph)object);
+		};
+		return paragraphs;
 	}
 
 	@Override
@@ -227,6 +227,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 		sections.add((DAbstractSection) getApplicableDocumentsSection());
 		sections.add((DAbstractSection) getReferenceDocumentsSection());
 		sections.add((DAbstractSection) getTermsDefinitionsAbbreviationsSection());
+		sections.add((DAbstractSection) getSoftwareOverviewSection());
 		sections.add((DAbstractSection) getRequirementsSection());
 		sections.add((DAbstractSection) getLogicalModelsSection());
 		return sections;
@@ -561,30 +562,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DFigureFromFile> getSrsFigures() {
-		if (srsFigures == null) {
-			srsFigures = new EObjectContainmentEList<DFigureFromFile>(DFigureFromFile.class, this, srsPackage.VSRS_DOCUMENT__SRS_FIGURES);
-		}
-		return srsFigures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DAbstractTable> getSrsTables() {
-		if (srsTables == null) {
-			srsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, srsPackage.VSRS_DOCUMENT__SRS_TABLES);
-		}
-		return srsTables;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -602,10 +579,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return basicSetRequirementsSection(null, msgs);
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return basicSetLogicalModelsSection(null, msgs);
-			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
-				return ((InternalEList<?>)getSrsFigures()).basicRemove(otherEnd, msgs);
-			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
-				return ((InternalEList<?>)getSrsTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -642,10 +615,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return getRequirementsSection();
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return getLogicalModelsSection();
-			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
-				return getSrsFigures();
-			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
-				return getSrsTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -700,14 +669,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				setLogicalModelsSection((VSRSLogicalModels)newValue);
 				return;
-			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
-				getSrsFigures().clear();
-				getSrsFigures().addAll((Collection<? extends DFigureFromFile>)newValue);
-				return;
-			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
-				getSrsTables().clear();
-				getSrsTables().addAll((Collection<? extends DAbstractTable>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -756,12 +717,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				setLogicalModelsSection((VSRSLogicalModels)null);
 				return;
-			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
-				getSrsFigures().clear();
-				return;
-			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
-				getSrsTables().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -798,10 +753,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return requirementsSection != null;
 			case srsPackage.VSRS_DOCUMENT__LOGICAL_MODELS_SECTION:
 				return logicalModelsSection != null;
-			case srsPackage.VSRS_DOCUMENT__SRS_FIGURES:
-				return srsFigures != null && !srsFigures.isEmpty();
-			case srsPackage.VSRS_DOCUMENT__SRS_TABLES:
-				return srsTables != null && !srsTables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.srs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentFixedGroup;
 
 import org.eclipse.emf.common.util.EList;
@@ -92,5 +93,7 @@ public interface VSRSAbstractRequirementSection extends VTraceableDocumentFixedG
 	 * @generated
 	 */
 	EList<VSRSInstantiableRequirementSection> getSrsRequirementSubsections();
+	
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 
 } // VSRSAbstractRequirementSection
