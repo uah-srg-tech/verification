@@ -10,7 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -162,5 +165,7 @@ public interface VSSSGeneralDescription extends DFixedSection {
 	 * @generated
 	 */
 	void setAssumptionsDependencies(VSSSFixedSection value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSSSGeneralDescription

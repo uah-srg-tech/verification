@@ -12,7 +12,9 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+import es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSAdaptationMissionizationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSCapabilitiesRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSComputerResourceRequirements;
@@ -1071,6 +1073,19 @@ public class VSSSSpecificRequirementsImpl extends DFixedSectionImpl implements V
 		subsections.add((DAbstractSection) getSoftwareMaintenance());
 		subsections.add((DAbstractSection) getSystemSoftwareObservability());
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getSectionDescription() != null) {
+			objects.addAll(getSectionDescription().getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(DAbstractSection subsection : getSubsections()) {
+			objects.addAll(((VSSSAbstractRequirementSection)subsection).getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 	
 } //VSSSSpecificRequirementsImpl

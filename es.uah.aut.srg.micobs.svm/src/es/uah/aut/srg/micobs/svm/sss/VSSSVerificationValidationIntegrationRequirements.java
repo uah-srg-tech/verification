@@ -10,8 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -163,5 +166,7 @@ public interface VSSSVerificationValidationIntegrationRequirements extends DFixe
 	 * @generated
 	 */
 	void setVerification(VSSSVerificationRequirements value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSSSVerificationValidationIntegrationRequirements

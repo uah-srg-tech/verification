@@ -186,13 +186,22 @@ public interface sssPackage extends EPackage {
 	int VSSS_DOCUMENT__SECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSSS_DOCUMENT__PARAGRAPHS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+	int VSSS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -201,7 +210,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
+	int VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -210,7 +219,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
+	int VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
@@ -219,7 +228,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
+	int VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>General Description Section</b></em>' containment reference.
@@ -228,7 +237,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__GENERAL_DESCRIPTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
+	int VSSS_DOCUMENT__GENERAL_DESCRIPTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Specific Requirements Section</b></em>' containment reference.
@@ -237,7 +246,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
+	int VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Verification Validation Integration Section</b></em>' containment reference.
@@ -246,7 +255,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
+	int VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>System Models Section</b></em>' containment reference.
@@ -255,25 +264,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT__SYSTEM_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
-
-	/**
-	 * The feature id for the '<em><b>Sss Figures</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSSS_DOCUMENT__SSS_FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
-
-	/**
-	 * The feature id for the '<em><b>Sss Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSSS_DOCUMENT__SSS_TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
+	int VSSS_DOCUMENT__SYSTEM_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of structural features of the '<em>VSSS Document</em>' class.
@@ -282,7 +273,7 @@ public interface sssPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSSS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 15;
+	int VSSS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The number of operations of the '<em>VSSS Document</em>' class.
@@ -2957,28 +2948,6 @@ public interface sssPackage extends EPackage {
 	EReference getVSSSDocument_SystemModelsSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssFigures <em>Sss Figures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Figures</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssFigures()
-	 * @see #getVSSSDocument()
-	 * @generated
-	 */
-	EReference getVSSSDocument_SssFigures();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssTables <em>Sss Tables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Sss Tables</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSDocument#getSssTables()
-	 * @see #getVSSSDocument()
-	 * @generated
-	 */
-	EReference getVSSSDocument_SssTables();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction <em>VSSS Introduction</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3908,22 +3877,6 @@ public interface sssPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSSS_DOCUMENT__SYSTEM_MODELS_SECTION = eINSTANCE.getVSSSDocument_SystemModelsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Figures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_DOCUMENT__SSS_FIGURES = eINSTANCE.getVSSSDocument_SssFigures();
-
-		/**
-		 * The meta object literal for the '<em><b>Sss Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSSS_DOCUMENT__SSS_TABLES = eINSTANCE.getVSSSDocument_SssTables();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSIntroductionImpl <em>VSSS Introduction</em>}' class.

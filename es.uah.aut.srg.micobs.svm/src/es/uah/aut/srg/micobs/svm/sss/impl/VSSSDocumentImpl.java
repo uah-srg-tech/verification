@@ -15,7 +15,9 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocument;
@@ -40,8 +42,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -56,6 +56,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSections <em>Sections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getParagraphs <em>Paragraphs</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
@@ -64,8 +65,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSpecificRequirementsSection <em>Specific Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getVerificationValidationIntegrationSection <em>Verification Validation Integration Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSystemModelsSection <em>System Models Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSssFigures <em>Sss Figures</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.sss.impl.VSSSDocumentImpl#getSssTables <em>Sss Tables</em>}</li>
  * </ul>
  *
  * @generated
@@ -152,26 +151,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	protected VSSSSystemModels systemModelsSection;
 
 	/**
-	 * The cached value of the '{@link #getSssFigures() <em>Sss Figures</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSssFigures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DAbstractFigure> sssFigures;
-
-	/**
-	 * The cached value of the '{@link #getSssTables() <em>Sss Tables</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSssTables()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DAbstractTable> sssTables;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -193,7 +172,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
 		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
-
 		for(DApplicableDocument appdoc : getApplicableDocumentsSection().getApplicableDocuments()) {
 			appdocs.add(appdoc);
 		}
@@ -203,7 +181,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	@Override
 	public EList<DReferenceDocument> getReferenceDocuments() {
 		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
-
 		for(DReferenceDocument refdoc : getReferenceDocumentsSection().getReferenceDocuments()) {
 			refdocs.add(refdoc);
 		}
@@ -211,23 +188,47 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	}
 
 	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getIntroductionSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getGeneralDescriptionSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getSpecificRequirementsSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getVerificationValidationIntegrationSection().getReferenceableObjects(ReferenceableObjectType));
+		return objects;
+	}
+	
+	@Override
 	public EList<DAbstractFigure> getFigures() {
 		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
-
-		for(DAbstractFigure figure : getSssFigures()) {
-			figures.add(figure);
-		}
+		EList<DReferenceableObject> objects = getReferenceableObjects("DFigureFromFile");
+		for(DReferenceableObject object : objects) {
+			figures.add((DAbstractFigure)object);
+		};
 		return figures;
 	}
 
 	@Override
 	public EList<DAbstractTable> getTables() {
 		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
-
-		for(DAbstractTable table : getSssTables()) {
-			tables.add(table);
-		}
+		EList<DReferenceableObject> basicObjects = getReferenceableObjects("DBasicTable");
+		for(DReferenceableObject object : basicObjects) {
+			tables.add((DAbstractTable)object);
+		};
+		EList<DReferenceableObject> fromFileObjects = getReferenceableObjects("DTableFromFile");
+		for(DReferenceableObject object : fromFileObjects) {
+			tables.add((DAbstractTable)object);
+		};
 		return tables;
+	}
+
+	@Override
+	public EList<DParagraph> getParagraphs() {
+		EList<DParagraph> paragraphs = new BasicEList<DParagraph>();
+		EList<DReferenceableObject> objects = getReferenceableObjects("DParagraph");
+		for(DReferenceableObject object : objects) {
+			paragraphs.add((DParagraph)object);
+		};
+		return paragraphs;
 	}
 
 	@Override
@@ -615,30 +616,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractFigure> getSssFigures() {
-		if (sssFigures == null) {
-			sssFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, sssPackage.VSSS_DOCUMENT__SSS_FIGURES);
-		}
-		return sssFigures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DAbstractTable> getSssTables() {
-		if (sssTables == null) {
-			sssTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, sssPackage.VSSS_DOCUMENT__SSS_TABLES);
-		}
-		return sssTables;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -658,10 +635,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return basicSetVerificationValidationIntegrationSection(null, msgs);
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return basicSetSystemModelsSection(null, msgs);
-			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
-				return ((InternalEList<?>)getSssFigures()).basicRemove(otherEnd, msgs);
-			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
-				return ((InternalEList<?>)getSssTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -684,6 +657,8 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return getTables();
 			case sssPackage.VSSS_DOCUMENT__SECTIONS:
 				return getSections();
+			case sssPackage.VSSS_DOCUMENT__PARAGRAPHS:
+				return getParagraphs();
 			case sssPackage.VSSS_DOCUMENT__INTRODUCTION_SECTION:
 				return getIntroductionSection();
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -700,10 +675,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return getVerificationValidationIntegrationSection();
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return getSystemModelsSection();
-			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
-				return getSssFigures();
-			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
-				return getSssTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -737,6 +708,10 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				getSections().clear();
 				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
 				return;
+			case sssPackage.VSSS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
+				getParagraphs().addAll((Collection<? extends DParagraph>)newValue);
+				return;
 			case sssPackage.VSSS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSSSIntroduction)newValue);
 				return;
@@ -760,14 +735,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return;
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				setSystemModelsSection((VSSSSystemModels)newValue);
-				return;
-			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
-				getSssFigures().clear();
-				getSssFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
-				return;
-			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
-				getSssTables().clear();
-				getSssTables().addAll((Collection<? extends DAbstractTable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -796,6 +763,9 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 			case sssPackage.VSSS_DOCUMENT__SECTIONS:
 				getSections().clear();
 				return;
+			case sssPackage.VSSS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
+				return;
 			case sssPackage.VSSS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSSSIntroduction)null);
 				return;
@@ -820,12 +790,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				setSystemModelsSection((VSSSSystemModels)null);
 				return;
-			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
-				getSssFigures().clear();
-				return;
-			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
-				getSssTables().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -848,6 +812,8 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return !getTables().isEmpty();
 			case sssPackage.VSSS_DOCUMENT__SECTIONS:
 				return !getSections().isEmpty();
+			case sssPackage.VSSS_DOCUMENT__PARAGRAPHS:
+				return !getParagraphs().isEmpty();
 			case sssPackage.VSSS_DOCUMENT__INTRODUCTION_SECTION:
 				return introductionSection != null;
 			case sssPackage.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -864,10 +830,6 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				return verificationValidationIntegrationSection != null;
 			case sssPackage.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION:
 				return systemModelsSection != null;
-			case sssPackage.VSSS_DOCUMENT__SSS_FIGURES:
-				return sssFigures != null && !sssFigures.isEmpty();
-			case sssPackage.VSSS_DOCUMENT__SSS_TABLES:
-				return sssTables != null && !sssTables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -886,6 +848,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				case sssPackage.VSSS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
 				case sssPackage.VSSS_DOCUMENT__TABLES: return doctplPackage.DDOCUMENT_TEMPLATE__TABLES;
 				case sssPackage.VSSS_DOCUMENT__SECTIONS: return doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS;
+				case sssPackage.VSSS_DOCUMENT__PARAGRAPHS: return doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS;
 				default: return -1;
 			}
 		}
@@ -906,6 +869,7 @@ public class VSSSDocumentImpl extends VTraceableDocumentImpl implements VSSSDocu
 				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return sssPackage.VSSS_DOCUMENT__FIGURES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__TABLES: return sssPackage.VSSS_DOCUMENT__TABLES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS: return sssPackage.VSSS_DOCUMENT__SECTIONS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS: return sssPackage.VSSS_DOCUMENT__PARAGRAPHS;
 				default: return -1;
 			}
 		}

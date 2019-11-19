@@ -12,6 +12,8 @@ package es.uah.aut.srg.micobs.svm.sss;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -73,5 +75,7 @@ public interface VSSSFixedSection extends DFixedSection {
 	 * @generated
 	 */
 	EList<VSSSInstantiableSection> getSssInstatiableSubsections();
+
+	EList<DReferenceableObject> getReferenceableObjects(String referenceableObjectType);
 
 } // VSSSFixedSection

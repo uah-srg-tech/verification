@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSIntroduction;
@@ -162,6 +163,16 @@ public class VSSSIntroductionImpl extends DFixedSectionImpl implements VSSSIntro
 			subsections.add(subsection);
 		}
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		for(VSSSInstantiableSection subsection : getSssInstatiableSubsections()) {
+			objects.addAll(subsection.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSSSIntroductionImpl

@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.sss.impl.VSSSInstantiableRequirementSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
@@ -20,6 +21,8 @@ import es.uah.aut.srg.micobs.svm.tdm.impl.VTraceableDocumentAbstractItemImpl;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -257,6 +260,19 @@ public class VSSSDocumentItemImpl extends VTraceableDocumentAbstractItemImpl imp
 		else {
 			return (VTraceableDocumentAbstractGroup)eContainer();
 		}
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getDescription() != null) {
+			objects.addAll(getDescription().getReferenceableObjects(ReferenceableObjectType));
+		}
+		if(getExtendedDescription() != null) {
+			objects.addAll(getExtendedDescription().getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSSSDocumentItemImpl

@@ -10,7 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 
 /**
@@ -82,5 +85,7 @@ public interface VSSSDocumentItem extends VTraceableDocumentAbstractItem {
 	 * @generated
 	 */
 	void setExtendedDescription(DBody value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSSSDocumentItem

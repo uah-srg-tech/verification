@@ -19,12 +19,6 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemModelsSection" lowerBound="1"
         eType="#//VSSSSystemModels" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssFigures" upperBound="-1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DAbstractFigure"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="sssTables" upperBound="-1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DAbstractTable"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSIntroduction" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sssInstatiableSubsections"

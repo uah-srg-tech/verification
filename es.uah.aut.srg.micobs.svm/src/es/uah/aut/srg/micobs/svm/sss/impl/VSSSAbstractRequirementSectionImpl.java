@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSAbstractRequirementSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
@@ -352,6 +353,22 @@ public abstract class VSSSAbstractRequirementSectionImpl extends VTraceableDocum
 	public VTraceableDocument basicGetDoc() {
 		final EObject parent = eContainer();
 		return (VTraceableDocument)parent.eContainer();
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getSectionDescription() != null) {
+			objects.addAll(getSectionDescription().getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(DAbstractSection subsection : getSubsections()) {
+			objects.addAll(((VSSSInstantiableRequirementSection)subsection).getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(VSSSDocumentItem item : getSssItems()) {
+			objects.addAll(item.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSSSAbstractRequirementSectionImpl

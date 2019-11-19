@@ -10,8 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.sss;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -406,5 +409,7 @@ public interface VSSSSpecificRequirements extends DFixedSection {
 	 * @generated
 	 */
 	void setSystemSoftwareObservability(VSSSSystemSoftwareObservabilityRequirements value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSSSSpecificRequirements

@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.svm.sss.impl;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.sss.VSSSDocumentItem;
 import es.uah.aut.srg.micobs.svm.sss.VSSSInstantiableRequirementSection;
@@ -303,6 +304,19 @@ public class VSSSInstantiableRequirementSectionImpl extends VTraceableDocumentIn
 	public VTraceableDocument basicGetDoc() {
 		final EObject parent = eContainer().eContainer();
 		return (VTraceableDocument)parent.eContainer();
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getSectionDescription() != null) {
+			objects.addAll(getSectionDescription().getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(VSSSDocumentItem item : getSssItems()) {
+			objects.addAll(item.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 	
 } //VSSSInstantiableRequirementSectionImpl

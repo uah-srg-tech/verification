@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.sss.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.sss.VSSSFixedSection;
 import es.uah.aut.srg.micobs.svm.sss.VSSSGeneralDescription;
@@ -456,6 +457,16 @@ public class VSSSGeneralDescriptionImpl extends DFixedSectionImpl implements VSS
 		subsections.add((DAbstractSection) getOperationalEnvironment());
 		subsections.add((DAbstractSection) getAssumptionsDependencies());
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		for(DAbstractSection subsection : getSubsections()) {
+			objects.addAll(((VSSSFixedSection) subsection).getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSSSGeneralDescriptionImpl
