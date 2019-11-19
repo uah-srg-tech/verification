@@ -312,7 +312,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
 		objects.addAll(getGeneral().getReferenceableObjects(ReferenceableObjectType));
-		objects.addAll(getScenarios().getReferenceableObjects(ReferenceableObjectType));
+		if(getScenarios() != null)
+			objects.addAll(getScenarios().getReferenceableObjects(ReferenceableObjectType));
 		for(VSVSTestDesign testDesign : getTestDesigns()) {
 			objects.addAll(testDesign.getReferenceableObjects(ReferenceableObjectType));
 		}
