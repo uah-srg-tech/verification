@@ -54,12 +54,4 @@
             genModel="model/svs.genmodel"/>
    </extension>
 
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated vcd -->
-      <package
-            uri="http://srg.aut.uah.es/micobs/svm/vcd"
-            class="es.uah.aut.srg.micobs.svm.vcd.vcdPackage"
-            genModel="model/vcd.genmodel"/>
-   </extension>
-
 </plugin>
