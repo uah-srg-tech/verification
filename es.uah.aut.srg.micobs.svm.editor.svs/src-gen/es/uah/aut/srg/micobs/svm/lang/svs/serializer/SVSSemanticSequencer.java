@@ -771,7 +771,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSScenariosSection returns VSVSScenariosSection
 	 *
 	 * Constraint:
-	 *     (scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+)
+	 *     scenarios+=VSVSScenarioSection+
 	 */
 	protected void sequence_VSVSScenariosSection(ISerializationContext context, VSVSScenariosSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

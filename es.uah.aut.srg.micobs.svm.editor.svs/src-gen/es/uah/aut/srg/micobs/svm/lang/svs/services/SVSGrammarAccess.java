@@ -2166,6 +2166,89 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</TestingSpecificationDesign>'
 		public Keyword getTestingSpecificationDesignKeyword_6() { return cTestingSpecificationDesignKeyword_6; }
 	}
+	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSScenariosSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cScenariosAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_1_0 = (RuleCall)cScenariosAssignment_1.eContents().get(0);
+		
+		//VSVSScenariosSection:
+		//	{VSVSScenariosSection} scenarios+=VSVSScenarioSection+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSScenariosSection} scenarios+=VSVSScenarioSection+
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSScenariosSection}
+		public Action getVSVSScenariosSectionAction_0() { return cVSVSScenariosSectionAction_0; }
+		
+		//scenarios+=VSVSScenarioSection+
+		public Assignment getScenariosAssignment_1() { return cScenariosAssignment_1; }
+		
+		//VSVSScenarioSection
+		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_1_0() { return cScenariosVSVSScenarioSectionParserRuleCall_1_0; }
+	}
+	public class VSVSScenarioSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenarioSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cScenarioKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cBodyDBodyParserRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
+		private final Keyword cScenarioKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VSVSScenarioSection:
+		//	'<Scenario'
+		//	'name=' name=STRING
+		//	'id=' id=UINT_STRING
+		//	'>'
+		//	body=DBody
+		//	'</Scenario>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Scenario' 'name=' name=STRING 'id=' id=UINT_STRING '>' body=DBody '</Scenario>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Scenario'
+		public Keyword getScenarioKeyword_0() { return cScenarioKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'id='
+		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
+		
+		//id=UINT_STRING
+		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
+		
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//body=DBody
+		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
+		
+		//DBody
+		public RuleCall getBodyDBodyParserRuleCall_6_0() { return cBodyDBodyParserRuleCall_6_0; }
+		
+		//'</Scenario>'
+		public Keyword getScenarioKeyword_7() { return cScenarioKeyword_7; }
+	}
 	public class VSVSTestCasesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCases");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2619,93 +2702,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'</TestDesign>'
 		public Keyword getTestDesignKeyword_13() { return cTestDesignKeyword_13; }
-	}
-	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cScenariosAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_0_0 = (RuleCall)cScenariosAssignment_0.eContents().get(0);
-		private final Assignment cScenariosAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_1_0 = (RuleCall)cScenariosAssignment_1.eContents().get(0);
-		
-		//VSVSScenariosSection:
-		//	scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+
-		public Group getGroup() { return cGroup; }
-		
-		//scenarios+=VSVSScenarioSection
-		public Assignment getScenariosAssignment_0() { return cScenariosAssignment_0; }
-		
-		//VSVSScenarioSection
-		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_0_0() { return cScenariosVSVSScenarioSectionParserRuleCall_0_0; }
-		
-		//scenarios+=VSVSScenarioSection+
-		public Assignment getScenariosAssignment_1() { return cScenariosAssignment_1; }
-		
-		//VSVSScenarioSection
-		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_1_0() { return cScenariosVSVSScenarioSectionParserRuleCall_1_0; }
-	}
-	public class VSVSScenarioSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenarioSection");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cScenarioKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cBodyDBodyParserRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
-		private final Keyword cScenarioKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		
-		//VSVSScenarioSection:
-		//	'<Scenario'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'>'
-		//	body=DBody
-		//	'</Scenario>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<Scenario' 'name=' name=STRING 'id=' id=UINT_STRING '>' body=DBody '</Scenario>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<Scenario'
-		public Keyword getScenarioKeyword_0() { return cScenarioKeyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
-		
-		//body=DBody
-		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
-		
-		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_6_0() { return cBodyDBodyParserRuleCall_6_0; }
-		
-		//'</Scenario>'
-		public Keyword getScenarioKeyword_7() { return cScenarioKeyword_7; }
 	}
 	public class VSVSTestCaseElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCase");
@@ -6127,6 +6123,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSSoftwareOverviewElements pVSVSSoftwareOverview;
 	private final VSVSTaskIdentificationElements pVSVSTaskIdentification;
 	private final VSVSTestingSpecificationDesignElements pVSVSTestingSpecificationDesign;
+	private final VSVSScenariosSectionElements pVSVSScenariosSection;
+	private final VSVSScenarioSectionElements pVSVSScenarioSection;
 	private final VSVSTestCasesElements pVSVSTestCases;
 	private final VSVSTestProceduresElements pVSVSTestProcedures;
 	private final VSVSAnalysisInspectionReviewElements pVSVSAnalysisInspectionReview;
@@ -6136,8 +6134,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSDefinitionElements pVSVSDefinition;
 	private final VSVSAbbreviationElements pVSVSAbbreviation;
 	private final VSVSTestDesignElements pVSVSTestDesign;
-	private final VSVSScenariosSectionElements pVSVSScenariosSection;
-	private final VSVSScenarioSectionElements pVSVSScenarioSection;
 	private final VSVSTestCaseElements pVSVSTestCase;
 	private final VSVSTestProcedureElements pVSVSTestProcedure;
 	private final VSVSProcedureStepsElements pVSVSProcedureSteps;
@@ -6221,6 +6217,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSSoftwareOverview = new VSVSSoftwareOverviewElements();
 		this.pVSVSTaskIdentification = new VSVSTaskIdentificationElements();
 		this.pVSVSTestingSpecificationDesign = new VSVSTestingSpecificationDesignElements();
+		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
+		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
 		this.pVSVSTestCases = new VSVSTestCasesElements();
 		this.pVSVSTestProcedures = new VSVSTestProceduresElements();
 		this.pVSVSAnalysisInspectionReview = new VSVSAnalysisInspectionReviewElements();
@@ -6230,8 +6228,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSDefinition = new VSVSDefinitionElements();
 		this.pVSVSAbbreviation = new VSVSAbbreviationElements();
 		this.pVSVSTestDesign = new VSVSTestDesignElements();
-		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
-		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
 		this.pVSVSTestCase = new VSVSTestCaseElements();
 		this.pVSVSTestProcedure = new VSVSTestProcedureElements();
 		this.pVSVSProcedureSteps = new VSVSProcedureStepsElements();
@@ -6736,6 +6732,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSTestingSpecificationDesignAccess().getRule();
 	}
 	
+	//VSVSScenariosSection:
+	//	{VSVSScenariosSection} scenarios+=VSVSScenarioSection+;
+	public VSVSScenariosSectionElements getVSVSScenariosSectionAccess() {
+		return pVSVSScenariosSection;
+	}
+	
+	public ParserRule getVSVSScenariosSectionRule() {
+		return getVSVSScenariosSectionAccess().getRule();
+	}
+	
+	//VSVSScenarioSection:
+	//	'<Scenario'
+	//	'name=' name=STRING
+	//	'id=' id=UINT_STRING
+	//	'>'
+	//	body=DBody
+	//	'</Scenario>';
+	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
+		return pVSVSScenarioSection;
+	}
+	
+	public ParserRule getVSVSScenarioSectionRule() {
+		return getVSVSScenarioSectionAccess().getRule();
+	}
+	
 	//VSVSTestCases:
 	//	'<TestCases>'
 	//	'<General>' general=VSVSFixedSection '</General>'
@@ -6857,31 +6878,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVSTestDesignRule() {
 		return getVSVSTestDesignAccess().getRule();
-	}
-	
-	//VSVSScenariosSection:
-	//	scenarios+=VSVSScenarioSection scenarios+=VSVSScenarioSection+;
-	public VSVSScenariosSectionElements getVSVSScenariosSectionAccess() {
-		return pVSVSScenariosSection;
-	}
-	
-	public ParserRule getVSVSScenariosSectionRule() {
-		return getVSVSScenariosSectionAccess().getRule();
-	}
-	
-	//VSVSScenarioSection:
-	//	'<Scenario'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'>'
-	//	body=DBody
-	//	'</Scenario>';
-	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
-		return pVSVSScenarioSection;
-	}
-	
-	public ParserRule getVSVSScenarioSectionRule() {
-		return getVSVSScenarioSectionAccess().getRule();
 	}
 	
 	//VSVSTestCase:

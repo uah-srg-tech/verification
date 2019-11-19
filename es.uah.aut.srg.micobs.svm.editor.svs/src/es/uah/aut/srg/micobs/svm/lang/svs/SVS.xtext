@@ -256,6 +256,18 @@ VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign:
 		(testDesigns+=VSVSTestDesign)+
 	'</TestingSpecificationDesign>';
 
+VSVSScenariosSection returns VSVSScenariosSection:
+{VSVSScenariosSection}
+	(scenarios+=VSVSScenarioSection)+;
+
+VSVSScenarioSection returns VSVSScenarioSection:
+	'<Scenario'
+		'name=' name=STRING
+		'id=' id=UINT_STRING
+		'>'
+		body=DBody
+	'</Scenario>';
+
 VSVSTestCases returns VSVSTestCases:
 	'<TestCases>'
 		'<General>' general=VSVSFixedSection '</General>'
@@ -315,17 +327,6 @@ VSVSTestDesign returns VSVSTestDesign:
 		'<FeaturesToBeTested>' featuresToBeTested=VSVSFixedSection '</FeaturesToBeTested>'
 		'<ApproachRefinements>' approachRefinements=VSVSFixedSection '</ApproachRefinements>'
 	'</TestDesign>';
-
-VSVSScenariosSection returns VSVSScenariosSection:
-	scenarios+=VSVSScenarioSection(scenarios+=VSVSScenarioSection)+;
-
-VSVSScenarioSection returns VSVSScenarioSection:
-	'<Scenario'
-		'name=' name=STRING
-		'id=' id=UINT_STRING
-		'>'
-		body=DBody
-	'</Scenario>';
 
 VSVSTestCase returns VSVSTestCase:
 	'<TestCase'

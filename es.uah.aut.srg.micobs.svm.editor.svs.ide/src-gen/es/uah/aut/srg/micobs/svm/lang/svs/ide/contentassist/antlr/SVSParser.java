@@ -125,6 +125,8 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTaskIdentificationAccess().getGroup(), "rule__VSVSTaskIdentification__Group__0");
 					put(grammarAccess.getVSVSTestingSpecificationDesignAccess().getGroup(), "rule__VSVSTestingSpecificationDesign__Group__0");
 					put(grammarAccess.getVSVSTestingSpecificationDesignAccess().getGroup_4(), "rule__VSVSTestingSpecificationDesign__Group_4__0");
+					put(grammarAccess.getVSVSScenariosSectionAccess().getGroup(), "rule__VSVSScenariosSection__Group__0");
+					put(grammarAccess.getVSVSScenarioSectionAccess().getGroup(), "rule__VSVSScenarioSection__Group__0");
 					put(grammarAccess.getVSVSTestCasesAccess().getGroup(), "rule__VSVSTestCases__Group__0");
 					put(grammarAccess.getVSVSTestProceduresAccess().getGroup(), "rule__VSVSTestProcedures__Group__0");
 					put(grammarAccess.getVSVSAnalysisInspectionReviewAccess().getGroup(), "rule__VSVSAnalysisInspectionReview__Group__0");
@@ -134,8 +136,6 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSDefinitionAccess().getGroup(), "rule__VSVSDefinition__Group__0");
 					put(grammarAccess.getVSVSAbbreviationAccess().getGroup(), "rule__VSVSAbbreviation__Group__0");
 					put(grammarAccess.getVSVSTestDesignAccess().getGroup(), "rule__VSVSTestDesign__Group__0");
-					put(grammarAccess.getVSVSScenariosSectionAccess().getGroup(), "rule__VSVSScenariosSection__Group__0");
-					put(grammarAccess.getVSVSScenarioSectionAccess().getGroup(), "rule__VSVSScenarioSection__Group__0");
 					put(grammarAccess.getVSVSTestCaseAccess().getGroup(), "rule__VSVSTestCase__Group__0");
 					put(grammarAccess.getVSVSTestCaseAccess().getGroup_25(), "rule__VSVSTestCase__Group_25__0");
 					put(grammarAccess.getVSVSTestProcedureAccess().getGroup(), "rule__VSVSTestProcedure__Group__0");
@@ -328,6 +328,10 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestingSpecificationDesignAccess().getGeneralAssignment_2(), "rule__VSVSTestingSpecificationDesign__GeneralAssignment_2");
 					put(grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosAssignment_4_1(), "rule__VSVSTestingSpecificationDesign__ScenariosAssignment_4_1");
 					put(grammarAccess.getVSVSTestingSpecificationDesignAccess().getTestDesignsAssignment_5(), "rule__VSVSTestingSpecificationDesign__TestDesignsAssignment_5");
+					put(grammarAccess.getVSVSScenariosSectionAccess().getScenariosAssignment_1(), "rule__VSVSScenariosSection__ScenariosAssignment_1");
+					put(grammarAccess.getVSVSScenarioSectionAccess().getNameAssignment_2(), "rule__VSVSScenarioSection__NameAssignment_2");
+					put(grammarAccess.getVSVSScenarioSectionAccess().getIdAssignment_4(), "rule__VSVSScenarioSection__IdAssignment_4");
+					put(grammarAccess.getVSVSScenarioSectionAccess().getBodyAssignment_6(), "rule__VSVSScenarioSection__BodyAssignment_6");
 					put(grammarAccess.getVSVSTestCasesAccess().getGeneralAssignment_2(), "rule__VSVSTestCases__GeneralAssignment_2");
 					put(grammarAccess.getVSVSTestCasesAccess().getTestCasesAssignment_4(), "rule__VSVSTestCases__TestCasesAssignment_4");
 					put(grammarAccess.getVSVSTestProceduresAccess().getGeneralAssignment_2(), "rule__VSVSTestProcedures__GeneralAssignment_2");
@@ -348,11 +352,6 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestDesignAccess().getGeneralAssignment_5(), "rule__VSVSTestDesign__GeneralAssignment_5");
 					put(grammarAccess.getVSVSTestDesignAccess().getFeaturesToBeTestedAssignment_8(), "rule__VSVSTestDesign__FeaturesToBeTestedAssignment_8");
 					put(grammarAccess.getVSVSTestDesignAccess().getApproachRefinementsAssignment_11(), "rule__VSVSTestDesign__ApproachRefinementsAssignment_11");
-					put(grammarAccess.getVSVSScenariosSectionAccess().getScenariosAssignment_0(), "rule__VSVSScenariosSection__ScenariosAssignment_0");
-					put(grammarAccess.getVSVSScenariosSectionAccess().getScenariosAssignment_1(), "rule__VSVSScenariosSection__ScenariosAssignment_1");
-					put(grammarAccess.getVSVSScenarioSectionAccess().getNameAssignment_2(), "rule__VSVSScenarioSection__NameAssignment_2");
-					put(grammarAccess.getVSVSScenarioSectionAccess().getIdAssignment_4(), "rule__VSVSScenarioSection__IdAssignment_4");
-					put(grammarAccess.getVSVSScenarioSectionAccess().getBodyAssignment_6(), "rule__VSVSScenarioSection__BodyAssignment_6");
 					put(grammarAccess.getVSVSTestCaseAccess().getNameAssignment_2(), "rule__VSVSTestCase__NameAssignment_2");
 					put(grammarAccess.getVSVSTestCaseAccess().getIdentifierAssignment_5(), "rule__VSVSTestCase__IdentifierAssignment_5");
 					put(grammarAccess.getVSVSTestCaseAccess().getInputsAssignment_8(), "rule__VSVSTestCase__InputsAssignment_8");

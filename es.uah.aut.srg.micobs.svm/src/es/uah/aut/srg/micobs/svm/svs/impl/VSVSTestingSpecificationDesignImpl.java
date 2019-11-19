@@ -300,7 +300,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
-		subsections.add((DAbstractSection) getScenarios());
+		if(getScenarios() != null)
+			subsections.add((DAbstractSection) getScenarios());
 		for(DFixedSection testDesign : getTestDesigns()) {
 			subsections.add(testDesign);
 		}
