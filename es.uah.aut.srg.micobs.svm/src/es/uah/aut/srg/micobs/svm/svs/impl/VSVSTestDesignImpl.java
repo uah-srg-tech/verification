@@ -11,15 +11,15 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
-
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.ECollections;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -386,7 +386,21 @@ public class VSVSTestDesignImpl extends DFixedSectionImpl implements VSVSTestDes
 	
 	@Override
 	public EList<DAbstractSection> getSubsections() {
-		return ECollections.emptyEList();
+		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
+		subsections.add((DAbstractSection) getGeneral());
+		subsections.add((DAbstractSection) getFeaturesToBeTested());
+		subsections.add((DAbstractSection) getApproachRefinements());
+		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		for(DAbstractSection subsection : getSubsections()) {
+			objects.addAll(((VSVSFixedSection)subsection).getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSTestDesignImpl

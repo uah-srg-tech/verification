@@ -12,7 +12,6 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
@@ -362,27 +361,15 @@ public abstract class VSRSAbstractRequirementSectionImpl extends VTraceableDocum
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
 		if(getSectionDescription() != null) {
-			for(DBodyContent bodyContent : getSectionDescription().getBodyContent()) {
-				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
-						(((DReferenceableObject)bodyContent).getName() != null)) {
-					objects.add((DReferenceableObject)bodyContent);
-				}
-			}
+			objects.addAll(getSectionDescription().getReferenceableObjects(ReferenceableObjectType));
 		}
 		for(DAbstractSection subsection : getSubsections()) {
-			VSRSInstantiableRequirementSection instReqSection = (VSRSInstantiableRequirementSection)subsection;
-			EList<DReferenceableObject> subObjects = instReqSection.getReferenceableObjects(ReferenceableObjectType);
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(((VSRSInstantiableRequirementSection)subsection).getReferenceableObjects(ReferenceableObjectType));
 		}
 		for(VSRSDocumentItem item : getSrsItems()) {
-			
-			EList<DReferenceableObject> subObjects = item.getReferenceableObjects(ReferenceableObjectType);
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(item.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;
 	}
+	
 } //VSRSAbstractRequirementSectionImpl

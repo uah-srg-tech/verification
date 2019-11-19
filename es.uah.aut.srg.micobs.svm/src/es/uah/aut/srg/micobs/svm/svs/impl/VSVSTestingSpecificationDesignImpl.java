@@ -12,8 +12,8 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
-
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
@@ -305,6 +305,18 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 			subsections.add(testDesign);
 		}
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getGeneral().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getScenarios().getReferenceableObjects(ReferenceableObjectType));
+		for(VSVSTestDesign testDesign : getTestDesigns()) {
+			objects.addAll(testDesign.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSTestingSpecificationDesignImpl

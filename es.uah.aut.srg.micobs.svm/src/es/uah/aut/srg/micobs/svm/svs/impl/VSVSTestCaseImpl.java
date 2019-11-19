@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
@@ -24,6 +25,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
@@ -650,5 +652,18 @@ public class VSVSTestCaseImpl extends VValidationDocumentAbstractItemImpl implem
 		return ECollections.emptyEList();
 	}
 
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getIdentifier().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getInputs().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getOutputs().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getPassFailCriteria().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getEnvironmentalNeeds().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getSpecialConstraints().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getInterfaceDependencies().getReferenceableObjects(ReferenceableObjectType));
+		return objects;
+	}
 
 } //VSVSTestCaseImpl

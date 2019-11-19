@@ -187,13 +187,22 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT__SECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__PARAGRAPHS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+	int VSRS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -202,7 +211,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
+	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -211,7 +220,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
+	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
@@ -220,7 +229,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
+	int VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Software Overview Section</b></em>' containment reference.
@@ -229,7 +238,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
+	int VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Requirements Section</b></em>' containment reference.
@@ -238,7 +247,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
+	int VSRS_DOCUMENT__REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Logical Models Section</b></em>' containment reference.
@@ -247,7 +256,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
+	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Document</em>' class.
@@ -256,7 +265,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
+	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The number of operations of the '<em>VSRS Document</em>' class.

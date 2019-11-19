@@ -12,7 +12,6 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSFixedSection;
@@ -238,26 +237,16 @@ public class VSRSFixedSectionImpl extends DFixedSectionImpl implements VSRSFixed
 		}
 		return subsections;
 	}
-	
+
+	@Override
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		
 		if(getBody() != null) {
-			for(DBodyContent bodyContent : getBody().getBodyContent()) {
-				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
-						(((DReferenceableObject)bodyContent).getName() != null)) {
-					objects.add((DReferenceableObject)bodyContent);
-				}
-			}
+			objects.addAll(getBody().getReferenceableObjects(ReferenceableObjectType));
 		}
 		for(VSRSInstantiableSection subsection : getSrsInstatiableSubsections()) {
-			VSRSInstantiableSection instSubsection = (VSRSInstantiableSection)subsection;
-			EList<DReferenceableObject> subObjects = instSubsection.getReferenceableObjects(ReferenceableObjectType);
-
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(subsection.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;
 	}

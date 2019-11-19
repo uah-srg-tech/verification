@@ -26,12 +26,6 @@
         lowerBound="1" eType="#//VSVSTestPlatformRequirements" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="additionalInformationSection"
         lowerBound="1" eType="#//VSVSAdditionalInformation" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="svsFigures" upperBound="-1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DAbstractFigure"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="svsTables" upperBound="-1"
-        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DAbstractTable"
-        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSInstantiableSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DInstantiableSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"

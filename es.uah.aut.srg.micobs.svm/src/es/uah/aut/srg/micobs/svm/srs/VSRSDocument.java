@@ -13,7 +13,7 @@ package es.uah.aut.srg.micobs.svm.srs;
 import org.eclipse.emf.common.util.EList;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 
 /**
@@ -221,6 +221,6 @@ public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
 	 */
 	void setLogicalModelsSection(VSRSLogicalModels value);
 	
-	EList<DParagraph> getParagraphs();
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSRSDocument

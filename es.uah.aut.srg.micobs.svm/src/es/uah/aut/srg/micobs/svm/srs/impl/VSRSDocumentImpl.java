@@ -56,6 +56,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getSections <em>Sections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getParagraphs <em>Paragraphs</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
@@ -160,7 +161,6 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
 		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
-
 		for(DApplicableDocument appdoc : getApplicableDocumentsSection().getApplicableDocuments()) {
 			appdocs.add(appdoc);
 		}
@@ -170,16 +170,15 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 	@Override
 	public EList<DReferenceDocument> getReferenceDocuments() {
 		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
-
 		for(DReferenceDocument refdoc : getReferenceDocumentsSection().getReferenceDocuments()) {
 			refdocs.add(refdoc);
 		}
 		return refdocs;
 	}
 
-	protected EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-
 		objects.addAll(getIntroductionSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getSoftwareOverviewSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getRequirementsSection().getReferenceableObjects(ReferenceableObjectType));
@@ -601,6 +600,8 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return getTables();
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				return getSections();
+			case srsPackage.VSRS_DOCUMENT__PARAGRAPHS:
+				return getParagraphs();
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				return getIntroductionSection();
 			case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -647,6 +648,10 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				getSections().clear();
 				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
+				return;
+			case srsPackage.VSRS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
+				getParagraphs().addAll((Collection<? extends DParagraph>)newValue);
 				return;
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSRSIntroduction)newValue);
@@ -696,6 +701,9 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				getSections().clear();
 				return;
+			case srsPackage.VSRS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
+				return;
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSRSIntroduction)null);
 				return;
@@ -739,6 +747,8 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				return !getTables().isEmpty();
 			case srsPackage.VSRS_DOCUMENT__SECTIONS:
 				return !getSections().isEmpty();
+			case srsPackage.VSRS_DOCUMENT__PARAGRAPHS:
+				return !getParagraphs().isEmpty();
 			case srsPackage.VSRS_DOCUMENT__INTRODUCTION_SECTION:
 				return introductionSection != null;
 			case srsPackage.VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -771,6 +781,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				case srsPackage.VSRS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
 				case srsPackage.VSRS_DOCUMENT__TABLES: return doctplPackage.DDOCUMENT_TEMPLATE__TABLES;
 				case srsPackage.VSRS_DOCUMENT__SECTIONS: return doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS;
+				case srsPackage.VSRS_DOCUMENT__PARAGRAPHS: return doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS;
 				default: return -1;
 			}
 		}
@@ -791,6 +802,7 @@ public class VSRSDocumentImpl extends VTraceableDocumentImpl implements VSRSDocu
 				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return srsPackage.VSRS_DOCUMENT__FIGURES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__TABLES: return srsPackage.VSRS_DOCUMENT__TABLES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS: return srsPackage.VSRS_DOCUMENT__SECTIONS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS: return srsPackage.VSRS_DOCUMENT__PARAGRAPHS;
 				default: return -1;
 			}
 		}

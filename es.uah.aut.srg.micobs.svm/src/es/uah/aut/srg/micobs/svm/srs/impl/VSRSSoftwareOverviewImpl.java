@@ -396,14 +396,8 @@ public class VSRSSoftwareOverviewImpl extends DFixedSectionImpl implements VSRSS
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		
 		for(DAbstractSection subsection : getSubsections()) {
-			VSRSFixedSection fixedSubsection = (VSRSFixedSection)subsection;
-			EList<DReferenceableObject> subObjects = fixedSubsection.getReferenceableObjects(ReferenceableObjectType);
-
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(((VSRSFixedSection)subsection).getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;
 	}

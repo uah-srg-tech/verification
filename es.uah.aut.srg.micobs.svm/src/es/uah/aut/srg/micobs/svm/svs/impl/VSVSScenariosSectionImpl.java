@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
@@ -165,6 +166,16 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 			subsections.add(scenario);
 		}
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		for(VSVSScenarioSection scenario : getScenarios()) {
+			objects.addAll(scenario.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSScenariosSectionImpl

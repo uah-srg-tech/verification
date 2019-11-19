@@ -15,7 +15,9 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
@@ -45,8 +47,6 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -61,6 +61,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getSections <em>Sections</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getParagraphs <em>Paragraphs</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
@@ -73,8 +74,6 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getAnalysisInspectionReviewSection <em>Analysis Inspection Review Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTestPlatformRequirementsSection <em>Test Platform Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getAdditionalInformationSection <em>Additional Information Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getSvsFigures <em>Svs Figures</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getSvsTables <em>Svs Tables</em>}</li>
  * </ul>
  *
  * @generated
@@ -201,26 +200,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	protected VSVSAdditionalInformation additionalInformationSection;
 
 	/**
-	 * The cached value of the '{@link #getSvsFigures() <em>Svs Figures</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSvsFigures()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DAbstractFigure> svsFigures;
-
-	/**
-	 * The cached value of the '{@link #getSvsTables() <em>Svs Tables</em>}' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSvsTables()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<DAbstractTable> svsTables;
-
-	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -242,7 +221,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
 		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
-
 		for(DApplicableDocument appdoc : getApplicableDocumentsSection().getApplicableDocuments()) {
 			appdocs.add(appdoc);
 		}
@@ -252,7 +230,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public EList<DReferenceDocument> getReferenceDocuments() {
 		EList<DReferenceDocument> refdocs = new BasicEList<DReferenceDocument>();
-
 		for(DReferenceDocument refdoc : getReferenceDocumentsSection().getReferenceDocuments()) {
 			refdocs.add(refdoc);
 		}
@@ -260,23 +237,51 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	}
 
 	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getIntroductionSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getSoftwareOverviewSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTaskIdentificationSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTestingSpecificationDesignSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTestCasesSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTestProceduresSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTestPlatformRequirementsSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getAdditionalInformationSection().getReferenceableObjects(ReferenceableObjectType));
+		return objects;
+	}
+	
+	@Override
 	public EList<DAbstractFigure> getFigures() {
 		EList<DAbstractFigure> figures = new BasicEList<DAbstractFigure>();
-
-		for(DAbstractFigure figure : getSvsFigures()) {
-			figures.add(figure);
-		}
+		EList<DReferenceableObject> objects = getReferenceableObjects("DFigureFromFile");
+		for(DReferenceableObject object : objects) {
+			figures.add((DAbstractFigure)object);
+		};
 		return figures;
 	}
 
 	@Override
 	public EList<DAbstractTable> getTables() {
 		EList<DAbstractTable> tables = new BasicEList<DAbstractTable>();
-
-		for(DAbstractTable table : getSvsTables()) {
-			tables.add(table);
-		}
+		EList<DReferenceableObject> basicObjects = getReferenceableObjects("DBasicTable");
+		for(DReferenceableObject object : basicObjects) {
+			tables.add((DAbstractTable)object);
+		};
+		EList<DReferenceableObject> fromFileObjects = getReferenceableObjects("DTableFromFile");
+		for(DReferenceableObject object : fromFileObjects) {
+			tables.add((DAbstractTable)object);
+		};
 		return tables;
+	}
+
+	@Override
+	public EList<DParagraph> getParagraphs() {
+		EList<DParagraph> paragraphs = new BasicEList<DParagraph>();
+		EList<DReferenceableObject> objects = getReferenceableObjects("DParagraph");
+		for(DReferenceableObject object : objects) {
+			paragraphs.add((DParagraph)object);
+		};
+		return paragraphs;
 	}
 
 	@Override
@@ -824,30 +829,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<DAbstractFigure> getSvsFigures() {
-		if (svsFigures == null) {
-			svsFigures = new EObjectContainmentEList<DAbstractFigure>(DAbstractFigure.class, this, svsPackage.VSVS_DOCUMENT__SVS_FIGURES);
-		}
-		return svsFigures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EList<DAbstractTable> getSvsTables() {
-		if (svsTables == null) {
-			svsTables = new EObjectContainmentEList<DAbstractTable>(DAbstractTable.class, this, svsPackage.VSVS_DOCUMENT__SVS_TABLES);
-		}
-		return svsTables;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -875,10 +856,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return basicSetTestPlatformRequirementsSection(null, msgs);
 			case svsPackage.VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION:
 				return basicSetAdditionalInformationSection(null, msgs);
-			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
-				return ((InternalEList<?>)getSvsFigures()).basicRemove(otherEnd, msgs);
-			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
-				return ((InternalEList<?>)getSvsTables()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -901,6 +878,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return getTables();
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				return getSections();
+			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
+				return getParagraphs();
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				return getIntroductionSection();
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -925,10 +904,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return getTestPlatformRequirementsSection();
 			case svsPackage.VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION:
 				return getAdditionalInformationSection();
-			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
-				return getSvsFigures();
-			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
-				return getSvsTables();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -961,6 +936,10 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				getSections().clear();
 				getSections().addAll((Collection<? extends DAbstractSection>)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
+				getParagraphs().addAll((Collection<? extends DParagraph>)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)newValue);
@@ -998,14 +977,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			case svsPackage.VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION:
 				setAdditionalInformationSection((VSVSAdditionalInformation)newValue);
 				return;
-			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
-				getSvsFigures().clear();
-				getSvsFigures().addAll((Collection<? extends DAbstractFigure>)newValue);
-				return;
-			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
-				getSvsTables().clear();
-				getSvsTables().addAll((Collection<? extends DAbstractTable>)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -1032,6 +1003,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return;
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				getSections().clear();
+				return;
+			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
+				getParagraphs().clear();
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)null);
@@ -1069,12 +1043,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			case svsPackage.VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION:
 				setAdditionalInformationSection((VSVSAdditionalInformation)null);
 				return;
-			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
-				getSvsFigures().clear();
-				return;
-			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
-				getSvsTables().clear();
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -1097,6 +1065,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return !getTables().isEmpty();
 			case svsPackage.VSVS_DOCUMENT__SECTIONS:
 				return !getSections().isEmpty();
+			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
+				return !getParagraphs().isEmpty();
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				return introductionSection != null;
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -1121,10 +1091,6 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return testPlatformRequirementsSection != null;
 			case svsPackage.VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION:
 				return additionalInformationSection != null;
-			case svsPackage.VSVS_DOCUMENT__SVS_FIGURES:
-				return svsFigures != null && !svsFigures.isEmpty();
-			case svsPackage.VSVS_DOCUMENT__SVS_TABLES:
-				return svsTables != null && !svsTables.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -1143,6 +1109,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				case svsPackage.VSVS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
 				case svsPackage.VSVS_DOCUMENT__TABLES: return doctplPackage.DDOCUMENT_TEMPLATE__TABLES;
 				case svsPackage.VSVS_DOCUMENT__SECTIONS: return doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS;
+				case svsPackage.VSVS_DOCUMENT__PARAGRAPHS: return doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS;
 				default: return -1;
 			}
 		}
@@ -1163,6 +1130,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return svsPackage.VSVS_DOCUMENT__FIGURES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__TABLES: return svsPackage.VSVS_DOCUMENT__TABLES;
 				case doctplPackage.DDOCUMENT_TEMPLATE__SECTIONS: return svsPackage.VSVS_DOCUMENT__SECTIONS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS: return svsPackage.VSVS_DOCUMENT__PARAGRAPHS;
 				default: return -1;
 			}
 		}

@@ -10,12 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
-
-import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 import org.eclipse.emf.common.util.EList;
+
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 
 /**
  * <!-- begin-user-doc -->
@@ -38,8 +37,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getAnalysisInspectionReviewSection <em>Analysis Inspection Review Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getTestPlatformRequirementsSection <em>Test Platform Requirements Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getAdditionalInformationSection <em>Additional Information Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsFigures <em>Svs Figures</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsTables <em>Svs Tables</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSDocument()
@@ -359,36 +356,6 @@ public interface VSVSDocument extends VValidationDocument, DDocumentTemplate {
 	 */
 	void setAdditionalInformationSection(VSVSAdditionalInformation value);
 
-	/**
-	 * Returns the value of the '<em><b>Svs Figures</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractFigure}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Svs Figures</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Svs Figures</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSDocument_SvsFigures()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DAbstractFigure> getSvsFigures();
-
-	/**
-	 * Returns the value of the '<em><b>Svs Tables</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractTable}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Svs Tables</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Svs Tables</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSDocument_SvsTables()
-	 * @model containment="true"
-	 * @generated
-	 */
-	EList<DAbstractTable> getSvsTables();
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSVSDocument

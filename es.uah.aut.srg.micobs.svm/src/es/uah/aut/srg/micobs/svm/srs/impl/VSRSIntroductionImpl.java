@@ -172,14 +172,8 @@ public class VSRSIntroductionImpl extends DFixedSectionImpl implements VSRSIntro
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		
 		for(VSRSInstantiableSection subsection : getSrsInstatiableSubsections()) {
-			VSRSInstantiableSection instSubsection = (VSRSInstantiableSection)subsection;
-			EList<DReferenceableObject> subObjects = instSubsection.getReferenceableObjects(ReferenceableObjectType);
-
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(subsection.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;
 	}

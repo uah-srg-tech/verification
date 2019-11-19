@@ -11,7 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentFixedGroup;
 
 import org.eclipse.emf.common.util.EList;
@@ -75,5 +75,7 @@ public interface VSVSTestCases extends VValidationDocumentFixedGroup, DFixedSect
 	 * @generated
 	 */
 	EList<VSVSTestCase> getTestCases();
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSVSTestCases

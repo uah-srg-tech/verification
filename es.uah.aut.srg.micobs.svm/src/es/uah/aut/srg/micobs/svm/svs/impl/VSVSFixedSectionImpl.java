@@ -12,9 +12,8 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
-
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
@@ -237,6 +236,20 @@ public class VSVSFixedSectionImpl extends DFixedSectionImpl implements VSVSFixed
 			subsections.add(subsection);
 		}
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		
+		if(getBody() != null) {
+			objects.addAll(getBody().getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(VSVSInstantiableSection subsection : getSvsInstatiableSubsections()) {
+			objects.addAll(subsection.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSFixedSectionImpl

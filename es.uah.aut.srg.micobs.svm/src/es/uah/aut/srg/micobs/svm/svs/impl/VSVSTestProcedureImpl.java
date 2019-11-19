@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
@@ -558,6 +559,16 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add(getProcedureSteps());
 		return subsections;
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getIdentifier().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getPurpose().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getTestScript().getReferenceableObjects(ReferenceableObjectType));
+		return objects;
 	}
 
 } //VSVSTestProcedureImpl

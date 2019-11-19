@@ -24,6 +24,7 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
@@ -138,5 +139,30 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		} else {
 			return null;
 		}
+	}
+
+	public IScope scope_DReferenceableObject(VSVSDocument svsDoc, EReference reference) {
+
+		Collection<DReferenceableObject> objects = new HashSet<DReferenceableObject>();
+		
+		objects.addAll(svsDoc.getApplicableDocuments());
+		objects.addAll(svsDoc.getReferenceDocuments());
+		objects.addAll(svsDoc.getFigures());
+		objects.addAll(svsDoc.getTables());
+		objects.addAll(svsDoc.getParagraphs());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(objects, new Function<DReferenceableObject, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(DReferenceableObject from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 }

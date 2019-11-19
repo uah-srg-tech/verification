@@ -12,9 +12,8 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
-
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
@@ -22,6 +21,7 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+import org.eclipse.emf.common.util.BasicEList;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
@@ -231,6 +231,19 @@ public class VSVSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		return ECollections.emptyEList();
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+		
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		if(getBody() != null) {
+			objects.addAll(getBody().getReferenceableObjects(ReferenceableObjectType));
+		}
+		for(VSVSInstantiableSection instSubsection : getSvsInstatiableSubsections()) {
+			objects.addAll(instSubsection.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSInstantiableSectionImpl

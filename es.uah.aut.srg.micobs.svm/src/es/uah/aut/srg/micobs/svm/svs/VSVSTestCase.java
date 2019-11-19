@@ -10,8 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import org.eclipse.emf.common.util.EList;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocumentAbstractItem;
 
 /**
@@ -218,5 +220,7 @@ public interface VSVSTestCase extends VValidationDocumentAbstractItem, DFixedSec
 	 * @generated
 	 */
 	void setInterfaceDependencies(VSVSTestInfo value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSVSTestCase

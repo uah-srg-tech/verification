@@ -188,13 +188,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_DOCUMENT__SECTIONS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__PARAGRAPHS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 5;
+
+	/**
 	 * The feature id for the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__INTRODUCTION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 5;
+	int VSVS_DOCUMENT__INTRODUCTION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -203,7 +212,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 6;
+	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -212,7 +221,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 7;
+	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
@@ -221,7 +230,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 8;
+	int VSVS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Software Overview Section</b></em>' containment reference.
@@ -230,7 +239,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 9;
+	int VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Task Identification Section</b></em>' containment reference.
@@ -239,7 +248,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 10;
+	int VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Testing Specification Design Section</b></em>' containment reference.
@@ -248,7 +257,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TESTING_SPECIFICATION_DESIGN_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 11;
+	int VSVS_DOCUMENT__TESTING_SPECIFICATION_DESIGN_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 12;
 
 	/**
 	 * The feature id for the '<em><b>Test Cases Section</b></em>' containment reference.
@@ -257,7 +266,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_CASES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 12;
+	int VSVS_DOCUMENT__TEST_CASES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Test Procedures Section</b></em>' containment reference.
@@ -266,7 +275,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_PROCEDURES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 13;
+	int VSVS_DOCUMENT__TEST_PROCEDURES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Analysis Inspection Review Section</b></em>' containment reference.
@@ -275,7 +284,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__ANALYSIS_INSPECTION_REVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 14;
+	int VSVS_DOCUMENT__ANALYSIS_INSPECTION_REVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Test Platform Requirements Section</b></em>' containment reference.
@@ -284,7 +293,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_PLATFORM_REQUIREMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 15;
+	int VSVS_DOCUMENT__TEST_PLATFORM_REQUIREMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Additional Information Section</b></em>' containment reference.
@@ -293,25 +302,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 16;
-
-	/**
-	 * The feature id for the '<em><b>Svs Figures</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__SVS_FIGURES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 17;
-
-	/**
-	 * The feature id for the '<em><b>Svs Tables</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__SVS_TABLES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 18;
+	int VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Document</em>' class.
@@ -320,7 +311,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT_FEATURE_COUNT = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 19;
+	int VSVS_DOCUMENT_FEATURE_COUNT = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The number of operations of the '<em>VSVS Document</em>' class.
@@ -3583,28 +3574,6 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSDocument_AdditionalInformationSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsFigures <em>Svs Figures</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Svs Figures</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsFigures()
-	 * @see #getVSVSDocument()
-	 * @generated
-	 */
-	EReference getVSVSDocument_SvsFigures();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsTables <em>Svs Tables</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Svs Tables</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getSvsTables()
-	 * @see #getVSVSDocument()
-	 * @generated
-	 */
-	EReference getVSVSDocument_SvsTables();
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection <em>VSVS Instantiable Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5653,22 +5622,6 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = eINSTANCE.getVSVSDocument_AdditionalInformationSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Svs Figures</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_DOCUMENT__SVS_FIGURES = eINSTANCE.getVSVSDocument_SvsFigures();
-
-		/**
-		 * The meta object literal for the '<em><b>Svs Tables</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_DOCUMENT__SVS_TABLES = eINSTANCE.getVSVSDocument_SvsTables();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInstantiableSectionImpl <em>VSVS Instantiable Section</em>}' class.

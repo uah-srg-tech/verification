@@ -12,7 +12,6 @@ package es.uah.aut.srg.micobs.svm.srs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DBodyContent;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.srs.VSRSInstantiableSection;
@@ -236,19 +235,10 @@ public class VSRSInstantiableSectionImpl extends DInstantiableSectionImpl implem
 		
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
 		if(getBody() != null) {
-			for(DBodyContent bodyContent : getBody().getBodyContent()) {
-				if((bodyContent.eClass().getName() == ReferenceableObjectType) &&
-						(((DReferenceableObject)bodyContent).getName() != null)) {
-					objects.add((DReferenceableObject)bodyContent);
-				}
-			}
+			objects.addAll(getBody().getReferenceableObjects(ReferenceableObjectType));
 		}
 		for(VSRSInstantiableSection instSubsection : getSrsInstatiableSubsections()) {
-			EList<DReferenceableObject> subObjects = instSubsection.getReferenceableObjects(ReferenceableObjectType);
-
-			for(DReferenceableObject object : subObjects) {
-				objects.add(object);
-			};
+			objects.addAll(instSubsection.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;
 	}

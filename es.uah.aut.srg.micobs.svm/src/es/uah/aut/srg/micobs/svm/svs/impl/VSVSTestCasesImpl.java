@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
@@ -309,6 +310,17 @@ public class VSVSTestCasesImpl extends VValidationDocumentFixedGroupImpl impleme
 	@Override
 	public VValidationDocument basicGetDoc() {
 		return (VValidationDocument)eContainer();
+	}
+
+	@Override
+	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
+
+		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
+		objects.addAll(getGeneral().getReferenceableObjects(ReferenceableObjectType));
+		for(VSVSTestCase testCase : getTestCases()) {
+			objects.addAll(testCase.getReferenceableObjects(ReferenceableObjectType));
+		}
+		return objects;
 	}
 
 } //VSVSTestCasesImpl

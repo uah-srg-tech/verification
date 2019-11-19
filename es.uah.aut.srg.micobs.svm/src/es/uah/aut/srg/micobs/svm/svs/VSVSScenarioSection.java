@@ -10,8 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
+import org.eclipse.emf.common.util.EList;
+
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -109,5 +112,7 @@ public interface VSVSScenarioSection extends DFixedSection {
 	 * @generated
 	 */
 	void setBody(DBody value);
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSVSScenarioSection

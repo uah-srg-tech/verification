@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -100,5 +101,7 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	 * @generated
 	 */
 	EList<VSVSTestDesign> getTestDesigns();
+
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
 } // VSVSTestingSpecificationDesign
