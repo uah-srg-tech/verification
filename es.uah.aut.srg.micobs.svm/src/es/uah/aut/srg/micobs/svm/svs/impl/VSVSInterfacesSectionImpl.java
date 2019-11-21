@@ -11,47 +11,53 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
+
 import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import java.util.Collection;
-import org.eclipse.emf.common.util.BasicEList;
+
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.InternalEObject;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Scenario Section</b></em>'.
+ * An implementation of the model object '<em><b>VSVS Interfaces Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl#getInterface <em>Interface</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfacesSectionImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl implements VSVSScenarioSection {
+public class VSVSInterfacesSectionImpl extends DFixedSectionImpl implements VSVSInterfacesSection {
 	/**
-	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getInterface()
+	 * @see #getInterfaces()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSVSInterface> interface_;
+	protected EList<VSVSInterface> interfaces;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSScenarioSectionImpl() {
+	protected VSVSInterfacesSectionImpl() {
 		super();
 	}
 
@@ -62,7 +68,7 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_SCENARIO_SECTION;
+		return svsPackage.Literals.VSVS_INTERFACES_SECTION;
 	}
 
 	/**
@@ -70,11 +76,25 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSVSInterface> getInterface() {
-		if (interface_ == null) {
-			interface_ = new EObjectResolvingEList<VSVSInterface>(VSVSInterface.class, this, svsPackage.VSVS_SCENARIO_SECTION__INTERFACE);
+	public EList<VSVSInterface> getInterfaces() {
+		if (interfaces == null) {
+			interfaces = new EObjectContainmentEList<VSVSInterface>(VSVSInterface.class, this, svsPackage.VSVS_INTERFACES_SECTION__INTERFACES);
 		}
-		return interface_;
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case svsPackage.VSVS_INTERFACES_SECTION__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -85,8 +105,8 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIO_SECTION__INTERFACE:
-				return getInterface();
+			case svsPackage.VSVS_INTERFACES_SECTION__INTERFACES:
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -100,9 +120,9 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIO_SECTION__INTERFACE:
-				getInterface().clear();
-				getInterface().addAll((Collection<? extends VSVSInterface>)newValue);
+			case svsPackage.VSVS_INTERFACES_SECTION__INTERFACES:
+				getInterfaces().clear();
+				getInterfaces().addAll((Collection<? extends VSVSInterface>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -116,8 +136,8 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIO_SECTION__INTERFACE:
-				getInterface().clear();
+			case svsPackage.VSVS_INTERFACES_SECTION__INTERFACES:
+				getInterfaces().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -131,8 +151,8 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIO_SECTION__INTERFACE:
-				return interface_ != null && !interface_.isEmpty();
+			case svsPackage.VSVS_INTERFACES_SECTION__INTERFACES:
+				return interfaces != null && !interfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -142,14 +162,4 @@ public class VSVSScenarioSectionImpl extends VSVSInstantiableSectionImpl impleme
 		return ECollections.emptyEList();
 	}
 
-	@Override
-	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
-
-		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		if(getBody() != null) {
-			objects.addAll(getBody().getReferenceableObjects(ReferenceableObjectType));
-		}
-		return objects;
-	}
-
-} //VSVSScenarioSectionImpl
+} //VSVSInterfacesSectionImpl

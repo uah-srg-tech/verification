@@ -252,9 +252,21 @@ VSVSTaskIdentification returns VSVSTaskIdentification:
 VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign:
 	'<TestingSpecificationDesign>'
 		'<General>' general=VSVSFixedSection '</General>'
-		('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
+		'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
+		'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
 		(testDesigns+=VSVSTestDesign)+
 	'</TestingSpecificationDesign>';
+
+VSVSInterfacesSection returns VSVSInterfacesSection:
+{VSVSInterfacesSection}
+	(interfaces+=VSVSInterface)+;
+
+VSVSInterface returns VSVSInterface:
+	'<Interface'
+		'name=' name=STRING
+		'>'
+		description=DRun
+	'</Interface>';
 
 VSVSScenariosSection returns VSVSScenariosSection:
 {VSVSScenariosSection}
@@ -263,8 +275,8 @@ VSVSScenariosSection returns VSVSScenariosSection:
 VSVSScenarioSection returns VSVSScenarioSection:
 	'<Scenario'
 		'name=' name=STRING
-		'id=' id=UINT_STRING
 		'>'
+		('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
 		body=DBody
 	'</Scenario>';
 
@@ -348,7 +360,7 @@ VSVSTestProcedure returns VSVSTestProcedure:
 		'>'
 		'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
 		'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
-		('<Scenario' 'ref='scenario=[VSVSScenarioSection|STRING] '/>')?
+		'<Scenario' 'ref='scenario=[VSVSScenarioSection|STRING] '/>'
 		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 		procedureSteps=VSVSProcedureSteps
 		'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
@@ -360,271 +372,59 @@ VSVSProcedureSteps returns VSVSProcedureSteps:
 		(step+=VSVSProcedureStep)+
 		'</ProcedureSteps>';
 
+enum VSVSTimeUnit returns VSVSTimeUnit:
+	miliseconds = '"miliseconds"' | seconds = '"seconds"'
+;
+
 VSVSProcedureStep returns VSVSProcedureStep:
-	'<step'
+	'<Step'
 		'name=' name=STRING
-		'id=' id=UINT_STRING
 		('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
 		('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])?
-		'mode=' mode=VSVSStepMode
-		('replays=' replays=STRING)?
+		('replays=' replays=UINT_STRING)?
 		'>'
 		inputs=VSVSStepInputs
 		(outputs=VSVSStepOutputs)?
-		(specialPackets=VSVSStepSpecialPackets)?
-		(concurrent_steps=VSVSStepConcurrentSteps)?
-	'</step>'
-;
-
-enum VSVSStepMode returns VSVSStepMode:
-	continuous = '"continuous"' | manual = '"manual"' |
-	concurrent = '"concurrent"'
+	'</Step>'
 ;
 
 VSVSStepInputs returns VSVSStepInputs:
 	{VSVSStepInputs}
-	'<inputs>'
+	'<Inputs>'
 		(input+=VSVSStepInput)+
-	'</inputs>'
-;
-
-VSVSStepOutputs returns VSVSStepOutputs:
-	'<outputs'
-		'checkmode=' checkmode=VSVSStepCheckmode
-		'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-		'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
-		'>'
-		(output+=VSVSStepOutput)+
-	'</outputs>'
-;
-
-VSVSStepSpecialPackets returns VSVSStepSpecialPackets:
-	{VSVSStepSpecialPackets}
-	'<specialPackets>'
-		((enable+=VSVSStepEnable) |
-		 (disable+=VSVSStepDisable) |
-		 (enable_print+=VSVSStepEnablePrint) |
-		 (disable_print+=VSVSStepDisablePrint))+
-	'</specialPackets>'
-;
-
-VSVSStepConcurrentSteps returns VSVSStepConcurrentSteps:
-	'<concurrent_steps'
-		'nextStep=' nextStep=VSVSStepNextStep
-		'>'
-		(concurrent_step+=VSVSStepConcurrentStep)+ 
-	'</concurrent_steps>'
+	'</Inputs>'
 ;
 
 VSVSStepInput returns VSVSStepInput:
-	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
-
-VSVSStepInputLevel3 returns VSVSStepInputLevel3:
-	'<input_level_3'
+	'<Input'
 		'name=' name=STRING
-		'ifRef=' ifRef=UINT_STRING
+		'interface=' interface=[VSVSInterface|STRING]
 		'delay_value=' delay_value=UINT_STRING
-		'delay_unit=' delay_unit=VSVSStepUnit
-		'>'
-		('<level3' level3=[format::TMTCIFFormatFormat|STRING] '/>')? 
-		'<app_to_level3' app_to_level3=[export::TMTCIFExportExport|STRING] '/>'
-		('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level3_to_level2' 'export=' level3_to_level2=[export::TMTCIFExportExport|STRING] '/>')?
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_to_level1' 'export=' level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')?
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	'</input_level_3>'
+		'delay_unit=' delay_unit=VSVSTimeUnit
+		'/>'
 ;
 
-VSVSStepInputLevel2 returns VSVSStepInputLevel2:
-	'<input_level_2'
-		'name=' name=STRING
-		'ifRef=' ifRef=UINT_STRING
-		'delay_value=' delay_value=UINT_STRING
-		'delay_unit=' delay_unit=VSVSStepUnit
-		'>'
-		('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		'<app_to_level2' 'export=' app_to_level2=[export::TMTCIFExportExport|STRING] '/>'
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_to_level1' 'export=' level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')?
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	'</input_level_2>'
-;
-
-VSVSStepInputLevel1 returns VSVSStepInputLevel1:
-	'<input_level_1'
-		'name=' name=STRING
-		'ifRef=' ifRef=UINT_STRING
-		'delay_value=' delay_value=UINT_STRING
-		'delay_unit=' delay_unit=VSVSStepUnit
-		'>'
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		'<app_to_level1' 'export=' app_to_level1=[export::TMTCIFExportExport|STRING] '/>'
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	'</input_level_1>'
-;
-
-VSVSStepInputLevel0 returns VSVSStepInputLevel0:
-	'<input_level_0'
-		'name=' name=STRING
-		'ifRef=' ifRef=UINT_STRING
-		'delay_value=' delay_value=UINT_STRING
-		'delay_unit=' delay_unit=VSVSStepUnit
-		'>'
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		'<app_to_level0' 'export=' app_to_level0=[export::TMTCIFExportExport|STRING] '/>'
-	'</input_level_0>'
-;
-
-enum VSVSStepUnit returns VSVSStepUnit:
-	miliseconds = '"miliseconds"' | seconds = '"seconds"'
-;
-
-enum VSVSStepCheckmode returns VSVSStepCheckmode:
+enum VSVSStepOutputsCheckmode returns VSVSStepOutputsCheckmode:
 	all = '"all"' | allunsorted = '"allunsorted"' | any = '"any"'
 ;
 
+VSVSStepOutputs returns VSVSStepOutputs:
+	'<Outputs'
+		'checkmode=' checkmode=VSVSStepOutputsCheckmode
+		'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
+		'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
+		'>'
+		(output+=VSVSStepOutput)+
+	'</Outputs>'
+;
+
 VSVSStepOutput returns VSVSStepOutput:
-	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
-	
-VSVSStepOutputLevel3 returns VSVSStepOutputLevel3:
-	'<output_level_3'
+	'<Output'
 		'name=' name=STRING
-		'id=' id=UINT_STRING
-		'ifRef=' ifRef=UINT_STRING
-		('optional=' optional=UINT_STRING)?
-		'>'
-		('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		level3_filter=VSVSStepLevel3Filter
-		('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
-		level2_filter=VSVSStepLevel2Filter
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		level1_filter=VSVSStepLevel1Filter
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		level0_filter=VSVSStepLevel0Filter
-	'</output_level_3>'
+		'interface=' interface=[VSVSInterface|STRING]
+		'/>'
 ;
-
-VSVSStepOutputLevel2 returns VSVSStepOutputLevel2:
-	'<output_level_2'
-		'name=' name=STRING
-		'id=' id=UINT_STRING
-		'ifRef=' ifRef=UINT_STRING
-		('optional=' optional=UINT_STRING)?
-		'>'
-		('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		level2_filter=VSVSStepLevel2Filter
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		level1_filter=VSVSStepLevel1Filter
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		level0_filter=VSVSStepLevel0Filter
-	'</output_level_2>'
-;
-
-VSVSStepOutputLevel1 returns VSVSStepOutputLevel1:
-	'<output_level_1'
-		'name=' name=STRING
-		'id=' id=UINT_STRING
-		'ifRef=' ifRef=UINT_STRING
-		('optional=' optional=UINT_STRING)?
-		'>'
-		('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		level1_filter=VSVSStepLevel1Filter
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		level0_filter=VSVSStepLevel0Filter
-	'</output_level_1>'
-;
-
-VSVSStepOutputLevel0 returns VSVSStepOutputLevel0:
-	'<output_level_0'
-		'name=' name=STRING
-		'id=' id=UINT_STRING
-		'ifRef=' ifRef=UINT_STRING
-		('optional=' optional=UINT_STRING)?
-		'>'
-		('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		level0_filter=VSVSStepLevel0Filter
-	'</output_level_0>'
-;
-
-VSVSStepLevel3Filter returns VSVSStepFilter:
-	'<level3_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	'/>'
-;
-
-VSVSStepLevel2Filter returns VSVSStepFilter:
-	'<level2_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	'/>'
-;
-
-VSVSStepLevel1Filter returns VSVSStepFilter:
-	'<level1_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	'/>'
-;
-
-VSVSStepLevel0Filter returns VSVSStepFilter:
-	'<level0_filter'
-		'apply_def_filter=' apply_def_filter=VSVSStepYesNo
-		('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	'/>'
-;
-
-enum VSVSStepYesNo returns VSVSStepYesNo:
-	yes = '"yes"' | no = '"no"'
-;
-
-VSVSStepEnable returns VSVSStepEnableDisable:
-	'<enable'
-		'id=' id=UINT_STRING
-	'/>'
-;
-
-VSVSStepDisable returns VSVSStepEnableDisable:
-	'<disable'
-		'id=' id=UINT_STRING
-	'/>'
-;
-
-VSVSStepEnablePrint returns VSVSStepEnableDisable:
-	'<enable_print'
-		'id=' id=UINT_STRING
-	'/>'
-;
-
-VSVSStepDisablePrint returns VSVSStepEnableDisable:
-	'<disable_print'
-		'id=' id=UINT_STRING
-	'/>'
-;
-
-VSVSStepNextStep returns VSVSStepNextStep:
-	'<nextStep'
-		'id=' id=UINT_STRING
-		'isConcurrent=' isConcurrent=VSVSStepYesNo
-	'/>'
-;
-
-VSVSStepConcurrentStep returns VSVSStepConcurrentStep:
-	'<concurrent_step'
-		'id=' id=UINT_STRING
-	'/>'
-;
-
+		
 QualifiedName returns ecore::EString:
 	ID ('.' ID)*;
 

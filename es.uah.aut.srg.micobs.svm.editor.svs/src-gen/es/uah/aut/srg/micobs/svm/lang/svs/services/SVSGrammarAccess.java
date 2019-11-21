@@ -2107,24 +2107,30 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGeneralAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cGeneralVSVSFixedSectionParserRuleCall_2_0 = (RuleCall)cGeneralAssignment_2.eContents().get(0);
 		private final Keyword cGeneralKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cScenariosKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cScenariosAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_4_1_0 = (RuleCall)cScenariosAssignment_4_1.eContents().get(0);
-		private final Keyword cScenariosKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
-		private final Assignment cTestDesignsAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_5_0 = (RuleCall)cTestDesignsAssignment_5.eContents().get(0);
-		private final Keyword cTestingSpecificationDesignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cInterfacesKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cInterfacesAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cInterfacesVSVSInterfacesSectionParserRuleCall_5_0 = (RuleCall)cInterfacesAssignment_5.eContents().get(0);
+		private final Keyword cInterfacesKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cScenariosKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cScenariosAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_8_0 = (RuleCall)cScenariosAssignment_8.eContents().get(0);
+		private final Keyword cScenariosKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cTestDesignsAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_10_0 = (RuleCall)cTestDesignsAssignment_10.eContents().get(0);
+		private final Keyword cTestingSpecificationDesignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//VSVSTestingSpecificationDesign:
 		//	'<TestingSpecificationDesign>'
-		//	'<General>' general=VSVSFixedSection '</General>' ('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
+		//	'<General>' general=VSVSFixedSection '</General>'
+		//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
+		//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
 		//	testDesigns+=VSVSTestDesign+
 		//	'</TestingSpecificationDesign>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' ('<Scenarios>'
-		//scenarios=VSVSScenariosSection '</Scenarios>')? testDesigns+=VSVSTestDesign+ '</TestingSpecificationDesign>'
+		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' '<Interfaces>'
+		//interfaces=VSVSInterfacesSection '</Interfaces>' '<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
+		//testDesigns+=VSVSTestDesign+ '</TestingSpecificationDesign>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestingSpecificationDesign>'
@@ -2142,29 +2148,108 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</General>'
 		public Keyword getGeneralKeyword_3() { return cGeneralKeyword_3; }
 		
-		//('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
-		public Group getGroup_4() { return cGroup_4; }
+		//'<Interfaces>'
+		public Keyword getInterfacesKeyword_4() { return cInterfacesKeyword_4; }
+		
+		//interfaces=VSVSInterfacesSection
+		public Assignment getInterfacesAssignment_5() { return cInterfacesAssignment_5; }
+		
+		//VSVSInterfacesSection
+		public RuleCall getInterfacesVSVSInterfacesSectionParserRuleCall_5_0() { return cInterfacesVSVSInterfacesSectionParserRuleCall_5_0; }
+		
+		//'</Interfaces>'
+		public Keyword getInterfacesKeyword_6() { return cInterfacesKeyword_6; }
 		
 		//'<Scenarios>'
-		public Keyword getScenariosKeyword_4_0() { return cScenariosKeyword_4_0; }
+		public Keyword getScenariosKeyword_7() { return cScenariosKeyword_7; }
 		
 		//scenarios=VSVSScenariosSection
-		public Assignment getScenariosAssignment_4_1() { return cScenariosAssignment_4_1; }
+		public Assignment getScenariosAssignment_8() { return cScenariosAssignment_8; }
 		
 		//VSVSScenariosSection
-		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_4_1_0() { return cScenariosVSVSScenariosSectionParserRuleCall_4_1_0; }
+		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_8_0() { return cScenariosVSVSScenariosSectionParserRuleCall_8_0; }
 		
 		//'</Scenarios>'
-		public Keyword getScenariosKeyword_4_2() { return cScenariosKeyword_4_2; }
+		public Keyword getScenariosKeyword_9() { return cScenariosKeyword_9; }
 		
 		//testDesigns+=VSVSTestDesign+
-		public Assignment getTestDesignsAssignment_5() { return cTestDesignsAssignment_5; }
+		public Assignment getTestDesignsAssignment_10() { return cTestDesignsAssignment_10; }
 		
 		//VSVSTestDesign
-		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_5_0() { return cTestDesignsVSVSTestDesignParserRuleCall_5_0; }
+		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_10_0() { return cTestDesignsVSVSTestDesignParserRuleCall_10_0; }
 		
 		//'</TestingSpecificationDesign>'
-		public Keyword getTestingSpecificationDesignKeyword_6() { return cTestingSpecificationDesignKeyword_6; }
+		public Keyword getTestingSpecificationDesignKeyword_11() { return cTestingSpecificationDesignKeyword_11; }
+	}
+	public class VSVSInterfacesSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSInterfacesSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSInterfacesSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cInterfacesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInterfacesVSVSInterfaceParserRuleCall_1_0 = (RuleCall)cInterfacesAssignment_1.eContents().get(0);
+		
+		//VSVSInterfacesSection:
+		//	{VSVSInterfacesSection} interfaces+=VSVSInterface+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSInterfacesSection} interfaces+=VSVSInterface+
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSInterfacesSection}
+		public Action getVSVSInterfacesSectionAction_0() { return cVSVSInterfacesSectionAction_0; }
+		
+		//interfaces+=VSVSInterface+
+		public Assignment getInterfacesAssignment_1() { return cInterfacesAssignment_1; }
+		
+		//VSVSInterface
+		public RuleCall getInterfacesVSVSInterfaceParserRuleCall_1_0() { return cInterfacesVSVSInterfaceParserRuleCall_1_0; }
+	}
+	public class VSVSInterfaceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSInterface");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cInterfaceKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionDRunParserRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cInterfaceKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSInterface:
+		//	'<Interface'
+		//	'name=' name=STRING
+		//	'>'
+		//	description=DRun
+		//	'</Interface>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Interface' 'name=' name=STRING '>' description=DRun '</Interface>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Interface'
+		public Keyword getInterfaceKeyword_0() { return cInterfaceKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//description=DRun
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
+		
+		//DRun
+		public RuleCall getDescriptionDRunParserRuleCall_4_0() { return cDescriptionDRunParserRuleCall_4_0; }
+		
+		//'</Interface>'
+		public Keyword getInterfaceKeyword_5() { return cInterfaceKeyword_5; }
 	}
 	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
@@ -2196,24 +2281,28 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cBodyAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cBodyDBodyParserRuleCall_6_0 = (RuleCall)cBodyAssignment_6.eContents().get(0);
-		private final Keyword cScenarioKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cInterfaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cRefKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cInterfaceAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_2_0 = (CrossReference)cInterfaceAssignment_4_2.eContents().get(0);
+		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
+		private final Assignment cBodyAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cBodyDBodyParserRuleCall_5_0 = (RuleCall)cBodyAssignment_5.eContents().get(0);
+		private final Keyword cScenarioKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSVSScenarioSection:
 		//	'<Scenario'
 		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'>'
+		//	'>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
 		//	body=DBody
 		//	'</Scenario>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Scenario' 'name=' name=STRING 'id=' id=UINT_STRING '>' body=DBody '</Scenario>'
+		//'<Scenario' 'name=' name=STRING '>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+ body=DBody
+		//'</Scenario>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Scenario'
@@ -2228,26 +2317,38 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'<Interface'
+		public Keyword getInterfaceKeyword_4_0() { return cInterfaceKeyword_4_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_4_1() { return cRefKeyword_4_1; }
+		
+		//interface+=[VSVSInterface|STRING]
+		public Assignment getInterfaceAssignment_4_2() { return cInterfaceAssignment_4_2; }
+		
+		//[VSVSInterface|STRING]
+		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_2_0() { return cInterfaceVSVSInterfaceCrossReference_4_2_0; }
+		
+		//STRING
+		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_4_3() { return cSolidusGreaterThanSignKeyword_4_3; }
 		
 		//body=DBody
-		public Assignment getBodyAssignment_6() { return cBodyAssignment_6; }
+		public Assignment getBodyAssignment_5() { return cBodyAssignment_5; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_6_0() { return cBodyDBodyParserRuleCall_6_0; }
+		public RuleCall getBodyDBodyParserRuleCall_5_0() { return cBodyDBodyParserRuleCall_5_0; }
 		
 		//'</Scenario>'
-		public Keyword getScenarioKeyword_7() { return cScenarioKeyword_7; }
+		public Keyword getScenarioKeyword_6() { return cScenarioKeyword_6; }
 	}
 	public class VSVSTestCasesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCases");
@@ -2910,42 +3011,42 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPurposeAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cPurposeVSVSTestInfoParserRuleCall_8_0 = (RuleCall)cPurposeAssignment_8.eContents().get(0);
 		private final Keyword cPurposeKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cScenarioKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cRefKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cScenarioAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cScenarioVSVSScenarioSectionCrossReference_10_2_0 = (CrossReference)cScenarioAssignment_10_2.eContents().get(0);
-		private final RuleCall cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cScenarioVSVSScenarioSectionCrossReference_10_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cTestCaseKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cRefKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cTestCaseAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final CrossReference cTestCaseVSVSTestCaseCrossReference_11_2_0 = (CrossReference)cTestCaseAssignment_11_2.eContents().get(0);
-		private final RuleCall cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cTestCaseVSVSTestCaseCrossReference_11_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
-		private final Assignment cProcedureStepsAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cProcedureStepsVSVSProcedureStepsParserRuleCall_12_0 = (RuleCall)cProcedureStepsAssignment_12.eContents().get(0);
-		private final Keyword cTestScriptKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Assignment cTestScriptAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cTestScriptVSVSTestInfoParserRuleCall_14_0 = (RuleCall)cTestScriptAssignment_14.eContents().get(0);
-		private final Keyword cTestScriptKeyword_15 = (Keyword)cGroup.eContents().get(15);
-		private final Keyword cTestProcedureKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Keyword cScenarioKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Keyword cRefKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cScenarioAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final CrossReference cScenarioVSVSScenarioSectionCrossReference_12_0 = (CrossReference)cScenarioAssignment_12.eContents().get(0);
+		private final RuleCall cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1 = (RuleCall)cScenarioVSVSScenarioSectionCrossReference_12_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
+		private final Keyword cTestCaseKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
+		private final Keyword cRefKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
+		private final Assignment cTestCaseAssignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
+		private final CrossReference cTestCaseVSVSTestCaseCrossReference_14_2_0 = (CrossReference)cTestCaseAssignment_14_2.eContents().get(0);
+		private final RuleCall cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_14_2_0_1 = (RuleCall)cTestCaseVSVSTestCaseCrossReference_14_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_14_3 = (Keyword)cGroup_14.eContents().get(3);
+		private final Assignment cProcedureStepsAssignment_15 = (Assignment)cGroup.eContents().get(15);
+		private final RuleCall cProcedureStepsVSVSProcedureStepsParserRuleCall_15_0 = (RuleCall)cProcedureStepsAssignment_15.eContents().get(0);
+		private final Keyword cTestScriptKeyword_16 = (Keyword)cGroup.eContents().get(16);
+		private final Assignment cTestScriptAssignment_17 = (Assignment)cGroup.eContents().get(17);
+		private final RuleCall cTestScriptVSVSTestInfoParserRuleCall_17_0 = (RuleCall)cTestScriptAssignment_17.eContents().get(0);
+		private final Keyword cTestScriptKeyword_18 = (Keyword)cGroup.eContents().get(18);
+		private final Keyword cTestProcedureKeyword_19 = (Keyword)cGroup.eContents().get(19);
 		
 		//VSVSTestProcedure:
 		//	'<TestProcedure'
 		//	'name=' name=STRING
 		//	'>'
 		//	'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
-		//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')?
-		//	('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
+		//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
+		//	'<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING]
+		//	'/>')+
 		//	procedureSteps=VSVSProcedureSteps
 		//	'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
 		//	'</TestProcedure>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSTestInfo '</Identifier>' '<Purpose>'
-		//purpose=VSVSTestInfo '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')? ('<TestCase' 'ref='
+		//purpose=VSVSTestInfo '</Purpose>' '<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref='
 		//testCase+=[VSVSTestCase|STRING] '/>')+ procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSTestInfo
 		//'</TestScript>' '</TestProcedure>'
 		public Group getGroup() { return cGroup; }
@@ -2989,68 +3090,65 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Purpose>'
 		public Keyword getPurposeKeyword_9() { return cPurposeKeyword_9; }
 		
-		//('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')?
-		public Group getGroup_10() { return cGroup_10; }
-		
 		//'<Scenario'
-		public Keyword getScenarioKeyword_10_0() { return cScenarioKeyword_10_0; }
+		public Keyword getScenarioKeyword_10() { return cScenarioKeyword_10; }
 		
 		//'ref='
-		public Keyword getRefKeyword_10_1() { return cRefKeyword_10_1; }
+		public Keyword getRefKeyword_11() { return cRefKeyword_11; }
 		
 		//scenario=[VSVSScenarioSection|STRING]
-		public Assignment getScenarioAssignment_10_2() { return cScenarioAssignment_10_2; }
+		public Assignment getScenarioAssignment_12() { return cScenarioAssignment_12; }
 		
 		//[VSVSScenarioSection|STRING]
-		public CrossReference getScenarioVSVSScenarioSectionCrossReference_10_2_0() { return cScenarioVSVSScenarioSectionCrossReference_10_2_0; }
+		public CrossReference getScenarioVSVSScenarioSectionCrossReference_12_0() { return cScenarioVSVSScenarioSectionCrossReference_12_0; }
 		
 		//STRING
-		public RuleCall getScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1() { return cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_10_2_0_1; }
+		public RuleCall getScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1() { return cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
+		public Keyword getSolidusGreaterThanSignKeyword_13() { return cSolidusGreaterThanSignKeyword_13; }
 		
 		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
-		public Group getGroup_11() { return cGroup_11; }
+		public Group getGroup_14() { return cGroup_14; }
 		
 		//'<TestCase'
-		public Keyword getTestCaseKeyword_11_0() { return cTestCaseKeyword_11_0; }
+		public Keyword getTestCaseKeyword_14_0() { return cTestCaseKeyword_14_0; }
 		
 		//'ref='
-		public Keyword getRefKeyword_11_1() { return cRefKeyword_11_1; }
+		public Keyword getRefKeyword_14_1() { return cRefKeyword_14_1; }
 		
 		//testCase+=[VSVSTestCase|STRING]
-		public Assignment getTestCaseAssignment_11_2() { return cTestCaseAssignment_11_2; }
+		public Assignment getTestCaseAssignment_14_2() { return cTestCaseAssignment_14_2; }
 		
 		//[VSVSTestCase|STRING]
-		public CrossReference getTestCaseVSVSTestCaseCrossReference_11_2_0() { return cTestCaseVSVSTestCaseCrossReference_11_2_0; }
+		public CrossReference getTestCaseVSVSTestCaseCrossReference_14_2_0() { return cTestCaseVSVSTestCaseCrossReference_14_2_0; }
 		
 		//STRING
-		public RuleCall getTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1() { return cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_11_2_0_1; }
+		public RuleCall getTestCaseVSVSTestCaseSTRINGTerminalRuleCall_14_2_0_1() { return cTestCaseVSVSTestCaseSTRINGTerminalRuleCall_14_2_0_1; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
+		public Keyword getSolidusGreaterThanSignKeyword_14_3() { return cSolidusGreaterThanSignKeyword_14_3; }
 		
 		//procedureSteps=VSVSProcedureSteps
-		public Assignment getProcedureStepsAssignment_12() { return cProcedureStepsAssignment_12; }
+		public Assignment getProcedureStepsAssignment_15() { return cProcedureStepsAssignment_15; }
 		
 		//VSVSProcedureSteps
-		public RuleCall getProcedureStepsVSVSProcedureStepsParserRuleCall_12_0() { return cProcedureStepsVSVSProcedureStepsParserRuleCall_12_0; }
+		public RuleCall getProcedureStepsVSVSProcedureStepsParserRuleCall_15_0() { return cProcedureStepsVSVSProcedureStepsParserRuleCall_15_0; }
 		
 		//'<TestScript>'
-		public Keyword getTestScriptKeyword_13() { return cTestScriptKeyword_13; }
+		public Keyword getTestScriptKeyword_16() { return cTestScriptKeyword_16; }
 		
 		//testScript=VSVSTestInfo
-		public Assignment getTestScriptAssignment_14() { return cTestScriptAssignment_14; }
+		public Assignment getTestScriptAssignment_17() { return cTestScriptAssignment_17; }
 		
 		//VSVSTestInfo
-		public RuleCall getTestScriptVSVSTestInfoParserRuleCall_14_0() { return cTestScriptVSVSTestInfoParserRuleCall_14_0; }
+		public RuleCall getTestScriptVSVSTestInfoParserRuleCall_17_0() { return cTestScriptVSVSTestInfoParserRuleCall_17_0; }
 		
 		//'</TestScript>'
-		public Keyword getTestScriptKeyword_15() { return cTestScriptKeyword_15; }
+		public Keyword getTestScriptKeyword_18() { return cTestScriptKeyword_18; }
 		
 		//'</TestProcedure>'
-		public Keyword getTestProcedureKeyword_16() { return cTestProcedureKeyword_16; }
+		public Keyword getTestProcedureKeyword_19() { return cTestProcedureKeyword_19; }
 	}
 	public class VSVSProcedureStepsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureSteps");
@@ -3093,58 +3191,43 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cPrev_step_idrefKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPrev_step_idrefAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0 = (CrossReference)cPrev_step_idrefAssignment_3_1.eContents().get(0);
+		private final RuleCall cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0.eContents().get(1);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cOutput_idref_from_prev_stepKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cOutput_idref_from_prev_stepAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final CrossReference cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_4_1.eContents().get(0);
+		private final RuleCall cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0.eContents().get(1);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cPrev_step_idrefKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cPrev_step_idrefAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final CrossReference cPrev_step_idrefVSVSProcedureStepCrossReference_5_1_0 = (CrossReference)cPrev_step_idrefAssignment_5_1.eContents().get(0);
-		private final RuleCall cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_5_1_0_1 = (RuleCall)cPrev_step_idrefVSVSProcedureStepCrossReference_5_1_0.eContents().get(1);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cOutput_idref_from_prev_stepKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cOutput_idref_from_prev_stepAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final CrossReference cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_6_1_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_6_1.eContents().get(0);
-		private final RuleCall cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_6_1_0_1 = (RuleCall)cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_6_1_0.eContents().get(1);
-		private final Keyword cModeKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cModeAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cModeVSVSStepModeEnumRuleCall_8_0 = (RuleCall)cModeAssignment_8.eContents().get(0);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cReplaysKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Assignment cReplaysAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
-		private final RuleCall cReplaysSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cReplaysAssignment_9_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
-		private final Assignment cInputsAssignment_11 = (Assignment)cGroup.eContents().get(11);
-		private final RuleCall cInputsVSVSStepInputsParserRuleCall_11_0 = (RuleCall)cInputsAssignment_11.eContents().get(0);
-		private final Assignment cOutputsAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_12_0 = (RuleCall)cOutputsAssignment_12.eContents().get(0);
-		private final Assignment cSpecialPacketsAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cSpecialPacketsVSVSStepSpecialPacketsParserRuleCall_13_0 = (RuleCall)cSpecialPacketsAssignment_13.eContents().get(0);
-		private final Assignment cConcurrent_stepsAssignment_14 = (Assignment)cGroup.eContents().get(14);
-		private final RuleCall cConcurrent_stepsVSVSStepConcurrentStepsParserRuleCall_14_0 = (RuleCall)cConcurrent_stepsAssignment_14.eContents().get(0);
-		private final Keyword cStepKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Keyword cReplaysKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cReplaysAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cReplaysUINT_STRINGTerminalRuleCall_5_1_0 = (RuleCall)cReplaysAssignment_5_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cInputsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cInputsVSVSStepInputsParserRuleCall_7_0 = (RuleCall)cInputsAssignment_7.eContents().get(0);
+		private final Assignment cOutputsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_8_0 = (RuleCall)cOutputsAssignment_8.eContents().get(0);
+		private final Keyword cStepKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VSVSProcedureStep:
-		//	'<step'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
-		//	output_idref_from_prev_step=[VSVSStepOutput|STRING])?
-		//	'mode=' mode=VSVSStepMode ('replays=' replays=STRING)?
+		//	'<Step'
+		//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
+		//	output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
 		//	'>'
 		//	inputs=VSVSStepInputs
 		//	outputs=VSVSStepOutputs?
-		//	specialPackets=VSVSStepSpecialPackets?
-		//	concurrent_steps=VSVSStepConcurrentSteps?
-		//	'</step>';
+		//	'</Step>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<step' 'name=' name=STRING 'id=' id=UINT_STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
-		//('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? 'mode=' mode=VSVSStepMode
-		//('replays=' replays=STRING)? '>' inputs=VSVSStepInputs outputs=VSVSStepOutputs? specialPackets=VSVSStepSpecialPackets?
-		//concurrent_steps=VSVSStepConcurrentSteps? '</step>'
+		//'<Step' 'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
+		//('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
+		//replays=UINT_STRING)? '>' inputs=VSVSStepInputs outputs=VSVSStepOutputs? '</Step>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<step'
+		//'<Step'
 		public Keyword getStepKeyword_0() { return cStepKeyword_0; }
 		
 		//'name='
@@ -3156,95 +3239,65 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
 		//('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'prev_step_idref='
-		public Keyword getPrev_step_idrefKeyword_5_0() { return cPrev_step_idrefKeyword_5_0; }
+		public Keyword getPrev_step_idrefKeyword_3_0() { return cPrev_step_idrefKeyword_3_0; }
 		
 		//prev_step_idref=[VSVSProcedureStep|STRING]
-		public Assignment getPrev_step_idrefAssignment_5_1() { return cPrev_step_idrefAssignment_5_1; }
+		public Assignment getPrev_step_idrefAssignment_3_1() { return cPrev_step_idrefAssignment_3_1; }
 		
 		//[VSVSProcedureStep|STRING]
-		public CrossReference getPrev_step_idrefVSVSProcedureStepCrossReference_5_1_0() { return cPrev_step_idrefVSVSProcedureStepCrossReference_5_1_0; }
+		public CrossReference getPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0() { return cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_5_1_0_1() { return cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_5_1_0_1; }
+		public RuleCall getPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1() { return cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1; }
 		
 		//('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'output_idref_from_prev_step='
-		public Keyword getOutput_idref_from_prev_stepKeyword_6_0() { return cOutput_idref_from_prev_stepKeyword_6_0; }
+		public Keyword getOutput_idref_from_prev_stepKeyword_4_0() { return cOutput_idref_from_prev_stepKeyword_4_0; }
 		
 		//output_idref_from_prev_step=[VSVSStepOutput|STRING]
-		public Assignment getOutput_idref_from_prev_stepAssignment_6_1() { return cOutput_idref_from_prev_stepAssignment_6_1; }
+		public Assignment getOutput_idref_from_prev_stepAssignment_4_1() { return cOutput_idref_from_prev_stepAssignment_4_1; }
 		
 		//[VSVSStepOutput|STRING]
-		public CrossReference getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_6_1_0() { return cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_6_1_0; }
+		public CrossReference getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0() { return cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0; }
 		
 		//STRING
-		public RuleCall getOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_6_1_0_1() { return cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_6_1_0_1; }
+		public RuleCall getOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1() { return cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1; }
 		
-		//'mode='
-		public Keyword getModeKeyword_7() { return cModeKeyword_7; }
-		
-		//mode=VSVSStepMode
-		public Assignment getModeAssignment_8() { return cModeAssignment_8; }
-		
-		//VSVSStepMode
-		public RuleCall getModeVSVSStepModeEnumRuleCall_8_0() { return cModeVSVSStepModeEnumRuleCall_8_0; }
-		
-		//('replays=' replays=STRING)?
-		public Group getGroup_9() { return cGroup_9; }
+		//('replays=' replays=UINT_STRING)?
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//'replays='
-		public Keyword getReplaysKeyword_9_0() { return cReplaysKeyword_9_0; }
+		public Keyword getReplaysKeyword_5_0() { return cReplaysKeyword_5_0; }
 		
-		//replays=STRING
-		public Assignment getReplaysAssignment_9_1() { return cReplaysAssignment_9_1; }
+		//replays=UINT_STRING
+		public Assignment getReplaysAssignment_5_1() { return cReplaysAssignment_5_1; }
 		
-		//STRING
-		public RuleCall getReplaysSTRINGTerminalRuleCall_9_1_0() { return cReplaysSTRINGTerminalRuleCall_9_1_0; }
+		//UINT_STRING
+		public RuleCall getReplaysUINT_STRINGTerminalRuleCall_5_1_0() { return cReplaysUINT_STRINGTerminalRuleCall_5_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_10() { return cGreaterThanSignKeyword_10; }
+		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
 		
 		//inputs=VSVSStepInputs
-		public Assignment getInputsAssignment_11() { return cInputsAssignment_11; }
+		public Assignment getInputsAssignment_7() { return cInputsAssignment_7; }
 		
 		//VSVSStepInputs
-		public RuleCall getInputsVSVSStepInputsParserRuleCall_11_0() { return cInputsVSVSStepInputsParserRuleCall_11_0; }
+		public RuleCall getInputsVSVSStepInputsParserRuleCall_7_0() { return cInputsVSVSStepInputsParserRuleCall_7_0; }
 		
 		//outputs=VSVSStepOutputs?
-		public Assignment getOutputsAssignment_12() { return cOutputsAssignment_12; }
+		public Assignment getOutputsAssignment_8() { return cOutputsAssignment_8; }
 		
 		//VSVSStepOutputs
-		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_12_0() { return cOutputsVSVSStepOutputsParserRuleCall_12_0; }
+		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_8_0() { return cOutputsVSVSStepOutputsParserRuleCall_8_0; }
 		
-		//specialPackets=VSVSStepSpecialPackets?
-		public Assignment getSpecialPacketsAssignment_13() { return cSpecialPacketsAssignment_13; }
-		
-		//VSVSStepSpecialPackets
-		public RuleCall getSpecialPacketsVSVSStepSpecialPacketsParserRuleCall_13_0() { return cSpecialPacketsVSVSStepSpecialPacketsParserRuleCall_13_0; }
-		
-		//concurrent_steps=VSVSStepConcurrentSteps?
-		public Assignment getConcurrent_stepsAssignment_14() { return cConcurrent_stepsAssignment_14; }
-		
-		//VSVSStepConcurrentSteps
-		public RuleCall getConcurrent_stepsVSVSStepConcurrentStepsParserRuleCall_14_0() { return cConcurrent_stepsVSVSStepConcurrentStepsParserRuleCall_14_0; }
-		
-		//'</step>'
-		public Keyword getStepKeyword_15() { return cStepKeyword_15; }
+		//'</Step>'
+		public Keyword getStepKeyword_9() { return cStepKeyword_9; }
 	}
 	public class VSVSStepInputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputs");
@@ -3257,18 +3310,18 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VSVSStepInputs:
 		//	{VSVSStepInputs}
-		//	'<inputs>'
+		//	'<Inputs>'
 		//	input+=VSVSStepInput+
-		//	'</inputs>';
+		//	'</Inputs>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSStepInputs} '<inputs>' input+=VSVSStepInput+ '</inputs>'
+		//{VSVSStepInputs} '<Inputs>' input+=VSVSStepInput+ '</Inputs>'
 		public Group getGroup() { return cGroup; }
 		
 		//{VSVSStepInputs}
 		public Action getVSVSStepInputsAction_0() { return cVSVSStepInputsAction_0; }
 		
-		//'<inputs>'
+		//'<Inputs>'
 		public Keyword getInputsKeyword_1() { return cInputsKeyword_1; }
 		
 		//input+=VSVSStepInput+
@@ -3277,8 +3330,85 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepInput
 		public RuleCall getInputVSVSStepInputParserRuleCall_2_0() { return cInputVSVSStepInputParserRuleCall_2_0; }
 		
-		//'</inputs>'
+		//'</Inputs>'
 		public Keyword getInputsKeyword_3() { return cInputsKeyword_3; }
+	}
+	public class VSVSStepInputElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cInputKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cInterfaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
+		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
+		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
+		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDelay_unitVSVSTimeUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		
+		//VSVSStepInput:
+		//	'<Input'
+		//	'name=' name=STRING
+		//	'interface=' interface=[VSVSInterface|STRING]
+		//	'delay_value=' delay_value=UINT_STRING
+		//	'delay_unit=' delay_unit=VSVSTimeUnit
+		//	'/>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Input' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] 'delay_value=' delay_value=UINT_STRING
+		//'delay_unit=' delay_unit=VSVSTimeUnit '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Input'
+		public Keyword getInputKeyword_0() { return cInputKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'interface='
+		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
+		
+		//interface=[VSVSInterface|STRING]
+		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
+		
+		//[VSVSInterface|STRING]
+		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_0() { return cInterfaceVSVSInterfaceCrossReference_4_0; }
+		
+		//STRING
+		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
+		
+		//'delay_value='
+		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
+		
+		//delay_value=UINT_STRING
+		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
+		
+		//UINT_STRING
+		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
+		
+		//'delay_unit='
+		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
+		
+		//delay_unit=VSVSTimeUnit
+		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
+		
+		//VSVSTimeUnit
+		public RuleCall getDelay_unitVSVSTimeUnitEnumRuleCall_8_0() { return cDelay_unitVSVSTimeUnitEnumRuleCall_8_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
 	}
 	public class VSVSStepOutputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputs");
@@ -3286,43 +3416,44 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cOutputsKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cCheckmodeKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cCheckmodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCheckmodeVSVSStepCheckmodeEnumRuleCall_2_0 = (RuleCall)cCheckmodeAssignment_2.eContents().get(0);
+		private final RuleCall cCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0 = (RuleCall)cCheckmodeAssignment_2.eContents().get(0);
 		private final Keyword cValid_time_interval_valueKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cValid_time_interval_valueAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cValid_time_interval_valueAssignment_4.eContents().get(0);
 		private final Keyword cValid_time_interval_unitKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cValid_time_interval_unitAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0 = (RuleCall)cValid_time_interval_unitAssignment_6.eContents().get(0);
+		private final RuleCall cValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0 = (RuleCall)cValid_time_interval_unitAssignment_6.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		private final Assignment cOutputAssignment_8 = (Assignment)cGroup.eContents().get(8);
 		private final RuleCall cOutputVSVSStepOutputParserRuleCall_8_0 = (RuleCall)cOutputAssignment_8.eContents().get(0);
 		private final Keyword cOutputsKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VSVSStepOutputs:
-		//	'<outputs'
-		//	'checkmode=' checkmode=VSVSStepCheckmode
+		//	'<Outputs'
+		//	'checkmode=' checkmode=VSVSStepOutputsCheckmode
 		//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-		//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
+		//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
 		//	'>'
 		//	output+=VSVSStepOutput+
-		//	'</outputs>';
+		//	'</Outputs>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<outputs' 'checkmode=' checkmode=VSVSStepCheckmode 'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-		//'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit '>' output+=VSVSStepOutput+ '</outputs>'
+		//'<Outputs' 'checkmode=' checkmode=VSVSStepOutputsCheckmode 'valid_time_interval_value='
+		//valid_time_interval_value=UINT_STRING 'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit '>'
+		//output+=VSVSStepOutput+ '</Outputs>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<outputs'
+		//'<Outputs'
 		public Keyword getOutputsKeyword_0() { return cOutputsKeyword_0; }
 		
 		//'checkmode='
 		public Keyword getCheckmodeKeyword_1() { return cCheckmodeKeyword_1; }
 		
-		//checkmode=VSVSStepCheckmode
+		//checkmode=VSVSStepOutputsCheckmode
 		public Assignment getCheckmodeAssignment_2() { return cCheckmodeAssignment_2; }
 		
-		//VSVSStepCheckmode
-		public RuleCall getCheckmodeVSVSStepCheckmodeEnumRuleCall_2_0() { return cCheckmodeVSVSStepCheckmodeEnumRuleCall_2_0; }
+		//VSVSStepOutputsCheckmode
+		public RuleCall getCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0() { return cCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0; }
 		
 		//'valid_time_interval_value='
 		public Keyword getValid_time_interval_valueKeyword_3() { return cValid_time_interval_valueKeyword_3; }
@@ -3336,11 +3467,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'valid_time_interval_unit='
 		public Keyword getValid_time_interval_unitKeyword_5() { return cValid_time_interval_unitKeyword_5; }
 		
-		//valid_time_interval_unit=VSVSStepUnit
+		//valid_time_interval_unit=VSVSTimeUnit
 		public Assignment getValid_time_interval_unitAssignment_6() { return cValid_time_interval_unitAssignment_6; }
 		
-		//VSVSStepUnit
-		public RuleCall getValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0() { return cValid_time_interval_unitVSVSStepUnitEnumRuleCall_6_0; }
+		//VSVSTimeUnit
+		public RuleCall getValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0() { return cValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
@@ -3351,2368 +3482,58 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepOutput
 		public RuleCall getOutputVSVSStepOutputParserRuleCall_8_0() { return cOutputVSVSStepOutputParserRuleCall_8_0; }
 		
-		//'</outputs>'
+		//'</Outputs>'
 		public Keyword getOutputsKeyword_9() { return cOutputsKeyword_9; }
-	}
-	public class VSVSStepSpecialPacketsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepSpecialPackets");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSStepSpecialPacketsAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cSpecialPacketsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Assignment cEnableAssignment_2_0 = (Assignment)cAlternatives_2.eContents().get(0);
-		private final RuleCall cEnableVSVSStepEnableParserRuleCall_2_0_0 = (RuleCall)cEnableAssignment_2_0.eContents().get(0);
-		private final Assignment cDisableAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cDisableVSVSStepDisableParserRuleCall_2_1_0 = (RuleCall)cDisableAssignment_2_1.eContents().get(0);
-		private final Assignment cEnable_printAssignment_2_2 = (Assignment)cAlternatives_2.eContents().get(2);
-		private final RuleCall cEnable_printVSVSStepEnablePrintParserRuleCall_2_2_0 = (RuleCall)cEnable_printAssignment_2_2.eContents().get(0);
-		private final Assignment cDisable_printAssignment_2_3 = (Assignment)cAlternatives_2.eContents().get(3);
-		private final RuleCall cDisable_printVSVSStepDisablePrintParserRuleCall_2_3_0 = (RuleCall)cDisable_printAssignment_2_3.eContents().get(0);
-		private final Keyword cSpecialPacketsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepSpecialPackets:
-		//	{VSVSStepSpecialPackets}
-		//	'<specialPackets>' (enable+=VSVSStepEnable | disable+=VSVSStepDisable | enable_print+=VSVSStepEnablePrint |
-		//	disable_print+=VSVSStepDisablePrint)+
-		//	'</specialPackets>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{VSVSStepSpecialPackets} '<specialPackets>' (enable+=VSVSStepEnable | disable+=VSVSStepDisable |
-		//enable_print+=VSVSStepEnablePrint | disable_print+=VSVSStepDisablePrint)+ '</specialPackets>'
-		public Group getGroup() { return cGroup; }
-		
-		//{VSVSStepSpecialPackets}
-		public Action getVSVSStepSpecialPacketsAction_0() { return cVSVSStepSpecialPacketsAction_0; }
-		
-		//'<specialPackets>'
-		public Keyword getSpecialPacketsKeyword_1() { return cSpecialPacketsKeyword_1; }
-		
-		//(enable+=VSVSStepEnable | disable+=VSVSStepDisable | enable_print+=VSVSStepEnablePrint |
-		//disable_print+=VSVSStepDisablePrint)+
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
-		
-		//enable+=VSVSStepEnable
-		public Assignment getEnableAssignment_2_0() { return cEnableAssignment_2_0; }
-		
-		//VSVSStepEnable
-		public RuleCall getEnableVSVSStepEnableParserRuleCall_2_0_0() { return cEnableVSVSStepEnableParserRuleCall_2_0_0; }
-		
-		//disable+=VSVSStepDisable
-		public Assignment getDisableAssignment_2_1() { return cDisableAssignment_2_1; }
-		
-		//VSVSStepDisable
-		public RuleCall getDisableVSVSStepDisableParserRuleCall_2_1_0() { return cDisableVSVSStepDisableParserRuleCall_2_1_0; }
-		
-		//enable_print+=VSVSStepEnablePrint
-		public Assignment getEnable_printAssignment_2_2() { return cEnable_printAssignment_2_2; }
-		
-		//VSVSStepEnablePrint
-		public RuleCall getEnable_printVSVSStepEnablePrintParserRuleCall_2_2_0() { return cEnable_printVSVSStepEnablePrintParserRuleCall_2_2_0; }
-		
-		//disable_print+=VSVSStepDisablePrint
-		public Assignment getDisable_printAssignment_2_3() { return cDisable_printAssignment_2_3; }
-		
-		//VSVSStepDisablePrint
-		public RuleCall getDisable_printVSVSStepDisablePrintParserRuleCall_2_3_0() { return cDisable_printVSVSStepDisablePrintParserRuleCall_2_3_0; }
-		
-		//'</specialPackets>'
-		public Keyword getSpecialPacketsKeyword_3() { return cSpecialPacketsKeyword_3; }
-	}
-	public class VSVSStepConcurrentStepsElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentSteps");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cConcurrent_stepsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNextStepKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNextStepAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNextStepVSVSStepNextStepParserRuleCall_2_0 = (RuleCall)cNextStepAssignment_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cConcurrent_stepAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0 = (RuleCall)cConcurrent_stepAssignment_4.eContents().get(0);
-		private final Keyword cConcurrent_stepsKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		
-		//VSVSStepConcurrentSteps:
-		//	'<concurrent_steps'
-		//	'nextStep=' nextStep=VSVSStepNextStep
-		//	'>'
-		//	concurrent_step+=VSVSStepConcurrentStep+
-		//	'</concurrent_steps>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<concurrent_steps' 'nextStep=' nextStep=VSVSStepNextStep '>' concurrent_step+=VSVSStepConcurrentStep+
-		//'</concurrent_steps>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<concurrent_steps'
-		public Keyword getConcurrent_stepsKeyword_0() { return cConcurrent_stepsKeyword_0; }
-		
-		//'nextStep='
-		public Keyword getNextStepKeyword_1() { return cNextStepKeyword_1; }
-		
-		//nextStep=VSVSStepNextStep
-		public Assignment getNextStepAssignment_2() { return cNextStepAssignment_2; }
-		
-		//VSVSStepNextStep
-		public RuleCall getNextStepVSVSStepNextStepParserRuleCall_2_0() { return cNextStepVSVSStepNextStepParserRuleCall_2_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
-		
-		//concurrent_step+=VSVSStepConcurrentStep+
-		public Assignment getConcurrent_stepAssignment_4() { return cConcurrent_stepAssignment_4; }
-		
-		//VSVSStepConcurrentStep
-		public RuleCall getConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0() { return cConcurrent_stepVSVSStepConcurrentStepParserRuleCall_4_0; }
-		
-		//'</concurrent_steps>'
-		public Keyword getConcurrent_stepsKeyword_5() { return cConcurrent_stepsKeyword_5; }
-	}
-	public class VSVSStepInputElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cVSVSStepInputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cVSVSStepInputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cVSVSStepInputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cVSVSStepInputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//VSVSStepInput:
-		//	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//VSVSStepInputLevel3
-		public RuleCall getVSVSStepInputLevel3ParserRuleCall_0() { return cVSVSStepInputLevel3ParserRuleCall_0; }
-		
-		//VSVSStepInputLevel2
-		public RuleCall getVSVSStepInputLevel2ParserRuleCall_1() { return cVSVSStepInputLevel2ParserRuleCall_1; }
-		
-		//VSVSStepInputLevel1
-		public RuleCall getVSVSStepInputLevel1ParserRuleCall_2() { return cVSVSStepInputLevel1ParserRuleCall_2; }
-		
-		//VSVSStepInputLevel0
-		public RuleCall getVSVSStepInputLevel0ParserRuleCall_3() { return cVSVSStepInputLevel0ParserRuleCall_3; }
-	}
-	public class VSVSStepInputLevel3Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel3");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInput_level_3Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIfRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIfRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIfRefAssignment_4.eContents().get(0);
-		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
-		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDelay_unitVSVSStepUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cLevel3Keyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Assignment cLevel3Assignment_10_1 = (Assignment)cGroup_10.eContents().get(1);
-		private final CrossReference cLevel3TMTCIFFormatFormatCrossReference_10_1_0 = (CrossReference)cLevel3Assignment_10_1.eContents().get(0);
-		private final RuleCall cLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_10_1_0_1 = (RuleCall)cLevel3TMTCIFFormatFormatCrossReference_10_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_2 = (Keyword)cGroup_10.eContents().get(2);
-		private final Keyword cApp_to_level3Keyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cApp_to_level3Assignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cApp_to_level3TMTCIFExportExportCrossReference_12_0 = (CrossReference)cApp_to_level3Assignment_12.eContents().get(0);
-		private final RuleCall cApp_to_level3TMTCIFExportExportSTRINGTerminalRuleCall_12_0_1 = (RuleCall)cApp_to_level3TMTCIFExportExportCrossReference_12_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_13 = (Keyword)cGroup.eContents().get(13);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cLevel2Keyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Keyword cFormatKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
-		private final Assignment cLevel2Assignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
-		private final CrossReference cLevel2TMTCIFFormatFormatCrossReference_14_2_0 = (CrossReference)cLevel2Assignment_14_2.eContents().get(0);
-		private final RuleCall cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1 = (RuleCall)cLevel2TMTCIFFormatFormatCrossReference_14_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14_3 = (Keyword)cGroup_14.eContents().get(3);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cLevel3_to_level2Keyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cExportKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cLevel3_to_level2Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cLevel3_to_level2TMTCIFExportExportCrossReference_15_2_0 = (CrossReference)cLevel3_to_level2Assignment_15_2.eContents().get(0);
-		private final RuleCall cLevel3_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel3_to_level2TMTCIFExportExportCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Group cGroup_16 = (Group)cGroup.eContents().get(16);
-		private final Keyword cLevel1Keyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
-		private final Keyword cFormatKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
-		private final Assignment cLevel1Assignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_16_2_0 = (CrossReference)cLevel1Assignment_16_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_16_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_16_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_16_3 = (Keyword)cGroup_16.eContents().get(3);
-		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
-		private final Keyword cLevel2_to_level1Keyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
-		private final Keyword cExportKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
-		private final Assignment cLevel2_to_level1Assignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
-		private final CrossReference cLevel2_to_level1TMTCIFExportExportCrossReference_17_2_0 = (CrossReference)cLevel2_to_level1Assignment_17_2.eContents().get(0);
-		private final RuleCall cLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_17_2_0_1 = (RuleCall)cLevel2_to_level1TMTCIFExportExportCrossReference_17_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cLevel0Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Keyword cFormatKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
-		private final Assignment cLevel0Assignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_18_2_0 = (CrossReference)cLevel0Assignment_18_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_18_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_18_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
-		private final Group cGroup_19 = (Group)cGroup.eContents().get(19);
-		private final Keyword cLevel1_to_level0Keyword_19_0 = (Keyword)cGroup_19.eContents().get(0);
-		private final Keyword cExportKeyword_19_1 = (Keyword)cGroup_19.eContents().get(1);
-		private final Assignment cLevel1_to_level0Assignment_19_2 = (Assignment)cGroup_19.eContents().get(2);
-		private final CrossReference cLevel1_to_level0TMTCIFExportExportCrossReference_19_2_0 = (CrossReference)cLevel1_to_level0Assignment_19_2.eContents().get(0);
-		private final RuleCall cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_19_2_0_1 = (RuleCall)cLevel1_to_level0TMTCIFExportExportCrossReference_19_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_19_3 = (Keyword)cGroup_19.eContents().get(3);
-		private final Keyword cInput_level_3Keyword_20 = (Keyword)cGroup.eContents().get(20);
-		
-		//VSVSStepInputLevel3:
-		//	'<input_level_3'
-		//	'name=' name=STRING
-		//	'ifRef=' ifRef=UINT_STRING
-		//	'delay_value=' delay_value=UINT_STRING
-		//	'delay_unit=' delay_unit=VSVSStepUnit
-		//	'>' ('<level3' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	'<app_to_level3' app_to_level3=[export::TMTCIFExportExport|STRING] '/>' ('<level2' 'format='
-		//	level2=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level3_to_level2' 'export='
-		//	level3_to_level2=[export::TMTCIFExportExport|STRING] '/>')? ('<level1' 'format='
-		//	level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-		//	level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-		//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		//	'</input_level_3>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<input_level_3' 'name=' name=STRING 'ifRef=' ifRef=UINT_STRING 'delay_value=' delay_value=UINT_STRING 'delay_unit='
-		//delay_unit=VSVSStepUnit '>' ('<level3' level3=[format::TMTCIFFormatFormat|STRING] '/>')? '<app_to_level3'
-		//app_to_level3=[export::TMTCIFExportExport|STRING] '/>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING]
-		//'/>')? ('<level3_to_level2' 'export=' level3_to_level2=[export::TMTCIFExportExport|STRING] '/>')? ('<level1' 'format='
-		//level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-		//level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-		//level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')? '</input_level_3>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<input_level_3'
-		public Keyword getInput_level_3Keyword_0() { return cInput_level_3Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_3() { return cIfRefKeyword_3; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_4() { return cIfRefAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_4_0() { return cIfRefUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'delay_value='
-		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
-		
-		//delay_value=UINT_STRING
-		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//'delay_unit='
-		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
-		
-		//delay_unit=VSVSStepUnit
-		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
-		
-		//VSVSStepUnit
-		public RuleCall getDelay_unitVSVSStepUnitEnumRuleCall_8_0() { return cDelay_unitVSVSStepUnitEnumRuleCall_8_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_9() { return cGreaterThanSignKeyword_9; }
-		
-		//('<level3' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'<level3'
-		public Keyword getLevel3Keyword_10_0() { return cLevel3Keyword_10_0; }
-		
-		//level3=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel3Assignment_10_1() { return cLevel3Assignment_10_1; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel3TMTCIFFormatFormatCrossReference_10_1_0() { return cLevel3TMTCIFFormatFormatCrossReference_10_1_0; }
-		
-		//STRING
-		public RuleCall getLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_10_1_0_1() { return cLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_10_1_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_2() { return cSolidusGreaterThanSignKeyword_10_2; }
-		
-		//'<app_to_level3'
-		public Keyword getApp_to_level3Keyword_11() { return cApp_to_level3Keyword_11; }
-		
-		//app_to_level3=[export::TMTCIFExportExport|STRING]
-		public Assignment getApp_to_level3Assignment_12() { return cApp_to_level3Assignment_12; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getApp_to_level3TMTCIFExportExportCrossReference_12_0() { return cApp_to_level3TMTCIFExportExportCrossReference_12_0; }
-		
-		//STRING
-		public RuleCall getApp_to_level3TMTCIFExportExportSTRINGTerminalRuleCall_12_0_1() { return cApp_to_level3TMTCIFExportExportSTRINGTerminalRuleCall_12_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_13() { return cSolidusGreaterThanSignKeyword_13; }
-		
-		//('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_14() { return cGroup_14; }
-		
-		//'<level2'
-		public Keyword getLevel2Keyword_14_0() { return cLevel2Keyword_14_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_14_1() { return cFormatKeyword_14_1; }
-		
-		//level2=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel2Assignment_14_2() { return cLevel2Assignment_14_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel2TMTCIFFormatFormatCrossReference_14_2_0() { return cLevel2TMTCIFFormatFormatCrossReference_14_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1() { return cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14_3() { return cSolidusGreaterThanSignKeyword_14_3; }
-		
-		//('<level3_to_level2' 'export=' level3_to_level2=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'<level3_to_level2'
-		public Keyword getLevel3_to_level2Keyword_15_0() { return cLevel3_to_level2Keyword_15_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_15_1() { return cExportKeyword_15_1; }
-		
-		//level3_to_level2=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel3_to_level2Assignment_15_2() { return cLevel3_to_level2Assignment_15_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel3_to_level2TMTCIFExportExportCrossReference_15_2_0() { return cLevel3_to_level2TMTCIFExportExportCrossReference_15_2_0; }
-		
-		//STRING
-		public RuleCall getLevel3_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_15_2_0_1() { return cLevel3_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_15_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_16() { return cGroup_16; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_16_0() { return cLevel1Keyword_16_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_16_1() { return cFormatKeyword_16_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_16_2() { return cLevel1Assignment_16_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_16_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_16_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_16_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_16_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_16_3() { return cSolidusGreaterThanSignKeyword_16_3; }
-		
-		//('<level2_to_level1' 'export=' level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_17() { return cGroup_17; }
-		
-		//'<level2_to_level1'
-		public Keyword getLevel2_to_level1Keyword_17_0() { return cLevel2_to_level1Keyword_17_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_17_1() { return cExportKeyword_17_1; }
-		
-		//level2_to_level1=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel2_to_level1Assignment_17_2() { return cLevel2_to_level1Assignment_17_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel2_to_level1TMTCIFExportExportCrossReference_17_2_0() { return cLevel2_to_level1TMTCIFExportExportCrossReference_17_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_17_2_0_1() { return cLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_17_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_17_3() { return cSolidusGreaterThanSignKeyword_17_3; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_18() { return cGroup_18; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_18_0() { return cLevel0Keyword_18_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_18_1() { return cFormatKeyword_18_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_18_2() { return cLevel0Assignment_18_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_18_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_18_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_18_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_18_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_18_3() { return cSolidusGreaterThanSignKeyword_18_3; }
-		
-		//('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_19() { return cGroup_19; }
-		
-		//'<level1_to_level0'
-		public Keyword getLevel1_to_level0Keyword_19_0() { return cLevel1_to_level0Keyword_19_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_19_1() { return cExportKeyword_19_1; }
-		
-		//level1_to_level0=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel1_to_level0Assignment_19_2() { return cLevel1_to_level0Assignment_19_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel1_to_level0TMTCIFExportExportCrossReference_19_2_0() { return cLevel1_to_level0TMTCIFExportExportCrossReference_19_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_19_2_0_1() { return cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_19_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_19_3() { return cSolidusGreaterThanSignKeyword_19_3; }
-		
-		//'</input_level_3>'
-		public Keyword getInput_level_3Keyword_20() { return cInput_level_3Keyword_20; }
-	}
-	public class VSVSStepInputLevel2Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel2");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInput_level_2Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIfRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIfRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIfRefAssignment_4.eContents().get(0);
-		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
-		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDelay_unitVSVSStepUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cLevel2Keyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cFormatKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cLevel2Assignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cLevel2TMTCIFFormatFormatCrossReference_10_2_0 = (CrossReference)cLevel2Assignment_10_2.eContents().get(0);
-		private final RuleCall cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cLevel2TMTCIFFormatFormatCrossReference_10_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Keyword cApp_to_level2Keyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cExportKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cApp_to_level2Assignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final CrossReference cApp_to_level2TMTCIFExportExportCrossReference_13_0 = (CrossReference)cApp_to_level2Assignment_13.eContents().get(0);
-		private final RuleCall cApp_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1 = (RuleCall)cApp_to_level2TMTCIFExportExportCrossReference_13_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cLevel1Keyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cFormatKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cLevel1Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_15_2_0 = (CrossReference)cLevel1Assignment_15_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Group cGroup_16 = (Group)cGroup.eContents().get(16);
-		private final Keyword cLevel2_to_level1Keyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
-		private final Keyword cExportKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
-		private final Assignment cLevel2_to_level1Assignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
-		private final CrossReference cLevel2_to_level1TMTCIFExportExportCrossReference_16_2_0 = (CrossReference)cLevel2_to_level1Assignment_16_2.eContents().get(0);
-		private final RuleCall cLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1 = (RuleCall)cLevel2_to_level1TMTCIFExportExportCrossReference_16_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_16_3 = (Keyword)cGroup_16.eContents().get(3);
-		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
-		private final Keyword cLevel0Keyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
-		private final Keyword cFormatKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
-		private final Assignment cLevel0Assignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_17_2_0 = (CrossReference)cLevel0Assignment_17_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_17_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cLevel1_to_level0Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Keyword cExportKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
-		private final Assignment cLevel1_to_level0Assignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final CrossReference cLevel1_to_level0TMTCIFExportExportCrossReference_18_2_0 = (CrossReference)cLevel1_to_level0Assignment_18_2.eContents().get(0);
-		private final RuleCall cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_18_2_0_1 = (RuleCall)cLevel1_to_level0TMTCIFExportExportCrossReference_18_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
-		private final Keyword cInput_level_2Keyword_19 = (Keyword)cGroup.eContents().get(19);
-		
-		//VSVSStepInputLevel2:
-		//	'<input_level_2'
-		//	'name=' name=STRING
-		//	'ifRef=' ifRef=UINT_STRING
-		//	'delay_value=' delay_value=UINT_STRING
-		//	'delay_unit=' delay_unit=VSVSStepUnit
-		//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	'<app_to_level2' 'export=' app_to_level2=[export::TMTCIFExportExport|STRING] '/>' ('<level1' 'format='
-		//	level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-		//	level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-		//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		//	'</input_level_2>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<input_level_2' 'name=' name=STRING 'ifRef=' ifRef=UINT_STRING 'delay_value=' delay_value=UINT_STRING 'delay_unit='
-		//delay_unit=VSVSStepUnit '>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')? '<app_to_level2'
-		//'export=' app_to_level2=[export::TMTCIFExportExport|STRING] '/>' ('<level1' 'format='
-		//level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-		//level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-		//level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')? '</input_level_2>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<input_level_2'
-		public Keyword getInput_level_2Keyword_0() { return cInput_level_2Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_3() { return cIfRefKeyword_3; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_4() { return cIfRefAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_4_0() { return cIfRefUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'delay_value='
-		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
-		
-		//delay_value=UINT_STRING
-		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//'delay_unit='
-		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
-		
-		//delay_unit=VSVSStepUnit
-		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
-		
-		//VSVSStepUnit
-		public RuleCall getDelay_unitVSVSStepUnitEnumRuleCall_8_0() { return cDelay_unitVSVSStepUnitEnumRuleCall_8_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_9() { return cGreaterThanSignKeyword_9; }
-		
-		//('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'<level2'
-		public Keyword getLevel2Keyword_10_0() { return cLevel2Keyword_10_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_10_1() { return cFormatKeyword_10_1; }
-		
-		//level2=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel2Assignment_10_2() { return cLevel2Assignment_10_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel2TMTCIFFormatFormatCrossReference_10_2_0() { return cLevel2TMTCIFFormatFormatCrossReference_10_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1() { return cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
-		
-		//'<app_to_level2'
-		public Keyword getApp_to_level2Keyword_11() { return cApp_to_level2Keyword_11; }
-		
-		//'export='
-		public Keyword getExportKeyword_12() { return cExportKeyword_12; }
-		
-		//app_to_level2=[export::TMTCIFExportExport|STRING]
-		public Assignment getApp_to_level2Assignment_13() { return cApp_to_level2Assignment_13; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getApp_to_level2TMTCIFExportExportCrossReference_13_0() { return cApp_to_level2TMTCIFExportExportCrossReference_13_0; }
-		
-		//STRING
-		public RuleCall getApp_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1() { return cApp_to_level2TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14() { return cSolidusGreaterThanSignKeyword_14; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_15_0() { return cLevel1Keyword_15_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_15_1() { return cFormatKeyword_15_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_15_2() { return cLevel1Assignment_15_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_15_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_15_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
-		
-		//('<level2_to_level1' 'export=' level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_16() { return cGroup_16; }
-		
-		//'<level2_to_level1'
-		public Keyword getLevel2_to_level1Keyword_16_0() { return cLevel2_to_level1Keyword_16_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_16_1() { return cExportKeyword_16_1; }
-		
-		//level2_to_level1=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel2_to_level1Assignment_16_2() { return cLevel2_to_level1Assignment_16_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel2_to_level1TMTCIFExportExportCrossReference_16_2_0() { return cLevel2_to_level1TMTCIFExportExportCrossReference_16_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1() { return cLevel2_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_16_3() { return cSolidusGreaterThanSignKeyword_16_3; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_17() { return cGroup_17; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_17_0() { return cLevel0Keyword_17_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_17_1() { return cFormatKeyword_17_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_17_2() { return cLevel0Assignment_17_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_17_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_17_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_17_3() { return cSolidusGreaterThanSignKeyword_17_3; }
-		
-		//('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_18() { return cGroup_18; }
-		
-		//'<level1_to_level0'
-		public Keyword getLevel1_to_level0Keyword_18_0() { return cLevel1_to_level0Keyword_18_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_18_1() { return cExportKeyword_18_1; }
-		
-		//level1_to_level0=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel1_to_level0Assignment_18_2() { return cLevel1_to_level0Assignment_18_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel1_to_level0TMTCIFExportExportCrossReference_18_2_0() { return cLevel1_to_level0TMTCIFExportExportCrossReference_18_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_18_2_0_1() { return cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_18_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_18_3() { return cSolidusGreaterThanSignKeyword_18_3; }
-		
-		//'</input_level_2>'
-		public Keyword getInput_level_2Keyword_19() { return cInput_level_2Keyword_19; }
-	}
-	public class VSVSStepInputLevel1Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel1");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInput_level_1Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIfRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIfRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIfRefAssignment_4.eContents().get(0);
-		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
-		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDelay_unitVSVSStepUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cLevel1Keyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cFormatKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cLevel1Assignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_10_2_0 = (CrossReference)cLevel1Assignment_10_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_10_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Keyword cApp_to_level1Keyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cExportKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cApp_to_level1Assignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final CrossReference cApp_to_level1TMTCIFExportExportCrossReference_13_0 = (CrossReference)cApp_to_level1Assignment_13.eContents().get(0);
-		private final RuleCall cApp_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1 = (RuleCall)cApp_to_level1TMTCIFExportExportCrossReference_13_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cLevel0Keyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cFormatKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cLevel0Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_15_2_0 = (CrossReference)cLevel0Assignment_15_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Group cGroup_16 = (Group)cGroup.eContents().get(16);
-		private final Keyword cLevel1_to_level0Keyword_16_0 = (Keyword)cGroup_16.eContents().get(0);
-		private final Keyword cExportKeyword_16_1 = (Keyword)cGroup_16.eContents().get(1);
-		private final Assignment cLevel1_to_level0Assignment_16_2 = (Assignment)cGroup_16.eContents().get(2);
-		private final CrossReference cLevel1_to_level0TMTCIFExportExportCrossReference_16_2_0 = (CrossReference)cLevel1_to_level0Assignment_16_2.eContents().get(0);
-		private final RuleCall cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1 = (RuleCall)cLevel1_to_level0TMTCIFExportExportCrossReference_16_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_16_3 = (Keyword)cGroup_16.eContents().get(3);
-		private final Keyword cInput_level_1Keyword_17 = (Keyword)cGroup.eContents().get(17);
-		
-		//VSVSStepInputLevel1:
-		//	'<input_level_1'
-		//	'name=' name=STRING
-		//	'ifRef=' ifRef=UINT_STRING
-		//	'delay_value=' delay_value=UINT_STRING
-		//	'delay_unit=' delay_unit=VSVSStepUnit
-		//	'>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	'<app_to_level1' 'export=' app_to_level1=[export::TMTCIFExportExport|STRING] '/>' ('<level0' 'format='
-		//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		//	'</input_level_1>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<input_level_1' 'name=' name=STRING 'ifRef=' ifRef=UINT_STRING 'delay_value=' delay_value=UINT_STRING 'delay_unit='
-		//delay_unit=VSVSStepUnit '>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')? '<app_to_level1'
-		//'export=' app_to_level1=[export::TMTCIFExportExport|STRING] '/>' ('<level0' 'format='
-		//level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-		//level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')? '</input_level_1>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<input_level_1'
-		public Keyword getInput_level_1Keyword_0() { return cInput_level_1Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_3() { return cIfRefKeyword_3; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_4() { return cIfRefAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_4_0() { return cIfRefUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'delay_value='
-		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
-		
-		//delay_value=UINT_STRING
-		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//'delay_unit='
-		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
-		
-		//delay_unit=VSVSStepUnit
-		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
-		
-		//VSVSStepUnit
-		public RuleCall getDelay_unitVSVSStepUnitEnumRuleCall_8_0() { return cDelay_unitVSVSStepUnitEnumRuleCall_8_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_9() { return cGreaterThanSignKeyword_9; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_10_0() { return cLevel1Keyword_10_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_10_1() { return cFormatKeyword_10_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_10_2() { return cLevel1Assignment_10_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_10_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_10_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
-		
-		//'<app_to_level1'
-		public Keyword getApp_to_level1Keyword_11() { return cApp_to_level1Keyword_11; }
-		
-		//'export='
-		public Keyword getExportKeyword_12() { return cExportKeyword_12; }
-		
-		//app_to_level1=[export::TMTCIFExportExport|STRING]
-		public Assignment getApp_to_level1Assignment_13() { return cApp_to_level1Assignment_13; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getApp_to_level1TMTCIFExportExportCrossReference_13_0() { return cApp_to_level1TMTCIFExportExportCrossReference_13_0; }
-		
-		//STRING
-		public RuleCall getApp_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1() { return cApp_to_level1TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14() { return cSolidusGreaterThanSignKeyword_14; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_15_0() { return cLevel0Keyword_15_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_15_1() { return cFormatKeyword_15_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_15_2() { return cLevel0Assignment_15_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_15_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_15_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_15_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
-		
-		//('<level1_to_level0' 'export=' level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-		public Group getGroup_16() { return cGroup_16; }
-		
-		//'<level1_to_level0'
-		public Keyword getLevel1_to_level0Keyword_16_0() { return cLevel1_to_level0Keyword_16_0; }
-		
-		//'export='
-		public Keyword getExportKeyword_16_1() { return cExportKeyword_16_1; }
-		
-		//level1_to_level0=[export::TMTCIFExportExport|STRING]
-		public Assignment getLevel1_to_level0Assignment_16_2() { return cLevel1_to_level0Assignment_16_2; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getLevel1_to_level0TMTCIFExportExportCrossReference_16_2_0() { return cLevel1_to_level0TMTCIFExportExportCrossReference_16_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1() { return cLevel1_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_16_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_16_3() { return cSolidusGreaterThanSignKeyword_16_3; }
-		
-		//'</input_level_1>'
-		public Keyword getInput_level_1Keyword_17() { return cInput_level_1Keyword_17; }
-	}
-	public class VSVSStepInputLevel0Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputLevel0");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInput_level_0Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIfRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIfRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIfRefAssignment_4.eContents().get(0);
-		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
-		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDelay_unitVSVSStepUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cLevel0Keyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cFormatKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cLevel0Assignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_10_2_0 = (CrossReference)cLevel0Assignment_10_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_10_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_10_3 = (Keyword)cGroup_10.eContents().get(3);
-		private final Keyword cApp_to_level0Keyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Keyword cExportKeyword_12 = (Keyword)cGroup.eContents().get(12);
-		private final Assignment cApp_to_level0Assignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final CrossReference cApp_to_level0TMTCIFExportExportCrossReference_13_0 = (CrossReference)cApp_to_level0Assignment_13.eContents().get(0);
-		private final RuleCall cApp_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1 = (RuleCall)cApp_to_level0TMTCIFExportExportCrossReference_13_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Keyword cInput_level_0Keyword_15 = (Keyword)cGroup.eContents().get(15);
-		
-		//VSVSStepInputLevel0:
-		//	'<input_level_0'
-		//	'name=' name=STRING
-		//	'ifRef=' ifRef=UINT_STRING
-		//	'delay_value=' delay_value=UINT_STRING
-		//	'delay_unit=' delay_unit=VSVSStepUnit
-		//	'>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	'<app_to_level0' 'export=' app_to_level0=[export::TMTCIFExportExport|STRING] '/>'
-		//	'</input_level_0>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<input_level_0' 'name=' name=STRING 'ifRef=' ifRef=UINT_STRING 'delay_value=' delay_value=UINT_STRING 'delay_unit='
-		//delay_unit=VSVSStepUnit '>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')? '<app_to_level0'
-		//'export=' app_to_level0=[export::TMTCIFExportExport|STRING] '/>' '</input_level_0>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<input_level_0'
-		public Keyword getInput_level_0Keyword_0() { return cInput_level_0Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_3() { return cIfRefKeyword_3; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_4() { return cIfRefAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_4_0() { return cIfRefUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'delay_value='
-		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
-		
-		//delay_value=UINT_STRING
-		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//'delay_unit='
-		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
-		
-		//delay_unit=VSVSStepUnit
-		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
-		
-		//VSVSStepUnit
-		public RuleCall getDelay_unitVSVSStepUnitEnumRuleCall_8_0() { return cDelay_unitVSVSStepUnitEnumRuleCall_8_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_9() { return cGreaterThanSignKeyword_9; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_10_0() { return cLevel0Keyword_10_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_10_1() { return cFormatKeyword_10_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_10_2() { return cLevel0Assignment_10_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_10_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_10_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_10_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_10_3() { return cSolidusGreaterThanSignKeyword_10_3; }
-		
-		//'<app_to_level0'
-		public Keyword getApp_to_level0Keyword_11() { return cApp_to_level0Keyword_11; }
-		
-		//'export='
-		public Keyword getExportKeyword_12() { return cExportKeyword_12; }
-		
-		//app_to_level0=[export::TMTCIFExportExport|STRING]
-		public Assignment getApp_to_level0Assignment_13() { return cApp_to_level0Assignment_13; }
-		
-		//[export::TMTCIFExportExport|STRING]
-		public CrossReference getApp_to_level0TMTCIFExportExportCrossReference_13_0() { return cApp_to_level0TMTCIFExportExportCrossReference_13_0; }
-		
-		//STRING
-		public RuleCall getApp_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1() { return cApp_to_level0TMTCIFExportExportSTRINGTerminalRuleCall_13_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14() { return cSolidusGreaterThanSignKeyword_14; }
-		
-		//'</input_level_0>'
-		public Keyword getInput_level_0Keyword_15() { return cInput_level_0Keyword_15; }
 	}
 	public class VSVSStepOutputElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutput");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cVSVSStepOutputLevel3ParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final RuleCall cVSVSStepOutputLevel2ParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
-		private final RuleCall cVSVSStepOutputLevel1ParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
-		private final RuleCall cVSVSStepOutputLevel0ParserRuleCall_3 = (RuleCall)cAlternatives.eContents().get(3);
-		
-		//VSVSStepOutput:
-		//	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
-		@Override public ParserRule getRule() { return rule; }
-		
-		//VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//VSVSStepOutputLevel3
-		public RuleCall getVSVSStepOutputLevel3ParserRuleCall_0() { return cVSVSStepOutputLevel3ParserRuleCall_0; }
-		
-		//VSVSStepOutputLevel2
-		public RuleCall getVSVSStepOutputLevel2ParserRuleCall_1() { return cVSVSStepOutputLevel2ParserRuleCall_1; }
-		
-		//VSVSStepOutputLevel1
-		public RuleCall getVSVSStepOutputLevel1ParserRuleCall_2() { return cVSVSStepOutputLevel1ParserRuleCall_2; }
-		
-		//VSVSStepOutputLevel0
-		public RuleCall getVSVSStepOutputLevel0ParserRuleCall_3() { return cVSVSStepOutputLevel0ParserRuleCall_3; }
-	}
-	public class VSVSStepOutputLevel3Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel3");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutput_level_3Keyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cOutputKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cIfRefKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cIfRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cOptionalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cOptionalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cOptionalUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cLevel3Keyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cFormatKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cLevel3Assignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final CrossReference cLevel3TMTCIFFormatFormatCrossReference_9_2_0 = (CrossReference)cLevel3Assignment_9_2.eContents().get(0);
-		private final RuleCall cLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1 = (RuleCall)cLevel3TMTCIFFormatFormatCrossReference_9_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
-		private final Assignment cLevel3_filterAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cLevel3_filterVSVSStepLevel3FilterParserRuleCall_10_0 = (RuleCall)cLevel3_filterAssignment_10.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cLevel2Keyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cFormatKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cLevel2Assignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final CrossReference cLevel2TMTCIFFormatFormatCrossReference_11_2_0 = (CrossReference)cLevel2Assignment_11_2.eContents().get(0);
-		private final RuleCall cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cLevel2TMTCIFFormatFormatCrossReference_11_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cLevel3_from_level2Keyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Keyword cImportKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cLevel3_from_level2Assignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final CrossReference cLevel3_from_level2TMTCIFImportImportCrossReference_12_2_0 = (CrossReference)cLevel3_from_level2Assignment_12_2.eContents().get(0);
-		private final RuleCall cLevel3_from_level2TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cLevel3_from_level2TMTCIFImportImportCrossReference_12_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
-		private final Assignment cLevel2_filterAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cLevel2_filterVSVSStepLevel2FilterParserRuleCall_13_0 = (RuleCall)cLevel2_filterAssignment_13.eContents().get(0);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cLevel1Keyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Keyword cFormatKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
-		private final Assignment cLevel1Assignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_14_2_0 = (CrossReference)cLevel1Assignment_14_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_14_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14_3 = (Keyword)cGroup_14.eContents().get(3);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cLevel2_from_level1Keyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cImportKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cLevel2_from_level1Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0 = (CrossReference)cLevel2_from_level1Assignment_15_2.eContents().get(0);
-		private final RuleCall cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Assignment cLevel1_filterAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cLevel1_filterVSVSStepLevel1FilterParserRuleCall_16_0 = (RuleCall)cLevel1_filterAssignment_16.eContents().get(0);
-		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
-		private final Keyword cLevel0Keyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
-		private final Keyword cFormatKeyword_17_1 = (Keyword)cGroup_17.eContents().get(1);
-		private final Assignment cLevel0Assignment_17_2 = (Assignment)cGroup_17.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_17_2_0 = (CrossReference)cLevel0Assignment_17_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_17_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_17_3 = (Keyword)cGroup_17.eContents().get(3);
-		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cLevel1_from_level0Keyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Keyword cImportKeyword_18_1 = (Keyword)cGroup_18.eContents().get(1);
-		private final Assignment cLevel1_from_level0Assignment_18_2 = (Assignment)cGroup_18.eContents().get(2);
-		private final CrossReference cLevel1_from_level0TMTCIFImportImportCrossReference_18_2_0 = (CrossReference)cLevel1_from_level0Assignment_18_2.eContents().get(0);
-		private final RuleCall cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_18_2_0_1 = (RuleCall)cLevel1_from_level0TMTCIFImportImportCrossReference_18_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_18_3 = (Keyword)cGroup_18.eContents().get(3);
-		private final Assignment cLevel0_filterAssignment_19 = (Assignment)cGroup.eContents().get(19);
-		private final RuleCall cLevel0_filterVSVSStepLevel0FilterParserRuleCall_19_0 = (RuleCall)cLevel0_filterAssignment_19.eContents().get(0);
-		private final Keyword cOutput_level_3Keyword_20 = (Keyword)cGroup.eContents().get(20);
-		
-		//VSVSStepOutputLevel3:
-		//	'<output_level_3'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//	'>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level0_filter=VSVSStepLevel0Filter
-		//	'</output_level_3>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<output_level_3' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
-		//optional=UINT_STRING)? '>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level0_filter=VSVSStepLevel0Filter '</output_level_3>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<output_level_3'
-		public Keyword getOutput_level_3Keyword_0() { return cOutput_level_3Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_5() { return cIfRefKeyword_5; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_6() { return cIfRefAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_6_0() { return cIfRefUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//('optional=' optional=UINT_STRING)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'optional='
-		public Keyword getOptionalKeyword_7_0() { return cOptionalKeyword_7_0; }
-		
-		//optional=UINT_STRING
-		public Assignment getOptionalAssignment_7_1() { return cOptionalAssignment_7_1; }
-		
-		//UINT_STRING
-		public RuleCall getOptionalUINT_STRINGTerminalRuleCall_7_1_0() { return cOptionalUINT_STRINGTerminalRuleCall_7_1_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
-		
-		//('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'<level3'
-		public Keyword getLevel3Keyword_9_0() { return cLevel3Keyword_9_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_9_1() { return cFormatKeyword_9_1; }
-		
-		//level3=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel3Assignment_9_2() { return cLevel3Assignment_9_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel3TMTCIFFormatFormatCrossReference_9_2_0() { return cLevel3TMTCIFFormatFormatCrossReference_9_2_0; }
-		
-		//STRING
-		public RuleCall getLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1() { return cLevel3TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9_3() { return cSolidusGreaterThanSignKeyword_9_3; }
-		
-		//level3_filter=VSVSStepLevel3Filter
-		public Assignment getLevel3_filterAssignment_10() { return cLevel3_filterAssignment_10; }
-		
-		//VSVSStepLevel3Filter
-		public RuleCall getLevel3_filterVSVSStepLevel3FilterParserRuleCall_10_0() { return cLevel3_filterVSVSStepLevel3FilterParserRuleCall_10_0; }
-		
-		//('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_11() { return cGroup_11; }
-		
-		//'<level2'
-		public Keyword getLevel2Keyword_11_0() { return cLevel2Keyword_11_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_11_1() { return cFormatKeyword_11_1; }
-		
-		//level2=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel2Assignment_11_2() { return cLevel2Assignment_11_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel2TMTCIFFormatFormatCrossReference_11_2_0() { return cLevel2TMTCIFFormatFormatCrossReference_11_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1() { return cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
-		
-		//('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_12() { return cGroup_12; }
-		
-		//'<level3_from_level2'
-		public Keyword getLevel3_from_level2Keyword_12_0() { return cLevel3_from_level2Keyword_12_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_12_1() { return cImportKeyword_12_1; }
-		
-		//level3_from_level2=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel3_from_level2Assignment_12_2() { return cLevel3_from_level2Assignment_12_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel3_from_level2TMTCIFImportImportCrossReference_12_2_0() { return cLevel3_from_level2TMTCIFImportImportCrossReference_12_2_0; }
-		
-		//STRING
-		public RuleCall getLevel3_from_level2TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1() { return cLevel3_from_level2TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
-		
-		//level2_filter=VSVSStepLevel2Filter
-		public Assignment getLevel2_filterAssignment_13() { return cLevel2_filterAssignment_13; }
-		
-		//VSVSStepLevel2Filter
-		public RuleCall getLevel2_filterVSVSStepLevel2FilterParserRuleCall_13_0() { return cLevel2_filterVSVSStepLevel2FilterParserRuleCall_13_0; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_14() { return cGroup_14; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_14_0() { return cLevel1Keyword_14_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_14_1() { return cFormatKeyword_14_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_14_2() { return cLevel1Assignment_14_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_14_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_14_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14_3() { return cSolidusGreaterThanSignKeyword_14_3; }
-		
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'<level2_from_level1'
-		public Keyword getLevel2_from_level1Keyword_15_0() { return cLevel2_from_level1Keyword_15_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_15_1() { return cImportKeyword_15_1; }
-		
-		//level2_from_level1=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel2_from_level1Assignment_15_2() { return cLevel2_from_level1Assignment_15_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0() { return cLevel2_from_level1TMTCIFImportImportCrossReference_15_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1() { return cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
-		
-		//level1_filter=VSVSStepLevel1Filter
-		public Assignment getLevel1_filterAssignment_16() { return cLevel1_filterAssignment_16; }
-		
-		//VSVSStepLevel1Filter
-		public RuleCall getLevel1_filterVSVSStepLevel1FilterParserRuleCall_16_0() { return cLevel1_filterVSVSStepLevel1FilterParserRuleCall_16_0; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_17() { return cGroup_17; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_17_0() { return cLevel0Keyword_17_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_17_1() { return cFormatKeyword_17_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_17_2() { return cLevel0Assignment_17_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_17_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_17_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_17_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_17_3() { return cSolidusGreaterThanSignKeyword_17_3; }
-		
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_18() { return cGroup_18; }
-		
-		//'<level1_from_level0'
-		public Keyword getLevel1_from_level0Keyword_18_0() { return cLevel1_from_level0Keyword_18_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_18_1() { return cImportKeyword_18_1; }
-		
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel1_from_level0Assignment_18_2() { return cLevel1_from_level0Assignment_18_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel1_from_level0TMTCIFImportImportCrossReference_18_2_0() { return cLevel1_from_level0TMTCIFImportImportCrossReference_18_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_18_2_0_1() { return cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_18_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_18_3() { return cSolidusGreaterThanSignKeyword_18_3; }
-		
-		//level0_filter=VSVSStepLevel0Filter
-		public Assignment getLevel0_filterAssignment_19() { return cLevel0_filterAssignment_19; }
-		
-		//VSVSStepLevel0Filter
-		public RuleCall getLevel0_filterVSVSStepLevel0FilterParserRuleCall_19_0() { return cLevel0_filterVSVSStepLevel0FilterParserRuleCall_19_0; }
-		
-		//'</output_level_3>'
-		public Keyword getOutput_level_3Keyword_20() { return cOutput_level_3Keyword_20; }
-	}
-	public class VSVSStepOutputLevel2Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel2");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutput_level_2Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cIfRefKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cIfRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cOptionalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cOptionalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cOptionalUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cLevel2Keyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cFormatKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cLevel2Assignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final CrossReference cLevel2TMTCIFFormatFormatCrossReference_9_2_0 = (CrossReference)cLevel2Assignment_9_2.eContents().get(0);
-		private final RuleCall cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1 = (RuleCall)cLevel2TMTCIFFormatFormatCrossReference_9_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
-		private final Assignment cLevel2_filterAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cLevel2_filterVSVSStepLevel2FilterParserRuleCall_10_0 = (RuleCall)cLevel2_filterAssignment_10.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cLevel1Keyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cFormatKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cLevel1Assignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_11_2_0 = (CrossReference)cLevel1Assignment_11_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_11_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cLevel2_from_level1Keyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Keyword cImportKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cLevel2_from_level1Assignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final CrossReference cLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0 = (CrossReference)cLevel2_from_level1Assignment_12_2.eContents().get(0);
-		private final RuleCall cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
-		private final Assignment cLevel1_filterAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cLevel1_filterVSVSStepLevel1FilterParserRuleCall_13_0 = (RuleCall)cLevel1_filterAssignment_13.eContents().get(0);
-		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
-		private final Keyword cLevel0Keyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
-		private final Keyword cFormatKeyword_14_1 = (Keyword)cGroup_14.eContents().get(1);
-		private final Assignment cLevel0Assignment_14_2 = (Assignment)cGroup_14.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_14_2_0 = (CrossReference)cLevel0Assignment_14_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_14_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_14_3 = (Keyword)cGroup_14.eContents().get(3);
-		private final Group cGroup_15 = (Group)cGroup.eContents().get(15);
-		private final Keyword cLevel1_from_level0Keyword_15_0 = (Keyword)cGroup_15.eContents().get(0);
-		private final Keyword cImportKeyword_15_1 = (Keyword)cGroup_15.eContents().get(1);
-		private final Assignment cLevel1_from_level0Assignment_15_2 = (Assignment)cGroup_15.eContents().get(2);
-		private final CrossReference cLevel1_from_level0TMTCIFImportImportCrossReference_15_2_0 = (CrossReference)cLevel1_from_level0Assignment_15_2.eContents().get(0);
-		private final RuleCall cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1 = (RuleCall)cLevel1_from_level0TMTCIFImportImportCrossReference_15_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_15_3 = (Keyword)cGroup_15.eContents().get(3);
-		private final Assignment cLevel0_filterAssignment_16 = (Assignment)cGroup.eContents().get(16);
-		private final RuleCall cLevel0_filterVSVSStepLevel0FilterParserRuleCall_16_0 = (RuleCall)cLevel0_filterAssignment_16.eContents().get(0);
-		private final Keyword cOutput_level_2Keyword_17 = (Keyword)cGroup.eContents().get(17);
-		
-		//VSVSStepOutputLevel2:
-		//	'<output_level_2'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level0_filter=VSVSStepLevel0Filter
-		//	'</output_level_2>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<output_level_2' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
-		//optional=UINT_STRING)? '>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level0_filter=VSVSStepLevel0Filter '</output_level_2>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<output_level_2'
-		public Keyword getOutput_level_2Keyword_0() { return cOutput_level_2Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_5() { return cIfRefKeyword_5; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_6() { return cIfRefAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_6_0() { return cIfRefUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//('optional=' optional=UINT_STRING)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'optional='
-		public Keyword getOptionalKeyword_7_0() { return cOptionalKeyword_7_0; }
-		
-		//optional=UINT_STRING
-		public Assignment getOptionalAssignment_7_1() { return cOptionalAssignment_7_1; }
-		
-		//UINT_STRING
-		public RuleCall getOptionalUINT_STRINGTerminalRuleCall_7_1_0() { return cOptionalUINT_STRINGTerminalRuleCall_7_1_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
-		
-		//('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'<level2'
-		public Keyword getLevel2Keyword_9_0() { return cLevel2Keyword_9_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_9_1() { return cFormatKeyword_9_1; }
-		
-		//level2=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel2Assignment_9_2() { return cLevel2Assignment_9_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel2TMTCIFFormatFormatCrossReference_9_2_0() { return cLevel2TMTCIFFormatFormatCrossReference_9_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1() { return cLevel2TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9_3() { return cSolidusGreaterThanSignKeyword_9_3; }
-		
-		//level2_filter=VSVSStepLevel2Filter
-		public Assignment getLevel2_filterAssignment_10() { return cLevel2_filterAssignment_10; }
-		
-		//VSVSStepLevel2Filter
-		public RuleCall getLevel2_filterVSVSStepLevel2FilterParserRuleCall_10_0() { return cLevel2_filterVSVSStepLevel2FilterParserRuleCall_10_0; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_11() { return cGroup_11; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_11_0() { return cLevel1Keyword_11_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_11_1() { return cFormatKeyword_11_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_11_2() { return cLevel1Assignment_11_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_11_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_11_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
-		
-		//('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_12() { return cGroup_12; }
-		
-		//'<level2_from_level1'
-		public Keyword getLevel2_from_level1Keyword_12_0() { return cLevel2_from_level1Keyword_12_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_12_1() { return cImportKeyword_12_1; }
-		
-		//level2_from_level1=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel2_from_level1Assignment_12_2() { return cLevel2_from_level1Assignment_12_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0() { return cLevel2_from_level1TMTCIFImportImportCrossReference_12_2_0; }
-		
-		//STRING
-		public RuleCall getLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1() { return cLevel2_from_level1TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
-		
-		//level1_filter=VSVSStepLevel1Filter
-		public Assignment getLevel1_filterAssignment_13() { return cLevel1_filterAssignment_13; }
-		
-		//VSVSStepLevel1Filter
-		public RuleCall getLevel1_filterVSVSStepLevel1FilterParserRuleCall_13_0() { return cLevel1_filterVSVSStepLevel1FilterParserRuleCall_13_0; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_14() { return cGroup_14; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_14_0() { return cLevel0Keyword_14_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_14_1() { return cFormatKeyword_14_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_14_2() { return cLevel0Assignment_14_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_14_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_14_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_14_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_14_3() { return cSolidusGreaterThanSignKeyword_14_3; }
-		
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_15() { return cGroup_15; }
-		
-		//'<level1_from_level0'
-		public Keyword getLevel1_from_level0Keyword_15_0() { return cLevel1_from_level0Keyword_15_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_15_1() { return cImportKeyword_15_1; }
-		
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel1_from_level0Assignment_15_2() { return cLevel1_from_level0Assignment_15_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel1_from_level0TMTCIFImportImportCrossReference_15_2_0() { return cLevel1_from_level0TMTCIFImportImportCrossReference_15_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1() { return cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_15_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_15_3() { return cSolidusGreaterThanSignKeyword_15_3; }
-		
-		//level0_filter=VSVSStepLevel0Filter
-		public Assignment getLevel0_filterAssignment_16() { return cLevel0_filterAssignment_16; }
-		
-		//VSVSStepLevel0Filter
-		public RuleCall getLevel0_filterVSVSStepLevel0FilterParserRuleCall_16_0() { return cLevel0_filterVSVSStepLevel0FilterParserRuleCall_16_0; }
-		
-		//'</output_level_2>'
-		public Keyword getOutput_level_2Keyword_17() { return cOutput_level_2Keyword_17; }
-	}
-	public class VSVSStepOutputLevel1Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel1");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutput_level_1Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cIfRefKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cIfRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cOptionalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cOptionalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cOptionalUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cLevel1Keyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cFormatKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cLevel1Assignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final CrossReference cLevel1TMTCIFFormatFormatCrossReference_9_2_0 = (CrossReference)cLevel1Assignment_9_2.eContents().get(0);
-		private final RuleCall cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1 = (RuleCall)cLevel1TMTCIFFormatFormatCrossReference_9_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
-		private final Assignment cLevel1_filterAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cLevel1_filterVSVSStepLevel1FilterParserRuleCall_10_0 = (RuleCall)cLevel1_filterAssignment_10.eContents().get(0);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cLevel0Keyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cFormatKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cLevel0Assignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_11_2_0 = (CrossReference)cLevel0Assignment_11_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_11_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_11_3 = (Keyword)cGroup_11.eContents().get(3);
-		private final Group cGroup_12 = (Group)cGroup.eContents().get(12);
-		private final Keyword cLevel1_from_level0Keyword_12_0 = (Keyword)cGroup_12.eContents().get(0);
-		private final Keyword cImportKeyword_12_1 = (Keyword)cGroup_12.eContents().get(1);
-		private final Assignment cLevel1_from_level0Assignment_12_2 = (Assignment)cGroup_12.eContents().get(2);
-		private final CrossReference cLevel1_from_level0TMTCIFImportImportCrossReference_12_2_0 = (CrossReference)cLevel1_from_level0Assignment_12_2.eContents().get(0);
-		private final RuleCall cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1 = (RuleCall)cLevel1_from_level0TMTCIFImportImportCrossReference_12_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_12_3 = (Keyword)cGroup_12.eContents().get(3);
-		private final Assignment cLevel0_filterAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cLevel0_filterVSVSStepLevel0FilterParserRuleCall_13_0 = (RuleCall)cLevel0_filterAssignment_13.eContents().get(0);
-		private final Keyword cOutput_level_1Keyword_14 = (Keyword)cGroup.eContents().get(14);
-		
-		//VSVSStepOutputLevel1:
-		//	'<output_level_1'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//	'>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//	level0_filter=VSVSStepLevel0Filter
-		//	'</output_level_1>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<output_level_1' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
-		//optional=UINT_STRING)? '>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		//level0_filter=VSVSStepLevel0Filter '</output_level_1>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<output_level_1'
-		public Keyword getOutput_level_1Keyword_0() { return cOutput_level_1Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_5() { return cIfRefKeyword_5; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_6() { return cIfRefAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_6_0() { return cIfRefUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//('optional=' optional=UINT_STRING)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'optional='
-		public Keyword getOptionalKeyword_7_0() { return cOptionalKeyword_7_0; }
-		
-		//optional=UINT_STRING
-		public Assignment getOptionalAssignment_7_1() { return cOptionalAssignment_7_1; }
-		
-		//UINT_STRING
-		public RuleCall getOptionalUINT_STRINGTerminalRuleCall_7_1_0() { return cOptionalUINT_STRINGTerminalRuleCall_7_1_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
-		
-		//('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'<level1'
-		public Keyword getLevel1Keyword_9_0() { return cLevel1Keyword_9_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_9_1() { return cFormatKeyword_9_1; }
-		
-		//level1=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel1Assignment_9_2() { return cLevel1Assignment_9_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel1TMTCIFFormatFormatCrossReference_9_2_0() { return cLevel1TMTCIFFormatFormatCrossReference_9_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1() { return cLevel1TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9_3() { return cSolidusGreaterThanSignKeyword_9_3; }
-		
-		//level1_filter=VSVSStepLevel1Filter
-		public Assignment getLevel1_filterAssignment_10() { return cLevel1_filterAssignment_10; }
-		
-		//VSVSStepLevel1Filter
-		public RuleCall getLevel1_filterVSVSStepLevel1FilterParserRuleCall_10_0() { return cLevel1_filterVSVSStepLevel1FilterParserRuleCall_10_0; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_11() { return cGroup_11; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_11_0() { return cLevel0Keyword_11_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_11_1() { return cFormatKeyword_11_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_11_2() { return cLevel0Assignment_11_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_11_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_11_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_11_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_11_3() { return cSolidusGreaterThanSignKeyword_11_3; }
-		
-		//('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-		public Group getGroup_12() { return cGroup_12; }
-		
-		//'<level1_from_level0'
-		public Keyword getLevel1_from_level0Keyword_12_0() { return cLevel1_from_level0Keyword_12_0; }
-		
-		//'import='
-		public Keyword getImportKeyword_12_1() { return cImportKeyword_12_1; }
-		
-		//level1_from_level0=[import_::TMTCIFImportImport|STRING]
-		public Assignment getLevel1_from_level0Assignment_12_2() { return cLevel1_from_level0Assignment_12_2; }
-		
-		//[import_::TMTCIFImportImport|STRING]
-		public CrossReference getLevel1_from_level0TMTCIFImportImportCrossReference_12_2_0() { return cLevel1_from_level0TMTCIFImportImportCrossReference_12_2_0; }
-		
-		//STRING
-		public RuleCall getLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1() { return cLevel1_from_level0TMTCIFImportImportSTRINGTerminalRuleCall_12_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_12_3() { return cSolidusGreaterThanSignKeyword_12_3; }
-		
-		//level0_filter=VSVSStepLevel0Filter
-		public Assignment getLevel0_filterAssignment_13() { return cLevel0_filterAssignment_13; }
-		
-		//VSVSStepLevel0Filter
-		public RuleCall getLevel0_filterVSVSStepLevel0FilterParserRuleCall_13_0() { return cLevel0_filterVSVSStepLevel0FilterParserRuleCall_13_0; }
-		
-		//'</output_level_1>'
-		public Keyword getOutput_level_1Keyword_14() { return cOutput_level_1Keyword_14; }
-	}
-	public class VSVSStepOutputLevel0Elements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputLevel0");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutput_level_0Keyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cIfRefKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cIfRefAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cIfRefUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cIfRefAssignment_6.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cOptionalKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cOptionalAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cOptionalUINT_STRINGTerminalRuleCall_7_1_0 = (RuleCall)cOptionalAssignment_7_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cLevel0Keyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cFormatKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cLevel0Assignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final CrossReference cLevel0TMTCIFFormatFormatCrossReference_9_2_0 = (CrossReference)cLevel0Assignment_9_2.eContents().get(0);
-		private final RuleCall cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1 = (RuleCall)cLevel0TMTCIFFormatFormatCrossReference_9_2_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_9_3 = (Keyword)cGroup_9.eContents().get(3);
-		private final Assignment cLevel0_filterAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cLevel0_filterVSVSStepLevel0FilterParserRuleCall_10_0 = (RuleCall)cLevel0_filterAssignment_10.eContents().get(0);
-		private final Keyword cOutput_level_0Keyword_11 = (Keyword)cGroup.eContents().get(11);
-		
-		//VSVSStepOutputLevel0:
-		//	'<output_level_0'
-		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
-		//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-		//	'>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//	level0_filter=VSVSStepLevel0Filter
-		//	'</output_level_0>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<output_level_0' 'name=' name=STRING 'id=' id=UINT_STRING 'ifRef=' ifRef=UINT_STRING ('optional='
-		//optional=UINT_STRING)? '>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		//level0_filter=VSVSStepLevel0Filter '</output_level_0>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<output_level_0'
-		public Keyword getOutput_level_0Keyword_0() { return cOutput_level_0Keyword_0; }
-		
-		//'name='
-		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
-		
-		//name=STRING
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
-		
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
-		//'ifRef='
-		public Keyword getIfRefKeyword_5() { return cIfRefKeyword_5; }
-		
-		//ifRef=UINT_STRING
-		public Assignment getIfRefAssignment_6() { return cIfRefAssignment_6; }
-		
-		//UINT_STRING
-		public RuleCall getIfRefUINT_STRINGTerminalRuleCall_6_0() { return cIfRefUINT_STRINGTerminalRuleCall_6_0; }
-		
-		//('optional=' optional=UINT_STRING)?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'optional='
-		public Keyword getOptionalKeyword_7_0() { return cOptionalKeyword_7_0; }
-		
-		//optional=UINT_STRING
-		public Assignment getOptionalAssignment_7_1() { return cOptionalAssignment_7_1; }
-		
-		//UINT_STRING
-		public RuleCall getOptionalUINT_STRINGTerminalRuleCall_7_1_0() { return cOptionalUINT_STRINGTerminalRuleCall_7_1_0; }
-		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_8() { return cGreaterThanSignKeyword_8; }
-		
-		//('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-		public Group getGroup_9() { return cGroup_9; }
-		
-		//'<level0'
-		public Keyword getLevel0Keyword_9_0() { return cLevel0Keyword_9_0; }
-		
-		//'format='
-		public Keyword getFormatKeyword_9_1() { return cFormatKeyword_9_1; }
-		
-		//level0=[format::TMTCIFFormatFormat|STRING]
-		public Assignment getLevel0Assignment_9_2() { return cLevel0Assignment_9_2; }
-		
-		//[format::TMTCIFFormatFormat|STRING]
-		public CrossReference getLevel0TMTCIFFormatFormatCrossReference_9_2_0() { return cLevel0TMTCIFFormatFormatCrossReference_9_2_0; }
-		
-		//STRING
-		public RuleCall getLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1() { return cLevel0TMTCIFFormatFormatSTRINGTerminalRuleCall_9_2_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9_3() { return cSolidusGreaterThanSignKeyword_9_3; }
-		
-		//level0_filter=VSVSStepLevel0Filter
-		public Assignment getLevel0_filterAssignment_10() { return cLevel0_filterAssignment_10; }
-		
-		//VSVSStepLevel0Filter
-		public RuleCall getLevel0_filterVSVSStepLevel0FilterParserRuleCall_10_0() { return cLevel0_filterVSVSStepLevel0FilterParserRuleCall_10_0; }
-		
-		//'</output_level_0>'
-		public Keyword getOutput_level_0Keyword_11() { return cOutput_level_0Keyword_11; }
-	}
-	public class VSVSStepLevel3FilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel3Filter");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLevel3_filterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//VSVSStepLevel3Filter VSVSStepFilter:
-		//	'<level3_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<level3_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<level3_filter'
-		public Keyword getLevel3_filterKeyword_0() { return cLevel3_filterKeyword_0; }
-		
-		//'apply_def_filter='
-		public Keyword getApply_def_filterKeyword_1() { return cApply_def_filterKeyword_1; }
-		
-		//apply_def_filter=VSVSStepYesNo
-		public Assignment getApply_def_filterAssignment_2() { return cApply_def_filterAssignment_2; }
-		
-		//VSVSStepYesNo
-		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'extra_filter='
-		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
-		
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
-		
-		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
-		
-		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
-	}
-	public class VSVSStepLevel2FilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel2Filter");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLevel2_filterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//VSVSStepLevel2Filter VSVSStepFilter:
-		//	'<level2_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<level2_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<level2_filter'
-		public Keyword getLevel2_filterKeyword_0() { return cLevel2_filterKeyword_0; }
-		
-		//'apply_def_filter='
-		public Keyword getApply_def_filterKeyword_1() { return cApply_def_filterKeyword_1; }
-		
-		//apply_def_filter=VSVSStepYesNo
-		public Assignment getApply_def_filterAssignment_2() { return cApply_def_filterAssignment_2; }
-		
-		//VSVSStepYesNo
-		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'extra_filter='
-		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
-		
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
-		
-		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
-		
-		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
-	}
-	public class VSVSStepLevel1FilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel1Filter");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLevel1_filterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//VSVSStepLevel1Filter VSVSStepFilter:
-		//	'<level1_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<level1_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<level1_filter'
-		public Keyword getLevel1_filterKeyword_0() { return cLevel1_filterKeyword_0; }
-		
-		//'apply_def_filter='
-		public Keyword getApply_def_filterKeyword_1() { return cApply_def_filterKeyword_1; }
-		
-		//apply_def_filter=VSVSStepYesNo
-		public Assignment getApply_def_filterAssignment_2() { return cApply_def_filterAssignment_2; }
-		
-		//VSVSStepYesNo
-		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'extra_filter='
-		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
-		
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
-		
-		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
-		
-		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
-	}
-	public class VSVSStepLevel0FilterElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepLevel0Filter");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cLevel0_filterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cApply_def_filterKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cApply_def_filterAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0 = (RuleCall)cApply_def_filterAssignment_2.eContents().get(0);
-		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cExtra_filterKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cExtra_filterAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0 = (CrossReference)cExtra_filterAssignment_3_1.eContents().get(0);
-		private final RuleCall cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//VSVSStepLevel0Filter VSVSStepFilter:
-		//	'<level0_filter'
-		//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<level0_filter' 'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING])? '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<level0_filter'
-		public Keyword getLevel0_filterKeyword_0() { return cLevel0_filterKeyword_0; }
-		
-		//'apply_def_filter='
-		public Keyword getApply_def_filterKeyword_1() { return cApply_def_filterKeyword_1; }
-		
-		//apply_def_filter=VSVSStepYesNo
-		public Assignment getApply_def_filterAssignment_2() { return cApply_def_filterAssignment_2; }
-		
-		//VSVSStepYesNo
-		public RuleCall getApply_def_filterVSVSStepYesNoEnumRuleCall_2_0() { return cApply_def_filterVSVSStepYesNoEnumRuleCall_2_0; }
-		
-		//('extra_filter=' extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-		public Group getGroup_3() { return cGroup_3; }
-		
-		//'extra_filter='
-		public Keyword getExtra_filterKeyword_3_0() { return cExtra_filterKeyword_3_0; }
-		
-		//extra_filter=[filter::TMTCIFFilterFilter|STRING]
-		public Assignment getExtra_filterAssignment_3_1() { return cExtra_filterAssignment_3_1; }
-		
-		//[filter::TMTCIFFilterFilter|STRING]
-		public CrossReference getExtra_filterTMTCIFFilterFilterCrossReference_3_1_0() { return cExtra_filterTMTCIFFilterFilterCrossReference_3_1_0; }
-		
-		//STRING
-		public RuleCall getExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1() { return cExtra_filterTMTCIFFilterFilterSTRINGTerminalRuleCall_3_1_0_1; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
-	}
-	public class VSVSStepEnableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnable");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEnableKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepEnable VSVSStepEnableDisable:
-		//	'<enable'
-		//	'id=' id=UINT_STRING
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<enable' 'id=' id=UINT_STRING '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<enable'
-		public Keyword getEnableKeyword_0() { return cEnableKeyword_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
-	}
-	public class VSVSStepDisableElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisable");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDisableKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepDisable VSVSStepEnableDisable:
-		//	'<disable'
-		//	'id=' id=UINT_STRING
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<disable' 'id=' id=UINT_STRING '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<disable'
-		public Keyword getDisableKeyword_0() { return cDisableKeyword_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
-	}
-	public class VSVSStepEnablePrintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepEnablePrint");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cEnable_printKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepEnablePrint VSVSStepEnableDisable:
-		//	'<enable_print'
-		//	'id=' id=UINT_STRING
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<enable_print' 'id=' id=UINT_STRING '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<enable_print'
-		public Keyword getEnable_printKeyword_0() { return cEnable_printKeyword_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
-	}
-	public class VSVSStepDisablePrintElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepDisablePrint");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cDisable_printKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepDisablePrint VSVSStepEnableDisable:
-		//	'<disable_print'
-		//	'id=' id=UINT_STRING
-		//	'/>'
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<disable_print' 'id=' id=UINT_STRING '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<disable_print'
-		public Keyword getDisable_printKeyword_0() { return cDisable_printKeyword_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
-	}
-	public class VSVSStepNextStepElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepNextStep");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cNextStepKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cIsConcurrentKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIsConcurrentAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIsConcurrentVSVSStepYesNoEnumRuleCall_4_0 = (RuleCall)cIsConcurrentAssignment_4.eContents().get(0);
+		private final Keyword cInterfaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
+		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
-		//VSVSStepNextStep:
-		//	'<nextStep'
-		//	'id=' id=UINT_STRING
-		//	'isConcurrent=' isConcurrent=VSVSStepYesNo
+		//VSVSStepOutput:
+		//	'<Output'
+		//	'name=' name=STRING
+		//	'interface=' interface=[VSVSInterface|STRING]
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<nextStep' 'id=' id=UINT_STRING 'isConcurrent=' isConcurrent=VSVSStepYesNo '/>'
+		//'<Output' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<nextStep'
-		public Keyword getNextStepKeyword_0() { return cNextStepKeyword_0; }
+		//'<Output'
+		public Keyword getOutputKeyword_0() { return cOutputKeyword_0; }
 		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
 		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'isConcurrent='
-		public Keyword getIsConcurrentKeyword_3() { return cIsConcurrentKeyword_3; }
+		//'interface='
+		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//isConcurrent=VSVSStepYesNo
-		public Assignment getIsConcurrentAssignment_4() { return cIsConcurrentAssignment_4; }
+		//interface=[VSVSInterface|STRING]
+		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//VSVSStepYesNo
-		public RuleCall getIsConcurrentVSVSStepYesNoEnumRuleCall_4_0() { return cIsConcurrentVSVSStepYesNoEnumRuleCall_4_0; }
+		//[VSVSInterface|STRING]
+		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_0() { return cInterfaceVSVSInterfaceCrossReference_4_0; }
+		
+		//STRING
+		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
-	}
-	public class VSVSStepConcurrentStepElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConcurrentStep");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cConcurrent_stepKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cIdKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cIdAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_2_0 = (RuleCall)cIdAssignment_2.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		
-		//VSVSStepConcurrentStep:
-		//	'<concurrent_step'
-		//	'id=' id=UINT_STRING
-		//	'/>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//'<concurrent_step' 'id=' id=UINT_STRING '/>'
-		public Group getGroup() { return cGroup; }
-		
-		//'<concurrent_step'
-		public Keyword getConcurrent_stepKeyword_0() { return cConcurrent_stepKeyword_0; }
-		
-		//'id='
-		public Keyword getIdKeyword_1() { return cIdKeyword_1; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_2() { return cIdAssignment_2; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_2_0() { return cIdUINT_STRINGTerminalRuleCall_2_0; }
-		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.QualifiedName");
@@ -5964,51 +3785,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"false"'
 		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
 	}
-	public class VSVSStepModeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepMode");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cContinuousEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cContinuousContinuousKeyword_0_0 = (Keyword)cContinuousEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cManualEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cManualManualKeyword_1_0 = (Keyword)cManualEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cConcurrentEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cConcurrentConcurrentKeyword_2_0 = (Keyword)cConcurrentEnumLiteralDeclaration_2.eContents().get(0);
-		
-		//enum VSVSStepMode:
-		//	continuous='"continuous"' | manual='"manual"' |
-		//	concurrent='"concurrent"';
-		public EnumRule getRule() { return rule; }
-		
-		//continuous='"continuous"' | manual='"manual"' | concurrent='"concurrent"'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//continuous='"continuous"'
-		public EnumLiteralDeclaration getContinuousEnumLiteralDeclaration_0() { return cContinuousEnumLiteralDeclaration_0; }
-		
-		//'"continuous"'
-		public Keyword getContinuousContinuousKeyword_0_0() { return cContinuousContinuousKeyword_0_0; }
-		
-		//manual='"manual"'
-		public EnumLiteralDeclaration getManualEnumLiteralDeclaration_1() { return cManualEnumLiteralDeclaration_1; }
-		
-		//'"manual"'
-		public Keyword getManualManualKeyword_1_0() { return cManualManualKeyword_1_0; }
-		
-		//concurrent='"concurrent"'
-		public EnumLiteralDeclaration getConcurrentEnumLiteralDeclaration_2() { return cConcurrentEnumLiteralDeclaration_2; }
-		
-		//'"concurrent"'
-		public Keyword getConcurrentConcurrentKeyword_2_0() { return cConcurrentConcurrentKeyword_2_0; }
-	}
-	public class VSVSStepUnitElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepUnit");
+	public class VSVSTimeUnitElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cMilisecondsEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cMilisecondsMilisecondsKeyword_0_0 = (Keyword)cMilisecondsEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cSecondsEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cSecondsSecondsKeyword_1_0 = (Keyword)cSecondsEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum VSVSStepUnit:
+		//enum VSVSTimeUnit:
 		//	miliseconds='"miliseconds"' | seconds='"seconds"';
 		public EnumRule getRule() { return rule; }
 		
@@ -6027,8 +3812,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"seconds"'
 		public Keyword getSecondsSecondsKeyword_1_0() { return cSecondsSecondsKeyword_1_0; }
 	}
-	public class VSVSStepCheckmodeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepCheckmode");
+	public class VSVSStepOutputsCheckmodeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputsCheckmode");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cAllEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cAllAllKeyword_0_0 = (Keyword)cAllEnumLiteralDeclaration_0.eContents().get(0);
@@ -6037,7 +3822,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cAnyEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cAnyAnyKeyword_2_0 = (Keyword)cAnyEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum VSVSStepCheckmode:
+		//enum VSVSStepOutputsCheckmode:
 		//	all='"all"' | allunsorted='"allunsorted"' | any='"any"';
 		public EnumRule getRule() { return rule; }
 		
@@ -6061,33 +3846,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'"any"'
 		public Keyword getAnyAnyKeyword_2_0() { return cAnyAnyKeyword_2_0; }
-	}
-	public class VSVSStepYesNoElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepYesNo");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cYesEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cYesYesKeyword_0_0 = (Keyword)cYesEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cNoEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cNoNoKeyword_1_0 = (Keyword)cNoEnumLiteralDeclaration_1.eContents().get(0);
-		
-		//enum VSVSStepYesNo:
-		//	yes='"yes"' | no='"no"';
-		public EnumRule getRule() { return rule; }
-		
-		//yes='"yes"' | no='"no"'
-		public Alternatives getAlternatives() { return cAlternatives; }
-		
-		//yes='"yes"'
-		public EnumLiteralDeclaration getYesEnumLiteralDeclaration_0() { return cYesEnumLiteralDeclaration_0; }
-		
-		//'"yes"'
-		public Keyword getYesYesKeyword_0_0() { return cYesYesKeyword_0_0; }
-		
-		//no='"no"'
-		public EnumLiteralDeclaration getNoEnumLiteralDeclaration_1() { return cNoEnumLiteralDeclaration_1; }
-		
-		//'"no"'
-		public Keyword getNoNoKeyword_1_0() { return cNoNoKeyword_1_0; }
 	}
 	
 	private final VSVSDocumentElements pVSVSDocument;
@@ -6123,6 +3881,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSSoftwareOverviewElements pVSVSSoftwareOverview;
 	private final VSVSTaskIdentificationElements pVSVSTaskIdentification;
 	private final VSVSTestingSpecificationDesignElements pVSVSTestingSpecificationDesign;
+	private final VSVSInterfacesSectionElements pVSVSInterfacesSection;
+	private final VSVSInterfaceElements pVSVSInterface;
 	private final VSVSScenariosSectionElements pVSVSScenariosSection;
 	private final VSVSScenarioSectionElements pVSVSScenarioSection;
 	private final VSVSTestCasesElements pVSVSTestCases;
@@ -6137,35 +3897,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSTestCaseElements pVSVSTestCase;
 	private final VSVSTestProcedureElements pVSVSTestProcedure;
 	private final VSVSProcedureStepsElements pVSVSProcedureSteps;
+	private final VSVSTimeUnitElements eVSVSTimeUnit;
 	private final VSVSProcedureStepElements pVSVSProcedureStep;
-	private final VSVSStepModeElements eVSVSStepMode;
 	private final VSVSStepInputsElements pVSVSStepInputs;
-	private final VSVSStepOutputsElements pVSVSStepOutputs;
-	private final VSVSStepSpecialPacketsElements pVSVSStepSpecialPackets;
-	private final VSVSStepConcurrentStepsElements pVSVSStepConcurrentSteps;
 	private final VSVSStepInputElements pVSVSStepInput;
-	private final VSVSStepInputLevel3Elements pVSVSStepInputLevel3;
-	private final VSVSStepInputLevel2Elements pVSVSStepInputLevel2;
-	private final VSVSStepInputLevel1Elements pVSVSStepInputLevel1;
-	private final VSVSStepInputLevel0Elements pVSVSStepInputLevel0;
-	private final VSVSStepUnitElements eVSVSStepUnit;
-	private final VSVSStepCheckmodeElements eVSVSStepCheckmode;
+	private final VSVSStepOutputsCheckmodeElements eVSVSStepOutputsCheckmode;
+	private final VSVSStepOutputsElements pVSVSStepOutputs;
 	private final VSVSStepOutputElements pVSVSStepOutput;
-	private final VSVSStepOutputLevel3Elements pVSVSStepOutputLevel3;
-	private final VSVSStepOutputLevel2Elements pVSVSStepOutputLevel2;
-	private final VSVSStepOutputLevel1Elements pVSVSStepOutputLevel1;
-	private final VSVSStepOutputLevel0Elements pVSVSStepOutputLevel0;
-	private final VSVSStepLevel3FilterElements pVSVSStepLevel3Filter;
-	private final VSVSStepLevel2FilterElements pVSVSStepLevel2Filter;
-	private final VSVSStepLevel1FilterElements pVSVSStepLevel1Filter;
-	private final VSVSStepLevel0FilterElements pVSVSStepLevel0Filter;
-	private final VSVSStepYesNoElements eVSVSStepYesNo;
-	private final VSVSStepEnableElements pVSVSStepEnable;
-	private final VSVSStepDisableElements pVSVSStepDisable;
-	private final VSVSStepEnablePrintElements pVSVSStepEnablePrint;
-	private final VSVSStepDisablePrintElements pVSVSStepDisablePrint;
-	private final VSVSStepNextStepElements pVSVSStepNextStep;
-	private final VSVSStepConcurrentStepElements pVSVSStepConcurrentStep;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
@@ -6217,6 +3955,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSSoftwareOverview = new VSVSSoftwareOverviewElements();
 		this.pVSVSTaskIdentification = new VSVSTaskIdentificationElements();
 		this.pVSVSTestingSpecificationDesign = new VSVSTestingSpecificationDesignElements();
+		this.pVSVSInterfacesSection = new VSVSInterfacesSectionElements();
+		this.pVSVSInterface = new VSVSInterfaceElements();
 		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
 		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
 		this.pVSVSTestCases = new VSVSTestCasesElements();
@@ -6231,35 +3971,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSTestCase = new VSVSTestCaseElements();
 		this.pVSVSTestProcedure = new VSVSTestProcedureElements();
 		this.pVSVSProcedureSteps = new VSVSProcedureStepsElements();
+		this.eVSVSTimeUnit = new VSVSTimeUnitElements();
 		this.pVSVSProcedureStep = new VSVSProcedureStepElements();
-		this.eVSVSStepMode = new VSVSStepModeElements();
 		this.pVSVSStepInputs = new VSVSStepInputsElements();
-		this.pVSVSStepOutputs = new VSVSStepOutputsElements();
-		this.pVSVSStepSpecialPackets = new VSVSStepSpecialPacketsElements();
-		this.pVSVSStepConcurrentSteps = new VSVSStepConcurrentStepsElements();
 		this.pVSVSStepInput = new VSVSStepInputElements();
-		this.pVSVSStepInputLevel3 = new VSVSStepInputLevel3Elements();
-		this.pVSVSStepInputLevel2 = new VSVSStepInputLevel2Elements();
-		this.pVSVSStepInputLevel1 = new VSVSStepInputLevel1Elements();
-		this.pVSVSStepInputLevel0 = new VSVSStepInputLevel0Elements();
-		this.eVSVSStepUnit = new VSVSStepUnitElements();
-		this.eVSVSStepCheckmode = new VSVSStepCheckmodeElements();
+		this.eVSVSStepOutputsCheckmode = new VSVSStepOutputsCheckmodeElements();
+		this.pVSVSStepOutputs = new VSVSStepOutputsElements();
 		this.pVSVSStepOutput = new VSVSStepOutputElements();
-		this.pVSVSStepOutputLevel3 = new VSVSStepOutputLevel3Elements();
-		this.pVSVSStepOutputLevel2 = new VSVSStepOutputLevel2Elements();
-		this.pVSVSStepOutputLevel1 = new VSVSStepOutputLevel1Elements();
-		this.pVSVSStepOutputLevel0 = new VSVSStepOutputLevel0Elements();
-		this.pVSVSStepLevel3Filter = new VSVSStepLevel3FilterElements();
-		this.pVSVSStepLevel2Filter = new VSVSStepLevel2FilterElements();
-		this.pVSVSStepLevel1Filter = new VSVSStepLevel1FilterElements();
-		this.pVSVSStepLevel0Filter = new VSVSStepLevel0FilterElements();
-		this.eVSVSStepYesNo = new VSVSStepYesNoElements();
-		this.pVSVSStepEnable = new VSVSStepEnableElements();
-		this.pVSVSStepDisable = new VSVSStepDisableElements();
-		this.pVSVSStepEnablePrint = new VSVSStepEnablePrintElements();
-		this.pVSVSStepDisablePrint = new VSVSStepDisablePrintElements();
-		this.pVSVSStepNextStep = new VSVSStepNextStepElements();
-		this.pVSVSStepConcurrentStep = new VSVSStepConcurrentStepElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
@@ -6721,7 +4439,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSTestingSpecificationDesign:
 	//	'<TestingSpecificationDesign>'
-	//	'<General>' general=VSVSFixedSection '</General>' ('<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>')?
+	//	'<General>' general=VSVSFixedSection '</General>'
+	//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
+	//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
 	//	testDesigns+=VSVSTestDesign+
 	//	'</TestingSpecificationDesign>';
 	public VSVSTestingSpecificationDesignElements getVSVSTestingSpecificationDesignAccess() {
@@ -6730,6 +4450,30 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVSTestingSpecificationDesignRule() {
 		return getVSVSTestingSpecificationDesignAccess().getRule();
+	}
+	
+	//VSVSInterfacesSection:
+	//	{VSVSInterfacesSection} interfaces+=VSVSInterface+;
+	public VSVSInterfacesSectionElements getVSVSInterfacesSectionAccess() {
+		return pVSVSInterfacesSection;
+	}
+	
+	public ParserRule getVSVSInterfacesSectionRule() {
+		return getVSVSInterfacesSectionAccess().getRule();
+	}
+	
+	//VSVSInterface:
+	//	'<Interface'
+	//	'name=' name=STRING
+	//	'>'
+	//	description=DRun
+	//	'</Interface>';
+	public VSVSInterfaceElements getVSVSInterfaceAccess() {
+		return pVSVSInterface;
+	}
+	
+	public ParserRule getVSVSInterfaceRule() {
+		return getVSVSInterfaceAccess().getRule();
 	}
 	
 	//VSVSScenariosSection:
@@ -6745,8 +4489,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSScenarioSection:
 	//	'<Scenario'
 	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'>'
+	//	'>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
 	//	body=DBody
 	//	'</Scenario>';
 	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
@@ -6906,8 +4649,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'name=' name=STRING
 	//	'>'
 	//	'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
-	//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>' ('<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>')?
-	//	('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
+	//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
+	//	'<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING]
+	//	'/>')+
 	//	procedureSteps=VSVSProcedureSteps
 	//	'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
 	//	'</TestProcedure>';
@@ -6932,18 +4676,24 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSProcedureStepsAccess().getRule();
 	}
 	
+	//enum VSVSTimeUnit:
+	//	miliseconds='"miliseconds"' | seconds='"seconds"';
+	public VSVSTimeUnitElements getVSVSTimeUnitAccess() {
+		return eVSVSTimeUnit;
+	}
+	
+	public EnumRule getVSVSTimeUnitRule() {
+		return getVSVSTimeUnitAccess().getRule();
+	}
+	
 	//VSVSProcedureStep:
-	//	'<step'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
-	//	output_idref_from_prev_step=[VSVSStepOutput|STRING])?
-	//	'mode=' mode=VSVSStepMode ('replays=' replays=STRING)?
+	//	'<Step'
+	//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
+	//	output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
 	//	'>'
 	//	inputs=VSVSStepInputs
 	//	outputs=VSVSStepOutputs?
-	//	specialPackets=VSVSStepSpecialPackets?
-	//	concurrent_steps=VSVSStepConcurrentSteps?
-	//	'</step>';
+	//	'</Step>';
 	public VSVSProcedureStepElements getVSVSProcedureStepAccess() {
 		return pVSVSProcedureStep;
 	}
@@ -6952,22 +4702,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSProcedureStepAccess().getRule();
 	}
 	
-	//enum VSVSStepMode:
-	//	continuous='"continuous"' | manual='"manual"' |
-	//	concurrent='"concurrent"';
-	public VSVSStepModeElements getVSVSStepModeAccess() {
-		return eVSVSStepMode;
-	}
-	
-	public EnumRule getVSVSStepModeRule() {
-		return getVSVSStepModeAccess().getRule();
-	}
-	
 	//VSVSStepInputs:
 	//	{VSVSStepInputs}
-	//	'<inputs>'
+	//	'<Inputs>'
 	//	input+=VSVSStepInput+
-	//	'</inputs>';
+	//	'</Inputs>';
 	public VSVSStepInputsElements getVSVSStepInputsAccess() {
 		return pVSVSStepInputs;
 	}
@@ -6976,51 +4715,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSStepInputsAccess().getRule();
 	}
 	
-	//VSVSStepOutputs:
-	//	'<outputs'
-	//	'checkmode=' checkmode=VSVSStepCheckmode
-	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSStepUnit
-	//	'>'
-	//	output+=VSVSStepOutput+
-	//	'</outputs>';
-	public VSVSStepOutputsElements getVSVSStepOutputsAccess() {
-		return pVSVSStepOutputs;
-	}
-	
-	public ParserRule getVSVSStepOutputsRule() {
-		return getVSVSStepOutputsAccess().getRule();
-	}
-	
-	//VSVSStepSpecialPackets:
-	//	{VSVSStepSpecialPackets}
-	//	'<specialPackets>' (enable+=VSVSStepEnable | disable+=VSVSStepDisable | enable_print+=VSVSStepEnablePrint |
-	//	disable_print+=VSVSStepDisablePrint)+
-	//	'</specialPackets>';
-	public VSVSStepSpecialPacketsElements getVSVSStepSpecialPacketsAccess() {
-		return pVSVSStepSpecialPackets;
-	}
-	
-	public ParserRule getVSVSStepSpecialPacketsRule() {
-		return getVSVSStepSpecialPacketsAccess().getRule();
-	}
-	
-	//VSVSStepConcurrentSteps:
-	//	'<concurrent_steps'
-	//	'nextStep=' nextStep=VSVSStepNextStep
-	//	'>'
-	//	concurrent_step+=VSVSStepConcurrentStep+
-	//	'</concurrent_steps>';
-	public VSVSStepConcurrentStepsElements getVSVSStepConcurrentStepsAccess() {
-		return pVSVSStepConcurrentSteps;
-	}
-	
-	public ParserRule getVSVSStepConcurrentStepsRule() {
-		return getVSVSStepConcurrentStepsAccess().getRule();
-	}
-	
 	//VSVSStepInput:
-	//	VSVSStepInputLevel3 | VSVSStepInputLevel2 | VSVSStepInputLevel1 | VSVSStepInputLevel0;
+	//	'<Input'
+	//	'name=' name=STRING
+	//	'interface=' interface=[VSVSInterface|STRING]
+	//	'delay_value=' delay_value=UINT_STRING
+	//	'delay_unit=' delay_unit=VSVSTimeUnit
+	//	'/>';
 	public VSVSStepInputElements getVSVSStepInputAccess() {
 		return pVSVSStepInput;
 	}
@@ -7029,325 +4730,43 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSStepInputAccess().getRule();
 	}
 	
-	//VSVSStepInputLevel3:
-	//	'<input_level_3'
-	//	'name=' name=STRING
-	//	'ifRef=' ifRef=UINT_STRING
-	//	'delay_value=' delay_value=UINT_STRING
-	//	'delay_unit=' delay_unit=VSVSStepUnit
-	//	'>' ('<level3' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	'<app_to_level3' app_to_level3=[export::TMTCIFExportExport|STRING] '/>' ('<level2' 'format='
-	//	level2=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level3_to_level2' 'export='
-	//	level3_to_level2=[export::TMTCIFExportExport|STRING] '/>')? ('<level1' 'format='
-	//	level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-	//	level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-	//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-	//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	//	'</input_level_3>';
-	public VSVSStepInputLevel3Elements getVSVSStepInputLevel3Access() {
-		return pVSVSStepInputLevel3;
-	}
-	
-	public ParserRule getVSVSStepInputLevel3Rule() {
-		return getVSVSStepInputLevel3Access().getRule();
-	}
-	
-	//VSVSStepInputLevel2:
-	//	'<input_level_2'
-	//	'name=' name=STRING
-	//	'ifRef=' ifRef=UINT_STRING
-	//	'delay_value=' delay_value=UINT_STRING
-	//	'delay_unit=' delay_unit=VSVSStepUnit
-	//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	'<app_to_level2' 'export=' app_to_level2=[export::TMTCIFExportExport|STRING] '/>' ('<level1' 'format='
-	//	level1=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level2_to_level1' 'export='
-	//	level2_to_level1=[export::TMTCIFExportExport|STRING] '/>')? ('<level0' 'format='
-	//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-	//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	//	'</input_level_2>';
-	public VSVSStepInputLevel2Elements getVSVSStepInputLevel2Access() {
-		return pVSVSStepInputLevel2;
-	}
-	
-	public ParserRule getVSVSStepInputLevel2Rule() {
-		return getVSVSStepInputLevel2Access().getRule();
-	}
-	
-	//VSVSStepInputLevel1:
-	//	'<input_level_1'
-	//	'name=' name=STRING
-	//	'ifRef=' ifRef=UINT_STRING
-	//	'delay_value=' delay_value=UINT_STRING
-	//	'delay_unit=' delay_unit=VSVSStepUnit
-	//	'>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	'<app_to_level1' 'export=' app_to_level1=[export::TMTCIFExportExport|STRING] '/>' ('<level0' 'format='
-	//	level0=[format::TMTCIFFormatFormat|STRING] '/>')? ('<level1_to_level0' 'export='
-	//	level1_to_level0=[export::TMTCIFExportExport|STRING] '/>')?
-	//	'</input_level_1>';
-	public VSVSStepInputLevel1Elements getVSVSStepInputLevel1Access() {
-		return pVSVSStepInputLevel1;
-	}
-	
-	public ParserRule getVSVSStepInputLevel1Rule() {
-		return getVSVSStepInputLevel1Access().getRule();
-	}
-	
-	//VSVSStepInputLevel0:
-	//	'<input_level_0'
-	//	'name=' name=STRING
-	//	'ifRef=' ifRef=UINT_STRING
-	//	'delay_value=' delay_value=UINT_STRING
-	//	'delay_unit=' delay_unit=VSVSStepUnit
-	//	'>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	'<app_to_level0' 'export=' app_to_level0=[export::TMTCIFExportExport|STRING] '/>'
-	//	'</input_level_0>';
-	public VSVSStepInputLevel0Elements getVSVSStepInputLevel0Access() {
-		return pVSVSStepInputLevel0;
-	}
-	
-	public ParserRule getVSVSStepInputLevel0Rule() {
-		return getVSVSStepInputLevel0Access().getRule();
-	}
-	
-	//enum VSVSStepUnit:
-	//	miliseconds='"miliseconds"' | seconds='"seconds"';
-	public VSVSStepUnitElements getVSVSStepUnitAccess() {
-		return eVSVSStepUnit;
-	}
-	
-	public EnumRule getVSVSStepUnitRule() {
-		return getVSVSStepUnitAccess().getRule();
-	}
-	
-	//enum VSVSStepCheckmode:
+	//enum VSVSStepOutputsCheckmode:
 	//	all='"all"' | allunsorted='"allunsorted"' | any='"any"';
-	public VSVSStepCheckmodeElements getVSVSStepCheckmodeAccess() {
-		return eVSVSStepCheckmode;
+	public VSVSStepOutputsCheckmodeElements getVSVSStepOutputsCheckmodeAccess() {
+		return eVSVSStepOutputsCheckmode;
 	}
 	
-	public EnumRule getVSVSStepCheckmodeRule() {
-		return getVSVSStepCheckmodeAccess().getRule();
+	public EnumRule getVSVSStepOutputsCheckmodeRule() {
+		return getVSVSStepOutputsCheckmodeAccess().getRule();
+	}
+	
+	//VSVSStepOutputs:
+	//	'<Outputs'
+	//	'checkmode=' checkmode=VSVSStepOutputsCheckmode
+	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
+	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
+	//	'>'
+	//	output+=VSVSStepOutput+
+	//	'</Outputs>';
+	public VSVSStepOutputsElements getVSVSStepOutputsAccess() {
+		return pVSVSStepOutputs;
+	}
+	
+	public ParserRule getVSVSStepOutputsRule() {
+		return getVSVSStepOutputsAccess().getRule();
 	}
 	
 	//VSVSStepOutput:
-	//	VSVSStepOutputLevel3 | VSVSStepOutputLevel2 | VSVSStepOutputLevel1 | VSVSStepOutputLevel0;
+	//	'<Output'
+	//	'name=' name=STRING
+	//	'interface=' interface=[VSVSInterface|STRING]
+	//	'/>';
 	public VSVSStepOutputElements getVSVSStepOutputAccess() {
 		return pVSVSStepOutput;
 	}
 	
 	public ParserRule getVSVSStepOutputRule() {
 		return getVSVSStepOutputAccess().getRule();
-	}
-	
-	//VSVSStepOutputLevel3:
-	//	'<output_level_3'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-	//	'>' ('<level3' 'format=' level3=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	level3_filter=VSVSStepLevel3Filter ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level3_from_level2' 'import=' level3_from_level2=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level0_filter=VSVSStepLevel0Filter
-	//	'</output_level_3>';
-	public VSVSStepOutputLevel3Elements getVSVSStepOutputLevel3Access() {
-		return pVSVSStepOutputLevel3;
-	}
-	
-	public ParserRule getVSVSStepOutputLevel3Rule() {
-		return getVSVSStepOutputLevel3Access().getRule();
-	}
-	
-	//VSVSStepOutputLevel2:
-	//	'<output_level_2'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-	//	'>' ('<level2' 'format=' level2=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	level2_filter=VSVSStepLevel2Filter ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level2_from_level1' 'import=' level2_from_level1=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level0_filter=VSVSStepLevel0Filter
-	//	'</output_level_2>';
-	public VSVSStepOutputLevel2Elements getVSVSStepOutputLevel2Access() {
-		return pVSVSStepOutputLevel2;
-	}
-	
-	public ParserRule getVSVSStepOutputLevel2Rule() {
-		return getVSVSStepOutputLevel2Access().getRule();
-	}
-	
-	//VSVSStepOutputLevel1:
-	//	'<output_level_1'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-	//	'>' ('<level1' 'format=' level1=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	level1_filter=VSVSStepLevel1Filter ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	('<level1_from_level0' 'import=' level1_from_level0=[import_::TMTCIFImportImport|STRING] '/>')?
-	//	level0_filter=VSVSStepLevel0Filter
-	//	'</output_level_1>';
-	public VSVSStepOutputLevel1Elements getVSVSStepOutputLevel1Access() {
-		return pVSVSStepOutputLevel1;
-	}
-	
-	public ParserRule getVSVSStepOutputLevel1Rule() {
-		return getVSVSStepOutputLevel1Access().getRule();
-	}
-	
-	//VSVSStepOutputLevel0:
-	//	'<output_level_0'
-	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
-	//	'ifRef=' ifRef=UINT_STRING ('optional=' optional=UINT_STRING)?
-	//	'>' ('<level0' 'format=' level0=[format::TMTCIFFormatFormat|STRING] '/>')?
-	//	level0_filter=VSVSStepLevel0Filter
-	//	'</output_level_0>';
-	public VSVSStepOutputLevel0Elements getVSVSStepOutputLevel0Access() {
-		return pVSVSStepOutputLevel0;
-	}
-	
-	public ParserRule getVSVSStepOutputLevel0Rule() {
-		return getVSVSStepOutputLevel0Access().getRule();
-	}
-	
-	//VSVSStepLevel3Filter VSVSStepFilter:
-	//	'<level3_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	//	'/>'
-	public VSVSStepLevel3FilterElements getVSVSStepLevel3FilterAccess() {
-		return pVSVSStepLevel3Filter;
-	}
-	
-	public ParserRule getVSVSStepLevel3FilterRule() {
-		return getVSVSStepLevel3FilterAccess().getRule();
-	}
-	
-	//VSVSStepLevel2Filter VSVSStepFilter:
-	//	'<level2_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	//	'/>'
-	public VSVSStepLevel2FilterElements getVSVSStepLevel2FilterAccess() {
-		return pVSVSStepLevel2Filter;
-	}
-	
-	public ParserRule getVSVSStepLevel2FilterRule() {
-		return getVSVSStepLevel2FilterAccess().getRule();
-	}
-	
-	//VSVSStepLevel1Filter VSVSStepFilter:
-	//	'<level1_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	//	'/>'
-	public VSVSStepLevel1FilterElements getVSVSStepLevel1FilterAccess() {
-		return pVSVSStepLevel1Filter;
-	}
-	
-	public ParserRule getVSVSStepLevel1FilterRule() {
-		return getVSVSStepLevel1FilterAccess().getRule();
-	}
-	
-	//VSVSStepLevel0Filter VSVSStepFilter:
-	//	'<level0_filter'
-	//	'apply_def_filter=' apply_def_filter=VSVSStepYesNo ('extra_filter='
-	//	extra_filter=[filter::TMTCIFFilterFilter|STRING])?
-	//	'/>'
-	public VSVSStepLevel0FilterElements getVSVSStepLevel0FilterAccess() {
-		return pVSVSStepLevel0Filter;
-	}
-	
-	public ParserRule getVSVSStepLevel0FilterRule() {
-		return getVSVSStepLevel0FilterAccess().getRule();
-	}
-	
-	//enum VSVSStepYesNo:
-	//	yes='"yes"' | no='"no"';
-	public VSVSStepYesNoElements getVSVSStepYesNoAccess() {
-		return eVSVSStepYesNo;
-	}
-	
-	public EnumRule getVSVSStepYesNoRule() {
-		return getVSVSStepYesNoAccess().getRule();
-	}
-	
-	//VSVSStepEnable VSVSStepEnableDisable:
-	//	'<enable'
-	//	'id=' id=UINT_STRING
-	//	'/>'
-	public VSVSStepEnableElements getVSVSStepEnableAccess() {
-		return pVSVSStepEnable;
-	}
-	
-	public ParserRule getVSVSStepEnableRule() {
-		return getVSVSStepEnableAccess().getRule();
-	}
-	
-	//VSVSStepDisable VSVSStepEnableDisable:
-	//	'<disable'
-	//	'id=' id=UINT_STRING
-	//	'/>'
-	public VSVSStepDisableElements getVSVSStepDisableAccess() {
-		return pVSVSStepDisable;
-	}
-	
-	public ParserRule getVSVSStepDisableRule() {
-		return getVSVSStepDisableAccess().getRule();
-	}
-	
-	//VSVSStepEnablePrint VSVSStepEnableDisable:
-	//	'<enable_print'
-	//	'id=' id=UINT_STRING
-	//	'/>'
-	public VSVSStepEnablePrintElements getVSVSStepEnablePrintAccess() {
-		return pVSVSStepEnablePrint;
-	}
-	
-	public ParserRule getVSVSStepEnablePrintRule() {
-		return getVSVSStepEnablePrintAccess().getRule();
-	}
-	
-	//VSVSStepDisablePrint VSVSStepEnableDisable:
-	//	'<disable_print'
-	//	'id=' id=UINT_STRING
-	//	'/>'
-	public VSVSStepDisablePrintElements getVSVSStepDisablePrintAccess() {
-		return pVSVSStepDisablePrint;
-	}
-	
-	public ParserRule getVSVSStepDisablePrintRule() {
-		return getVSVSStepDisablePrintAccess().getRule();
-	}
-	
-	//VSVSStepNextStep:
-	//	'<nextStep'
-	//	'id=' id=UINT_STRING
-	//	'isConcurrent=' isConcurrent=VSVSStepYesNo
-	//	'/>';
-	public VSVSStepNextStepElements getVSVSStepNextStepAccess() {
-		return pVSVSStepNextStep;
-	}
-	
-	public ParserRule getVSVSStepNextStepRule() {
-		return getVSVSStepNextStepAccess().getRule();
-	}
-	
-	//VSVSStepConcurrentStep:
-	//	'<concurrent_step'
-	//	'id=' id=UINT_STRING
-	//	'/>';
-	public VSVSStepConcurrentStepElements getVSVSStepConcurrentStepAccess() {
-		return pVSVSStepConcurrentStep;
-	}
-	
-	public ParserRule getVSVSStepConcurrentStepRule() {
-		return getVSVSStepConcurrentStepAccess().getRule();
 	}
 	
 	//QualifiedName:

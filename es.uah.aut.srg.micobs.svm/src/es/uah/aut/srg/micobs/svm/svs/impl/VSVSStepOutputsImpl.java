@@ -10,10 +10,10 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputsCheckmode;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import java.util.Collection;
@@ -57,7 +57,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSStepCheckmode CHECKMODE_EDEFAULT = VSVSStepCheckmode.ALL;
+	protected static final VSVSStepOutputsCheckmode CHECKMODE_EDEFAULT = VSVSStepOutputsCheckmode.ALL;
 
 	/**
 	 * The cached value of the '{@link #getCheckmode() <em>Checkmode</em>}' attribute.
@@ -67,7 +67,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSStepCheckmode checkmode = CHECKMODE_EDEFAULT;
+	protected VSVSStepOutputsCheckmode checkmode = CHECKMODE_EDEFAULT;
 
 	/**
 	 * This is true if the Checkmode attribute has been set.
@@ -106,7 +106,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSStepUnit VALID_TIME_INTERVAL_UNIT_EDEFAULT = VSVSStepUnit.MILISECONDS;
+	protected static final VSVSTimeUnit VALID_TIME_INTERVAL_UNIT_EDEFAULT = VSVSTimeUnit.MILISECONDS;
 
 	/**
 	 * The cached value of the '{@link #getValid_time_interval_unit() <em>Valid time interval unit</em>}' attribute.
@@ -116,7 +116,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSStepUnit valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
+	protected VSVSTimeUnit valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
 
 	/**
 	 * This is true if the Valid time interval unit attribute has been set.
@@ -161,7 +161,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepCheckmode getCheckmode() {
+	public VSVSStepOutputsCheckmode getCheckmode() {
 		return checkmode;
 	}
 
@@ -170,8 +170,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCheckmode(VSVSStepCheckmode newCheckmode) {
-		VSVSStepCheckmode oldCheckmode = checkmode;
+	public void setCheckmode(VSVSStepOutputsCheckmode newCheckmode) {
+		VSVSStepOutputsCheckmode oldCheckmode = checkmode;
 		checkmode = newCheckmode == null ? CHECKMODE_EDEFAULT : newCheckmode;
 		boolean oldCheckmodeESet = checkmodeESet;
 		checkmodeESet = true;
@@ -185,7 +185,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void unsetCheckmode() {
-		VSVSStepCheckmode oldCheckmode = checkmode;
+		VSVSStepOutputsCheckmode oldCheckmode = checkmode;
 		boolean oldCheckmodeESet = checkmodeESet;
 		checkmode = CHECKMODE_EDEFAULT;
 		checkmodeESet = false;
@@ -228,7 +228,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepUnit getValid_time_interval_unit() {
+	public VSVSTimeUnit getValid_time_interval_unit() {
 		return valid_time_interval_unit;
 	}
 
@@ -237,8 +237,8 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValid_time_interval_unit(VSVSStepUnit newValid_time_interval_unit) {
-		VSVSStepUnit oldValid_time_interval_unit = valid_time_interval_unit;
+	public void setValid_time_interval_unit(VSVSTimeUnit newValid_time_interval_unit) {
+		VSVSTimeUnit oldValid_time_interval_unit = valid_time_interval_unit;
 		valid_time_interval_unit = newValid_time_interval_unit == null ? VALID_TIME_INTERVAL_UNIT_EDEFAULT : newValid_time_interval_unit;
 		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
 		valid_time_interval_unitESet = true;
@@ -252,7 +252,7 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	public void unsetValid_time_interval_unit() {
-		VSVSStepUnit oldValid_time_interval_unit = valid_time_interval_unit;
+		VSVSTimeUnit oldValid_time_interval_unit = valid_time_interval_unit;
 		boolean oldValid_time_interval_unitESet = valid_time_interval_unitESet;
 		valid_time_interval_unit = VALID_TIME_INTERVAL_UNIT_EDEFAULT;
 		valid_time_interval_unitESet = false;
@@ -325,13 +325,13 @@ public class VSVSStepOutputsImpl extends MinimalEObjectImpl.Container implements
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_OUTPUTS__CHECKMODE:
-				setCheckmode((VSVSStepCheckmode)newValue);
+				setCheckmode((VSVSStepOutputsCheckmode)newValue);
 				return;
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_VALUE:
 				setValid_time_interval_value((String)newValue);
 				return;
 			case svsPackage.VSVS_STEP_OUTPUTS__VALID_TIME_INTERVAL_UNIT:
-				setValid_time_interval_unit((VSVSStepUnit)newValue);
+				setValid_time_interval_unit((VSVSTimeUnit)newValue);
 				return;
 			case svsPackage.VSVS_STEP_OUTPUTS__OUTPUT:
 				getOutput().clear();

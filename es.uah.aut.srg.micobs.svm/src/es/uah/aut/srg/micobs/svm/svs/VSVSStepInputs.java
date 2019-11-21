@@ -42,7 +42,7 @@ public interface VSVSStepInputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Input</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInputs_Input()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSVSStepInput> getInput();

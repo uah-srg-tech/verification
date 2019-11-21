@@ -127,7 +127,7 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @return the value of the '<em>Scenario</em>' reference.
 	 * @see #setScenario(VSVSScenarioSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_Scenario()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	VSVSScenarioSection getScenario();

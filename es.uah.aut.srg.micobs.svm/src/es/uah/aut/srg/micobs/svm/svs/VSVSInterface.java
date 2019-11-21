@@ -10,26 +10,28 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSVS Step Output</b></em>'.
+ * A representation of the model object '<em><b>VSVS Interface</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getInterface <em>Interface</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutput()
+ * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface()
  * @model
  * @generated
  */
-public interface VSVSStepOutput extends EObject {
+public interface VSVSInterface extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -40,14 +42,14 @@ public interface VSVSStepOutput extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutput_Name()
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -57,29 +59,29 @@ public interface VSVSStepOutput extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Interface</b></em>' reference.
+	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Interface</em>' reference isn't clear,
+	 * If the meaning of the '<em>Description</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Interface</em>' reference.
-	 * @see #setInterface(VSVSInterface)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutput_Interface()
-	 * @model required="true"
+	 * @return the value of the '<em>Description</em>' containment reference.
+	 * @see #setDescription(DRun)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Description()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSInterface getInterface();
+	DRun getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput#getInterface <em>Interface</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Interface</em>' reference.
-	 * @see #getInterface()
+	 * @param value the new value of the '<em>Description</em>' containment reference.
+	 * @see #getDescription()
 	 * @generated
 	 */
-	void setInterface(VSVSInterface value);
+	void setDescription(DRun value);
 
-} // VSVSStepOutput
+} // VSVSInterface

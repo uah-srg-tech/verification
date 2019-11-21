@@ -144,6 +144,14 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSTestingSpecificationDesignAdapter();
 			}
 			@Override
+			public Adapter caseVSVSInterfacesSection(VSVSInterfacesSection object) {
+				return createVSVSInterfacesSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSInterface(VSVSInterface object) {
+				return createVSVSInterfaceAdapter();
+			}
+			@Override
 			public Adapter caseVSVSScenariosSection(VSVSScenariosSection object) {
 				return createVSVSScenariosSectionAdapter();
 			}
@@ -188,72 +196,16 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSStepInputsAdapter();
 			}
 			@Override
-			public Adapter caseVSVSStepOutputs(VSVSStepOutputs object) {
-				return createVSVSStepOutputsAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepSpecialPackets(VSVSStepSpecialPackets object) {
-				return createVSVSStepSpecialPacketsAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepEnableDisable(VSVSStepEnableDisable object) {
-				return createVSVSStepEnableDisableAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepConcurrentSteps(VSVSStepConcurrentSteps object) {
-				return createVSVSStepConcurrentStepsAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepNextStep(VSVSStepNextStep object) {
-				return createVSVSStepNextStepAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepConcurrentStep(VSVSStepConcurrentStep object) {
-				return createVSVSStepConcurrentStepAdapter();
-			}
-			@Override
 			public Adapter caseVSVSStepInput(VSVSStepInput object) {
 				return createVSVSStepInputAdapter();
 			}
 			@Override
-			public Adapter caseVSVSStepInputLevel3(VSVSStepInputLevel3 object) {
-				return createVSVSStepInputLevel3Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepInputLevel2(VSVSStepInputLevel2 object) {
-				return createVSVSStepInputLevel2Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepInputLevel1(VSVSStepInputLevel1 object) {
-				return createVSVSStepInputLevel1Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepInputLevel0(VSVSStepInputLevel0 object) {
-				return createVSVSStepInputLevel0Adapter();
+			public Adapter caseVSVSStepOutputs(VSVSStepOutputs object) {
+				return createVSVSStepOutputsAdapter();
 			}
 			@Override
 			public Adapter caseVSVSStepOutput(VSVSStepOutput object) {
 				return createVSVSStepOutputAdapter();
-			}
-			@Override
-			public Adapter caseVSVSStepOutputLevel3(VSVSStepOutputLevel3 object) {
-				return createVSVSStepOutputLevel3Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepOutputLevel2(VSVSStepOutputLevel2 object) {
-				return createVSVSStepOutputLevel2Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepOutputLevel1(VSVSStepOutputLevel1 object) {
-				return createVSVSStepOutputLevel1Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepOutputLevel0(VSVSStepOutputLevel0 object) {
-				return createVSVSStepOutputLevel0Adapter();
-			}
-			@Override
-			public Adapter caseVSVSStepFilter(VSVSStepFilter object) {
-				return createVSVSStepFilterAdapter();
 			}
 			@Override
 			public Adapter caseVSVSAnalysisInspectionReview(VSVSAnalysisInspectionReview object) {
@@ -520,6 +472,34 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection <em>VSVS Interfaces Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection
+	 * @generated
+	 */
+	public Adapter createVSVSInterfacesSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface <em>VSVS Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface
+	 * @generated
+	 */
+	public Adapter createVSVSInterfaceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -688,76 +668,6 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets <em>VSVS Step Special Packets</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepSpecialPackets
-	 * @generated
-	 */
-	public Adapter createVSVSStepSpecialPacketsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable <em>VSVS Step Enable Disable</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepEnableDisable
-	 * @generated
-	 */
-	public Adapter createVSVSStepEnableDisableAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps <em>VSVS Step Concurrent Steps</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentSteps
-	 * @generated
-	 */
-	public Adapter createVSVSStepConcurrentStepsAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep <em>VSVS Step Next Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepNextStep
-	 * @generated
-	 */
-	public Adapter createVSVSStepNextStepAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep <em>VSVS Step Concurrent Step</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConcurrentStep
-	 * @generated
-	 */
-	public Adapter createVSVSStepConcurrentStepAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput <em>VSVS Step Input</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -772,62 +682,6 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3 <em>VSVS Step Input Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel3
-	 * @generated
-	 */
-	public Adapter createVSVSStepInputLevel3Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2 <em>VSVS Step Input Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel2
-	 * @generated
-	 */
-	public Adapter createVSVSStepInputLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1 <em>VSVS Step Input Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel1
-	 * @generated
-	 */
-	public Adapter createVSVSStepInputLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0 <em>VSVS Step Input Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputLevel0
-	 * @generated
-	 */
-	public Adapter createVSVSStepInputLevel0Adapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput <em>VSVS Step Output</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -838,76 +692,6 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVSStepOutputAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3 <em>VSVS Step Output Level3</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel3
-	 * @generated
-	 */
-	public Adapter createVSVSStepOutputLevel3Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2 <em>VSVS Step Output Level2</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel2
-	 * @generated
-	 */
-	public Adapter createVSVSStepOutputLevel2Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1 <em>VSVS Step Output Level1</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel1
-	 * @generated
-	 */
-	public Adapter createVSVSStepOutputLevel1Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0 <em>VSVS Step Output Level0</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputLevel0
-	 * @generated
-	 */
-	public Adapter createVSVSStepOutputLevel0Adapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter <em>VSVS Step Filter</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepFilter
-	 * @generated
-	 */
-	public Adapter createVSVSStepFilterAdapter() {
 		return null;
 	}
 

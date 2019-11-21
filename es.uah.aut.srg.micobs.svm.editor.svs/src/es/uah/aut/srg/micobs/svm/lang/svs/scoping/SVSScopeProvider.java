@@ -26,10 +26,12 @@ import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
+import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
@@ -140,6 +142,47 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 			return null;
 		}
 	}
+
+	public IScope scope_VSVSStepInput_interface(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VSVSInterface> items = new HashSet<VSVSInterface>();
+		items.addAll(currTP.getScenario().getInterface());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSInterface, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSInterface from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepOutput_interface(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VSVSInterface> items = new HashSet<VSVSInterface>();
+		items.addAll(currTP.getScenario().getInterface());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSInterface, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSInterface from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
 
 	public IScope scope_DReferenceableObject(VSVSDocument svsDoc, EReference reference) {
 

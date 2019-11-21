@@ -36,7 +36,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface VSVSStepOutputs extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Checkmode</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputsCheckmode}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Checkmode</em>' attribute isn't clear,
@@ -44,28 +44,28 @@ public interface VSVSStepOutputs extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Checkmode</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputsCheckmode
 	 * @see #isSetCheckmode()
 	 * @see #unsetCheckmode()
-	 * @see #setCheckmode(VSVSStepCheckmode)
+	 * @see #setCheckmode(VSVSStepOutputsCheckmode)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Checkmode()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	VSVSStepCheckmode getCheckmode();
+	VSVSStepOutputsCheckmode getCheckmode();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getCheckmode <em>Checkmode</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Checkmode</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepCheckmode
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputsCheckmode
 	 * @see #isSetCheckmode()
 	 * @see #unsetCheckmode()
 	 * @see #getCheckmode()
 	 * @generated
 	 */
-	void setCheckmode(VSVSStepCheckmode value);
+	void setCheckmode(VSVSStepOutputsCheckmode value);
 
 	/**
 	 * Unsets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getCheckmode <em>Checkmode</em>}' attribute.
@@ -73,7 +73,7 @@ public interface VSVSStepOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetCheckmode()
 	 * @see #getCheckmode()
-	 * @see #setCheckmode(VSVSStepCheckmode)
+	 * @see #setCheckmode(VSVSStepOutputsCheckmode)
 	 * @generated
 	 */
 	void unsetCheckmode();
@@ -85,7 +85,7 @@ public interface VSVSStepOutputs extends EObject {
 	 * @return whether the value of the '<em>Checkmode</em>' attribute is set.
 	 * @see #unsetCheckmode()
 	 * @see #getCheckmode()
-	 * @see #setCheckmode(VSVSStepCheckmode)
+	 * @see #setCheckmode(VSVSStepOutputsCheckmode)
 	 * @generated
 	 */
 	boolean isSetCheckmode();
@@ -118,7 +118,7 @@ public interface VSVSStepOutputs extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Valid time interval unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Valid time interval unit</em>' attribute isn't clear,
@@ -126,28 +126,28 @@ public interface VSVSStepOutputs extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Valid time interval unit</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #unsetValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(VSVSStepUnit)
+	 * @see #setValid_time_interval_unit(VSVSTimeUnit)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Valid_time_interval_unit()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	VSVSStepUnit getValid_time_interval_unit();
+	VSVSTimeUnit getValid_time_interval_unit();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Valid time interval unit</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #unsetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
 	 * @generated
 	 */
-	void setValid_time_interval_unit(VSVSStepUnit value);
+	void setValid_time_interval_unit(VSVSTimeUnit value);
 
 	/**
 	 * Unsets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs#getValid_time_interval_unit <em>Valid time interval unit</em>}' attribute.
@@ -155,7 +155,7 @@ public interface VSVSStepOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(VSVSStepUnit)
+	 * @see #setValid_time_interval_unit(VSVSTimeUnit)
 	 * @generated
 	 */
 	void unsetValid_time_interval_unit();
@@ -167,7 +167,7 @@ public interface VSVSStepOutputs extends EObject {
 	 * @return whether the value of the '<em>Valid time interval unit</em>' attribute is set.
 	 * @see #unsetValid_time_interval_unit()
 	 * @see #getValid_time_interval_unit()
-	 * @see #setValid_time_interval_unit(VSVSStepUnit)
+	 * @see #setValid_time_interval_unit(VSVSTimeUnit)
 	 * @generated
 	 */
 	boolean isSetValid_time_interval_unit();
@@ -183,7 +183,7 @@ public interface VSVSStepOutputs extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Output</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepOutputs_Output()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	EList<VSVSStepOutput> getOutput();

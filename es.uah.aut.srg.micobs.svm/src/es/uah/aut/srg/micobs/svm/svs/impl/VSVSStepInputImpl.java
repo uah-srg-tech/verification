@@ -10,14 +10,15 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
+import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepInput;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -30,7 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getIfRef <em>If Ref</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getInterface <em>Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getDelay_value <em>Delay value</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getDelay_unit <em>Delay unit</em>}</li>
  * </ul>
@@ -59,24 +60,14 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
+	 * The cached value of the '{@link #getInterface() <em>Interface</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIfRef()
+	 * @see #getInterface()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String IF_REF_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIfRef() <em>If Ref</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIfRef()
-	 * @generated
-	 * @ordered
-	 */
-	protected String ifRef = IF_REF_EDEFAULT;
+	protected VSVSInterface interface_;
 
 	/**
 	 * The default value of the '{@link #getDelay_value() <em>Delay value</em>}' attribute.
@@ -115,7 +106,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSStepUnit DELAY_UNIT_EDEFAULT = VSVSStepUnit.MILISECONDS;
+	protected static final VSVSTimeUnit DELAY_UNIT_EDEFAULT = VSVSTimeUnit.MILISECONDS;
 
 	/**
 	 * The cached value of the '{@link #getDelay_unit() <em>Delay unit</em>}' attribute.
@@ -125,7 +116,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSStepUnit delay_unit = DELAY_UNIT_EDEFAULT;
+	protected VSVSTimeUnit delay_unit = DELAY_UNIT_EDEFAULT;
 
 	/**
 	 * This is true if the Delay unit attribute has been set.
@@ -181,8 +172,16 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getIfRef() {
-		return ifRef;
+	public VSVSInterface getInterface() {
+		if (interface_ != null && interface_.eIsProxy()) {
+			InternalEObject oldInterface = (InternalEObject)interface_;
+			interface_ = (VSVSInterface)eResolveProxy(oldInterface);
+			if (interface_ != oldInterface) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_INPUT__INTERFACE, oldInterface, interface_));
+			}
+		}
+		return interface_;
 	}
 
 	/**
@@ -190,11 +189,20 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setIfRef(String newIfRef) {
-		String oldIfRef = ifRef;
-		ifRef = newIfRef;
+	public VSVSInterface basicGetInterface() {
+		return interface_;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInterface(VSVSInterface newInterface) {
+		VSVSInterface oldInterface = interface_;
+		interface_ = newInterface;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__IF_REF, oldIfRef, ifRef));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__INTERFACE, oldInterface, interface_));
 	}
 
 	/**
@@ -248,7 +256,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepUnit getDelay_unit() {
+	public VSVSTimeUnit getDelay_unit() {
 		return delay_unit;
 	}
 
@@ -257,8 +265,8 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDelay_unit(VSVSStepUnit newDelay_unit) {
-		VSVSStepUnit oldDelay_unit = delay_unit;
+	public void setDelay_unit(VSVSTimeUnit newDelay_unit) {
+		VSVSTimeUnit oldDelay_unit = delay_unit;
 		delay_unit = newDelay_unit == null ? DELAY_UNIT_EDEFAULT : newDelay_unit;
 		boolean oldDelay_unitESet = delay_unitESet;
 		delay_unitESet = true;
@@ -272,7 +280,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * @generated
 	 */
 	public void unsetDelay_unit() {
-		VSVSStepUnit oldDelay_unit = delay_unit;
+		VSVSTimeUnit oldDelay_unit = delay_unit;
 		boolean oldDelay_unitESet = delay_unitESet;
 		delay_unit = DELAY_UNIT_EDEFAULT;
 		delay_unitESet = false;
@@ -299,8 +307,9 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_INPUT__NAME:
 				return getName();
-			case svsPackage.VSVS_STEP_INPUT__IF_REF:
-				return getIfRef();
+			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+				if (resolve) return getInterface();
+				return basicGetInterface();
 			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
 				return getDelay_value();
 			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
@@ -320,14 +329,14 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 			case svsPackage.VSVS_STEP_INPUT__NAME:
 				setName((String)newValue);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__IF_REF:
-				setIfRef((String)newValue);
+			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+				setInterface((VSVSInterface)newValue);
 				return;
 			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
 				setDelay_value((String)newValue);
 				return;
 			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
-				setDelay_unit((VSVSStepUnit)newValue);
+				setDelay_unit((VSVSTimeUnit)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -344,8 +353,8 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 			case svsPackage.VSVS_STEP_INPUT__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__IF_REF:
-				setIfRef(IF_REF_EDEFAULT);
+			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+				setInterface((VSVSInterface)null);
 				return;
 			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
 				unsetDelay_value();
@@ -367,8 +376,8 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_INPUT__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case svsPackage.VSVS_STEP_INPUT__IF_REF:
-				return IF_REF_EDEFAULT == null ? ifRef != null : !IF_REF_EDEFAULT.equals(ifRef);
+			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+				return interface_ != null;
 			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
 				return isSetDelay_value();
 			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
@@ -389,8 +398,6 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", ifRef: ");
-		result.append(ifRef);
 		result.append(", delay_value: ");
 		if (delay_valueESet) result.append(delay_value); else result.append("<unset>");
 		result.append(", delay_unit: ");

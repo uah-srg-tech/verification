@@ -25,6 +25,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getGeneral <em>General</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios <em>Scenarios</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}</li>
  * </ul>
@@ -61,6 +62,32 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	void setGeneral(VSVSFixedSection value);
 
 	/**
+	 * Returns the value of the '<em><b>Interfaces</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Interfaces</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Interfaces</em>' containment reference.
+	 * @see #setInterfaces(VSVSInterfacesSection)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_Interfaces()
+	 * @model containment="true" required="true"
+	 * @generated
+	 */
+	VSVSInterfacesSection getInterfaces();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getInterfaces <em>Interfaces</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Interfaces</em>' containment reference.
+	 * @see #getInterfaces()
+	 * @generated
+	 */
+	void setInterfaces(VSVSInterfacesSection value);
+
+	/**
 	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -71,7 +98,7 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	 * @return the value of the '<em>Scenarios</em>' containment reference.
 	 * @see #setScenarios(VSVSScenariosSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_Scenarios()
-	 * @model containment="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	VSVSScenariosSection getScenarios();

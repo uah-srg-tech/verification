@@ -15,6 +15,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
@@ -44,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getGeneral <em>General</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getScenarios <em>Scenarios</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestingSpecificationDesignImpl#getTestDesigns <em>Test Designs</em>}</li>
  * </ul>
@@ -60,6 +62,16 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * @ordered
 	 */
 	protected VSVSFixedSection general;
+
+	/**
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getInterfaces()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSInterfacesSection interfaces;
 
 	/**
 	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference.
@@ -148,6 +160,49 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSInterfacesSection getInterfaces() {
+		return interfaces;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetInterfaces(VSVSInterfacesSection newInterfaces, NotificationChain msgs) {
+		VSVSInterfacesSection oldInterfaces = interfaces;
+		interfaces = newInterfaces;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES, oldInterfaces, newInterfaces);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInterfaces(VSVSInterfacesSection newInterfaces) {
+		if (newInterfaces != interfaces) {
+			NotificationChain msgs = null;
+			if (interfaces != null)
+				msgs = ((InternalEObject)interfaces).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES, null, msgs);
+			if (newInterfaces != null)
+				msgs = ((InternalEObject)newInterfaces).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES, null, msgs);
+			msgs = basicSetInterfaces(newInterfaces, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES, newInterfaces, newInterfaces));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSVSScenariosSection getScenarios() {
 		return scenarios;
 	}
@@ -208,6 +263,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return basicSetGeneral(null, msgs);
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES:
+				return basicSetInterfaces(null, msgs);
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
 				return basicSetScenarios(null, msgs);
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
@@ -226,6 +283,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return getGeneral();
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES:
+				return getInterfaces();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
 				return getScenarios();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
@@ -245,6 +304,9 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)newValue);
+				return;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES:
+				setInterfaces((VSVSInterfacesSection)newValue);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
 				setScenarios((VSVSScenariosSection)newValue);
@@ -268,6 +330,9 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				setGeneral((VSVSFixedSection)null);
 				return;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES:
+				setInterfaces((VSVSInterfacesSection)null);
+				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
 				setScenarios((VSVSScenariosSection)null);
 				return;
@@ -288,6 +353,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return general != null;
+			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES:
+				return interfaces != null;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS:
 				return scenarios != null;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
@@ -300,8 +367,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
-		if(getScenarios() != null)
-			subsections.add((DAbstractSection) getScenarios());
+		subsections.add((DAbstractSection) getInterfaces());
+		subsections.add((DAbstractSection) getScenarios());
 		for(DFixedSection testDesign : getTestDesigns()) {
 			subsections.add(testDesign);
 		}

@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getIfRef <em>If Ref</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getInterface <em>Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_value <em>Delay value</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_unit <em>Delay unit</em>}</li>
  * </ul>
@@ -59,30 +59,30 @@ public interface VSVSStepInput extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>If Ref</b></em>' attribute.
+	 * Returns the value of the '<em><b>Interface</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>If Ref</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Interface</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>If Ref</em>' attribute.
-	 * @see #setIfRef(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInput_IfRef()
+	 * @return the value of the '<em>Interface</em>' reference.
+	 * @see #setInterface(VSVSInterface)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInput_Interface()
 	 * @model required="true"
 	 * @generated
 	 */
-	String getIfRef();
+	VSVSInterface getInterface();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getIfRef <em>If Ref</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getInterface <em>Interface</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>If Ref</em>' attribute.
-	 * @see #getIfRef()
+	 * @param value the new value of the '<em>Interface</em>' reference.
+	 * @see #getInterface()
 	 * @generated
 	 */
-	void setIfRef(String value);
+	void setInterface(VSVSInterface value);
 
 	/**
 	 * Returns the value of the '<em><b>Delay value</b></em>' attribute.
@@ -139,7 +139,7 @@ public interface VSVSStepInput extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Delay unit</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Delay unit</em>' attribute isn't clear,
@@ -147,28 +147,28 @@ public interface VSVSStepInput extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit
 	 * @see #isSetDelay_unit()
 	 * @see #unsetDelay_unit()
-	 * @see #setDelay_unit(VSVSStepUnit)
+	 * @see #setDelay_unit(VSVSTimeUnit)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInput_Delay_unit()
 	 * @model unsettable="true" required="true"
 	 * @generated
 	 */
-	VSVSStepUnit getDelay_unit();
+	VSVSTimeUnit getDelay_unit();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_unit <em>Delay unit</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Delay unit</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepUnit
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit
 	 * @see #isSetDelay_unit()
 	 * @see #unsetDelay_unit()
 	 * @see #getDelay_unit()
 	 * @generated
 	 */
-	void setDelay_unit(VSVSStepUnit value);
+	void setDelay_unit(VSVSTimeUnit value);
 
 	/**
 	 * Unsets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput#getDelay_unit <em>Delay unit</em>}' attribute.
@@ -176,7 +176,7 @@ public interface VSVSStepInput extends EObject {
 	 * <!-- end-user-doc -->
 	 * @see #isSetDelay_unit()
 	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(VSVSStepUnit)
+	 * @see #setDelay_unit(VSVSTimeUnit)
 	 * @generated
 	 */
 	void unsetDelay_unit();
@@ -188,7 +188,7 @@ public interface VSVSStepInput extends EObject {
 	 * @return whether the value of the '<em>Delay unit</em>' attribute is set.
 	 * @see #unsetDelay_unit()
 	 * @see #getDelay_unit()
-	 * @see #setDelay_unit(VSVSStepUnit)
+	 * @see #setDelay_unit(VSVSTimeUnit)
 	 * @generated
 	 */
 	boolean isSetDelay_unit();
