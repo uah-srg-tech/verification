@@ -141,7 +141,6 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup(), "rule__VSVSProcedureStep__Group__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup_3(), "rule__VSVSProcedureStep__Group_3__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup_4(), "rule__VSVSProcedureStep__Group_4__0");
-					put(grammarAccess.getVSVSProcedureStepAccess().getGroup_5(), "rule__VSVSProcedureStep__Group_5__0");
 					put(grammarAccess.getVSVSStepInputsAccess().getGroup(), "rule__VSVSStepInputs__Group__0");
 					put(grammarAccess.getVSVSStepInputAccess().getGroup(), "rule__VSVSStepInput__Group__0");
 					put(grammarAccess.getVSVSStepOutputsAccess().getGroup(), "rule__VSVSStepOutputs__Group__0");
@@ -313,10 +312,10 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2(), "rule__VSVSProcedureSteps__StepAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getNameAssignment_2(), "rule__VSVSProcedureStep__NameAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefAssignment_3_1(), "rule__VSVSProcedureStep__Prev_step_idrefAssignment_3_1");
-					put(grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepAssignment_4_1(), "rule__VSVSProcedureStep__Output_idref_from_prev_stepAssignment_4_1");
-					put(grammarAccess.getVSVSProcedureStepAccess().getReplaysAssignment_5_1(), "rule__VSVSProcedureStep__ReplaysAssignment_5_1");
-					put(grammarAccess.getVSVSProcedureStepAccess().getInputsAssignment_7(), "rule__VSVSProcedureStep__InputsAssignment_7");
-					put(grammarAccess.getVSVSProcedureStepAccess().getOutputsAssignment_8(), "rule__VSVSProcedureStep__OutputsAssignment_8");
+					put(grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepAssignment_3_3(), "rule__VSVSProcedureStep__Output_idref_from_prev_stepAssignment_3_3");
+					put(grammarAccess.getVSVSProcedureStepAccess().getReplaysAssignment_4_1(), "rule__VSVSProcedureStep__ReplaysAssignment_4_1");
+					put(grammarAccess.getVSVSProcedureStepAccess().getInputsAssignment_6(), "rule__VSVSProcedureStep__InputsAssignment_6");
+					put(grammarAccess.getVSVSProcedureStepAccess().getOutputsAssignment_7(), "rule__VSVSProcedureStep__OutputsAssignment_7");
 					put(grammarAccess.getVSVSStepInputsAccess().getInputAssignment_2(), "rule__VSVSStepInputs__InputAssignment_2");
 					put(grammarAccess.getVSVSStepInputAccess().getNameAssignment_2(), "rule__VSVSStepInput__NameAssignment_2");
 					put(grammarAccess.getVSVSStepInputAccess().getInterfaceAssignment_4(), "rule__VSVSStepInput__InterfaceAssignment_4");

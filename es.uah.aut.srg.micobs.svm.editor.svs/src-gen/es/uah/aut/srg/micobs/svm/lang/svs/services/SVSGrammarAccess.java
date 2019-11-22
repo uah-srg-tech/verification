@@ -3196,35 +3196,35 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cPrev_step_idrefAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
 		private final CrossReference cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0 = (CrossReference)cPrev_step_idrefAssignment_3_1.eContents().get(0);
 		private final RuleCall cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cOutput_idref_from_prev_stepKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cOutput_idref_from_prev_stepAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final CrossReference cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_3_3.eContents().get(0);
+		private final RuleCall cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1 = (RuleCall)cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0.eContents().get(1);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cOutput_idref_from_prev_stepKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cOutput_idref_from_prev_stepAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final CrossReference cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_4_1.eContents().get(0);
-		private final RuleCall cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1 = (RuleCall)cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0.eContents().get(1);
-		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
-		private final Keyword cReplaysKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
-		private final Assignment cReplaysAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
-		private final RuleCall cReplaysUINT_STRINGTerminalRuleCall_5_1_0 = (RuleCall)cReplaysAssignment_5_1.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cInputsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cInputsVSVSStepInputsParserRuleCall_7_0 = (RuleCall)cInputsAssignment_7.eContents().get(0);
-		private final Assignment cOutputsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_8_0 = (RuleCall)cOutputsAssignment_8.eContents().get(0);
-		private final Keyword cStepKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Keyword cReplaysKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cReplaysAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cReplaysUINT_STRINGTerminalRuleCall_4_1_0 = (RuleCall)cReplaysAssignment_4_1.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cInputsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cInputsVSVSStepInputsParserRuleCall_6_0 = (RuleCall)cInputsAssignment_6.eContents().get(0);
+		private final Assignment cOutputsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_7_0 = (RuleCall)cOutputsAssignment_7.eContents().get(0);
+		private final Keyword cStepKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//VSVSProcedureStep:
 		//	'<Step'
-		//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
-		//	output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
+		//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
+		//	'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
+		//	replays=UINT_STRING)?
 		//	'>'
 		//	inputs=VSVSStepInputs
 		//	outputs=VSVSStepOutputs?
 		//	'</Step>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Step' 'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
-		//('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
-		//replays=UINT_STRING)? '>' inputs=VSVSStepInputs outputs=VSVSStepOutputs? '</Step>'
+		//'<Step' 'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
+		//'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
+		//'>' inputs=VSVSStepInputs outputs=VSVSStepOutputs? '</Step>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Step'
@@ -3239,7 +3239,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
+		//('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING] 'output_idref_from_prev_step='
+		//output_idref_from_prev_step=[VSVSStepOutput|STRING])?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'prev_step_idref='
@@ -3254,50 +3255,47 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1() { return cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1; }
 		
-		//('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])?
-		public Group getGroup_4() { return cGroup_4; }
-		
 		//'output_idref_from_prev_step='
-		public Keyword getOutput_idref_from_prev_stepKeyword_4_0() { return cOutput_idref_from_prev_stepKeyword_4_0; }
+		public Keyword getOutput_idref_from_prev_stepKeyword_3_2() { return cOutput_idref_from_prev_stepKeyword_3_2; }
 		
 		//output_idref_from_prev_step=[VSVSStepOutput|STRING]
-		public Assignment getOutput_idref_from_prev_stepAssignment_4_1() { return cOutput_idref_from_prev_stepAssignment_4_1; }
+		public Assignment getOutput_idref_from_prev_stepAssignment_3_3() { return cOutput_idref_from_prev_stepAssignment_3_3; }
 		
 		//[VSVSStepOutput|STRING]
-		public CrossReference getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0() { return cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0; }
+		public CrossReference getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0() { return cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0; }
 		
 		//STRING
-		public RuleCall getOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1() { return cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_4_1_0_1; }
+		public RuleCall getOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1() { return cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1; }
 		
 		//('replays=' replays=UINT_STRING)?
-		public Group getGroup_5() { return cGroup_5; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//'replays='
-		public Keyword getReplaysKeyword_5_0() { return cReplaysKeyword_5_0; }
+		public Keyword getReplaysKeyword_4_0() { return cReplaysKeyword_4_0; }
 		
 		//replays=UINT_STRING
-		public Assignment getReplaysAssignment_5_1() { return cReplaysAssignment_5_1; }
+		public Assignment getReplaysAssignment_4_1() { return cReplaysAssignment_4_1; }
 		
 		//UINT_STRING
-		public RuleCall getReplaysUINT_STRINGTerminalRuleCall_5_1_0() { return cReplaysUINT_STRINGTerminalRuleCall_5_1_0; }
+		public RuleCall getReplaysUINT_STRINGTerminalRuleCall_4_1_0() { return cReplaysUINT_STRINGTerminalRuleCall_4_1_0; }
 		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
 		//inputs=VSVSStepInputs
-		public Assignment getInputsAssignment_7() { return cInputsAssignment_7; }
+		public Assignment getInputsAssignment_6() { return cInputsAssignment_6; }
 		
 		//VSVSStepInputs
-		public RuleCall getInputsVSVSStepInputsParserRuleCall_7_0() { return cInputsVSVSStepInputsParserRuleCall_7_0; }
+		public RuleCall getInputsVSVSStepInputsParserRuleCall_6_0() { return cInputsVSVSStepInputsParserRuleCall_6_0; }
 		
 		//outputs=VSVSStepOutputs?
-		public Assignment getOutputsAssignment_8() { return cOutputsAssignment_8; }
+		public Assignment getOutputsAssignment_7() { return cOutputsAssignment_7; }
 		
 		//VSVSStepOutputs
-		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_8_0() { return cOutputsVSVSStepOutputsParserRuleCall_8_0; }
+		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_7_0() { return cOutputsVSVSStepOutputsParserRuleCall_7_0; }
 		
 		//'</Step>'
-		public Keyword getStepKeyword_9() { return cStepKeyword_9; }
+		public Keyword getStepKeyword_8() { return cStepKeyword_8; }
 	}
 	public class VSVSStepInputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputs");
@@ -4688,8 +4686,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSProcedureStep:
 	//	'<Step'
-	//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])? ('output_idref_from_prev_step='
-	//	output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
+	//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
+	//	'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
+	//	replays=UINT_STRING)?
 	//	'>'
 	//	inputs=VSVSStepInputs
 	//	outputs=VSVSStepOutputs?

@@ -379,8 +379,8 @@ enum VSVSTimeUnit returns VSVSTimeUnit:
 VSVSProcedureStep returns VSVSProcedureStep:
 	'<Step'
 		'name=' name=STRING
-		('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING])?
-		('output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])?
+		('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
+		'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])?
 		('replays=' replays=UINT_STRING)?
 		'>'
 		inputs=VSVSStepInputs

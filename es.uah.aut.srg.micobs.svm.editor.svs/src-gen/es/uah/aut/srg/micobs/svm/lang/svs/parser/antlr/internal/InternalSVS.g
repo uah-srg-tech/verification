@@ -5090,11 +5090,9 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					}
 				)
 			)
-		)?
-		(
 			otherlv_5='output_idref_from_prev_step='
 			{
-				newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepKeyword_4_0());
+				newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepKeyword_3_2());
 			}
 			(
 				(
@@ -5108,7 +5106,7 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					}
 					otherlv_6=RULE_STRING
 					{
-						newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_4_1_0());
+						newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0());
 					}
 				)
 			)
@@ -5116,13 +5114,13 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		(
 			otherlv_7='replays='
 			{
-				newLeafNode(otherlv_7, grammarAccess.getVSVSProcedureStepAccess().getReplaysKeyword_5_0());
+				newLeafNode(otherlv_7, grammarAccess.getVSVSProcedureStepAccess().getReplaysKeyword_4_0());
 			}
 			(
 				(
 					lv_replays_8_0=RULE_UINT_STRING
 					{
-						newLeafNode(lv_replays_8_0, grammarAccess.getVSVSProcedureStepAccess().getReplaysUINT_STRINGTerminalRuleCall_5_1_0());
+						newLeafNode(lv_replays_8_0, grammarAccess.getVSVSProcedureStepAccess().getReplaysUINT_STRINGTerminalRuleCall_4_1_0());
 					}
 					{
 						if ($current==null) {
@@ -5139,12 +5137,12 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		)?
 		otherlv_9='>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVSProcedureStepAccess().getGreaterThanSignKeyword_6());
+			newLeafNode(otherlv_9, grammarAccess.getVSVSProcedureStepAccess().getGreaterThanSignKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getInputsVSVSStepInputsParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getInputsVSVSStepInputsParserRuleCall_6_0());
 				}
 				lv_inputs_10_0=ruleVSVSStepInputs
 				{
@@ -5163,7 +5161,7 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getOutputsVSVSStepOutputsParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getOutputsVSVSStepOutputsParserRuleCall_7_0());
 				}
 				lv_outputs_11_0=ruleVSVSStepOutputs
 				{
@@ -5181,7 +5179,7 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		)?
 		otherlv_12='</Step>'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_9());
+			newLeafNode(otherlv_12, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_8());
 		}
 	)
 ;

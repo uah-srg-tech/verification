@@ -665,8 +665,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         prev_step_idref=[VSVSProcedureStep|STRING]? 
-	 *         output_idref_from_prev_step=[VSVSStepOutput|STRING]? 
+	 *         (prev_step_idref=[VSVSProcedureStep|STRING] output_idref_from_prev_step=[VSVSStepOutput|STRING])? 
 	 *         replays=UINT_STRING? 
 	 *         inputs=VSVSStepInputs 
 	 *         outputs=VSVSStepOutputs?
