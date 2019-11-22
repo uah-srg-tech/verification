@@ -51,12 +51,6 @@ import es.uah.aut.srg.micobs.svm.svs.svsFactory;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
-
-import es.uah.aut.srg.tmtcif.export.exportPackage;
-
-import es.uah.aut.srg.tmtcif.filter.filterPackage;
-import es.uah.aut.srg.tmtcif.import_.importPackage;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EEnum;
@@ -365,9 +359,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Initialize simple dependencies
 		doctplPackage.eINSTANCE.eClass();
-		exportPackage.eINSTANCE.eClass();
-		filterPackage.eINSTANCE.eClass();
-		importPackage.eINSTANCE.eClass();
 		vdmPackage.eINSTANCE.eClass();
 
 		// Create package meta-data objects

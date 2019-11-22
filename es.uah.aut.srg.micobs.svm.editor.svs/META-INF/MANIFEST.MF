@@ -21,5 +21,5 @@ Export-Package: es.uah.aut.srg.micobs.svm.lang.svs,
  es.uah.aut.srg.micobs.svm.lang.svs.parser.antlr,
  es.uah.aut.srg.micobs.svm.lang.svs.services,
  es.uah.aut.srg.micobs.svm.lang.svs.scoping
-Import-Package: es.uah.aut.srg.tmtcif.xtext,
+Import-Package: es.uah.aut.srg.gss.xtext,
  org.apache.log4j
