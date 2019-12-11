@@ -46,8 +46,9 @@ DParagraph returns doctpl::DParagraph:
 	'</paragraph>';
 
 DListItem returns doctpl::DListItem:
+{doctpl::DListItem}
 	'<listItem>'
-		(paragraph+=DParagraph)+ 
+		(paragraph=DParagraph)?
 		('<sublist>' sublist=DListContent '</sublist>')?
 	'</listItem>';
 

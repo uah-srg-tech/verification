@@ -747,40 +747,50 @@ ruleDListItem returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<listItem>'
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDListItemAccess().getDListItemAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<listItem>'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDListItemAccess().getListItemKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getDListItemAccess().getListItemKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDListItemAccess().getParagraphDParagraphParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDListItemAccess().getParagraphDParagraphParserRuleCall_2_0());
 				}
-				lv_paragraph_1_0=ruleDParagraph
+				lv_paragraph_2_0=ruleDParagraph
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDListItemRule());
 					}
-					add(
+					set(
 						$current,
 						"paragraph",
-						lv_paragraph_1_0,
+						lv_paragraph_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DParagraph");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)?
 		(
-			otherlv_2='<sublist>'
+			otherlv_3='<sublist>'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getDListItemAccess().getSublistKeyword_2_0());
+				newLeafNode(otherlv_3, grammarAccess.getDListItemAccess().getSublistKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDListItemAccess().getSublistDListContentParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getDListItemAccess().getSublistDListContentParserRuleCall_3_1_0());
 					}
-					lv_sublist_3_0=ruleDListContent
+					lv_sublist_4_0=ruleDListContent
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDListItemRule());
@@ -788,20 +798,20 @@ ruleDListItem returns [EObject current=null]
 						set(
 							$current,
 							"sublist",
-							lv_sublist_3_0,
+							lv_sublist_4_0,
 							"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DListContent");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_4='</sublist>'
+			otherlv_5='</sublist>'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getDListItemAccess().getSublistKeyword_2_2());
+				newLeafNode(otherlv_5, grammarAccess.getDListItemAccess().getSublistKeyword_3_2());
 			}
 		)?
-		otherlv_5='</listItem>'
+		otherlv_6='</listItem>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDListItemAccess().getListItemKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getDListItemAccess().getListItemKeyword_4());
 		}
 	)
 ;

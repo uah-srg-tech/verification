@@ -56,7 +56,7 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDParagraphAccess().getGroup_3(), "rule__DParagraph__Group_3__0");
 					put(grammarAccess.getDParagraphAccess().getGroup_4(), "rule__DParagraph__Group_4__0");
 					put(grammarAccess.getDListItemAccess().getGroup(), "rule__DListItem__Group__0");
-					put(grammarAccess.getDListItemAccess().getGroup_2(), "rule__DListItem__Group_2__0");
+					put(grammarAccess.getDListItemAccess().getGroup_3(), "rule__DListItem__Group_3__0");
 					put(grammarAccess.getDItemizeAccess().getGroup(), "rule__DItemize__Group__0");
 					put(grammarAccess.getDItemizeAccess().getGroup_1(), "rule__DItemize__Group_1__0");
 					put(grammarAccess.getDItemizeAccess().getGroup_2(), "rule__DItemize__Group_2__0");
@@ -157,8 +157,8 @@ public class SSSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getDParagraphAccess().getStyleAssignment_3_1(), "rule__DParagraph__StyleAssignment_3_1");
 					put(grammarAccess.getDParagraphAccess().getIndentAssignment_4_1(), "rule__DParagraph__IndentAssignment_4_1");
 					put(grammarAccess.getDParagraphAccess().getParagraphContentAssignment_6(), "rule__DParagraph__ParagraphContentAssignment_6");
-					put(grammarAccess.getDListItemAccess().getParagraphAssignment_1(), "rule__DListItem__ParagraphAssignment_1");
-					put(grammarAccess.getDListItemAccess().getSublistAssignment_2_1(), "rule__DListItem__SublistAssignment_2_1");
+					put(grammarAccess.getDListItemAccess().getParagraphAssignment_2(), "rule__DListItem__ParagraphAssignment_2");
+					put(grammarAccess.getDListItemAccess().getSublistAssignment_3_1(), "rule__DListItem__SublistAssignment_3_1");
 					put(grammarAccess.getDItemizeAccess().getNameAssignment_1_1(), "rule__DItemize__NameAssignment_1_1");
 					put(grammarAccess.getDItemizeAccess().getAlignmentAssignment_2_1(), "rule__DItemize__AlignmentAssignment_2_1");
 					put(grammarAccess.getDItemizeAccess().getStyleAssignment_3_1(), "rule__DItemize__StyleAssignment_3_1");

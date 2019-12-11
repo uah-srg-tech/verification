@@ -373,7 +373,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DListItem returns DListItem
 	 *
 	 * Constraint:
-	 *     (paragraph+=DParagraph+ sublist=DListContent?)
+	 *     (paragraph=DParagraph? sublist=DListContent?)
 	 */
 	protected void sequence_DListItem(ISerializationContext context, DListItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

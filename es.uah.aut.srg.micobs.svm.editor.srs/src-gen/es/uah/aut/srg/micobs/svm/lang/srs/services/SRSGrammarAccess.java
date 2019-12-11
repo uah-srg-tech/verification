@@ -437,51 +437,56 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DListItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DListItem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cListItemKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cParagraphAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParagraphDParagraphParserRuleCall_1_0 = (RuleCall)cParagraphAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cSublistKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cSublistAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cSublistDListContentParserRuleCall_2_1_0 = (RuleCall)cSublistAssignment_2_1.eContents().get(0);
-		private final Keyword cSublistKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Keyword cListItemKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Action cDListItemAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cListItemKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cParagraphAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cParagraphDParagraphParserRuleCall_2_0 = (RuleCall)cParagraphAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cSublistKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSublistAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cSublistDListContentParserRuleCall_3_1_0 = (RuleCall)cSublistAssignment_3_1.eContents().get(0);
+		private final Keyword cSublistKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Keyword cListItemKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//DListItem doctpl::DListItem:
+		//	{doctpl::DListItem}
 		//	'<listItem>'
-		//	paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')?
+		//	paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')?
 		//	'</listItem>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<listItem>' paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')? '</listItem>'
+		//{doctpl::DListItem} '<listItem>' paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')? '</listItem>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<listItem>'
-		public Keyword getListItemKeyword_0() { return cListItemKeyword_0; }
+		//{doctpl::DListItem}
+		public Action getDListItemAction_0() { return cDListItemAction_0; }
 		
-		//paragraph+=DParagraph+
-		public Assignment getParagraphAssignment_1() { return cParagraphAssignment_1; }
+		//'<listItem>'
+		public Keyword getListItemKeyword_1() { return cListItemKeyword_1; }
+		
+		//paragraph=DParagraph?
+		public Assignment getParagraphAssignment_2() { return cParagraphAssignment_2; }
 		
 		//DParagraph
-		public RuleCall getParagraphDParagraphParserRuleCall_1_0() { return cParagraphDParagraphParserRuleCall_1_0; }
+		public RuleCall getParagraphDParagraphParserRuleCall_2_0() { return cParagraphDParagraphParserRuleCall_2_0; }
 		
 		//('<sublist>' sublist=DListContent '</sublist>')?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'<sublist>'
-		public Keyword getSublistKeyword_2_0() { return cSublistKeyword_2_0; }
+		public Keyword getSublistKeyword_3_0() { return cSublistKeyword_3_0; }
 		
 		//sublist=DListContent
-		public Assignment getSublistAssignment_2_1() { return cSublistAssignment_2_1; }
+		public Assignment getSublistAssignment_3_1() { return cSublistAssignment_3_1; }
 		
 		//DListContent
-		public RuleCall getSublistDListContentParserRuleCall_2_1_0() { return cSublistDListContentParserRuleCall_2_1_0; }
+		public RuleCall getSublistDListContentParserRuleCall_3_1_0() { return cSublistDListContentParserRuleCall_3_1_0; }
 		
 		//'</sublist>'
-		public Keyword getSublistKeyword_2_2() { return cSublistKeyword_2_2; }
+		public Keyword getSublistKeyword_3_2() { return cSublistKeyword_3_2; }
 		
 		//'</listItem>'
-		public Keyword getListItemKeyword_3() { return cListItemKeyword_3; }
+		public Keyword getListItemKeyword_4() { return cListItemKeyword_4; }
 	}
 	public class DListContentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.srs.SRS.DListContent");
@@ -3932,8 +3937,9 @@ public class SRSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DListItem doctpl::DListItem:
+	//	{doctpl::DListItem}
 	//	'<listItem>'
-	//	paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')?
+	//	paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')?
 	//	'</listItem>'
 	public DListItemElements getDListItemAccess() {
 		return pDListItem;
