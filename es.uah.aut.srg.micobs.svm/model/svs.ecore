@@ -90,6 +90,10 @@
         eType="#//VSVSFixedSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
         eType="#//VSVSInterfacesSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configurations" eType="#//VSVSPacketConfigurationsSection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//VSVSActionsSection"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
         eType="#//VSVSScenariosSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testDesigns" lowerBound="1"
@@ -101,17 +105,65 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSInterface">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcHeader" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tcheader.ecore#//TMTCIFTCHeader"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmHeader" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tmheader.ecore#//TMTCIFTMHeader"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSPacketConfigurationsSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packetConfigurations" lowerBound="1"
+        upperBound="-1" eType="#//VSVSPacketConfiguration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSPacketConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSActionsSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        upperBound="-1" eType="#//VSVSAction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VSVSActionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VSVSActionType">
+    <eLiterals name="instruction"/>
+    <eLiterals name="checking" value="1"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSScenariosSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
         upperBound="-1" eType="#//VSVSScenarioSection" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSScenarioSection" eSuperTypes="#//VSVSInstantiableSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedInterface" lowerBound="1"
         upperBound="-1" eType="#//VSVSInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedConfiguration"
+        upperBound="-1" eType="#//VSVSSelectedConfiguration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedAction" upperBound="-1"
+        eType="#//VSVSAction"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VSVSConfigurationStatus">
+    <eLiterals name="not_set" literal="not_set"/>
+    <eLiterals name="off" value="1" literal="off"/>
+    <eLiterals name="on" value="2" literal="on"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSSelectedConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
+        eType="#//VSVSPacketConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFilterStatus" lowerBound="1"
+        eType="#//VSVSConfigurationStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPrintStatus" lowerBound="1"
+        eType="#//VSVSConfigurationStatus"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSTestDesign" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -175,51 +227,129 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prev_step_idref" eType="#//VSVSProcedureStep"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output_idref_from_prev_step"
-        eType="#//VSVSStepOutput"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prev_step" eType="#//VSVSProcedureStep"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prev_tm_from_prev_step"
+        eType="#//VSVSStepTelemetry"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="replays" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configurations" eType="#//VSVSStepConfigurations"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="inputs" lowerBound="1"
         eType="#//VSVSStepInputs" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="outputs" eType="#//VSVSStepOutputs"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepConfigurations">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
+        upperBound="-1" eType="#//VSVSStepConfiguration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
+        eType="#//VSVSPacketConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterStatus" eType="#//VSVSConfigurationStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="printStatus" eType="#//VSVSConfigurationStatus"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VSVSTimeUnit">
     <eLiterals name="miliseconds"/>
     <eLiterals name="seconds" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepInputs">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="input" lowerBound="1" upperBound="-1"
-        eType="#//VSVSStepInput" containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepInputs" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepAction" eSuperTypes="#//VSVSStepInputs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedAction" lowerBound="1"
+        eType="#//VSVSAction"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" eType="#//VSVSTimeUnit"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="span_unit" eType="#//VSVSTimeUnit"
+        unsettable="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepInput">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommandSequence" eSuperTypes="#//VSVSStepInputs">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="telecommand" lowerBound="1"
+        upperBound="-1" eType="#//VSVSStepTelecommand" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         eType="#//VSVSInterface"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" lowerBound="1"
-        eType="#//VSVSTimeUnit" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" eType="#//VSVSTimeUnit"
+        unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcData" lowerBound="1"
+        eType="#//VSVSStepTelecommandData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcHeader" eType="#//VSVSStepTelecommandHeader"
+        containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EEnum" name="VSVSStepOutputsCheckmode">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommandData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcTemplate" lowerBound="1"
+        eType="ecore:EClass tctemplate.ecore#//VTCTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//VSVSStepTelecommandDataField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommandDataField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tc.ecore#//TMTCIFTCField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommandHeader">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" lowerBound="1"
+        upperBound="-1" eType="#//VSVSStepTelecommandHeaderField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommandHeaderField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tcheader.ecore#//TMTCIFTCHeaderField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VSVSStepTelemetrySetCheckmode">
     <eLiterals name="all"/>
     <eLiterals name="allunsorted" value="1"/>
     <eLiterals name="any" value="2"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepOutputs">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepOutputs"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetrySet" eSuperTypes="#//VSVSStepOutputs">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="checkmode" lowerBound="1"
-        eType="#//VSVSStepOutputsCheckmode" unsettable="true"/>
+        eType="#//VSVSStepTelemetrySetCheckmode" unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_value"
         lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="valid_time_interval_unit"
         lowerBound="1" eType="#//VSVSTimeUnit" unsettable="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="output" lowerBound="1"
-        upperBound="-1" eType="#//VSVSStepOutput" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="telemetry" lowerBound="1"
+        upperBound="-1" eType="#//VSVSStepTelemetry" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepOutput">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetry">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
         eType="#//VSVSInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmData" lowerBound="1"
+        eType="#//VSVSStepTelemetryData" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmHeader" eType="#//VSVSStepTelemetryHeader"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetryData">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmTemplate" lowerBound="1"
+        eType="ecore:EClass tmtemplate.ecore#//VTMTemplate"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//VSVSStepTelemetryDataField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetryDataField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTMField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValue"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetryHeader">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" lowerBound="1"
+        upperBound="-1" eType="#//VSVSStepTelemetryHeaderField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetryHeaderField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tmheader.ecore#//TMTCIFTMHeaderField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValueRaw"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSAnalysisInspectionReview" eSuperTypes="#//VSVSFixedSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSTestPlatformRequirements" eSuperTypes="#//VSVSFixedSection"/>

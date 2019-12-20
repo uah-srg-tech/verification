@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tmtemplate" nsURI="http://srg.aut.uah.es/micobs/svm/tmtemplate"
+    nsPrefix="micobs.svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VTMTemplate">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmOutput" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//VTMTemplateField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTMTemplateField">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTMField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValue"
+        containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

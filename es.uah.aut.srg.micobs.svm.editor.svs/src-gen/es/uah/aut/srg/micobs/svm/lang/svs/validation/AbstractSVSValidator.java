@@ -25,6 +25,7 @@ public abstract class AbstractSVSValidator extends AbstractDeclarativeValidator 
 		List<EPackage> result = new ArrayList<EPackage>();
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/micobs/svm/svs"));
 		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/micobs/doctpl/doctpl"));
+		result.add(EPackage.Registry.INSTANCE.getEPackage("http://srg.aut.uah.es/tmtcif/fieldvalue"));
 		return result;
 	}
 	

@@ -12,6 +12,8 @@ package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
 
+import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader;
+import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeader;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -24,7 +26,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader <em>Tc Header</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader <em>Tm Header</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface()
@@ -59,6 +64,32 @@ public interface VSVSInterface extends EObject {
 	void setName(String value);
 
 	/**
+	 * Returns the value of the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Id</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Id</em>' attribute.
+	 * @see #setId(String)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Id()
+	 * @model required="true"
+	 * @generated
+	 */
+	String getId();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Id</em>' attribute.
+	 * @see #getId()
+	 * @generated
+	 */
+	void setId(String value);
+
+	/**
 	 * Returns the value of the '<em><b>Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -83,5 +114,57 @@ public interface VSVSInterface extends EObject {
 	 * @generated
 	 */
 	void setDescription(DRun value);
+
+	/**
+	 * Returns the value of the '<em><b>Tc Header</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tc Header</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tc Header</em>' reference.
+	 * @see #setTcHeader(TMTCIFTCHeader)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_TcHeader()
+	 * @model required="true"
+	 * @generated
+	 */
+	TMTCIFTCHeader getTcHeader();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader <em>Tc Header</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tc Header</em>' reference.
+	 * @see #getTcHeader()
+	 * @generated
+	 */
+	void setTcHeader(TMTCIFTCHeader value);
+
+	/**
+	 * Returns the value of the '<em><b>Tm Header</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tm Header</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tm Header</em>' reference.
+	 * @see #setTmHeader(TMTCIFTMHeader)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_TmHeader()
+	 * @model required="true"
+	 * @generated
+	 */
+	TMTCIFTMHeader getTmHeader();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader <em>Tm Header</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tm Header</em>' reference.
+	 * @see #getTmHeader()
+	 * @generated
+	 */
+	void setTmHeader(TMTCIFTMHeader value);
 
 } // VSVSInterface

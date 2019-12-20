@@ -152,12 +152,32 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSInterfaceAdapter();
 			}
 			@Override
+			public Adapter caseVSVSPacketConfigurationsSection(VSVSPacketConfigurationsSection object) {
+				return createVSVSPacketConfigurationsSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSPacketConfiguration(VSVSPacketConfiguration object) {
+				return createVSVSPacketConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseVSVSActionsSection(VSVSActionsSection object) {
+				return createVSVSActionsSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSAction(VSVSAction object) {
+				return createVSVSActionAdapter();
+			}
+			@Override
 			public Adapter caseVSVSScenariosSection(VSVSScenariosSection object) {
 				return createVSVSScenariosSectionAdapter();
 			}
 			@Override
 			public Adapter caseVSVSScenarioSection(VSVSScenarioSection object) {
 				return createVSVSScenarioSectionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSSelectedConfiguration(VSVSSelectedConfiguration object) {
+				return createVSVSSelectedConfigurationAdapter();
 			}
 			@Override
 			public Adapter caseVSVSTestDesign(VSVSTestDesign object) {
@@ -192,20 +212,72 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSProcedureStepAdapter();
 			}
 			@Override
+			public Adapter caseVSVSStepConfigurations(VSVSStepConfigurations object) {
+				return createVSVSStepConfigurationsAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepConfiguration(VSVSStepConfiguration object) {
+				return createVSVSStepConfigurationAdapter();
+			}
+			@Override
 			public Adapter caseVSVSStepInputs(VSVSStepInputs object) {
 				return createVSVSStepInputsAdapter();
 			}
 			@Override
-			public Adapter caseVSVSStepInput(VSVSStepInput object) {
-				return createVSVSStepInputAdapter();
+			public Adapter caseVSVSStepAction(VSVSStepAction object) {
+				return createVSVSStepActionAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommandSequence(VSVSStepTelecommandSequence object) {
+				return createVSVSStepTelecommandSequenceAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommand(VSVSStepTelecommand object) {
+				return createVSVSStepTelecommandAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommandData(VSVSStepTelecommandData object) {
+				return createVSVSStepTelecommandDataAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommandDataField(VSVSStepTelecommandDataField object) {
+				return createVSVSStepTelecommandDataFieldAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommandHeader(VSVSStepTelecommandHeader object) {
+				return createVSVSStepTelecommandHeaderAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelecommandHeaderField(VSVSStepTelecommandHeaderField object) {
+				return createVSVSStepTelecommandHeaderFieldAdapter();
 			}
 			@Override
 			public Adapter caseVSVSStepOutputs(VSVSStepOutputs object) {
 				return createVSVSStepOutputsAdapter();
 			}
 			@Override
-			public Adapter caseVSVSStepOutput(VSVSStepOutput object) {
-				return createVSVSStepOutputAdapter();
+			public Adapter caseVSVSStepTelemetrySet(VSVSStepTelemetrySet object) {
+				return createVSVSStepTelemetrySetAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelemetry(VSVSStepTelemetry object) {
+				return createVSVSStepTelemetryAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelemetryData(VSVSStepTelemetryData object) {
+				return createVSVSStepTelemetryDataAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelemetryDataField(VSVSStepTelemetryDataField object) {
+				return createVSVSStepTelemetryDataFieldAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelemetryHeader(VSVSStepTelemetryHeader object) {
+				return createVSVSStepTelemetryHeaderAdapter();
+			}
+			@Override
+			public Adapter caseVSVSStepTelemetryHeaderField(VSVSStepTelemetryHeaderField object) {
+				return createVSVSStepTelemetryHeaderFieldAdapter();
 			}
 			@Override
 			public Adapter caseVSVSAnalysisInspectionReview(VSVSAnalysisInspectionReview object) {
@@ -500,6 +572,62 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection <em>VSVS Packet Configurations Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection
+	 * @generated
+	 */
+	public Adapter createVSVSPacketConfigurationsSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration <em>VSVS Packet Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration
+	 * @generated
+	 */
+	public Adapter createVSVSPacketConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection <em>VSVS Actions Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection
+	 * @generated
+	 */
+	public Adapter createVSVSActionsSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction <em>VSVS Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSAction
+	 * @generated
+	 */
+	public Adapter createVSVSActionAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -524,6 +652,20 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVSScenarioSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration <em>VSVS Selected Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration
+	 * @generated
+	 */
+	public Adapter createVSVSSelectedConfigurationAdapter() {
 		return null;
 	}
 
@@ -640,20 +782,6 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs <em>VSVS Step Inputs</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs
-	 * @generated
-	 */
-	public Adapter createVSVSStepInputsAdapter() {
-		return null;
-	}
-
-	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs <em>VSVS Step Outputs</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -668,30 +796,226 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput <em>VSVS Step Input</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet <em>VSVS Step Telemetry Set</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInput
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet
 	 * @generated
 	 */
-	public Adapter createVSVSStepInputAdapter() {
+	public Adapter createVSVSStepTelemetrySetAdapter() {
 		return null;
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput <em>VSVS Step Output</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry <em>VSVS Step Telemetry</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry
 	 * @generated
 	 */
-	public Adapter createVSVSStepOutputAdapter() {
+	public Adapter createVSVSStepTelemetryAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData <em>VSVS Step Telemetry Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelemetryDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryDataField <em>VSVS Step Telemetry Data Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryDataField
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelemetryDataFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader <em>VSVS Step Telemetry Header</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelemetryHeaderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField <em>VSVS Step Telemetry Header Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelemetryHeaderFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfigurations <em>VSVS Step Configurations</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConfigurations
+	 * @generated
+	 */
+	public Adapter createVSVSStepConfigurationsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration <em>VSVS Step Configuration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration
+	 * @generated
+	 */
+	public Adapter createVSVSStepConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs <em>VSVS Step Inputs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs
+	 * @generated
+	 */
+	public Adapter createVSVSStepInputsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepAction <em>VSVS Step Action</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepAction
+	 * @generated
+	 */
+	public Adapter createVSVSStepActionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandSequence <em>VSVS Step Telecommand Sequence</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandSequence
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandSequenceAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand <em>VSVS Step Telecommand</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData <em>VSVS Step Telecommand Data</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandDataAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandDataField <em>VSVS Step Telecommand Data Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandDataField
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandDataFieldAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader <em>VSVS Step Telecommand Header</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandHeaderAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeaderField <em>VSVS Step Telecommand Header Field</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeaderField
+	 * @generated
+	 */
+	public Adapter createVSVSStepTelecommandHeaderFieldAdapter() {
 		return null;
 	}
 

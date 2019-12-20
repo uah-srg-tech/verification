@@ -1,0 +1,39 @@
+grammar es.uah.aut.srg.micobs.svm.lang.tctemplate.TCTEMPLATE with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/micobs/svm/tctemplate" 
+import "http://srg.aut.uah.es/tmtcif/tc" as tc
+import "http://srg.aut.uah.es/tmtcif/fieldvalue" as fieldvalue
+import "http://srg.aut.uah.es/tmtcif/enum" as enum_
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+
+VTCTemplate returns VTCTemplate:
+	'<TCTemplate'
+		'name=' name=STRING
+		'tcInput='tcInput=[tc::TMTCIFTC|STRING]
+	(('>' ('<Fields>' (fields+=VTCTemplateField)+ '</Fields>')? '</TCTemplate>') |
+	('/>'))
+;
+
+VTCTemplateField returns VTCTemplateField:
+	'<Field>'
+		'<fieldRef' 'name=' fieldRef=[tc::TMTCIFTCField|STRING] '/>'
+		value=TMTCIFFieldValue 
+	'</Field>';
+	
+TMTCIFFieldValue returns fieldvalue::TMTCIFFieldValue:
+	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum;
+
+TMTCIFFieldValueRaw returns fieldvalue::TMTCIFFieldValueRaw:
+	'<FieldValueRaw' 'value=' value=(UINT_STRING | HEX_STRING) '/>';
+
+TMTCIFFieldValueFile returns fieldvalue::TMTCIFFieldValueFile:
+	'<FieldValueFile' 'filename=' filename=STRING '/>';
+
+TMTCIFFieldValueEnum returns fieldvalue::TMTCIFFieldValueEnum:
+	'<FieldValueEnum' 'enumRef=' enumRef=[enum_::TMTCIFEnum|STRING] 'valueRef=' valueRef=[enum_::TMTCIFEnumValue|STRING] '/>';
+
+terminal UINT_STRING returns ecore::EString:
+	('"' ('0'..'9')+ '"');
+
+terminal HEX_STRING returns ecore::EString:
+	('"0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+ '"');

@@ -25,17 +25,33 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.svm.svs.VSVSAction;
+import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
+import es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplateField;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
+import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplateField;
+import es.uah.aut.srg.tmtcif.tc.TMTCIFTCField;
+import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeaderField;
+import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
+import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeaderField;
 
 /**
  * This class contains custom scoping description.
@@ -90,7 +106,7 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
-	public IScope scope_VSVSProcedureStep_prev_step_idref(VSVSProcedureStep currStep, EReference reference) {
+	public IScope scope_VSVSProcedureStep_prev_step(VSVSProcedureStep currStep, EReference reference) {
 		
 		Collection<VSVSProcedureStep> items = new HashSet<VSVSProcedureStep>();
 		VSVSProcedureSteps currentProcedureSteps = (VSVSProcedureSteps)(currStep.eContainer());
@@ -116,19 +132,22 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		}
 	}
 
-	public IScope scope_VSVSProcedureStep_output_idref_from_prev_step(VSVSProcedureStep currStep, EReference reference) {
+	public IScope scope_VSVSProcedureStep_prev_tm_from_prev_step(VSVSProcedureStep currStep, EReference reference) {
 		
-		Collection<VSVSStepOutput> items = new HashSet<VSVSStepOutput>();
+		Collection<VSVSStepTelemetry> items = new HashSet<VSVSStepTelemetry>();
 
-		if(currStep.getPrev_step_idref() != null && 
-				currStep.getPrev_step_idref().getOutputs() != null) {
-
-			items.addAll(currStep.getPrev_step_idref().getOutputs().getOutput());
+		if((currStep.getPrev_step() != null) && 
+				(currStep.getPrev_step().getOutputs() != null) &&
+				(currStep.getPrev_step().getOutputs().getClass().getName().compareTo("es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelemetrySetImpl") == 0)) {
 			
-			Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSStepOutput, IEObjectDescription>(){
+			VSVSStepTelemetrySet tmSet = (VSVSStepTelemetrySet)currStep.getPrev_step().getOutputs();
+			
+			items.addAll(tmSet.getTelemetry());
+			
+			Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSStepTelemetry, IEObjectDescription>(){
 		
 				@Override
-				public IEObjectDescription apply(VSVSStepOutput from) {
+				public IEObjectDescription apply(VSVSStepTelemetry from) {
 					if (from.getName() != null) {
 						return EObjectDescription.create(from.getName(), from);
 					}
@@ -143,12 +162,72 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		}
 	}
 
-	public IScope scope_VSVSStepInput_interface(VSVSTestProcedure currTP, EReference reference) {
+	public IScope scope_VSVSScenarioSection_supportedInterface(VSVSTestingSpecificationDesign design, EReference reference) {
 		
-		Collection<VSVSInterface> items = new HashSet<VSVSInterface>();
-		items.addAll(currTP.getScenario().getInterface());
+		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
+		interfaces.addAll(design.getInterfaces().getInterfaces());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSInterface, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSInterface from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSScenarioSection_supportedAction(VSVSTestingSpecificationDesign design, EReference reference) {
+		
+		Collection<VSVSAction> actions = new HashSet<VSVSAction>();
+		actions.addAll(design.getActions().getAction());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(actions, new Function<VSVSAction, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSAction from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSSelectedConfiguration_selectedConfiguration(VSVSTestingSpecificationDesign design, EReference reference) {
+		
+		Collection<VSVSPacketConfiguration> configurations = new HashSet<VSVSPacketConfiguration>();
+		configurations.addAll(design.getConfigurations().getPacketConfigurations());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VSVSPacketConfiguration, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSPacketConfiguration from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepTelecommand_interface(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
+		interfaces.addAll(currTP.getScenario().getSupportedInterface());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
 	
 			@Override
 			public IEObjectDescription apply(VSVSInterface from) {
@@ -165,10 +244,10 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSStepOutput_interface(VSVSTestProcedure currTP, EReference reference) {
 		
-		Collection<VSVSInterface> items = new HashSet<VSVSInterface>();
-		items.addAll(currTP.getScenario().getInterface());
+		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
+		interfaces.addAll(currTP.getScenario().getSupportedInterface());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSInterface, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
 	
 			@Override
 			public IEObjectDescription apply(VSVSInterface from) {
@@ -183,6 +262,27 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
+	public IScope scope_VSVSStepConfiguration_configuration(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VSVSPacketConfiguration> configurations = new HashSet<VSVSPacketConfiguration>();
+		for(VSVSSelectedConfiguration selectedConfiguration : currTP.getScenario().getSelectedConfiguration()) {
+			configurations.add(selectedConfiguration.getConfiguration());
+		}
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VSVSPacketConfiguration, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VSVSPacketConfiguration from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
 
 	public IScope scope_DReferenceableObject(VSVSDocument svsDoc, EReference reference) {
 
@@ -198,6 +298,114 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(DReferenceableObject from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepTelecommandDataField_fieldRef(VSVSStepTelecommandData stepTcData, EReference reference) {
+
+		Collection<TMTCIFTCField> fields = new HashSet<TMTCIFTCField>();
+
+		for(TMTCIFTCField tcInputField : stepTcData.getTcTemplate().getTcInput().getFields()) {
+			Integer idx = 0;
+			for(VTCTemplateField tcTplField : stepTcData.getTcTemplate().getFields()) {
+				if(tcTplField.getFieldRef() == tcInputField) {
+					break;
+				}
+				idx++;
+			}
+			if(idx ==  stepTcData.getTcTemplate().getFields().size()) {
+				fields.add(tcInputField);
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTCField, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFTCField from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepTelecommandHeaderField_fieldRef(VSVSStepTelecommandHeader stepTcHeader, EReference reference) {
+
+		Collection<TMTCIFTCHeaderField> fields = new HashSet<TMTCIFTCHeaderField>();
+		
+		VSVSInterface tcInterface = ((VSVSStepTelecommand)stepTcHeader.eContainer()).getInterface();
+		fields.addAll(tcInterface.getTcHeader().getFields());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTCHeaderField, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFTCHeaderField from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepTelemetryDataField_fieldRef(VSVSStepTelemetryData stepTmData, EReference reference) {
+
+		Collection<TMTCIFTMField> fields = new HashSet<TMTCIFTMField>();
+		
+		for(TMTCIFTMField tmOutputField : stepTmData.getTmTemplate().getTmOutput().getFields()) {
+			Integer idx = 0;
+			for(VTMTemplateField tmTplField : stepTmData.getTmTemplate().getFields()) {
+				if(tmTplField.getFieldRef() == tmOutputField) {
+					break;
+				}
+				idx++;
+			}
+			if(idx ==  stepTmData.getTmTemplate().getFields().size()) {
+				fields.add(tmOutputField);
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTMField, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFTMField from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepTelemetryHeaderField_fieldRef(VSVSStepTelemetryHeader stepTmHeader, EReference reference) {
+
+		Collection<TMTCIFTMHeaderField> fields = new HashSet<TMTCIFTMHeaderField>();
+		
+		VSVSInterface tmInterface = ((VSVSStepTelemetry)stepTmHeader.eContainer()).getInterface();
+		fields.addAll(tmInterface.getTmHeader().getFields());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTMHeaderField, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFTMHeaderField from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

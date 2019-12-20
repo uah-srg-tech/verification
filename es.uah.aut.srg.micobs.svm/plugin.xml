@@ -54,4 +54,20 @@
             genModel="model/svs.genmodel"/>
    </extension>
 
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tctemplate -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/tctemplate"
+            class="es.uah.aut.srg.micobs.svm.tctemplate.tctemplatePackage"
+            genModel="model/tctemplate.genmodel"/>
+   </extension>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated tmtemplate -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/tmtemplate"
+            class="es.uah.aut.srg.micobs.svm.tmtemplate.tmtemplatePackage"
+            genModel="model/tmtemplate.genmodel"/>
+   </extension>
+
 </plugin>

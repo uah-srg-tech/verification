@@ -209,6 +209,34 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION: {
+				VSVSPacketConfigurationsSection vsvsPacketConfigurationsSection = (VSVSPacketConfigurationsSection)theEObject;
+				T result = caseVSVSPacketConfigurationsSection(vsvsPacketConfigurationsSection);
+				if (result == null) result = caseDFixedSection(vsvsPacketConfigurationsSection);
+				if (result == null) result = caseDAbstractSection(vsvsPacketConfigurationsSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_PACKET_CONFIGURATION: {
+				VSVSPacketConfiguration vsvsPacketConfiguration = (VSVSPacketConfiguration)theEObject;
+				T result = caseVSVSPacketConfiguration(vsvsPacketConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_ACTIONS_SECTION: {
+				VSVSActionsSection vsvsActionsSection = (VSVSActionsSection)theEObject;
+				T result = caseVSVSActionsSection(vsvsActionsSection);
+				if (result == null) result = caseDFixedSection(vsvsActionsSection);
+				if (result == null) result = caseDAbstractSection(vsvsActionsSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_ACTION: {
+				VSVSAction vsvsAction = (VSVSAction)theEObject;
+				T result = caseVSVSAction(vsvsAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_SCENARIOS_SECTION: {
 				VSVSScenariosSection vsvsScenariosSection = (VSVSScenariosSection)theEObject;
 				T result = caseVSVSScenariosSection(vsvsScenariosSection);
@@ -224,6 +252,12 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = caseDInstantiableSection(vsvsScenarioSection);
 				if (result == null) result = caseDAbstractSection(vsvsScenarioSection);
 				if (result == null) result = caseMCommonReferenceableObj(vsvsScenarioSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_SELECTED_CONFIGURATION: {
+				VSVSSelectedConfiguration vsvsSelectedConfiguration = (VSVSSelectedConfiguration)theEObject;
+				T result = caseVSVSSelectedConfiguration(vsvsSelectedConfiguration);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -290,15 +324,65 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVS_STEP_CONFIGURATIONS: {
+				VSVSStepConfigurations vsvsStepConfigurations = (VSVSStepConfigurations)theEObject;
+				T result = caseVSVSStepConfigurations(vsvsStepConfigurations);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_CONFIGURATION: {
+				VSVSStepConfiguration vsvsStepConfiguration = (VSVSStepConfiguration)theEObject;
+				T result = caseVSVSStepConfiguration(vsvsStepConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_STEP_INPUTS: {
 				VSVSStepInputs vsvsStepInputs = (VSVSStepInputs)theEObject;
 				T result = caseVSVSStepInputs(vsvsStepInputs);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case svsPackage.VSVS_STEP_INPUT: {
-				VSVSStepInput vsvsStepInput = (VSVSStepInput)theEObject;
-				T result = caseVSVSStepInput(vsvsStepInput);
+			case svsPackage.VSVS_STEP_ACTION: {
+				VSVSStepAction vsvsStepAction = (VSVSStepAction)theEObject;
+				T result = caseVSVSStepAction(vsvsStepAction);
+				if (result == null) result = caseVSVSStepInputs(vsvsStepAction);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND_SEQUENCE: {
+				VSVSStepTelecommandSequence vsvsStepTelecommandSequence = (VSVSStepTelecommandSequence)theEObject;
+				T result = caseVSVSStepTelecommandSequence(vsvsStepTelecommandSequence);
+				if (result == null) result = caseVSVSStepInputs(vsvsStepTelecommandSequence);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND: {
+				VSVSStepTelecommand vsvsStepTelecommand = (VSVSStepTelecommand)theEObject;
+				T result = caseVSVSStepTelecommand(vsvsStepTelecommand);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA: {
+				VSVSStepTelecommandData vsvsStepTelecommandData = (VSVSStepTelecommandData)theEObject;
+				T result = caseVSVSStepTelecommandData(vsvsStepTelecommandData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA_FIELD: {
+				VSVSStepTelecommandDataField vsvsStepTelecommandDataField = (VSVSStepTelecommandDataField)theEObject;
+				T result = caseVSVSStepTelecommandDataField(vsvsStepTelecommandDataField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER: {
+				VSVSStepTelecommandHeader vsvsStepTelecommandHeader = (VSVSStepTelecommandHeader)theEObject;
+				T result = caseVSVSStepTelecommandHeader(vsvsStepTelecommandHeader);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER_FIELD: {
+				VSVSStepTelecommandHeaderField vsvsStepTelecommandHeaderField = (VSVSStepTelecommandHeaderField)theEObject;
+				T result = caseVSVSStepTelecommandHeaderField(vsvsStepTelecommandHeaderField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -308,9 +392,40 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case svsPackage.VSVS_STEP_OUTPUT: {
-				VSVSStepOutput vsvsStepOutput = (VSVSStepOutput)theEObject;
-				T result = caseVSVSStepOutput(vsvsStepOutput);
+			case svsPackage.VSVS_STEP_TELEMETRY_SET: {
+				VSVSStepTelemetrySet vsvsStepTelemetrySet = (VSVSStepTelemetrySet)theEObject;
+				T result = caseVSVSStepTelemetrySet(vsvsStepTelemetrySet);
+				if (result == null) result = caseVSVSStepOutputs(vsvsStepTelemetrySet);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELEMETRY: {
+				VSVSStepTelemetry vsvsStepTelemetry = (VSVSStepTelemetry)theEObject;
+				T result = caseVSVSStepTelemetry(vsvsStepTelemetry);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA: {
+				VSVSStepTelemetryData vsvsStepTelemetryData = (VSVSStepTelemetryData)theEObject;
+				T result = caseVSVSStepTelemetryData(vsvsStepTelemetryData);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA_FIELD: {
+				VSVSStepTelemetryDataField vsvsStepTelemetryDataField = (VSVSStepTelemetryDataField)theEObject;
+				T result = caseVSVSStepTelemetryDataField(vsvsStepTelemetryDataField);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER: {
+				VSVSStepTelemetryHeader vsvsStepTelemetryHeader = (VSVSStepTelemetryHeader)theEObject;
+				T result = caseVSVSStepTelemetryHeader(vsvsStepTelemetryHeader);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD: {
+				VSVSStepTelemetryHeaderField vsvsStepTelemetryHeaderField = (VSVSStepTelemetryHeaderField)theEObject;
+				T result = caseVSVSStepTelemetryHeaderField(vsvsStepTelemetryHeaderField);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -586,6 +701,66 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Packet Configurations Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Packet Configurations Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSPacketConfigurationsSection(VSVSPacketConfigurationsSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Packet Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Packet Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSPacketConfiguration(VSVSPacketConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Actions Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Actions Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSActionsSection(VSVSActionsSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSAction(VSVSAction object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSVS Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -612,6 +787,21 @@ public class svsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVSScenarioSection(VSVSScenarioSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Selected Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Selected Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSSelectedConfiguration(VSVSSelectedConfiguration object) {
 		return null;
 	}
 
@@ -736,21 +926,6 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSVSStepInputs(VSVSStepInputs object) {
-		return null;
-	}
-
-	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Outputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -766,32 +941,242 @@ public class svsSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Input</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Input</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Set</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSVSStepInput(VSVSStepInput object) {
+	public T caseVSVSStepTelemetrySet(VSVSStepTelemetrySet object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Output</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Output</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVSVSStepOutput(VSVSStepOutput object) {
+	public T caseVSVSStepTelemetry(VSVSStepTelemetry object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelemetryData(VSVSStepTelemetryData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Data Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Data Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelemetryDataField(VSVSStepTelemetryDataField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Header</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Header</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelemetryHeader(VSVSStepTelemetryHeader object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Header Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telemetry Header Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelemetryHeaderField(VSVSStepTelemetryHeaderField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Configurations</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Configurations</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepConfigurations(VSVSStepConfigurations object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Configuration</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepConfiguration(VSVSStepConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Inputs</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepInputs(VSVSStepInputs object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Action</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepAction(VSVSStepAction object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Sequence</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Sequence</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommandSequence(VSVSStepTelecommandSequence object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommand(VSVSStepTelecommand object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Data</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommandData(VSVSStepTelecommandData object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Data Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Data Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommandDataField(VSVSStepTelecommandDataField object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Header</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Header</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommandHeader(VSVSStepTelecommandHeader object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Header Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVS Step Telecommand Header Field</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSStepTelecommandHeaderField(VSVSStepTelecommandHeaderField object) {
 		return null;
 	}
 

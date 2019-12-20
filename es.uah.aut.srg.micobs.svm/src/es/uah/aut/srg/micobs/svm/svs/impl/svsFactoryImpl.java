@@ -80,8 +80,13 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN: return createVSVSTestingSpecificationDesign();
 			case svsPackage.VSVS_INTERFACES_SECTION: return createVSVSInterfacesSection();
 			case svsPackage.VSVS_INTERFACE: return createVSVSInterface();
+			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION: return createVSVSPacketConfigurationsSection();
+			case svsPackage.VSVS_PACKET_CONFIGURATION: return createVSVSPacketConfiguration();
+			case svsPackage.VSVS_ACTIONS_SECTION: return createVSVSActionsSection();
+			case svsPackage.VSVS_ACTION: return createVSVSAction();
 			case svsPackage.VSVS_SCENARIOS_SECTION: return createVSVSScenariosSection();
 			case svsPackage.VSVS_SCENARIO_SECTION: return createVSVSScenarioSection();
+			case svsPackage.VSVS_SELECTED_CONFIGURATION: return createVSVSSelectedConfiguration();
 			case svsPackage.VSVS_TEST_DESIGN: return createVSVSTestDesign();
 			case svsPackage.VSVS_TEST_INFO: return createVSVSTestInfo();
 			case svsPackage.VSVS_TEST_CASES: return createVSVSTestCases();
@@ -90,10 +95,22 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_TEST_PROCEDURE: return createVSVSTestProcedure();
 			case svsPackage.VSVS_PROCEDURE_STEPS: return createVSVSProcedureSteps();
 			case svsPackage.VSVS_PROCEDURE_STEP: return createVSVSProcedureStep();
-			case svsPackage.VSVS_STEP_INPUTS: return createVSVSStepInputs();
-			case svsPackage.VSVS_STEP_INPUT: return createVSVSStepInput();
+			case svsPackage.VSVS_STEP_CONFIGURATIONS: return createVSVSStepConfigurations();
+			case svsPackage.VSVS_STEP_CONFIGURATION: return createVSVSStepConfiguration();
+			case svsPackage.VSVS_STEP_ACTION: return createVSVSStepAction();
+			case svsPackage.VSVS_STEP_TELECOMMAND_SEQUENCE: return createVSVSStepTelecommandSequence();
+			case svsPackage.VSVS_STEP_TELECOMMAND: return createVSVSStepTelecommand();
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA: return createVSVSStepTelecommandData();
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA_FIELD: return createVSVSStepTelecommandDataField();
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER: return createVSVSStepTelecommandHeader();
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER_FIELD: return createVSVSStepTelecommandHeaderField();
 			case svsPackage.VSVS_STEP_OUTPUTS: return createVSVSStepOutputs();
-			case svsPackage.VSVS_STEP_OUTPUT: return createVSVSStepOutput();
+			case svsPackage.VSVS_STEP_TELEMETRY_SET: return createVSVSStepTelemetrySet();
+			case svsPackage.VSVS_STEP_TELEMETRY: return createVSVSStepTelemetry();
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA: return createVSVSStepTelemetryData();
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA_FIELD: return createVSVSStepTelemetryDataField();
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER: return createVSVSStepTelemetryHeader();
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD: return createVSVSStepTelemetryHeaderField();
 			case svsPackage.VSVS_ANALYSIS_INSPECTION_REVIEW: return createVSVSAnalysisInspectionReview();
 			case svsPackage.VSVS_TEST_PLATFORM_REQUIREMENTS: return createVSVSTestPlatformRequirements();
 			case svsPackage.VSVS_ADDITIONAL_INFORMATION: return createVSVSAdditionalInformation();
@@ -110,10 +127,14 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
+			case svsPackage.VSVS_ACTION_TYPE:
+				return createVSVSActionTypeFromString(eDataType, initialValue);
+			case svsPackage.VSVS_CONFIGURATION_STATUS:
+				return createVSVSConfigurationStatusFromString(eDataType, initialValue);
 			case svsPackage.VSVS_TIME_UNIT:
 				return createVSVSTimeUnitFromString(eDataType, initialValue);
-			case svsPackage.VSVS_STEP_OUTPUTS_CHECKMODE:
-				return createVSVSStepOutputsCheckmodeFromString(eDataType, initialValue);
+			case svsPackage.VSVS_STEP_TELEMETRY_SET_CHECKMODE:
+				return createVSVSStepTelemetrySetCheckmodeFromString(eDataType, initialValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -127,10 +148,14 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
+			case svsPackage.VSVS_ACTION_TYPE:
+				return convertVSVSActionTypeToString(eDataType, instanceValue);
+			case svsPackage.VSVS_CONFIGURATION_STATUS:
+				return convertVSVSConfigurationStatusToString(eDataType, instanceValue);
 			case svsPackage.VSVS_TIME_UNIT:
 				return convertVSVSTimeUnitToString(eDataType, instanceValue);
-			case svsPackage.VSVS_STEP_OUTPUTS_CHECKMODE:
-				return convertVSVSStepOutputsCheckmodeToString(eDataType, instanceValue);
+			case svsPackage.VSVS_STEP_TELEMETRY_SET_CHECKMODE:
+				return convertVSVSStepTelemetrySetCheckmodeToString(eDataType, instanceValue);
 			default:
 				throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
@@ -291,6 +316,46 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSPacketConfigurationsSection createVSVSPacketConfigurationsSection() {
+		VSVSPacketConfigurationsSectionImpl vsvsPacketConfigurationsSection = new VSVSPacketConfigurationsSectionImpl();
+		return vsvsPacketConfigurationsSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSPacketConfiguration createVSVSPacketConfiguration() {
+		VSVSPacketConfigurationImpl vsvsPacketConfiguration = new VSVSPacketConfigurationImpl();
+		return vsvsPacketConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSActionsSection createVSVSActionsSection() {
+		VSVSActionsSectionImpl vsvsActionsSection = new VSVSActionsSectionImpl();
+		return vsvsActionsSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSAction createVSVSAction() {
+		VSVSActionImpl vsvsAction = new VSVSActionImpl();
+		return vsvsAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSVSScenariosSection createVSVSScenariosSection() {
 		VSVSScenariosSectionImpl vsvsScenariosSection = new VSVSScenariosSectionImpl();
 		return vsvsScenariosSection;
@@ -304,6 +369,16 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSScenarioSection createVSVSScenarioSection() {
 		VSVSScenarioSectionImpl vsvsScenarioSection = new VSVSScenarioSectionImpl();
 		return vsvsScenarioSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSSelectedConfiguration createVSVSSelectedConfiguration() {
+		VSVSSelectedConfigurationImpl vsvsSelectedConfiguration = new VSVSSelectedConfigurationImpl();
+		return vsvsSelectedConfiguration;
 	}
 
 	/**
@@ -391,26 +466,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepInputs createVSVSStepInputs() {
-		VSVSStepInputsImpl vsvsStepInputs = new VSVSStepInputsImpl();
-		return vsvsStepInputs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSStepInput createVSVSStepInput() {
-		VSVSStepInputImpl vsvsStepInput = new VSVSStepInputImpl();
-		return vsvsStepInput;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public VSVSStepOutputs createVSVSStepOutputs() {
 		VSVSStepOutputsImpl vsvsStepOutputs = new VSVSStepOutputsImpl();
 		return vsvsStepOutputs;
@@ -421,9 +476,149 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepOutput createVSVSStepOutput() {
-		VSVSStepOutputImpl vsvsStepOutput = new VSVSStepOutputImpl();
-		return vsvsStepOutput;
+	public VSVSStepTelemetrySet createVSVSStepTelemetrySet() {
+		VSVSStepTelemetrySetImpl vsvsStepTelemetrySet = new VSVSStepTelemetrySetImpl();
+		return vsvsStepTelemetrySet;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetry createVSVSStepTelemetry() {
+		VSVSStepTelemetryImpl vsvsStepTelemetry = new VSVSStepTelemetryImpl();
+		return vsvsStepTelemetry;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetryData createVSVSStepTelemetryData() {
+		VSVSStepTelemetryDataImpl vsvsStepTelemetryData = new VSVSStepTelemetryDataImpl();
+		return vsvsStepTelemetryData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetryDataField createVSVSStepTelemetryDataField() {
+		VSVSStepTelemetryDataFieldImpl vsvsStepTelemetryDataField = new VSVSStepTelemetryDataFieldImpl();
+		return vsvsStepTelemetryDataField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetryHeader createVSVSStepTelemetryHeader() {
+		VSVSStepTelemetryHeaderImpl vsvsStepTelemetryHeader = new VSVSStepTelemetryHeaderImpl();
+		return vsvsStepTelemetryHeader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetryHeaderField createVSVSStepTelemetryHeaderField() {
+		VSVSStepTelemetryHeaderFieldImpl vsvsStepTelemetryHeaderField = new VSVSStepTelemetryHeaderFieldImpl();
+		return vsvsStepTelemetryHeaderField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepConfigurations createVSVSStepConfigurations() {
+		VSVSStepConfigurationsImpl vsvsStepConfigurations = new VSVSStepConfigurationsImpl();
+		return vsvsStepConfigurations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepConfiguration createVSVSStepConfiguration() {
+		VSVSStepConfigurationImpl vsvsStepConfiguration = new VSVSStepConfigurationImpl();
+		return vsvsStepConfiguration;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepAction createVSVSStepAction() {
+		VSVSStepActionImpl vsvsStepAction = new VSVSStepActionImpl();
+		return vsvsStepAction;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandSequence createVSVSStepTelecommandSequence() {
+		VSVSStepTelecommandSequenceImpl vsvsStepTelecommandSequence = new VSVSStepTelecommandSequenceImpl();
+		return vsvsStepTelecommandSequence;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommand createVSVSStepTelecommand() {
+		VSVSStepTelecommandImpl vsvsStepTelecommand = new VSVSStepTelecommandImpl();
+		return vsvsStepTelecommand;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandData createVSVSStepTelecommandData() {
+		VSVSStepTelecommandDataImpl vsvsStepTelecommandData = new VSVSStepTelecommandDataImpl();
+		return vsvsStepTelecommandData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandDataField createVSVSStepTelecommandDataField() {
+		VSVSStepTelecommandDataFieldImpl vsvsStepTelecommandDataField = new VSVSStepTelecommandDataFieldImpl();
+		return vsvsStepTelecommandDataField;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandHeader createVSVSStepTelecommandHeader() {
+		VSVSStepTelecommandHeaderImpl vsvsStepTelecommandHeader = new VSVSStepTelecommandHeaderImpl();
+		return vsvsStepTelecommandHeader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandHeaderField createVSVSStepTelecommandHeaderField() {
+		VSVSStepTelecommandHeaderFieldImpl vsvsStepTelecommandHeaderField = new VSVSStepTelecommandHeaderFieldImpl();
+		return vsvsStepTelecommandHeaderField;
 	}
 
 	/**
@@ -461,6 +656,46 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSActionType createVSVSActionTypeFromString(EDataType eDataType, String initialValue) {
+		VSVSActionType result = VSVSActionType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSActionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSConfigurationStatus createVSVSConfigurationStatusFromString(EDataType eDataType, String initialValue) {
+		VSVSConfigurationStatus result = VSVSConfigurationStatus.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVSVSConfigurationStatusToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VSVSTimeUnit createVSVSTimeUnitFromString(EDataType eDataType, String initialValue) {
 		VSVSTimeUnit result = VSVSTimeUnit.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -481,8 +716,8 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepOutputsCheckmode createVSVSStepOutputsCheckmodeFromString(EDataType eDataType, String initialValue) {
-		VSVSStepOutputsCheckmode result = VSVSStepOutputsCheckmode.get(initialValue);
+	public VSVSStepTelemetrySetCheckmode createVSVSStepTelemetrySetCheckmodeFromString(EDataType eDataType, String initialValue) {
+		VSVSStepTelemetrySetCheckmode result = VSVSStepTelemetrySetCheckmode.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
 		return result;
 	}
@@ -492,7 +727,7 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String convertVSVSStepOutputsCheckmodeToString(EDataType eDataType, Object instanceValue) {
+	public String convertVSVSStepTelemetrySetCheckmodeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

@@ -165,6 +165,42 @@ public interface svsFactory extends EFactory {
 	VSVSInterface createVSVSInterface();
 
 	/**
+	 * Returns a new object of class '<em>VSVS Packet Configurations Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Packet Configurations Section</em>'.
+	 * @generated
+	 */
+	VSVSPacketConfigurationsSection createVSVSPacketConfigurationsSection();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Packet Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Packet Configuration</em>'.
+	 * @generated
+	 */
+	VSVSPacketConfiguration createVSVSPacketConfiguration();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Actions Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Actions Section</em>'.
+	 * @generated
+	 */
+	VSVSActionsSection createVSVSActionsSection();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Action</em>'.
+	 * @generated
+	 */
+	VSVSAction createVSVSAction();
+
+	/**
 	 * Returns a new object of class '<em>VSVS Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -181,6 +217,15 @@ public interface svsFactory extends EFactory {
 	 * @generated
 	 */
 	VSVSScenarioSection createVSVSScenarioSection();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Selected Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Selected Configuration</em>'.
+	 * @generated
+	 */
+	VSVSSelectedConfiguration createVSVSSelectedConfiguration();
 
 	/**
 	 * Returns a new object of class '<em>VSVS Test Design</em>'.
@@ -255,24 +300,6 @@ public interface svsFactory extends EFactory {
 	VSVSProcedureStep createVSVSProcedureStep();
 
 	/**
-	 * Returns a new object of class '<em>VSVS Step Inputs</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVS Step Inputs</em>'.
-	 * @generated
-	 */
-	VSVSStepInputs createVSVSStepInputs();
-
-	/**
-	 * Returns a new object of class '<em>VSVS Step Input</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVS Step Input</em>'.
-	 * @generated
-	 */
-	VSVSStepInput createVSVSStepInput();
-
-	/**
 	 * Returns a new object of class '<em>VSVS Step Outputs</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -282,13 +309,139 @@ public interface svsFactory extends EFactory {
 	VSVSStepOutputs createVSVSStepOutputs();
 
 	/**
-	 * Returns a new object of class '<em>VSVS Step Output</em>'.
+	 * Returns a new object of class '<em>VSVS Step Telemetry Set</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVS Step Output</em>'.
+	 * @return a new object of class '<em>VSVS Step Telemetry Set</em>'.
 	 * @generated
 	 */
-	VSVSStepOutput createVSVSStepOutput();
+	VSVSStepTelemetrySet createVSVSStepTelemetrySet();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telemetry</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telemetry</em>'.
+	 * @generated
+	 */
+	VSVSStepTelemetry createVSVSStepTelemetry();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telemetry Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telemetry Data</em>'.
+	 * @generated
+	 */
+	VSVSStepTelemetryData createVSVSStepTelemetryData();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telemetry Data Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telemetry Data Field</em>'.
+	 * @generated
+	 */
+	VSVSStepTelemetryDataField createVSVSStepTelemetryDataField();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telemetry Header</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telemetry Header</em>'.
+	 * @generated
+	 */
+	VSVSStepTelemetryHeader createVSVSStepTelemetryHeader();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telemetry Header Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telemetry Header Field</em>'.
+	 * @generated
+	 */
+	VSVSStepTelemetryHeaderField createVSVSStepTelemetryHeaderField();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Configurations</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Configurations</em>'.
+	 * @generated
+	 */
+	VSVSStepConfigurations createVSVSStepConfigurations();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Configuration</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Configuration</em>'.
+	 * @generated
+	 */
+	VSVSStepConfiguration createVSVSStepConfiguration();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Action</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Action</em>'.
+	 * @generated
+	 */
+	VSVSStepAction createVSVSStepAction();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand Sequence</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand Sequence</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommandSequence createVSVSStepTelecommandSequence();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommand createVSVSStepTelecommand();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand Data</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand Data</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommandData createVSVSStepTelecommandData();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand Data Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand Data Field</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommandDataField createVSVSStepTelecommandDataField();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand Header</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand Header</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommandHeader createVSVSStepTelecommandHeader();
+
+	/**
+	 * Returns a new object of class '<em>VSVS Step Telecommand Header Field</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVS Step Telecommand Header Field</em>'.
+	 * @generated
+	 */
+	VSVSStepTelecommandHeaderField createVSVSStepTelecommandHeaderField();
 
 	/**
 	 * Returns a new object of class '<em>VSVS Analysis Inspection Review</em>'.

@@ -26,6 +26,8 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getGeneral <em>General</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getInterfaces <em>Interfaces</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getConfigurations <em>Configurations</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getActions <em>Actions</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios <em>Scenarios</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}</li>
  * </ul>
@@ -86,6 +88,58 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	 * @generated
 	 */
 	void setInterfaces(VSVSInterfacesSection value);
+
+	/**
+	 * Returns the value of the '<em><b>Configurations</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Configurations</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Configurations</em>' containment reference.
+	 * @see #setConfigurations(VSVSPacketConfigurationsSection)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_Configurations()
+	 * @model containment="true"
+	 * @generated
+	 */
+	VSVSPacketConfigurationsSection getConfigurations();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getConfigurations <em>Configurations</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Configurations</em>' containment reference.
+	 * @see #getConfigurations()
+	 * @generated
+	 */
+	void setConfigurations(VSVSPacketConfigurationsSection value);
+
+	/**
+	 * Returns the value of the '<em><b>Actions</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actions</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Actions</em>' containment reference.
+	 * @see #setActions(VSVSActionsSection)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_Actions()
+	 * @model containment="true"
+	 * @generated
+	 */
+	VSVSActionsSection getActions();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getActions <em>Actions</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Actions</em>' containment reference.
+	 * @see #getActions()
+	 * @generated
+	 */
+	void setActions(VSVSActionsSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference.

@@ -22,9 +22,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step_idref <em>Prev step idref</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step <em>Prev step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_tm_from_prev_step <em>Prev tm from prev step</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getReplays <em>Replays</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getConfigurations <em>Configurations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getInputs <em>Inputs</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutputs <em>Outputs</em>}</li>
  * </ul>
@@ -61,30 +62,56 @@ public interface VSVSProcedureStep extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Prev step</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Inputs</em>' containment reference isn't clear,
+	 * If the meaning of the '<em>Prev step</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Inputs</em>' containment reference.
-	 * @see #setInputs(VSVSStepInputs)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Inputs()
-	 * @model containment="true" required="true"
+	 * @return the value of the '<em>Prev step</em>' reference.
+	 * @see #setPrev_step(VSVSProcedureStep)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Prev_step()
+	 * @model
 	 * @generated
 	 */
-	VSVSStepInputs getInputs();
+	VSVSProcedureStep getPrev_step();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getInputs <em>Inputs</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step <em>Prev step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Inputs</em>' containment reference.
-	 * @see #getInputs()
+	 * @param value the new value of the '<em>Prev step</em>' reference.
+	 * @see #getPrev_step()
 	 * @generated
 	 */
-	void setInputs(VSVSStepInputs value);
+	void setPrev_step(VSVSProcedureStep value);
+
+	/**
+	 * Returns the value of the '<em><b>Prev tm from prev step</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prev tm from prev step</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prev tm from prev step</em>' reference.
+	 * @see #setPrev_tm_from_prev_step(VSVSStepTelemetry)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Prev_tm_from_prev_step()
+	 * @model
+	 * @generated
+	 */
+	VSVSStepTelemetry getPrev_tm_from_prev_step();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_tm_from_prev_step <em>Prev tm from prev step</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prev tm from prev step</em>' reference.
+	 * @see #getPrev_tm_from_prev_step()
+	 * @generated
+	 */
+	void setPrev_tm_from_prev_step(VSVSStepTelemetry value);
 
 	/**
 	 * Returns the value of the '<em><b>Outputs</b></em>' containment reference.
@@ -113,56 +140,56 @@ public interface VSVSProcedureStep extends EObject {
 	void setOutputs(VSVSStepOutputs value);
 
 	/**
-	 * Returns the value of the '<em><b>Prev step idref</b></em>' reference.
+	 * Returns the value of the '<em><b>Configurations</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prev step idref</em>' reference isn't clear,
+	 * If the meaning of the '<em>Configurations</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prev step idref</em>' reference.
-	 * @see #setPrev_step_idref(VSVSProcedureStep)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Prev_step_idref()
-	 * @model
+	 * @return the value of the '<em>Configurations</em>' containment reference.
+	 * @see #setConfigurations(VSVSStepConfigurations)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Configurations()
+	 * @model containment="true"
 	 * @generated
 	 */
-	VSVSProcedureStep getPrev_step_idref();
+	VSVSStepConfigurations getConfigurations();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getPrev_step_idref <em>Prev step idref</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getConfigurations <em>Configurations</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prev step idref</em>' reference.
-	 * @see #getPrev_step_idref()
+	 * @param value the new value of the '<em>Configurations</em>' containment reference.
+	 * @see #getConfigurations()
 	 * @generated
 	 */
-	void setPrev_step_idref(VSVSProcedureStep value);
+	void setConfigurations(VSVSStepConfigurations value);
 
 	/**
-	 * Returns the value of the '<em><b>Output idref from prev step</b></em>' reference.
+	 * Returns the value of the '<em><b>Inputs</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Output idref from prev step</em>' reference isn't clear,
+	 * If the meaning of the '<em>Inputs</em>' containment reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Output idref from prev step</em>' reference.
-	 * @see #setOutput_idref_from_prev_step(VSVSStepOutput)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Output_idref_from_prev_step()
-	 * @model
+	 * @return the value of the '<em>Inputs</em>' containment reference.
+	 * @see #setInputs(VSVSStepInputs)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureStep_Inputs()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	VSVSStepOutput getOutput_idref_from_prev_step();
+	VSVSStepInputs getInputs();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep#getInputs <em>Inputs</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Output idref from prev step</em>' reference.
-	 * @see #getOutput_idref_from_prev_step()
+	 * @param value the new value of the '<em>Inputs</em>' containment reference.
+	 * @see #getInputs()
 	 * @generated
 	 */
-	void setOutput_idref_from_prev_step(VSVSStepOutput value);
+	void setInputs(VSVSStepInputs value);
 
 	/**
 	 * Returns the value of the '<em><b>Replays</b></em>' attribute.

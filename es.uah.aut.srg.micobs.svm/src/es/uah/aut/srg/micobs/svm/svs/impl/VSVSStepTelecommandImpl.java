@@ -11,34 +11,40 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepInput;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import org.eclipse.emf.common.notify.Notification;
-import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.common.notify.NotificationChain;
 
+import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Step Input</b></em>'.
+ * An implementation of the model object '<em><b>VSVS Step Telecommand</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getInterface <em>Interface</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getDelay_value <em>Delay value</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepInputImpl#getDelay_unit <em>Delay unit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getInterface <em>Interface</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getDelay_value <em>Delay value</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getDelay_unit <em>Delay unit</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getTcData <em>Tc Data</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepTelecommandImpl#getTcHeader <em>Tc Header</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements VSVSStepInput {
+public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implements VSVSStepTelecommand {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -128,11 +134,31 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	protected boolean delay_unitESet;
 
 	/**
+	 * The cached value of the '{@link #getTcData() <em>Tc Data</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTcData()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSStepTelecommandData tcData;
+
+	/**
+	 * The cached value of the '{@link #getTcHeader() <em>Tc Header</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTcHeader()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSStepTelecommandHeader tcHeader;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSStepInputImpl() {
+	protected VSVSStepTelecommandImpl() {
 		super();
 	}
 
@@ -143,7 +169,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_STEP_INPUT;
+		return svsPackage.Literals.VSVS_STEP_TELECOMMAND;
 	}
 
 	/**
@@ -164,7 +190,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__NAME, oldName, name));
 	}
 
 	/**
@@ -178,7 +204,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 			interface_ = (VSVSInterface)eResolveProxy(oldInterface);
 			if (interface_ != oldInterface) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_INPUT__INTERFACE, oldInterface, interface_));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE, oldInterface, interface_));
 			}
 		}
 		return interface_;
@@ -202,7 +228,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		VSVSInterface oldInterface = interface_;
 		interface_ = newInterface;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__INTERFACE, oldInterface, interface_));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE, oldInterface, interface_));
 	}
 
 	/**
@@ -225,7 +251,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		boolean oldDelay_valueESet = delay_valueESet;
 		delay_valueESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__DELAY_VALUE, oldDelay_value, delay_value, !oldDelay_valueESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE, oldDelay_value, delay_value, !oldDelay_valueESet));
 	}
 
 	/**
@@ -239,7 +265,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		delay_value = DELAY_VALUE_EDEFAULT;
 		delay_valueESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, svsPackage.VSVS_STEP_INPUT__DELAY_VALUE, oldDelay_value, DELAY_VALUE_EDEFAULT, oldDelay_valueESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE, oldDelay_value, DELAY_VALUE_EDEFAULT, oldDelay_valueESet));
 	}
 
 	/**
@@ -271,7 +297,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		boolean oldDelay_unitESet = delay_unitESet;
 		delay_unitESet = true;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_INPUT__DELAY_UNIT, oldDelay_unit, delay_unit, !oldDelay_unitESet));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT, oldDelay_unit, delay_unit, !oldDelay_unitESet));
 	}
 
 	/**
@@ -285,7 +311,7 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		delay_unit = DELAY_UNIT_EDEFAULT;
 		delay_unitESet = false;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.UNSET, svsPackage.VSVS_STEP_INPUT__DELAY_UNIT, oldDelay_unit, DELAY_UNIT_EDEFAULT, oldDelay_unitESet));
+			eNotify(new ENotificationImpl(this, Notification.UNSET, svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT, oldDelay_unit, DELAY_UNIT_EDEFAULT, oldDelay_unitESet));
 	}
 
 	/**
@@ -302,18 +328,124 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VSVSStepTelecommandHeader getTcHeader() {
+		return tcHeader;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTcHeader(VSVSStepTelecommandHeader newTcHeader, NotificationChain msgs) {
+		VSVSStepTelecommandHeader oldTcHeader = tcHeader;
+		tcHeader = newTcHeader;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER, oldTcHeader, newTcHeader);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTcHeader(VSVSStepTelecommandHeader newTcHeader) {
+		if (newTcHeader != tcHeader) {
+			NotificationChain msgs = null;
+			if (tcHeader != null)
+				msgs = ((InternalEObject)tcHeader).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER, null, msgs);
+			if (newTcHeader != null)
+				msgs = ((InternalEObject)newTcHeader).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER, null, msgs);
+			msgs = basicSetTcHeader(newTcHeader, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER, newTcHeader, newTcHeader));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelecommandData getTcData() {
+		return tcData;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTcData(VSVSStepTelecommandData newTcData, NotificationChain msgs) {
+		VSVSStepTelecommandData oldTcData = tcData;
+		tcData = newTcData;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA, oldTcData, newTcData);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTcData(VSVSStepTelecommandData newTcData) {
+		if (newTcData != tcData) {
+			NotificationChain msgs = null;
+			if (tcData != null)
+				msgs = ((InternalEObject)tcData).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA, null, msgs);
+			if (newTcData != null)
+				msgs = ((InternalEObject)newTcData).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA, null, msgs);
+			msgs = basicSetTcData(newTcData, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA, newTcData, newTcData));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA:
+				return basicSetTcData(null, msgs);
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER:
+				return basicSetTcHeader(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_INPUT__NAME:
+			case svsPackage.VSVS_STEP_TELECOMMAND__NAME:
 				return getName();
-			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
 				if (resolve) return getInterface();
 				return basicGetInterface();
-			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				return getDelay_value();
-			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT:
 				return getDelay_unit();
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA:
+				return getTcData();
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER:
+				return getTcHeader();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -326,17 +458,23 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_INPUT__NAME:
+			case svsPackage.VSVS_STEP_TELECOMMAND__NAME:
 				setName((String)newValue);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
 				setInterface((VSVSInterface)newValue);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				setDelay_value((String)newValue);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT:
 				setDelay_unit((VSVSTimeUnit)newValue);
+				return;
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA:
+				setTcData((VSVSStepTelecommandData)newValue);
+				return;
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER:
+				setTcHeader((VSVSStepTelecommandHeader)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -350,17 +488,23 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_INPUT__NAME:
+			case svsPackage.VSVS_STEP_TELECOMMAND__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
 				setInterface((VSVSInterface)null);
 				return;
-			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				unsetDelay_value();
 				return;
-			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT:
 				unsetDelay_unit();
+				return;
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA:
+				setTcData((VSVSStepTelecommandData)null);
+				return;
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER:
+				setTcHeader((VSVSStepTelecommandHeader)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -374,14 +518,18 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_INPUT__NAME:
+			case svsPackage.VSVS_STEP_TELECOMMAND__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case svsPackage.VSVS_STEP_INPUT__INTERFACE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
 				return interface_ != null;
-			case svsPackage.VSVS_STEP_INPUT__DELAY_VALUE:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				return isSetDelay_value();
-			case svsPackage.VSVS_STEP_INPUT__DELAY_UNIT:
+			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_UNIT:
 				return isSetDelay_unit();
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_DATA:
+				return tcData != null;
+			case svsPackage.VSVS_STEP_TELECOMMAND__TC_HEADER:
+				return tcHeader != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -406,4 +554,4 @@ public class VSVSStepInputImpl extends MinimalEObjectImpl.Container implements V
 		return result.toString();
 	}
 
-} //VSVSStepInputImpl
+} //VSVSStepTelecommandImpl

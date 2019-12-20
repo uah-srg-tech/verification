@@ -10,8 +10,6 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -19,32 +17,11 @@ import org.eclipse.emf.ecore.EObject;
  * A representation of the model object '<em><b>VSVS Step Inputs</b></em>'.
  * <!-- end-user-doc -->
  *
- * <p>
- * The following features are supported:
- * </p>
- * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs#getInput <em>Input</em>}</li>
- * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInputs()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface VSVSStepInputs extends EObject {
-	/**
-	 * Returns the value of the '<em><b>Input</b></em>' containment reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.svs.VSVSStepInput}.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Input</em>' containment reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Input</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepInputs_Input()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	EList<VSVSStepInput> getInput();
 
 } // VSVSStepInputs

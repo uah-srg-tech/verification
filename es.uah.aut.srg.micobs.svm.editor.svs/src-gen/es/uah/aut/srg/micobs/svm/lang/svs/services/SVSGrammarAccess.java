@@ -436,51 +436,56 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	public class DListItemElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DListItem");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cListItemKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cParagraphAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cParagraphDParagraphParserRuleCall_1_0 = (RuleCall)cParagraphAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cSublistKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cSublistAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cSublistDListContentParserRuleCall_2_1_0 = (RuleCall)cSublistAssignment_2_1.eContents().get(0);
-		private final Keyword cSublistKeyword_2_2 = (Keyword)cGroup_2.eContents().get(2);
-		private final Keyword cListItemKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Action cDListItemAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cListItemKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cParagraphAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cParagraphDParagraphParserRuleCall_2_0 = (RuleCall)cParagraphAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cSublistKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cSublistAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cSublistDListContentParserRuleCall_3_1_0 = (RuleCall)cSublistAssignment_3_1.eContents().get(0);
+		private final Keyword cSublistKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Keyword cListItemKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//DListItem doctpl::DListItem:
+		//	{doctpl::DListItem}
 		//	'<listItem>'
-		//	paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')?
+		//	paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')?
 		//	'</listItem>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<listItem>' paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')? '</listItem>'
+		//{doctpl::DListItem} '<listItem>' paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')? '</listItem>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<listItem>'
-		public Keyword getListItemKeyword_0() { return cListItemKeyword_0; }
+		//{doctpl::DListItem}
+		public Action getDListItemAction_0() { return cDListItemAction_0; }
 		
-		//paragraph+=DParagraph+
-		public Assignment getParagraphAssignment_1() { return cParagraphAssignment_1; }
+		//'<listItem>'
+		public Keyword getListItemKeyword_1() { return cListItemKeyword_1; }
+		
+		//paragraph=DParagraph?
+		public Assignment getParagraphAssignment_2() { return cParagraphAssignment_2; }
 		
 		//DParagraph
-		public RuleCall getParagraphDParagraphParserRuleCall_1_0() { return cParagraphDParagraphParserRuleCall_1_0; }
+		public RuleCall getParagraphDParagraphParserRuleCall_2_0() { return cParagraphDParagraphParserRuleCall_2_0; }
 		
 		//('<sublist>' sublist=DListContent '</sublist>')?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 		
 		//'<sublist>'
-		public Keyword getSublistKeyword_2_0() { return cSublistKeyword_2_0; }
+		public Keyword getSublistKeyword_3_0() { return cSublistKeyword_3_0; }
 		
 		//sublist=DListContent
-		public Assignment getSublistAssignment_2_1() { return cSublistAssignment_2_1; }
+		public Assignment getSublistAssignment_3_1() { return cSublistAssignment_3_1; }
 		
 		//DListContent
-		public RuleCall getSublistDListContentParserRuleCall_2_1_0() { return cSublistDListContentParserRuleCall_2_1_0; }
+		public RuleCall getSublistDListContentParserRuleCall_3_1_0() { return cSublistDListContentParserRuleCall_3_1_0; }
 		
 		//'</sublist>'
-		public Keyword getSublistKeyword_2_2() { return cSublistKeyword_2_2; }
+		public Keyword getSublistKeyword_3_2() { return cSublistKeyword_3_2; }
 		
 		//'</listItem>'
-		public Keyword getListItemKeyword_3() { return cListItemKeyword_3; }
+		public Keyword getListItemKeyword_4() { return cListItemKeyword_4; }
 	}
 	public class DListContentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DListContent");
@@ -880,21 +885,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</hyperlink>'
 		public Keyword getHyperlinkKeyword_5() { return cHyperlinkKeyword_5; }
 	}
-	public class DTextElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DText");
-		private final Assignment cContentAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cContentRUNTEXTTerminalRuleCall_0 = (RuleCall)cContentAssignment.eContents().get(0);
-		
-		//DText doctpl::DText:
-		//	content=RUNTEXT
-		@Override public ParserRule getRule() { return rule; }
-		
-		//content=RUNTEXT
-		public Assignment getContentAssignment() { return cContentAssignment; }
-		
-		//RUNTEXT
-		public RuleCall getContentRUNTEXTTerminalRuleCall_0() { return cContentRUNTEXTTerminalRuleCall_0; }
-	}
 	public class DTabElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DTab");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -914,6 +904,21 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'<tab/>'
 		public Keyword getTabKeyword_1() { return cTabKeyword_1; }
+	}
+	public class DTextElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DText");
+		private final Assignment cContentAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cContentRUNTEXTTerminalRuleCall_0 = (RuleCall)cContentAssignment.eContents().get(0);
+		
+		//DText doctpl::DText:
+		//	content=RUNTEXT
+		@Override public ParserRule getRule() { return rule; }
+		
+		//content=RUNTEXT
+		public Assignment getContentAssignment() { return cContentAssignment; }
+		
+		//RUNTEXT
+		public RuleCall getContentRUNTEXTTerminalRuleCall_0() { return cContentRUNTEXTTerminalRuleCall_0; }
 	}
 	public class DFigureFromFileElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.DFigureFromFile");
@@ -2111,26 +2116,40 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cInterfacesAssignment_5 = (Assignment)cGroup.eContents().get(5);
 		private final RuleCall cInterfacesVSVSInterfacesSectionParserRuleCall_5_0 = (RuleCall)cInterfacesAssignment_5.eContents().get(0);
 		private final Keyword cInterfacesKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Keyword cScenariosKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cScenariosAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_8_0 = (RuleCall)cScenariosAssignment_8.eContents().get(0);
+		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
+		private final Keyword cPacketConfigurationsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Assignment cConfigurationsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
+		private final RuleCall cConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0 = (RuleCall)cConfigurationsAssignment_7_1.eContents().get(0);
+		private final Keyword cPacketConfigurationsKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
+		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
+		private final Keyword cActionsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Assignment cActionsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
+		private final RuleCall cActionsVSVSActionsSectionParserRuleCall_8_1_0 = (RuleCall)cActionsAssignment_8_1.eContents().get(0);
+		private final Keyword cActionsKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
 		private final Keyword cScenariosKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cTestDesignsAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_10_0 = (RuleCall)cTestDesignsAssignment_10.eContents().get(0);
-		private final Keyword cTestingSpecificationDesignKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cScenariosAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_10_0 = (RuleCall)cScenariosAssignment_10.eContents().get(0);
+		private final Keyword cScenariosKeyword_11 = (Keyword)cGroup.eContents().get(11);
+		private final Assignment cTestDesignsAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_12_0 = (RuleCall)cTestDesignsAssignment_12.eContents().get(0);
+		private final Keyword cTestingSpecificationDesignKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		
 		//VSVSTestingSpecificationDesign:
 		//	'<TestingSpecificationDesign>'
 		//	'<General>' general=VSVSFixedSection '</General>'
-		//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
+		//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+		//	configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
+		//	'</Actions>')?
 		//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
 		//	testDesigns+=VSVSTestDesign+
 		//	'</TestingSpecificationDesign>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' '<Interfaces>'
-		//interfaces=VSVSInterfacesSection '</Interfaces>' '<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
-		//testDesigns+=VSVSTestDesign+ '</TestingSpecificationDesign>'
+		//interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+		//configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
+		//'</Actions>')? '<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>' testDesigns+=VSVSTestDesign+
+		//'</TestingSpecificationDesign>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestingSpecificationDesign>'
@@ -2160,26 +2179,56 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Interfaces>'
 		public Keyword getInterfacesKeyword_6() { return cInterfacesKeyword_6; }
 		
+		//('<PacketConfigurations>' configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//'<PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_7_0() { return cPacketConfigurationsKeyword_7_0; }
+		
+		//configurations=VSVSPacketConfigurationsSection
+		public Assignment getConfigurationsAssignment_7_1() { return cConfigurationsAssignment_7_1; }
+		
+		//VSVSPacketConfigurationsSection
+		public RuleCall getConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0() { return cConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0; }
+		
+		//'</PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_7_2() { return cPacketConfigurationsKeyword_7_2; }
+		
+		//('<Actions>' actions=VSVSActionsSection '</Actions>')?
+		public Group getGroup_8() { return cGroup_8; }
+		
+		//'<Actions>'
+		public Keyword getActionsKeyword_8_0() { return cActionsKeyword_8_0; }
+		
+		//actions=VSVSActionsSection
+		public Assignment getActionsAssignment_8_1() { return cActionsAssignment_8_1; }
+		
+		//VSVSActionsSection
+		public RuleCall getActionsVSVSActionsSectionParserRuleCall_8_1_0() { return cActionsVSVSActionsSectionParserRuleCall_8_1_0; }
+		
+		//'</Actions>'
+		public Keyword getActionsKeyword_8_2() { return cActionsKeyword_8_2; }
+		
 		//'<Scenarios>'
-		public Keyword getScenariosKeyword_7() { return cScenariosKeyword_7; }
-		
-		//scenarios=VSVSScenariosSection
-		public Assignment getScenariosAssignment_8() { return cScenariosAssignment_8; }
-		
-		//VSVSScenariosSection
-		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_8_0() { return cScenariosVSVSScenariosSectionParserRuleCall_8_0; }
-		
-		//'</Scenarios>'
 		public Keyword getScenariosKeyword_9() { return cScenariosKeyword_9; }
 		
+		//scenarios=VSVSScenariosSection
+		public Assignment getScenariosAssignment_10() { return cScenariosAssignment_10; }
+		
+		//VSVSScenariosSection
+		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_10_0() { return cScenariosVSVSScenariosSectionParserRuleCall_10_0; }
+		
+		//'</Scenarios>'
+		public Keyword getScenariosKeyword_11() { return cScenariosKeyword_11; }
+		
 		//testDesigns+=VSVSTestDesign+
-		public Assignment getTestDesignsAssignment_10() { return cTestDesignsAssignment_10; }
+		public Assignment getTestDesignsAssignment_12() { return cTestDesignsAssignment_12; }
 		
 		//VSVSTestDesign
-		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_10_0() { return cTestDesignsVSVSTestDesignParserRuleCall_10_0; }
+		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_12_0() { return cTestDesignsVSVSTestDesignParserRuleCall_12_0; }
 		
 		//'</TestingSpecificationDesign>'
-		public Keyword getTestingSpecificationDesignKeyword_11() { return cTestingSpecificationDesignKeyword_11; }
+		public Keyword getTestingSpecificationDesignKeyword_13() { return cTestingSpecificationDesignKeyword_13; }
 	}
 	public class VSVSInterfacesSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSInterfacesSection");
@@ -2211,20 +2260,35 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDescriptionDRunParserRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
-		private final Keyword cInterfaceKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final Keyword cTcHeaderKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cTcHeaderAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cTcHeaderTMTCIFTCHeaderCrossReference_6_0 = (CrossReference)cTcHeaderAssignment_6.eContents().get(0);
+		private final RuleCall cTcHeaderTMTCIFTCHeaderSTRINGTerminalRuleCall_6_0_1 = (RuleCall)cTcHeaderTMTCIFTCHeaderCrossReference_6_0.eContents().get(1);
+		private final Keyword cTmHeaderKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cTmHeaderAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final CrossReference cTmHeaderTMTCIFTMHeaderCrossReference_8_0 = (CrossReference)cTmHeaderAssignment_8.eContents().get(0);
+		private final RuleCall cTmHeaderTMTCIFTMHeaderSTRINGTerminalRuleCall_8_0_1 = (RuleCall)cTmHeaderTMTCIFTMHeaderCrossReference_8_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cDescriptionAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cDescriptionDRunParserRuleCall_10_0 = (RuleCall)cDescriptionAssignment_10.eContents().get(0);
+		private final Keyword cInterfaceKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//VSVSInterface:
 		//	'<Interface'
 		//	'name=' name=STRING
+		//	'id=' id=UINT_STRING
+		//	'tcHeader=' tcHeader=[tcheader::TMTCIFTCHeader|STRING]
+		//	'tmHeader=' tmHeader=[tmheader::TMTCIFTMHeader|STRING]
 		//	'>'
 		//	description=DRun
 		//	'</Interface>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Interface' 'name=' name=STRING '>' description=DRun '</Interface>'
+		//'<Interface' 'name=' name=STRING 'id=' id=UINT_STRING 'tcHeader=' tcHeader=[tcheader::TMTCIFTCHeader|STRING] 'tmHeader='
+		//tmHeader=[tmheader::TMTCIFTMHeader|STRING] '>' description=DRun '</Interface>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Interface'
@@ -2239,17 +2303,216 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
+		//'id='
+		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
+		
+		//id=UINT_STRING
+		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
+		
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
+		
+		//'tcHeader='
+		public Keyword getTcHeaderKeyword_5() { return cTcHeaderKeyword_5; }
+		
+		//tcHeader=[tcheader::TMTCIFTCHeader|STRING]
+		public Assignment getTcHeaderAssignment_6() { return cTcHeaderAssignment_6; }
+		
+		//[tcheader::TMTCIFTCHeader|STRING]
+		public CrossReference getTcHeaderTMTCIFTCHeaderCrossReference_6_0() { return cTcHeaderTMTCIFTCHeaderCrossReference_6_0; }
+		
+		//STRING
+		public RuleCall getTcHeaderTMTCIFTCHeaderSTRINGTerminalRuleCall_6_0_1() { return cTcHeaderTMTCIFTCHeaderSTRINGTerminalRuleCall_6_0_1; }
+		
+		//'tmHeader='
+		public Keyword getTmHeaderKeyword_7() { return cTmHeaderKeyword_7; }
+		
+		//tmHeader=[tmheader::TMTCIFTMHeader|STRING]
+		public Assignment getTmHeaderAssignment_8() { return cTmHeaderAssignment_8; }
+		
+		//[tmheader::TMTCIFTMHeader|STRING]
+		public CrossReference getTmHeaderTMTCIFTMHeaderCrossReference_8_0() { return cTmHeaderTMTCIFTMHeaderCrossReference_8_0; }
+		
+		//STRING
+		public RuleCall getTmHeaderTMTCIFTMHeaderSTRINGTerminalRuleCall_8_0_1() { return cTmHeaderTMTCIFTMHeaderSTRINGTerminalRuleCall_8_0_1; }
+		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		public Keyword getGreaterThanSignKeyword_9() { return cGreaterThanSignKeyword_9; }
 		
 		//description=DRun
-		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
+		public Assignment getDescriptionAssignment_10() { return cDescriptionAssignment_10; }
 		
 		//DRun
-		public RuleCall getDescriptionDRunParserRuleCall_4_0() { return cDescriptionDRunParserRuleCall_4_0; }
+		public RuleCall getDescriptionDRunParserRuleCall_10_0() { return cDescriptionDRunParserRuleCall_10_0; }
 		
 		//'</Interface>'
-		public Keyword getInterfaceKeyword_5() { return cInterfaceKeyword_5; }
+		public Keyword getInterfaceKeyword_11() { return cInterfaceKeyword_11; }
+	}
+	public class VSVSPacketConfigurationsSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfigurationsSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSPacketConfigurationsSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cPacketConfigurationsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0 = (RuleCall)cPacketConfigurationsAssignment_1.eContents().get(0);
+		
+		//VSVSPacketConfigurationsSection:
+		//	{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSPacketConfigurationsSection}
+		public Action getVSVSPacketConfigurationsSectionAction_0() { return cVSVSPacketConfigurationsSectionAction_0; }
+		
+		//packetConfigurations+=VSVSPacketConfiguration+
+		public Assignment getPacketConfigurationsAssignment_1() { return cPacketConfigurationsAssignment_1; }
+		
+		//VSVSPacketConfiguration
+		public RuleCall getPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0() { return cPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0; }
+	}
+	public class VSVSPacketConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfiguration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cPacketConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDescriptionDRunParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
+		private final Keyword cPacketConfigurationKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VSVSPacketConfiguration:
+		//	'<PacketConfiguration'
+		//	'name=' name=STRING
+		//	'id=' id=UINT_STRING
+		//	'>'
+		//	description=DRun
+		//	'</PacketConfiguration>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<PacketConfiguration' 'name=' name=STRING 'id=' id=UINT_STRING '>' description=DRun '</PacketConfiguration>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<PacketConfiguration'
+		public Keyword getPacketConfigurationKeyword_0() { return cPacketConfigurationKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'id='
+		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
+		
+		//id=UINT_STRING
+		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
+		
+		//UINT_STRING
+		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//description=DRun
+		public Assignment getDescriptionAssignment_6() { return cDescriptionAssignment_6; }
+		
+		//DRun
+		public RuleCall getDescriptionDRunParserRuleCall_6_0() { return cDescriptionDRunParserRuleCall_6_0; }
+		
+		//'</PacketConfiguration>'
+		public Keyword getPacketConfigurationKeyword_7() { return cPacketConfigurationKeyword_7; }
+	}
+	public class VSVSActionsSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionsSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSActionsSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cActionAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cActionVSVSActionParserRuleCall_1_0 = (RuleCall)cActionAssignment_1.eContents().get(0);
+		
+		//VSVSActionsSection:
+		//	{VSVSActionsSection} action+=VSVSAction+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSActionsSection} action+=VSVSAction+
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSActionsSection}
+		public Action getVSVSActionsSectionAction_0() { return cVSVSActionsSectionAction_0; }
+		
+		//action+=VSVSAction+
+		public Assignment getActionAssignment_1() { return cActionAssignment_1; }
+		
+		//VSVSAction
+		public RuleCall getActionVSVSActionParserRuleCall_1_0() { return cActionVSVSActionParserRuleCall_1_0; }
+	}
+	public class VSVSActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cTypeKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypeVSVSActionTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDescriptionDBodyParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
+		private final Keyword cActionKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VSVSAction:
+		//	'<Action'
+		//	'name=' name=STRING
+		//	'type=' type=VSVSActionType
+		//	'>'
+		//	description=DBody
+		//	'</Action>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Action' 'name=' name=STRING 'type=' type=VSVSActionType '>' description=DBody '</Action>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Action'
+		public Keyword getActionKeyword_0() { return cActionKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'type='
+		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
+		
+		//type=VSVSActionType
+		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+		
+		//VSVSActionType
+		public RuleCall getTypeVSVSActionTypeEnumRuleCall_4_0() { return cTypeVSVSActionTypeEnumRuleCall_4_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//description=DBody
+		public Assignment getDescriptionAssignment_6() { return cDescriptionAssignment_6; }
+		
+		//DBody
+		public RuleCall getDescriptionDBodyParserRuleCall_6_0() { return cDescriptionDBodyParserRuleCall_6_0; }
+		
+		//'</Action>'
+		public Keyword getActionKeyword_7() { return cActionKeyword_7; }
 	}
 	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
@@ -2285,24 +2548,35 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cInterfaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cRefKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
-		private final Assignment cInterfaceAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_2_0 = (CrossReference)cInterfaceAssignment_4_2.eContents().get(0);
-		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_2_0.eContents().get(1);
+		private final Assignment cSupportedInterfaceAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final CrossReference cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0 = (CrossReference)cSupportedInterfaceAssignment_4_2.eContents().get(0);
+		private final RuleCall cSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
-		private final Assignment cBodyAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cBodyDBodyParserRuleCall_5_0 = (RuleCall)cBodyAssignment_5.eContents().get(0);
-		private final Keyword cScenarioKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cSelectedConfigurationAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0 = (RuleCall)cSelectedConfigurationAssignment_5.eContents().get(0);
+		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
+		private final Keyword cActionKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cRefKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cSupportedActionAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final CrossReference cSupportedActionVSVSActionCrossReference_6_2_0 = (CrossReference)cSupportedActionAssignment_6_2.eContents().get(0);
+		private final RuleCall cSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1 = (RuleCall)cSupportedActionVSVSActionCrossReference_6_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
+		private final Assignment cBodyAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cBodyDBodyParserRuleCall_7_0 = (RuleCall)cBodyAssignment_7.eContents().get(0);
+		private final Keyword cScenarioKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//VSVSScenarioSection:
 		//	'<Scenario'
 		//	'name=' name=STRING
-		//	'>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
+		//	'>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
+		//	selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
 		//	body=DBody
 		//	'</Scenario>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Scenario' 'name=' name=STRING '>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+ body=DBody
-		//'</Scenario>'
+		//'<Scenario' 'name=' name=STRING '>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
+		//selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+		//body=DBody '</Scenario>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Scenario'
@@ -2320,7 +2594,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
+		//('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'<Interface'
@@ -2329,26 +2603,117 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_4_1() { return cRefKeyword_4_1; }
 		
-		//interface+=[VSVSInterface|STRING]
-		public Assignment getInterfaceAssignment_4_2() { return cInterfaceAssignment_4_2; }
+		//supportedInterface+=[VSVSInterface|STRING]
+		public Assignment getSupportedInterfaceAssignment_4_2() { return cSupportedInterfaceAssignment_4_2; }
 		
 		//[VSVSInterface|STRING]
-		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_2_0() { return cInterfaceVSVSInterfaceCrossReference_4_2_0; }
+		public CrossReference getSupportedInterfaceVSVSInterfaceCrossReference_4_2_0() { return cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0; }
 		
 		//STRING
-		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1; }
+		public RuleCall getSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1() { return cSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_4_3() { return cSolidusGreaterThanSignKeyword_4_3; }
 		
+		//selectedConfiguration+=VSVSSelectedConfiguration*
+		public Assignment getSelectedConfigurationAssignment_5() { return cSelectedConfigurationAssignment_5; }
+		
+		//VSVSSelectedConfiguration
+		public RuleCall getSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0() { return cSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0; }
+		
+		//('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//'<Action'
+		public Keyword getActionKeyword_6_0() { return cActionKeyword_6_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_6_1() { return cRefKeyword_6_1; }
+		
+		//supportedAction+=[VSVSAction|STRING]
+		public Assignment getSupportedActionAssignment_6_2() { return cSupportedActionAssignment_6_2; }
+		
+		//[VSVSAction|STRING]
+		public CrossReference getSupportedActionVSVSActionCrossReference_6_2_0() { return cSupportedActionVSVSActionCrossReference_6_2_0; }
+		
+		//STRING
+		public RuleCall getSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1() { return cSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_6_3() { return cSolidusGreaterThanSignKeyword_6_3; }
+		
 		//body=DBody
-		public Assignment getBodyAssignment_5() { return cBodyAssignment_5; }
+		public Assignment getBodyAssignment_7() { return cBodyAssignment_7; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_5_0() { return cBodyDBodyParserRuleCall_5_0; }
+		public RuleCall getBodyDBodyParserRuleCall_7_0() { return cBodyDBodyParserRuleCall_7_0; }
 		
 		//'</Scenario>'
-		public Keyword getScenarioKeyword_6() { return cScenarioKeyword_6; }
+		public Keyword getScenarioKeyword_8() { return cScenarioKeyword_8; }
+	}
+	public class VSVSSelectedConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSSelectedConfiguration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cConfigurationVSVSPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
+		private final RuleCall cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVSVSPacketConfigurationCrossReference_2_0.eContents().get(1);
+		private final Keyword cDefaultFilterStatusKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDefaultFilterStatusAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0 = (RuleCall)cDefaultFilterStatusAssignment_4.eContents().get(0);
+		private final Keyword cDefaultPrintStatusKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDefaultPrintStatusAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0 = (RuleCall)cDefaultPrintStatusAssignment_6.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VSVSSelectedConfiguration:
+		//	'<Configuration'
+		//	'ref=' configuration=[VSVSPacketConfiguration|STRING]
+		//	'defaultFilterStatus=' defaultFilterStatus=VSVSConfigurationStatus
+		//	'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus
+		//	'/>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Configuration' 'ref=' configuration=[VSVSPacketConfiguration|STRING] 'defaultFilterStatus='
+		//defaultFilterStatus=VSVSConfigurationStatus 'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Configuration'
+		public Keyword getConfigurationKeyword_0() { return cConfigurationKeyword_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
+		
+		//configuration=[VSVSPacketConfiguration|STRING]
+		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
+		
+		//[VSVSPacketConfiguration|STRING]
+		public CrossReference getConfigurationVSVSPacketConfigurationCrossReference_2_0() { return cConfigurationVSVSPacketConfigurationCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'defaultFilterStatus='
+		public Keyword getDefaultFilterStatusKeyword_3() { return cDefaultFilterStatusKeyword_3; }
+		
+		//defaultFilterStatus=VSVSConfigurationStatus
+		public Assignment getDefaultFilterStatusAssignment_4() { return cDefaultFilterStatusAssignment_4; }
+		
+		//VSVSConfigurationStatus
+		public RuleCall getDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0() { return cDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0; }
+		
+		//'defaultPrintStatus='
+		public Keyword getDefaultPrintStatusKeyword_5() { return cDefaultPrintStatusKeyword_5; }
+		
+		//defaultPrintStatus=VSVSConfigurationStatus
+		public Assignment getDefaultPrintStatusAssignment_6() { return cDefaultPrintStatusAssignment_6; }
+		
+		//VSVSConfigurationStatus
+		public RuleCall getDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0() { return cDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
 	}
 	public class VSVSTestCasesElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestCases");
@@ -3192,39 +3557,41 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
-		private final Keyword cPrev_step_idrefKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
-		private final Assignment cPrev_step_idrefAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final CrossReference cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0 = (CrossReference)cPrev_step_idrefAssignment_3_1.eContents().get(0);
-		private final RuleCall cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0.eContents().get(1);
-		private final Keyword cOutput_idref_from_prev_stepKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
-		private final Assignment cOutput_idref_from_prev_stepAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
-		private final CrossReference cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0 = (CrossReference)cOutput_idref_from_prev_stepAssignment_3_3.eContents().get(0);
-		private final RuleCall cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1 = (RuleCall)cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0.eContents().get(1);
+		private final Keyword cPrev_stepKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cPrev_stepAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final CrossReference cPrev_stepVSVSProcedureStepCrossReference_3_1_0 = (CrossReference)cPrev_stepAssignment_3_1.eContents().get(0);
+		private final RuleCall cPrev_stepVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1 = (RuleCall)cPrev_stepVSVSProcedureStepCrossReference_3_1_0.eContents().get(1);
+		private final Keyword cPrev_tm_from_prev_stepKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cPrev_tm_from_prev_stepAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final CrossReference cPrev_tm_from_prev_stepVSVSStepTelemetryCrossReference_3_3_0 = (CrossReference)cPrev_tm_from_prev_stepAssignment_3_3.eContents().get(0);
+		private final RuleCall cPrev_tm_from_prev_stepVSVSStepTelemetrySTRINGTerminalRuleCall_3_3_0_1 = (RuleCall)cPrev_tm_from_prev_stepVSVSStepTelemetryCrossReference_3_3_0.eContents().get(1);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cReplaysKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cReplaysAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
 		private final RuleCall cReplaysUINT_STRINGTerminalRuleCall_4_1_0 = (RuleCall)cReplaysAssignment_4_1.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cInputsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cInputsVSVSStepInputsParserRuleCall_6_0 = (RuleCall)cInputsAssignment_6.eContents().get(0);
-		private final Assignment cOutputsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_7_0 = (RuleCall)cOutputsAssignment_7.eContents().get(0);
-		private final Keyword cStepKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Assignment cConfigurationsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cConfigurationsVSVSStepConfigurationsParserRuleCall_6_0 = (RuleCall)cConfigurationsAssignment_6.eContents().get(0);
+		private final Assignment cInputsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cInputsVSVSStepInputsParserRuleCall_7_0 = (RuleCall)cInputsAssignment_7.eContents().get(0);
+		private final Assignment cOutputsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cOutputsVSVSStepOutputsParserRuleCall_8_0 = (RuleCall)cOutputsAssignment_8.eContents().get(0);
+		private final Keyword cStepKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//VSVSProcedureStep:
 		//	'<Step'
-		//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
-		//	'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
-		//	replays=UINT_STRING)?
+		//	'name=' name=STRING ('prev_step=' prev_step=[VSVSProcedureStep|STRING]
+		//	'prev_tm_from_prev_step=' prev_tm_from_prev_step=[VSVSStepTelemetry|STRING])? ('replays=' replays=UINT_STRING)?
 		//	'>'
+		//	configurations=VSVSStepConfigurations?
 		//	inputs=VSVSStepInputs
 		//	outputs=VSVSStepOutputs?
 		//	'</Step>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Step' 'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
-		//'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays=' replays=UINT_STRING)?
-		//'>' inputs=VSVSStepInputs outputs=VSVSStepOutputs? '</Step>'
+		//'<Step' 'name=' name=STRING ('prev_step=' prev_step=[VSVSProcedureStep|STRING] 'prev_tm_from_prev_step='
+		//prev_tm_from_prev_step=[VSVSStepTelemetry|STRING])? ('replays=' replays=UINT_STRING)? '>'
+		//configurations=VSVSStepConfigurations? inputs=VSVSStepInputs outputs=VSVSStepOutputs? '</Step>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Step'
@@ -3239,33 +3606,33 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING] 'output_idref_from_prev_step='
-		//output_idref_from_prev_step=[VSVSStepOutput|STRING])?
+		//('prev_step=' prev_step=[VSVSProcedureStep|STRING] 'prev_tm_from_prev_step='
+		//prev_tm_from_prev_step=[VSVSStepTelemetry|STRING])?
 		public Group getGroup_3() { return cGroup_3; }
 		
-		//'prev_step_idref='
-		public Keyword getPrev_step_idrefKeyword_3_0() { return cPrev_step_idrefKeyword_3_0; }
+		//'prev_step='
+		public Keyword getPrev_stepKeyword_3_0() { return cPrev_stepKeyword_3_0; }
 		
-		//prev_step_idref=[VSVSProcedureStep|STRING]
-		public Assignment getPrev_step_idrefAssignment_3_1() { return cPrev_step_idrefAssignment_3_1; }
+		//prev_step=[VSVSProcedureStep|STRING]
+		public Assignment getPrev_stepAssignment_3_1() { return cPrev_stepAssignment_3_1; }
 		
 		//[VSVSProcedureStep|STRING]
-		public CrossReference getPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0() { return cPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0; }
+		public CrossReference getPrev_stepVSVSProcedureStepCrossReference_3_1_0() { return cPrev_stepVSVSProcedureStepCrossReference_3_1_0; }
 		
 		//STRING
-		public RuleCall getPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1() { return cPrev_step_idrefVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1; }
+		public RuleCall getPrev_stepVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1() { return cPrev_stepVSVSProcedureStepSTRINGTerminalRuleCall_3_1_0_1; }
 		
-		//'output_idref_from_prev_step='
-		public Keyword getOutput_idref_from_prev_stepKeyword_3_2() { return cOutput_idref_from_prev_stepKeyword_3_2; }
+		//'prev_tm_from_prev_step='
+		public Keyword getPrev_tm_from_prev_stepKeyword_3_2() { return cPrev_tm_from_prev_stepKeyword_3_2; }
 		
-		//output_idref_from_prev_step=[VSVSStepOutput|STRING]
-		public Assignment getOutput_idref_from_prev_stepAssignment_3_3() { return cOutput_idref_from_prev_stepAssignment_3_3; }
+		//prev_tm_from_prev_step=[VSVSStepTelemetry|STRING]
+		public Assignment getPrev_tm_from_prev_stepAssignment_3_3() { return cPrev_tm_from_prev_stepAssignment_3_3; }
 		
-		//[VSVSStepOutput|STRING]
-		public CrossReference getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0() { return cOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0; }
+		//[VSVSStepTelemetry|STRING]
+		public CrossReference getPrev_tm_from_prev_stepVSVSStepTelemetryCrossReference_3_3_0() { return cPrev_tm_from_prev_stepVSVSStepTelemetryCrossReference_3_3_0; }
 		
 		//STRING
-		public RuleCall getOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1() { return cOutput_idref_from_prev_stepVSVSStepOutputSTRINGTerminalRuleCall_3_3_0_1; }
+		public RuleCall getPrev_tm_from_prev_stepVSVSStepTelemetrySTRINGTerminalRuleCall_3_3_0_1() { return cPrev_tm_from_prev_stepVSVSStepTelemetrySTRINGTerminalRuleCall_3_3_0_1; }
 		
 		//('replays=' replays=UINT_STRING)?
 		public Group getGroup_4() { return cGroup_4; }
@@ -3282,59 +3649,285 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
 		
+		//configurations=VSVSStepConfigurations?
+		public Assignment getConfigurationsAssignment_6() { return cConfigurationsAssignment_6; }
+		
+		//VSVSStepConfigurations
+		public RuleCall getConfigurationsVSVSStepConfigurationsParserRuleCall_6_0() { return cConfigurationsVSVSStepConfigurationsParserRuleCall_6_0; }
+		
 		//inputs=VSVSStepInputs
-		public Assignment getInputsAssignment_6() { return cInputsAssignment_6; }
+		public Assignment getInputsAssignment_7() { return cInputsAssignment_7; }
 		
 		//VSVSStepInputs
-		public RuleCall getInputsVSVSStepInputsParserRuleCall_6_0() { return cInputsVSVSStepInputsParserRuleCall_6_0; }
+		public RuleCall getInputsVSVSStepInputsParserRuleCall_7_0() { return cInputsVSVSStepInputsParserRuleCall_7_0; }
 		
 		//outputs=VSVSStepOutputs?
-		public Assignment getOutputsAssignment_7() { return cOutputsAssignment_7; }
+		public Assignment getOutputsAssignment_8() { return cOutputsAssignment_8; }
 		
 		//VSVSStepOutputs
-		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_7_0() { return cOutputsVSVSStepOutputsParserRuleCall_7_0; }
+		public RuleCall getOutputsVSVSStepOutputsParserRuleCall_8_0() { return cOutputsVSVSStepOutputsParserRuleCall_8_0; }
 		
 		//'</Step>'
-		public Keyword getStepKeyword_8() { return cStepKeyword_8; }
+		public Keyword getStepKeyword_9() { return cStepKeyword_9; }
+	}
+	public class VSVSStepConfigurationsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConfigurations");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVSVSStepConfigurationsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cConfigurationsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cConfigurationVSVSStepConfigurationParserRuleCall_2_0 = (RuleCall)cConfigurationAssignment_2.eContents().get(0);
+		private final Keyword cConfigurationsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//VSVSStepConfigurations:
+		//	{VSVSStepConfigurations}
+		//	'<Configurations>'
+		//	configuration+=VSVSStepConfiguration+
+		//	'</Configurations>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSStepConfigurations} '<Configurations>' configuration+=VSVSStepConfiguration+ '</Configurations>'
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSStepConfigurations}
+		public Action getVSVSStepConfigurationsAction_0() { return cVSVSStepConfigurationsAction_0; }
+		
+		//'<Configurations>'
+		public Keyword getConfigurationsKeyword_1() { return cConfigurationsKeyword_1; }
+		
+		//configuration+=VSVSStepConfiguration+
+		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
+		
+		//VSVSStepConfiguration
+		public RuleCall getConfigurationVSVSStepConfigurationParserRuleCall_2_0() { return cConfigurationVSVSStepConfigurationParserRuleCall_2_0; }
+		
+		//'</Configurations>'
+		public Keyword getConfigurationsKeyword_3() { return cConfigurationsKeyword_3; }
+	}
+	public class VSVSStepConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConfiguration");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cConfigurationVSVSPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
+		private final RuleCall cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVSVSPacketConfigurationCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cFilterStatusKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cFilterStatusAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0 = (RuleCall)cFilterStatusAssignment_3_1.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cPrintStatusKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cPrintStatusAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0 = (RuleCall)cPrintStatusAssignment_4_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepConfiguration:
+		//	'<Configuration'
+		//	'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus=' filterStatus=VSVSConfigurationStatus)?
+		//	('printStatus=' printStatus=VSVSConfigurationStatus)?
+		//	'/>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Configuration' 'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus='
+		//filterStatus=VSVSConfigurationStatus)? ('printStatus=' printStatus=VSVSConfigurationStatus)? '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Configuration'
+		public Keyword getConfigurationKeyword_0() { return cConfigurationKeyword_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
+		
+		//configuration=[VSVSPacketConfiguration|STRING]
+		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
+		
+		//[VSVSPacketConfiguration|STRING]
+		public CrossReference getConfigurationVSVSPacketConfigurationCrossReference_2_0() { return cConfigurationVSVSPacketConfigurationCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		
+		//('filterStatus=' filterStatus=VSVSConfigurationStatus)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'filterStatus='
+		public Keyword getFilterStatusKeyword_3_0() { return cFilterStatusKeyword_3_0; }
+		
+		//filterStatus=VSVSConfigurationStatus
+		public Assignment getFilterStatusAssignment_3_1() { return cFilterStatusAssignment_3_1; }
+		
+		//VSVSConfigurationStatus
+		public RuleCall getFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0() { return cFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0; }
+		
+		//('printStatus=' printStatus=VSVSConfigurationStatus)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'printStatus='
+		public Keyword getPrintStatusKeyword_4_0() { return cPrintStatusKeyword_4_0; }
+		
+		//printStatus=VSVSConfigurationStatus
+		public Assignment getPrintStatusAssignment_4_1() { return cPrintStatusAssignment_4_1; }
+		
+		//VSVSConfigurationStatus
+		public RuleCall getPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0() { return cPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
 	}
 	public class VSVSStepInputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputs");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSStepInputsAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cInputsKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cInputAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cInputVSVSStepInputParserRuleCall_2_0 = (RuleCall)cInputAssignment_2.eContents().get(0);
-		private final Keyword cInputsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cVSVSStepActionParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cVSVSStepTelecommandSequenceParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
 		//VSVSStepInputs:
-		//	{VSVSStepInputs}
-		//	'<Inputs>'
-		//	input+=VSVSStepInput+
-		//	'</Inputs>';
+		//	VSVSStepAction | VSVSStepTelecommandSequence;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSStepInputs} '<Inputs>' input+=VSVSStepInput+ '</Inputs>'
+		//VSVSStepAction | VSVSStepTelecommandSequence
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//VSVSStepAction
+		public RuleCall getVSVSStepActionParserRuleCall_0() { return cVSVSStepActionParserRuleCall_0; }
+		
+		//VSVSStepTelecommandSequence
+		public RuleCall getVSVSStepTelecommandSequenceParserRuleCall_1() { return cVSVSStepTelecommandSequenceParserRuleCall_1; }
+	}
+	public class VSVSStepActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepAction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cSelectedActionKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cSelectedActionAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cSelectedActionVSVSActionCrossReference_2_0 = (CrossReference)cSelectedActionAssignment_2.eContents().get(0);
+		private final RuleCall cSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cSelectedActionVSVSActionCrossReference_2_0.eContents().get(1);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cDelay_valueKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cDelay_valueAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_3_1_0 = (RuleCall)cDelay_valueAssignment_3_1.eContents().get(0);
+		private final Keyword cDelay_unitKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		private final Assignment cDelay_unitAssignment_3_3 = (Assignment)cGroup_3.eContents().get(3);
+		private final RuleCall cDelay_unitVSVSTimeUnitEnumRuleCall_3_3_0 = (RuleCall)cDelay_unitAssignment_3_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cSpan_valueKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cSpan_valueAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cSpan_valueUINT_STRINGTerminalRuleCall_4_1_0 = (RuleCall)cSpan_valueAssignment_4_1.eContents().get(0);
+		private final Keyword cSpan_unitKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Assignment cSpan_unitAssignment_4_3 = (Assignment)cGroup_4.eContents().get(3);
+		private final RuleCall cSpan_unitVSVSTimeUnitEnumRuleCall_4_3_0 = (RuleCall)cSpan_unitAssignment_4_3.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepAction:
+		//	'<Action'
+		//	'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING
+		//	'delay_unit=' delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING
+		//	'span_unit=' span_unit=VSVSTimeUnit)?
+		//	'/>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Action' 'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING 'delay_unit='
+		//delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING 'span_unit=' span_unit=VSVSTimeUnit)? '/>'
 		public Group getGroup() { return cGroup; }
 		
-		//{VSVSStepInputs}
-		public Action getVSVSStepInputsAction_0() { return cVSVSStepInputsAction_0; }
+		//'<Action'
+		public Keyword getActionKeyword_0() { return cActionKeyword_0; }
 		
-		//'<Inputs>'
-		public Keyword getInputsKeyword_1() { return cInputsKeyword_1; }
+		//'selectedAction='
+		public Keyword getSelectedActionKeyword_1() { return cSelectedActionKeyword_1; }
 		
-		//input+=VSVSStepInput+
-		public Assignment getInputAssignment_2() { return cInputAssignment_2; }
+		//selectedAction=[VSVSAction|STRING]
+		public Assignment getSelectedActionAssignment_2() { return cSelectedActionAssignment_2; }
 		
-		//VSVSStepInput
-		public RuleCall getInputVSVSStepInputParserRuleCall_2_0() { return cInputVSVSStepInputParserRuleCall_2_0; }
+		//[VSVSAction|STRING]
+		public CrossReference getSelectedActionVSVSActionCrossReference_2_0() { return cSelectedActionVSVSActionCrossReference_2_0; }
 		
-		//'</Inputs>'
-		public Keyword getInputsKeyword_3() { return cInputsKeyword_3; }
+		//STRING
+		public RuleCall getSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1() { return cSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1; }
+		
+		//('delay_value=' delay_value=UINT_STRING 'delay_unit=' delay_unit=VSVSTimeUnit)?
+		public Group getGroup_3() { return cGroup_3; }
+		
+		//'delay_value='
+		public Keyword getDelay_valueKeyword_3_0() { return cDelay_valueKeyword_3_0; }
+		
+		//delay_value=UINT_STRING
+		public Assignment getDelay_valueAssignment_3_1() { return cDelay_valueAssignment_3_1; }
+		
+		//UINT_STRING
+		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_3_1_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_3_1_0; }
+		
+		//'delay_unit='
+		public Keyword getDelay_unitKeyword_3_2() { return cDelay_unitKeyword_3_2; }
+		
+		//delay_unit=VSVSTimeUnit
+		public Assignment getDelay_unitAssignment_3_3() { return cDelay_unitAssignment_3_3; }
+		
+		//VSVSTimeUnit
+		public RuleCall getDelay_unitVSVSTimeUnitEnumRuleCall_3_3_0() { return cDelay_unitVSVSTimeUnitEnumRuleCall_3_3_0; }
+		
+		//('span_value=' span_value=UINT_STRING 'span_unit=' span_unit=VSVSTimeUnit)?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'span_value='
+		public Keyword getSpan_valueKeyword_4_0() { return cSpan_valueKeyword_4_0; }
+		
+		//span_value=UINT_STRING
+		public Assignment getSpan_valueAssignment_4_1() { return cSpan_valueAssignment_4_1; }
+		
+		//UINT_STRING
+		public RuleCall getSpan_valueUINT_STRINGTerminalRuleCall_4_1_0() { return cSpan_valueUINT_STRINGTerminalRuleCall_4_1_0; }
+		
+		//'span_unit='
+		public Keyword getSpan_unitKeyword_4_2() { return cSpan_unitKeyword_4_2; }
+		
+		//span_unit=VSVSTimeUnit
+		public Assignment getSpan_unitAssignment_4_3() { return cSpan_unitAssignment_4_3; }
+		
+		//VSVSTimeUnit
+		public RuleCall getSpan_unitVSVSTimeUnitEnumRuleCall_4_3_0() { return cSpan_unitVSVSTimeUnitEnumRuleCall_4_3_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
 	}
-	public class VSVSStepInputElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
+	public class VSVSStepTelecommandSequenceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandSequence");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cInputKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Action cVSVSStepTelecommandSequenceAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cTelecommandSequenceKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTelecommandAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTelecommandVSVSStepTelecommandParserRuleCall_2_0 = (RuleCall)cTelecommandAssignment_2.eContents().get(0);
+		private final Keyword cTelecommandSequenceKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//VSVSStepTelecommandSequence:
+		//	{VSVSStepTelecommandSequence}
+		//	'<TelecommandSequence>'
+		//	telecommand+=VSVSStepTelecommand+
+		//	'</TelecommandSequence>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VSVSStepTelecommandSequence} '<TelecommandSequence>' telecommand+=VSVSStepTelecommand+ '</TelecommandSequence>'
+		public Group getGroup() { return cGroup; }
+		
+		//{VSVSStepTelecommandSequence}
+		public Action getVSVSStepTelecommandSequenceAction_0() { return cVSVSStepTelecommandSequenceAction_0; }
+		
+		//'<TelecommandSequence>'
+		public Keyword getTelecommandSequenceKeyword_1() { return cTelecommandSequenceKeyword_1; }
+		
+		//telecommand+=VSVSStepTelecommand+
+		public Assignment getTelecommandAssignment_2() { return cTelecommandAssignment_2; }
+		
+		//VSVSStepTelecommand
+		public RuleCall getTelecommandVSVSStepTelecommandParserRuleCall_2_0() { return cTelecommandVSVSStepTelecommandParserRuleCall_2_0; }
+		
+		//'</TelecommandSequence>'
+		public Keyword getTelecommandSequenceKeyword_3() { return cTelecommandSequenceKeyword_3; }
+	}
+	public class VSVSStepTelecommandElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommand");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTelecommandKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -3342,29 +3935,38 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
 		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
-		private final Keyword cDelay_valueKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDelay_valueAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_6_0 = (RuleCall)cDelay_valueAssignment_6.eContents().get(0);
-		private final Keyword cDelay_unitKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cDelay_unitAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDelay_unitVSVSTimeUnitEnumRuleCall_8_0 = (RuleCall)cDelay_unitAssignment_8.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cDelay_valueKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cDelay_valueAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cDelay_valueUINT_STRINGTerminalRuleCall_5_1_0 = (RuleCall)cDelay_valueAssignment_5_1.eContents().get(0);
+		private final Keyword cDelay_unitKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Assignment cDelay_unitAssignment_5_3 = (Assignment)cGroup_5.eContents().get(3);
+		private final RuleCall cDelay_unitVSVSTimeUnitEnumRuleCall_5_3_0 = (RuleCall)cDelay_unitAssignment_5_3.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cTcDataAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cTcDataVSVSStepTelecommandDataParserRuleCall_7_0 = (RuleCall)cTcDataAssignment_7.eContents().get(0);
+		private final Assignment cTcHeaderAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTcHeaderVSVSStepTelecommandHeaderParserRuleCall_8_0 = (RuleCall)cTcHeaderAssignment_8.eContents().get(0);
+		private final Keyword cTelecommandKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//VSVSStepInput:
-		//	'<Input'
+		//VSVSStepTelecommand:
+		//	'<Telecommand'
 		//	'name=' name=STRING
-		//	'interface=' interface=[VSVSInterface|STRING]
-		//	'delay_value=' delay_value=UINT_STRING
-		//	'delay_unit=' delay_unit=VSVSTimeUnit
-		//	'/>';
+		//	'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
+		//	'delay_unit=' delay_unit=VSVSTimeUnit)?
+		//	'>'
+		//	tcData=VSVSStepTelecommandData
+		//	tcHeader=VSVSStepTelecommandHeader?
+		//	'</Telecommand>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Input' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] 'delay_value=' delay_value=UINT_STRING
-		//'delay_unit=' delay_unit=VSVSTimeUnit '/>'
+		//'<Telecommand' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
+		//'delay_unit=' delay_unit=VSVSTimeUnit)? '>' tcData=VSVSStepTelecommandData tcHeader=VSVSStepTelecommandHeader?
+		//'</Telecommand>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<Input'
-		public Keyword getInputKeyword_0() { return cInputKeyword_0; }
+		//'<Telecommand'
+		public Keyword getTelecommandKeyword_0() { return cTelecommandKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -3387,34 +3989,422 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
 		
+		//('delay_value=' delay_value=UINT_STRING 'delay_unit=' delay_unit=VSVSTimeUnit)?
+		public Group getGroup_5() { return cGroup_5; }
+		
 		//'delay_value='
-		public Keyword getDelay_valueKeyword_5() { return cDelay_valueKeyword_5; }
+		public Keyword getDelay_valueKeyword_5_0() { return cDelay_valueKeyword_5_0; }
 		
 		//delay_value=UINT_STRING
-		public Assignment getDelay_valueAssignment_6() { return cDelay_valueAssignment_6; }
+		public Assignment getDelay_valueAssignment_5_1() { return cDelay_valueAssignment_5_1; }
 		
 		//UINT_STRING
-		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_6_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_6_0; }
+		public RuleCall getDelay_valueUINT_STRINGTerminalRuleCall_5_1_0() { return cDelay_valueUINT_STRINGTerminalRuleCall_5_1_0; }
 		
 		//'delay_unit='
-		public Keyword getDelay_unitKeyword_7() { return cDelay_unitKeyword_7; }
+		public Keyword getDelay_unitKeyword_5_2() { return cDelay_unitKeyword_5_2; }
 		
 		//delay_unit=VSVSTimeUnit
-		public Assignment getDelay_unitAssignment_8() { return cDelay_unitAssignment_8; }
+		public Assignment getDelay_unitAssignment_5_3() { return cDelay_unitAssignment_5_3; }
 		
 		//VSVSTimeUnit
-		public RuleCall getDelay_unitVSVSTimeUnitEnumRuleCall_8_0() { return cDelay_unitVSVSTimeUnitEnumRuleCall_8_0; }
+		public RuleCall getDelay_unitVSVSTimeUnitEnumRuleCall_5_3_0() { return cDelay_unitVSVSTimeUnitEnumRuleCall_5_3_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_6() { return cGreaterThanSignKeyword_6; }
+		
+		//tcData=VSVSStepTelecommandData
+		public Assignment getTcDataAssignment_7() { return cTcDataAssignment_7; }
+		
+		//VSVSStepTelecommandData
+		public RuleCall getTcDataVSVSStepTelecommandDataParserRuleCall_7_0() { return cTcDataVSVSStepTelecommandDataParserRuleCall_7_0; }
+		
+		//tcHeader=VSVSStepTelecommandHeader?
+		public Assignment getTcHeaderAssignment_8() { return cTcHeaderAssignment_8; }
+		
+		//VSVSStepTelecommandHeader
+		public RuleCall getTcHeaderVSVSStepTelecommandHeaderParserRuleCall_8_0() { return cTcHeaderVSVSStepTelecommandHeaderParserRuleCall_8_0; }
+		
+		//'</Telecommand>'
+		public Keyword getTelecommandKeyword_9() { return cTelecommandKeyword_9; }
+	}
+	public class VSVSStepTelecommandDataElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandData");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTelecommandDataKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTemplateKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTcTemplateAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTcTemplateVTCTemplateCrossReference_2_0 = (CrossReference)cTcTemplateAssignment_2.eContents().get(0);
+		private final RuleCall cTcTemplateVTCTemplateSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cTcTemplateVTCTemplateCrossReference_2_0.eContents().get(1);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final Assignment cFieldsAssignment_3_0_1 = (Assignment)cGroup_3_0.eContents().get(1);
+		private final RuleCall cFieldsVSVSStepTelecommandDataFieldParserRuleCall_3_0_1_0 = (RuleCall)cFieldsAssignment_3_0_1.eContents().get(0);
+		private final Keyword cTelecommandDataKeyword_3_0_2 = (Keyword)cGroup_3_0.eContents().get(2);
+		private final Keyword cSolidusGreaterThanSignKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
+		
+		//VSVSStepTelecommandData:
+		//	'<TelecommandData'
+		//	'template=' tcTemplate=[tctemplate::VTCTemplate|STRING] ('>' fields+=VSVSStepTelecommandDataField+
+		//	'</TelecommandData>' | '/>');
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TelecommandData' 'template=' tcTemplate=[tctemplate::VTCTemplate|STRING] ('>' fields+=VSVSStepTelecommandDataField+
+		//'</TelecommandData>' | '/>')
+		public Group getGroup() { return cGroup; }
+		
+		//'<TelecommandData'
+		public Keyword getTelecommandDataKeyword_0() { return cTelecommandDataKeyword_0; }
+		
+		//'template='
+		public Keyword getTemplateKeyword_1() { return cTemplateKeyword_1; }
+		
+		//tcTemplate=[tctemplate::VTCTemplate|STRING]
+		public Assignment getTcTemplateAssignment_2() { return cTcTemplateAssignment_2; }
+		
+		//[tctemplate::VTCTemplate|STRING]
+		public CrossReference getTcTemplateVTCTemplateCrossReference_2_0() { return cTcTemplateVTCTemplateCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getTcTemplateVTCTemplateSTRINGTerminalRuleCall_2_0_1() { return cTcTemplateVTCTemplateSTRINGTerminalRuleCall_2_0_1; }
+		
+		//('>' fields+=VSVSStepTelecommandDataField+ '</TelecommandData>' | '/>')
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		
+		//'>' fields+=VSVSStepTelecommandDataField+ '</TelecommandData>'
+		public Group getGroup_3_0() { return cGroup_3_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3_0_0() { return cGreaterThanSignKeyword_3_0_0; }
+		
+		//fields+=VSVSStepTelecommandDataField+
+		public Assignment getFieldsAssignment_3_0_1() { return cFieldsAssignment_3_0_1; }
+		
+		//VSVSStepTelecommandDataField
+		public RuleCall getFieldsVSVSStepTelecommandDataFieldParserRuleCall_3_0_1_0() { return cFieldsVSVSStepTelecommandDataFieldParserRuleCall_3_0_1_0; }
+		
+		//'</TelecommandData>'
+		public Keyword getTelecommandDataKeyword_3_0_2() { return cTelecommandDataKeyword_3_0_2; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
+		public Keyword getSolidusGreaterThanSignKeyword_3_1() { return cSolidusGreaterThanSignKeyword_3_1; }
+	}
+	public class VSVSStepTelecommandDataFieldElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandDataField");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFieldRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFieldRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFieldRefTMTCIFTCFieldCrossReference_2_0 = (CrossReference)cFieldRefAssignment_2.eContents().get(0);
+		private final RuleCall cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTCFieldCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueTMTCIFFieldValueTCParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepTelecommandDataField:
+		//	'<Field'
+		//	'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING]
+		//	'>'
+		//	value=TMTCIFFieldValueTC
+		//	'</Field>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Field' 'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING] '>' value=TMTCIFFieldValueTC '</Field>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Field'
+		public Keyword getFieldKeyword_0() { return cFieldKeyword_0; }
+		
+		//'fieldRef='
+		public Keyword getFieldRefKeyword_1() { return cFieldRefKeyword_1; }
+		
+		//fieldRef=[tc::TMTCIFTCField|STRING]
+		public Assignment getFieldRefAssignment_2() { return cFieldRefAssignment_2; }
+		
+		//[tc::TMTCIFTCField|STRING]
+		public CrossReference getFieldRefTMTCIFTCFieldCrossReference_2_0() { return cFieldRefTMTCIFTCFieldCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1() { return cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//value=TMTCIFFieldValueTC
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
+		
+		//TMTCIFFieldValueTC
+		public RuleCall getValueTMTCIFFieldValueTCParserRuleCall_4_0() { return cValueTMTCIFFieldValueTCParserRuleCall_4_0; }
+		
+		//'</Field>'
+		public Keyword getFieldKeyword_5() { return cFieldKeyword_5; }
+	}
+	public class TMTCIFFieldValueTCElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueTC");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cTMTCIFFieldValueRawParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTMTCIFFieldValueFileParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cTMTCIFFieldValueEnumParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
+		
+		//TMTCIFFieldValueTC fieldvalue::TMTCIFFieldValue:
+		//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
+		@Override public ParserRule getRule() { return rule; }
+		
+		//TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TMTCIFFieldValueRaw
+		public RuleCall getTMTCIFFieldValueRawParserRuleCall_0() { return cTMTCIFFieldValueRawParserRuleCall_0; }
+		
+		//TMTCIFFieldValueFile
+		public RuleCall getTMTCIFFieldValueFileParserRuleCall_1() { return cTMTCIFFieldValueFileParserRuleCall_1; }
+		
+		//TMTCIFFieldValueEnum
+		public RuleCall getTMTCIFFieldValueEnumParserRuleCall_2() { return cTMTCIFFieldValueEnumParserRuleCall_2; }
+	}
+	public class VSVSStepTelecommandHeaderElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandHeader");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTelecommandHeaderKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFieldsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFieldsVSVSStepTelecommandHeaderFieldParserRuleCall_1_0 = (RuleCall)cFieldsAssignment_1.eContents().get(0);
+		private final Keyword cTelecommandHeaderKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//VSVSStepTelecommandHeader:
+		//	'<TelecommandHeader>'
+		//	fields+=VSVSStepTelecommandHeaderField+
+		//	'</TelecommandHeader>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TelecommandHeader>' fields+=VSVSStepTelecommandHeaderField+ '</TelecommandHeader>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<TelecommandHeader>'
+		public Keyword getTelecommandHeaderKeyword_0() { return cTelecommandHeaderKeyword_0; }
+		
+		//fields+=VSVSStepTelecommandHeaderField+
+		public Assignment getFieldsAssignment_1() { return cFieldsAssignment_1; }
+		
+		//VSVSStepTelecommandHeaderField
+		public RuleCall getFieldsVSVSStepTelecommandHeaderFieldParserRuleCall_1_0() { return cFieldsVSVSStepTelecommandHeaderFieldParserRuleCall_1_0; }
+		
+		//'</TelecommandHeader>'
+		public Keyword getTelecommandHeaderKeyword_2() { return cTelecommandHeaderKeyword_2; }
+	}
+	public class VSVSStepTelecommandHeaderFieldElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandHeaderField");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHeaderFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFieldRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFieldRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFieldRefTMTCIFTCHeaderFieldCrossReference_2_0 = (CrossReference)cFieldRefAssignment_2.eContents().get(0);
+		private final RuleCall cFieldRefTMTCIFTCHeaderFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTCHeaderFieldCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueTMTCIFFieldValueHeaderParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cHeaderFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepTelecommandHeaderField:
+		//	'<HeaderField'
+		//	'fieldRef=' fieldRef=[tcheader::TMTCIFTCHeaderField|STRING]
+		//	'>'
+		//	value=TMTCIFFieldValueHeader
+		//	'</HeaderField>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<HeaderField' 'fieldRef=' fieldRef=[tcheader::TMTCIFTCHeaderField|STRING] '>' value=TMTCIFFieldValueHeader
+		//'</HeaderField>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<HeaderField'
+		public Keyword getHeaderFieldKeyword_0() { return cHeaderFieldKeyword_0; }
+		
+		//'fieldRef='
+		public Keyword getFieldRefKeyword_1() { return cFieldRefKeyword_1; }
+		
+		//fieldRef=[tcheader::TMTCIFTCHeaderField|STRING]
+		public Assignment getFieldRefAssignment_2() { return cFieldRefAssignment_2; }
+		
+		//[tcheader::TMTCIFTCHeaderField|STRING]
+		public CrossReference getFieldRefTMTCIFTCHeaderFieldCrossReference_2_0() { return cFieldRefTMTCIFTCHeaderFieldCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getFieldRefTMTCIFTCHeaderFieldSTRINGTerminalRuleCall_2_0_1() { return cFieldRefTMTCIFTCHeaderFieldSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//value=TMTCIFFieldValueHeader
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
+		
+		//TMTCIFFieldValueHeader
+		public RuleCall getValueTMTCIFFieldValueHeaderParserRuleCall_4_0() { return cValueTMTCIFFieldValueHeaderParserRuleCall_4_0; }
+		
+		//'</HeaderField>'
+		public Keyword getHeaderFieldKeyword_5() { return cHeaderFieldKeyword_5; }
+	}
+	public class TMTCIFFieldValueHeaderElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueHeader");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cTMTCIFFieldValueRawParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTMTCIFFieldValueFileParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//TMTCIFFieldValueHeader fieldvalue::TMTCIFFieldValue:
+		//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		@Override public ParserRule getRule() { return rule; }
+		
+		//TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TMTCIFFieldValueRaw
+		public RuleCall getTMTCIFFieldValueRawParserRuleCall_0() { return cTMTCIFFieldValueRawParserRuleCall_0; }
+		
+		//TMTCIFFieldValueFile
+		public RuleCall getTMTCIFFieldValueFileParserRuleCall_1() { return cTMTCIFFieldValueFileParserRuleCall_1; }
+	}
+	public class TMTCIFFieldValueRawElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueRaw");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldValueRawKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cValueKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cValueAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final Alternatives cValueAlternatives_2_0 = (Alternatives)cValueAssignment_2.eContents().get(0);
+		private final RuleCall cValueUINT_STRINGTerminalRuleCall_2_0_0 = (RuleCall)cValueAlternatives_2_0.eContents().get(0);
+		private final RuleCall cValueHEX_STRINGTerminalRuleCall_2_0_1 = (RuleCall)cValueAlternatives_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//TMTCIFFieldValueRaw fieldvalue::TMTCIFFieldValueRaw:
+		//	'<FieldValueRaw' 'value=' value=(UINT_STRING | HEX_STRING) '/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<FieldValueRaw' 'value=' value=(UINT_STRING | HEX_STRING) '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<FieldValueRaw'
+		public Keyword getFieldValueRawKeyword_0() { return cFieldValueRawKeyword_0; }
+		
+		//'value='
+		public Keyword getValueKeyword_1() { return cValueKeyword_1; }
+		
+		//value=(UINT_STRING | HEX_STRING)
+		public Assignment getValueAssignment_2() { return cValueAssignment_2; }
+		
+		//(UINT_STRING | HEX_STRING)
+		public Alternatives getValueAlternatives_2_0() { return cValueAlternatives_2_0; }
+		
+		//UINT_STRING
+		public RuleCall getValueUINT_STRINGTerminalRuleCall_2_0_0() { return cValueUINT_STRINGTerminalRuleCall_2_0_0; }
+		
+		//HEX_STRING
+		public RuleCall getValueHEX_STRINGTerminalRuleCall_2_0_1() { return cValueHEX_STRINGTerminalRuleCall_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
+	}
+	public class TMTCIFFieldValueFileElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueFile");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldValueFileKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFilenameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFilenameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFilenameSTRINGTerminalRuleCall_2_0 = (RuleCall)cFilenameAssignment_2.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//TMTCIFFieldValueFile fieldvalue::TMTCIFFieldValueFile:
+		//	'<FieldValueFile' 'filename=' filename=STRING '/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<FieldValueFile' 'filename=' filename=STRING '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<FieldValueFile'
+		public Keyword getFieldValueFileKeyword_0() { return cFieldValueFileKeyword_0; }
+		
+		//'filename='
+		public Keyword getFilenameKeyword_1() { return cFilenameKeyword_1; }
+		
+		//filename=STRING
+		public Assignment getFilenameAssignment_2() { return cFilenameAssignment_2; }
+		
+		//STRING
+		public RuleCall getFilenameSTRINGTerminalRuleCall_2_0() { return cFilenameSTRINGTerminalRuleCall_2_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_3() { return cSolidusGreaterThanSignKeyword_3; }
+	}
+	public class TMTCIFFieldValueEnumElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueEnum");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldValueEnumKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cEnumRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cEnumRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cEnumRefTMTCIFEnumCrossReference_2_0 = (CrossReference)cEnumRefAssignment_2.eContents().get(0);
+		private final RuleCall cEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cEnumRefTMTCIFEnumCrossReference_2_0.eContents().get(1);
+		private final Keyword cValueRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueRefAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cValueRefTMTCIFEnumValueCrossReference_4_0 = (CrossReference)cValueRefAssignment_4.eContents().get(0);
+		private final RuleCall cValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cValueRefTMTCIFEnumValueCrossReference_4_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//TMTCIFFieldValueEnum fieldvalue::TMTCIFFieldValueEnum:
+		//	'<FieldValueEnum' 'enumRef=' enumRef=[enum_::TMTCIFEnum|STRING] 'valueRef=' valueRef=[enum_::TMTCIFEnumValue|STRING]
+		//	'/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<FieldValueEnum' 'enumRef=' enumRef=[enum_::TMTCIFEnum|STRING] 'valueRef=' valueRef=[enum_::TMTCIFEnumValue|STRING]
+		//'/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<FieldValueEnum'
+		public Keyword getFieldValueEnumKeyword_0() { return cFieldValueEnumKeyword_0; }
+		
+		//'enumRef='
+		public Keyword getEnumRefKeyword_1() { return cEnumRefKeyword_1; }
+		
+		//enumRef=[enum_::TMTCIFEnum|STRING]
+		public Assignment getEnumRefAssignment_2() { return cEnumRefAssignment_2; }
+		
+		//[enum_::TMTCIFEnum|STRING]
+		public CrossReference getEnumRefTMTCIFEnumCrossReference_2_0() { return cEnumRefTMTCIFEnumCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1() { return cEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'valueRef='
+		public Keyword getValueRefKeyword_3() { return cValueRefKeyword_3; }
+		
+		//valueRef=[enum_::TMTCIFEnumValue|STRING]
+		public Assignment getValueRefAssignment_4() { return cValueRefAssignment_4; }
+		
+		//[enum_::TMTCIFEnumValue|STRING]
+		public CrossReference getValueRefTMTCIFEnumValueCrossReference_4_0() { return cValueRefTMTCIFEnumValueCrossReference_4_0; }
+		
+		//STRING
+		public RuleCall getValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1() { return cValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
 	}
 	public class VSVSStepOutputsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputs");
+		private final RuleCall cVSVSStepTelemetrySetParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//VSVSStepOutputs:
+		//	VSVSStepTelemetrySet;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//VSVSStepTelemetrySet
+		public RuleCall getVSVSStepTelemetrySetParserRuleCall() { return cVSVSStepTelemetrySetParserRuleCall; }
+	}
+	public class VSVSStepTelemetrySetElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetrySet");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutputsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTelemetrySetKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cCheckmodeKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cCheckmodeAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0 = (RuleCall)cCheckmodeAssignment_2.eContents().get(0);
+		private final RuleCall cCheckmodeVSVSStepTelemetrySetCheckmodeEnumRuleCall_2_0 = (RuleCall)cCheckmodeAssignment_2.eContents().get(0);
 		private final Keyword cValid_time_interval_valueKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cValid_time_interval_valueAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final RuleCall cValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cValid_time_interval_valueAssignment_4.eContents().get(0);
@@ -3422,36 +4412,36 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cValid_time_interval_unitAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0 = (RuleCall)cValid_time_interval_unitAssignment_6.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
-		private final Assignment cOutputAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cOutputVSVSStepOutputParserRuleCall_8_0 = (RuleCall)cOutputAssignment_8.eContents().get(0);
-		private final Keyword cOutputsKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cTelemetryAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTelemetryVSVSStepTelemetryParserRuleCall_8_0 = (RuleCall)cTelemetryAssignment_8.eContents().get(0);
+		private final Keyword cTelemetrySetKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//VSVSStepOutputs:
-		//	'<Outputs'
-		//	'checkmode=' checkmode=VSVSStepOutputsCheckmode
+		//VSVSStepTelemetrySet:
+		//	'<TelemetrySet'
+		//	'checkmode=' checkmode=VSVSStepTelemetrySetCheckmode
 		//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
 		//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
 		//	'>'
-		//	output+=VSVSStepOutput+
-		//	'</Outputs>';
+		//	telemetry+=VSVSStepTelemetry+
+		//	'</TelemetrySet>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Outputs' 'checkmode=' checkmode=VSVSStepOutputsCheckmode 'valid_time_interval_value='
+		//'<TelemetrySet' 'checkmode=' checkmode=VSVSStepTelemetrySetCheckmode 'valid_time_interval_value='
 		//valid_time_interval_value=UINT_STRING 'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit '>'
-		//output+=VSVSStepOutput+ '</Outputs>'
+		//telemetry+=VSVSStepTelemetry+ '</TelemetrySet>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<Outputs'
-		public Keyword getOutputsKeyword_0() { return cOutputsKeyword_0; }
+		//'<TelemetrySet'
+		public Keyword getTelemetrySetKeyword_0() { return cTelemetrySetKeyword_0; }
 		
 		//'checkmode='
 		public Keyword getCheckmodeKeyword_1() { return cCheckmodeKeyword_1; }
 		
-		//checkmode=VSVSStepOutputsCheckmode
+		//checkmode=VSVSStepTelemetrySetCheckmode
 		public Assignment getCheckmodeAssignment_2() { return cCheckmodeAssignment_2; }
 		
-		//VSVSStepOutputsCheckmode
-		public RuleCall getCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0() { return cCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0; }
+		//VSVSStepTelemetrySetCheckmode
+		public RuleCall getCheckmodeVSVSStepTelemetrySetCheckmodeEnumRuleCall_2_0() { return cCheckmodeVSVSStepTelemetrySetCheckmodeEnumRuleCall_2_0; }
 		
 		//'valid_time_interval_value='
 		public Keyword getValid_time_interval_valueKeyword_3() { return cValid_time_interval_valueKeyword_3; }
@@ -3474,19 +4464,19 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_7() { return cGreaterThanSignKeyword_7; }
 		
-		//output+=VSVSStepOutput+
-		public Assignment getOutputAssignment_8() { return cOutputAssignment_8; }
+		//telemetry+=VSVSStepTelemetry+
+		public Assignment getTelemetryAssignment_8() { return cTelemetryAssignment_8; }
 		
-		//VSVSStepOutput
-		public RuleCall getOutputVSVSStepOutputParserRuleCall_8_0() { return cOutputVSVSStepOutputParserRuleCall_8_0; }
+		//VSVSStepTelemetry
+		public RuleCall getTelemetryVSVSStepTelemetryParserRuleCall_8_0() { return cTelemetryVSVSStepTelemetryParserRuleCall_8_0; }
 		
-		//'</Outputs>'
-		public Keyword getOutputsKeyword_9() { return cOutputsKeyword_9; }
+		//'</TelemetrySet>'
+		public Keyword getTelemetrySetKeyword_9() { return cTelemetrySetKeyword_9; }
 	}
-	public class VSVSStepOutputElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutput");
+	public class VSVSStepTelemetryElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetry");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cOutputKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTelemetryKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
@@ -3494,20 +4484,29 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
 		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
 		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cTmDataAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cTmDataVSVSStepTelemetryDataParserRuleCall_6_0 = (RuleCall)cTmDataAssignment_6.eContents().get(0);
+		private final Assignment cTmHeaderAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cTmHeaderVSVSStepTelemetryHeaderParserRuleCall_7_0 = (RuleCall)cTmHeaderAssignment_7.eContents().get(0);
+		private final Keyword cTelemetryKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//VSVSStepOutput:
-		//	'<Output'
+		//VSVSStepTelemetry:
+		//	'<Telemetry'
 		//	'name=' name=STRING
 		//	'interface=' interface=[VSVSInterface|STRING]
-		//	'/>';
+		//	'>'
+		//	tmData=VSVSStepTelemetryData
+		//	tmHeader=VSVSStepTelemetryHeader?
+		//	'</Telemetry>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Output' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] '/>'
+		//'<Telemetry' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] '>' tmData=VSVSStepTelemetryData
+		//tmHeader=VSVSStepTelemetryHeader? '</Telemetry>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<Output'
-		public Keyword getOutputKeyword_0() { return cOutputKeyword_0; }
+		//'<Telemetry'
+		public Keyword getTelemetryKeyword_0() { return cTelemetryKeyword_0; }
 		
 		//'name='
 		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
@@ -3530,8 +4529,236 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
 		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//tmData=VSVSStepTelemetryData
+		public Assignment getTmDataAssignment_6() { return cTmDataAssignment_6; }
+		
+		//VSVSStepTelemetryData
+		public RuleCall getTmDataVSVSStepTelemetryDataParserRuleCall_6_0() { return cTmDataVSVSStepTelemetryDataParserRuleCall_6_0; }
+		
+		//tmHeader=VSVSStepTelemetryHeader?
+		public Assignment getTmHeaderAssignment_7() { return cTmHeaderAssignment_7; }
+		
+		//VSVSStepTelemetryHeader
+		public RuleCall getTmHeaderVSVSStepTelemetryHeaderParserRuleCall_7_0() { return cTmHeaderVSVSStepTelemetryHeaderParserRuleCall_7_0; }
+		
+		//'</Telemetry>'
+		public Keyword getTelemetryKeyword_8() { return cTelemetryKeyword_8; }
+	}
+	public class VSVSStepTelemetryDataElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryData");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTelemetryDataKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cTemplateKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTmTemplateAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cTmTemplateVTMTemplateCrossReference_2_0 = (CrossReference)cTmTemplateAssignment_2.eContents().get(0);
+		private final RuleCall cTmTemplateVTMTemplateSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cTmTemplateVTMTemplateCrossReference_2_0.eContents().get(1);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final Assignment cFieldsAssignment_3_0_1 = (Assignment)cGroup_3_0.eContents().get(1);
+		private final RuleCall cFieldsVSVSStepTelemetryDataFieldParserRuleCall_3_0_1_0 = (RuleCall)cFieldsAssignment_3_0_1.eContents().get(0);
+		private final Keyword cTelemetryDataKeyword_3_0_2 = (Keyword)cGroup_3_0.eContents().get(2);
+		private final Keyword cSolidusGreaterThanSignKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
+		
+		//VSVSStepTelemetryData:
+		//	'<TelemetryData'
+		//	'template=' tmTemplate=[tmtemplate::VTMTemplate|STRING] ('>' fields+=VSVSStepTelemetryDataField+ '</TelemetryData>' |
+		//	'/>');
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TelemetryData' 'template=' tmTemplate=[tmtemplate::VTMTemplate|STRING] ('>' fields+=VSVSStepTelemetryDataField+
+		//'</TelemetryData>' | '/>')
+		public Group getGroup() { return cGroup; }
+		
+		//'<TelemetryData'
+		public Keyword getTelemetryDataKeyword_0() { return cTelemetryDataKeyword_0; }
+		
+		//'template='
+		public Keyword getTemplateKeyword_1() { return cTemplateKeyword_1; }
+		
+		//tmTemplate=[tmtemplate::VTMTemplate|STRING]
+		public Assignment getTmTemplateAssignment_2() { return cTmTemplateAssignment_2; }
+		
+		//[tmtemplate::VTMTemplate|STRING]
+		public CrossReference getTmTemplateVTMTemplateCrossReference_2_0() { return cTmTemplateVTMTemplateCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getTmTemplateVTMTemplateSTRINGTerminalRuleCall_2_0_1() { return cTmTemplateVTMTemplateSTRINGTerminalRuleCall_2_0_1; }
+		
+		//('>' fields+=VSVSStepTelemetryDataField+ '</TelemetryData>' | '/>')
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
+		
+		//'>' fields+=VSVSStepTelemetryDataField+ '</TelemetryData>'
+		public Group getGroup_3_0() { return cGroup_3_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3_0_0() { return cGreaterThanSignKeyword_3_0_0; }
+		
+		//fields+=VSVSStepTelemetryDataField+
+		public Assignment getFieldsAssignment_3_0_1() { return cFieldsAssignment_3_0_1; }
+		
+		//VSVSStepTelemetryDataField
+		public RuleCall getFieldsVSVSStepTelemetryDataFieldParserRuleCall_3_0_1_0() { return cFieldsVSVSStepTelemetryDataFieldParserRuleCall_3_0_1_0; }
+		
+		//'</TelemetryData>'
+		public Keyword getTelemetryDataKeyword_3_0_2() { return cTelemetryDataKeyword_3_0_2; }
+		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+		public Keyword getSolidusGreaterThanSignKeyword_3_1() { return cSolidusGreaterThanSignKeyword_3_1; }
+	}
+	public class VSVSStepTelemetryDataFieldElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryDataField");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFieldRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFieldRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFieldRefTMTCIFTMFieldCrossReference_2_0 = (CrossReference)cFieldRefAssignment_2.eContents().get(0);
+		private final RuleCall cFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTMFieldCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueTMTCIFFieldValueTMParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepTelemetryDataField:
+		//	'<Field'
+		//	'fieldRef=' fieldRef=[tm::TMTCIFTMField|STRING]
+		//	'>'
+		//	value=TMTCIFFieldValueTM
+		//	'</Field>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<Field' 'fieldRef=' fieldRef=[tm::TMTCIFTMField|STRING] '>' value=TMTCIFFieldValueTM '</Field>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<Field'
+		public Keyword getFieldKeyword_0() { return cFieldKeyword_0; }
+		
+		//'fieldRef='
+		public Keyword getFieldRefKeyword_1() { return cFieldRefKeyword_1; }
+		
+		//fieldRef=[tm::TMTCIFTMField|STRING]
+		public Assignment getFieldRefAssignment_2() { return cFieldRefAssignment_2; }
+		
+		//[tm::TMTCIFTMField|STRING]
+		public CrossReference getFieldRefTMTCIFTMFieldCrossReference_2_0() { return cFieldRefTMTCIFTMFieldCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_2_0_1() { return cFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//value=TMTCIFFieldValueTM
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
+		
+		//TMTCIFFieldValueTM
+		public RuleCall getValueTMTCIFFieldValueTMParserRuleCall_4_0() { return cValueTMTCIFFieldValueTMParserRuleCall_4_0; }
+		
+		//'</Field>'
+		public Keyword getFieldKeyword_5() { return cFieldKeyword_5; }
+	}
+	public class VSVSStepTelemetryHeaderElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryHeader");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTelemetryHeaderKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFieldsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFieldsVSVSStepTelemetryHeaderFieldParserRuleCall_1_0 = (RuleCall)cFieldsAssignment_1.eContents().get(0);
+		private final Keyword cTelemetryHeaderKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//VSVSStepTelemetryHeader:
+		//	'<TelemetryHeader>'
+		//	fields+=VSVSStepTelemetryHeaderField+
+		//	'</TelemetryHeader>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TelemetryHeader>' fields+=VSVSStepTelemetryHeaderField+ '</TelemetryHeader>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<TelemetryHeader>'
+		public Keyword getTelemetryHeaderKeyword_0() { return cTelemetryHeaderKeyword_0; }
+		
+		//fields+=VSVSStepTelemetryHeaderField+
+		public Assignment getFieldsAssignment_1() { return cFieldsAssignment_1; }
+		
+		//VSVSStepTelemetryHeaderField
+		public RuleCall getFieldsVSVSStepTelemetryHeaderFieldParserRuleCall_1_0() { return cFieldsVSVSStepTelemetryHeaderFieldParserRuleCall_1_0; }
+		
+		//'</TelemetryHeader>'
+		public Keyword getTelemetryHeaderKeyword_2() { return cTelemetryHeaderKeyword_2; }
+	}
+	public class VSVSStepTelemetryHeaderFieldElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryHeaderField");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cHeaderFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cFieldRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cFieldRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFieldRefTMTCIFTMHeaderFieldCrossReference_2_0 = (CrossReference)cFieldRefAssignment_2.eContents().get(0);
+		private final RuleCall cFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTMHeaderFieldCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueTMTCIFFieldValueRawParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cHeaderFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//VSVSStepTelemetryHeaderField:
+		//	'<HeaderField'
+		//	'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
+		//	'>'
+		//	value=TMTCIFFieldValueRaw
+		//	'</HeaderField>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<HeaderField' 'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING] '>' value=TMTCIFFieldValueRaw
+		//'</HeaderField>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<HeaderField'
+		public Keyword getHeaderFieldKeyword_0() { return cHeaderFieldKeyword_0; }
+		
+		//'fieldRef='
+		public Keyword getFieldRefKeyword_1() { return cFieldRefKeyword_1; }
+		
+		//fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
+		public Assignment getFieldRefAssignment_2() { return cFieldRefAssignment_2; }
+		
+		//[tmheader::TMTCIFTMHeaderField|STRING]
+		public CrossReference getFieldRefTMTCIFTMHeaderFieldCrossReference_2_0() { return cFieldRefTMTCIFTMHeaderFieldCrossReference_2_0; }
+		
+		//STRING
+		public RuleCall getFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1() { return cFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		
+		//value=TMTCIFFieldValueRaw
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
+		
+		//TMTCIFFieldValueRaw
+		public RuleCall getValueTMTCIFFieldValueRawParserRuleCall_4_0() { return cValueTMTCIFFieldValueRawParserRuleCall_4_0; }
+		
+		//'</HeaderField>'
+		public Keyword getHeaderFieldKeyword_5() { return cHeaderFieldKeyword_5; }
+	}
+	public class TMTCIFFieldValueTMElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueTM");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cTMTCIFFieldValueRawParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cTMTCIFFieldValueFileParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//TMTCIFFieldValueTM fieldvalue::TMTCIFFieldValue:
+		//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		@Override public ParserRule getRule() { return rule; }
+		
+		//TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//TMTCIFFieldValueRaw
+		public RuleCall getTMTCIFFieldValueRawParserRuleCall_0() { return cTMTCIFFieldValueRawParserRuleCall_0; }
+		
+		//TMTCIFFieldValueFile
+		public RuleCall getTMTCIFFieldValueFileParserRuleCall_1() { return cTMTCIFFieldValueFileParserRuleCall_1; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.QualifiedName");
@@ -3783,6 +5010,60 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"false"'
 		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
 	}
+	public class VSVSActionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionType");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cCheckingCheckingKeyword_0_0 = (Keyword)cCheckingEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cInstructionInstructionKeyword_1_0 = (Keyword)cInstructionEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum VSVSActionType:
+		//	checking='"checking"' | instruction='"instruction"';
+		public EnumRule getRule() { return rule; }
+		
+		//checking='"checking"' | instruction='"instruction"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//checking='"checking"'
+		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_0() { return cCheckingEnumLiteralDeclaration_0; }
+		
+		//'"checking"'
+		public Keyword getCheckingCheckingKeyword_0_0() { return cCheckingCheckingKeyword_0_0; }
+		
+		//instruction='"instruction"'
+		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_1() { return cInstructionEnumLiteralDeclaration_1; }
+		
+		//'"instruction"'
+		public Keyword getInstructionInstructionKeyword_1_0() { return cInstructionInstructionKeyword_1_0; }
+	}
+	public class VSVSConfigurationStatusElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cOffEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cOffOffKeyword_0_0 = (Keyword)cOffEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOnEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOnOnKeyword_1_0 = (Keyword)cOnEnumLiteralDeclaration_1.eContents().get(0);
+		
+		//enum VSVSConfigurationStatus:
+		//	off='"off"' | on='"on"';
+		public EnumRule getRule() { return rule; }
+		
+		//off='"off"' | on='"on"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//off='"off"'
+		public EnumLiteralDeclaration getOffEnumLiteralDeclaration_0() { return cOffEnumLiteralDeclaration_0; }
+		
+		//'"off"'
+		public Keyword getOffOffKeyword_0_0() { return cOffOffKeyword_0_0; }
+		
+		//on='"on"'
+		public EnumLiteralDeclaration getOnEnumLiteralDeclaration_1() { return cOnEnumLiteralDeclaration_1; }
+		
+		//'"on"'
+		public Keyword getOnOnKeyword_1_0() { return cOnOnKeyword_1_0; }
+	}
 	public class VSVSTimeUnitElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -3810,8 +5091,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"seconds"'
 		public Keyword getSecondsSecondsKeyword_1_0() { return cSecondsSecondsKeyword_1_0; }
 	}
-	public class VSVSStepOutputsCheckmodeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputsCheckmode");
+	public class VSVSStepTelemetrySetCheckmodeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetrySetCheckmode");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cAllEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cAllAllKeyword_0_0 = (Keyword)cAllEnumLiteralDeclaration_0.eContents().get(0);
@@ -3820,7 +5101,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final EnumLiteralDeclaration cAnyEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
 		private final Keyword cAnyAnyKeyword_2_0 = (Keyword)cAnyEnumLiteralDeclaration_2.eContents().get(0);
 		
-		//enum VSVSStepOutputsCheckmode:
+		//enum VSVSStepTelemetrySetCheckmode:
 		//	all='"all"' | allunsorted='"allunsorted"' | any='"any"';
 		public EnumRule getRule() { return rule; }
 		
@@ -3859,8 +5140,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final DRunAttributesElements eDRunAttributes;
 	private final DRunElements pDRun;
 	private final DHyperlinkElements pDHyperlink;
-	private final DTextElements pDText;
 	private final DTabElements pDTab;
+	private final DTextElements pDText;
 	private final TerminalRule tRUNTEXT;
 	private final DFigureFromFileElements pDFigureFromFile;
 	private final DTableFromFileElements pDTableFromFile;
@@ -3881,8 +5162,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSTestingSpecificationDesignElements pVSVSTestingSpecificationDesign;
 	private final VSVSInterfacesSectionElements pVSVSInterfacesSection;
 	private final VSVSInterfaceElements pVSVSInterface;
+	private final VSVSPacketConfigurationsSectionElements pVSVSPacketConfigurationsSection;
+	private final VSVSPacketConfigurationElements pVSVSPacketConfiguration;
+	private final VSVSActionsSectionElements pVSVSActionsSection;
+	private final VSVSActionElements pVSVSAction;
+	private final VSVSActionTypeElements eVSVSActionType;
 	private final VSVSScenariosSectionElements pVSVSScenariosSection;
 	private final VSVSScenarioSectionElements pVSVSScenarioSection;
+	private final VSVSSelectedConfigurationElements pVSVSSelectedConfiguration;
+	private final VSVSConfigurationStatusElements eVSVSConfigurationStatus;
 	private final VSVSTestCasesElements pVSVSTestCases;
 	private final VSVSTestProceduresElements pVSVSTestProcedures;
 	private final VSVSAnalysisInspectionReviewElements pVSVSAnalysisInspectionReview;
@@ -3897,11 +5185,30 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSProcedureStepsElements pVSVSProcedureSteps;
 	private final VSVSTimeUnitElements eVSVSTimeUnit;
 	private final VSVSProcedureStepElements pVSVSProcedureStep;
+	private final VSVSStepConfigurationsElements pVSVSStepConfigurations;
+	private final VSVSStepConfigurationElements pVSVSStepConfiguration;
 	private final VSVSStepInputsElements pVSVSStepInputs;
-	private final VSVSStepInputElements pVSVSStepInput;
-	private final VSVSStepOutputsCheckmodeElements eVSVSStepOutputsCheckmode;
+	private final VSVSStepActionElements pVSVSStepAction;
+	private final VSVSStepTelecommandSequenceElements pVSVSStepTelecommandSequence;
+	private final VSVSStepTelecommandElements pVSVSStepTelecommand;
+	private final VSVSStepTelecommandDataElements pVSVSStepTelecommandData;
+	private final VSVSStepTelecommandDataFieldElements pVSVSStepTelecommandDataField;
+	private final TMTCIFFieldValueTCElements pTMTCIFFieldValueTC;
+	private final VSVSStepTelecommandHeaderElements pVSVSStepTelecommandHeader;
+	private final VSVSStepTelecommandHeaderFieldElements pVSVSStepTelecommandHeaderField;
+	private final TMTCIFFieldValueHeaderElements pTMTCIFFieldValueHeader;
+	private final TMTCIFFieldValueRawElements pTMTCIFFieldValueRaw;
+	private final TMTCIFFieldValueFileElements pTMTCIFFieldValueFile;
+	private final TMTCIFFieldValueEnumElements pTMTCIFFieldValueEnum;
 	private final VSVSStepOutputsElements pVSVSStepOutputs;
-	private final VSVSStepOutputElements pVSVSStepOutput;
+	private final VSVSStepTelemetrySetElements pVSVSStepTelemetrySet;
+	private final VSVSStepTelemetrySetCheckmodeElements eVSVSStepTelemetrySetCheckmode;
+	private final VSVSStepTelemetryElements pVSVSStepTelemetry;
+	private final VSVSStepTelemetryDataElements pVSVSStepTelemetryData;
+	private final VSVSStepTelemetryDataFieldElements pVSVSStepTelemetryDataField;
+	private final VSVSStepTelemetryHeaderElements pVSVSStepTelemetryHeader;
+	private final VSVSStepTelemetryHeaderFieldElements pVSVSStepTelemetryHeaderField;
+	private final TMTCIFFieldValueTMElements pTMTCIFFieldValueTM;
 	private final QualifiedNameElements pQualifiedName;
 	private final VersionElements pVersion;
 	private final VersionedQualifiedNameElements pVersionedQualifiedName;
@@ -3910,6 +5217,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final INTEGERElements pINTEGER;
 	private final TerminalRule tUINT_STRING;
 	private final TerminalRule tREAL_STRING;
+	private final TerminalRule tHEX_STRING;
 	
 	private final Grammar grammar;
 	
@@ -3933,8 +5241,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.eDRunAttributes = new DRunAttributesElements();
 		this.pDRun = new DRunElements();
 		this.pDHyperlink = new DHyperlinkElements();
-		this.pDText = new DTextElements();
 		this.pDTab = new DTabElements();
+		this.pDText = new DTextElements();
 		this.tRUNTEXT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.RUNTEXT");
 		this.pDFigureFromFile = new DFigureFromFileElements();
 		this.pDTableFromFile = new DTableFromFileElements();
@@ -3955,8 +5263,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSTestingSpecificationDesign = new VSVSTestingSpecificationDesignElements();
 		this.pVSVSInterfacesSection = new VSVSInterfacesSectionElements();
 		this.pVSVSInterface = new VSVSInterfaceElements();
+		this.pVSVSPacketConfigurationsSection = new VSVSPacketConfigurationsSectionElements();
+		this.pVSVSPacketConfiguration = new VSVSPacketConfigurationElements();
+		this.pVSVSActionsSection = new VSVSActionsSectionElements();
+		this.pVSVSAction = new VSVSActionElements();
+		this.eVSVSActionType = new VSVSActionTypeElements();
 		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
 		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
+		this.pVSVSSelectedConfiguration = new VSVSSelectedConfigurationElements();
+		this.eVSVSConfigurationStatus = new VSVSConfigurationStatusElements();
 		this.pVSVSTestCases = new VSVSTestCasesElements();
 		this.pVSVSTestProcedures = new VSVSTestProceduresElements();
 		this.pVSVSAnalysisInspectionReview = new VSVSAnalysisInspectionReviewElements();
@@ -3971,11 +5286,30 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSProcedureSteps = new VSVSProcedureStepsElements();
 		this.eVSVSTimeUnit = new VSVSTimeUnitElements();
 		this.pVSVSProcedureStep = new VSVSProcedureStepElements();
+		this.pVSVSStepConfigurations = new VSVSStepConfigurationsElements();
+		this.pVSVSStepConfiguration = new VSVSStepConfigurationElements();
 		this.pVSVSStepInputs = new VSVSStepInputsElements();
-		this.pVSVSStepInput = new VSVSStepInputElements();
-		this.eVSVSStepOutputsCheckmode = new VSVSStepOutputsCheckmodeElements();
+		this.pVSVSStepAction = new VSVSStepActionElements();
+		this.pVSVSStepTelecommandSequence = new VSVSStepTelecommandSequenceElements();
+		this.pVSVSStepTelecommand = new VSVSStepTelecommandElements();
+		this.pVSVSStepTelecommandData = new VSVSStepTelecommandDataElements();
+		this.pVSVSStepTelecommandDataField = new VSVSStepTelecommandDataFieldElements();
+		this.pTMTCIFFieldValueTC = new TMTCIFFieldValueTCElements();
+		this.pVSVSStepTelecommandHeader = new VSVSStepTelecommandHeaderElements();
+		this.pVSVSStepTelecommandHeaderField = new VSVSStepTelecommandHeaderFieldElements();
+		this.pTMTCIFFieldValueHeader = new TMTCIFFieldValueHeaderElements();
+		this.pTMTCIFFieldValueRaw = new TMTCIFFieldValueRawElements();
+		this.pTMTCIFFieldValueFile = new TMTCIFFieldValueFileElements();
+		this.pTMTCIFFieldValueEnum = new TMTCIFFieldValueEnumElements();
 		this.pVSVSStepOutputs = new VSVSStepOutputsElements();
-		this.pVSVSStepOutput = new VSVSStepOutputElements();
+		this.pVSVSStepTelemetrySet = new VSVSStepTelemetrySetElements();
+		this.eVSVSStepTelemetrySetCheckmode = new VSVSStepTelemetrySetCheckmodeElements();
+		this.pVSVSStepTelemetry = new VSVSStepTelemetryElements();
+		this.pVSVSStepTelemetryData = new VSVSStepTelemetryDataElements();
+		this.pVSVSStepTelemetryDataField = new VSVSStepTelemetryDataFieldElements();
+		this.pVSVSStepTelemetryHeader = new VSVSStepTelemetryHeaderElements();
+		this.pVSVSStepTelemetryHeaderField = new VSVSStepTelemetryHeaderFieldElements();
+		this.pTMTCIFFieldValueTM = new TMTCIFFieldValueTMElements();
 		this.pQualifiedName = new QualifiedNameElements();
 		this.pVersion = new VersionElements();
 		this.pVersionedQualifiedName = new VersionedQualifiedNameElements();
@@ -3984,6 +5318,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pINTEGER = new INTEGERElements();
 		this.tUINT_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
 		this.tREAL_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.REAL_STRING");
+		this.tHEX_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.HEX_STRING");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -4089,8 +5424,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DListItem doctpl::DListItem:
+	//	{doctpl::DListItem}
 	//	'<listItem>'
-	//	paragraph+=DParagraph+ ('<sublist>' sublist=DListContent '</sublist>')?
+	//	paragraph=DParagraph? ('<sublist>' sublist=DListContent '</sublist>')?
 	//	'</listItem>'
 	public DListItemElements getDListItemAccess() {
 		return pDListItem;
@@ -4187,16 +5523,6 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getDHyperlinkAccess().getRule();
 	}
 	
-	//DText doctpl::DText:
-	//	content=RUNTEXT
-	public DTextElements getDTextAccess() {
-		return pDText;
-	}
-	
-	public ParserRule getDTextRule() {
-		return getDTextAccess().getRule();
-	}
-	
 	//DTab doctpl::DTab:
 	//	{doctpl::DTab}
 	//	'<tab/>'
@@ -4206,6 +5532,16 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getDTabRule() {
 		return getDTabAccess().getRule();
+	}
+	
+	//DText doctpl::DText:
+	//	content=RUNTEXT
+	public DTextElements getDTextAccess() {
+		return pDText;
+	}
+	
+	public ParserRule getDTextRule() {
+		return getDTextAccess().getRule();
 	}
 	
 	//terminal RUNTEXT:
@@ -4438,7 +5774,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSTestingSpecificationDesign:
 	//	'<TestingSpecificationDesign>'
 	//	'<General>' general=VSVSFixedSection '</General>'
-	//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
+	//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+	//	configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
+	//	'</Actions>')?
 	//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
 	//	testDesigns+=VSVSTestDesign+
 	//	'</TestingSpecificationDesign>';
@@ -4463,6 +5801,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSInterface:
 	//	'<Interface'
 	//	'name=' name=STRING
+	//	'id=' id=UINT_STRING
+	//	'tcHeader=' tcHeader=[tcheader::TMTCIFTCHeader|STRING]
+	//	'tmHeader=' tmHeader=[tmheader::TMTCIFTMHeader|STRING]
 	//	'>'
 	//	description=DRun
 	//	'</Interface>';
@@ -4472,6 +5813,66 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVSInterfaceRule() {
 		return getVSVSInterfaceAccess().getRule();
+	}
+	
+	//VSVSPacketConfigurationsSection:
+	//	{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+;
+	public VSVSPacketConfigurationsSectionElements getVSVSPacketConfigurationsSectionAccess() {
+		return pVSVSPacketConfigurationsSection;
+	}
+	
+	public ParserRule getVSVSPacketConfigurationsSectionRule() {
+		return getVSVSPacketConfigurationsSectionAccess().getRule();
+	}
+	
+	//VSVSPacketConfiguration:
+	//	'<PacketConfiguration'
+	//	'name=' name=STRING
+	//	'id=' id=UINT_STRING
+	//	'>'
+	//	description=DRun
+	//	'</PacketConfiguration>';
+	public VSVSPacketConfigurationElements getVSVSPacketConfigurationAccess() {
+		return pVSVSPacketConfiguration;
+	}
+	
+	public ParserRule getVSVSPacketConfigurationRule() {
+		return getVSVSPacketConfigurationAccess().getRule();
+	}
+	
+	//VSVSActionsSection:
+	//	{VSVSActionsSection} action+=VSVSAction+;
+	public VSVSActionsSectionElements getVSVSActionsSectionAccess() {
+		return pVSVSActionsSection;
+	}
+	
+	public ParserRule getVSVSActionsSectionRule() {
+		return getVSVSActionsSectionAccess().getRule();
+	}
+	
+	//VSVSAction:
+	//	'<Action'
+	//	'name=' name=STRING
+	//	'type=' type=VSVSActionType
+	//	'>'
+	//	description=DBody
+	//	'</Action>';
+	public VSVSActionElements getVSVSActionAccess() {
+		return pVSVSAction;
+	}
+	
+	public ParserRule getVSVSActionRule() {
+		return getVSVSActionAccess().getRule();
+	}
+	
+	//enum VSVSActionType:
+	//	checking='"checking"' | instruction='"instruction"';
+	public VSVSActionTypeElements getVSVSActionTypeAccess() {
+		return eVSVSActionType;
+	}
+	
+	public EnumRule getVSVSActionTypeRule() {
+		return getVSVSActionTypeAccess().getRule();
 	}
 	
 	//VSVSScenariosSection:
@@ -4487,7 +5888,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSScenarioSection:
 	//	'<Scenario'
 	//	'name=' name=STRING
-	//	'>' ('<Interface' 'ref=' interface+=[VSVSInterface|STRING] '/>')+
+	//	'>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
+	//	selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
 	//	body=DBody
 	//	'</Scenario>';
 	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
@@ -4496,6 +5898,30 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVSScenarioSectionRule() {
 		return getVSVSScenarioSectionAccess().getRule();
+	}
+	
+	//VSVSSelectedConfiguration:
+	//	'<Configuration'
+	//	'ref=' configuration=[VSVSPacketConfiguration|STRING]
+	//	'defaultFilterStatus=' defaultFilterStatus=VSVSConfigurationStatus
+	//	'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus
+	//	'/>';
+	public VSVSSelectedConfigurationElements getVSVSSelectedConfigurationAccess() {
+		return pVSVSSelectedConfiguration;
+	}
+	
+	public ParserRule getVSVSSelectedConfigurationRule() {
+		return getVSVSSelectedConfigurationAccess().getRule();
+	}
+	
+	//enum VSVSConfigurationStatus:
+	//	off='"off"' | on='"on"';
+	public VSVSConfigurationStatusElements getVSVSConfigurationStatusAccess() {
+		return eVSVSConfigurationStatus;
+	}
+	
+	public EnumRule getVSVSConfigurationStatusRule() {
+		return getVSVSConfigurationStatusAccess().getRule();
 	}
 	
 	//VSVSTestCases:
@@ -4686,10 +6112,10 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSProcedureStep:
 	//	'<Step'
-	//	'name=' name=STRING ('prev_step_idref=' prev_step_idref=[VSVSProcedureStep|STRING]
-	//	'output_idref_from_prev_step=' output_idref_from_prev_step=[VSVSStepOutput|STRING])? ('replays='
-	//	replays=UINT_STRING)?
+	//	'name=' name=STRING ('prev_step=' prev_step=[VSVSProcedureStep|STRING]
+	//	'prev_tm_from_prev_step=' prev_tm_from_prev_step=[VSVSStepTelemetry|STRING])? ('replays=' replays=UINT_STRING)?
 	//	'>'
+	//	configurations=VSVSStepConfigurations?
 	//	inputs=VSVSStepInputs
 	//	outputs=VSVSStepOutputs?
 	//	'</Step>';
@@ -4701,11 +6127,34 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSProcedureStepAccess().getRule();
 	}
 	
+	//VSVSStepConfigurations:
+	//	{VSVSStepConfigurations}
+	//	'<Configurations>'
+	//	configuration+=VSVSStepConfiguration+
+	//	'</Configurations>';
+	public VSVSStepConfigurationsElements getVSVSStepConfigurationsAccess() {
+		return pVSVSStepConfigurations;
+	}
+	
+	public ParserRule getVSVSStepConfigurationsRule() {
+		return getVSVSStepConfigurationsAccess().getRule();
+	}
+	
+	//VSVSStepConfiguration:
+	//	'<Configuration'
+	//	'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus=' filterStatus=VSVSConfigurationStatus)?
+	//	('printStatus=' printStatus=VSVSConfigurationStatus)?
+	//	'/>';
+	public VSVSStepConfigurationElements getVSVSStepConfigurationAccess() {
+		return pVSVSStepConfiguration;
+	}
+	
+	public ParserRule getVSVSStepConfigurationRule() {
+		return getVSVSStepConfigurationAccess().getRule();
+	}
+	
 	//VSVSStepInputs:
-	//	{VSVSStepInputs}
-	//	'<Inputs>'
-	//	input+=VSVSStepInput+
-	//	'</Inputs>';
+	//	VSVSStepAction | VSVSStepTelecommandSequence;
 	public VSVSStepInputsElements getVSVSStepInputsAccess() {
 		return pVSVSStepInputs;
 	}
@@ -4714,39 +6163,155 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSStepInputsAccess().getRule();
 	}
 	
-	//VSVSStepInput:
-	//	'<Input'
-	//	'name=' name=STRING
-	//	'interface=' interface=[VSVSInterface|STRING]
-	//	'delay_value=' delay_value=UINT_STRING
-	//	'delay_unit=' delay_unit=VSVSTimeUnit
+	//VSVSStepAction:
+	//	'<Action'
+	//	'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING
+	//	'delay_unit=' delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING
+	//	'span_unit=' span_unit=VSVSTimeUnit)?
 	//	'/>';
-	public VSVSStepInputElements getVSVSStepInputAccess() {
-		return pVSVSStepInput;
+	public VSVSStepActionElements getVSVSStepActionAccess() {
+		return pVSVSStepAction;
 	}
 	
-	public ParserRule getVSVSStepInputRule() {
-		return getVSVSStepInputAccess().getRule();
+	public ParserRule getVSVSStepActionRule() {
+		return getVSVSStepActionAccess().getRule();
 	}
 	
-	//enum VSVSStepOutputsCheckmode:
-	//	all='"all"' | allunsorted='"allunsorted"' | any='"any"';
-	public VSVSStepOutputsCheckmodeElements getVSVSStepOutputsCheckmodeAccess() {
-		return eVSVSStepOutputsCheckmode;
+	//VSVSStepTelecommandSequence:
+	//	{VSVSStepTelecommandSequence}
+	//	'<TelecommandSequence>'
+	//	telecommand+=VSVSStepTelecommand+
+	//	'</TelecommandSequence>';
+	public VSVSStepTelecommandSequenceElements getVSVSStepTelecommandSequenceAccess() {
+		return pVSVSStepTelecommandSequence;
 	}
 	
-	public EnumRule getVSVSStepOutputsCheckmodeRule() {
-		return getVSVSStepOutputsCheckmodeAccess().getRule();
+	public ParserRule getVSVSStepTelecommandSequenceRule() {
+		return getVSVSStepTelecommandSequenceAccess().getRule();
+	}
+	
+	//VSVSStepTelecommand:
+	//	'<Telecommand'
+	//	'name=' name=STRING
+	//	'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
+	//	'delay_unit=' delay_unit=VSVSTimeUnit)?
+	//	'>'
+	//	tcData=VSVSStepTelecommandData
+	//	tcHeader=VSVSStepTelecommandHeader?
+	//	'</Telecommand>';
+	public VSVSStepTelecommandElements getVSVSStepTelecommandAccess() {
+		return pVSVSStepTelecommand;
+	}
+	
+	public ParserRule getVSVSStepTelecommandRule() {
+		return getVSVSStepTelecommandAccess().getRule();
+	}
+	
+	//VSVSStepTelecommandData:
+	//	'<TelecommandData'
+	//	'template=' tcTemplate=[tctemplate::VTCTemplate|STRING] ('>' fields+=VSVSStepTelecommandDataField+
+	//	'</TelecommandData>' | '/>');
+	public VSVSStepTelecommandDataElements getVSVSStepTelecommandDataAccess() {
+		return pVSVSStepTelecommandData;
+	}
+	
+	public ParserRule getVSVSStepTelecommandDataRule() {
+		return getVSVSStepTelecommandDataAccess().getRule();
+	}
+	
+	//VSVSStepTelecommandDataField:
+	//	'<Field'
+	//	'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING]
+	//	'>'
+	//	value=TMTCIFFieldValueTC
+	//	'</Field>';
+	public VSVSStepTelecommandDataFieldElements getVSVSStepTelecommandDataFieldAccess() {
+		return pVSVSStepTelecommandDataField;
+	}
+	
+	public ParserRule getVSVSStepTelecommandDataFieldRule() {
+		return getVSVSStepTelecommandDataFieldAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueTC fieldvalue::TMTCIFFieldValue:
+	//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
+	public TMTCIFFieldValueTCElements getTMTCIFFieldValueTCAccess() {
+		return pTMTCIFFieldValueTC;
+	}
+	
+	public ParserRule getTMTCIFFieldValueTCRule() {
+		return getTMTCIFFieldValueTCAccess().getRule();
+	}
+	
+	//VSVSStepTelecommandHeader:
+	//	'<TelecommandHeader>'
+	//	fields+=VSVSStepTelecommandHeaderField+
+	//	'</TelecommandHeader>';
+	public VSVSStepTelecommandHeaderElements getVSVSStepTelecommandHeaderAccess() {
+		return pVSVSStepTelecommandHeader;
+	}
+	
+	public ParserRule getVSVSStepTelecommandHeaderRule() {
+		return getVSVSStepTelecommandHeaderAccess().getRule();
+	}
+	
+	//VSVSStepTelecommandHeaderField:
+	//	'<HeaderField'
+	//	'fieldRef=' fieldRef=[tcheader::TMTCIFTCHeaderField|STRING]
+	//	'>'
+	//	value=TMTCIFFieldValueHeader
+	//	'</HeaderField>';
+	public VSVSStepTelecommandHeaderFieldElements getVSVSStepTelecommandHeaderFieldAccess() {
+		return pVSVSStepTelecommandHeaderField;
+	}
+	
+	public ParserRule getVSVSStepTelecommandHeaderFieldRule() {
+		return getVSVSStepTelecommandHeaderFieldAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueHeader fieldvalue::TMTCIFFieldValue:
+	//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+	public TMTCIFFieldValueHeaderElements getTMTCIFFieldValueHeaderAccess() {
+		return pTMTCIFFieldValueHeader;
+	}
+	
+	public ParserRule getTMTCIFFieldValueHeaderRule() {
+		return getTMTCIFFieldValueHeaderAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueRaw fieldvalue::TMTCIFFieldValueRaw:
+	//	'<FieldValueRaw' 'value=' value=(UINT_STRING | HEX_STRING) '/>'
+	public TMTCIFFieldValueRawElements getTMTCIFFieldValueRawAccess() {
+		return pTMTCIFFieldValueRaw;
+	}
+	
+	public ParserRule getTMTCIFFieldValueRawRule() {
+		return getTMTCIFFieldValueRawAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueFile fieldvalue::TMTCIFFieldValueFile:
+	//	'<FieldValueFile' 'filename=' filename=STRING '/>'
+	public TMTCIFFieldValueFileElements getTMTCIFFieldValueFileAccess() {
+		return pTMTCIFFieldValueFile;
+	}
+	
+	public ParserRule getTMTCIFFieldValueFileRule() {
+		return getTMTCIFFieldValueFileAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueEnum fieldvalue::TMTCIFFieldValueEnum:
+	//	'<FieldValueEnum' 'enumRef=' enumRef=[enum_::TMTCIFEnum|STRING] 'valueRef=' valueRef=[enum_::TMTCIFEnumValue|STRING]
+	//	'/>'
+	public TMTCIFFieldValueEnumElements getTMTCIFFieldValueEnumAccess() {
+		return pTMTCIFFieldValueEnum;
+	}
+	
+	public ParserRule getTMTCIFFieldValueEnumRule() {
+		return getTMTCIFFieldValueEnumAccess().getRule();
 	}
 	
 	//VSVSStepOutputs:
-	//	'<Outputs'
-	//	'checkmode=' checkmode=VSVSStepOutputsCheckmode
-	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
-	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
-	//	'>'
-	//	output+=VSVSStepOutput+
-	//	'</Outputs>';
+	//	VSVSStepTelemetrySet;
 	public VSVSStepOutputsElements getVSVSStepOutputsAccess() {
 		return pVSVSStepOutputs;
 	}
@@ -4755,17 +6320,108 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSStepOutputsAccess().getRule();
 	}
 	
-	//VSVSStepOutput:
-	//	'<Output'
-	//	'name=' name=STRING
-	//	'interface=' interface=[VSVSInterface|STRING]
-	//	'/>';
-	public VSVSStepOutputElements getVSVSStepOutputAccess() {
-		return pVSVSStepOutput;
+	//VSVSStepTelemetrySet:
+	//	'<TelemetrySet'
+	//	'checkmode=' checkmode=VSVSStepTelemetrySetCheckmode
+	//	'valid_time_interval_value=' valid_time_interval_value=UINT_STRING
+	//	'valid_time_interval_unit=' valid_time_interval_unit=VSVSTimeUnit
+	//	'>'
+	//	telemetry+=VSVSStepTelemetry+
+	//	'</TelemetrySet>';
+	public VSVSStepTelemetrySetElements getVSVSStepTelemetrySetAccess() {
+		return pVSVSStepTelemetrySet;
 	}
 	
-	public ParserRule getVSVSStepOutputRule() {
-		return getVSVSStepOutputAccess().getRule();
+	public ParserRule getVSVSStepTelemetrySetRule() {
+		return getVSVSStepTelemetrySetAccess().getRule();
+	}
+	
+	//enum VSVSStepTelemetrySetCheckmode:
+	//	all='"all"' | allunsorted='"allunsorted"' | any='"any"';
+	public VSVSStepTelemetrySetCheckmodeElements getVSVSStepTelemetrySetCheckmodeAccess() {
+		return eVSVSStepTelemetrySetCheckmode;
+	}
+	
+	public EnumRule getVSVSStepTelemetrySetCheckmodeRule() {
+		return getVSVSStepTelemetrySetCheckmodeAccess().getRule();
+	}
+	
+	//VSVSStepTelemetry:
+	//	'<Telemetry'
+	//	'name=' name=STRING
+	//	'interface=' interface=[VSVSInterface|STRING]
+	//	'>'
+	//	tmData=VSVSStepTelemetryData
+	//	tmHeader=VSVSStepTelemetryHeader?
+	//	'</Telemetry>';
+	public VSVSStepTelemetryElements getVSVSStepTelemetryAccess() {
+		return pVSVSStepTelemetry;
+	}
+	
+	public ParserRule getVSVSStepTelemetryRule() {
+		return getVSVSStepTelemetryAccess().getRule();
+	}
+	
+	//VSVSStepTelemetryData:
+	//	'<TelemetryData'
+	//	'template=' tmTemplate=[tmtemplate::VTMTemplate|STRING] ('>' fields+=VSVSStepTelemetryDataField+ '</TelemetryData>' |
+	//	'/>');
+	public VSVSStepTelemetryDataElements getVSVSStepTelemetryDataAccess() {
+		return pVSVSStepTelemetryData;
+	}
+	
+	public ParserRule getVSVSStepTelemetryDataRule() {
+		return getVSVSStepTelemetryDataAccess().getRule();
+	}
+	
+	//VSVSStepTelemetryDataField:
+	//	'<Field'
+	//	'fieldRef=' fieldRef=[tm::TMTCIFTMField|STRING]
+	//	'>'
+	//	value=TMTCIFFieldValueTM
+	//	'</Field>';
+	public VSVSStepTelemetryDataFieldElements getVSVSStepTelemetryDataFieldAccess() {
+		return pVSVSStepTelemetryDataField;
+	}
+	
+	public ParserRule getVSVSStepTelemetryDataFieldRule() {
+		return getVSVSStepTelemetryDataFieldAccess().getRule();
+	}
+	
+	//VSVSStepTelemetryHeader:
+	//	'<TelemetryHeader>'
+	//	fields+=VSVSStepTelemetryHeaderField+
+	//	'</TelemetryHeader>';
+	public VSVSStepTelemetryHeaderElements getVSVSStepTelemetryHeaderAccess() {
+		return pVSVSStepTelemetryHeader;
+	}
+	
+	public ParserRule getVSVSStepTelemetryHeaderRule() {
+		return getVSVSStepTelemetryHeaderAccess().getRule();
+	}
+	
+	//VSVSStepTelemetryHeaderField:
+	//	'<HeaderField'
+	//	'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
+	//	'>'
+	//	value=TMTCIFFieldValueRaw
+	//	'</HeaderField>';
+	public VSVSStepTelemetryHeaderFieldElements getVSVSStepTelemetryHeaderFieldAccess() {
+		return pVSVSStepTelemetryHeaderField;
+	}
+	
+	public ParserRule getVSVSStepTelemetryHeaderFieldRule() {
+		return getVSVSStepTelemetryHeaderFieldAccess().getRule();
+	}
+	
+	//TMTCIFFieldValueTM fieldvalue::TMTCIFFieldValue:
+	//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+	public TMTCIFFieldValueTMElements getTMTCIFFieldValueTMAccess() {
+		return pTMTCIFFieldValueTM;
+	}
+	
+	public ParserRule getTMTCIFFieldValueTMRule() {
+		return getTMTCIFFieldValueTMAccess().getRule();
 	}
 	
 	//QualifiedName:
@@ -4834,6 +6490,12 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'"' '0'..'9'+ ('.' '0'..'9'+)? '"';
 	public TerminalRule getREAL_STRINGRule() {
 		return tREAL_STRING;
+	}
+	
+	//terminal HEX_STRING:
+	//	'"0x' ('0'..'9' | 'a'..'f' | 'A'..'F')+ '"';
+	public TerminalRule getHEX_STRINGRule() {
+		return tHEX_STRING;
 	}
 	
 	//terminal ID:

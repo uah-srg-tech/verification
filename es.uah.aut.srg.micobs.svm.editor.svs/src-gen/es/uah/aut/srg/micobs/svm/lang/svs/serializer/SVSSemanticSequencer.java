@@ -30,6 +30,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.lang.svs.services.SVSGrammarAccess;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbbreviation;
+import es.uah.aut.srg.micobs.svm.svs.VSVSAction;
+import es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
@@ -40,16 +42,30 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
+import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
+import es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepInput;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepAction;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfigurations;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandDataField;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeaderField;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandSequence;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryDataField;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTerm;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
@@ -62,6 +78,10 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedures;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueEnum;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueFile;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueRaw;
+import es.uah.aut.srg.tmtcif.fieldvalue.fieldvaluePackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -136,10 +156,28 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				sequence_DText(context, (DText) semanticObject); 
 				return; 
 			}
+		else if (epackage == fieldvaluePackage.eINSTANCE)
+			switch (semanticObject.eClass().getClassifierID()) {
+			case fieldvaluePackage.TMTCIF_FIELD_VALUE_ENUM:
+				sequence_TMTCIFFieldValueEnum(context, (TMTCIFFieldValueEnum) semanticObject); 
+				return; 
+			case fieldvaluePackage.TMTCIF_FIELD_VALUE_FILE:
+				sequence_TMTCIFFieldValueFile(context, (TMTCIFFieldValueFile) semanticObject); 
+				return; 
+			case fieldvaluePackage.TMTCIF_FIELD_VALUE_RAW:
+				sequence_TMTCIFFieldValueRaw(context, (TMTCIFFieldValueRaw) semanticObject); 
+				return; 
+			}
 		else if (epackage == svsPackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
 			case svsPackage.VSVS_ABBREVIATION:
 				sequence_VSVSAbbreviation(context, (VSVSAbbreviation) semanticObject); 
+				return; 
+			case svsPackage.VSVS_ACTION:
+				sequence_VSVSAction(context, (VSVSAction) semanticObject); 
+				return; 
+			case svsPackage.VSVS_ACTIONS_SECTION:
+				sequence_VSVSActionsSection(context, (VSVSActionsSection) semanticObject); 
 				return; 
 			case svsPackage.VSVS_ADDITIONAL_INFORMATION:
 				sequence_VSVSAdditionalInformation(context, (VSVSAdditionalInformation) semanticObject); 
@@ -171,6 +209,12 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case svsPackage.VSVS_INTRODUCTION:
 				sequence_VSVSIntroduction(context, (VSVSIntroduction) semanticObject); 
 				return; 
+			case svsPackage.VSVS_PACKET_CONFIGURATION:
+				sequence_VSVSPacketConfiguration(context, (VSVSPacketConfiguration) semanticObject); 
+				return; 
+			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION:
+				sequence_VSVSPacketConfigurationsSection(context, (VSVSPacketConfigurationsSection) semanticObject); 
+				return; 
 			case svsPackage.VSVS_PROCEDURE_STEP:
 				sequence_VSVSProcedureStep(context, (VSVSProcedureStep) semanticObject); 
 				return; 
@@ -186,20 +230,56 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case svsPackage.VSVS_SCENARIOS_SECTION:
 				sequence_VSVSScenariosSection(context, (VSVSScenariosSection) semanticObject); 
 				return; 
+			case svsPackage.VSVS_SELECTED_CONFIGURATION:
+				sequence_VSVSSelectedConfiguration(context, (VSVSSelectedConfiguration) semanticObject); 
+				return; 
 			case svsPackage.VSVS_SOFTWARE_OVERVIEW:
 				sequence_VSVSSoftwareOverview(context, (VSVSSoftwareOverview) semanticObject); 
 				return; 
-			case svsPackage.VSVS_STEP_INPUT:
-				sequence_VSVSStepInput(context, (VSVSStepInput) semanticObject); 
+			case svsPackage.VSVS_STEP_ACTION:
+				sequence_VSVSStepAction(context, (VSVSStepAction) semanticObject); 
 				return; 
-			case svsPackage.VSVS_STEP_INPUTS:
-				sequence_VSVSStepInputs(context, (VSVSStepInputs) semanticObject); 
+			case svsPackage.VSVS_STEP_CONFIGURATION:
+				sequence_VSVSStepConfiguration(context, (VSVSStepConfiguration) semanticObject); 
 				return; 
-			case svsPackage.VSVS_STEP_OUTPUT:
-				sequence_VSVSStepOutput(context, (VSVSStepOutput) semanticObject); 
+			case svsPackage.VSVS_STEP_CONFIGURATIONS:
+				sequence_VSVSStepConfigurations(context, (VSVSStepConfigurations) semanticObject); 
 				return; 
-			case svsPackage.VSVS_STEP_OUTPUTS:
-				sequence_VSVSStepOutputs(context, (VSVSStepOutputs) semanticObject); 
+			case svsPackage.VSVS_STEP_TELECOMMAND:
+				sequence_VSVSStepTelecommand(context, (VSVSStepTelecommand) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA:
+				sequence_VSVSStepTelecommandData(context, (VSVSStepTelecommandData) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELECOMMAND_DATA_FIELD:
+				sequence_VSVSStepTelecommandDataField(context, (VSVSStepTelecommandDataField) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER:
+				sequence_VSVSStepTelecommandHeader(context, (VSVSStepTelecommandHeader) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELECOMMAND_HEADER_FIELD:
+				sequence_VSVSStepTelecommandHeaderField(context, (VSVSStepTelecommandHeaderField) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELECOMMAND_SEQUENCE:
+				sequence_VSVSStepTelecommandSequence(context, (VSVSStepTelecommandSequence) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY:
+				sequence_VSVSStepTelemetry(context, (VSVSStepTelemetry) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA:
+				sequence_VSVSStepTelemetryData(context, (VSVSStepTelemetryData) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY_DATA_FIELD:
+				sequence_VSVSStepTelemetryDataField(context, (VSVSStepTelemetryDataField) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER:
+				sequence_VSVSStepTelemetryHeader(context, (VSVSStepTelemetryHeader) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD:
+				sequence_VSVSStepTelemetryHeaderField(context, (VSVSStepTelemetryHeaderField) semanticObject); 
+				return; 
+			case svsPackage.VSVS_STEP_TELEMETRY_SET:
+				sequence_VSVSStepTelemetrySet(context, (VSVSStepTelemetrySet) semanticObject); 
 				return; 
 			case svsPackage.VSVS_TASK_IDENTIFICATION:
 				sequence_VSVSTaskIdentification(context, (VSVSTaskIdentification) semanticObject); 
@@ -364,7 +444,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DListItem returns DListItem
 	 *
 	 * Constraint:
-	 *     (paragraph+=DParagraph+ sublist=DListContent?)
+	 *     (paragraph=DParagraph? sublist=DListContent?)
 	 */
 	protected void sequence_DListItem(ISerializationContext context, DListItem semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -482,6 +562,64 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     TMTCIFFieldValueTC returns TMTCIFFieldValueEnum
+	 *     TMTCIFFieldValueEnum returns TMTCIFFieldValueEnum
+	 *
+	 * Constraint:
+	 *     (enumRef=[TMTCIFEnum|STRING] valueRef=[TMTCIFEnumValue|STRING])
+	 */
+	protected void sequence_TMTCIFFieldValueEnum(ISerializationContext context, TMTCIFFieldValueEnum semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__ENUM_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__ENUM_REF));
+			if (transientValues.isValueTransient(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__VALUE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__VALUE_REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1(), semanticObject.getEnumRef());
+		feeder.accept(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1(), semanticObject.getValueRef());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TMTCIFFieldValueTC returns TMTCIFFieldValueFile
+	 *     TMTCIFFieldValueHeader returns TMTCIFFieldValueFile
+	 *     TMTCIFFieldValueFile returns TMTCIFFieldValueFile
+	 *     TMTCIFFieldValueTM returns TMTCIFFieldValueFile
+	 *
+	 * Constraint:
+	 *     filename=STRING
+	 */
+	protected void sequence_TMTCIFFieldValueFile(ISerializationContext context, TMTCIFFieldValueFile semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_FILE__FILENAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_FILE__FILENAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameSTRINGTerminalRuleCall_2_0(), semanticObject.getFilename());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TMTCIFFieldValueTC returns TMTCIFFieldValueRaw
+	 *     TMTCIFFieldValueHeader returns TMTCIFFieldValueRaw
+	 *     TMTCIFFieldValueRaw returns TMTCIFFieldValueRaw
+	 *     TMTCIFFieldValueTM returns TMTCIFFieldValueRaw
+	 *
+	 * Constraint:
+	 *     (value=UINT_STRING | value=HEX_STRING)
+	 */
+	protected void sequence_TMTCIFFieldValueRaw(ISerializationContext context, TMTCIFFieldValueRaw semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VSVSAbbreviation returns VSVSAbbreviation
 	 *
 	 * Constraint:
@@ -498,6 +636,42 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getVSVSAbbreviationAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
 		feeder.accept(grammarAccess.getVSVSAbbreviationAccess().getDescriptionDRunParserRuleCall_4_0(), semanticObject.getDescription());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSAction returns VSVSAction
+	 *
+	 * Constraint:
+	 *     (name=STRING type=VSVSActionType description=DBody)
+	 */
+	protected void sequence_VSVSAction(ISerializationContext context, VSVSAction semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_ACTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_ACTION__NAME));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_ACTION__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_ACTION__TYPE));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_ACTION__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_ACTION__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSActionAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVSVSActionAccess().getTypeVSVSActionTypeEnumRuleCall_4_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getVSVSActionAccess().getDescriptionDBodyParserRuleCall_6_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSActionsSection returns VSVSActionsSection
+	 *
+	 * Constraint:
+	 *     action+=VSVSAction+
+	 */
+	protected void sequence_VSVSActionsSection(ISerializationContext context, VSVSActionsSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -618,18 +792,27 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSInterface returns VSVSInterface
 	 *
 	 * Constraint:
-	 *     (name=STRING description=DRun)
+	 *     (name=STRING id=UINT_STRING tcHeader=[TMTCIFTCHeader|STRING] tmHeader=[TMTCIFTMHeader|STRING] description=DRun)
 	 */
 	protected void sequence_VSVSInterface(ISerializationContext context, VSVSInterface semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_INTERFACE__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_INTERFACE__NAME));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_INTERFACE__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_INTERFACE__ID));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_INTERFACE__TC_HEADER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_INTERFACE__TC_HEADER));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_INTERFACE__TM_HEADER) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_INTERFACE__TM_HEADER));
 			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_INTERFACE__DESCRIPTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_INTERFACE__DESCRIPTION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getDescriptionDRunParserRuleCall_4_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getIdUINT_STRINGTerminalRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getTcHeaderTMTCIFTCHeaderSTRINGTerminalRuleCall_6_0_1(), semanticObject.getTcHeader());
+		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getTmHeaderTMTCIFTMHeaderSTRINGTerminalRuleCall_8_0_1(), semanticObject.getTmHeader());
+		feeder.accept(grammarAccess.getVSVSInterfaceAccess().getDescriptionDRunParserRuleCall_10_0(), semanticObject.getDescription());
 		feeder.finish();
 	}
 	
@@ -660,13 +843,50 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSPacketConfiguration returns VSVSPacketConfiguration
+	 *
+	 * Constraint:
+	 *     (name=STRING id=UINT_STRING description=DRun)
+	 */
+	protected void sequence_VSVSPacketConfiguration(ISerializationContext context, VSVSPacketConfiguration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__NAME));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__ID) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__ID));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_PACKET_CONFIGURATION__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSPacketConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVSVSPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0(), semanticObject.getId());
+		feeder.accept(grammarAccess.getVSVSPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSPacketConfigurationsSection returns VSVSPacketConfigurationsSection
+	 *
+	 * Constraint:
+	 *     packetConfigurations+=VSVSPacketConfiguration+
+	 */
+	protected void sequence_VSVSPacketConfigurationsSection(ISerializationContext context, VSVSPacketConfigurationsSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VSVSProcedureStep returns VSVSProcedureStep
 	 *
 	 * Constraint:
 	 *     (
 	 *         name=STRING 
-	 *         (prev_step_idref=[VSVSProcedureStep|STRING] output_idref_from_prev_step=[VSVSStepOutput|STRING])? 
+	 *         (prev_step=[VSVSProcedureStep|STRING] prev_tm_from_prev_step=[VSVSStepTelemetry|STRING])? 
 	 *         replays=UINT_STRING? 
+	 *         configurations=VSVSStepConfigurations? 
 	 *         inputs=VSVSStepInputs 
 	 *         outputs=VSVSStepOutputs?
 	 *     )
@@ -705,7 +925,13 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSScenarioSection returns VSVSScenarioSection
 	 *
 	 * Constraint:
-	 *     (name=STRING interface+=[VSVSInterface|STRING]+ body=DBody)
+	 *     (
+	 *         name=STRING 
+	 *         supportedInterface+=[VSVSInterface|STRING]+ 
+	 *         selectedConfiguration+=VSVSSelectedConfiguration* 
+	 *         supportedAction+=[VSVSAction|STRING]* 
+	 *         body=DBody
+	 *     )
 	 */
 	protected void sequence_VSVSScenarioSection(ISerializationContext context, VSVSScenarioSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -726,6 +952,30 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
+	 *     VSVSSelectedConfiguration returns VSVSSelectedConfiguration
+	 *
+	 * Constraint:
+	 *     (configuration=[VSVSPacketConfiguration|STRING] defaultFilterStatus=VSVSConfigurationStatus defaultPrintStatus=VSVSConfigurationStatus)
+	 */
+	protected void sequence_VSVSSelectedConfiguration(ISerializationContext context, VSVSSelectedConfiguration semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__CONFIGURATION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__CONFIGURATION));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSSelectedConfigurationAccess().getConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1(), semanticObject.getConfiguration());
+		feeder.accept(grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0(), semanticObject.getDefaultFilterStatus());
+		feeder.accept(grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0(), semanticObject.getDefaultPrintStatus());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VSVSSoftwareOverview returns VSVSSoftwareOverview
 	 *
 	 * Constraint:
@@ -738,72 +988,230 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Contexts:
-	 *     VSVSStepInput returns VSVSStepInput
+	 *     VSVSStepInputs returns VSVSStepAction
+	 *     VSVSStepAction returns VSVSStepAction
 	 *
 	 * Constraint:
-	 *     (name=STRING interface=[VSVSInterface|STRING] delay_value=UINT_STRING delay_unit=VSVSTimeUnit)
+	 *     (selectedAction=[VSVSAction|STRING] (delay_value=UINT_STRING delay_unit=VSVSTimeUnit)? (span_value=UINT_STRING span_unit=VSVSTimeUnit)?)
 	 */
-	protected void sequence_VSVSStepInput(ISerializationContext context, VSVSStepInput semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__NAME));
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__INTERFACE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__INTERFACE));
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__DELAY_VALUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__DELAY_VALUE));
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__DELAY_UNIT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_INPUT__DELAY_UNIT));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepInputAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVSVSStepInputAccess().getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1(), semanticObject.getInterface());
-		feeder.accept(grammarAccess.getVSVSStepInputAccess().getDelay_valueUINT_STRINGTerminalRuleCall_6_0(), semanticObject.getDelay_value());
-		feeder.accept(grammarAccess.getVSVSStepInputAccess().getDelay_unitVSVSTimeUnitEnumRuleCall_8_0(), semanticObject.getDelay_unit());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VSVSStepInputs returns VSVSStepInputs
-	 *
-	 * Constraint:
-	 *     input+=VSVSStepInput+
-	 */
-	protected void sequence_VSVSStepInputs(ISerializationContext context, VSVSStepInputs semanticObject) {
+	protected void sequence_VSVSStepAction(ISerializationContext context, VSVSStepAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     VSVSStepOutput returns VSVSStepOutput
+	 *     VSVSStepConfiguration returns VSVSStepConfiguration
 	 *
 	 * Constraint:
-	 *     (name=STRING interface=[VSVSInterface|STRING])
+	 *     (configuration=[VSVSPacketConfiguration|STRING] filterStatus=VSVSConfigurationStatus? printStatus=VSVSConfigurationStatus?)
 	 */
-	protected void sequence_VSVSStepOutput(ISerializationContext context, VSVSStepOutput semanticObject) {
+	protected void sequence_VSVSStepConfiguration(ISerializationContext context, VSVSStepConfiguration semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepConfigurations returns VSVSStepConfigurations
+	 *
+	 * Constraint:
+	 *     configuration+=VSVSStepConfiguration+
+	 */
+	protected void sequence_VSVSStepConfigurations(ISerializationContext context, VSVSStepConfigurations semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelecommandDataField returns VSVSStepTelecommandDataField
+	 *
+	 * Constraint:
+	 *     (fieldRef=[TMTCIFTCField|STRING] value=TMTCIFFieldValueTC)
+	 */
+	protected void sequence_VSVSStepTelecommandDataField(ISerializationContext context, VSVSStepTelecommandDataField semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_OUTPUT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_OUTPUT__NAME));
-			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_OUTPUT__INTERFACE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_OUTPUT__INTERFACE));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_DATA_FIELD__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_DATA_FIELD__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_DATA_FIELD__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_DATA_FIELD__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSVSStepOutputAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVSVSStepOutputAccess().getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1(), semanticObject.getInterface());
+		feeder.accept(grammarAccess.getVSVSStepTelecommandDataFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVSVSStepTelecommandDataFieldAccess().getValueTMTCIFFieldValueTCParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     VSVSStepOutputs returns VSVSStepOutputs
+	 *     VSVSStepTelecommandData returns VSVSStepTelecommandData
 	 *
 	 * Constraint:
-	 *     (checkmode=VSVSStepOutputsCheckmode valid_time_interval_value=UINT_STRING valid_time_interval_unit=VSVSTimeUnit output+=VSVSStepOutput+)
+	 *     (tcTemplate=[VTCTemplate|STRING] fields+=VSVSStepTelecommandDataField*)
 	 */
-	protected void sequence_VSVSStepOutputs(ISerializationContext context, VSVSStepOutputs semanticObject) {
+	protected void sequence_VSVSStepTelecommandData(ISerializationContext context, VSVSStepTelecommandData semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelecommandHeaderField returns VSVSStepTelecommandHeaderField
+	 *
+	 * Constraint:
+	 *     (fieldRef=[TMTCIFTCHeaderField|STRING] value=TMTCIFFieldValueHeader)
+	 */
+	protected void sequence_VSVSStepTelecommandHeaderField(ISerializationContext context, VSVSStepTelecommandHeaderField semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_HEADER_FIELD__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_HEADER_FIELD__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_HEADER_FIELD__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELECOMMAND_HEADER_FIELD__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getFieldRefTMTCIFTCHeaderFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelecommandHeader returns VSVSStepTelecommandHeader
+	 *
+	 * Constraint:
+	 *     fields+=VSVSStepTelecommandHeaderField+
+	 */
+	protected void sequence_VSVSStepTelecommandHeader(ISerializationContext context, VSVSStepTelecommandHeader semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepInputs returns VSVSStepTelecommandSequence
+	 *     VSVSStepTelecommandSequence returns VSVSStepTelecommandSequence
+	 *
+	 * Constraint:
+	 *     telecommand+=VSVSStepTelecommand+
+	 */
+	protected void sequence_VSVSStepTelecommandSequence(ISerializationContext context, VSVSStepTelecommandSequence semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelecommand returns VSVSStepTelecommand
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=STRING 
+	 *         interface=[VSVSInterface|STRING] 
+	 *         (delay_value=UINT_STRING delay_unit=VSVSTimeUnit)? 
+	 *         tcData=VSVSStepTelecommandData 
+	 *         tcHeader=VSVSStepTelecommandHeader?
+	 *     )
+	 */
+	protected void sequence_VSVSStepTelecommand(ISerializationContext context, VSVSStepTelecommand semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelemetryDataField returns VSVSStepTelemetryDataField
+	 *
+	 * Constraint:
+	 *     (fieldRef=[TMTCIFTMField|STRING] value=TMTCIFFieldValueTM)
+	 */
+	protected void sequence_VSVSStepTelemetryDataField(ISerializationContext context, VSVSStepTelemetryDataField semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_DATA_FIELD__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_DATA_FIELD__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_DATA_FIELD__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_DATA_FIELD__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSStepTelemetryDataFieldAccess().getFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVSVSStepTelemetryDataFieldAccess().getValueTMTCIFFieldValueTMParserRuleCall_4_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelemetryData returns VSVSStepTelemetryData
+	 *
+	 * Constraint:
+	 *     (tmTemplate=[VTMTemplate|STRING] fields+=VSVSStepTelemetryDataField*)
+	 */
+	protected void sequence_VSVSStepTelemetryData(ISerializationContext context, VSVSStepTelemetryData semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelemetryHeaderField returns VSVSStepTelemetryHeaderField
+	 *
+	 * Constraint:
+	 *     (fieldRef=[TMTCIFTMHeaderField|STRING] value=TMTCIFFieldValueRaw)
+	 */
+	protected void sequence_VSVSStepTelemetryHeaderField(ISerializationContext context, VSVSStepTelemetryHeaderField semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_HEADER_FIELD__FIELD_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_HEADER_FIELD__FIELD_REF));
+			if (transientValues.isValueTransient(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_HEADER_FIELD__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, svsPackage.Literals.VSVS_STEP_TELEMETRY_HEADER_FIELD__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0(), semanticObject.getValue());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelemetryHeader returns VSVSStepTelemetryHeader
+	 *
+	 * Constraint:
+	 *     fields+=VSVSStepTelemetryHeaderField+
+	 */
+	protected void sequence_VSVSStepTelemetryHeader(ISerializationContext context, VSVSStepTelemetryHeader semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepOutputs returns VSVSStepTelemetrySet
+	 *     VSVSStepTelemetrySet returns VSVSStepTelemetrySet
+	 *
+	 * Constraint:
+	 *     (
+	 *         checkmode=VSVSStepTelemetrySetCheckmode 
+	 *         valid_time_interval_value=UINT_STRING 
+	 *         valid_time_interval_unit=VSVSTimeUnit 
+	 *         telemetry+=VSVSStepTelemetry+
+	 *     )
+	 */
+	protected void sequence_VSVSStepTelemetrySet(ISerializationContext context, VSVSStepTelemetrySet semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSStepTelemetry returns VSVSStepTelemetry
+	 *
+	 * Constraint:
+	 *     (name=STRING interface=[VSVSInterface|STRING] tmData=VSVSStepTelemetryData tmHeader=VSVSStepTelemetryHeader?)
+	 */
+	protected void sequence_VSVSStepTelemetry(ISerializationContext context, VSVSStepTelemetry semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1003,7 +1411,14 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign
 	 *
 	 * Constraint:
-	 *     (general=VSVSFixedSection interfaces=VSVSInterfacesSection scenarios=VSVSScenariosSection testDesigns+=VSVSTestDesign+)
+	 *     (
+	 *         general=VSVSFixedSection 
+	 *         interfaces=VSVSInterfacesSection 
+	 *         configurations=VSVSPacketConfigurationsSection? 
+	 *         actions=VSVSActionsSection? 
+	 *         scenarios=VSVSScenariosSection 
+	 *         testDesigns+=VSVSTestDesign+
+	 *     )
 	 */
 	protected void sequence_VSVSTestingSpecificationDesign(ISerializationContext context, VSVSTestingSpecificationDesign semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

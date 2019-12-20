@@ -11,14 +11,13 @@
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfigurations;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepInputs;
-import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutput;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepOutputs;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -34,9 +33,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getPrev_step_idref <em>Prev step idref</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getOutput_idref_from_prev_step <em>Output idref from prev step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getPrev_step <em>Prev step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getPrev_tm_from_prev_step <em>Prev tm from prev step</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getReplays <em>Replays</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getConfigurations <em>Configurations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getInputs <em>Inputs</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl#getOutputs <em>Outputs</em>}</li>
  * </ul>
@@ -65,24 +65,24 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPrev_step_idref() <em>Prev step idref</em>}' reference.
+	 * The cached value of the '{@link #getPrev_step() <em>Prev step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPrev_step_idref()
+	 * @see #getPrev_step()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSProcedureStep prev_step_idref;
+	protected VSVSProcedureStep prev_step;
 
 	/**
-	 * The cached value of the '{@link #getOutput_idref_from_prev_step() <em>Output idref from prev step</em>}' reference.
+	 * The cached value of the '{@link #getPrev_tm_from_prev_step() <em>Prev tm from prev step</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getOutput_idref_from_prev_step()
+	 * @see #getPrev_tm_from_prev_step()
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSStepOutput output_idref_from_prev_step;
+	protected VSVSStepTelemetry prev_tm_from_prev_step;
 
 	/**
 	 * The default value of the '{@link #getReplays() <em>Replays</em>}' attribute.
@@ -103,6 +103,16 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * @ordered
 	 */
 	protected String replays = REPLAYS_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getConfigurations() <em>Configurations</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getConfigurations()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSStepConfigurations configurations;
 
 	/**
 	 * The cached value of the '{@link #getInputs() <em>Inputs</em>}' containment reference.
@@ -169,8 +179,16 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepInputs getInputs() {
-		return inputs;
+	public VSVSProcedureStep getPrev_step() {
+		if (prev_step != null && prev_step.eIsProxy()) {
+			InternalEObject oldPrev_step = (InternalEObject)prev_step;
+			prev_step = (VSVSProcedureStep)eResolveProxy(oldPrev_step);
+			if (prev_step != oldPrev_step) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP, oldPrev_step, prev_step));
+			}
+		}
+		return prev_step;
 	}
 
 	/**
@@ -178,14 +196,8 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetInputs(VSVSStepInputs newInputs, NotificationChain msgs) {
-		VSVSStepInputs oldInputs = inputs;
-		inputs = newInputs;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__INPUTS, oldInputs, newInputs);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public VSVSProcedureStep basicGetPrev_step() {
+		return prev_step;
 	}
 
 	/**
@@ -193,18 +205,49 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInputs(VSVSStepInputs newInputs) {
-		if (newInputs != inputs) {
-			NotificationChain msgs = null;
-			if (inputs != null)
-				msgs = ((InternalEObject)inputs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__INPUTS, null, msgs);
-			if (newInputs != null)
-				msgs = ((InternalEObject)newInputs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__INPUTS, null, msgs);
-			msgs = basicSetInputs(newInputs, msgs);
-			if (msgs != null) msgs.dispatch();
+	public void setPrev_step(VSVSProcedureStep newPrev_step) {
+		VSVSProcedureStep oldPrev_step = prev_step;
+		prev_step = newPrev_step;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP, oldPrev_step, prev_step));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetry getPrev_tm_from_prev_step() {
+		if (prev_tm_from_prev_step != null && prev_tm_from_prev_step.eIsProxy()) {
+			InternalEObject oldPrev_tm_from_prev_step = (InternalEObject)prev_tm_from_prev_step;
+			prev_tm_from_prev_step = (VSVSStepTelemetry)eResolveProxy(oldPrev_tm_from_prev_step);
+			if (prev_tm_from_prev_step != oldPrev_tm_from_prev_step) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP, oldPrev_tm_from_prev_step, prev_tm_from_prev_step));
+			}
 		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__INPUTS, newInputs, newInputs));
+		return prev_tm_from_prev_step;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSStepTelemetry basicGetPrev_tm_from_prev_step() {
+		return prev_tm_from_prev_step;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPrev_tm_from_prev_step(VSVSStepTelemetry newPrev_tm_from_prev_step) {
+		VSVSStepTelemetry oldPrev_tm_from_prev_step = prev_tm_from_prev_step;
+		prev_tm_from_prev_step = newPrev_tm_from_prev_step;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP, oldPrev_tm_from_prev_step, prev_tm_from_prev_step));
 	}
 
 	/**
@@ -255,16 +298,23 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSProcedureStep getPrev_step_idref() {
-		if (prev_step_idref != null && prev_step_idref.eIsProxy()) {
-			InternalEObject oldPrev_step_idref = (InternalEObject)prev_step_idref;
-			prev_step_idref = (VSVSProcedureStep)eResolveProxy(oldPrev_step_idref);
-			if (prev_step_idref != oldPrev_step_idref) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF, oldPrev_step_idref, prev_step_idref));
-			}
+	public VSVSStepConfigurations getConfigurations() {
+		return configurations;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetConfigurations(VSVSStepConfigurations newConfigurations, NotificationChain msgs) {
+		VSVSStepConfigurations oldConfigurations = configurations;
+		configurations = newConfigurations;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS, oldConfigurations, newConfigurations);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
-		return prev_step_idref;
+		return msgs;
 	}
 
 	/**
@@ -272,37 +322,18 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSProcedureStep basicGetPrev_step_idref() {
-		return prev_step_idref;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrev_step_idref(VSVSProcedureStep newPrev_step_idref) {
-		VSVSProcedureStep oldPrev_step_idref = prev_step_idref;
-		prev_step_idref = newPrev_step_idref;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF, oldPrev_step_idref, prev_step_idref));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSStepOutput getOutput_idref_from_prev_step() {
-		if (output_idref_from_prev_step != null && output_idref_from_prev_step.eIsProxy()) {
-			InternalEObject oldOutput_idref_from_prev_step = (InternalEObject)output_idref_from_prev_step;
-			output_idref_from_prev_step = (VSVSStepOutput)eResolveProxy(oldOutput_idref_from_prev_step);
-			if (output_idref_from_prev_step != oldOutput_idref_from_prev_step) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP, oldOutput_idref_from_prev_step, output_idref_from_prev_step));
-			}
+	public void setConfigurations(VSVSStepConfigurations newConfigurations) {
+		if (newConfigurations != configurations) {
+			NotificationChain msgs = null;
+			if (configurations != null)
+				msgs = ((InternalEObject)configurations).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS, null, msgs);
+			if (newConfigurations != null)
+				msgs = ((InternalEObject)newConfigurations).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS, null, msgs);
+			msgs = basicSetConfigurations(newConfigurations, msgs);
+			if (msgs != null) msgs.dispatch();
 		}
-		return output_idref_from_prev_step;
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS, newConfigurations, newConfigurations));
 	}
 
 	/**
@@ -310,8 +341,8 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSStepOutput basicGetOutput_idref_from_prev_step() {
-		return output_idref_from_prev_step;
+	public VSVSStepInputs getInputs() {
+		return inputs;
 	}
 
 	/**
@@ -319,11 +350,33 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setOutput_idref_from_prev_step(VSVSStepOutput newOutput_idref_from_prev_step) {
-		VSVSStepOutput oldOutput_idref_from_prev_step = output_idref_from_prev_step;
-		output_idref_from_prev_step = newOutput_idref_from_prev_step;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP, oldOutput_idref_from_prev_step, output_idref_from_prev_step));
+	public NotificationChain basicSetInputs(VSVSStepInputs newInputs, NotificationChain msgs) {
+		VSVSStepInputs oldInputs = inputs;
+		inputs = newInputs;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__INPUTS, oldInputs, newInputs);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInputs(VSVSStepInputs newInputs) {
+		if (newInputs != inputs) {
+			NotificationChain msgs = null;
+			if (inputs != null)
+				msgs = ((InternalEObject)inputs).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__INPUTS, null, msgs);
+			if (newInputs != null)
+				msgs = ((InternalEObject)newInputs).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_PROCEDURE_STEP__INPUTS, null, msgs);
+			msgs = basicSetInputs(newInputs, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEP__INPUTS, newInputs, newInputs));
 	}
 
 	/**
@@ -355,6 +408,8 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS:
+				return basicSetConfigurations(null, msgs);
 			case svsPackage.VSVS_PROCEDURE_STEP__INPUTS:
 				return basicSetInputs(null, msgs);
 			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUTS:
@@ -373,14 +428,16 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case svsPackage.VSVS_PROCEDURE_STEP__NAME:
 				return getName();
-			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF:
-				if (resolve) return getPrev_step_idref();
-				return basicGetPrev_step_idref();
-			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP:
-				if (resolve) return getOutput_idref_from_prev_step();
-				return basicGetOutput_idref_from_prev_step();
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP:
+				if (resolve) return getPrev_step();
+				return basicGetPrev_step();
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP:
+				if (resolve) return getPrev_tm_from_prev_step();
+				return basicGetPrev_tm_from_prev_step();
 			case svsPackage.VSVS_PROCEDURE_STEP__REPLAYS:
 				return getReplays();
+			case svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS:
+				return getConfigurations();
 			case svsPackage.VSVS_PROCEDURE_STEP__INPUTS:
 				return getInputs();
 			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUTS:
@@ -400,14 +457,17 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 			case svsPackage.VSVS_PROCEDURE_STEP__NAME:
 				setName((String)newValue);
 				return;
-			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF:
-				setPrev_step_idref((VSVSProcedureStep)newValue);
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP:
+				setPrev_step((VSVSProcedureStep)newValue);
 				return;
-			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP:
-				setOutput_idref_from_prev_step((VSVSStepOutput)newValue);
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP:
+				setPrev_tm_from_prev_step((VSVSStepTelemetry)newValue);
 				return;
 			case svsPackage.VSVS_PROCEDURE_STEP__REPLAYS:
 				setReplays((String)newValue);
+				return;
+			case svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS:
+				setConfigurations((VSVSStepConfigurations)newValue);
 				return;
 			case svsPackage.VSVS_PROCEDURE_STEP__INPUTS:
 				setInputs((VSVSStepInputs)newValue);
@@ -430,14 +490,17 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 			case svsPackage.VSVS_PROCEDURE_STEP__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF:
-				setPrev_step_idref((VSVSProcedureStep)null);
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP:
+				setPrev_step((VSVSProcedureStep)null);
 				return;
-			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP:
-				setOutput_idref_from_prev_step((VSVSStepOutput)null);
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP:
+				setPrev_tm_from_prev_step((VSVSStepTelemetry)null);
 				return;
 			case svsPackage.VSVS_PROCEDURE_STEP__REPLAYS:
 				setReplays(REPLAYS_EDEFAULT);
+				return;
+			case svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS:
+				setConfigurations((VSVSStepConfigurations)null);
 				return;
 			case svsPackage.VSVS_PROCEDURE_STEP__INPUTS:
 				setInputs((VSVSStepInputs)null);
@@ -459,12 +522,14 @@ public class VSVSProcedureStepImpl extends MinimalEObjectImpl.Container implemen
 		switch (featureID) {
 			case svsPackage.VSVS_PROCEDURE_STEP__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP_IDREF:
-				return prev_step_idref != null;
-			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUT_IDREF_FROM_PREV_STEP:
-				return output_idref_from_prev_step != null;
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_STEP:
+				return prev_step != null;
+			case svsPackage.VSVS_PROCEDURE_STEP__PREV_TM_FROM_PREV_STEP:
+				return prev_tm_from_prev_step != null;
 			case svsPackage.VSVS_PROCEDURE_STEP__REPLAYS:
 				return REPLAYS_EDEFAULT == null ? replays != null : !REPLAYS_EDEFAULT.equals(replays);
+			case svsPackage.VSVS_PROCEDURE_STEP__CONFIGURATIONS:
+				return configurations != null;
 			case svsPackage.VSVS_PROCEDURE_STEP__INPUTS:
 				return inputs != null;
 			case svsPackage.VSVS_PROCEDURE_STEP__OUTPUTS:

@@ -8,6 +8,7 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.emf.ecore;visibility:=reexport,
+ es.uah.aut.srg.tmtcif;visibility:=reexport,
  es.uah.aut.srg.micobs.doctpl;visibility:=reexport,
  es.uah.aut.srg.micobs;visibility:=reexport,
  es.uah.aut.srg.micobs.svm;visibility:=reexport
@@ -27,4 +28,10 @@ Export-Package: es.uah.aut.srg.micobs.svm.srs,
  es.uah.aut.srg.micobs.svm.tdm.util,
  es.uah.aut.srg.micobs.svm.vdm,
  es.uah.aut.srg.micobs.svm.vdm.impl,
- es.uah.aut.srg.micobs.svm.vdm.util
+ es.uah.aut.srg.micobs.svm.vdm.util,
+ es.uah.aut.srg.micobs.svm.tctemplate,
+ es.uah.aut.srg.micobs.svm.tctemplate.impl,
+ es.uah.aut.srg.micobs.svm.tctemplate.util,
+ es.uah.aut.srg.micobs.svm.tmtemplate,
+ es.uah.aut.srg.micobs.svm.tmtemplate.impl,
+ es.uah.aut.srg.micobs.svm.tmtemplate.util

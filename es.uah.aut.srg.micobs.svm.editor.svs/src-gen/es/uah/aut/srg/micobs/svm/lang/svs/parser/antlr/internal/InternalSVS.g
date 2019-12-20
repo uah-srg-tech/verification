@@ -772,40 +772,50 @@ ruleDListItem returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<listItem>'
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDListItemAccess().getDListItemAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<listItem>'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getDListItemAccess().getListItemKeyword_0());
+			newLeafNode(otherlv_1, grammarAccess.getDListItemAccess().getListItemKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDListItemAccess().getParagraphDParagraphParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getDListItemAccess().getParagraphDParagraphParserRuleCall_2_0());
 				}
-				lv_paragraph_1_0=ruleDParagraph
+				lv_paragraph_2_0=ruleDParagraph
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDListItemRule());
 					}
-					add(
+					set(
 						$current,
 						"paragraph",
-						lv_paragraph_1_0,
+						lv_paragraph_2_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DParagraph");
 					afterParserOrEnumRuleCall();
 				}
 			)
-		)+
+		)?
 		(
-			otherlv_2='<sublist>'
+			otherlv_3='<sublist>'
 			{
-				newLeafNode(otherlv_2, grammarAccess.getDListItemAccess().getSublistKeyword_2_0());
+				newLeafNode(otherlv_3, grammarAccess.getDListItemAccess().getSublistKeyword_3_0());
 			}
 			(
 				(
 					{
-						newCompositeNode(grammarAccess.getDListItemAccess().getSublistDListContentParserRuleCall_2_1_0());
+						newCompositeNode(grammarAccess.getDListItemAccess().getSublistDListContentParserRuleCall_3_1_0());
 					}
-					lv_sublist_3_0=ruleDListContent
+					lv_sublist_4_0=ruleDListContent
 					{
 						if ($current==null) {
 							$current = createModelElementForParent(grammarAccess.getDListItemRule());
@@ -813,20 +823,20 @@ ruleDListItem returns [EObject current=null]
 						set(
 							$current,
 							"sublist",
-							lv_sublist_3_0,
+							lv_sublist_4_0,
 							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DListContent");
 						afterParserOrEnumRuleCall();
 					}
 				)
 			)
-			otherlv_4='</sublist>'
+			otherlv_5='</sublist>'
 			{
-				newLeafNode(otherlv_4, grammarAccess.getDListItemAccess().getSublistKeyword_2_2());
+				newLeafNode(otherlv_5, grammarAccess.getDListItemAccess().getSublistKeyword_3_2());
 			}
 		)?
-		otherlv_5='</listItem>'
+		otherlv_6='</listItem>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getDListItemAccess().getListItemKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getDListItemAccess().getListItemKeyword_4());
 		}
 	)
 ;
@@ -1447,6 +1457,39 @@ ruleDHyperlink returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleDTab
+entryRuleDTab returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTabRule()); }
+	iv_ruleDTab=ruleDTab
+	{ $current=$iv_ruleDTab.current; }
+	EOF;
+
+// Rule DTab
+ruleDTab returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getDTabAccess().getDTabAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<tab/>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDTabAccess().getTabKeyword_1());
+		}
+	)
+;
+
 // Entry rule entryRuleDText
 entryRuleDText returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getDTextRule()); }
@@ -1479,39 +1522,6 @@ ruleDText returns [EObject current=null]
 					"es.uah.aut.srg.micobs.svm.lang.svs.SVS.RUNTEXT");
 			}
 		)
-	)
-;
-
-// Entry rule entryRuleDTab
-entryRuleDTab returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getDTabRule()); }
-	iv_ruleDTab=ruleDTab
-	{ $current=$iv_ruleDTab.current; }
-	EOF;
-
-// Rule DTab
-ruleDTab returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getDTabAccess().getDTabAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='<tab/>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getDTabAccess().getTabKeyword_1());
-		}
 	)
 ;
 
@@ -3450,16 +3460,74 @@ ruleVSVSTestingSpecificationDesign returns [EObject current=null]
 		{
 			newLeafNode(otherlv_6, grammarAccess.getVSVSTestingSpecificationDesignAccess().getInterfacesKeyword_6());
 		}
-		otherlv_7='<Scenarios>'
+		(
+			otherlv_7='<PacketConfigurations>'
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSTestingSpecificationDesignAccess().getPacketConfigurationsKeyword_7_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0());
+					}
+					lv_configurations_8_0=ruleVSVSPacketConfigurationsSection
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSTestingSpecificationDesignRule());
+						}
+						set(
+							$current,
+							"configurations",
+							lv_configurations_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfigurationsSection");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_9='</PacketConfigurations>'
+			{
+				newLeafNode(otherlv_9, grammarAccess.getVSVSTestingSpecificationDesignAccess().getPacketConfigurationsKeyword_7_2());
+			}
+		)?
+		(
+			otherlv_10='<Actions>'
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSTestingSpecificationDesignAccess().getActionsKeyword_8_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getActionsVSVSActionsSectionParserRuleCall_8_1_0());
+					}
+					lv_actions_11_0=ruleVSVSActionsSection
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSTestingSpecificationDesignRule());
+						}
+						set(
+							$current,
+							"actions",
+							lv_actions_11_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionsSection");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_12='</Actions>'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getVSVSTestingSpecificationDesignAccess().getActionsKeyword_8_2());
+			}
+		)?
+		otherlv_13='<Scenarios>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosKeyword_7());
+			newLeafNode(otherlv_13, grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosKeyword_9());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosVSVSScenariosSectionParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosVSVSScenariosSectionParserRuleCall_10_0());
 				}
-				lv_scenarios_8_0=ruleVSVSScenariosSection
+				lv_scenarios_14_0=ruleVSVSScenariosSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestingSpecificationDesignRule());
@@ -3467,22 +3535,22 @@ ruleVSVSTestingSpecificationDesign returns [EObject current=null]
 					set(
 						$current,
 						"scenarios",
-						lv_scenarios_8_0,
+						lv_scenarios_14_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_9='</Scenarios>'
+		otherlv_15='</Scenarios>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosKeyword_9());
+			newLeafNode(otherlv_15, grammarAccess.getVSVSTestingSpecificationDesignAccess().getScenariosKeyword_11());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getTestDesignsVSVSTestDesignParserRuleCall_10_0());
+					newCompositeNode(grammarAccess.getVSVSTestingSpecificationDesignAccess().getTestDesignsVSVSTestDesignParserRuleCall_12_0());
 				}
-				lv_testDesigns_10_0=ruleVSVSTestDesign
+				lv_testDesigns_16_0=ruleVSVSTestDesign
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSTestingSpecificationDesignRule());
@@ -3490,15 +3558,15 @@ ruleVSVSTestingSpecificationDesign returns [EObject current=null]
 					add(
 						$current,
 						"testDesigns",
-						lv_testDesigns_10_0,
+						lv_testDesigns_16_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTestDesign");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_11='</TestingSpecificationDesign>'
+		otherlv_17='</TestingSpecificationDesign>'
 		{
-			newLeafNode(otherlv_11, grammarAccess.getVSVSTestingSpecificationDesignAccess().getTestingSpecificationDesignKeyword_11());
+			newLeafNode(otherlv_17, grammarAccess.getVSVSTestingSpecificationDesignAccess().getTestingSpecificationDesignKeyword_13());
 		}
 	)
 ;
@@ -3593,16 +3661,78 @@ ruleVSVSInterface returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='>'
+		otherlv_3='id='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSInterfaceAccess().getGreaterThanSignKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSInterfaceAccess().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSInterfaceAccess().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSInterfaceRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='tcHeader='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSInterfaceAccess().getTcHeaderKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSInterfaceAccess().getDescriptionDRunParserRuleCall_4_0());
+					/* */
 				}
-				lv_description_4_0=ruleDRun
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSInterfaceRule());
+					}
+				}
+				otherlv_6=RULE_STRING
+				{
+					newLeafNode(otherlv_6, grammarAccess.getVSVSInterfaceAccess().getTcHeaderTMTCIFTCHeaderCrossReference_6_0());
+				}
+			)
+		)
+		otherlv_7='tmHeader='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSInterfaceAccess().getTmHeaderKeyword_7());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSInterfaceRule());
+					}
+				}
+				otherlv_8=RULE_STRING
+				{
+					newLeafNode(otherlv_8, grammarAccess.getVSVSInterfaceAccess().getTmHeaderTMTCIFTMHeaderCrossReference_8_0());
+				}
+			)
+		)
+		otherlv_9='>'
+		{
+			newLeafNode(otherlv_9, grammarAccess.getVSVSInterfaceAccess().getGreaterThanSignKeyword_9());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSInterfaceAccess().getDescriptionDRunParserRuleCall_10_0());
+				}
+				lv_description_10_0=ruleDRun
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSInterfaceRule());
@@ -3610,15 +3740,300 @@ ruleVSVSInterface returns [EObject current=null]
 					set(
 						$current,
 						"description",
-						lv_description_4_0,
+						lv_description_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRun");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='</Interface>'
+		otherlv_11='</Interface>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVSInterfaceAccess().getInterfaceKeyword_5());
+			newLeafNode(otherlv_11, grammarAccess.getVSVSInterfaceAccess().getInterfaceKeyword_11());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSPacketConfigurationsSection
+entryRuleVSVSPacketConfigurationsSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSPacketConfigurationsSectionRule()); }
+	iv_ruleVSVSPacketConfigurationsSection=ruleVSVSPacketConfigurationsSection
+	{ $current=$iv_ruleVSVSPacketConfigurationsSection.current; }
+	EOF;
+
+// Rule VSVSPacketConfigurationsSection
+ruleVSVSPacketConfigurationsSection returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSVSPacketConfigurationsSectionAccess().getVSVSPacketConfigurationsSectionAction_0(),
+					$current);
+			}
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSPacketConfigurationsSectionAccess().getPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0());
+				}
+				lv_packetConfigurations_1_0=ruleVSVSPacketConfiguration
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSPacketConfigurationsSectionRule());
+					}
+					add(
+						$current,
+						"packetConfigurations",
+						lv_packetConfigurations_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfiguration");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleVSVSPacketConfiguration
+entryRuleVSVSPacketConfiguration returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSPacketConfigurationRule()); }
+	iv_ruleVSVSPacketConfiguration=ruleVSVSPacketConfiguration
+	{ $current=$iv_ruleVSVSPacketConfiguration.current; }
+	EOF;
+
+// Rule VSVSPacketConfiguration
+ruleVSVSPacketConfiguration returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<PacketConfiguration'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSPacketConfigurationAccess().getPacketConfigurationKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSPacketConfigurationAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSPacketConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSPacketConfigurationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='id='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSPacketConfigurationAccess().getIdKeyword_3());
+		}
+		(
+			(
+				lv_id_4_0=RULE_UINT_STRING
+				{
+					newLeafNode(lv_id_4_0, grammarAccess.getVSVSPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSPacketConfigurationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"id",
+						lv_id_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+				}
+			)
+		)
+		otherlv_5='>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSPacketConfigurationAccess().getGreaterThanSignKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0());
+				}
+				lv_description_6_0=ruleDRun
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSPacketConfigurationRule());
+					}
+					set(
+						$current,
+						"description",
+						lv_description_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DRun");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='</PacketConfiguration>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSPacketConfigurationAccess().getPacketConfigurationKeyword_7());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSActionsSection
+entryRuleVSVSActionsSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSActionsSectionRule()); }
+	iv_ruleVSVSActionsSection=ruleVSVSActionsSection
+	{ $current=$iv_ruleVSVSActionsSection.current; }
+	EOF;
+
+// Rule VSVSActionsSection
+ruleVSVSActionsSection returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSVSActionsSectionAccess().getVSVSActionsSectionAction_0(),
+					$current);
+			}
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSActionsSectionAccess().getActionVSVSActionParserRuleCall_1_0());
+				}
+				lv_action_1_0=ruleVSVSAction
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSActionsSectionRule());
+					}
+					add(
+						$current,
+						"action",
+						lv_action_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSAction");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleVSVSAction
+entryRuleVSVSAction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSActionRule()); }
+	iv_ruleVSVSAction=ruleVSVSAction
+	{ $current=$iv_ruleVSVSAction.current; }
+	EOF;
+
+// Rule VSVSAction
+ruleVSVSAction returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Action'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSActionAccess().getActionKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSActionAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSActionAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSActionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='type='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSActionAccess().getTypeKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSActionAccess().getTypeVSVSActionTypeEnumRuleCall_4_0());
+				}
+				lv_type_4_0=ruleVSVSActionType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSActionRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSActionAccess().getGreaterThanSignKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSActionAccess().getDescriptionDBodyParserRuleCall_6_0());
+				}
+				lv_description_6_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSActionRule());
+					}
+					set(
+						$current,
+						"description",
+						lv_description_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='</Action>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSActionAccess().getActionKeyword_7());
 		}
 	)
 ;
@@ -3738,7 +4153,7 @@ ruleVSVSScenarioSection returns [EObject current=null]
 					}
 					otherlv_6=RULE_STRING
 					{
-						newLeafNode(otherlv_6, grammarAccess.getVSVSScenarioSectionAccess().getInterfaceVSVSInterfaceCrossReference_4_2_0());
+						newLeafNode(otherlv_6, grammarAccess.getVSVSScenarioSectionAccess().getSupportedInterfaceVSVSInterfaceCrossReference_4_2_0());
 					}
 				)
 			)
@@ -3750,9 +4165,58 @@ ruleVSVSScenarioSection returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSScenarioSectionAccess().getBodyDBodyParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVSVSScenarioSectionAccess().getSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0());
 				}
-				lv_body_8_0=ruleDBody
+				lv_selectedConfiguration_8_0=ruleVSVSSelectedConfiguration
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSScenarioSectionRule());
+					}
+					add(
+						$current,
+						"selectedConfiguration",
+						lv_selectedConfiguration_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSSelectedConfiguration");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			otherlv_9='<Action'
+			{
+				newLeafNode(otherlv_9, grammarAccess.getVSVSScenarioSectionAccess().getActionKeyword_6_0());
+			}
+			otherlv_10='ref='
+			{
+				newLeafNode(otherlv_10, grammarAccess.getVSVSScenarioSectionAccess().getRefKeyword_6_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSScenarioSectionRule());
+						}
+					}
+					otherlv_11=RULE_STRING
+					{
+						newLeafNode(otherlv_11, grammarAccess.getVSVSScenarioSectionAccess().getSupportedActionVSVSActionCrossReference_6_2_0());
+					}
+				)
+			)
+			otherlv_12='/>'
+			{
+				newLeafNode(otherlv_12, grammarAccess.getVSVSScenarioSectionAccess().getSolidusGreaterThanSignKeyword_6_3());
+			}
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSScenarioSectionAccess().getBodyDBodyParserRuleCall_7_0());
+				}
+				lv_body_13_0=ruleDBody
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSScenarioSectionRule());
@@ -3760,15 +4224,108 @@ ruleVSVSScenarioSection returns [EObject current=null]
 					set(
 						$current,
 						"body",
-						lv_body_8_0,
+						lv_body_13_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.DBody");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_9='</Scenario>'
+		otherlv_14='</Scenario>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVSScenarioSectionAccess().getScenarioKeyword_6());
+			newLeafNode(otherlv_14, grammarAccess.getVSVSScenarioSectionAccess().getScenarioKeyword_8());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSSelectedConfiguration
+entryRuleVSVSSelectedConfiguration returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSSelectedConfigurationRule()); }
+	iv_ruleVSVSSelectedConfiguration=ruleVSVSSelectedConfiguration
+	{ $current=$iv_ruleVSVSSelectedConfiguration.current; }
+	EOF;
+
+// Rule VSVSSelectedConfiguration
+ruleVSVSSelectedConfiguration returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Configuration'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSSelectedConfigurationAccess().getConfigurationKeyword_0());
+		}
+		otherlv_1='ref='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSSelectedConfigurationAccess().getRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSSelectedConfigurationRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSSelectedConfigurationAccess().getConfigurationVSVSPacketConfigurationCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='defaultFilterStatus='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultFilterStatusKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0());
+				}
+				lv_defaultFilterStatus_4_0=ruleVSVSConfigurationStatus
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSSelectedConfigurationRule());
+					}
+					set(
+						$current,
+						"defaultFilterStatus",
+						lv_defaultFilterStatus_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='defaultPrintStatus='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultPrintStatusKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSSelectedConfigurationAccess().getDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0());
+				}
+				lv_defaultPrintStatus_6_0=ruleVSVSConfigurationStatus
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSSelectedConfigurationRule());
+					}
+					set(
+						$current,
+						"defaultPrintStatus",
+						lv_defaultPrintStatus_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_7());
 		}
 	)
 ;
@@ -5070,9 +5627,9 @@ ruleVSVSProcedureStep returns [EObject current=null]
 			)
 		)
 		(
-			otherlv_3='prev_step_idref='
+			otherlv_3='prev_step='
 			{
-				newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefKeyword_3_0());
+				newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepAccess().getPrev_stepKeyword_3_0());
 			}
 			(
 				(
@@ -5086,13 +5643,13 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					}
 					otherlv_4=RULE_STRING
 					{
-						newLeafNode(otherlv_4, grammarAccess.getVSVSProcedureStepAccess().getPrev_step_idrefVSVSProcedureStepCrossReference_3_1_0());
+						newLeafNode(otherlv_4, grammarAccess.getVSVSProcedureStepAccess().getPrev_stepVSVSProcedureStepCrossReference_3_1_0());
 					}
 				)
 			)
-			otherlv_5='output_idref_from_prev_step='
+			otherlv_5='prev_tm_from_prev_step='
 			{
-				newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepKeyword_3_2());
+				newLeafNode(otherlv_5, grammarAccess.getVSVSProcedureStepAccess().getPrev_tm_from_prev_stepKeyword_3_2());
 			}
 			(
 				(
@@ -5106,7 +5663,7 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					}
 					otherlv_6=RULE_STRING
 					{
-						newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepAccess().getOutput_idref_from_prev_stepVSVSStepOutputCrossReference_3_3_0());
+						newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepAccess().getPrev_tm_from_prev_stepVSVSStepTelemetryCrossReference_3_3_0());
 					}
 				)
 			)
@@ -5142,9 +5699,28 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getInputsVSVSStepInputsParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getConfigurationsVSVSStepConfigurationsParserRuleCall_6_0());
 				}
-				lv_inputs_10_0=ruleVSVSStepInputs
+				lv_configurations_10_0=ruleVSVSStepConfigurations
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
+					}
+					set(
+						$current,
+						"configurations",
+						lv_configurations_10_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConfigurations");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getInputsVSVSStepInputsParserRuleCall_7_0());
+				}
+				lv_inputs_11_0=ruleVSVSStepInputs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
@@ -5152,7 +5728,7 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					set(
 						$current,
 						"inputs",
-						lv_inputs_10_0,
+						lv_inputs_11_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInputs");
 					afterParserOrEnumRuleCall();
 				}
@@ -5161,9 +5737,9 @@ ruleVSVSProcedureStep returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getOutputsVSVSStepOutputsParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getVSVSProcedureStepAccess().getOutputsVSVSStepOutputsParserRuleCall_8_0());
 				}
-				lv_outputs_11_0=ruleVSVSStepOutputs
+				lv_outputs_12_0=ruleVSVSStepOutputs
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepRule());
@@ -5171,15 +5747,168 @@ ruleVSVSProcedureStep returns [EObject current=null]
 					set(
 						$current,
 						"outputs",
-						lv_outputs_11_0,
+						lv_outputs_12_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputs");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)?
-		otherlv_12='</Step>'
+		otherlv_13='</Step>'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_8());
+			newLeafNode(otherlv_13, grammarAccess.getVSVSProcedureStepAccess().getStepKeyword_9());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepConfigurations
+entryRuleVSVSStepConfigurations returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepConfigurationsRule()); }
+	iv_ruleVSVSStepConfigurations=ruleVSVSStepConfigurations
+	{ $current=$iv_ruleVSVSStepConfigurations.current; }
+	EOF;
+
+// Rule VSVSStepConfigurations
+ruleVSVSStepConfigurations returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSVSStepConfigurationsAccess().getVSVSStepConfigurationsAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<Configurations>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConfigurationsAccess().getConfigurationsKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepConfigurationsAccess().getConfigurationVSVSStepConfigurationParserRuleCall_2_0());
+				}
+				lv_configuration_2_0=ruleVSVSStepConfiguration
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepConfigurationsRule());
+					}
+					add(
+						$current,
+						"configuration",
+						lv_configuration_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepConfiguration");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_3='</Configurations>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepConfigurationsAccess().getConfigurationsKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepConfiguration
+entryRuleVSVSStepConfiguration returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepConfigurationRule()); }
+	iv_ruleVSVSStepConfiguration=ruleVSVSStepConfiguration
+	{ $current=$iv_ruleVSVSStepConfiguration.current; }
+	EOF;
+
+// Rule VSVSStepConfiguration
+ruleVSVSStepConfiguration returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Configuration'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepConfigurationAccess().getConfigurationKeyword_0());
+		}
+		otherlv_1='ref='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepConfigurationAccess().getRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepConfigurationRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVSVSPacketConfigurationCrossReference_2_0());
+				}
+			)
+		)
+		(
+			otherlv_3='filterStatus='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepConfigurationAccess().getFilterStatusKeyword_3_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepConfigurationAccess().getFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0());
+					}
+					lv_filterStatus_4_0=ruleVSVSConfigurationStatus
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepConfigurationRule());
+						}
+						set(
+							$current,
+							"filterStatus",
+							lv_filterStatus_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_5='printStatus='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVSVSStepConfigurationAccess().getPrintStatusKeyword_4_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepConfigurationAccess().getPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0());
+					}
+					lv_printStatus_6_0=ruleVSVSConfigurationStatus
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepConfigurationRule());
+						}
+						set(
+							$current,
+							"printStatus",
+							lv_printStatus_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepConfigurationAccess().getSolidusGreaterThanSignKeyword_5());
 		}
 	)
 ;
@@ -5200,55 +5929,41 @@ ruleVSVSStepInputs returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getVSVSStepInputsAccess().getVSVSStepInputsAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='<Inputs>'
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_1());
+			/* */
 		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getInputVSVSStepInputParserRuleCall_2_0());
-				}
-				lv_input_2_0=ruleVSVSStepInput
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepInputsRule());
-					}
-					add(
-						$current,
-						"input",
-						lv_input_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepInput");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)+
-		otherlv_3='</Inputs>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputsAccess().getInputsKeyword_3());
+			newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getVSVSStepActionParserRuleCall_0());
+		}
+		this_VSVSStepAction_0=ruleVSVSStepAction
+		{
+			$current = $this_VSVSStepAction_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getVSVSStepInputsAccess().getVSVSStepTelecommandSequenceParserRuleCall_1());
+		}
+		this_VSVSStepTelecommandSequence_1=ruleVSVSStepTelecommandSequence
+		{
+			$current = $this_VSVSStepTelecommandSequence_1.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
 
-// Entry rule entryRuleVSVSStepInput
-entryRuleVSVSStepInput returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSVSStepInputRule()); }
-	iv_ruleVSVSStepInput=ruleVSVSStepInput
-	{ $current=$iv_ruleVSVSStepInput.current; }
+// Entry rule entryRuleVSVSStepAction
+entryRuleVSVSStepAction returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepActionRule()); }
+	iv_ruleVSVSStepAction=ruleVSVSStepAction
+	{ $current=$iv_ruleVSVSStepAction.current; }
 	EOF;
 
-// Rule VSVSStepInput
-ruleVSVSStepInput returns [EObject current=null]
+// Rule VSVSStepAction
+ruleVSVSStepAction returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -5256,23 +5971,220 @@ ruleVSVSStepInput returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<Input'
+		otherlv_0='<Action'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getVSVSStepInputAccess().getInputKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepActionAccess().getActionKeyword_0());
+		}
+		otherlv_1='selectedAction='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepActionAccess().getSelectedActionKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepActionRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepActionAccess().getSelectedActionVSVSActionCrossReference_2_0());
+				}
+			)
+		)
+		(
+			otherlv_3='delay_value='
+			{
+				newLeafNode(otherlv_3, grammarAccess.getVSVSStepActionAccess().getDelay_valueKeyword_3_0());
+			}
+			(
+				(
+					lv_delay_value_4_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_delay_value_4_0, grammarAccess.getVSVSStepActionAccess().getDelay_valueUINT_STRINGTerminalRuleCall_3_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepActionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"delay_value",
+							lv_delay_value_4_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
+			)
+			otherlv_5='delay_unit='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVSVSStepActionAccess().getDelay_unitKeyword_3_2());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepActionAccess().getDelay_unitVSVSTimeUnitEnumRuleCall_3_3_0());
+					}
+					lv_delay_unit_6_0=ruleVSVSTimeUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepActionRule());
+						}
+						set(
+							$current,
+							"delay_unit",
+							lv_delay_unit_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		(
+			otherlv_7='span_value='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepActionAccess().getSpan_valueKeyword_4_0());
+			}
+			(
+				(
+					lv_span_value_8_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_span_value_8_0, grammarAccess.getVSVSStepActionAccess().getSpan_valueUINT_STRINGTerminalRuleCall_4_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepActionRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"span_value",
+							lv_span_value_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
+			)
+			otherlv_9='span_unit='
+			{
+				newLeafNode(otherlv_9, grammarAccess.getVSVSStepActionAccess().getSpan_unitKeyword_4_2());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepActionAccess().getSpan_unitVSVSTimeUnitEnumRuleCall_4_3_0());
+					}
+					lv_span_unit_10_0=ruleVSVSTimeUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepActionRule());
+						}
+						set(
+							$current,
+							"span_unit",
+							lv_span_unit_10_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_11='/>'
+		{
+			newLeafNode(otherlv_11, grammarAccess.getVSVSStepActionAccess().getSolidusGreaterThanSignKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommandSequence
+entryRuleVSVSStepTelecommandSequence returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandSequenceRule()); }
+	iv_ruleVSVSStepTelecommandSequence=ruleVSVSStepTelecommandSequence
+	{ $current=$iv_ruleVSVSStepTelecommandSequence.current; }
+	EOF;
+
+// Rule VSVSStepTelecommandSequence
+ruleVSVSStepTelecommandSequence returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSVSStepTelecommandSequenceAccess().getVSVSStepTelecommandSequenceAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<TelecommandSequence>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelecommandSequenceAccess().getTelecommandSequenceKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandSequenceAccess().getTelecommandVSVSStepTelecommandParserRuleCall_2_0());
+				}
+				lv_telecommand_2_0=ruleVSVSStepTelecommand
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandSequenceRule());
+					}
+					add(
+						$current,
+						"telecommand",
+						lv_telecommand_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommand");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_3='</TelecommandSequence>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelecommandSequenceAccess().getTelecommandSequenceKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommand
+entryRuleVSVSStepTelecommand returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandRule()); }
+	iv_ruleVSVSStepTelecommand=ruleVSVSStepTelecommand
+	{ $current=$iv_ruleVSVSStepTelecommand.current; }
+	EOF;
+
+// Rule VSVSStepTelecommand
+ruleVSVSStepTelecommand returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Telecommand'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelecommandAccess().getTelecommandKeyword_0());
 		}
 		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSStepInputAccess().getNameKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelecommandAccess().getNameKeyword_1());
 		}
 		(
 			(
 				lv_name_2_0=RULE_STRING
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepInputAccess().getNameSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepTelecommandAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepInputRule());
+						$current = createModelElement(grammarAccess.getVSVSStepTelecommandRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -5284,7 +6196,7 @@ ruleVSVSStepInput returns [EObject current=null]
 		)
 		otherlv_3='interface='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepInputAccess().getInterfaceKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelecommandAccess().getInterfaceKeyword_3());
 		}
 		(
 			(
@@ -5293,63 +6205,650 @@ ruleVSVSStepInput returns [EObject current=null]
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepInputRule());
+						$current = createModelElement(grammarAccess.getVSVSStepTelecommandRule());
 					}
 				}
 				otherlv_4=RULE_STRING
 				{
-					newLeafNode(otherlv_4, grammarAccess.getVSVSStepInputAccess().getInterfaceVSVSInterfaceCrossReference_4_0());
+					newLeafNode(otherlv_4, grammarAccess.getVSVSStepTelecommandAccess().getInterfaceVSVSInterfaceCrossReference_4_0());
 				}
 			)
 		)
-		otherlv_5='delay_value='
-		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVSStepInputAccess().getDelay_valueKeyword_5());
-		}
 		(
+			otherlv_5='delay_value='
+			{
+				newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelecommandAccess().getDelay_valueKeyword_5_0());
+			}
 			(
-				lv_delay_value_6_0=RULE_UINT_STRING
-				{
-					newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepInputAccess().getDelay_valueUINT_STRINGTerminalRuleCall_6_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepInputRule());
+				(
+					lv_delay_value_6_0=RULE_UINT_STRING
+					{
+						newLeafNode(lv_delay_value_6_0, grammarAccess.getVSVSStepTelecommandAccess().getDelay_valueUINT_STRINGTerminalRuleCall_5_1_0());
 					}
-					setWithLastConsumed(
-						$current,
-						"delay_value",
-						lv_delay_value_6_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
-				}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSStepTelecommandRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"delay_value",
+							lv_delay_value_6_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+				)
 			)
-		)
-		otherlv_7='delay_unit='
+			otherlv_7='delay_unit='
+			{
+				newLeafNode(otherlv_7, grammarAccess.getVSVSStepTelecommandAccess().getDelay_unitKeyword_5_2());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVSVSStepTelecommandAccess().getDelay_unitVSVSTimeUnitEnumRuleCall_5_3_0());
+					}
+					lv_delay_unit_8_0=ruleVSVSTimeUnit
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandRule());
+						}
+						set(
+							$current,
+							"delay_unit",
+							lv_delay_unit_8_0,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)?
+		otherlv_9='>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepInputAccess().getDelay_unitKeyword_7());
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepTelecommandAccess().getGreaterThanSignKeyword_6());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepInputAccess().getDelay_unitVSVSTimeUnitEnumRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandAccess().getTcDataVSVSStepTelecommandDataParserRuleCall_7_0());
 				}
-				lv_delay_unit_8_0=ruleVSVSTimeUnit
+				lv_tcData_10_0=ruleVSVSStepTelecommandData
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepInputRule());
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandRule());
 					}
 					set(
 						$current,
-						"delay_unit",
-						lv_delay_unit_8_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSTimeUnit");
+						"tcData",
+						lv_tcData_10_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandData");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_9='/>'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandAccess().getTcHeaderVSVSStepTelecommandHeaderParserRuleCall_8_0());
+				}
+				lv_tcHeader_11_0=ruleVSVSStepTelecommandHeader
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandRule());
+					}
+					set(
+						$current,
+						"tcHeader",
+						lv_tcHeader_11_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandHeader");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_12='</Telecommand>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVSStepInputAccess().getSolidusGreaterThanSignKeyword_9());
+			newLeafNode(otherlv_12, grammarAccess.getVSVSStepTelecommandAccess().getTelecommandKeyword_9());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommandData
+entryRuleVSVSStepTelecommandData returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandDataRule()); }
+	iv_ruleVSVSStepTelecommandData=ruleVSVSStepTelecommandData
+	{ $current=$iv_ruleVSVSStepTelecommandData.current; }
+	EOF;
+
+// Rule VSVSStepTelecommandData
+ruleVSVSStepTelecommandData returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TelecommandData'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelecommandDataAccess().getTelecommandDataKeyword_0());
+		}
+		otherlv_1='template='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelecommandDataAccess().getTemplateKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelecommandDataRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelecommandDataAccess().getTcTemplateVTCTemplateCrossReference_2_0());
+				}
+			)
+		)
+		(
+			(
+				otherlv_3='>'
+				{
+					newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelecommandDataAccess().getGreaterThanSignKeyword_3_0_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getVSVSStepTelecommandDataAccess().getFieldsVSVSStepTelecommandDataFieldParserRuleCall_3_0_1_0());
+						}
+						lv_fields_4_0=ruleVSVSStepTelecommandDataField
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandDataRule());
+							}
+							add(
+								$current,
+								"fields",
+								lv_fields_4_0,
+								"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandDataField");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)+
+				otherlv_5='</TelecommandData>'
+				{
+					newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelecommandDataAccess().getTelecommandDataKeyword_3_0_2());
+				}
+			)
+			    |
+			otherlv_6='/>'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepTelecommandDataAccess().getSolidusGreaterThanSignKeyword_3_1());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommandDataField
+entryRuleVSVSStepTelecommandDataField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandDataFieldRule()); }
+	iv_ruleVSVSStepTelecommandDataField=ruleVSVSStepTelecommandDataField
+	{ $current=$iv_ruleVSVSStepTelecommandDataField.current; }
+	EOF;
+
+// Rule VSVSStepTelecommandDataField
+ruleVSVSStepTelecommandDataField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Field'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelecommandDataFieldAccess().getFieldKeyword_0());
+		}
+		otherlv_1='fieldRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelecommandDataFieldAccess().getFieldRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelecommandDataFieldRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelecommandDataFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelecommandDataFieldAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandDataFieldAccess().getValueTMTCIFFieldValueTCParserRuleCall_4_0());
+				}
+				lv_value_4_0=ruleTMTCIFFieldValueTC
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandDataFieldRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueTC");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='</Field>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelecommandDataFieldAccess().getFieldKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueTC
+entryRuleTMTCIFFieldValueTC returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueTCRule()); }
+	iv_ruleTMTCIFFieldValueTC=ruleTMTCIFFieldValueTC
+	{ $current=$iv_ruleTMTCIFFieldValueTC.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueTC
+ruleTMTCIFFieldValueTC returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTCAccess().getTMTCIFFieldValueRawParserRuleCall_0());
+		}
+		this_TMTCIFFieldValueRaw_0=ruleTMTCIFFieldValueRaw
+		{
+			$current = $this_TMTCIFFieldValueRaw_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTCAccess().getTMTCIFFieldValueFileParserRuleCall_1());
+		}
+		this_TMTCIFFieldValueFile_1=ruleTMTCIFFieldValueFile
+		{
+			$current = $this_TMTCIFFieldValueFile_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTCAccess().getTMTCIFFieldValueEnumParserRuleCall_2());
+		}
+		this_TMTCIFFieldValueEnum_2=ruleTMTCIFFieldValueEnum
+		{
+			$current = $this_TMTCIFFieldValueEnum_2.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommandHeader
+entryRuleVSVSStepTelecommandHeader returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandHeaderRule()); }
+	iv_ruleVSVSStepTelecommandHeader=ruleVSVSStepTelecommandHeader
+	{ $current=$iv_ruleVSVSStepTelecommandHeader.current; }
+	EOF;
+
+// Rule VSVSStepTelecommandHeader
+ruleVSVSStepTelecommandHeader returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TelecommandHeader>'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelecommandHeaderAccess().getTelecommandHeaderKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandHeaderAccess().getFieldsVSVSStepTelecommandHeaderFieldParserRuleCall_1_0());
+				}
+				lv_fields_1_0=ruleVSVSStepTelecommandHeaderField
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandHeaderRule());
+					}
+					add(
+						$current,
+						"fields",
+						lv_fields_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelecommandHeaderField");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_2='</TelecommandHeader>'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelecommandHeaderAccess().getTelecommandHeaderKeyword_2());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelecommandHeaderField
+entryRuleVSVSStepTelecommandHeaderField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelecommandHeaderFieldRule()); }
+	iv_ruleVSVSStepTelecommandHeaderField=ruleVSVSStepTelecommandHeaderField
+	{ $current=$iv_ruleVSVSStepTelecommandHeaderField.current; }
+	EOF;
+
+// Rule VSVSStepTelecommandHeaderField
+ruleVSVSStepTelecommandHeaderField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<HeaderField'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getHeaderFieldKeyword_0());
+		}
+		otherlv_1='fieldRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getFieldRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelecommandHeaderFieldRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getFieldRefTMTCIFTCHeaderFieldCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0());
+				}
+				lv_value_4_0=ruleTMTCIFFieldValueHeader
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelecommandHeaderFieldRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueHeader");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='</HeaderField>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelecommandHeaderFieldAccess().getHeaderFieldKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueHeader
+entryRuleTMTCIFFieldValueHeader returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueHeaderRule()); }
+	iv_ruleTMTCIFFieldValueHeader=ruleTMTCIFFieldValueHeader
+	{ $current=$iv_ruleTMTCIFFieldValueHeader.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueHeader
+ruleTMTCIFFieldValueHeader returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueHeaderAccess().getTMTCIFFieldValueRawParserRuleCall_0());
+		}
+		this_TMTCIFFieldValueRaw_0=ruleTMTCIFFieldValueRaw
+		{
+			$current = $this_TMTCIFFieldValueRaw_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueHeaderAccess().getTMTCIFFieldValueFileParserRuleCall_1());
+		}
+		this_TMTCIFFieldValueFile_1=ruleTMTCIFFieldValueFile
+		{
+			$current = $this_TMTCIFFieldValueFile_1.current;
+			afterParserOrEnumRuleCall();
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueRaw
+entryRuleTMTCIFFieldValueRaw returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueRawRule()); }
+	iv_ruleTMTCIFFieldValueRaw=ruleTMTCIFFieldValueRaw
+	{ $current=$iv_ruleTMTCIFFieldValueRaw.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueRaw
+ruleTMTCIFFieldValueRaw returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<FieldValueRaw'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueRawAccess().getFieldValueRawKeyword_0());
+		}
+		otherlv_1='value='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueRawAccess().getValueKeyword_1());
+		}
+		(
+			(
+				(
+					lv_value_2_1=RULE_UINT_STRING
+					{
+						newLeafNode(lv_value_2_1, grammarAccess.getTMTCIFFieldValueRawAccess().getValueUINT_STRINGTerminalRuleCall_2_0_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTMTCIFFieldValueRawRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"value",
+							lv_value_2_1,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.UINT_STRING");
+					}
+					    |
+					lv_value_2_2=RULE_HEX_STRING
+					{
+						newLeafNode(lv_value_2_2, grammarAccess.getTMTCIFFieldValueRawAccess().getValueHEX_STRINGTerminalRuleCall_2_0_1());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getTMTCIFFieldValueRawRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"value",
+							lv_value_2_2,
+							"es.uah.aut.srg.micobs.svm.lang.svs.SVS.HEX_STRING");
+					}
+				)
+			)
+		)
+		otherlv_3='/>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueRawAccess().getSolidusGreaterThanSignKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueFile
+entryRuleTMTCIFFieldValueFile returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueFileRule()); }
+	iv_ruleTMTCIFFieldValueFile=ruleTMTCIFFieldValueFile
+	{ $current=$iv_ruleTMTCIFFieldValueFile.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueFile
+ruleTMTCIFFieldValueFile returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<FieldValueFile'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueFileAccess().getFieldValueFileKeyword_0());
+		}
+		otherlv_1='filename='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameKeyword_1());
+		}
+		(
+			(
+				lv_filename_2_0=RULE_STRING
+				{
+					newLeafNode(lv_filename_2_0, grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTMTCIFFieldValueFileRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"filename",
+						lv_filename_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='/>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueFileAccess().getSolidusGreaterThanSignKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueEnum
+entryRuleTMTCIFFieldValueEnum returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueEnumRule()); }
+	iv_ruleTMTCIFFieldValueEnum=ruleTMTCIFFieldValueEnum
+	{ $current=$iv_ruleTMTCIFFieldValueEnum.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueEnum
+ruleTMTCIFFieldValueEnum returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<FieldValueEnum'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueEnumAccess().getFieldValueEnumKeyword_0());
+		}
+		otherlv_1='enumRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='valueRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefKeyword_3());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+					}
+				}
+				otherlv_4=RULE_STRING
+				{
+					newLeafNode(otherlv_4, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueCrossReference_4_0());
+				}
+			)
+		)
+		otherlv_5='/>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getTMTCIFFieldValueEnumAccess().getSolidusGreaterThanSignKeyword_5());
 		}
 	)
 ;
@@ -5369,47 +6868,75 @@ ruleVSVSStepOutputs returns [EObject current=null]
 @after {
 	leaveRule();
 }:
+	{
+		/* */
+	}
+	{
+		newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getVSVSStepTelemetrySetParserRuleCall());
+	}
+	this_VSVSStepTelemetrySet_0=ruleVSVSStepTelemetrySet
+	{
+		$current = $this_VSVSStepTelemetrySet_0.current;
+		afterParserOrEnumRuleCall();
+	}
+;
+
+// Entry rule entryRuleVSVSStepTelemetrySet
+entryRuleVSVSStepTelemetrySet returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetrySetRule()); }
+	iv_ruleVSVSStepTelemetrySet=ruleVSVSStepTelemetrySet
+	{ $current=$iv_ruleVSVSStepTelemetrySet.current; }
+	EOF;
+
+// Rule VSVSStepTelemetrySet
+ruleVSVSStepTelemetrySet returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
 	(
-		otherlv_0='<Outputs'
+		otherlv_0='<TelemetrySet'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetrySetAccess().getTelemetrySetKeyword_0());
 		}
 		otherlv_1='checkmode='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputsAccess().getCheckmodeKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelemetrySetAccess().getCheckmodeKeyword_1());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getCheckmodeVSVSStepOutputsCheckmodeEnumRuleCall_2_0());
+					newCompositeNode(grammarAccess.getVSVSStepTelemetrySetAccess().getCheckmodeVSVSStepTelemetrySetCheckmodeEnumRuleCall_2_0());
 				}
-				lv_checkmode_2_0=ruleVSVSStepOutputsCheckmode
+				lv_checkmode_2_0=ruleVSVSStepTelemetrySetCheckmode
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetrySetRule());
 					}
 					set(
 						$current,
 						"checkmode",
 						lv_checkmode_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutputsCheckmode");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetrySetCheckmode");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		otherlv_3='valid_time_interval_value='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetrySetAccess().getValid_time_interval_valueKeyword_3());
 		}
 		(
 			(
 				lv_valid_time_interval_value_4_0=RULE_UINT_STRING
 				{
-					newLeafNode(lv_valid_time_interval_value_4_0, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0());
+					newLeafNode(lv_valid_time_interval_value_4_0, grammarAccess.getVSVSStepTelemetrySetAccess().getValid_time_interval_valueUINT_STRINGTerminalRuleCall_4_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepOutputsRule());
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetrySetRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -5421,17 +6948,17 @@ ruleVSVSStepOutputs returns [EObject current=null]
 		)
 		otherlv_5='valid_time_interval_unit='
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_unitKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelemetrySetAccess().getValid_time_interval_unitKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVSVSStepTelemetrySetAccess().getValid_time_interval_unitVSVSTimeUnitEnumRuleCall_6_0());
 				}
 				lv_valid_time_interval_unit_6_0=ruleVSVSTimeUnit
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetrySetRule());
 					}
 					set(
 						$current,
@@ -5444,43 +6971,43 @@ ruleVSVSStepOutputs returns [EObject current=null]
 		)
 		otherlv_7='>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVSVSStepOutputsAccess().getGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_7, grammarAccess.getVSVSStepTelemetrySetAccess().getGreaterThanSignKeyword_7());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepOutputsAccess().getOutputVSVSStepOutputParserRuleCall_8_0());
+					newCompositeNode(grammarAccess.getVSVSStepTelemetrySetAccess().getTelemetryVSVSStepTelemetryParserRuleCall_8_0());
 				}
-				lv_output_8_0=ruleVSVSStepOutput
+				lv_telemetry_8_0=ruleVSVSStepTelemetry
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVSStepOutputsRule());
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetrySetRule());
 					}
 					add(
 						$current,
-						"output",
-						lv_output_8_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepOutput");
+						"telemetry",
+						lv_telemetry_8_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetry");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_9='</Outputs>'
+		otherlv_9='</TelemetrySet>'
 		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVSStepOutputsAccess().getOutputsKeyword_9());
+			newLeafNode(otherlv_9, grammarAccess.getVSVSStepTelemetrySetAccess().getTelemetrySetKeyword_9());
 		}
 	)
 ;
 
-// Entry rule entryRuleVSVSStepOutput
-entryRuleVSVSStepOutput returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSVSStepOutputRule()); }
-	iv_ruleVSVSStepOutput=ruleVSVSStepOutput
-	{ $current=$iv_ruleVSVSStepOutput.current; }
+// Entry rule entryRuleVSVSStepTelemetry
+entryRuleVSVSStepTelemetry returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetryRule()); }
+	iv_ruleVSVSStepTelemetry=ruleVSVSStepTelemetry
+	{ $current=$iv_ruleVSVSStepTelemetry.current; }
 	EOF;
 
-// Rule VSVSStepOutput
-ruleVSVSStepOutput returns [EObject current=null]
+// Rule VSVSStepTelemetry
+ruleVSVSStepTelemetry returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -5488,23 +7015,23 @@ ruleVSVSStepOutput returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<Output'
+		otherlv_0='<Telemetry'
 		{
-			newLeafNode(otherlv_0, grammarAccess.getVSVSStepOutputAccess().getOutputKeyword_0());
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetryAccess().getTelemetryKeyword_0());
 		}
 		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSStepOutputAccess().getNameKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelemetryAccess().getNameKeyword_1());
 		}
 		(
 			(
 				lv_name_2_0=RULE_STRING
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepOutputAccess().getNameSTRINGTerminalRuleCall_2_0());
+					newLeafNode(lv_name_2_0, grammarAccess.getVSVSStepTelemetryAccess().getNameSTRINGTerminalRuleCall_2_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepOutputRule());
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetryRule());
 					}
 					setWithLastConsumed(
 						$current,
@@ -5516,7 +7043,7 @@ ruleVSVSStepOutput returns [EObject current=null]
 		)
 		otherlv_3='interface='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSStepOutputAccess().getInterfaceKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetryAccess().getInterfaceKeyword_3());
 		}
 		(
 			(
@@ -5525,18 +7052,367 @@ ruleVSVSStepOutput returns [EObject current=null]
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVSVSStepOutputRule());
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetryRule());
 					}
 				}
 				otherlv_4=RULE_STRING
 				{
-					newLeafNode(otherlv_4, grammarAccess.getVSVSStepOutputAccess().getInterfaceVSVSInterfaceCrossReference_4_0());
+					newLeafNode(otherlv_4, grammarAccess.getVSVSStepTelemetryAccess().getInterfaceVSVSInterfaceCrossReference_4_0());
 				}
 			)
 		)
-		otherlv_5='/>'
+		otherlv_5='>'
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVSStepOutputAccess().getSolidusGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelemetryAccess().getGreaterThanSignKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryAccess().getTmDataVSVSStepTelemetryDataParserRuleCall_6_0());
+				}
+				lv_tmData_6_0=ruleVSVSStepTelemetryData
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryRule());
+					}
+					set(
+						$current,
+						"tmData",
+						lv_tmData_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryData");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryAccess().getTmHeaderVSVSStepTelemetryHeaderParserRuleCall_7_0());
+				}
+				lv_tmHeader_7_0=ruleVSVSStepTelemetryHeader
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryRule());
+					}
+					set(
+						$current,
+						"tmHeader",
+						lv_tmHeader_7_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryHeader");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_8='</Telemetry>'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getVSVSStepTelemetryAccess().getTelemetryKeyword_8());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelemetryData
+entryRuleVSVSStepTelemetryData returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetryDataRule()); }
+	iv_ruleVSVSStepTelemetryData=ruleVSVSStepTelemetryData
+	{ $current=$iv_ruleVSVSStepTelemetryData.current; }
+	EOF;
+
+// Rule VSVSStepTelemetryData
+ruleVSVSStepTelemetryData returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TelemetryData'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetryDataAccess().getTelemetryDataKeyword_0());
+		}
+		otherlv_1='template='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelemetryDataAccess().getTemplateKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetryDataRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelemetryDataAccess().getTmTemplateVTMTemplateCrossReference_2_0());
+				}
+			)
+		)
+		(
+			(
+				otherlv_3='>'
+				{
+					newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetryDataAccess().getGreaterThanSignKeyword_3_0_0());
+				}
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getVSVSStepTelemetryDataAccess().getFieldsVSVSStepTelemetryDataFieldParserRuleCall_3_0_1_0());
+						}
+						lv_fields_4_0=ruleVSVSStepTelemetryDataField
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryDataRule());
+							}
+							add(
+								$current,
+								"fields",
+								lv_fields_4_0,
+								"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryDataField");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)+
+				otherlv_5='</TelemetryData>'
+				{
+					newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelemetryDataAccess().getTelemetryDataKeyword_3_0_2());
+				}
+			)
+			    |
+			otherlv_6='/>'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getVSVSStepTelemetryDataAccess().getSolidusGreaterThanSignKeyword_3_1());
+			}
+		)
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelemetryDataField
+entryRuleVSVSStepTelemetryDataField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetryDataFieldRule()); }
+	iv_ruleVSVSStepTelemetryDataField=ruleVSVSStepTelemetryDataField
+	{ $current=$iv_ruleVSVSStepTelemetryDataField.current; }
+	EOF;
+
+// Rule VSVSStepTelemetryDataField
+ruleVSVSStepTelemetryDataField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<Field'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetryDataFieldAccess().getFieldKeyword_0());
+		}
+		otherlv_1='fieldRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelemetryDataFieldAccess().getFieldRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetryDataFieldRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelemetryDataFieldAccess().getFieldRefTMTCIFTMFieldCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetryDataFieldAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryDataFieldAccess().getValueTMTCIFFieldValueTMParserRuleCall_4_0());
+				}
+				lv_value_4_0=ruleTMTCIFFieldValueTM
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryDataFieldRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueTM");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='</Field>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelemetryDataFieldAccess().getFieldKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelemetryHeader
+entryRuleVSVSStepTelemetryHeader returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderRule()); }
+	iv_ruleVSVSStepTelemetryHeader=ruleVSVSStepTelemetryHeader
+	{ $current=$iv_ruleVSVSStepTelemetryHeader.current; }
+	EOF;
+
+// Rule VSVSStepTelemetryHeader
+ruleVSVSStepTelemetryHeader returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TelemetryHeader>'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetryHeaderAccess().getTelemetryHeaderKeyword_0());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderAccess().getFieldsVSVSStepTelemetryHeaderFieldParserRuleCall_1_0());
+				}
+				lv_fields_1_0=ruleVSVSStepTelemetryHeaderField
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryHeaderRule());
+					}
+					add(
+						$current,
+						"fields",
+						lv_fields_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSStepTelemetryHeaderField");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+		otherlv_2='</TelemetryHeader>'
+		{
+			newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelemetryHeaderAccess().getTelemetryHeaderKeyword_2());
+		}
+	)
+;
+
+// Entry rule entryRuleVSVSStepTelemetryHeaderField
+entryRuleVSVSStepTelemetryHeaderField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldRule()); }
+	iv_ruleVSVSStepTelemetryHeaderField=ruleVSVSStepTelemetryHeaderField
+	{ $current=$iv_ruleVSVSStepTelemetryHeaderField.current; }
+	EOF;
+
+// Rule VSVSStepTelemetryHeaderField
+ruleVSVSStepTelemetryHeaderField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<HeaderField'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getHeaderFieldKeyword_0());
+		}
+		otherlv_1='fieldRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getFieldRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVSVSStepTelemetryHeaderFieldRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getFieldRefTMTCIFTMHeaderFieldCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='>'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getGreaterThanSignKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0());
+				}
+				lv_value_4_0=ruleTMTCIFFieldValueRaw
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryHeaderFieldRule());
+					}
+					set(
+						$current,
+						"value",
+						lv_value_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueRaw");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='</HeaderField>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getHeaderFieldKeyword_5());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueTM
+entryRuleTMTCIFFieldValueTM returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueTMRule()); }
+	iv_ruleTMTCIFFieldValueTM=ruleTMTCIFFieldValueTM
+	{ $current=$iv_ruleTMTCIFFieldValueTM.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueTM
+ruleTMTCIFFieldValueTM returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueRawParserRuleCall_0());
+		}
+		this_TMTCIFFieldValueRaw_0=ruleTMTCIFFieldValueRaw
+		{
+			$current = $this_TMTCIFFieldValueRaw_0.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueFileParserRuleCall_1());
+		}
+		this_TMTCIFFieldValueFile_1=ruleTMTCIFFieldValueFile
+		{
+			$current = $this_TMTCIFFieldValueFile_1.current;
+			afterParserOrEnumRuleCall();
 		}
 	)
 ;
@@ -5782,6 +7658,60 @@ ruleDRunAttributes returns [Enumerator current=null]
 	)
 ;
 
+// Rule VSVSActionType
+ruleVSVSActionType returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"checking"'
+			{
+				$current = grammarAccess.getVSVSActionTypeAccess().getCheckingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSActionTypeAccess().getCheckingEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"instruction"'
+			{
+				$current = grammarAccess.getVSVSActionTypeAccess().getInstructionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSActionTypeAccess().getInstructionEnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
+// Rule VSVSConfigurationStatus
+ruleVSVSConfigurationStatus returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			enumLiteral_0='"off"'
+			{
+				$current = grammarAccess.getVSVSConfigurationStatusAccess().getOffEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSConfigurationStatusAccess().getOffEnumLiteralDeclaration_0());
+			}
+		)
+		    |
+		(
+			enumLiteral_1='"on"'
+			{
+				$current = grammarAccess.getVSVSConfigurationStatusAccess().getOnEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSConfigurationStatusAccess().getOnEnumLiteralDeclaration_1());
+			}
+		)
+	)
+;
+
 // Rule VSVSTimeUnit
 ruleVSVSTimeUnit returns [Enumerator current=null]
 @init {
@@ -5809,8 +7739,8 @@ ruleVSVSTimeUnit returns [Enumerator current=null]
 	)
 ;
 
-// Rule VSVSStepOutputsCheckmode
-ruleVSVSStepOutputsCheckmode returns [Enumerator current=null]
+// Rule VSVSStepTelemetrySetCheckmode
+ruleVSVSStepTelemetrySetCheckmode returns [Enumerator current=null]
 @init {
 	enterRule();
 }
@@ -5821,24 +7751,24 @@ ruleVSVSStepOutputsCheckmode returns [Enumerator current=null]
 		(
 			enumLiteral_0='"all"'
 			{
-				$current = grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAllEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAllEnumLiteralDeclaration_0());
+				$current = grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAllEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAllEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
 			enumLiteral_1='"allunsorted"'
 			{
-				$current = grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1());
+				$current = grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAllunsortedEnumLiteralDeclaration_1());
 			}
 		)
 		    |
 		(
 			enumLiteral_2='"any"'
 			{
-				$current = grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAnyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_2, grammarAccess.getVSVSStepOutputsCheckmodeAccess().getAnyEnumLiteralDeclaration_2());
+				$current = grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAnyEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getVSVSStepTelemetrySetCheckmodeAccess().getAnyEnumLiteralDeclaration_2());
 			}
 		)
 	)
@@ -5851,6 +7781,8 @@ RULE_HEXADECIMAL : '0x' ('0'..'9'|'a'..'f'|'A'..'F')+;
 RULE_UINT_STRING : '"' ('0'..'9')+ '"';
 
 RULE_REAL_STRING : '"' ('0'..'9')+ ('.' ('0'..'9')+)? '"';
+
+RULE_HEX_STRING : '"0x' ('0'..'9'|'a'..'f'|'A'..'F')+ '"';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
