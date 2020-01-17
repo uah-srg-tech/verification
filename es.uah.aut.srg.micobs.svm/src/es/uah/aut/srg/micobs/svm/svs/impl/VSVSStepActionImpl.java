@@ -10,11 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSAction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepAction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -48,7 +48,7 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSAction selectedAction;
+	protected VTestSetupAction selectedAction;
 
 	/**
 	 * The default value of the '{@link #getDelay_value() <em>Delay value</em>}' attribute.
@@ -190,10 +190,10 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSAction getSelectedAction() {
+	public VTestSetupAction getSelectedAction() {
 		if (selectedAction != null && selectedAction.eIsProxy()) {
 			InternalEObject oldSelectedAction = (InternalEObject)selectedAction;
-			selectedAction = (VSVSAction)eResolveProxy(oldSelectedAction);
+			selectedAction = (VTestSetupAction)eResolveProxy(oldSelectedAction);
 			if (selectedAction != oldSelectedAction) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_ACTION__SELECTED_ACTION, oldSelectedAction, selectedAction));
@@ -207,7 +207,7 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSAction basicGetSelectedAction() {
+	public VTestSetupAction basicGetSelectedAction() {
 		return selectedAction;
 	}
 
@@ -216,8 +216,8 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setSelectedAction(VSVSAction newSelectedAction) {
-		VSVSAction oldSelectedAction = selectedAction;
+	public void setSelectedAction(VTestSetupAction newSelectedAction) {
+		VTestSetupAction oldSelectedAction = selectedAction;
 		selectedAction = newSelectedAction;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_ACTION__SELECTED_ACTION, oldSelectedAction, selectedAction));
@@ -439,7 +439,7 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_ACTION__SELECTED_ACTION:
-				setSelectedAction((VSVSAction)newValue);
+				setSelectedAction((VTestSetupAction)newValue);
 				return;
 			case svsPackage.VSVS_STEP_ACTION__DELAY_VALUE:
 				setDelay_value((String)newValue);
@@ -466,7 +466,7 @@ public class VSVSStepActionImpl extends VSVSStepInputsImpl implements VSVSStepAc
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_ACTION__SELECTED_ACTION:
-				setSelectedAction((VSVSAction)null);
+				setSelectedAction((VTestSetupAction)null);
 				return;
 			case svsPackage.VSVS_STEP_ACTION__DELAY_VALUE:
 				unsetDelay_value();

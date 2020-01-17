@@ -14,28 +14,17 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbbreviation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAbstractBriefDescription;
-import es.uah.aut.srg.micobs.svm.svs.VSVSAction;
-import es.uah.aut.srg.micobs.svm.svs.VSVSActionType;
-import es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSApplicableDocuments;
-import es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDefinition;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSFixedSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
-import es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepAction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration;
@@ -71,6 +60,7 @@ import es.uah.aut.srg.micobs.svm.svs.svsFactory;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import es.uah.aut.srg.micobs.svm.tctemplate.tctemplatePackage;
+import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 import es.uah.aut.srg.micobs.svm.tmtemplate.tmtemplatePackage;
 import es.uah.aut.srg.micobs.svm.vdm.vdmPackage;
 import es.uah.aut.srg.tmtcif.fieldvalue.fieldvaluePackage;
@@ -190,69 +180,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * @generated
 	 */
 	private EClass vsvsTestingSpecificationDesignEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsInterfacesSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsInterfaceEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsPacketConfigurationsSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsPacketConfigurationEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsActionsSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsActionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsScenariosSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsScenarioSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvsSelectedConfigurationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -455,20 +382,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EEnum vsvsActionTypeEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EEnum vsvsConfigurationStatusEEnum = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	private EEnum vsvsTimeUnitEEnum = null;
 
 	/**
@@ -525,10 +438,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		isInited = true;
 
 		// Initialize simple dependencies
-		doctplPackage.eINSTANCE.eClass();
-		tcheaderPackage.eINSTANCE.eClass();
 		tctemplatePackage.eINSTANCE.eClass();
-		tmheaderPackage.eINSTANCE.eClass();
+		testsetupPackage.eINSTANCE.eClass();
 		tmtemplatePackage.eINSTANCE.eClass();
 		vdmPackage.eINSTANCE.eClass();
 
@@ -957,7 +868,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestingSpecificationDesign_Interfaces() {
+	public EReference getVSVSTestingSpecificationDesign_TestSetup() {
 		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -966,305 +877,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestingSpecificationDesign_Configurations() {
-		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSTestingSpecificationDesign_Actions() {
-		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSTestingSpecificationDesign_Scenarios() {
-		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getVSVSTestingSpecificationDesign_TestDesigns() {
-		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSInterfacesSection() {
-		return vsvsInterfacesSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSInterfacesSection_Interfaces() {
-		return (EReference)vsvsInterfacesSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSInterface() {
-		return vsvsInterfaceEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSInterface_Name() {
-		return (EAttribute)vsvsInterfaceEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSInterface_Id() {
-		return (EAttribute)vsvsInterfaceEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSInterface_Description() {
-		return (EReference)vsvsInterfaceEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSInterface_TcHeader() {
-		return (EReference)vsvsInterfaceEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSInterface_TmHeader() {
-		return (EReference)vsvsInterfaceEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSPacketConfigurationsSection() {
-		return vsvsPacketConfigurationsSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSPacketConfigurationsSection_PacketConfigurations() {
-		return (EReference)vsvsPacketConfigurationsSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSPacketConfiguration() {
-		return vsvsPacketConfigurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSPacketConfiguration_Name() {
-		return (EAttribute)vsvsPacketConfigurationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSPacketConfiguration_Id() {
-		return (EAttribute)vsvsPacketConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSPacketConfiguration_Description() {
-		return (EReference)vsvsPacketConfigurationEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSActionsSection() {
-		return vsvsActionsSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSActionsSection_Action() {
-		return (EReference)vsvsActionsSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSAction() {
-		return vsvsActionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSAction_Name() {
-		return (EAttribute)vsvsActionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSAction_Description() {
-		return (EReference)vsvsActionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSAction_Type() {
-		return (EAttribute)vsvsActionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSScenariosSection() {
-		return vsvsScenariosSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSScenariosSection_Scenarios() {
-		return (EReference)vsvsScenariosSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSScenarioSection() {
-		return vsvsScenarioSectionEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSScenarioSection_SupportedInterface() {
-		return (EReference)vsvsScenarioSectionEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSScenarioSection_SelectedConfiguration() {
-		return (EReference)vsvsScenarioSectionEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSScenarioSection_SupportedAction() {
-		return (EReference)vsvsScenarioSectionEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EClass getVSVSSelectedConfiguration() {
-		return vsvsSelectedConfigurationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSSelectedConfiguration_Configuration() {
-		return (EReference)vsvsSelectedConfigurationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSSelectedConfiguration_DefaultFilterStatus() {
-		return (EAttribute)vsvsSelectedConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVSVSSelectedConfiguration_DefaultPrintStatus() {
-		return (EAttribute)vsvsSelectedConfigurationEClass.getEStructuralFeatures().get(2);
+		return (EReference)vsvsTestingSpecificationDesignEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -2145,24 +1759,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EEnum getVSVSActionType() {
-		return vsvsActionTypeEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EEnum getVSVSConfigurationStatus() {
-		return vsvsConfigurationStatusEEnum;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EEnum getVSVSTimeUnit() {
 		return vsvsTimeUnitEEnum;
 	}
@@ -2262,50 +1858,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		vsvsTestingSpecificationDesignEClass = createEClass(VSVS_TESTING_SPECIFICATION_DESIGN);
 		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL);
-		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES);
-		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__CONFIGURATIONS);
-		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__ACTIONS);
-		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS);
+		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP);
 		createEReference(vsvsTestingSpecificationDesignEClass, VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS);
-
-		vsvsInterfacesSectionEClass = createEClass(VSVS_INTERFACES_SECTION);
-		createEReference(vsvsInterfacesSectionEClass, VSVS_INTERFACES_SECTION__INTERFACES);
-
-		vsvsInterfaceEClass = createEClass(VSVS_INTERFACE);
-		createEAttribute(vsvsInterfaceEClass, VSVS_INTERFACE__NAME);
-		createEAttribute(vsvsInterfaceEClass, VSVS_INTERFACE__ID);
-		createEReference(vsvsInterfaceEClass, VSVS_INTERFACE__DESCRIPTION);
-		createEReference(vsvsInterfaceEClass, VSVS_INTERFACE__TC_HEADER);
-		createEReference(vsvsInterfaceEClass, VSVS_INTERFACE__TM_HEADER);
-
-		vsvsPacketConfigurationsSectionEClass = createEClass(VSVS_PACKET_CONFIGURATIONS_SECTION);
-		createEReference(vsvsPacketConfigurationsSectionEClass, VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS);
-
-		vsvsPacketConfigurationEClass = createEClass(VSVS_PACKET_CONFIGURATION);
-		createEAttribute(vsvsPacketConfigurationEClass, VSVS_PACKET_CONFIGURATION__NAME);
-		createEAttribute(vsvsPacketConfigurationEClass, VSVS_PACKET_CONFIGURATION__ID);
-		createEReference(vsvsPacketConfigurationEClass, VSVS_PACKET_CONFIGURATION__DESCRIPTION);
-
-		vsvsActionsSectionEClass = createEClass(VSVS_ACTIONS_SECTION);
-		createEReference(vsvsActionsSectionEClass, VSVS_ACTIONS_SECTION__ACTION);
-
-		vsvsActionEClass = createEClass(VSVS_ACTION);
-		createEAttribute(vsvsActionEClass, VSVS_ACTION__NAME);
-		createEReference(vsvsActionEClass, VSVS_ACTION__DESCRIPTION);
-		createEAttribute(vsvsActionEClass, VSVS_ACTION__TYPE);
-
-		vsvsScenariosSectionEClass = createEClass(VSVS_SCENARIOS_SECTION);
-		createEReference(vsvsScenariosSectionEClass, VSVS_SCENARIOS_SECTION__SCENARIOS);
-
-		vsvsScenarioSectionEClass = createEClass(VSVS_SCENARIO_SECTION);
-		createEReference(vsvsScenarioSectionEClass, VSVS_SCENARIO_SECTION__SUPPORTED_INTERFACE);
-		createEReference(vsvsScenarioSectionEClass, VSVS_SCENARIO_SECTION__SELECTED_CONFIGURATION);
-		createEReference(vsvsScenarioSectionEClass, VSVS_SCENARIO_SECTION__SUPPORTED_ACTION);
-
-		vsvsSelectedConfigurationEClass = createEClass(VSVS_SELECTED_CONFIGURATION);
-		createEReference(vsvsSelectedConfigurationEClass, VSVS_SELECTED_CONFIGURATION__CONFIGURATION);
-		createEAttribute(vsvsSelectedConfigurationEClass, VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS);
-		createEAttribute(vsvsSelectedConfigurationEClass, VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS);
 
 		vsvsTestDesignEClass = createEClass(VSVS_TEST_DESIGN);
 		createEAttribute(vsvsTestDesignEClass, VSVS_TEST_DESIGN__NAME);
@@ -2433,8 +1987,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		vsvsAdditionalInformationEClass = createEClass(VSVS_ADDITIONAL_INFORMATION);
 
 		// Create enums
-		vsvsActionTypeEEnum = createEEnum(VSVS_ACTION_TYPE);
-		vsvsConfigurationStatusEEnum = createEEnum(VSVS_CONFIGURATION_STATUS);
 		vsvsTimeUnitEEnum = createEEnum(VSVS_TIME_UNIT);
 		vsvsStepTelemetrySetCheckmodeEEnum = createEEnum(VSVS_STEP_TELEMETRY_SET_CHECKMODE);
 	}
@@ -2465,13 +2017,14 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		// Obtain other dependent packages
 		vdmPackage thevdmPackage = (vdmPackage)EPackage.Registry.INSTANCE.getEPackage(vdmPackage.eNS_URI);
 		doctplPackage thedoctplPackage = (doctplPackage)EPackage.Registry.INSTANCE.getEPackage(doctplPackage.eNS_URI);
-		tcheaderPackage thetcheaderPackage = (tcheaderPackage)EPackage.Registry.INSTANCE.getEPackage(tcheaderPackage.eNS_URI);
-		tmheaderPackage thetmheaderPackage = (tmheaderPackage)EPackage.Registry.INSTANCE.getEPackage(tmheaderPackage.eNS_URI);
+		testsetupPackage thetestsetupPackage = (testsetupPackage)EPackage.Registry.INSTANCE.getEPackage(testsetupPackage.eNS_URI);
 		tctemplatePackage thetctemplatePackage = (tctemplatePackage)EPackage.Registry.INSTANCE.getEPackage(tctemplatePackage.eNS_URI);
 		tcPackage thetcPackage = (tcPackage)EPackage.Registry.INSTANCE.getEPackage(tcPackage.eNS_URI);
 		fieldvaluePackage thefieldvaluePackage = (fieldvaluePackage)EPackage.Registry.INSTANCE.getEPackage(fieldvaluePackage.eNS_URI);
+		tcheaderPackage thetcheaderPackage = (tcheaderPackage)EPackage.Registry.INSTANCE.getEPackage(tcheaderPackage.eNS_URI);
 		tmtemplatePackage thetmtemplatePackage = (tmtemplatePackage)EPackage.Registry.INSTANCE.getEPackage(tmtemplatePackage.eNS_URI);
 		tmPackage thetmPackage = (tmPackage)EPackage.Registry.INSTANCE.getEPackage(tmPackage.eNS_URI);
+		tmheaderPackage thetmheaderPackage = (tmheaderPackage)EPackage.Registry.INSTANCE.getEPackage(tmheaderPackage.eNS_URI);
 
 		// Create type parameters
 
@@ -2492,11 +2045,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		vsvsSoftwareOverviewEClass.getESuperTypes().add(this.getVSVSFixedSection());
 		vsvsTaskIdentificationEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestingSpecificationDesignEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
-		vsvsInterfacesSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
-		vsvsPacketConfigurationsSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
-		vsvsActionsSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
-		vsvsScenariosSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
-		vsvsScenarioSectionEClass.getESuperTypes().add(this.getVSVSInstantiableSection());
 		vsvsTestDesignEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsTestCasesEClass.getESuperTypes().add(thevdmPackage.getVValidationDocumentFixedGroup());
 		vsvsTestCasesEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
@@ -2571,50 +2119,8 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsTestingSpecificationDesignEClass, VSVSTestingSpecificationDesign.class, "VSVSTestingSpecificationDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSTestingSpecificationDesign_General(), this.getVSVSFixedSection(), null, "general", null, 1, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestingSpecificationDesign_Interfaces(), this.getVSVSInterfacesSection(), null, "interfaces", null, 1, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestingSpecificationDesign_Configurations(), this.getVSVSPacketConfigurationsSection(), null, "configurations", null, 0, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestingSpecificationDesign_Actions(), this.getVSVSActionsSection(), null, "actions", null, 0, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestingSpecificationDesign_Scenarios(), this.getVSVSScenariosSection(), null, "scenarios", null, 1, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestingSpecificationDesign_TestSetup(), thetestsetupPackage.getVTestSetupTestSetup(), null, "testSetup", null, 1, 1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestingSpecificationDesign_TestDesigns(), this.getVSVSTestDesign(), null, "testDesigns", null, 1, -1, VSVSTestingSpecificationDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsInterfacesSectionEClass, VSVSInterfacesSection.class, "VSVSInterfacesSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSInterfacesSection_Interfaces(), this.getVSVSInterface(), null, "interfaces", null, 1, -1, VSVSInterfacesSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsInterfaceEClass, VSVSInterface.class, "VSVSInterface", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSVSInterface_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSInterface_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSInterface_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VSVSInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSInterface_TcHeader(), thetcheaderPackage.getTMTCIFTCHeader(), null, "tcHeader", null, 1, 1, VSVSInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSInterface_TmHeader(), thetmheaderPackage.getTMTCIFTMHeader(), null, "tmHeader", null, 1, 1, VSVSInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsPacketConfigurationsSectionEClass, VSVSPacketConfigurationsSection.class, "VSVSPacketConfigurationsSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSPacketConfigurationsSection_PacketConfigurations(), this.getVSVSPacketConfiguration(), null, "packetConfigurations", null, 1, -1, VSVSPacketConfigurationsSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsPacketConfigurationEClass, VSVSPacketConfiguration.class, "VSVSPacketConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSVSPacketConfiguration_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSPacketConfiguration_Id(), ecorePackage.getEString(), "id", null, 1, 1, VSVSPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSPacketConfiguration_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VSVSPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsActionsSectionEClass, VSVSActionsSection.class, "VSVSActionsSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSActionsSection_Action(), this.getVSVSAction(), null, "action", null, 1, -1, VSVSActionsSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsActionEClass, VSVSAction.class, "VSVSAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVSVSAction_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSAction_Description(), thedoctplPackage.getDBody(), null, "description", null, 1, 1, VSVSAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSAction_Type(), this.getVSVSActionType(), "type", null, 1, 1, VSVSAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsScenariosSectionEClass, VSVSScenariosSection.class, "VSVSScenariosSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSScenariosSection_Scenarios(), this.getVSVSScenarioSection(), null, "scenarios", null, 1, -1, VSVSScenariosSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsScenarioSectionEClass, VSVSScenarioSection.class, "VSVSScenarioSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSScenarioSection_SupportedInterface(), this.getVSVSInterface(), null, "supportedInterface", null, 1, -1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSScenarioSection_SelectedConfiguration(), this.getVSVSSelectedConfiguration(), null, "selectedConfiguration", null, 0, -1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSScenarioSection_SupportedAction(), this.getVSVSAction(), null, "supportedAction", null, 0, -1, VSVSScenarioSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvsSelectedConfigurationEClass, VSVSSelectedConfiguration.class, "VSVSSelectedConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSSelectedConfiguration_Configuration(), this.getVSVSPacketConfiguration(), null, "configuration", null, 1, 1, VSVSSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSSelectedConfiguration_DefaultFilterStatus(), this.getVSVSConfigurationStatus(), "defaultFilterStatus", null, 1, 1, VSVSSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSSelectedConfiguration_DefaultPrintStatus(), this.getVSVSConfigurationStatus(), "defaultPrintStatus", null, 1, 1, VSVSSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsTestDesignEClass, VSVSTestDesign.class, "VSVSTestDesign", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSTestDesign_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestDesign.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2646,7 +2152,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEAttribute(getVSVSTestProcedure_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Identifier(), this.getVSVSTestInfo(), null, "identifier", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Purpose(), this.getVSVSTestInfo(), null, "purpose", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestProcedure_Scenario(), this.getVSVSScenarioSection(), null, "scenario", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestProcedure_Scenario(), thetestsetupPackage.getVTestSetupScenarioSection(), null, "scenario", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_ProcedureSteps(), this.getVSVSProcedureSteps(), null, "procedureSteps", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_TestScript(), this.getVSVSTestInfo(), null, "testScript", null, 0, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_TestCase(), this.getVSVSTestCase(), null, "testCase", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2667,14 +2173,14 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSStepConfigurations_Configuration(), this.getVSVSStepConfiguration(), null, "configuration", null, 1, -1, VSVSStepConfigurations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsStepConfigurationEClass, VSVSStepConfiguration.class, "VSVSStepConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSStepConfiguration_Configuration(), this.getVSVSPacketConfiguration(), null, "configuration", null, 1, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSStepConfiguration_FilterStatus(), this.getVSVSConfigurationStatus(), "filterStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVSVSStepConfiguration_PrintStatus(), this.getVSVSConfigurationStatus(), "printStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepConfiguration_Configuration(), thetestsetupPackage.getVTestSetupPacketConfiguration(), null, "configuration", null, 1, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepConfiguration_FilterStatus(), thetestsetupPackage.getVTestSetupConfigurationStatus(), "filterStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getVSVSStepConfiguration_PrintStatus(), thetestsetupPackage.getVTestSetupConfigurationStatus(), "printStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsStepInputsEClass, VSVSStepInputs.class, "VSVSStepInputs", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(vsvsStepActionEClass, VSVSStepAction.class, "VSVSStepAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSStepAction_SelectedAction(), this.getVSVSAction(), null, "selectedAction", null, 1, 1, VSVSStepAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepAction_SelectedAction(), thetestsetupPackage.getVTestSetupAction(), null, "selectedAction", null, 1, 1, VSVSStepAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepAction_Delay_value(), ecorePackage.getEString(), "delay_value", null, 0, 1, VSVSStepAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepAction_Delay_unit(), this.getVSVSTimeUnit(), "delay_unit", null, 0, 1, VSVSStepAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepAction_Span_value(), ecorePackage.getEString(), "span_value", null, 0, 1, VSVSStepAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2685,7 +2191,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsStepTelecommandEClass, VSVSStepTelecommand.class, "VSVSStepTelecommand", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSStepTelecommand_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSStepTelecommand_Interface(), this.getVSVSInterface(), null, "interface", null, 1, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepTelecommand_Interface(), thetestsetupPackage.getVTestSetupInterface(), null, "interface", null, 1, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepTelecommand_Delay_value(), ecorePackage.getEString(), "delay_value", null, 0, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepTelecommand_Delay_unit(), this.getVSVSTimeUnit(), "delay_unit", null, 0, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSStepTelecommand_TcData(), this.getVSVSStepTelecommandData(), null, "tcData", null, 1, 1, VSVSStepTelecommand.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2716,7 +2222,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsStepTelemetryEClass, VSVSStepTelemetry.class, "VSVSStepTelemetry", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSStepTelemetry_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSStepTelemetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSStepTelemetry_Interface(), this.getVSVSInterface(), null, "interface", null, 1, 1, VSVSStepTelemetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepTelemetry_Interface(), thetestsetupPackage.getVTestSetupInterface(), null, "interface", null, 1, 1, VSVSStepTelemetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSStepTelemetry_TmData(), this.getVSVSStepTelemetryData(), null, "tmData", null, 1, 1, VSVSStepTelemetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSStepTelemetry_TmHeader(), this.getVSVSStepTelemetryHeader(), null, "tmHeader", null, 0, 1, VSVSStepTelemetry.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -2742,15 +2248,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEClass(vsvsAdditionalInformationEClass, VSVSAdditionalInformation.class, "VSVSAdditionalInformation", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		// Initialize enums and add enum literals
-		initEEnum(vsvsActionTypeEEnum, VSVSActionType.class, "VSVSActionType");
-		addEEnumLiteral(vsvsActionTypeEEnum, VSVSActionType.INSTRUCTION);
-		addEEnumLiteral(vsvsActionTypeEEnum, VSVSActionType.CHECKING);
-
-		initEEnum(vsvsConfigurationStatusEEnum, VSVSConfigurationStatus.class, "VSVSConfigurationStatus");
-		addEEnumLiteral(vsvsConfigurationStatusEEnum, VSVSConfigurationStatus.NOT_SET);
-		addEEnumLiteral(vsvsConfigurationStatusEEnum, VSVSConfigurationStatus.OFF);
-		addEEnumLiteral(vsvsConfigurationStatusEEnum, VSVSConfigurationStatus.ON);
-
 		initEEnum(vsvsTimeUnitEEnum, VSVSTimeUnit.class, "VSVSTimeUnit");
 		addEEnumLiteral(vsvsTimeUnitEEnum, VSVSTimeUnit.MILISECONDS);
 		addEEnumLiteral(vsvsTimeUnitEEnum, VSVSTimeUnit.SECONDS);

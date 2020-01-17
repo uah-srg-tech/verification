@@ -8,35 +8,37 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs;
+package es.uah.aut.srg.micobs.svm.testsetup;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
 
 import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader;
+
 import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeader;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSVS Interface</b></em>'.
+ * A representation of the model object '<em><b>VTest Setup Interface</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader <em>Tc Header</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader <em>Tm Header</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getTcHeader <em>Tc Header</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getTmHeader <em>Tm Header</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface()
+ * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface()
  * @model
  * @generated
  */
-public interface VSVSInterface extends EObject {
+public interface VTestSetupInterface extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -47,14 +49,14 @@ public interface VSVSInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Name()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -73,14 +75,14 @@ public interface VSVSInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Id()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface_Id()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getId();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -99,14 +101,14 @@ public interface VSVSInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
 	 * @see #setDescription(DRun)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_Description()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface_Description()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	DRun getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' containment reference.
@@ -125,14 +127,14 @@ public interface VSVSInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tc Header</em>' reference.
 	 * @see #setTcHeader(TMTCIFTCHeader)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_TcHeader()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface_TcHeader()
 	 * @model required="true"
 	 * @generated
 	 */
 	TMTCIFTCHeader getTcHeader();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader <em>Tc Header</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getTcHeader <em>Tc Header</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tc Header</em>' reference.
@@ -151,14 +153,14 @@ public interface VSVSInterface extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Tm Header</em>' reference.
 	 * @see #setTmHeader(TMTCIFTMHeader)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSInterface_TmHeader()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupInterface_TmHeader()
 	 * @model required="true"
 	 * @generated
 	 */
 	TMTCIFTMHeader getTmHeader();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader <em>Tm Header</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface#getTmHeader <em>Tm Header</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Tm Header</em>' reference.
@@ -167,4 +169,4 @@ public interface VSVSInterface extends EObject {
 	 */
 	void setTmHeader(TMTCIFTMHeader value);
 
-} // VSVSInterface
+} // VTestSetupInterface

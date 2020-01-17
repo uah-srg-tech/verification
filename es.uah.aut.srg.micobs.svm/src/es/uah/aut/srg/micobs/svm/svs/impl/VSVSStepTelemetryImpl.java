@@ -10,12 +10,12 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -70,7 +70,7 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSInterface interface_;
+	protected VTestSetupInterface interface_;
 
 	/**
 	 * The cached value of the '{@link #getTmData() <em>Tm Data</em>}' containment reference.
@@ -137,10 +137,10 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSInterface getInterface() {
+	public VTestSetupInterface getInterface() {
 		if (interface_ != null && interface_.eIsProxy()) {
 			InternalEObject oldInterface = (InternalEObject)interface_;
-			interface_ = (VSVSInterface)eResolveProxy(oldInterface);
+			interface_ = (VTestSetupInterface)eResolveProxy(oldInterface);
 			if (interface_ != oldInterface) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_TELEMETRY__INTERFACE, oldInterface, interface_));
@@ -154,7 +154,7 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSInterface basicGetInterface() {
+	public VTestSetupInterface basicGetInterface() {
 		return interface_;
 	}
 
@@ -163,8 +163,8 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInterface(VSVSInterface newInterface) {
-		VSVSInterface oldInterface = interface_;
+	public void setInterface(VTestSetupInterface newInterface) {
+		VTestSetupInterface oldInterface = interface_;
 		interface_ = newInterface;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELEMETRY__INTERFACE, oldInterface, interface_));
@@ -305,7 +305,7 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 				setName((String)newValue);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY__INTERFACE:
-				setInterface((VSVSInterface)newValue);
+				setInterface((VTestSetupInterface)newValue);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY__TM_DATA:
 				setTmData((VSVSStepTelemetryData)newValue);
@@ -329,7 +329,7 @@ public class VSVSStepTelemetryImpl extends MinimalEObjectImpl.Container implemen
 				setName(NAME_EDEFAULT);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY__INTERFACE:
-				setInterface((VSVSInterface)null);
+				setInterface((VTestSetupInterface)null);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY__TM_DATA:
 				setTmData((VSVSStepTelemetryData)null);

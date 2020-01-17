@@ -8,12 +8,12 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs.impl;
+package es.uah.aut.srg.micobs.svm.testsetup.impl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
-import es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration;
-import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
@@ -25,20 +25,20 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Selected Configuration</b></em>'.
+ * An implementation of the model object '<em><b>VTest Setup Selected Configuration</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl#getConfiguration <em>Configuration</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl#getDefaultFilterStatus <em>Default Filter Status</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl#getDefaultPrintStatus <em>Default Print Status</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getDefaultFilterStatus <em>Default Filter Status</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getDefaultPrintStatus <em>Default Print Status</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container implements VSVSSelectedConfiguration {
+public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Container implements VTestSetupSelectedConfiguration {
 	/**
 	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -47,7 +47,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSPacketConfiguration configuration;
+	protected VTestSetupPacketConfiguration configuration;
 
 	/**
 	 * The default value of the '{@link #getDefaultFilterStatus() <em>Default Filter Status</em>}' attribute.
@@ -57,7 +57,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSConfigurationStatus DEFAULT_FILTER_STATUS_EDEFAULT = VSVSConfigurationStatus.NOT_SET;
+	protected static final VTestSetupConfigurationStatus DEFAULT_FILTER_STATUS_EDEFAULT = VTestSetupConfigurationStatus.NOT_SET;
 
 	/**
 	 * The cached value of the '{@link #getDefaultFilterStatus() <em>Default Filter Status</em>}' attribute.
@@ -67,7 +67,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSConfigurationStatus defaultFilterStatus = DEFAULT_FILTER_STATUS_EDEFAULT;
+	protected VTestSetupConfigurationStatus defaultFilterStatus = DEFAULT_FILTER_STATUS_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getDefaultPrintStatus() <em>Default Print Status</em>}' attribute.
@@ -77,7 +77,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSConfigurationStatus DEFAULT_PRINT_STATUS_EDEFAULT = VSVSConfigurationStatus.NOT_SET;
+	protected static final VTestSetupConfigurationStatus DEFAULT_PRINT_STATUS_EDEFAULT = VTestSetupConfigurationStatus.NOT_SET;
 
 	/**
 	 * The cached value of the '{@link #getDefaultPrintStatus() <em>Default Print Status</em>}' attribute.
@@ -87,14 +87,14 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSConfigurationStatus defaultPrintStatus = DEFAULT_PRINT_STATUS_EDEFAULT;
+	protected VTestSetupConfigurationStatus defaultPrintStatus = DEFAULT_PRINT_STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSSelectedConfigurationImpl() {
+	protected VTestSetupSelectedConfigurationImpl() {
 		super();
 	}
 
@@ -105,7 +105,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_SELECTED_CONFIGURATION;
+		return testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION;
 	}
 
 	/**
@@ -113,13 +113,13 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSPacketConfiguration getConfiguration() {
+	public VTestSetupPacketConfiguration getConfiguration() {
 		if (configuration != null && configuration.eIsProxy()) {
 			InternalEObject oldConfiguration = (InternalEObject)configuration;
-			configuration = (VSVSPacketConfiguration)eResolveProxy(oldConfiguration);
+			configuration = (VTestSetupPacketConfiguration)eResolveProxy(oldConfiguration);
 			if (configuration != oldConfiguration) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
 			}
 		}
 		return configuration;
@@ -130,7 +130,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSPacketConfiguration basicGetConfiguration() {
+	public VTestSetupPacketConfiguration basicGetConfiguration() {
 		return configuration;
 	}
 
@@ -139,11 +139,11 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConfiguration(VSVSPacketConfiguration newConfiguration) {
-		VSVSPacketConfiguration oldConfiguration = configuration;
+	public void setConfiguration(VTestSetupPacketConfiguration newConfiguration) {
+		VTestSetupPacketConfiguration oldConfiguration = configuration;
 		configuration = newConfiguration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
 	}
 
 	/**
@@ -151,7 +151,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSConfigurationStatus getDefaultFilterStatus() {
+	public VTestSetupConfigurationStatus getDefaultFilterStatus() {
 		return defaultFilterStatus;
 	}
 
@@ -160,11 +160,11 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultFilterStatus(VSVSConfigurationStatus newDefaultFilterStatus) {
-		VSVSConfigurationStatus oldDefaultFilterStatus = defaultFilterStatus;
+	public void setDefaultFilterStatus(VTestSetupConfigurationStatus newDefaultFilterStatus) {
+		VTestSetupConfigurationStatus oldDefaultFilterStatus = defaultFilterStatus;
 		defaultFilterStatus = newDefaultFilterStatus == null ? DEFAULT_FILTER_STATUS_EDEFAULT : newDefaultFilterStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS, oldDefaultFilterStatus, defaultFilterStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS, oldDefaultFilterStatus, defaultFilterStatus));
 	}
 
 	/**
@@ -172,7 +172,7 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSConfigurationStatus getDefaultPrintStatus() {
+	public VTestSetupConfigurationStatus getDefaultPrintStatus() {
 		return defaultPrintStatus;
 	}
 
@@ -181,11 +181,11 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setDefaultPrintStatus(VSVSConfigurationStatus newDefaultPrintStatus) {
-		VSVSConfigurationStatus oldDefaultPrintStatus = defaultPrintStatus;
+	public void setDefaultPrintStatus(VTestSetupConfigurationStatus newDefaultPrintStatus) {
+		VTestSetupConfigurationStatus oldDefaultPrintStatus = defaultPrintStatus;
 		defaultPrintStatus = newDefaultPrintStatus == null ? DEFAULT_PRINT_STATUS_EDEFAULT : newDefaultPrintStatus;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS, oldDefaultPrintStatus, defaultPrintStatus));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS, oldDefaultPrintStatus, defaultPrintStatus));
 	}
 
 	/**
@@ -196,12 +196,12 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				if (resolve) return getConfiguration();
 				return basicGetConfiguration();
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
 				return getDefaultFilterStatus();
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				return getDefaultPrintStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -215,14 +215,14 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VSVSPacketConfiguration)newValue);
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
+				setConfiguration((VTestSetupPacketConfiguration)newValue);
 				return;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
-				setDefaultFilterStatus((VSVSConfigurationStatus)newValue);
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
+				setDefaultFilterStatus((VTestSetupConfigurationStatus)newValue);
 				return;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
-				setDefaultPrintStatus((VSVSConfigurationStatus)newValue);
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
+				setDefaultPrintStatus((VTestSetupConfigurationStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,13 +236,13 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VSVSPacketConfiguration)null);
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
+				setConfiguration((VTestSetupPacketConfiguration)null);
 				return;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
 				setDefaultFilterStatus(DEFAULT_FILTER_STATUS_EDEFAULT);
 				return;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				setDefaultPrintStatus(DEFAULT_PRINT_STATUS_EDEFAULT);
 				return;
 		}
@@ -257,11 +257,11 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__CONFIGURATION:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				return configuration != null;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
 				return defaultFilterStatus != DEFAULT_FILTER_STATUS_EDEFAULT;
-			case svsPackage.VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				return defaultPrintStatus != DEFAULT_PRINT_STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -285,4 +285,4 @@ public class VSVSSelectedConfigurationImpl extends MinimalEObjectImpl.Container 
 		return result.toString();
 	}
 
-} //VSVSSelectedConfigurationImpl
+} //VTestSetupSelectedConfigurationImpl

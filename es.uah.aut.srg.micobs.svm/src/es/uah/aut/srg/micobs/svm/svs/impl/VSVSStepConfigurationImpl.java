@@ -10,11 +10,11 @@
  */
 package es.uah.aut.srg.micobs.svm.svs.impl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -45,7 +45,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSPacketConfiguration configuration;
+	protected VTestSetupPacketConfiguration configuration;
 	/**
 	 * The default value of the '{@link #getFilterStatus() <em>Filter Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,7 +54,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSConfigurationStatus FILTER_STATUS_EDEFAULT = VSVSConfigurationStatus.NOT_SET;
+	protected static final VTestSetupConfigurationStatus FILTER_STATUS_EDEFAULT = VTestSetupConfigurationStatus.NOT_SET;
 	/**
 	 * The cached value of the '{@link #getFilterStatus() <em>Filter Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -63,7 +63,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSConfigurationStatus filterStatus = FILTER_STATUS_EDEFAULT;
+	protected VTestSetupConfigurationStatus filterStatus = FILTER_STATUS_EDEFAULT;
 	/**
 	 * The default value of the '{@link #getPrintStatus() <em>Print Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -72,7 +72,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected static final VSVSConfigurationStatus PRINT_STATUS_EDEFAULT = VSVSConfigurationStatus.NOT_SET;
+	protected static final VTestSetupConfigurationStatus PRINT_STATUS_EDEFAULT = VTestSetupConfigurationStatus.NOT_SET;
 	/**
 	 * The cached value of the '{@link #getPrintStatus() <em>Print Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -81,7 +81,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSConfigurationStatus printStatus = PRINT_STATUS_EDEFAULT;
+	protected VTestSetupConfigurationStatus printStatus = PRINT_STATUS_EDEFAULT;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -106,10 +106,10 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSPacketConfiguration getConfiguration() {
+	public VTestSetupPacketConfiguration getConfiguration() {
 		if (configuration != null && configuration.eIsProxy()) {
 			InternalEObject oldConfiguration = (InternalEObject)configuration;
-			configuration = (VSVSPacketConfiguration)eResolveProxy(oldConfiguration);
+			configuration = (VTestSetupPacketConfiguration)eResolveProxy(oldConfiguration);
 			if (configuration != oldConfiguration) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
@@ -123,7 +123,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSPacketConfiguration basicGetConfiguration() {
+	public VTestSetupPacketConfiguration basicGetConfiguration() {
 		return configuration;
 	}
 
@@ -132,8 +132,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConfiguration(VSVSPacketConfiguration newConfiguration) {
-		VSVSPacketConfiguration oldConfiguration = configuration;
+	public void setConfiguration(VTestSetupPacketConfiguration newConfiguration) {
+		VTestSetupPacketConfiguration oldConfiguration = configuration;
 		configuration = newConfiguration;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
@@ -144,7 +144,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSConfigurationStatus getFilterStatus() {
+	public VTestSetupConfigurationStatus getFilterStatus() {
 		return filterStatus;
 	}
 
@@ -153,8 +153,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFilterStatus(VSVSConfigurationStatus newFilterStatus) {
-		VSVSConfigurationStatus oldFilterStatus = filterStatus;
+	public void setFilterStatus(VTestSetupConfigurationStatus newFilterStatus) {
+		VTestSetupConfigurationStatus oldFilterStatus = filterStatus;
 		filterStatus = newFilterStatus == null ? FILTER_STATUS_EDEFAULT : newFilterStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS, oldFilterStatus, filterStatus));
@@ -165,7 +165,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSConfigurationStatus getPrintStatus() {
+	public VTestSetupConfigurationStatus getPrintStatus() {
 		return printStatus;
 	}
 
@@ -174,8 +174,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setPrintStatus(VSVSConfigurationStatus newPrintStatus) {
-		VSVSConfigurationStatus oldPrintStatus = printStatus;
+	public void setPrintStatus(VTestSetupConfigurationStatus newPrintStatus) {
+		VTestSetupConfigurationStatus oldPrintStatus = printStatus;
 		printStatus = newPrintStatus == null ? PRINT_STATUS_EDEFAULT : newPrintStatus;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_CONFIGURATION__PRINT_STATUS, oldPrintStatus, printStatus));
@@ -209,13 +209,13 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VSVSPacketConfiguration)newValue);
+				setConfiguration((VTestSetupPacketConfiguration)newValue);
 				return;
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
-				setFilterStatus((VSVSConfigurationStatus)newValue);
+				setFilterStatus((VTestSetupConfigurationStatus)newValue);
 				return;
 			case svsPackage.VSVS_STEP_CONFIGURATION__PRINT_STATUS:
-				setPrintStatus((VSVSConfigurationStatus)newValue);
+				setPrintStatus((VTestSetupConfigurationStatus)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -230,7 +230,7 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VSVSPacketConfiguration)null);
+				setConfiguration((VTestSetupPacketConfiguration)null);
 				return;
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
 				setFilterStatus(FILTER_STATUS_EDEFAULT);

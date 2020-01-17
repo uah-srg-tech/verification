@@ -8,16 +8,20 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs.impl;
+package es.uah.aut.srg.micobs.svm.testsetup.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
-import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
-import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
 import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeader;
+
 import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeader;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -26,22 +30,22 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Interface</b></em>'.
+ * An implementation of the model object '<em><b>VTest Setup Interface</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl#getDescription <em>Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl#getTcHeader <em>Tc Header</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl#getTmHeader <em>Tm Header</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getTcHeader <em>Tc Header</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getTmHeader <em>Tm Header</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements VSVSInterface {
+public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implements VTestSetupInterface {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -51,6 +55,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected static final String NAME_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -60,6 +65,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -69,6 +75,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected static final String ID_EDEFAULT = null;
+
 	/**
 	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -78,6 +85,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 * @ordered
 	 */
 	protected String id = ID_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -113,7 +121,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSInterfaceImpl() {
+	protected VTestSetupInterfaceImpl() {
 		super();
 	}
 
@@ -124,7 +132,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_INTERFACE;
+		return testsetupPackage.Literals.VTEST_SETUP_INTERFACE;
 	}
 
 	/**
@@ -145,7 +153,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__NAME, oldName, name));
 	}
 
 	/**
@@ -166,7 +174,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		String oldId = id;
 		id = newId;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__ID, oldId, id));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__ID, oldId, id));
 	}
 
 	/**
@@ -187,7 +195,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		DRun oldDescription = description;
 		description = newDescription;
 		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__DESCRIPTION, oldDescription, newDescription);
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION, oldDescription, newDescription);
 			if (msgs == null) msgs = notification; else msgs.add(notification);
 		}
 		return msgs;
@@ -202,14 +210,14 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		if (newDescription != description) {
 			NotificationChain msgs = null;
 			if (description != null)
-				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_INTERFACE__DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)description).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION, null, msgs);
 			if (newDescription != null)
-				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_INTERFACE__DESCRIPTION, null, msgs);
+				msgs = ((InternalEObject)newDescription).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION, null, msgs);
 			msgs = basicSetDescription(newDescription, msgs);
 			if (msgs != null) msgs.dispatch();
 		}
 		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__DESCRIPTION, newDescription, newDescription));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION, newDescription, newDescription));
 	}
 
 	/**
@@ -223,7 +231,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 			tcHeader = (TMTCIFTCHeader)eResolveProxy(oldTcHeader);
 			if (tcHeader != oldTcHeader) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_INTERFACE__TC_HEADER, oldTcHeader, tcHeader));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER, oldTcHeader, tcHeader));
 			}
 		}
 		return tcHeader;
@@ -247,7 +255,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		TMTCIFTCHeader oldTcHeader = tcHeader;
 		tcHeader = newTcHeader;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__TC_HEADER, oldTcHeader, tcHeader));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER, oldTcHeader, tcHeader));
 	}
 
 	/**
@@ -261,7 +269,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 			tmHeader = (TMTCIFTMHeader)eResolveProxy(oldTmHeader);
 			if (tmHeader != oldTmHeader) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_INTERFACE__TM_HEADER, oldTmHeader, tmHeader));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER, oldTmHeader, tmHeader));
 			}
 		}
 		return tmHeader;
@@ -285,7 +293,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		TMTCIFTMHeader oldTmHeader = tmHeader;
 		tmHeader = newTmHeader;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_INTERFACE__TM_HEADER, oldTmHeader, tmHeader));
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER, oldTmHeader, tmHeader));
 	}
 
 	/**
@@ -296,7 +304,7 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_INTERFACE__DESCRIPTION:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				return basicSetDescription(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -310,16 +318,16 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_INTERFACE__NAME:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				return getName();
-			case svsPackage.VSVS_INTERFACE__ID:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
 				return getId();
-			case svsPackage.VSVS_INTERFACE__DESCRIPTION:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				return getDescription();
-			case svsPackage.VSVS_INTERFACE__TC_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
 				if (resolve) return getTcHeader();
 				return basicGetTcHeader();
-			case svsPackage.VSVS_INTERFACE__TM_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER:
 				if (resolve) return getTmHeader();
 				return basicGetTmHeader();
 		}
@@ -334,19 +342,19 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_INTERFACE__NAME:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				setName((String)newValue);
 				return;
-			case svsPackage.VSVS_INTERFACE__ID:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
 				setId((String)newValue);
 				return;
-			case svsPackage.VSVS_INTERFACE__DESCRIPTION:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				setDescription((DRun)newValue);
 				return;
-			case svsPackage.VSVS_INTERFACE__TC_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
 				setTcHeader((TMTCIFTCHeader)newValue);
 				return;
-			case svsPackage.VSVS_INTERFACE__TM_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER:
 				setTmHeader((TMTCIFTMHeader)newValue);
 				return;
 		}
@@ -361,19 +369,19 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_INTERFACE__NAME:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case svsPackage.VSVS_INTERFACE__ID:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
 				setId(ID_EDEFAULT);
 				return;
-			case svsPackage.VSVS_INTERFACE__DESCRIPTION:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				setDescription((DRun)null);
 				return;
-			case svsPackage.VSVS_INTERFACE__TC_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
 				setTcHeader((TMTCIFTCHeader)null);
 				return;
-			case svsPackage.VSVS_INTERFACE__TM_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER:
 				setTmHeader((TMTCIFTMHeader)null);
 				return;
 		}
@@ -388,15 +396,15 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_INTERFACE__NAME:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case svsPackage.VSVS_INTERFACE__ID:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
 				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case svsPackage.VSVS_INTERFACE__DESCRIPTION:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				return description != null;
-			case svsPackage.VSVS_INTERFACE__TC_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
 				return tcHeader != null;
-			case svsPackage.VSVS_INTERFACE__TM_HEADER:
+			case testsetupPackage.VTEST_SETUP_INTERFACE__TM_HEADER:
 				return tmHeader != null;
 		}
 		return super.eIsSet(featureID);
@@ -420,4 +428,4 @@ public class VSVSInterfaceImpl extends MinimalEObjectImpl.Container implements V
 		return result.toString();
 	}
 
-} //VSVSInterfaceImpl
+} //VTestSetupInterfaceImpl

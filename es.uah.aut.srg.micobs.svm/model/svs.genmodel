@@ -4,15 +4,11 @@
     modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
     modelName="Svs" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.genmodel#//doctpl ../../es.uah.aut.srg.tmtcif/model/enum.genmodel#//enum ../../es.uah.aut.srg.tmtcif/model/fieldvalue.genmodel#//fieldvalue ../../es.uah.aut.srg.tmtcif/model/tc.genmodel#//tc ../../es.uah.aut.srg.tmtcif/model/tcheader.genmodel#//tcheader tctemplate.genmodel#//tctemplate tdm.genmodel#//tdm ../../es.uah.aut.srg.tmtcif/model/tm.genmodel#//tm ../../es.uah.aut.srg.tmtcif/model/tmheader.genmodel#//tmheader tmtemplate.genmodel#//tmtemplate vdm.genmodel#//vdm"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.genmodel#//doctpl ../../es.uah.aut.srg.tmtcif/model/enum.genmodel#//enum ../../es.uah.aut.srg.tmtcif/model/fieldvalue.genmodel#//fieldvalue ../../es.uah.aut.srg.tmtcif/model/tc.genmodel#//tc ../../es.uah.aut.srg.tmtcif/model/tcheader.genmodel#//tcheader tctemplate.genmodel#//tctemplate tdm.genmodel#//tdm testsetup.genmodel#//testsetup ../../es.uah.aut.srg.tmtcif/model/tm.genmodel#//tm ../../es.uah.aut.srg.tmtcif/model/tmheader.genmodel#//tmheader tmtemplate.genmodel#//tmtemplate vdm.genmodel#//vdm"
     operationReflection="true" importOrganizing="true">
   <foreignModel>svs.ecore</foreignModel>
   <genPackages prefix="svs" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
       ecorePackage="svs.ecore#/">
-    <genEnums typeSafeEnumCompatible="false" ecoreEnum="svs.ecore#//VSVSConfigurationStatus">
-      <genEnumLiterals ecoreEnumLiteral="svs.ecore#//VSVSConfigurationStatus/off"/>
-      <genEnumLiterals ecoreEnumLiteral="svs.ecore#//VSVSConfigurationStatus/on"/>
-    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="svs.ecore#//VSVSTimeUnit">
       <genEnumLiterals ecoreEnumLiteral="svs.ecore#//VSVSTimeUnit/miliseconds"/>
       <genEnumLiterals ecoreEnumLiteral="svs.ecore#//VSVSTimeUnit/seconds"/>
@@ -76,51 +72,8 @@
     </genClasses>
     <genClasses ecoreClass="svs.ecore#//VSVSTestingSpecificationDesign">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/general"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/interfaces"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/configurations"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/actions"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/scenarios"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/testSetup"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSTestingSpecificationDesign/testDesigns"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSInterfacesSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInterfacesSection/interfaces"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSInterface">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSInterface/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInterface/description"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInterface/tcHeader"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSInterface/tmHeader"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSConfigurationsSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSConfigurationsSection/configurations"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSConfiguration">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSConfiguration/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSConfiguration/description"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSActionsSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSActionsSection/action"/>
-    </genClasses>
-    <genClasses image="false" ecoreClass="svs.ecore#//VSVSAction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSAction/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSAction/description"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSCheckingAction">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSCheckingAction/checking_period_value"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSCheckingAction/checking_period_unit"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSInstructionAction"/>
-    <genClasses ecoreClass="svs.ecore#//VSVSScenariosSection">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSScenariosSection/scenarios"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSScenarioSection">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSScenarioSection/supportedInterface"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSScenarioSection/selectedConfiguration"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSScenarioSection/supportedAction"/>
-    </genClasses>
-    <genClasses ecoreClass="svs.ecore#//VSVSSelectedConfiguration">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSSelectedConfiguration/configuration"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSSelectedConfiguration/defaultStatus"/>
     </genClasses>
     <genClasses ecoreClass="svs.ecore#//VSVSTestDesign">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSTestDesign/name"/>
@@ -174,13 +127,16 @@
     </genClasses>
     <genClasses ecoreClass="svs.ecore#//VSVSStepConfiguration">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSStepConfiguration/configuration"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepConfiguration/status"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepConfiguration/filterStatus"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepConfiguration/printStatus"/>
     </genClasses>
     <genClasses ecoreClass="svs.ecore#//VSVSStepInputs"/>
     <genClasses ecoreClass="svs.ecore#//VSVSStepAction">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSStepAction/selectedAction"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepAction/delay_value"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepAction/delay_unit"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepAction/span_value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svs.ecore#//VSVSStepAction/span_unit"/>
     </genClasses>
     <genClasses ecoreClass="svs.ecore#//VSVSStepTelecommandSequence">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svs.ecore#//VSVSStepTelecommandSequence/telecommand"/>

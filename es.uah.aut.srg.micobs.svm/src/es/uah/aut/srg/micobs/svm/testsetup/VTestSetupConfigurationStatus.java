@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs;
+package es.uah.aut.srg.micobs.svm.testsetup;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -18,95 +18,121 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>VSVS Action Type</b></em>',
+ * A representation of the literals of the enumeration '<em><b>VTest Setup Configuration Status</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSActionType()
+ * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupConfigurationStatus()
  * @model
  * @generated
  */
-public enum VSVSActionType implements Enumerator {
+public enum VTestSetupConfigurationStatus implements Enumerator {
 	/**
-	 * The '<em><b>Instruction</b></em>' literal object.
+	 * The '<em><b>Not set</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #INSTRUCTION_VALUE
+	 * @see #NOT_SET_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	INSTRUCTION(0, "instruction", "instruction"),
+	NOT_SET(0, "not_set", "not_set"),
 
 	/**
-	 * The '<em><b>Checking</b></em>' literal object.
+	 * The '<em><b>Off</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #CHECKING_VALUE
+	 * @see #OFF_VALUE
 	 * @generated
 	 * @ordered
 	 */
-	CHECKING(1, "checking", "checking");
+	OFF(1, "off", "off"),
 
 	/**
-	 * The '<em><b>Instruction</b></em>' literal value.
+	 * The '<em><b>On</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #ON_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	ON(2, "on", "on");
+
+	/**
+	 * The '<em><b>Not set</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Instruction</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Not set</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #INSTRUCTION
-	 * @model name="instruction"
+	 * @see #NOT_SET
+	 * @model name="not_set"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int INSTRUCTION_VALUE = 0;
+	public static final int NOT_SET_VALUE = 0;
 
 	/**
-	 * The '<em><b>Checking</b></em>' literal value.
+	 * The '<em><b>Off</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of '<em><b>Checking</b></em>' literal object isn't clear,
+	 * If the meaning of '<em><b>Off</b></em>' literal object isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @see #CHECKING
-	 * @model name="checking"
+	 * @see #OFF
+	 * @model name="off"
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CHECKING_VALUE = 1;
+	public static final int OFF_VALUE = 1;
 
 	/**
-	 * An array of all the '<em><b>VSVS Action Type</b></em>' enumerators.
+	 * The '<em><b>On</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>On</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #ON
+	 * @model name="on"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int ON_VALUE = 2;
+
+	/**
+	 * An array of all the '<em><b>VTest Setup Configuration Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private static final VSVSActionType[] VALUES_ARRAY =
-		new VSVSActionType[] {
-			INSTRUCTION,
-			CHECKING,
+	private static final VTestSetupConfigurationStatus[] VALUES_ARRAY =
+		new VTestSetupConfigurationStatus[] {
+			NOT_SET,
+			OFF,
+			ON,
 		};
 
 	/**
-	 * A public read-only list of all the '<em><b>VSVS Action Type</b></em>' enumerators.
+	 * A public read-only list of all the '<em><b>VTest Setup Configuration Status</b></em>' enumerators.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static final List<VSVSActionType> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+	public static final List<VTestSetupConfigurationStatus> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
 	/**
-	 * Returns the '<em><b>VSVS Action Type</b></em>' literal with the specified literal value.
+	 * Returns the '<em><b>VTest Setup Configuration Status</b></em>' literal with the specified literal value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param literal the literal.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static VSVSActionType get(String literal) {
+	public static VTestSetupConfigurationStatus get(String literal) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			VSVSActionType result = VALUES_ARRAY[i];
+			VTestSetupConfigurationStatus result = VALUES_ARRAY[i];
 			if (result.toString().equals(literal)) {
 				return result;
 			}
@@ -115,16 +141,16 @@ public enum VSVSActionType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>VSVS Action Type</b></em>' literal with the specified name.
+	 * Returns the '<em><b>VTest Setup Configuration Status</b></em>' literal with the specified name.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param name the name.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static VSVSActionType getByName(String name) {
+	public static VTestSetupConfigurationStatus getByName(String name) {
 		for (int i = 0; i < VALUES_ARRAY.length; ++i) {
-			VSVSActionType result = VALUES_ARRAY[i];
+			VTestSetupConfigurationStatus result = VALUES_ARRAY[i];
 			if (result.getName().equals(name)) {
 				return result;
 			}
@@ -133,17 +159,18 @@ public enum VSVSActionType implements Enumerator {
 	}
 
 	/**
-	 * Returns the '<em><b>VSVS Action Type</b></em>' literal with the specified integer value.
+	 * Returns the '<em><b>VTest Setup Configuration Status</b></em>' literal with the specified integer value.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the integer value.
 	 * @return the matching enumerator or <code>null</code>.
 	 * @generated
 	 */
-	public static VSVSActionType get(int value) {
+	public static VTestSetupConfigurationStatus get(int value) {
 		switch (value) {
-			case INSTRUCTION_VALUE: return INSTRUCTION;
-			case CHECKING_VALUE: return CHECKING;
+			case NOT_SET_VALUE: return NOT_SET;
+			case OFF_VALUE: return OFF;
+			case ON_VALUE: return ON;
 		}
 		return null;
 	}
@@ -175,7 +202,7 @@ public enum VSVSActionType implements Enumerator {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private VSVSActionType(int value, String name, String literal) {
+	private VTestSetupConfigurationStatus(int value, String name, String literal) {
 		this.value = value;
 		this.name = name;
 		this.literal = literal;
@@ -219,4 +246,4 @@ public enum VSVSActionType implements Enumerator {
 		return literal;
 	}
 	
-} //VSVSActionType
+} //VTestSetupConfigurationStatus

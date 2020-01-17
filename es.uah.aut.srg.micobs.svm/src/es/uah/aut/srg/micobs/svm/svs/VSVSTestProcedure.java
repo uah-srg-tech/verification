@@ -13,6 +13,7 @@ package es.uah.aut.srg.micobs.svm.svs;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -125,12 +126,12 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Scenario</em>' reference.
-	 * @see #setScenario(VSVSScenarioSection)
+	 * @see #setScenario(VTestSetupScenarioSection)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure_Scenario()
 	 * @model required="true"
 	 * @generated
 	 */
-	VSVSScenarioSection getScenario();
+	VTestSetupScenarioSection getScenario();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getScenario <em>Scenario</em>}' reference.
@@ -140,7 +141,7 @@ public interface VSVSTestProcedure extends DFixedSection {
 	 * @see #getScenario()
 	 * @generated
 	 */
-	void setScenario(VSVSScenarioSection value);
+	void setScenario(VTestSetupScenarioSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Procedure Steps</b></em>' containment reference.

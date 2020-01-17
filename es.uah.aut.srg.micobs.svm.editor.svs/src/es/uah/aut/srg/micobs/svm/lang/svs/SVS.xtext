@@ -7,11 +7,12 @@ import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 import "http://srg.aut.uah.es/micobs/svm/vdm" as vdm
 import "http://srg.aut.uah.es/micobs/svm/tdm" as tdm
 import "http://srg.aut.uah.es/micobs/doctpl/doctpl" as doctpl
-import "http://srg.aut.uah.es/tmtcif/tcheader" as tcheader
+import "http://srg.aut.uah.es/micobs/svm/testsetup" as testsetup
 import "http://srg.aut.uah.es/micobs/svm/tctemplate" as tctemplate
-import "http://srg.aut.uah.es/tmtcif/tc" as tc
-import "http://srg.aut.uah.es/tmtcif/tmheader" as tmheader
 import "http://srg.aut.uah.es/micobs/svm/tmtemplate" as tmtemplate
+import "http://srg.aut.uah.es/tmtcif/tcheader" as tcheader
+import "http://srg.aut.uah.es/tmtcif/tmheader" as tmheader
+import "http://srg.aut.uah.es/tmtcif/tc" as tc
 import "http://srg.aut.uah.es/tmtcif/tm" as tm
 import "http://srg.aut.uah.es/tmtcif/fieldvalue" as fieldvalue
 import "http://srg.aut.uah.es/tmtcif/enum" as enum_
@@ -257,18 +258,23 @@ VSVSTaskIdentification returns VSVSTaskIdentification:
 VSVSTestingSpecificationDesign returns VSVSTestingSpecificationDesign:
 	'<TestingSpecificationDesign>'
 		'<General>' general=VSVSFixedSection '</General>'
-		'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>'
-		('<PacketConfigurations>' configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')?
-		('<Actions>' actions=VSVSActionsSection '</Actions>')?
-		'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
+		testSetup=VTestSetupTestSetup
 		(testDesigns+=VSVSTestDesign)+
 	'</TestingSpecificationDesign>';
 
-VSVSInterfacesSection returns VSVSInterfacesSection:
-{VSVSInterfacesSection}
-	(interfaces+=VSVSInterface)+;
+VTestSetupTestSetup returns testsetup::VTestSetupTestSetup:
+	'<TestSetup>'
+		'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>'
+		('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')?
+		('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
+		'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
+	'</TestSetup>';
+	
+VTestSetupInterfacesSection returns testsetup::VTestSetupInterfacesSection:
+{testsetup::VTestSetupInterfacesSection}
+	(interfaces+=VTestSetupInterface)+;
 
-VSVSInterface returns VSVSInterface:
+VTestSetupInterface returns testsetup::VTestSetupInterface:
 	'<Interface'
 		'name=' name=STRING
 		'id=' id=UINT_STRING
@@ -278,11 +284,11 @@ VSVSInterface returns VSVSInterface:
 		description=DRun
 	'</Interface>';
 
-VSVSPacketConfigurationsSection returns VSVSPacketConfigurationsSection:
-{VSVSPacketConfigurationsSection}
-	(packetConfigurations+=VSVSPacketConfiguration)+;
+VTestSetupPacketConfigurationsSection returns testsetup::VTestSetupPacketConfigurationsSection:
+{testsetup::VTestSetupPacketConfigurationsSection}
+	(packetConfigurations+=VTestSetupPacketConfiguration)+;
 
-VSVSPacketConfiguration returns VSVSPacketConfiguration:
+VTestSetupPacketConfiguration returns testsetup::VTestSetupPacketConfiguration:
 	'<PacketConfiguration'
 		'name=' name=STRING
 		'id=' id=UINT_STRING
@@ -290,44 +296,44 @@ VSVSPacketConfiguration returns VSVSPacketConfiguration:
 		description=DRun
 	'</PacketConfiguration>';
 
-VSVSActionsSection returns VSVSActionsSection:
-{VSVSActionsSection}
-	(action+=VSVSAction)+;
+VTestSetupActionsSection returns testsetup::VTestSetupActionsSection:
+{testsetup::VTestSetupActionsSection}
+	(action+=VTestSetupAction)+;
 
-VSVSAction returns VSVSAction:
+VTestSetupAction returns testsetup::VTestSetupAction:
 	'<Action'
 		'name=' name=STRING
-		'type=' type=VSVSActionType
+		'type=' type=VTestSetupActionType
 		'>'
 		description=DBody
 	'</Action>';
 
-enum VSVSActionType returns VSVSActionType:
+enum VTestSetupActionType returns testsetup::VTestSetupActionType:
 	checking = '"checking"' | instruction = '"instruction"';
 
-VSVSScenariosSection returns VSVSScenariosSection:
-{VSVSScenariosSection}
-	(scenarios+=VSVSScenarioSection)+;
+VTestSetupScenariosSection returns testsetup::VTestSetupScenariosSection:
+{testsetup::VTestSetupScenariosSection}
+	(scenarios+=VTestSetupScenarioSection)+;
 
-VSVSScenarioSection returns VSVSScenarioSection:
+VTestSetupScenarioSection returns testsetup::VTestSetupScenarioSection:
 	'<Scenario'
 		'name=' name=STRING
 		'>'
-		('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
-		(selectedConfiguration+=VSVSSelectedConfiguration)*
-		('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+		('<Interface' 'ref=' supportedInterface+=[testsetup::VTestSetupInterface|STRING] '/>')+
+		(selectedConfiguration+=VTestSetupSelectedConfiguration)*
+		('<Action' 'ref=' supportedAction+=[testsetup::VTestSetupAction|STRING] '/>')*
 		body=DBody
 	'</Scenario>';
 
-VSVSSelectedConfiguration returns VSVSSelectedConfiguration:
+VTestSetupSelectedConfiguration returns testsetup::VTestSetupSelectedConfiguration:
 	'<Configuration'
-		'ref=' configuration=[VSVSPacketConfiguration|STRING]
-		'defaultFilterStatus=' defaultFilterStatus=VSVSConfigurationStatus
-		'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus
+		'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
+		'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
+		'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
 		'/>'
 ;
 
-enum VSVSConfigurationStatus returns VSVSConfigurationStatus:
+enum VTestSetupConfigurationStatus returns testsetup::VTestSetupConfigurationStatus:
 	off = '"off"' | on = '"on"';
 
 VSVSTestCases returns VSVSTestCases:
@@ -410,7 +416,7 @@ VSVSTestProcedure returns VSVSTestProcedure:
 		'>'
 		'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
 		'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
-		'<Scenario' 'ref='scenario=[VSVSScenarioSection|STRING] '/>'
+		'<Scenario' 'ref='scenario=[testsetup::VTestSetupScenarioSection|STRING] '/>'
 		('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+
 		procedureSteps=VSVSProcedureSteps
 		'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
@@ -447,9 +453,9 @@ VSVSStepConfigurations returns VSVSStepConfigurations:
 
 VSVSStepConfiguration returns VSVSStepConfiguration:
 	'<Configuration'
-		'ref=' configuration=[VSVSPacketConfiguration|STRING]
-		('filterStatus=' filterStatus=VSVSConfigurationStatus)?
-		('printStatus=' printStatus=VSVSConfigurationStatus)?
+		'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
+		('filterStatus=' filterStatus=VTestSetupConfigurationStatus)?
+		('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 		'/>'
 ;
 
@@ -458,7 +464,7 @@ VSVSStepAction | VSVSStepTelecommandSequence;
 
 VSVSStepAction returns VSVSStepAction:
 	'<Action'
-		'selectedAction=' selectedAction=[VSVSAction|STRING]
+		'selectedAction=' selectedAction=[testsetup::VTestSetupAction|STRING]
 		('delay_value=' delay_value=UINT_STRING
 		'delay_unit=' delay_unit=VSVSTimeUnit)?
 		('span_value=' span_value=UINT_STRING
@@ -476,7 +482,7 @@ VSVSStepTelecommandSequence returns VSVSStepTelecommandSequence:
 VSVSStepTelecommand returns VSVSStepTelecommand:
 	'<Telecommand'
 		'name=' name=STRING
-		'interface=' interface=[VSVSInterface|STRING]
+		'interface=' interface=[testsetup::VTestSetupInterface|STRING]
 		('delay_value=' delay_value=UINT_STRING
 		'delay_unit=' delay_unit=VSVSTimeUnit)?
 		'>'
@@ -548,7 +554,7 @@ enum VSVSStepTelemetrySetCheckmode returns VSVSStepTelemetrySetCheckmode:
 VSVSStepTelemetry returns VSVSStepTelemetry:
 	'<Telemetry'
 		'name=' name=STRING
-		'interface=' interface=[VSVSInterface|STRING]
+		'interface=' interface=[testsetup::VTestSetupInterface|STRING]
 	'>'
 		tmData=VSVSStepTelemetryData
 		(tmHeader=VSVSStepTelemetryHeader)?

@@ -25,13 +25,9 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
-import es.uah.aut.srg.micobs.svm.svs.VSVSAction;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
-import es.uah.aut.srg.micobs.svm.svs.VSVSInterface;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
-import es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
@@ -45,6 +41,10 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplateField;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
 import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplateField;
@@ -164,13 +164,13 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSScenarioSection_supportedInterface(VSVSTestingSpecificationDesign design, EReference reference) {
 		
-		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
-		interfaces.addAll(design.getInterfaces().getInterfaces());
+		Collection<VTestSetupInterface> interfaces = new HashSet<VTestSetupInterface>();
+		interfaces.addAll(design.getTestSetup().getInterfaces().getInterfaces());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VTestSetupInterface, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSInterface from) {
+			public IEObjectDescription apply(VTestSetupInterface from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -184,13 +184,13 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSScenarioSection_supportedAction(VSVSTestingSpecificationDesign design, EReference reference) {
 		
-		Collection<VSVSAction> actions = new HashSet<VSVSAction>();
-		actions.addAll(design.getActions().getAction());
+		Collection<VTestSetupAction> actions = new HashSet<VTestSetupAction>();
+		actions.addAll(design.getTestSetup().getActions().getAction());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(actions, new Function<VSVSAction, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(actions, new Function<VTestSetupAction, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSAction from) {
+			public IEObjectDescription apply(VTestSetupAction from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -204,13 +204,13 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSSelectedConfiguration_selectedConfiguration(VSVSTestingSpecificationDesign design, EReference reference) {
 		
-		Collection<VSVSPacketConfiguration> configurations = new HashSet<VSVSPacketConfiguration>();
-		configurations.addAll(design.getConfigurations().getPacketConfigurations());
+		Collection<VTestSetupPacketConfiguration> configurations = new HashSet<VTestSetupPacketConfiguration>();
+		configurations.addAll(design.getTestSetup().getConfigurations().getPacketConfigurations());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VSVSPacketConfiguration, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VTestSetupPacketConfiguration, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSPacketConfiguration from) {
+			public IEObjectDescription apply(VTestSetupPacketConfiguration from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -224,13 +224,13 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSStepTelecommand_interface(VSVSTestProcedure currTP, EReference reference) {
 		
-		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
+		Collection<VTestSetupInterface> interfaces = new HashSet<VTestSetupInterface>();
 		interfaces.addAll(currTP.getScenario().getSupportedInterface());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VTestSetupInterface, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSInterface from) {
+			public IEObjectDescription apply(VTestSetupInterface from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -244,13 +244,13 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSStepOutput_interface(VSVSTestProcedure currTP, EReference reference) {
 		
-		Collection<VSVSInterface> interfaces = new HashSet<VSVSInterface>();
+		Collection<VTestSetupInterface> interfaces = new HashSet<VTestSetupInterface>();
 		interfaces.addAll(currTP.getScenario().getSupportedInterface());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VSVSInterface, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(interfaces, new Function<VTestSetupInterface, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSInterface from) {
+			public IEObjectDescription apply(VTestSetupInterface from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -264,15 +264,15 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSStepConfiguration_configuration(VSVSTestProcedure currTP, EReference reference) {
 		
-		Collection<VSVSPacketConfiguration> configurations = new HashSet<VSVSPacketConfiguration>();
-		for(VSVSSelectedConfiguration selectedConfiguration : currTP.getScenario().getSelectedConfiguration()) {
+		Collection<VTestSetupPacketConfiguration> configurations = new HashSet<VTestSetupPacketConfiguration>();
+		for(VTestSetupSelectedConfiguration selectedConfiguration : currTP.getScenario().getSelectedConfiguration()) {
 			configurations.add(selectedConfiguration.getConfiguration());
 		}
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VSVSPacketConfiguration, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VTestSetupPacketConfiguration, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VSVSPacketConfiguration from) {
+			public IEObjectDescription apply(VTestSetupPacketConfiguration from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}
@@ -345,7 +345,7 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 		Collection<TMTCIFTCHeaderField> fields = new HashSet<TMTCIFTCHeaderField>();
 		
-		VSVSInterface tcInterface = ((VSVSStepTelecommand)stepTcHeader.eContainer()).getInterface();
+		VTestSetupInterface tcInterface = ((VSVSStepTelecommand)stepTcHeader.eContainer()).getInterface();
 		fields.addAll(tcInterface.getTcHeader().getFields());
 	
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTCHeaderField, IEObjectDescription>(){
@@ -399,7 +399,7 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 		Collection<TMTCIFTMHeaderField> fields = new HashSet<TMTCIFTMHeaderField>();
 		
-		VSVSInterface tmInterface = ((VSVSStepTelemetry)stepTmHeader.eContainer()).getInterface();
+		VTestSetupInterface tmInterface = ((VSVSStepTelemetry)stepTmHeader.eContainer()).getInterface();
 		fields.addAll(tmInterface.getTmHeader().getFields());
 	
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTMHeaderField, IEObjectDescription>(){

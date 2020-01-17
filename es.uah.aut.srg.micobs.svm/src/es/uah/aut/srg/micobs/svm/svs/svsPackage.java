@@ -1011,40 +1011,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference.
+	 * The feature id for the '<em><b>Test Setup</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Configurations</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__CONFIGURATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__ACTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Test Designs</b></em>' containment reference list.
@@ -1053,7 +1026,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
+	int VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1062,7 +1035,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSVS_TESTING_SPECIFICATION_DESIGN_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of operations of the '<em>VSVS Testing Specification Design</em>' class.
@@ -1074,528 +1047,6 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfacesSectionImpl <em>VSVS Interfaces Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfacesSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSInterfacesSection()
-	 * @generated
-	 */
-	int VSVS_INTERFACES_SECTION = 14;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACES_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACES_SECTION__INTERFACES = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Interfaces Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACES_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>VSVS Interfaces Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACES_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl <em>VSVS Interface</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSInterface()
-	 * @generated
-	 */
-	int VSVS_INTERFACE = 15;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE__ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE__DESCRIPTION = 2;
-
-	/**
-	 * The feature id for the '<em><b>Tc Header</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE__TC_HEADER = 3;
-
-	/**
-	 * The feature id for the '<em><b>Tm Header</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE__TM_HEADER = 4;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE_FEATURE_COUNT = 5;
-
-	/**
-	 * The number of operations of the '<em>VSVS Interface</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_INTERFACE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationsSectionImpl <em>VSVS Packet Configurations Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationsSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSPacketConfigurationsSection()
-	 * @generated
-	 */
-	int VSVS_PACKET_CONFIGURATIONS_SECTION = 16;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATIONS_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Packet Configurations</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Packet Configurations Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATIONS_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>VSVS Packet Configurations Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATIONS_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationImpl <em>VSVS Packet Configuration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSPacketConfiguration()
-	 * @generated
-	 */
-	int VSVS_PACKET_CONFIGURATION = 17;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATION__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATION__ID = 1;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATION__DESCRIPTION = 2;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Packet Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>VSVS Packet Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_PACKET_CONFIGURATION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionsSectionImpl <em>VSVS Actions Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionsSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSActionsSection()
-	 * @generated
-	 */
-	int VSVS_ACTIONS_SECTION = 18;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTIONS_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTIONS_SECTION__ACTION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Actions Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTIONS_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>VSVS Actions Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTIONS_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionImpl <em>VSVS Action</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAction()
-	 * @generated
-	 */
-	int VSVS_ACTION = 19;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTION__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTION__DESCRIPTION = 1;
-
-	/**
-	 * The feature id for the '<em><b>Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTION__TYPE = 2;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>VSVS Action</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_ACTION_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenariosSection()
-	 * @generated
-	 */
-	int VSVS_SCENARIOS_SECTION = 20;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIOS_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIOS_SECTION__SCENARIOS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Scenarios Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIOS_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of operations of the '<em>VSVS Scenarios Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIOS_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl <em>VSVS Scenario Section</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenarioSection()
-	 * @generated
-	 */
-	int VSVS_SCENARIO_SECTION = 21;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__SUBSECTIONS = VSVS_INSTANTIABLE_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__NAME = VSVS_INSTANTIABLE_SECTION__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Description</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__DESCRIPTION = VSVS_INSTANTIABLE_SECTION__DESCRIPTION;
-
-	/**
-	 * The feature id for the '<em><b>Body</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__BODY = VSVS_INSTANTIABLE_SECTION__BODY;
-
-	/**
-	 * The feature id for the '<em><b>Svs Instatiable Subsections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__SVS_INSTATIABLE_SUBSECTIONS = VSVS_INSTANTIABLE_SECTION__SVS_INSTATIABLE_SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Supported Interface</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__SUPPORTED_INTERFACE = VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Selected Configuration</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__SELECTED_CONFIGURATION = VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Supported Action</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION__SUPPORTED_ACTION = VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Scenario Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION_FEATURE_COUNT = VSVS_INSTANTIABLE_SECTION_FEATURE_COUNT + 3;
-
-	/**
-	 * The number of operations of the '<em>VSVS Scenario Section</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SCENARIO_SECTION_OPERATION_COUNT = VSVS_INSTANTIABLE_SECTION_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl <em>VSVS Selected Configuration</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSSelectedConfiguration()
-	 * @generated
-	 */
-	int VSVS_SELECTED_CONFIGURATION = 22;
-
-	/**
-	 * The feature id for the '<em><b>Configuration</b></em>' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SELECTED_CONFIGURATION__CONFIGURATION = 0;
-
-	/**
-	 * The feature id for the '<em><b>Default Filter Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Default Print Status</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = 2;
-
-	/**
-	 * The number of structural features of the '<em>VSVS Selected Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SELECTED_CONFIGURATION_FEATURE_COUNT = 3;
-
-	/**
-	 * The number of operations of the '<em>VSVS Selected Configuration</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_SELECTED_CONFIGURATION_OPERATION_COUNT = 0;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1603,7 +1054,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
 	 * @generated
 	 */
-	int VSVS_TEST_DESIGN = 23;
+	int VSVS_TEST_DESIGN = 14;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1676,7 +1127,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestInfo()
 	 * @generated
 	 */
-	int VSVS_TEST_INFO = 24;
+	int VSVS_TEST_INFO = 15;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1713,7 +1164,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCases()
 	 * @generated
 	 */
-	int VSVS_TEST_CASES = 25;
+	int VSVS_TEST_CASES = 16;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1786,7 +1237,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCase()
 	 * @generated
 	 */
-	int VSVS_TEST_CASE = 26;
+	int VSVS_TEST_CASE = 17;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1913,7 +1364,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedures()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURES = 27;
+	int VSVS_TEST_PROCEDURES = 18;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1968,7 +1419,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedure()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURE = 28;
+	int VSVS_TEST_PROCEDURE = 19;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2068,7 +1519,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEPS = 29;
+	int VSVS_PROCEDURE_STEPS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2114,7 +1565,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureStep()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEP = 30;
+	int VSVS_PROCEDURE_STEP = 21;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2205,7 +1656,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUTS = 41;
+	int VSVS_STEP_OUTPUTS = 32;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationsImpl <em>VSVS Step Configurations</em>}' class.
@@ -2215,7 +1666,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConfigurations()
 	 * @generated
 	 */
-	int VSVS_STEP_CONFIGURATIONS = 31;
+	int VSVS_STEP_CONFIGURATIONS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' containment reference list.
@@ -2252,7 +1703,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConfiguration()
 	 * @generated
 	 */
-	int VSVS_STEP_CONFIGURATION = 32;
+	int VSVS_STEP_CONFIGURATION = 23;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
@@ -2307,7 +1758,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUTS = 33;
+	int VSVS_STEP_INPUTS = 24;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Step Inputs</em>' class.
@@ -2335,7 +1786,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepAction()
 	 * @generated
 	 */
-	int VSVS_STEP_ACTION = 34;
+	int VSVS_STEP_ACTION = 25;
 
 	/**
 	 * The feature id for the '<em><b>Selected Action</b></em>' reference.
@@ -2408,7 +1859,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandSequence()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_SEQUENCE = 35;
+	int VSVS_STEP_TELECOMMAND_SEQUENCE = 26;
 
 	/**
 	 * The feature id for the '<em><b>Telecommand</b></em>' containment reference list.
@@ -2445,7 +1896,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommand()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND = 36;
+	int VSVS_STEP_TELECOMMAND = 27;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2527,7 +1978,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandData()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_DATA = 37;
+	int VSVS_STEP_TELECOMMAND_DATA = 28;
 
 	/**
 	 * The feature id for the '<em><b>Tc Template</b></em>' reference.
@@ -2573,7 +2024,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandDataField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_DATA_FIELD = 38;
+	int VSVS_STEP_TELECOMMAND_DATA_FIELD = 29;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2619,7 +2070,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandHeader()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_HEADER = 39;
+	int VSVS_STEP_TELECOMMAND_HEADER = 30;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -2656,7 +2107,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandHeaderField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_HEADER_FIELD = 40;
+	int VSVS_STEP_TELECOMMAND_HEADER_FIELD = 31;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2720,7 +2171,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetrySet()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_SET = 42;
+	int VSVS_STEP_TELEMETRY_SET = 33;
 
 	/**
 	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
@@ -2784,7 +2235,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetry()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY = 43;
+	int VSVS_STEP_TELEMETRY = 34;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2848,7 +2299,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryData()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_DATA = 44;
+	int VSVS_STEP_TELEMETRY_DATA = 35;
 
 	/**
 	 * The feature id for the '<em><b>Tm Template</b></em>' reference.
@@ -2894,7 +2345,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryDataField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_DATA_FIELD = 45;
+	int VSVS_STEP_TELEMETRY_DATA_FIELD = 36;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2940,7 +2391,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryHeader()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_HEADER = 46;
+	int VSVS_STEP_TELEMETRY_HEADER = 37;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -2977,7 +2428,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryHeaderField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_HEADER_FIELD = 47;
+	int VSVS_STEP_TELEMETRY_HEADER_FIELD = 38;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -3023,7 +2474,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAnalysisInspectionReview()
 	 * @generated
 	 */
-	int VSVS_ANALYSIS_INSPECTION_REVIEW = 48;
+	int VSVS_ANALYSIS_INSPECTION_REVIEW = 39;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3078,7 +2529,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestPlatformRequirements()
 	 * @generated
 	 */
-	int VSVS_TEST_PLATFORM_REQUIREMENTS = 49;
+	int VSVS_TEST_PLATFORM_REQUIREMENTS = 40;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3133,7 +2584,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAdditionalInformation()
 	 * @generated
 	 */
-	int VSVS_ADDITIONAL_INFORMATION = 50;
+	int VSVS_ADDITIONAL_INFORMATION = 41;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -3181,26 +2632,6 @@ public interface svsPackage extends EPackage {
 	int VSVS_ADDITIONAL_INFORMATION_OPERATION_COUNT = VSVS_FIXED_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionType <em>VSVS Action Type</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionType
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSActionType()
-	 * @generated
-	 */
-	int VSVS_ACTION_TYPE = 51;
-
-	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus <em>VSVS Configuration Status</em>}' enum.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
-	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSConfigurationStatus()
-	 * @generated
-	 */
-	int VSVS_CONFIGURATION_STATUS = 52;
-
-	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit <em>VSVS Time Unit</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -3208,7 +2639,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTimeUnit()
 	 * @generated
 	 */
-	int VSVS_TIME_UNIT = 53;
+	int VSVS_TIME_UNIT = 42;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySetCheckmode <em>VSVS Step Telemetry Set Checkmode</em>}' enum.
@@ -3218,7 +2649,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetrySetCheckmode()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_SET_CHECKMODE = 54;
+	int VSVS_STEP_TELEMETRY_SET_CHECKMODE = 43;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument <em>VSVS Document</em>}'.
@@ -3702,48 +3133,15 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestingSpecificationDesign_General();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getInterfaces <em>Interfaces</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup <em>Test Setup</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Interfaces</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getInterfaces()
+	 * @return the meta object for the containment reference '<em>Test Setup</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup()
 	 * @see #getVSVSTestingSpecificationDesign()
 	 * @generated
 	 */
-	EReference getVSVSTestingSpecificationDesign_Interfaces();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getConfigurations <em>Configurations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Configurations</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getConfigurations()
-	 * @see #getVSVSTestingSpecificationDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestingSpecificationDesign_Configurations();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getActions <em>Actions</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Actions</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getActions()
-	 * @see #getVSVSTestingSpecificationDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestingSpecificationDesign_Actions();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios <em>Scenarios</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Scenarios</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getScenarios()
-	 * @see #getVSVSTestingSpecificationDesign()
-	 * @generated
-	 */
-	EReference getVSVSTestingSpecificationDesign_Scenarios();
+	EReference getVSVSTestingSpecificationDesign_TestSetup();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestDesigns <em>Test Designs</em>}'.
@@ -3755,327 +3153,6 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVSTestingSpecificationDesign_TestDesigns();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection <em>VSVS Interfaces Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Interfaces Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection
-	 * @generated
-	 */
-	EClass getVSVSInterfacesSection();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection#getInterfaces <em>Interfaces</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Interfaces</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterfacesSection#getInterfaces()
-	 * @see #getVSVSInterfacesSection()
-	 * @generated
-	 */
-	EReference getVSVSInterfacesSection_Interfaces();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface <em>VSVS Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Interface</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface
-	 * @generated
-	 */
-	EClass getVSVSInterface();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getName()
-	 * @see #getVSVSInterface()
-	 * @generated
-	 */
-	EAttribute getVSVSInterface_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getId()
-	 * @see #getVSVSInterface()
-	 * @generated
-	 */
-	EAttribute getVSVSInterface_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getDescription()
-	 * @see #getVSVSInterface()
-	 * @generated
-	 */
-	EReference getVSVSInterface_Description();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader <em>Tc Header</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tc Header</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTcHeader()
-	 * @see #getVSVSInterface()
-	 * @generated
-	 */
-	EReference getVSVSInterface_TcHeader();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader <em>Tm Header</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tm Header</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSInterface#getTmHeader()
-	 * @see #getVSVSInterface()
-	 * @generated
-	 */
-	EReference getVSVSInterface_TmHeader();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection <em>VSVS Packet Configurations Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Packet Configurations Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection
-	 * @generated
-	 */
-	EClass getVSVSPacketConfigurationsSection();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection#getPacketConfigurations <em>Packet Configurations</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Packet Configurations</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection#getPacketConfigurations()
-	 * @see #getVSVSPacketConfigurationsSection()
-	 * @generated
-	 */
-	EReference getVSVSPacketConfigurationsSection_PacketConfigurations();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration <em>VSVS Packet Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Packet Configuration</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration
-	 * @generated
-	 */
-	EClass getVSVSPacketConfiguration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getName()
-	 * @see #getVSVSPacketConfiguration()
-	 * @generated
-	 */
-	EAttribute getVSVSPacketConfiguration_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getId()
-	 * @see #getVSVSPacketConfiguration()
-	 * @generated
-	 */
-	EAttribute getVSVSPacketConfiguration_Id();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getDescription()
-	 * @see #getVSVSPacketConfiguration()
-	 * @generated
-	 */
-	EReference getVSVSPacketConfiguration_Description();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection <em>VSVS Actions Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Actions Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection
-	 * @generated
-	 */
-	EClass getVSVSActionsSection();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection#getAction <em>Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Action</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionsSection#getAction()
-	 * @see #getVSVSActionsSection()
-	 * @generated
-	 */
-	EReference getVSVSActionsSection_Action();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction <em>VSVS Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Action</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSAction
-	 * @generated
-	 */
-	EClass getVSVSAction();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getName <em>Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSAction#getName()
-	 * @see #getVSVSAction()
-	 * @generated
-	 */
-	EAttribute getVSVSAction_Name();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getDescription <em>Description</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Description</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSAction#getDescription()
-	 * @see #getVSVSAction()
-	 * @generated
-	 */
-	EReference getVSVSAction_Description();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Type</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSAction#getType()
-	 * @see #getVSVSAction()
-	 * @generated
-	 */
-	EAttribute getVSVSAction_Type();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection <em>VSVS Scenarios Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Scenarios Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection
-	 * @generated
-	 */
-	EClass getVSVSScenariosSection();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection#getScenarios <em>Scenarios</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Scenarios</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection#getScenarios()
-	 * @see #getVSVSScenariosSection()
-	 * @generated
-	 */
-	EReference getVSVSScenariosSection_Scenarios();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection <em>VSVS Scenario Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Scenario Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection
-	 * @generated
-	 */
-	EClass getVSVSScenarioSection();
-
-	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSupportedInterface <em>Supported Interface</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Supported Interface</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSupportedInterface()
-	 * @see #getVSVSScenarioSection()
-	 * @generated
-	 */
-	EReference getVSVSScenarioSection_SupportedInterface();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSelectedConfiguration <em>Selected Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Selected Configuration</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSelectedConfiguration()
-	 * @see #getVSVSScenarioSection()
-	 * @generated
-	 */
-	EReference getVSVSScenarioSection_SelectedConfiguration();
-
-	/**
-	 * Returns the meta object for the reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSupportedAction <em>Supported Action</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Supported Action</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection#getSupportedAction()
-	 * @see #getVSVSScenarioSection()
-	 * @generated
-	 */
-	EReference getVSVSScenarioSection_SupportedAction();
-
-	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration <em>VSVS Selected Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVS Selected Configuration</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration
-	 * @generated
-	 */
-	EClass getVSVSSelectedConfiguration();
-
-	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getConfiguration <em>Configuration</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Configuration</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getConfiguration()
-	 * @see #getVSVSSelectedConfiguration()
-	 * @generated
-	 */
-	EReference getVSVSSelectedConfiguration_Configuration();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getDefaultFilterStatus <em>Default Filter Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Filter Status</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getDefaultFilterStatus()
-	 * @see #getVSVSSelectedConfiguration()
-	 * @generated
-	 */
-	EAttribute getVSVSSelectedConfiguration_DefaultFilterStatus();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getDefaultPrintStatus <em>Default Print Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Default Print Status</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSSelectedConfiguration#getDefaultPrintStatus()
-	 * @see #getVSVSSelectedConfiguration()
-	 * @generated
-	 */
-	EAttribute getVSVSSelectedConfiguration_DefaultPrintStatus();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign <em>VSVS Test Design</em>}'.
@@ -5117,26 +4194,6 @@ public interface svsPackage extends EPackage {
 	EClass getVSVSAdditionalInformation();
 
 	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionType <em>VSVS Action Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>VSVS Action Type</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionType
-	 * @generated
-	 */
-	EEnum getVSVSActionType();
-
-	/**
-	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus <em>VSVS Configuration Status</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for enum '<em>VSVS Configuration Status</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
-	 * @generated
-	 */
-	EEnum getVSVSConfigurationStatus();
-
-	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit <em>VSVS Time Unit</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5568,36 +4625,12 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = eINSTANCE.getVSVSTestingSpecificationDesign_General();
 
 		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Test Setup</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_TESTING_SPECIFICATION_DESIGN__INTERFACES = eINSTANCE.getVSVSTestingSpecificationDesign_Interfaces();
-
-		/**
-		 * The meta object literal for the '<em><b>Configurations</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TESTING_SPECIFICATION_DESIGN__CONFIGURATIONS = eINSTANCE.getVSVSTestingSpecificationDesign_Configurations();
-
-		/**
-		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TESTING_SPECIFICATION_DESIGN__ACTIONS = eINSTANCE.getVSVSTestingSpecificationDesign_Actions();
-
-		/**
-		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_TESTING_SPECIFICATION_DESIGN__SCENARIOS = eINSTANCE.getVSVSTestingSpecificationDesign_Scenarios();
+		EReference VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP = eINSTANCE.getVSVSTestingSpecificationDesign_TestSetup();
 
 		/**
 		 * The meta object literal for the '<em><b>Test Designs</b></em>' containment reference list feature.
@@ -5606,264 +4639,6 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS = eINSTANCE.getVSVSTestingSpecificationDesign_TestDesigns();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfacesSectionImpl <em>VSVS Interfaces Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfacesSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSInterfacesSection()
-		 * @generated
-		 */
-		EClass VSVS_INTERFACES_SECTION = eINSTANCE.getVSVSInterfacesSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Interfaces</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_INTERFACES_SECTION__INTERFACES = eINSTANCE.getVSVSInterfacesSection_Interfaces();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl <em>VSVS Interface</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSInterfaceImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSInterface()
-		 * @generated
-		 */
-		EClass VSVS_INTERFACE = eINSTANCE.getVSVSInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_INTERFACE__NAME = eINSTANCE.getVSVSInterface_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_INTERFACE__ID = eINSTANCE.getVSVSInterface_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_INTERFACE__DESCRIPTION = eINSTANCE.getVSVSInterface_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Tc Header</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_INTERFACE__TC_HEADER = eINSTANCE.getVSVSInterface_TcHeader();
-
-		/**
-		 * The meta object literal for the '<em><b>Tm Header</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_INTERFACE__TM_HEADER = eINSTANCE.getVSVSInterface_TmHeader();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationsSectionImpl <em>VSVS Packet Configurations Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationsSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSPacketConfigurationsSection()
-		 * @generated
-		 */
-		EClass VSVS_PACKET_CONFIGURATIONS_SECTION = eINSTANCE.getVSVSPacketConfigurationsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Packet Configurations</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS = eINSTANCE.getVSVSPacketConfigurationsSection_PacketConfigurations();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationImpl <em>VSVS Packet Configuration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSPacketConfiguration()
-		 * @generated
-		 */
-		EClass VSVS_PACKET_CONFIGURATION = eINSTANCE.getVSVSPacketConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_PACKET_CONFIGURATION__NAME = eINSTANCE.getVSVSPacketConfiguration_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_PACKET_CONFIGURATION__ID = eINSTANCE.getVSVSPacketConfiguration_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_PACKET_CONFIGURATION__DESCRIPTION = eINSTANCE.getVSVSPacketConfiguration_Description();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionsSectionImpl <em>VSVS Actions Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionsSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSActionsSection()
-		 * @generated
-		 */
-		EClass VSVS_ACTIONS_SECTION = eINSTANCE.getVSVSActionsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_ACTIONS_SECTION__ACTION = eINSTANCE.getVSVSActionsSection_Action();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionImpl <em>VSVS Action</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSActionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAction()
-		 * @generated
-		 */
-		EClass VSVS_ACTION = eINSTANCE.getVSVSAction();
-
-		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_ACTION__NAME = eINSTANCE.getVSVSAction_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_ACTION__DESCRIPTION = eINSTANCE.getVSVSAction_Description();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_ACTION__TYPE = eINSTANCE.getVSVSAction_Type();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl <em>VSVS Scenarios Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenariosSection()
-		 * @generated
-		 */
-		EClass VSVS_SCENARIOS_SECTION = eINSTANCE.getVSVSScenariosSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SCENARIOS_SECTION__SCENARIOS = eINSTANCE.getVSVSScenariosSection_Scenarios();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl <em>VSVS Scenario Section</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenarioSectionImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSScenarioSection()
-		 * @generated
-		 */
-		EClass VSVS_SCENARIO_SECTION = eINSTANCE.getVSVSScenarioSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Supported Interface</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SCENARIO_SECTION__SUPPORTED_INTERFACE = eINSTANCE.getVSVSScenarioSection_SupportedInterface();
-
-		/**
-		 * The meta object literal for the '<em><b>Selected Configuration</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SCENARIO_SECTION__SELECTED_CONFIGURATION = eINSTANCE.getVSVSScenarioSection_SelectedConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Supported Action</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SCENARIO_SECTION__SUPPORTED_ACTION = eINSTANCE.getVSVSScenarioSection_SupportedAction();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl <em>VSVS Selected Configuration</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSSelectedConfigurationImpl
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSSelectedConfiguration()
-		 * @generated
-		 */
-		EClass VSVS_SELECTED_CONFIGURATION = eINSTANCE.getVSVSSelectedConfiguration();
-
-		/**
-		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVS_SELECTED_CONFIGURATION__CONFIGURATION = eINSTANCE.getVSVSSelectedConfiguration_Configuration();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Filter Status</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS = eINSTANCE.getVSVSSelectedConfiguration_DefaultFilterStatus();
-
-		/**
-		 * The meta object literal for the '<em><b>Default Print Status</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VSVS_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = eINSTANCE.getVSVSSelectedConfiguration_DefaultPrintStatus();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestDesignImpl <em>VSVS Test Design</em>}' class.
@@ -6696,26 +5471,6 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EClass VSVS_ADDITIONAL_INFORMATION = eINSTANCE.getVSVSAdditionalInformation();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSActionType <em>VSVS Action Type</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionType
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSActionType()
-		 * @generated
-		 */
-		EEnum VSVS_ACTION_TYPE = eINSTANCE.getVSVSActionType();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus <em>VSVS Configuration Status</em>}' enum.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
-		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSConfigurationStatus()
-		 * @generated
-		 */
-		EEnum VSVS_CONFIGURATION_STATUS = eINSTANCE.getVSVSConfigurationStatus();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit <em>VSVS Time Unit</em>}' enum.

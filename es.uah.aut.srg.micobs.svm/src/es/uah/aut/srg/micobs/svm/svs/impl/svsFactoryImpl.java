@@ -78,15 +78,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 			case svsPackage.VSVS_SOFTWARE_OVERVIEW: return createVSVSSoftwareOverview();
 			case svsPackage.VSVS_TASK_IDENTIFICATION: return createVSVSTaskIdentification();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN: return createVSVSTestingSpecificationDesign();
-			case svsPackage.VSVS_INTERFACES_SECTION: return createVSVSInterfacesSection();
-			case svsPackage.VSVS_INTERFACE: return createVSVSInterface();
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION: return createVSVSPacketConfigurationsSection();
-			case svsPackage.VSVS_PACKET_CONFIGURATION: return createVSVSPacketConfiguration();
-			case svsPackage.VSVS_ACTIONS_SECTION: return createVSVSActionsSection();
-			case svsPackage.VSVS_ACTION: return createVSVSAction();
-			case svsPackage.VSVS_SCENARIOS_SECTION: return createVSVSScenariosSection();
-			case svsPackage.VSVS_SCENARIO_SECTION: return createVSVSScenarioSection();
-			case svsPackage.VSVS_SELECTED_CONFIGURATION: return createVSVSSelectedConfiguration();
 			case svsPackage.VSVS_TEST_DESIGN: return createVSVSTestDesign();
 			case svsPackage.VSVS_TEST_INFO: return createVSVSTestInfo();
 			case svsPackage.VSVS_TEST_CASES: return createVSVSTestCases();
@@ -127,10 +118,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	@Override
 	public Object createFromString(EDataType eDataType, String initialValue) {
 		switch (eDataType.getClassifierID()) {
-			case svsPackage.VSVS_ACTION_TYPE:
-				return createVSVSActionTypeFromString(eDataType, initialValue);
-			case svsPackage.VSVS_CONFIGURATION_STATUS:
-				return createVSVSConfigurationStatusFromString(eDataType, initialValue);
 			case svsPackage.VSVS_TIME_UNIT:
 				return createVSVSTimeUnitFromString(eDataType, initialValue);
 			case svsPackage.VSVS_STEP_TELEMETRY_SET_CHECKMODE:
@@ -148,10 +135,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	@Override
 	public String convertToString(EDataType eDataType, Object instanceValue) {
 		switch (eDataType.getClassifierID()) {
-			case svsPackage.VSVS_ACTION_TYPE:
-				return convertVSVSActionTypeToString(eDataType, instanceValue);
-			case svsPackage.VSVS_CONFIGURATION_STATUS:
-				return convertVSVSConfigurationStatusToString(eDataType, instanceValue);
 			case svsPackage.VSVS_TIME_UNIT:
 				return convertVSVSTimeUnitToString(eDataType, instanceValue);
 			case svsPackage.VSVS_STEP_TELEMETRY_SET_CHECKMODE:
@@ -289,96 +272,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSTestingSpecificationDesign createVSVSTestingSpecificationDesign() {
 		VSVSTestingSpecificationDesignImpl vsvsTestingSpecificationDesign = new VSVSTestingSpecificationDesignImpl();
 		return vsvsTestingSpecificationDesign;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSInterfacesSection createVSVSInterfacesSection() {
-		VSVSInterfacesSectionImpl vsvsInterfacesSection = new VSVSInterfacesSectionImpl();
-		return vsvsInterfacesSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSInterface createVSVSInterface() {
-		VSVSInterfaceImpl vsvsInterface = new VSVSInterfaceImpl();
-		return vsvsInterface;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSPacketConfigurationsSection createVSVSPacketConfigurationsSection() {
-		VSVSPacketConfigurationsSectionImpl vsvsPacketConfigurationsSection = new VSVSPacketConfigurationsSectionImpl();
-		return vsvsPacketConfigurationsSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSPacketConfiguration createVSVSPacketConfiguration() {
-		VSVSPacketConfigurationImpl vsvsPacketConfiguration = new VSVSPacketConfigurationImpl();
-		return vsvsPacketConfiguration;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSActionsSection createVSVSActionsSection() {
-		VSVSActionsSectionImpl vsvsActionsSection = new VSVSActionsSectionImpl();
-		return vsvsActionsSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSAction createVSVSAction() {
-		VSVSActionImpl vsvsAction = new VSVSActionImpl();
-		return vsvsAction;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSScenariosSection createVSVSScenariosSection() {
-		VSVSScenariosSectionImpl vsvsScenariosSection = new VSVSScenariosSectionImpl();
-		return vsvsScenariosSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSScenarioSection createVSVSScenarioSection() {
-		VSVSScenarioSectionImpl vsvsScenarioSection = new VSVSScenarioSectionImpl();
-		return vsvsScenarioSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSSelectedConfiguration createVSVSSelectedConfiguration() {
-		VSVSSelectedConfigurationImpl vsvsSelectedConfiguration = new VSVSSelectedConfigurationImpl();
-		return vsvsSelectedConfiguration;
 	}
 
 	/**
@@ -649,46 +542,6 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSAdditionalInformation createVSVSAdditionalInformation() {
 		VSVSAdditionalInformationImpl vsvsAdditionalInformation = new VSVSAdditionalInformationImpl();
 		return vsvsAdditionalInformation;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSActionType createVSVSActionTypeFromString(EDataType eDataType, String initialValue) {
-		VSVSActionType result = VSVSActionType.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertVSVSActionTypeToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVSConfigurationStatus createVSVSConfigurationStatusFromString(EDataType eDataType, String initialValue) {
-		VSVSConfigurationStatus result = VSVSConfigurationStatus.get(initialValue);
-		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-		return result;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String convertVSVSConfigurationStatusToString(EDataType eDataType, Object instanceValue) {
-		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

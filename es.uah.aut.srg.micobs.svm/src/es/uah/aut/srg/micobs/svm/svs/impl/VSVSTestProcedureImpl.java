@@ -15,12 +15,12 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -103,7 +103,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @generated
 	 * @ordered
 	 */
-	protected VSVSScenarioSection scenario;
+	protected VTestSetupScenarioSection scenario;
 
 	/**
 	 * The cached value of the '{@link #getProcedureSteps() <em>Procedure Steps</em>}' containment reference.
@@ -266,10 +266,10 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSScenarioSection getScenario() {
+	public VTestSetupScenarioSection getScenario() {
 		if (scenario != null && scenario.eIsProxy()) {
 			InternalEObject oldScenario = (InternalEObject)scenario;
-			scenario = (VSVSScenarioSection)eResolveProxy(oldScenario);
+			scenario = (VTestSetupScenarioSection)eResolveProxy(oldScenario);
 			if (scenario != oldScenario) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_TEST_PROCEDURE__SCENARIO, oldScenario, scenario));
@@ -283,7 +283,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVSScenarioSection basicGetScenario() {
+	public VTestSetupScenarioSection basicGetScenario() {
 		return scenario;
 	}
 
@@ -292,8 +292,8 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setScenario(VSVSScenarioSection newScenario) {
-		VSVSScenarioSection oldScenario = scenario;
+	public void setScenario(VTestSetupScenarioSection newScenario) {
+		VTestSetupScenarioSection oldScenario = scenario;
 		scenario = newScenario;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TEST_PROCEDURE__SCENARIO, oldScenario, scenario));
@@ -463,7 +463,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setPurpose((VSVSTestInfo)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
-				setScenario((VSVSScenarioSection)newValue);
+				setScenario((VTestSetupScenarioSection)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)newValue);
@@ -497,7 +497,7 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				setPurpose((VSVSTestInfo)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
-				setScenario((VSVSScenarioSection)null);
+				setScenario((VTestSetupScenarioSection)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)null);

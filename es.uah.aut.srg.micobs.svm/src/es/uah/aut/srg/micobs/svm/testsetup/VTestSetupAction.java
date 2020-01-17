@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs;
+package es.uah.aut.srg.micobs.svm.testsetup;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
@@ -18,23 +18,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSVS Action</b></em>'.
+ * A representation of the model object '<em><b>VTest Setup Action</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getDescription <em>Description</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getType <em>Type</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getType <em>Type</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSAction()
+ * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupAction()
  * @model
  * @generated
  */
-public interface VSVSAction extends EObject {
+public interface VTestSetupAction extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -45,14 +45,14 @@ public interface VSVSAction extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSAction_Name()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupAction_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -71,14 +71,14 @@ public interface VSVSAction extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
 	 * @see #setDescription(DBody)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSAction_Description()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupAction_Description()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	DBody getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' containment reference.
@@ -89,7 +89,7 @@ public interface VSVSAction extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Type</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSActionType}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Type</em>' attribute isn't clear,
@@ -97,25 +97,25 @@ public interface VSVSAction extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionType
-	 * @see #setType(VSVSActionType)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSAction_Type()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType
+	 * @see #setType(VTestSetupActionType)
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupAction_Type()
 	 * @model required="true"
 	 * @generated
 	 */
-	VSVSActionType getType();
+	VTestSetupActionType getType();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSAction#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSActionType
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType
 	 * @see #getType()
 	 * @generated
 	 */
-	void setType(VSVSActionType value);
+	void setType(VTestSetupActionType value);
 
-	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
+	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 
-} // VSVSAction
+} // VTestSetupAction

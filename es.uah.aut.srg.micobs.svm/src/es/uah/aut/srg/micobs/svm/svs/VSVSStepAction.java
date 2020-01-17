@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -41,12 +43,12 @@ public interface VSVSStepAction extends VSVSStepInputs {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Selected Action</em>' reference.
-	 * @see #setSelectedAction(VSVSAction)
+	 * @see #setSelectedAction(VTestSetupAction)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepAction_SelectedAction()
 	 * @model required="true"
 	 * @generated
 	 */
-	VSVSAction getSelectedAction();
+	VTestSetupAction getSelectedAction();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepAction#getSelectedAction <em>Selected Action</em>}' reference.
@@ -56,7 +58,7 @@ public interface VSVSStepAction extends VSVSStepInputs {
 	 * @see #getSelectedAction()
 	 * @generated
 	 */
-	void setSelectedAction(VSVSAction value);
+	void setSelectedAction(VTestSetupAction value);
 
 	/**
 	 * Returns the value of the '<em><b>Delay value</b></em>' attribute.

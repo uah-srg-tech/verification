@@ -10,6 +10,8 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -41,12 +43,12 @@ public interface VSVSStepConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Configuration</em>' reference.
-	 * @see #setConfiguration(VSVSPacketConfiguration)
+	 * @see #setConfiguration(VTestSetupPacketConfiguration)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepConfiguration_Configuration()
 	 * @model required="true"
 	 * @generated
 	 */
-	VSVSPacketConfiguration getConfiguration();
+	VTestSetupPacketConfiguration getConfiguration();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getConfiguration <em>Configuration</em>}' reference.
@@ -56,11 +58,11 @@ public interface VSVSStepConfiguration extends EObject {
 	 * @see #getConfiguration()
 	 * @generated
 	 */
-	void setConfiguration(VSVSPacketConfiguration value);
+	void setConfiguration(VTestSetupPacketConfiguration value);
 
 	/**
 	 * Returns the value of the '<em><b>Filter Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Filter Status</em>' attribute isn't clear,
@@ -68,28 +70,28 @@ public interface VSVSStepConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Filter Status</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
-	 * @see #setFilterStatus(VSVSConfigurationStatus)
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus
+	 * @see #setFilterStatus(VTestSetupConfigurationStatus)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepConfiguration_FilterStatus()
 	 * @model
 	 * @generated
 	 */
-	VSVSConfigurationStatus getFilterStatus();
+	VTestSetupConfigurationStatus getFilterStatus();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getFilterStatus <em>Filter Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Filter Status</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus
 	 * @see #getFilterStatus()
 	 * @generated
 	 */
-	void setFilterStatus(VSVSConfigurationStatus value);
+	void setFilterStatus(VTestSetupConfigurationStatus value);
 
 	/**
 	 * Returns the value of the '<em><b>Print Status</b></em>' attribute.
-	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus}.
+	 * The literals are from the enumeration {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Print Status</em>' attribute isn't clear,
@@ -97,23 +99,23 @@ public interface VSVSStepConfiguration extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Print Status</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
-	 * @see #setPrintStatus(VSVSConfigurationStatus)
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus
+	 * @see #setPrintStatus(VTestSetupConfigurationStatus)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepConfiguration_PrintStatus()
 	 * @model
 	 * @generated
 	 */
-	VSVSConfigurationStatus getPrintStatus();
+	VTestSetupConfigurationStatus getPrintStatus();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getPrintStatus <em>Print Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Print Status</em>' attribute.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSConfigurationStatus
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus
 	 * @see #getPrintStatus()
 	 * @generated
 	 */
-	void setPrintStatus(VSVSConfigurationStatus value);
+	void setPrintStatus(VTestSetupConfigurationStatus value);
 
 } // VSVSStepConfiguration

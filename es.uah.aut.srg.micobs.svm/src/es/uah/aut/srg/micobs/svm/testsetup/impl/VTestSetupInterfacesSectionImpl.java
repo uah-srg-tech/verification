@@ -8,14 +8,14 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs.impl;
+package es.uah.aut.srg.micobs.svm.testsetup.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration;
-import es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfigurationsSection;
-import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterfacesSection;
+import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
 import java.util.Collection;
 
@@ -31,34 +31,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Packet Configurations Section</b></em>'.
+ * An implementation of the model object '<em><b>VTest Setup Interfaces Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSPacketConfigurationsSectionImpl#getPacketConfigurations <em>Packet Configurations</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfacesSectionImpl#getInterfaces <em>Interfaces</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl implements VSVSPacketConfigurationsSection {
+public class VTestSetupInterfacesSectionImpl extends DFixedSectionImpl implements VTestSetupInterfacesSection {
 	/**
-	 * The cached value of the '{@link #getPacketConfigurations() <em>Packet Configurations</em>}' containment reference list.
+	 * The cached value of the '{@link #getInterfaces() <em>Interfaces</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPacketConfigurations()
+	 * @see #getInterfaces()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSVSPacketConfiguration> packetConfigurations;
+	protected EList<VTestSetupInterface> interfaces;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSPacketConfigurationsSectionImpl() {
+	protected VTestSetupInterfacesSectionImpl() {
 		super();
 	}
 
@@ -69,7 +69,7 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_PACKET_CONFIGURATIONS_SECTION;
+		return testsetupPackage.Literals.VTEST_SETUP_INTERFACES_SECTION;
 	}
 
 	/**
@@ -77,11 +77,11 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSVSPacketConfiguration> getPacketConfigurations() {
-		if (packetConfigurations == null) {
-			packetConfigurations = new EObjectContainmentEList<VSVSPacketConfiguration>(VSVSPacketConfiguration.class, this, svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS);
+	public EList<VTestSetupInterface> getInterfaces() {
+		if (interfaces == null) {
+			interfaces = new EObjectContainmentEList<VTestSetupInterface>(VTestSetupInterface.class, this, testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES);
 		}
-		return packetConfigurations;
+		return interfaces;
 	}
 
 	/**
@@ -92,8 +92,8 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
-				return ((InternalEList<?>)getPacketConfigurations()).basicRemove(otherEnd, msgs);
+			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES:
+				return ((InternalEList<?>)getInterfaces()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -106,8 +106,8 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
-				return getPacketConfigurations();
+			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES:
+				return getInterfaces();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -121,9 +121,9 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
-				getPacketConfigurations().clear();
-				getPacketConfigurations().addAll((Collection<? extends VSVSPacketConfiguration>)newValue);
+			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES:
+				getInterfaces().clear();
+				getInterfaces().addAll((Collection<? extends VTestSetupInterface>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -137,8 +137,8 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
-				getPacketConfigurations().clear();
+			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES:
+				getInterfaces().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -152,15 +152,15 @@ public class VSVSPacketConfigurationsSectionImpl extends DFixedSectionImpl imple
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
-				return packetConfigurations != null && !packetConfigurations.isEmpty();
+			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION__INTERFACES:
+				return interfaces != null && !interfaces.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
-	
+
 	@Override
 	public EList<DAbstractSection> getSubsections() {
 		return ECollections.emptyEList();
 	}
 
-} //VSVSPacketConfigurationsSectionImpl
+} //VTestSetupInterfacesSectionImpl

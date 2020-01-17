@@ -8,20 +8,19 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs.impl;
+package es.uah.aut.srg.micobs.svm.testsetup.impl;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
-import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DFixedSectionImpl;
 
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenarioSection;
-import es.uah.aut.srg.micobs.svm.svs.VSVSScenariosSection;
-import es.uah.aut.srg.micobs.svm.svs.svsPackage;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfigurationsSection;
+import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.NotificationChain;
-import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -32,34 +31,34 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>VSVS Scenarios Section</b></em>'.
+ * An implementation of the model object '<em><b>VTest Setup Packet Configurations Section</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSScenariosSectionImpl#getScenarios <em>Scenarios</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupPacketConfigurationsSectionImpl#getPacketConfigurations <em>Packet Configurations</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSScenariosSection {
+public class VTestSetupPacketConfigurationsSectionImpl extends DFixedSectionImpl implements VTestSetupPacketConfigurationsSection {
 	/**
-	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference list.
+	 * The cached value of the '{@link #getPacketConfigurations() <em>Packet Configurations</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getScenarios()
+	 * @see #getPacketConfigurations()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VSVSScenarioSection> scenarios;
+	protected EList<VTestSetupPacketConfiguration> packetConfigurations;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected VSVSScenariosSectionImpl() {
+	protected VTestSetupPacketConfigurationsSectionImpl() {
 		super();
 	}
 
@@ -70,7 +69,7 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return svsPackage.Literals.VSVS_SCENARIOS_SECTION;
+		return testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION;
 	}
 
 	/**
@@ -78,11 +77,11 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VSVSScenarioSection> getScenarios() {
-		if (scenarios == null) {
-			scenarios = new EObjectContainmentEList<VSVSScenarioSection>(VSVSScenarioSection.class, this, svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS);
+	public EList<VTestSetupPacketConfiguration> getPacketConfigurations() {
+		if (packetConfigurations == null) {
+			packetConfigurations = new EObjectContainmentEList<VTestSetupPacketConfiguration>(VTestSetupPacketConfiguration.class, this, testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS);
 		}
-		return scenarios;
+		return packetConfigurations;
 	}
 
 	/**
@@ -93,8 +92,8 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
-				return ((InternalEList<?>)getScenarios()).basicRemove(otherEnd, msgs);
+			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
+				return ((InternalEList<?>)getPacketConfigurations()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -107,8 +106,8 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
-				return getScenarios();
+			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
+				return getPacketConfigurations();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -122,9 +121,9 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
-				getScenarios().clear();
-				getScenarios().addAll((Collection<? extends VSVSScenarioSection>)newValue);
+			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
+				getPacketConfigurations().clear();
+				getPacketConfigurations().addAll((Collection<? extends VTestSetupPacketConfiguration>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -138,8 +137,8 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
-				getScenarios().clear();
+			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
+				getPacketConfigurations().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -153,29 +152,16 @@ public class VSVSScenariosSectionImpl extends DFixedSectionImpl implements VSVSS
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_SCENARIOS_SECTION__SCENARIOS:
-				return scenarios != null && !scenarios.isEmpty();
+			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION__PACKET_CONFIGURATIONS:
+				return packetConfigurations != null && !packetConfigurations.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
-
+	
 	@Override
 	public EList<DAbstractSection> getSubsections() {
-		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
-		for(VSVSScenarioSection scenario : getScenarios()) {
-			subsections.add(scenario);
-		}
-		return subsections;
+		return ECollections.emptyEList();
 	}
 
-	@Override
-	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
-		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		for(VSVSScenarioSection scenario : getScenarios()) {
-			objects.addAll(scenario.getReferenceableObjects(ReferenceableObjectType));
-		}
-		return objects;
-	}
-
-} //VSVSScenariosSectionImpl
+} //VTestSetupPacketConfigurationsSectionImpl

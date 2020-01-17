@@ -2112,44 +2112,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cGeneralAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cGeneralVSVSFixedSectionParserRuleCall_2_0 = (RuleCall)cGeneralAssignment_2.eContents().get(0);
 		private final Keyword cGeneralKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cInterfacesKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cInterfacesAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cInterfacesVSVSInterfacesSectionParserRuleCall_5_0 = (RuleCall)cInterfacesAssignment_5.eContents().get(0);
-		private final Keyword cInterfacesKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cPacketConfigurationsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Assignment cConfigurationsAssignment_7_1 = (Assignment)cGroup_7.eContents().get(1);
-		private final RuleCall cConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0 = (RuleCall)cConfigurationsAssignment_7_1.eContents().get(0);
-		private final Keyword cPacketConfigurationsKeyword_7_2 = (Keyword)cGroup_7.eContents().get(2);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cActionsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Assignment cActionsAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
-		private final RuleCall cActionsVSVSActionsSectionParserRuleCall_8_1_0 = (RuleCall)cActionsAssignment_8_1.eContents().get(0);
-		private final Keyword cActionsKeyword_8_2 = (Keyword)cGroup_8.eContents().get(2);
-		private final Keyword cScenariosKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		private final Assignment cScenariosAssignment_10 = (Assignment)cGroup.eContents().get(10);
-		private final RuleCall cScenariosVSVSScenariosSectionParserRuleCall_10_0 = (RuleCall)cScenariosAssignment_10.eContents().get(0);
-		private final Keyword cScenariosKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cTestDesignsAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_12_0 = (RuleCall)cTestDesignsAssignment_12.eContents().get(0);
-		private final Keyword cTestingSpecificationDesignKeyword_13 = (Keyword)cGroup.eContents().get(13);
+		private final Assignment cTestSetupAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTestSetupVTestSetupTestSetupParserRuleCall_4_0 = (RuleCall)cTestSetupAssignment_4.eContents().get(0);
+		private final Assignment cTestDesignsAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cTestDesignsVSVSTestDesignParserRuleCall_5_0 = (RuleCall)cTestDesignsAssignment_5.eContents().get(0);
+		private final Keyword cTestingSpecificationDesignKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//VSVSTestingSpecificationDesign:
 		//	'<TestingSpecificationDesign>'
 		//	'<General>' general=VSVSFixedSection '</General>'
-		//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
-		//	configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
-		//	'</Actions>')?
-		//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
+		//	testSetup=VTestSetupTestSetup
 		//	testDesigns+=VSVSTestDesign+
 		//	'</TestingSpecificationDesign>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' '<Interfaces>'
-		//interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
-		//configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
-		//'</Actions>')? '<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>' testDesigns+=VSVSTestDesign+
-		//'</TestingSpecificationDesign>'
+		//'<TestingSpecificationDesign>' '<General>' general=VSVSFixedSection '</General>' testSetup=VTestSetupTestSetup
+		//testDesigns+=VSVSTestDesign+ '</TestingSpecificationDesign>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestingSpecificationDesign>'
@@ -2167,94 +2145,145 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</General>'
 		public Keyword getGeneralKeyword_3() { return cGeneralKeyword_3; }
 		
-		//'<Interfaces>'
-		public Keyword getInterfacesKeyword_4() { return cInterfacesKeyword_4; }
+		//testSetup=VTestSetupTestSetup
+		public Assignment getTestSetupAssignment_4() { return cTestSetupAssignment_4; }
 		
-		//interfaces=VSVSInterfacesSection
-		public Assignment getInterfacesAssignment_5() { return cInterfacesAssignment_5; }
-		
-		//VSVSInterfacesSection
-		public RuleCall getInterfacesVSVSInterfacesSectionParserRuleCall_5_0() { return cInterfacesVSVSInterfacesSectionParserRuleCall_5_0; }
-		
-		//'</Interfaces>'
-		public Keyword getInterfacesKeyword_6() { return cInterfacesKeyword_6; }
-		
-		//('<PacketConfigurations>' configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//'<PacketConfigurations>'
-		public Keyword getPacketConfigurationsKeyword_7_0() { return cPacketConfigurationsKeyword_7_0; }
-		
-		//configurations=VSVSPacketConfigurationsSection
-		public Assignment getConfigurationsAssignment_7_1() { return cConfigurationsAssignment_7_1; }
-		
-		//VSVSPacketConfigurationsSection
-		public RuleCall getConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0() { return cConfigurationsVSVSPacketConfigurationsSectionParserRuleCall_7_1_0; }
-		
-		//'</PacketConfigurations>'
-		public Keyword getPacketConfigurationsKeyword_7_2() { return cPacketConfigurationsKeyword_7_2; }
-		
-		//('<Actions>' actions=VSVSActionsSection '</Actions>')?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//'<Actions>'
-		public Keyword getActionsKeyword_8_0() { return cActionsKeyword_8_0; }
-		
-		//actions=VSVSActionsSection
-		public Assignment getActionsAssignment_8_1() { return cActionsAssignment_8_1; }
-		
-		//VSVSActionsSection
-		public RuleCall getActionsVSVSActionsSectionParserRuleCall_8_1_0() { return cActionsVSVSActionsSectionParserRuleCall_8_1_0; }
-		
-		//'</Actions>'
-		public Keyword getActionsKeyword_8_2() { return cActionsKeyword_8_2; }
-		
-		//'<Scenarios>'
-		public Keyword getScenariosKeyword_9() { return cScenariosKeyword_9; }
-		
-		//scenarios=VSVSScenariosSection
-		public Assignment getScenariosAssignment_10() { return cScenariosAssignment_10; }
-		
-		//VSVSScenariosSection
-		public RuleCall getScenariosVSVSScenariosSectionParserRuleCall_10_0() { return cScenariosVSVSScenariosSectionParserRuleCall_10_0; }
-		
-		//'</Scenarios>'
-		public Keyword getScenariosKeyword_11() { return cScenariosKeyword_11; }
+		//VTestSetupTestSetup
+		public RuleCall getTestSetupVTestSetupTestSetupParserRuleCall_4_0() { return cTestSetupVTestSetupTestSetupParserRuleCall_4_0; }
 		
 		//testDesigns+=VSVSTestDesign+
-		public Assignment getTestDesignsAssignment_12() { return cTestDesignsAssignment_12; }
+		public Assignment getTestDesignsAssignment_5() { return cTestDesignsAssignment_5; }
 		
 		//VSVSTestDesign
-		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_12_0() { return cTestDesignsVSVSTestDesignParserRuleCall_12_0; }
+		public RuleCall getTestDesignsVSVSTestDesignParserRuleCall_5_0() { return cTestDesignsVSVSTestDesignParserRuleCall_5_0; }
 		
 		//'</TestingSpecificationDesign>'
-		public Keyword getTestingSpecificationDesignKeyword_13() { return cTestingSpecificationDesignKeyword_13; }
+		public Keyword getTestingSpecificationDesignKeyword_6() { return cTestingSpecificationDesignKeyword_6; }
 	}
-	public class VSVSInterfacesSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSInterfacesSection");
+	public class VTestSetupTestSetupElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupTestSetup");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSInterfacesSectionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cInterfacesAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInterfacesVSVSInterfaceParserRuleCall_1_0 = (RuleCall)cInterfacesAssignment_1.eContents().get(0);
+		private final Keyword cTestSetupKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cInterfacesKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cInterfacesAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cInterfacesVTestSetupInterfacesSectionParserRuleCall_2_0 = (RuleCall)cInterfacesAssignment_2.eContents().get(0);
+		private final Keyword cInterfacesKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cPacketConfigurationsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cConfigurationsAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_4_1_0 = (RuleCall)cConfigurationsAssignment_4_1.eContents().get(0);
+		private final Keyword cPacketConfigurationsKeyword_4_2 = (Keyword)cGroup_4.eContents().get(2);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cActionsKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Assignment cActionsAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
+		private final RuleCall cActionsVTestSetupActionsSectionParserRuleCall_5_1_0 = (RuleCall)cActionsAssignment_5_1.eContents().get(0);
+		private final Keyword cActionsKeyword_5_2 = (Keyword)cGroup_5.eContents().get(2);
+		private final Keyword cScenariosKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cScenariosAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cScenariosVTestSetupScenariosSectionParserRuleCall_7_0 = (RuleCall)cScenariosAssignment_7.eContents().get(0);
+		private final Keyword cScenariosKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Keyword cTestSetupKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
-		//VSVSInterfacesSection:
-		//	{VSVSInterfacesSection} interfaces+=VSVSInterface+;
+		//VTestSetupTestSetup testsetup::VTestSetupTestSetup:
+		//	'<TestSetup>'
+		//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+		//	configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>'
+		//	actions=VTestSetupActionsSection '</Actions>')?
+		//	'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
+		//	'</TestSetup>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSInterfacesSection} interfaces+=VSVSInterface+
+		//'<TestSetup>' '<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+		//configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>'
+		//actions=VTestSetupActionsSection '</Actions>')? '<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
+		//'</TestSetup>'
 		public Group getGroup() { return cGroup; }
 		
-		//{VSVSInterfacesSection}
-		public Action getVSVSInterfacesSectionAction_0() { return cVSVSInterfacesSectionAction_0; }
+		//'<TestSetup>'
+		public Keyword getTestSetupKeyword_0() { return cTestSetupKeyword_0; }
 		
-		//interfaces+=VSVSInterface+
+		//'<Interfaces>'
+		public Keyword getInterfacesKeyword_1() { return cInterfacesKeyword_1; }
+		
+		//interfaces=VTestSetupInterfacesSection
+		public Assignment getInterfacesAssignment_2() { return cInterfacesAssignment_2; }
+		
+		//VTestSetupInterfacesSection
+		public RuleCall getInterfacesVTestSetupInterfacesSectionParserRuleCall_2_0() { return cInterfacesVTestSetupInterfacesSectionParserRuleCall_2_0; }
+		
+		//'</Interfaces>'
+		public Keyword getInterfacesKeyword_3() { return cInterfacesKeyword_3; }
+		
+		//('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')?
+		public Group getGroup_4() { return cGroup_4; }
+		
+		//'<PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_4_0() { return cPacketConfigurationsKeyword_4_0; }
+		
+		//configurations=VTestSetupPacketConfigurationsSection
+		public Assignment getConfigurationsAssignment_4_1() { return cConfigurationsAssignment_4_1; }
+		
+		//VTestSetupPacketConfigurationsSection
+		public RuleCall getConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_4_1_0() { return cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_4_1_0; }
+		
+		//'</PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_4_2() { return cPacketConfigurationsKeyword_4_2; }
+		
+		//('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
+		public Group getGroup_5() { return cGroup_5; }
+		
+		//'<Actions>'
+		public Keyword getActionsKeyword_5_0() { return cActionsKeyword_5_0; }
+		
+		//actions=VTestSetupActionsSection
+		public Assignment getActionsAssignment_5_1() { return cActionsAssignment_5_1; }
+		
+		//VTestSetupActionsSection
+		public RuleCall getActionsVTestSetupActionsSectionParserRuleCall_5_1_0() { return cActionsVTestSetupActionsSectionParserRuleCall_5_1_0; }
+		
+		//'</Actions>'
+		public Keyword getActionsKeyword_5_2() { return cActionsKeyword_5_2; }
+		
+		//'<Scenarios>'
+		public Keyword getScenariosKeyword_6() { return cScenariosKeyword_6; }
+		
+		//scenarios=VTestSetupScenariosSection
+		public Assignment getScenariosAssignment_7() { return cScenariosAssignment_7; }
+		
+		//VTestSetupScenariosSection
+		public RuleCall getScenariosVTestSetupScenariosSectionParserRuleCall_7_0() { return cScenariosVTestSetupScenariosSectionParserRuleCall_7_0; }
+		
+		//'</Scenarios>'
+		public Keyword getScenariosKeyword_8() { return cScenariosKeyword_8; }
+		
+		//'</TestSetup>'
+		public Keyword getTestSetupKeyword_9() { return cTestSetupKeyword_9; }
+	}
+	public class VTestSetupInterfacesSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupInterfacesSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVTestSetupInterfacesSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cInterfacesAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cInterfacesVTestSetupInterfaceParserRuleCall_1_0 = (RuleCall)cInterfacesAssignment_1.eContents().get(0);
+		
+		//VTestSetupInterfacesSection testsetup::VTestSetupInterfacesSection:
+		//	{testsetup::VTestSetupInterfacesSection} interfaces+=VTestSetupInterface+
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{testsetup::VTestSetupInterfacesSection} interfaces+=VTestSetupInterface+
+		public Group getGroup() { return cGroup; }
+		
+		//{testsetup::VTestSetupInterfacesSection}
+		public Action getVTestSetupInterfacesSectionAction_0() { return cVTestSetupInterfacesSectionAction_0; }
+		
+		//interfaces+=VTestSetupInterface+
 		public Assignment getInterfacesAssignment_1() { return cInterfacesAssignment_1; }
 		
-		//VSVSInterface
-		public RuleCall getInterfacesVSVSInterfaceParserRuleCall_1_0() { return cInterfacesVSVSInterfaceParserRuleCall_1_0; }
+		//VTestSetupInterface
+		public RuleCall getInterfacesVTestSetupInterfaceParserRuleCall_1_0() { return cInterfacesVTestSetupInterfaceParserRuleCall_1_0; }
 	}
-	public class VSVSInterfaceElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSInterface");
+	public class VTestSetupInterfaceElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupInterface");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cInterfaceKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2276,7 +2305,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionDRunParserRuleCall_10_0 = (RuleCall)cDescriptionAssignment_10.eContents().get(0);
 		private final Keyword cInterfaceKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
-		//VSVSInterface:
+		//VTestSetupInterface testsetup::VTestSetupInterface:
 		//	'<Interface'
 		//	'name=' name=STRING
 		//	'id=' id=UINT_STRING
@@ -2284,7 +2313,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'tmHeader=' tmHeader=[tmheader::TMTCIFTMHeader|STRING]
 		//	'>'
 		//	description=DRun
-		//	'</Interface>';
+		//	'</Interface>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<Interface' 'name=' name=STRING 'id=' id=UINT_STRING 'tcHeader=' tcHeader=[tcheader::TMTCIFTCHeader|STRING] 'tmHeader='
@@ -2348,31 +2377,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Interface>'
 		public Keyword getInterfaceKeyword_11() { return cInterfaceKeyword_11; }
 	}
-	public class VSVSPacketConfigurationsSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfigurationsSection");
+	public class VTestSetupPacketConfigurationsSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupPacketConfigurationsSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSPacketConfigurationsSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cVTestSetupPacketConfigurationsSectionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cPacketConfigurationsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0 = (RuleCall)cPacketConfigurationsAssignment_1.eContents().get(0);
+		private final RuleCall cPacketConfigurationsVTestSetupPacketConfigurationParserRuleCall_1_0 = (RuleCall)cPacketConfigurationsAssignment_1.eContents().get(0);
 		
-		//VSVSPacketConfigurationsSection:
-		//	{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+;
+		//VTestSetupPacketConfigurationsSection testsetup::VTestSetupPacketConfigurationsSection:
+		//	{testsetup::VTestSetupPacketConfigurationsSection} packetConfigurations+=VTestSetupPacketConfiguration+
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+
+		//{testsetup::VTestSetupPacketConfigurationsSection} packetConfigurations+=VTestSetupPacketConfiguration+
 		public Group getGroup() { return cGroup; }
 		
-		//{VSVSPacketConfigurationsSection}
-		public Action getVSVSPacketConfigurationsSectionAction_0() { return cVSVSPacketConfigurationsSectionAction_0; }
+		//{testsetup::VTestSetupPacketConfigurationsSection}
+		public Action getVTestSetupPacketConfigurationsSectionAction_0() { return cVTestSetupPacketConfigurationsSectionAction_0; }
 		
-		//packetConfigurations+=VSVSPacketConfiguration+
+		//packetConfigurations+=VTestSetupPacketConfiguration+
 		public Assignment getPacketConfigurationsAssignment_1() { return cPacketConfigurationsAssignment_1; }
 		
-		//VSVSPacketConfiguration
-		public RuleCall getPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0() { return cPacketConfigurationsVSVSPacketConfigurationParserRuleCall_1_0; }
+		//VTestSetupPacketConfiguration
+		public RuleCall getPacketConfigurationsVTestSetupPacketConfigurationParserRuleCall_1_0() { return cPacketConfigurationsVTestSetupPacketConfigurationParserRuleCall_1_0; }
 	}
-	public class VSVSPacketConfigurationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSPacketConfiguration");
+	public class VTestSetupPacketConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupPacketConfiguration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPacketConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2386,13 +2415,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionDRunParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
 		private final Keyword cPacketConfigurationKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//VSVSPacketConfiguration:
+		//VTestSetupPacketConfiguration testsetup::VTestSetupPacketConfiguration:
 		//	'<PacketConfiguration'
 		//	'name=' name=STRING
 		//	'id=' id=UINT_STRING
 		//	'>'
 		//	description=DRun
-		//	'</PacketConfiguration>';
+		//	'</PacketConfiguration>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<PacketConfiguration' 'name=' name=STRING 'id=' id=UINT_STRING '>' description=DRun '</PacketConfiguration>'
@@ -2431,31 +2460,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</PacketConfiguration>'
 		public Keyword getPacketConfigurationKeyword_7() { return cPacketConfigurationKeyword_7; }
 	}
-	public class VSVSActionsSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionsSection");
+	public class VTestSetupActionsSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupActionsSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSActionsSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cVTestSetupActionsSectionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cActionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActionVSVSActionParserRuleCall_1_0 = (RuleCall)cActionAssignment_1.eContents().get(0);
+		private final RuleCall cActionVTestSetupActionParserRuleCall_1_0 = (RuleCall)cActionAssignment_1.eContents().get(0);
 		
-		//VSVSActionsSection:
-		//	{VSVSActionsSection} action+=VSVSAction+;
+		//VTestSetupActionsSection testsetup::VTestSetupActionsSection:
+		//	{testsetup::VTestSetupActionsSection} action+=VTestSetupAction+
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSActionsSection} action+=VSVSAction+
+		//{testsetup::VTestSetupActionsSection} action+=VTestSetupAction+
 		public Group getGroup() { return cGroup; }
 		
-		//{VSVSActionsSection}
-		public Action getVSVSActionsSectionAction_0() { return cVSVSActionsSectionAction_0; }
+		//{testsetup::VTestSetupActionsSection}
+		public Action getVTestSetupActionsSectionAction_0() { return cVTestSetupActionsSectionAction_0; }
 		
-		//action+=VSVSAction+
+		//action+=VTestSetupAction+
 		public Assignment getActionAssignment_1() { return cActionAssignment_1; }
 		
-		//VSVSAction
-		public RuleCall getActionVSVSActionParserRuleCall_1_0() { return cActionVSVSActionParserRuleCall_1_0; }
+		//VTestSetupAction
+		public RuleCall getActionVTestSetupActionParserRuleCall_1_0() { return cActionVTestSetupActionParserRuleCall_1_0; }
 	}
-	public class VSVSActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSAction");
+	public class VTestSetupActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupAction");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2463,22 +2492,22 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cTypeKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTypeVSVSActionTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final RuleCall cTypeVTestSetupActionTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cDescriptionDBodyParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
 		private final Keyword cActionKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//VSVSAction:
+		//VTestSetupAction testsetup::VTestSetupAction:
 		//	'<Action'
 		//	'name=' name=STRING
-		//	'type=' type=VSVSActionType
+		//	'type=' type=VTestSetupActionType
 		//	'>'
 		//	description=DBody
-		//	'</Action>';
+		//	'</Action>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Action' 'name=' name=STRING 'type=' type=VSVSActionType '>' description=DBody '</Action>'
+		//'<Action' 'name=' name=STRING 'type=' type=VTestSetupActionType '>' description=DBody '</Action>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Action'
@@ -2496,11 +2525,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'type='
 		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
 		
-		//type=VSVSActionType
+		//type=VTestSetupActionType
 		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
 		
-		//VSVSActionType
-		public RuleCall getTypeVSVSActionTypeEnumRuleCall_4_0() { return cTypeVSVSActionTypeEnumRuleCall_4_0; }
+		//VTestSetupActionType
+		public RuleCall getTypeVTestSetupActionTypeEnumRuleCall_4_0() { return cTypeVTestSetupActionTypeEnumRuleCall_4_0; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
@@ -2514,31 +2543,31 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Action>'
 		public Keyword getActionKeyword_7() { return cActionKeyword_7; }
 	}
-	public class VSVSScenariosSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenariosSection");
+	public class VTestSetupScenariosSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupScenariosSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVSScenariosSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Action cVTestSetupScenariosSectionAction_0 = (Action)cGroup.eContents().get(0);
 		private final Assignment cScenariosAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cScenariosVSVSScenarioSectionParserRuleCall_1_0 = (RuleCall)cScenariosAssignment_1.eContents().get(0);
+		private final RuleCall cScenariosVTestSetupScenarioSectionParserRuleCall_1_0 = (RuleCall)cScenariosAssignment_1.eContents().get(0);
 		
-		//VSVSScenariosSection:
-		//	{VSVSScenariosSection} scenarios+=VSVSScenarioSection+;
+		//VTestSetupScenariosSection testsetup::VTestSetupScenariosSection:
+		//	{testsetup::VTestSetupScenariosSection} scenarios+=VTestSetupScenarioSection+
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VSVSScenariosSection} scenarios+=VSVSScenarioSection+
+		//{testsetup::VTestSetupScenariosSection} scenarios+=VTestSetupScenarioSection+
 		public Group getGroup() { return cGroup; }
 		
-		//{VSVSScenariosSection}
-		public Action getVSVSScenariosSectionAction_0() { return cVSVSScenariosSectionAction_0; }
+		//{testsetup::VTestSetupScenariosSection}
+		public Action getVTestSetupScenariosSectionAction_0() { return cVTestSetupScenariosSectionAction_0; }
 		
-		//scenarios+=VSVSScenarioSection+
+		//scenarios+=VTestSetupScenarioSection+
 		public Assignment getScenariosAssignment_1() { return cScenariosAssignment_1; }
 		
-		//VSVSScenarioSection
-		public RuleCall getScenariosVSVSScenarioSectionParserRuleCall_1_0() { return cScenariosVSVSScenarioSectionParserRuleCall_1_0; }
+		//VTestSetupScenarioSection
+		public RuleCall getScenariosVTestSetupScenarioSectionParserRuleCall_1_0() { return cScenariosVTestSetupScenarioSectionParserRuleCall_1_0; }
 	}
-	public class VSVSScenarioSectionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSScenarioSection");
+	public class VTestSetupScenarioSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupScenarioSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cScenarioKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
@@ -2549,34 +2578,35 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cInterfaceKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Keyword cRefKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
 		private final Assignment cSupportedInterfaceAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
-		private final CrossReference cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0 = (CrossReference)cSupportedInterfaceAssignment_4_2.eContents().get(0);
-		private final RuleCall cSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0.eContents().get(1);
+		private final CrossReference cSupportedInterfaceVTestSetupInterfaceCrossReference_4_2_0 = (CrossReference)cSupportedInterfaceAssignment_4_2.eContents().get(0);
+		private final RuleCall cSupportedInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_2_0_1 = (RuleCall)cSupportedInterfaceVTestSetupInterfaceCrossReference_4_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_4_3 = (Keyword)cGroup_4.eContents().get(3);
 		private final Assignment cSelectedConfigurationAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0 = (RuleCall)cSelectedConfigurationAssignment_5.eContents().get(0);
+		private final RuleCall cSelectedConfigurationVTestSetupSelectedConfigurationParserRuleCall_5_0 = (RuleCall)cSelectedConfigurationAssignment_5.eContents().get(0);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
 		private final Keyword cActionKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
 		private final Keyword cRefKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
 		private final Assignment cSupportedActionAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final CrossReference cSupportedActionVSVSActionCrossReference_6_2_0 = (CrossReference)cSupportedActionAssignment_6_2.eContents().get(0);
-		private final RuleCall cSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1 = (RuleCall)cSupportedActionVSVSActionCrossReference_6_2_0.eContents().get(1);
+		private final CrossReference cSupportedActionVTestSetupActionCrossReference_6_2_0 = (CrossReference)cSupportedActionAssignment_6_2.eContents().get(0);
+		private final RuleCall cSupportedActionVTestSetupActionSTRINGTerminalRuleCall_6_2_0_1 = (RuleCall)cSupportedActionVTestSetupActionCrossReference_6_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_6_3 = (Keyword)cGroup_6.eContents().get(3);
 		private final Assignment cBodyAssignment_7 = (Assignment)cGroup.eContents().get(7);
 		private final RuleCall cBodyDBodyParserRuleCall_7_0 = (RuleCall)cBodyAssignment_7.eContents().get(0);
 		private final Keyword cScenarioKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
-		//VSVSScenarioSection:
+		//VTestSetupScenarioSection testsetup::VTestSetupScenarioSection:
 		//	'<Scenario'
 		//	'name=' name=STRING
-		//	'>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
-		//	selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+		//	'>' ('<Interface' 'ref=' supportedInterface+=[testsetup::VTestSetupInterface|STRING] '/>')+
+		//	selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action' 'ref='
+		//	supportedAction+=[testsetup::VTestSetupAction|STRING] '/>')*
 		//	body=DBody
-		//	'</Scenario>';
+		//	'</Scenario>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Scenario' 'name=' name=STRING '>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
-		//selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
-		//body=DBody '</Scenario>'
+		//'<Scenario' 'name=' name=STRING '>' ('<Interface' 'ref=' supportedInterface+=[testsetup::VTestSetupInterface|STRING]
+		//'/>')+ selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action' 'ref='
+		//supportedAction+=[testsetup::VTestSetupAction|STRING] '/>')* body=DBody '</Scenario>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Scenario'
@@ -2594,7 +2624,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
+		//('<Interface' 'ref=' supportedInterface+=[testsetup::VTestSetupInterface|STRING] '/>')+
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'<Interface'
@@ -2603,25 +2633,25 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_4_1() { return cRefKeyword_4_1; }
 		
-		//supportedInterface+=[VSVSInterface|STRING]
+		//supportedInterface+=[testsetup::VTestSetupInterface|STRING]
 		public Assignment getSupportedInterfaceAssignment_4_2() { return cSupportedInterfaceAssignment_4_2; }
 		
-		//[VSVSInterface|STRING]
-		public CrossReference getSupportedInterfaceVSVSInterfaceCrossReference_4_2_0() { return cSupportedInterfaceVSVSInterfaceCrossReference_4_2_0; }
+		//[testsetup::VTestSetupInterface|STRING]
+		public CrossReference getSupportedInterfaceVTestSetupInterfaceCrossReference_4_2_0() { return cSupportedInterfaceVTestSetupInterfaceCrossReference_4_2_0; }
 		
 		//STRING
-		public RuleCall getSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1() { return cSupportedInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_2_0_1; }
+		public RuleCall getSupportedInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_2_0_1() { return cSupportedInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_2_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_4_3() { return cSolidusGreaterThanSignKeyword_4_3; }
 		
-		//selectedConfiguration+=VSVSSelectedConfiguration*
+		//selectedConfiguration+=VTestSetupSelectedConfiguration*
 		public Assignment getSelectedConfigurationAssignment_5() { return cSelectedConfigurationAssignment_5; }
 		
-		//VSVSSelectedConfiguration
-		public RuleCall getSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0() { return cSelectedConfigurationVSVSSelectedConfigurationParserRuleCall_5_0; }
+		//VTestSetupSelectedConfiguration
+		public RuleCall getSelectedConfigurationVTestSetupSelectedConfigurationParserRuleCall_5_0() { return cSelectedConfigurationVTestSetupSelectedConfigurationParserRuleCall_5_0; }
 		
-		//('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+		//('<Action' 'ref=' supportedAction+=[testsetup::VTestSetupAction|STRING] '/>')*
 		public Group getGroup_6() { return cGroup_6; }
 		
 		//'<Action'
@@ -2630,14 +2660,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_6_1() { return cRefKeyword_6_1; }
 		
-		//supportedAction+=[VSVSAction|STRING]
+		//supportedAction+=[testsetup::VTestSetupAction|STRING]
 		public Assignment getSupportedActionAssignment_6_2() { return cSupportedActionAssignment_6_2; }
 		
-		//[VSVSAction|STRING]
-		public CrossReference getSupportedActionVSVSActionCrossReference_6_2_0() { return cSupportedActionVSVSActionCrossReference_6_2_0; }
+		//[testsetup::VTestSetupAction|STRING]
+		public CrossReference getSupportedActionVTestSetupActionCrossReference_6_2_0() { return cSupportedActionVTestSetupActionCrossReference_6_2_0; }
 		
 		//STRING
-		public RuleCall getSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1() { return cSupportedActionVSVSActionSTRINGTerminalRuleCall_6_2_0_1; }
+		public RuleCall getSupportedActionVTestSetupActionSTRINGTerminalRuleCall_6_2_0_1() { return cSupportedActionVTestSetupActionSTRINGTerminalRuleCall_6_2_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_6_3() { return cSolidusGreaterThanSignKeyword_6_3; }
@@ -2651,32 +2681,33 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Scenario>'
 		public Keyword getScenarioKeyword_8() { return cScenarioKeyword_8; }
 	}
-	public class VSVSSelectedConfigurationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSSelectedConfiguration");
+	public class VTestSetupSelectedConfigurationElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupSelectedConfiguration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cConfigurationVSVSPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
-		private final RuleCall cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVSVSPacketConfigurationCrossReference_2_0.eContents().get(1);
+		private final CrossReference cConfigurationVTestSetupPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
+		private final RuleCall cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVTestSetupPacketConfigurationCrossReference_2_0.eContents().get(1);
 		private final Keyword cDefaultFilterStatusKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cDefaultFilterStatusAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0 = (RuleCall)cDefaultFilterStatusAssignment_4.eContents().get(0);
+		private final RuleCall cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0 = (RuleCall)cDefaultFilterStatusAssignment_4.eContents().get(0);
 		private final Keyword cDefaultPrintStatusKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cDefaultPrintStatusAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0 = (RuleCall)cDefaultPrintStatusAssignment_6.eContents().get(0);
+		private final RuleCall cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0 = (RuleCall)cDefaultPrintStatusAssignment_6.eContents().get(0);
 		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//VSVSSelectedConfiguration:
+		//VTestSetupSelectedConfiguration testsetup::VTestSetupSelectedConfiguration:
 		//	'<Configuration'
-		//	'ref=' configuration=[VSVSPacketConfiguration|STRING]
-		//	'defaultFilterStatus=' defaultFilterStatus=VSVSConfigurationStatus
-		//	'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus
-		//	'/>';
+		//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
+		//	'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
+		//	'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
+		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Configuration' 'ref=' configuration=[VSVSPacketConfiguration|STRING] 'defaultFilterStatus='
-		//defaultFilterStatus=VSVSConfigurationStatus 'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus '/>'
+		//'<Configuration' 'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] 'defaultFilterStatus='
+		//defaultFilterStatus=VTestSetupConfigurationStatus 'defaultPrintStatus='
+		//defaultPrintStatus=VTestSetupConfigurationStatus '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Configuration'
@@ -2685,32 +2716,32 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
 		
-		//configuration=[VSVSPacketConfiguration|STRING]
+		//configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
 		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
 		
-		//[VSVSPacketConfiguration|STRING]
-		public CrossReference getConfigurationVSVSPacketConfigurationCrossReference_2_0() { return cConfigurationVSVSPacketConfigurationCrossReference_2_0; }
+		//[testsetup::VTestSetupPacketConfiguration|STRING]
+		public CrossReference getConfigurationVTestSetupPacketConfigurationCrossReference_2_0() { return cConfigurationVTestSetupPacketConfigurationCrossReference_2_0; }
 		
 		//STRING
-		public RuleCall getConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		public RuleCall getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
 		
 		//'defaultFilterStatus='
 		public Keyword getDefaultFilterStatusKeyword_3() { return cDefaultFilterStatusKeyword_3; }
 		
-		//defaultFilterStatus=VSVSConfigurationStatus
+		//defaultFilterStatus=VTestSetupConfigurationStatus
 		public Assignment getDefaultFilterStatusAssignment_4() { return cDefaultFilterStatusAssignment_4; }
 		
-		//VSVSConfigurationStatus
-		public RuleCall getDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0() { return cDefaultFilterStatusVSVSConfigurationStatusEnumRuleCall_4_0; }
+		//VTestSetupConfigurationStatus
+		public RuleCall getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0() { return cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0; }
 		
 		//'defaultPrintStatus='
 		public Keyword getDefaultPrintStatusKeyword_5() { return cDefaultPrintStatusKeyword_5; }
 		
-		//defaultPrintStatus=VSVSConfigurationStatus
+		//defaultPrintStatus=VTestSetupConfigurationStatus
 		public Assignment getDefaultPrintStatusAssignment_6() { return cDefaultPrintStatusAssignment_6; }
 		
-		//VSVSConfigurationStatus
-		public RuleCall getDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0() { return cDefaultPrintStatusVSVSConfigurationStatusEnumRuleCall_6_0; }
+		//VTestSetupConfigurationStatus
+		public RuleCall getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0() { return cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
@@ -3379,8 +3410,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cScenarioKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		private final Keyword cRefKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		private final Assignment cScenarioAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final CrossReference cScenarioVSVSScenarioSectionCrossReference_12_0 = (CrossReference)cScenarioAssignment_12.eContents().get(0);
-		private final RuleCall cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1 = (RuleCall)cScenarioVSVSScenarioSectionCrossReference_12_0.eContents().get(1);
+		private final CrossReference cScenarioVTestSetupScenarioSectionCrossReference_12_0 = (CrossReference)cScenarioAssignment_12.eContents().get(0);
+		private final RuleCall cScenarioVTestSetupScenarioSectionSTRINGTerminalRuleCall_12_0_1 = (RuleCall)cScenarioVTestSetupScenarioSectionCrossReference_12_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_13 = (Keyword)cGroup.eContents().get(13);
 		private final Group cGroup_14 = (Group)cGroup.eContents().get(14);
 		private final Keyword cTestCaseKeyword_14_0 = (Keyword)cGroup_14.eContents().get(0);
@@ -3403,17 +3434,17 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'>'
 		//	'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
 		//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
-		//	'<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING]
-		//	'/>')+
+		//	'<Scenario' 'ref=' scenario=[testsetup::VTestSetupScenarioSection|STRING] '/>' ('<TestCase' 'ref='
+		//	testCase+=[VSVSTestCase|STRING] '/>')+
 		//	procedureSteps=VSVSProcedureSteps
 		//	'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
 		//	'</TestProcedure>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestProcedure' 'name=' name=STRING '>' '<Identifier>' identifier=VSVSTestInfo '</Identifier>' '<Purpose>'
-		//purpose=VSVSTestInfo '</Purpose>' '<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref='
-		//testCase+=[VSVSTestCase|STRING] '/>')+ procedureSteps=VSVSProcedureSteps '<TestScript>' testScript=VSVSTestInfo
-		//'</TestScript>' '</TestProcedure>'
+		//purpose=VSVSTestInfo '</Purpose>' '<Scenario' 'ref=' scenario=[testsetup::VTestSetupScenarioSection|STRING] '/>'
+		//('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING] '/>')+ procedureSteps=VSVSProcedureSteps '<TestScript>'
+		//testScript=VSVSTestInfo '</TestScript>' '</TestProcedure>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<TestProcedure'
@@ -3461,14 +3492,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_11() { return cRefKeyword_11; }
 		
-		//scenario=[VSVSScenarioSection|STRING]
+		//scenario=[testsetup::VTestSetupScenarioSection|STRING]
 		public Assignment getScenarioAssignment_12() { return cScenarioAssignment_12; }
 		
-		//[VSVSScenarioSection|STRING]
-		public CrossReference getScenarioVSVSScenarioSectionCrossReference_12_0() { return cScenarioVSVSScenarioSectionCrossReference_12_0; }
+		//[testsetup::VTestSetupScenarioSection|STRING]
+		public CrossReference getScenarioVTestSetupScenarioSectionCrossReference_12_0() { return cScenarioVTestSetupScenarioSectionCrossReference_12_0; }
 		
 		//STRING
-		public RuleCall getScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1() { return cScenarioVSVSScenarioSectionSTRINGTerminalRuleCall_12_0_1; }
+		public RuleCall getScenarioVTestSetupScenarioSectionSTRINGTerminalRuleCall_12_0_1() { return cScenarioVTestSetupScenarioSectionSTRINGTerminalRuleCall_12_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_13() { return cSolidusGreaterThanSignKeyword_13; }
@@ -3710,27 +3741,27 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cConfigurationVSVSPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
-		private final RuleCall cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVSVSPacketConfigurationCrossReference_2_0.eContents().get(1);
+		private final CrossReference cConfigurationVTestSetupPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
+		private final RuleCall cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVTestSetupPacketConfigurationCrossReference_2_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cFilterStatusKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cFilterStatusAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
-		private final RuleCall cFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0 = (RuleCall)cFilterStatusAssignment_3_1.eContents().get(0);
+		private final RuleCall cFilterStatusVTestSetupConfigurationStatusEnumRuleCall_3_1_0 = (RuleCall)cFilterStatusAssignment_3_1.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cPrintStatusKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
 		private final Assignment cPrintStatusAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0 = (RuleCall)cPrintStatusAssignment_4_1.eContents().get(0);
+		private final RuleCall cPrintStatusVTestSetupConfigurationStatusEnumRuleCall_4_1_0 = (RuleCall)cPrintStatusAssignment_4_1.eContents().get(0);
 		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSVSStepConfiguration:
 		//	'<Configuration'
-		//	'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus=' filterStatus=VSVSConfigurationStatus)?
-		//	('printStatus=' printStatus=VSVSConfigurationStatus)?
+		//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+		//	filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Configuration' 'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus='
-		//filterStatus=VSVSConfigurationStatus)? ('printStatus=' printStatus=VSVSConfigurationStatus)? '/>'
+		//'<Configuration' 'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+		//filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Configuration'
@@ -3739,38 +3770,38 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
 		
-		//configuration=[VSVSPacketConfiguration|STRING]
+		//configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
 		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
 		
-		//[VSVSPacketConfiguration|STRING]
-		public CrossReference getConfigurationVSVSPacketConfigurationCrossReference_2_0() { return cConfigurationVSVSPacketConfigurationCrossReference_2_0; }
+		//[testsetup::VTestSetupPacketConfiguration|STRING]
+		public CrossReference getConfigurationVTestSetupPacketConfigurationCrossReference_2_0() { return cConfigurationVTestSetupPacketConfigurationCrossReference_2_0; }
 		
 		//STRING
-		public RuleCall getConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVSVSPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		public RuleCall getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
 		
-		//('filterStatus=' filterStatus=VSVSConfigurationStatus)?
+		//('filterStatus=' filterStatus=VTestSetupConfigurationStatus)?
 		public Group getGroup_3() { return cGroup_3; }
 		
 		//'filterStatus='
 		public Keyword getFilterStatusKeyword_3_0() { return cFilterStatusKeyword_3_0; }
 		
-		//filterStatus=VSVSConfigurationStatus
+		//filterStatus=VTestSetupConfigurationStatus
 		public Assignment getFilterStatusAssignment_3_1() { return cFilterStatusAssignment_3_1; }
 		
-		//VSVSConfigurationStatus
-		public RuleCall getFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0() { return cFilterStatusVSVSConfigurationStatusEnumRuleCall_3_1_0; }
+		//VTestSetupConfigurationStatus
+		public RuleCall getFilterStatusVTestSetupConfigurationStatusEnumRuleCall_3_1_0() { return cFilterStatusVTestSetupConfigurationStatusEnumRuleCall_3_1_0; }
 		
-		//('printStatus=' printStatus=VSVSConfigurationStatus)?
+		//('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 		public Group getGroup_4() { return cGroup_4; }
 		
 		//'printStatus='
 		public Keyword getPrintStatusKeyword_4_0() { return cPrintStatusKeyword_4_0; }
 		
-		//printStatus=VSVSConfigurationStatus
+		//printStatus=VTestSetupConfigurationStatus
 		public Assignment getPrintStatusAssignment_4_1() { return cPrintStatusAssignment_4_1; }
 		
-		//VSVSConfigurationStatus
-		public RuleCall getPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0() { return cPrintStatusVSVSConfigurationStatusEnumRuleCall_4_1_0; }
+		//VTestSetupConfigurationStatus
+		public RuleCall getPrintStatusVTestSetupConfigurationStatusEnumRuleCall_4_1_0() { return cPrintStatusVTestSetupConfigurationStatusEnumRuleCall_4_1_0; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
@@ -3800,8 +3831,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cActionKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cSelectedActionKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cSelectedActionAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cSelectedActionVSVSActionCrossReference_2_0 = (CrossReference)cSelectedActionAssignment_2.eContents().get(0);
-		private final RuleCall cSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cSelectedActionVSVSActionCrossReference_2_0.eContents().get(1);
+		private final CrossReference cSelectedActionVTestSetupActionCrossReference_2_0 = (CrossReference)cSelectedActionAssignment_2.eContents().get(0);
+		private final RuleCall cSelectedActionVTestSetupActionSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cSelectedActionVTestSetupActionCrossReference_2_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cDelay_valueKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cDelay_valueAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -3820,14 +3851,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VSVSStepAction:
 		//	'<Action'
-		//	'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING
+		//	'selectedAction=' selectedAction=[testsetup::VTestSetupAction|STRING] ('delay_value=' delay_value=UINT_STRING
 		//	'delay_unit=' delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING
 		//	'span_unit=' span_unit=VSVSTimeUnit)?
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Action' 'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING 'delay_unit='
-		//delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING 'span_unit=' span_unit=VSVSTimeUnit)? '/>'
+		//'<Action' 'selectedAction=' selectedAction=[testsetup::VTestSetupAction|STRING] ('delay_value=' delay_value=UINT_STRING
+		//'delay_unit=' delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING 'span_unit=' span_unit=VSVSTimeUnit)?
+		//'/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Action'
@@ -3836,14 +3868,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'selectedAction='
 		public Keyword getSelectedActionKeyword_1() { return cSelectedActionKeyword_1; }
 		
-		//selectedAction=[VSVSAction|STRING]
+		//selectedAction=[testsetup::VTestSetupAction|STRING]
 		public Assignment getSelectedActionAssignment_2() { return cSelectedActionAssignment_2; }
 		
-		//[VSVSAction|STRING]
-		public CrossReference getSelectedActionVSVSActionCrossReference_2_0() { return cSelectedActionVSVSActionCrossReference_2_0; }
+		//[testsetup::VTestSetupAction|STRING]
+		public CrossReference getSelectedActionVTestSetupActionCrossReference_2_0() { return cSelectedActionVTestSetupActionCrossReference_2_0; }
 		
 		//STRING
-		public RuleCall getSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1() { return cSelectedActionVSVSActionSTRINGTerminalRuleCall_2_0_1; }
+		public RuleCall getSelectedActionVTestSetupActionSTRINGTerminalRuleCall_2_0_1() { return cSelectedActionVTestSetupActionSTRINGTerminalRuleCall_2_0_1; }
 		
 		//('delay_value=' delay_value=UINT_STRING 'delay_unit=' delay_unit=VSVSTimeUnit)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -3933,8 +3965,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cInterfaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
-		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
+		private final CrossReference cInterfaceVTestSetupInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
+		private final RuleCall cInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVTestSetupInterfaceCrossReference_4_0.eContents().get(1);
 		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
 		private final Keyword cDelay_valueKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
 		private final Assignment cDelay_valueAssignment_5_1 = (Assignment)cGroup_5.eContents().get(1);
@@ -3952,7 +3984,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepTelecommand:
 		//	'<Telecommand'
 		//	'name=' name=STRING
-		//	'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
+		//	'interface=' interface=[testsetup::VTestSetupInterface|STRING] ('delay_value=' delay_value=UINT_STRING
 		//	'delay_unit=' delay_unit=VSVSTimeUnit)?
 		//	'>'
 		//	tcData=VSVSStepTelecommandData
@@ -3960,9 +3992,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//	'</Telecommand>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Telecommand' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
-		//'delay_unit=' delay_unit=VSVSTimeUnit)? '>' tcData=VSVSStepTelecommandData tcHeader=VSVSStepTelecommandHeader?
-		//'</Telecommand>'
+		//'<Telecommand' 'name=' name=STRING 'interface=' interface=[testsetup::VTestSetupInterface|STRING] ('delay_value='
+		//delay_value=UINT_STRING 'delay_unit=' delay_unit=VSVSTimeUnit)? '>' tcData=VSVSStepTelecommandData
+		//tcHeader=VSVSStepTelecommandHeader? '</Telecommand>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Telecommand'
@@ -3980,14 +4012,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'interface='
 		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//interface=[VSVSInterface|STRING]
+		//interface=[testsetup::VTestSetupInterface|STRING]
 		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//[VSVSInterface|STRING]
-		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_0() { return cInterfaceVSVSInterfaceCrossReference_4_0; }
+		//[testsetup::VTestSetupInterface|STRING]
+		public CrossReference getInterfaceVTestSetupInterfaceCrossReference_4_0() { return cInterfaceVTestSetupInterfaceCrossReference_4_0; }
 		
 		//STRING
-		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
+		public RuleCall getInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1; }
 		
 		//('delay_value=' delay_value=UINT_STRING 'delay_unit=' delay_unit=VSVSTimeUnit)?
 		public Group getGroup_5() { return cGroup_5; }
@@ -4482,8 +4514,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
 		private final Keyword cInterfaceKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cInterfaceAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cInterfaceVSVSInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
-		private final RuleCall cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVSVSInterfaceCrossReference_4_0.eContents().get(1);
+		private final CrossReference cInterfaceVTestSetupInterfaceCrossReference_4_0 = (CrossReference)cInterfaceAssignment_4.eContents().get(0);
+		private final RuleCall cInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cInterfaceVTestSetupInterfaceCrossReference_4_0.eContents().get(1);
 		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cTmDataAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cTmDataVSVSStepTelemetryDataParserRuleCall_6_0 = (RuleCall)cTmDataAssignment_6.eContents().get(0);
@@ -4494,15 +4526,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVSStepTelemetry:
 		//	'<Telemetry'
 		//	'name=' name=STRING
-		//	'interface=' interface=[VSVSInterface|STRING]
+		//	'interface=' interface=[testsetup::VTestSetupInterface|STRING]
 		//	'>'
 		//	tmData=VSVSStepTelemetryData
 		//	tmHeader=VSVSStepTelemetryHeader?
 		//	'</Telemetry>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Telemetry' 'name=' name=STRING 'interface=' interface=[VSVSInterface|STRING] '>' tmData=VSVSStepTelemetryData
-		//tmHeader=VSVSStepTelemetryHeader? '</Telemetry>'
+		//'<Telemetry' 'name=' name=STRING 'interface=' interface=[testsetup::VTestSetupInterface|STRING] '>'
+		//tmData=VSVSStepTelemetryData tmHeader=VSVSStepTelemetryHeader? '</Telemetry>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Telemetry'
@@ -4520,14 +4552,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'interface='
 		public Keyword getInterfaceKeyword_3() { return cInterfaceKeyword_3; }
 		
-		//interface=[VSVSInterface|STRING]
+		//interface=[testsetup::VTestSetupInterface|STRING]
 		public Assignment getInterfaceAssignment_4() { return cInterfaceAssignment_4; }
 		
-		//[VSVSInterface|STRING]
-		public CrossReference getInterfaceVSVSInterfaceCrossReference_4_0() { return cInterfaceVSVSInterfaceCrossReference_4_0; }
+		//[testsetup::VTestSetupInterface|STRING]
+		public CrossReference getInterfaceVTestSetupInterfaceCrossReference_4_0() { return cInterfaceVTestSetupInterfaceCrossReference_4_0; }
 		
 		//STRING
-		public RuleCall getInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVSVSInterfaceSTRINGTerminalRuleCall_4_0_1; }
+		public RuleCall getInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1() { return cInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1; }
 		
 		//'>'
 		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
@@ -5010,15 +5042,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"false"'
 		public Keyword getFALSEFalseKeyword_1_0() { return cFALSEFalseKeyword_1_0; }
 	}
-	public class VSVSActionTypeElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSActionType");
+	public class VTestSetupActionTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupActionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cCheckingCheckingKeyword_0_0 = (Keyword)cCheckingEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cInstructionInstructionKeyword_1_0 = (Keyword)cInstructionEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum VSVSActionType:
+		//enum VTestSetupActionType returns testsetup::VTestSetupActionType:
 		//	checking='"checking"' | instruction='"instruction"';
 		public EnumRule getRule() { return rule; }
 		
@@ -5037,15 +5069,15 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'"instruction"'
 		public Keyword getInstructionInstructionKeyword_1_0() { return cInstructionInstructionKeyword_1_0; }
 	}
-	public class VSVSConfigurationStatusElements extends AbstractEnumRuleElementFinder {
-		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSConfigurationStatus");
+	public class VTestSetupConfigurationStatusElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VTestSetupConfigurationStatus");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cOffEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cOffOffKeyword_0_0 = (Keyword)cOffEnumLiteralDeclaration_0.eContents().get(0);
 		private final EnumLiteralDeclaration cOnEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
 		private final Keyword cOnOnKeyword_1_0 = (Keyword)cOnEnumLiteralDeclaration_1.eContents().get(0);
 		
-		//enum VSVSConfigurationStatus:
+		//enum VTestSetupConfigurationStatus returns testsetup::VTestSetupConfigurationStatus:
 		//	off='"off"' | on='"on"';
 		public EnumRule getRule() { return rule; }
 		
@@ -5160,17 +5192,18 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVSSoftwareOverviewElements pVSVSSoftwareOverview;
 	private final VSVSTaskIdentificationElements pVSVSTaskIdentification;
 	private final VSVSTestingSpecificationDesignElements pVSVSTestingSpecificationDesign;
-	private final VSVSInterfacesSectionElements pVSVSInterfacesSection;
-	private final VSVSInterfaceElements pVSVSInterface;
-	private final VSVSPacketConfigurationsSectionElements pVSVSPacketConfigurationsSection;
-	private final VSVSPacketConfigurationElements pVSVSPacketConfiguration;
-	private final VSVSActionsSectionElements pVSVSActionsSection;
-	private final VSVSActionElements pVSVSAction;
-	private final VSVSActionTypeElements eVSVSActionType;
-	private final VSVSScenariosSectionElements pVSVSScenariosSection;
-	private final VSVSScenarioSectionElements pVSVSScenarioSection;
-	private final VSVSSelectedConfigurationElements pVSVSSelectedConfiguration;
-	private final VSVSConfigurationStatusElements eVSVSConfigurationStatus;
+	private final VTestSetupTestSetupElements pVTestSetupTestSetup;
+	private final VTestSetupInterfacesSectionElements pVTestSetupInterfacesSection;
+	private final VTestSetupInterfaceElements pVTestSetupInterface;
+	private final VTestSetupPacketConfigurationsSectionElements pVTestSetupPacketConfigurationsSection;
+	private final VTestSetupPacketConfigurationElements pVTestSetupPacketConfiguration;
+	private final VTestSetupActionsSectionElements pVTestSetupActionsSection;
+	private final VTestSetupActionElements pVTestSetupAction;
+	private final VTestSetupActionTypeElements eVTestSetupActionType;
+	private final VTestSetupScenariosSectionElements pVTestSetupScenariosSection;
+	private final VTestSetupScenarioSectionElements pVTestSetupScenarioSection;
+	private final VTestSetupSelectedConfigurationElements pVTestSetupSelectedConfiguration;
+	private final VTestSetupConfigurationStatusElements eVTestSetupConfigurationStatus;
 	private final VSVSTestCasesElements pVSVSTestCases;
 	private final VSVSTestProceduresElements pVSVSTestProcedures;
 	private final VSVSAnalysisInspectionReviewElements pVSVSAnalysisInspectionReview;
@@ -5261,17 +5294,18 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVSSoftwareOverview = new VSVSSoftwareOverviewElements();
 		this.pVSVSTaskIdentification = new VSVSTaskIdentificationElements();
 		this.pVSVSTestingSpecificationDesign = new VSVSTestingSpecificationDesignElements();
-		this.pVSVSInterfacesSection = new VSVSInterfacesSectionElements();
-		this.pVSVSInterface = new VSVSInterfaceElements();
-		this.pVSVSPacketConfigurationsSection = new VSVSPacketConfigurationsSectionElements();
-		this.pVSVSPacketConfiguration = new VSVSPacketConfigurationElements();
-		this.pVSVSActionsSection = new VSVSActionsSectionElements();
-		this.pVSVSAction = new VSVSActionElements();
-		this.eVSVSActionType = new VSVSActionTypeElements();
-		this.pVSVSScenariosSection = new VSVSScenariosSectionElements();
-		this.pVSVSScenarioSection = new VSVSScenarioSectionElements();
-		this.pVSVSSelectedConfiguration = new VSVSSelectedConfigurationElements();
-		this.eVSVSConfigurationStatus = new VSVSConfigurationStatusElements();
+		this.pVTestSetupTestSetup = new VTestSetupTestSetupElements();
+		this.pVTestSetupInterfacesSection = new VTestSetupInterfacesSectionElements();
+		this.pVTestSetupInterface = new VTestSetupInterfaceElements();
+		this.pVTestSetupPacketConfigurationsSection = new VTestSetupPacketConfigurationsSectionElements();
+		this.pVTestSetupPacketConfiguration = new VTestSetupPacketConfigurationElements();
+		this.pVTestSetupActionsSection = new VTestSetupActionsSectionElements();
+		this.pVTestSetupAction = new VTestSetupActionElements();
+		this.eVTestSetupActionType = new VTestSetupActionTypeElements();
+		this.pVTestSetupScenariosSection = new VTestSetupScenariosSectionElements();
+		this.pVTestSetupScenarioSection = new VTestSetupScenarioSectionElements();
+		this.pVTestSetupSelectedConfiguration = new VTestSetupSelectedConfigurationElements();
+		this.eVTestSetupConfigurationStatus = new VTestSetupConfigurationStatusElements();
 		this.pVSVSTestCases = new VSVSTestCasesElements();
 		this.pVSVSTestProcedures = new VSVSTestProceduresElements();
 		this.pVSVSAnalysisInspectionReview = new VSVSAnalysisInspectionReviewElements();
@@ -5774,10 +5808,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSTestingSpecificationDesign:
 	//	'<TestingSpecificationDesign>'
 	//	'<General>' general=VSVSFixedSection '</General>'
-	//	'<Interfaces>' interfaces=VSVSInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
-	//	configurations=VSVSPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>' actions=VSVSActionsSection
-	//	'</Actions>')?
-	//	'<Scenarios>' scenarios=VSVSScenariosSection '</Scenarios>'
+	//	testSetup=VTestSetupTestSetup
 	//	testDesigns+=VSVSTestDesign+
 	//	'</TestingSpecificationDesign>';
 	public VSVSTestingSpecificationDesignElements getVSVSTestingSpecificationDesignAccess() {
@@ -5788,17 +5819,32 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		return getVSVSTestingSpecificationDesignAccess().getRule();
 	}
 	
-	//VSVSInterfacesSection:
-	//	{VSVSInterfacesSection} interfaces+=VSVSInterface+;
-	public VSVSInterfacesSectionElements getVSVSInterfacesSectionAccess() {
-		return pVSVSInterfacesSection;
+	//VTestSetupTestSetup testsetup::VTestSetupTestSetup:
+	//	'<TestSetup>'
+	//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
+	//	configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>'
+	//	actions=VTestSetupActionsSection '</Actions>')?
+	//	'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
+	//	'</TestSetup>'
+	public VTestSetupTestSetupElements getVTestSetupTestSetupAccess() {
+		return pVTestSetupTestSetup;
 	}
 	
-	public ParserRule getVSVSInterfacesSectionRule() {
-		return getVSVSInterfacesSectionAccess().getRule();
+	public ParserRule getVTestSetupTestSetupRule() {
+		return getVTestSetupTestSetupAccess().getRule();
 	}
 	
-	//VSVSInterface:
+	//VTestSetupInterfacesSection testsetup::VTestSetupInterfacesSection:
+	//	{testsetup::VTestSetupInterfacesSection} interfaces+=VTestSetupInterface+
+	public VTestSetupInterfacesSectionElements getVTestSetupInterfacesSectionAccess() {
+		return pVTestSetupInterfacesSection;
+	}
+	
+	public ParserRule getVTestSetupInterfacesSectionRule() {
+		return getVTestSetupInterfacesSectionAccess().getRule();
+	}
+	
+	//VTestSetupInterface testsetup::VTestSetupInterface:
 	//	'<Interface'
 	//	'name=' name=STRING
 	//	'id=' id=UINT_STRING
@@ -5806,122 +5852,123 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'tmHeader=' tmHeader=[tmheader::TMTCIFTMHeader|STRING]
 	//	'>'
 	//	description=DRun
-	//	'</Interface>';
-	public VSVSInterfaceElements getVSVSInterfaceAccess() {
-		return pVSVSInterface;
+	//	'</Interface>'
+	public VTestSetupInterfaceElements getVTestSetupInterfaceAccess() {
+		return pVTestSetupInterface;
 	}
 	
-	public ParserRule getVSVSInterfaceRule() {
-		return getVSVSInterfaceAccess().getRule();
+	public ParserRule getVTestSetupInterfaceRule() {
+		return getVTestSetupInterfaceAccess().getRule();
 	}
 	
-	//VSVSPacketConfigurationsSection:
-	//	{VSVSPacketConfigurationsSection} packetConfigurations+=VSVSPacketConfiguration+;
-	public VSVSPacketConfigurationsSectionElements getVSVSPacketConfigurationsSectionAccess() {
-		return pVSVSPacketConfigurationsSection;
+	//VTestSetupPacketConfigurationsSection testsetup::VTestSetupPacketConfigurationsSection:
+	//	{testsetup::VTestSetupPacketConfigurationsSection} packetConfigurations+=VTestSetupPacketConfiguration+
+	public VTestSetupPacketConfigurationsSectionElements getVTestSetupPacketConfigurationsSectionAccess() {
+		return pVTestSetupPacketConfigurationsSection;
 	}
 	
-	public ParserRule getVSVSPacketConfigurationsSectionRule() {
-		return getVSVSPacketConfigurationsSectionAccess().getRule();
+	public ParserRule getVTestSetupPacketConfigurationsSectionRule() {
+		return getVTestSetupPacketConfigurationsSectionAccess().getRule();
 	}
 	
-	//VSVSPacketConfiguration:
+	//VTestSetupPacketConfiguration testsetup::VTestSetupPacketConfiguration:
 	//	'<PacketConfiguration'
 	//	'name=' name=STRING
 	//	'id=' id=UINT_STRING
 	//	'>'
 	//	description=DRun
-	//	'</PacketConfiguration>';
-	public VSVSPacketConfigurationElements getVSVSPacketConfigurationAccess() {
-		return pVSVSPacketConfiguration;
+	//	'</PacketConfiguration>'
+	public VTestSetupPacketConfigurationElements getVTestSetupPacketConfigurationAccess() {
+		return pVTestSetupPacketConfiguration;
 	}
 	
-	public ParserRule getVSVSPacketConfigurationRule() {
-		return getVSVSPacketConfigurationAccess().getRule();
+	public ParserRule getVTestSetupPacketConfigurationRule() {
+		return getVTestSetupPacketConfigurationAccess().getRule();
 	}
 	
-	//VSVSActionsSection:
-	//	{VSVSActionsSection} action+=VSVSAction+;
-	public VSVSActionsSectionElements getVSVSActionsSectionAccess() {
-		return pVSVSActionsSection;
+	//VTestSetupActionsSection testsetup::VTestSetupActionsSection:
+	//	{testsetup::VTestSetupActionsSection} action+=VTestSetupAction+
+	public VTestSetupActionsSectionElements getVTestSetupActionsSectionAccess() {
+		return pVTestSetupActionsSection;
 	}
 	
-	public ParserRule getVSVSActionsSectionRule() {
-		return getVSVSActionsSectionAccess().getRule();
+	public ParserRule getVTestSetupActionsSectionRule() {
+		return getVTestSetupActionsSectionAccess().getRule();
 	}
 	
-	//VSVSAction:
+	//VTestSetupAction testsetup::VTestSetupAction:
 	//	'<Action'
 	//	'name=' name=STRING
-	//	'type=' type=VSVSActionType
+	//	'type=' type=VTestSetupActionType
 	//	'>'
 	//	description=DBody
-	//	'</Action>';
-	public VSVSActionElements getVSVSActionAccess() {
-		return pVSVSAction;
+	//	'</Action>'
+	public VTestSetupActionElements getVTestSetupActionAccess() {
+		return pVTestSetupAction;
 	}
 	
-	public ParserRule getVSVSActionRule() {
-		return getVSVSActionAccess().getRule();
+	public ParserRule getVTestSetupActionRule() {
+		return getVTestSetupActionAccess().getRule();
 	}
 	
-	//enum VSVSActionType:
+	//enum VTestSetupActionType returns testsetup::VTestSetupActionType:
 	//	checking='"checking"' | instruction='"instruction"';
-	public VSVSActionTypeElements getVSVSActionTypeAccess() {
-		return eVSVSActionType;
+	public VTestSetupActionTypeElements getVTestSetupActionTypeAccess() {
+		return eVTestSetupActionType;
 	}
 	
-	public EnumRule getVSVSActionTypeRule() {
-		return getVSVSActionTypeAccess().getRule();
+	public EnumRule getVTestSetupActionTypeRule() {
+		return getVTestSetupActionTypeAccess().getRule();
 	}
 	
-	//VSVSScenariosSection:
-	//	{VSVSScenariosSection} scenarios+=VSVSScenarioSection+;
-	public VSVSScenariosSectionElements getVSVSScenariosSectionAccess() {
-		return pVSVSScenariosSection;
+	//VTestSetupScenariosSection testsetup::VTestSetupScenariosSection:
+	//	{testsetup::VTestSetupScenariosSection} scenarios+=VTestSetupScenarioSection+
+	public VTestSetupScenariosSectionElements getVTestSetupScenariosSectionAccess() {
+		return pVTestSetupScenariosSection;
 	}
 	
-	public ParserRule getVSVSScenariosSectionRule() {
-		return getVSVSScenariosSectionAccess().getRule();
+	public ParserRule getVTestSetupScenariosSectionRule() {
+		return getVTestSetupScenariosSectionAccess().getRule();
 	}
 	
-	//VSVSScenarioSection:
+	//VTestSetupScenarioSection testsetup::VTestSetupScenarioSection:
 	//	'<Scenario'
 	//	'name=' name=STRING
-	//	'>' ('<Interface' 'ref=' supportedInterface+=[VSVSInterface|STRING] '/>')+
-	//	selectedConfiguration+=VSVSSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VSVSAction|STRING] '/>')*
+	//	'>' ('<Interface' 'ref=' supportedInterface+=[testsetup::VTestSetupInterface|STRING] '/>')+
+	//	selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action' 'ref='
+	//	supportedAction+=[testsetup::VTestSetupAction|STRING] '/>')*
 	//	body=DBody
-	//	'</Scenario>';
-	public VSVSScenarioSectionElements getVSVSScenarioSectionAccess() {
-		return pVSVSScenarioSection;
+	//	'</Scenario>'
+	public VTestSetupScenarioSectionElements getVTestSetupScenarioSectionAccess() {
+		return pVTestSetupScenarioSection;
 	}
 	
-	public ParserRule getVSVSScenarioSectionRule() {
-		return getVSVSScenarioSectionAccess().getRule();
+	public ParserRule getVTestSetupScenarioSectionRule() {
+		return getVTestSetupScenarioSectionAccess().getRule();
 	}
 	
-	//VSVSSelectedConfiguration:
+	//VTestSetupSelectedConfiguration testsetup::VTestSetupSelectedConfiguration:
 	//	'<Configuration'
-	//	'ref=' configuration=[VSVSPacketConfiguration|STRING]
-	//	'defaultFilterStatus=' defaultFilterStatus=VSVSConfigurationStatus
-	//	'defaultPrintStatus=' defaultPrintStatus=VSVSConfigurationStatus
-	//	'/>';
-	public VSVSSelectedConfigurationElements getVSVSSelectedConfigurationAccess() {
-		return pVSVSSelectedConfiguration;
+	//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
+	//	'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
+	//	'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
+	//	'/>'
+	public VTestSetupSelectedConfigurationElements getVTestSetupSelectedConfigurationAccess() {
+		return pVTestSetupSelectedConfiguration;
 	}
 	
-	public ParserRule getVSVSSelectedConfigurationRule() {
-		return getVSVSSelectedConfigurationAccess().getRule();
+	public ParserRule getVTestSetupSelectedConfigurationRule() {
+		return getVTestSetupSelectedConfigurationAccess().getRule();
 	}
 	
-	//enum VSVSConfigurationStatus:
+	//enum VTestSetupConfigurationStatus returns testsetup::VTestSetupConfigurationStatus:
 	//	off='"off"' | on='"on"';
-	public VSVSConfigurationStatusElements getVSVSConfigurationStatusAccess() {
-		return eVSVSConfigurationStatus;
+	public VTestSetupConfigurationStatusElements getVTestSetupConfigurationStatusAccess() {
+		return eVTestSetupConfigurationStatus;
 	}
 	
-	public EnumRule getVSVSConfigurationStatusRule() {
-		return getVSVSConfigurationStatusAccess().getRule();
+	public EnumRule getVTestSetupConfigurationStatusRule() {
+		return getVTestSetupConfigurationStatusAccess().getRule();
 	}
 	
 	//VSVSTestCases:
@@ -6074,8 +6121,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'>'
 	//	'<Identifier>' identifier=VSVSTestInfo '</Identifier>'
 	//	'<Purpose>' purpose=VSVSTestInfo '</Purpose>'
-	//	'<Scenario' 'ref=' scenario=[VSVSScenarioSection|STRING] '/>' ('<TestCase' 'ref=' testCase+=[VSVSTestCase|STRING]
-	//	'/>')+
+	//	'<Scenario' 'ref=' scenario=[testsetup::VTestSetupScenarioSection|STRING] '/>' ('<TestCase' 'ref='
+	//	testCase+=[VSVSTestCase|STRING] '/>')+
 	//	procedureSteps=VSVSProcedureSteps
 	//	'<TestScript>' testScript=VSVSTestInfo '</TestScript>'
 	//	'</TestProcedure>';
@@ -6142,8 +6189,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepConfiguration:
 	//	'<Configuration'
-	//	'ref=' configuration=[VSVSPacketConfiguration|STRING] ('filterStatus=' filterStatus=VSVSConfigurationStatus)?
-	//	('printStatus=' printStatus=VSVSConfigurationStatus)?
+	//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+	//	filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 	//	'/>';
 	public VSVSStepConfigurationElements getVSVSStepConfigurationAccess() {
 		return pVSVSStepConfiguration;
@@ -6165,7 +6212,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepAction:
 	//	'<Action'
-	//	'selectedAction=' selectedAction=[VSVSAction|STRING] ('delay_value=' delay_value=UINT_STRING
+	//	'selectedAction=' selectedAction=[testsetup::VTestSetupAction|STRING] ('delay_value=' delay_value=UINT_STRING
 	//	'delay_unit=' delay_unit=VSVSTimeUnit)? ('span_value=' span_value=UINT_STRING
 	//	'span_unit=' span_unit=VSVSTimeUnit)?
 	//	'/>';
@@ -6193,7 +6240,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSStepTelecommand:
 	//	'<Telecommand'
 	//	'name=' name=STRING
-	//	'interface=' interface=[VSVSInterface|STRING] ('delay_value=' delay_value=UINT_STRING
+	//	'interface=' interface=[testsetup::VTestSetupInterface|STRING] ('delay_value=' delay_value=UINT_STRING
 	//	'delay_unit=' delay_unit=VSVSTimeUnit)?
 	//	'>'
 	//	tcData=VSVSStepTelecommandData
@@ -6349,7 +6396,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//VSVSStepTelemetry:
 	//	'<Telemetry'
 	//	'name=' name=STRING
-	//	'interface=' interface=[VSVSInterface|STRING]
+	//	'interface=' interface=[testsetup::VTestSetupInterface|STRING]
 	//	'>'
 	//	tmData=VSVSStepTelemetryData
 	//	tmHeader=VSVSStepTelemetryHeader?

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="testsetup" nsURI="http://srg.aut.uah.es/micobs/svm/testsetup"
+    nsPrefix="micobs.svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupTestSetup" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
+        eType="#//VTestSetupInterfacesSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configurations" eType="#//VTestSetupPacketConfigurationsSection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//VTestSetupActionsSection"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
+        eType="#//VTestSetupScenariosSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupInterfacesSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="interfaces" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupInterface" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupInterface">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcHeader" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tcheader.ecore#//TMTCIFTCHeader"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tmHeader" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tmheader.ecore#//TMTCIFTMHeader"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupPacketConfigurationsSection"
+      eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packetConfigurations" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupPacketConfiguration" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupPacketConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionsSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupAction" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupAction">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VTestSetupActionType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VTestSetupActionType">
+    <eLiterals name="instruction"/>
+    <eLiterals name="checking" value="1"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupScenariosSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupScenarioSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupScenarioSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DInstantiableSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedInterface" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupInterface"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedConfiguration"
+        upperBound="-1" eType="#//VTestSetupSelectedConfiguration" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedAction" upperBound="-1"
+        eType="#//VTestSetupAction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VTestSetupConfigurationStatus">
+    <eLiterals name="not_set" literal="not_set"/>
+    <eLiterals name="off" value="1" literal="off"/>
+    <eLiterals name="on" value="2" literal="on"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupSelectedConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
+        eType="#//VTestSetupPacketConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFilterStatus" lowerBound="1"
+        eType="#//VTestSetupConfigurationStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPrintStatus" lowerBound="1"
+        eType="#//VTestSetupConfigurationStatus"/>
+  </eClassifiers>
+</ecore:EPackage>

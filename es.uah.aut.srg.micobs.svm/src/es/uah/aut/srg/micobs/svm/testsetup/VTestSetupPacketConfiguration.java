@@ -8,7 +8,7 @@
  * Contributors:
  *     SRG Team - Initial API and implementation
  */
-package es.uah.aut.srg.micobs.svm.svs;
+package es.uah.aut.srg.micobs.svm.testsetup;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
 
@@ -16,23 +16,23 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>VSVS Packet Configuration</b></em>'.
+ * A representation of the model object '<em><b>VTest Setup Packet Configuration</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getDescription <em>Description</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getDescription <em>Description</em>}</li>
  * </ul>
  *
- * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSPacketConfiguration()
+ * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupPacketConfiguration()
  * @model
  * @generated
  */
-public interface VSVSPacketConfiguration extends EObject {
+public interface VTestSetupPacketConfiguration extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -43,14 +43,14 @@ public interface VSVSPacketConfiguration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSPacketConfiguration_Name()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupPacketConfiguration_Name()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -69,14 +69,14 @@ public interface VSVSPacketConfiguration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSPacketConfiguration_Id()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupPacketConfiguration_Id()
 	 * @model required="true"
 	 * @generated
 	 */
 	String getId();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -95,14 +95,14 @@ public interface VSVSPacketConfiguration extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Description</em>' containment reference.
 	 * @see #setDescription(DRun)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSPacketConfiguration_Description()
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupPacketConfiguration_Description()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
 	DRun getDescription();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSPacketConfiguration#getDescription <em>Description</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getDescription <em>Description</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Description</em>' containment reference.
@@ -111,4 +111,4 @@ public interface VSVSPacketConfiguration extends EObject {
 	 */
 	void setDescription(DRun value);
 
-} // VSVSPacketConfiguration
+} // VTestSetupPacketConfiguration
