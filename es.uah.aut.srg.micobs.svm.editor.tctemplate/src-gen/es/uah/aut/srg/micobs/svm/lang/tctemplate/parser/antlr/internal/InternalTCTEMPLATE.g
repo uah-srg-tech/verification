@@ -200,17 +200,13 @@ ruleVTCTemplateField returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<Field>'
+		otherlv_0='<Field'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_0());
 		}
-		otherlv_1='<fieldRef'
+		otherlv_1='fieldRef='
 		{
 			newLeafNode(otherlv_1, grammarAccess.getVTCTemplateFieldAccess().getFieldRefKeyword_1());
-		}
-		otherlv_2='name='
-		{
-			newLeafNode(otherlv_2, grammarAccess.getVTCTemplateFieldAccess().getNameKeyword_2());
 		}
 		(
 			(
@@ -222,22 +218,22 @@ ruleVTCTemplateField returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVTCTemplateFieldRule());
 					}
 				}
-				otherlv_3=RULE_STRING
+				otherlv_2=RULE_STRING
 				{
-					newLeafNode(otherlv_3, grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_3_0());
+					newLeafNode(otherlv_2, grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0());
 				}
 			)
 		)
-		otherlv_4='/>'
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getVTCTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVTCTemplateFieldAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0());
 				}
-				lv_value_5_0=ruleTMTCIFFieldValue
+				lv_value_4_0=ruleTMTCIFFieldValue
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTCTemplateFieldRule());
@@ -245,15 +241,15 @@ ruleVTCTemplateField returns [EObject current=null]
 					set(
 						$current,
 						"value",
-						lv_value_5_0,
+						lv_value_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.tctemplate.TCTEMPLATE.TMTCIFFieldValue");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6='</Field>'
+		otherlv_5='</Field>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_6());
+			newLeafNode(otherlv_5, grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_5());
 		}
 	)
 ;

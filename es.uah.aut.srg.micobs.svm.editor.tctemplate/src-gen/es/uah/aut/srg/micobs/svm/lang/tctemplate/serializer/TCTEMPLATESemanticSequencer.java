@@ -136,8 +136,8 @@ public class TCTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tctemplatePackage.Literals.VTC_TEMPLATE_FIELD__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1(), semanticObject.getFieldRef());
-		feeder.accept(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

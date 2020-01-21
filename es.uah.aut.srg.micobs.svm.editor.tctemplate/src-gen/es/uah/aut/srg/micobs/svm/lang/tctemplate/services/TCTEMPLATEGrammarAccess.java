@@ -122,54 +122,50 @@ public class TCTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cFieldKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cFieldRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Keyword cNameKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cFieldRefAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final CrossReference cFieldRefTMTCIFTCFieldCrossReference_3_0 = (CrossReference)cFieldRefAssignment_3.eContents().get(0);
-		private final RuleCall cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1 = (RuleCall)cFieldRefTMTCIFTCFieldCrossReference_3_0.eContents().get(1);
-		private final Keyword cSolidusGreaterThanSignKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cValueAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cValueTMTCIFFieldValueParserRuleCall_5_0 = (RuleCall)cValueAssignment_5.eContents().get(0);
-		private final Keyword cFieldKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Assignment cFieldRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cFieldRefTMTCIFTCFieldCrossReference_2_0 = (CrossReference)cFieldRefAssignment_2.eContents().get(0);
+		private final RuleCall cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTCFieldCrossReference_2_0.eContents().get(1);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueTMTCIFFieldValueParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VTCTemplateField:
-		//	'<Field>'
-		//	'<fieldRef' 'name=' fieldRef=[tc::TMTCIFTCField|STRING] '/>'
+		//	'<Field'
+		//	'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING] '>'
 		//	value=TMTCIFFieldValue
 		//	'</Field>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Field>' '<fieldRef' 'name=' fieldRef=[tc::TMTCIFTCField|STRING] '/>' value=TMTCIFFieldValue '</Field>'
+		//'<Field' 'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING] '>' value=TMTCIFFieldValue '</Field>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<Field>'
+		//'<Field'
 		public Keyword getFieldKeyword_0() { return cFieldKeyword_0; }
 		
-		//'<fieldRef'
+		//'fieldRef='
 		public Keyword getFieldRefKeyword_1() { return cFieldRefKeyword_1; }
 		
-		//'name='
-		public Keyword getNameKeyword_2() { return cNameKeyword_2; }
-		
 		//fieldRef=[tc::TMTCIFTCField|STRING]
-		public Assignment getFieldRefAssignment_3() { return cFieldRefAssignment_3; }
+		public Assignment getFieldRefAssignment_2() { return cFieldRefAssignment_2; }
 		
 		//[tc::TMTCIFTCField|STRING]
-		public CrossReference getFieldRefTMTCIFTCFieldCrossReference_3_0() { return cFieldRefTMTCIFTCFieldCrossReference_3_0; }
+		public CrossReference getFieldRefTMTCIFTCFieldCrossReference_2_0() { return cFieldRefTMTCIFTCFieldCrossReference_2_0; }
 		
 		//STRING
-		public RuleCall getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1() { return cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1; }
+		public RuleCall getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1() { return cFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1; }
 		
-		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_4() { return cSolidusGreaterThanSignKeyword_4; }
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
 		//value=TMTCIFFieldValue
-		public Assignment getValueAssignment_5() { return cValueAssignment_5; }
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
 		
 		//TMTCIFFieldValue
-		public RuleCall getValueTMTCIFFieldValueParserRuleCall_5_0() { return cValueTMTCIFFieldValueParserRuleCall_5_0; }
+		public RuleCall getValueTMTCIFFieldValueParserRuleCall_4_0() { return cValueTMTCIFFieldValueParserRuleCall_4_0; }
 		
 		//'</Field>'
-		public Keyword getFieldKeyword_6() { return cFieldKeyword_6; }
+		public Keyword getFieldKeyword_5() { return cFieldKeyword_5; }
 	}
 	public class TMTCIFFieldValueElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.tctemplate.TCTEMPLATE.TMTCIFFieldValue");
@@ -388,8 +384,8 @@ public class TCTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VTCTemplateField:
-	//	'<Field>'
-	//	'<fieldRef' 'name=' fieldRef=[tc::TMTCIFTCField|STRING] '/>'
+	//	'<Field'
+	//	'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING] '>'
 	//	value=TMTCIFFieldValue
 	//	'</Field>';
 	public VTCTemplateFieldElements getVTCTemplateFieldAccess() {

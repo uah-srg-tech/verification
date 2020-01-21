@@ -55,8 +55,8 @@ public class TCTEMPLATEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTCTemplateAccess().getNameAssignment_2(), "rule__VTCTemplate__NameAssignment_2");
 					put(grammarAccess.getVTCTemplateAccess().getTcInputAssignment_4(), "rule__VTCTemplate__TcInputAssignment_4");
 					put(grammarAccess.getVTCTemplateAccess().getFieldsAssignment_5_0_1_1(), "rule__VTCTemplate__FieldsAssignment_5_0_1_1");
-					put(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_3(), "rule__VTCTemplateField__FieldRefAssignment_3");
-					put(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_5(), "rule__VTCTemplateField__ValueAssignment_5");
+					put(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2(), "rule__VTCTemplateField__FieldRefAssignment_2");
+					put(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4(), "rule__VTCTemplateField__ValueAssignment_4");
 					put(grammarAccess.getTMTCIFFieldValueRawAccess().getValueAssignment_2(), "rule__TMTCIFFieldValueRaw__ValueAssignment_2");
 					put(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameAssignment_2(), "rule__TMTCIFFieldValueFile__FilenameAssignment_2");
 					put(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefAssignment_2(), "rule__TMTCIFFieldValueEnum__EnumRefAssignment_2");

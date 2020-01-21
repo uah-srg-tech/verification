@@ -15,8 +15,8 @@ VTCTemplate returns VTCTemplate:
 ;
 
 VTCTemplateField returns VTCTemplateField:
-	'<Field>'
-		'<fieldRef' 'name=' fieldRef=[tc::TMTCIFTCField|STRING] '/>'
+	'<Field'
+		'fieldRef=' fieldRef=[tc::TMTCIFTCField|STRING] '>'
 		value=TMTCIFFieldValue 
 	'</Field>';
 	

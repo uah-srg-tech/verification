@@ -7460,6 +7460,18 @@ ruleTMTCIFFieldValueTM returns [EObject current=null]
 			$current = $this_TMTCIFFieldValueFile_1.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueEnumParserRuleCall_2());
+		}
+		this_TMTCIFFieldValueEnum_2=ruleTMTCIFFieldValueEnum
+		{
+			$current = $this_TMTCIFFieldValueEnum_2.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 

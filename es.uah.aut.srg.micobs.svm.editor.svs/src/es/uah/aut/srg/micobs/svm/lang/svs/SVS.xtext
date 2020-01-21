@@ -590,7 +590,7 @@ VSVSStepTelemetryHeaderField returns VSVSStepTelemetryHeaderField:
 ;
 
 TMTCIFFieldValueTM returns fieldvalue::TMTCIFFieldValue:
-	TMTCIFFieldValueRaw | TMTCIFFieldValueFile;
+	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum;
 
 QualifiedName returns ecore::EString:
 	ID ('.' ID)*;

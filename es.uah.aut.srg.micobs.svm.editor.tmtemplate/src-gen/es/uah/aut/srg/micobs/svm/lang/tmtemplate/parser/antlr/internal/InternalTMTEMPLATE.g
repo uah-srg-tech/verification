@@ -193,17 +193,13 @@ ruleVTMTemplateField returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<Field>'
+		otherlv_0='<Field'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_0());
 		}
-		otherlv_1='<fieldRef'
+		otherlv_1='fieldRef='
 		{
 			newLeafNode(otherlv_1, grammarAccess.getVTMTemplateFieldAccess().getFieldRefKeyword_1());
-		}
-		otherlv_2='name='
-		{
-			newLeafNode(otherlv_2, grammarAccess.getVTMTemplateFieldAccess().getNameKeyword_2());
 		}
 		(
 			(
@@ -215,22 +211,22 @@ ruleVTMTemplateField returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVTMTemplateFieldRule());
 					}
 				}
-				otherlv_3=RULE_STRING
+				otherlv_2=RULE_STRING
 				{
-					newLeafNode(otherlv_3, grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldCrossReference_3_0());
+					newLeafNode(otherlv_2, grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldCrossReference_2_0());
 				}
 			)
 		)
-		otherlv_4='/>'
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getVTMTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4());
+			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateFieldAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0());
 				}
-				lv_value_5_0=ruleTMTCIFFieldValue
+				lv_value_4_0=ruleTMTCIFFieldValue
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTMTemplateFieldRule());
@@ -238,15 +234,15 @@ ruleVTMTemplateField returns [EObject current=null]
 					set(
 						$current,
 						"value",
-						lv_value_5_0,
+						lv_value_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.tmtemplate.TMTEMPLATE.TMTCIFFieldValue");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_6='</Field>'
+		otherlv_5='</Field>'
 		{
-			newLeafNode(otherlv_6, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_6());
+			newLeafNode(otherlv_5, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_5());
 		}
 	)
 ;
@@ -288,6 +284,18 @@ ruleTMTCIFFieldValue returns [EObject current=null]
 		this_TMTCIFFieldValueFile_1=ruleTMTCIFFieldValueFile
 		{
 			$current = $this_TMTCIFFieldValueFile_1.current;
+			afterParserOrEnumRuleCall();
+		}
+		    |
+		{
+			/* */
+		}
+		{
+			newCompositeNode(grammarAccess.getTMTCIFFieldValueAccess().getTMTCIFFieldValueEnumParserRuleCall_2());
+		}
+		this_TMTCIFFieldValueEnum_2=ruleTMTCIFFieldValueEnum
+		{
+			$current = $this_TMTCIFFieldValueEnum_2.current;
 			afterParserOrEnumRuleCall();
 		}
 	)
@@ -404,6 +412,73 @@ ruleTMTCIFFieldValueFile returns [EObject current=null]
 		otherlv_3='/>'
 		{
 			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueFileAccess().getSolidusGreaterThanSignKeyword_3());
+		}
+	)
+;
+
+// Entry rule entryRuleTMTCIFFieldValueEnum
+entryRuleTMTCIFFieldValueEnum returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTMTCIFFieldValueEnumRule()); }
+	iv_ruleTMTCIFFieldValueEnum=ruleTMTCIFFieldValueEnum
+	{ $current=$iv_ruleTMTCIFFieldValueEnum.current; }
+	EOF;
+
+// Rule TMTCIFFieldValueEnum
+ruleTMTCIFFieldValueEnum returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<FieldValueEnum'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueEnumAccess().getFieldValueEnumKeyword_0());
+		}
+		otherlv_1='enumRef='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefKeyword_1());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+					}
+				}
+				otherlv_2=RULE_STRING
+				{
+					newLeafNode(otherlv_2, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumCrossReference_2_0());
+				}
+			)
+		)
+		otherlv_3='valueRef='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefKeyword_3());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+					}
+				}
+				otherlv_4=RULE_STRING
+				{
+					newLeafNode(otherlv_4, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueCrossReference_4_0());
+				}
+			)
+		)
+		otherlv_5='/>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getTMTCIFFieldValueEnumAccess().getSolidusGreaterThanSignKeyword_5());
 		}
 	)
 ;

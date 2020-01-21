@@ -572,6 +572,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 * Contexts:
 	 *     TMTCIFFieldValueTC returns TMTCIFFieldValueEnum
 	 *     TMTCIFFieldValueEnum returns TMTCIFFieldValueEnum
+	 *     TMTCIFFieldValueTM returns TMTCIFFieldValueEnum
 	 *
 	 * Constraint:
 	 *     (enumRef=[TMTCIFEnum|STRING] valueRef=[TMTCIFEnumValue|STRING])

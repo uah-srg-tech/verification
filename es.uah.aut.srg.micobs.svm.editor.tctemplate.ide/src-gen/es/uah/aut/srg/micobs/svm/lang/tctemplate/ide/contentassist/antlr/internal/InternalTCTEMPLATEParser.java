@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'/>'", "'<TCTemplate'", "'name='", "'tcInput='", "'>'", "'</TCTemplate>'", "'<Fields>'", "'</Fields>'", "'<Field>'", "'<fieldRef'", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'/>'", "'<TCTemplate'", "'name='", "'tcInput='", "'>'", "'</TCTemplate>'", "'<Fields>'", "'</Fields>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_UINT_STRING=4;
@@ -1979,17 +1979,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__0__Impl"
-    // InternalTCTEMPLATE.g:622:1: rule__VTCTemplateField__Group__0__Impl : ( '<Field>' ) ;
+    // InternalTCTEMPLATE.g:622:1: rule__VTCTemplateField__Group__0__Impl : ( '<Field' ) ;
     public final void rule__VTCTemplateField__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:626:1: ( ( '<Field>' ) )
-            // InternalTCTEMPLATE.g:627:1: ( '<Field>' )
+            // InternalTCTEMPLATE.g:626:1: ( ( '<Field' ) )
+            // InternalTCTEMPLATE.g:627:1: ( '<Field' )
             {
-            // InternalTCTEMPLATE.g:627:1: ( '<Field>' )
-            // InternalTCTEMPLATE.g:628:2: '<Field>'
+            // InternalTCTEMPLATE.g:627:1: ( '<Field' )
+            // InternalTCTEMPLATE.g:628:2: '<Field'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_0()); 
@@ -2029,7 +2029,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
             // InternalTCTEMPLATE.g:641:1: ( rule__VTCTemplateField__Group__1__Impl rule__VTCTemplateField__Group__2 )
             // InternalTCTEMPLATE.g:642:2: rule__VTCTemplateField__Group__1__Impl rule__VTCTemplateField__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_3);
+            pushFollow(FollowSets000.FOLLOW_4);
             rule__VTCTemplateField__Group__1__Impl();
 
             state._fsp--;
@@ -2058,17 +2058,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__1__Impl"
-    // InternalTCTEMPLATE.g:649:1: rule__VTCTemplateField__Group__1__Impl : ( '<fieldRef' ) ;
+    // InternalTCTEMPLATE.g:649:1: rule__VTCTemplateField__Group__1__Impl : ( 'fieldRef=' ) ;
     public final void rule__VTCTemplateField__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:653:1: ( ( '<fieldRef' ) )
-            // InternalTCTEMPLATE.g:654:1: ( '<fieldRef' )
+            // InternalTCTEMPLATE.g:653:1: ( ( 'fieldRef=' ) )
+            // InternalTCTEMPLATE.g:654:1: ( 'fieldRef=' )
             {
-            // InternalTCTEMPLATE.g:654:1: ( '<fieldRef' )
-            // InternalTCTEMPLATE.g:655:2: '<fieldRef'
+            // InternalTCTEMPLATE.g:654:1: ( 'fieldRef=' )
+            // InternalTCTEMPLATE.g:655:2: 'fieldRef='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefKeyword_1()); 
@@ -2108,7 +2108,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
             // InternalTCTEMPLATE.g:668:1: ( rule__VTCTemplateField__Group__2__Impl rule__VTCTemplateField__Group__3 )
             // InternalTCTEMPLATE.g:669:2: rule__VTCTemplateField__Group__2__Impl rule__VTCTemplateField__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_4);
+            pushFollow(FollowSets000.FOLLOW_12);
             rule__VTCTemplateField__Group__2__Impl();
 
             state._fsp--;
@@ -2137,24 +2137,34 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__2__Impl"
-    // InternalTCTEMPLATE.g:676:1: rule__VTCTemplateField__Group__2__Impl : ( 'name=' ) ;
+    // InternalTCTEMPLATE.g:676:1: rule__VTCTemplateField__Group__2__Impl : ( ( rule__VTCTemplateField__FieldRefAssignment_2 ) ) ;
     public final void rule__VTCTemplateField__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:680:1: ( ( 'name=' ) )
-            // InternalTCTEMPLATE.g:681:1: ( 'name=' )
+            // InternalTCTEMPLATE.g:680:1: ( ( ( rule__VTCTemplateField__FieldRefAssignment_2 ) ) )
+            // InternalTCTEMPLATE.g:681:1: ( ( rule__VTCTemplateField__FieldRefAssignment_2 ) )
             {
-            // InternalTCTEMPLATE.g:681:1: ( 'name=' )
-            // InternalTCTEMPLATE.g:682:2: 'name='
+            // InternalTCTEMPLATE.g:681:1: ( ( rule__VTCTemplateField__FieldRefAssignment_2 ) )
+            // InternalTCTEMPLATE.g:682:2: ( rule__VTCTemplateField__FieldRefAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getNameKeyword_2()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2()); 
             }
-            match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalTCTEMPLATE.g:683:2: ( rule__VTCTemplateField__FieldRefAssignment_2 )
+            // InternalTCTEMPLATE.g:683:3: rule__VTCTemplateField__FieldRefAssignment_2
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VTCTemplateField__FieldRefAssignment_2();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getNameKeyword_2()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2()); 
             }
 
             }
@@ -2187,7 +2197,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
             // InternalTCTEMPLATE.g:695:1: ( rule__VTCTemplateField__Group__3__Impl rule__VTCTemplateField__Group__4 )
             // InternalTCTEMPLATE.g:696:2: rule__VTCTemplateField__Group__3__Impl rule__VTCTemplateField__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_13);
             rule__VTCTemplateField__Group__3__Impl();
 
             state._fsp--;
@@ -2216,34 +2226,24 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__3__Impl"
-    // InternalTCTEMPLATE.g:703:1: rule__VTCTemplateField__Group__3__Impl : ( ( rule__VTCTemplateField__FieldRefAssignment_3 ) ) ;
+    // InternalTCTEMPLATE.g:703:1: rule__VTCTemplateField__Group__3__Impl : ( '>' ) ;
     public final void rule__VTCTemplateField__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:707:1: ( ( ( rule__VTCTemplateField__FieldRefAssignment_3 ) ) )
-            // InternalTCTEMPLATE.g:708:1: ( ( rule__VTCTemplateField__FieldRefAssignment_3 ) )
+            // InternalTCTEMPLATE.g:707:1: ( ( '>' ) )
+            // InternalTCTEMPLATE.g:708:1: ( '>' )
             {
-            // InternalTCTEMPLATE.g:708:1: ( ( rule__VTCTemplateField__FieldRefAssignment_3 ) )
-            // InternalTCTEMPLATE.g:709:2: ( rule__VTCTemplateField__FieldRefAssignment_3 )
+            // InternalTCTEMPLATE.g:708:1: ( '>' )
+            // InternalTCTEMPLATE.g:709:2: '>'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_3()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getGreaterThanSignKeyword_3()); 
             }
-            // InternalTCTEMPLATE.g:710:2: ( rule__VTCTemplateField__FieldRefAssignment_3 )
-            // InternalTCTEMPLATE.g:710:3: rule__VTCTemplateField__FieldRefAssignment_3
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCTemplateField__FieldRefAssignment_3();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,17,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_3()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getGreaterThanSignKeyword_3()); 
             }
 
             }
@@ -2276,7 +2276,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
             // InternalTCTEMPLATE.g:722:1: ( rule__VTCTemplateField__Group__4__Impl rule__VTCTemplateField__Group__5 )
             // InternalTCTEMPLATE.g:723:2: rule__VTCTemplateField__Group__4__Impl rule__VTCTemplateField__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_13);
+            pushFollow(FollowSets000.FOLLOW_14);
             rule__VTCTemplateField__Group__4__Impl();
 
             state._fsp--;
@@ -2305,24 +2305,34 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__4__Impl"
-    // InternalTCTEMPLATE.g:730:1: rule__VTCTemplateField__Group__4__Impl : ( '/>' ) ;
+    // InternalTCTEMPLATE.g:730:1: rule__VTCTemplateField__Group__4__Impl : ( ( rule__VTCTemplateField__ValueAssignment_4 ) ) ;
     public final void rule__VTCTemplateField__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:734:1: ( ( '/>' ) )
-            // InternalTCTEMPLATE.g:735:1: ( '/>' )
+            // InternalTCTEMPLATE.g:734:1: ( ( ( rule__VTCTemplateField__ValueAssignment_4 ) ) )
+            // InternalTCTEMPLATE.g:735:1: ( ( rule__VTCTemplateField__ValueAssignment_4 ) )
             {
-            // InternalTCTEMPLATE.g:735:1: ( '/>' )
-            // InternalTCTEMPLATE.g:736:2: '/>'
+            // InternalTCTEMPLATE.g:735:1: ( ( rule__VTCTemplateField__ValueAssignment_4 ) )
+            // InternalTCTEMPLATE.g:736:2: ( rule__VTCTemplateField__ValueAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4()); 
             }
-            match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            // InternalTCTEMPLATE.g:737:2: ( rule__VTCTemplateField__ValueAssignment_4 )
+            // InternalTCTEMPLATE.g:737:3: rule__VTCTemplateField__ValueAssignment_4
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VTCTemplateField__ValueAssignment_4();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4()); 
             }
 
             }
@@ -2346,22 +2356,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__5"
-    // InternalTCTEMPLATE.g:745:1: rule__VTCTemplateField__Group__5 : rule__VTCTemplateField__Group__5__Impl rule__VTCTemplateField__Group__6 ;
+    // InternalTCTEMPLATE.g:745:1: rule__VTCTemplateField__Group__5 : rule__VTCTemplateField__Group__5__Impl ;
     public final void rule__VTCTemplateField__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:749:1: ( rule__VTCTemplateField__Group__5__Impl rule__VTCTemplateField__Group__6 )
-            // InternalTCTEMPLATE.g:750:2: rule__VTCTemplateField__Group__5__Impl rule__VTCTemplateField__Group__6
+            // InternalTCTEMPLATE.g:749:1: ( rule__VTCTemplateField__Group__5__Impl )
+            // InternalTCTEMPLATE.g:750:2: rule__VTCTemplateField__Group__5__Impl
             {
-            pushFollow(FollowSets000.FOLLOW_14);
-            rule__VTCTemplateField__Group__5__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCTemplateField__Group__6();
+            rule__VTCTemplateField__Group__5__Impl();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2384,34 +2389,24 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplateField__Group__5__Impl"
-    // InternalTCTEMPLATE.g:757:1: rule__VTCTemplateField__Group__5__Impl : ( ( rule__VTCTemplateField__ValueAssignment_5 ) ) ;
+    // InternalTCTEMPLATE.g:756:1: rule__VTCTemplateField__Group__5__Impl : ( '</Field>' ) ;
     public final void rule__VTCTemplateField__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:761:1: ( ( ( rule__VTCTemplateField__ValueAssignment_5 ) ) )
-            // InternalTCTEMPLATE.g:762:1: ( ( rule__VTCTemplateField__ValueAssignment_5 ) )
+            // InternalTCTEMPLATE.g:760:1: ( ( '</Field>' ) )
+            // InternalTCTEMPLATE.g:761:1: ( '</Field>' )
             {
-            // InternalTCTEMPLATE.g:762:1: ( ( rule__VTCTemplateField__ValueAssignment_5 ) )
-            // InternalTCTEMPLATE.g:763:2: ( rule__VTCTemplateField__ValueAssignment_5 )
+            // InternalTCTEMPLATE.g:761:1: ( '</Field>' )
+            // InternalTCTEMPLATE.g:762:2: '</Field>'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_5()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_5()); 
             }
-            // InternalTCTEMPLATE.g:764:2: ( rule__VTCTemplateField__ValueAssignment_5 )
-            // InternalTCTEMPLATE.g:764:3: rule__VTCTemplateField__ValueAssignment_5
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCTemplateField__ValueAssignment_5();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
+            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_5()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_5()); 
             }
 
             }
@@ -2434,89 +2429,15 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__VTCTemplateField__Group__5__Impl"
 
 
-    // $ANTLR start "rule__VTCTemplateField__Group__6"
-    // InternalTCTEMPLATE.g:772:1: rule__VTCTemplateField__Group__6 : rule__VTCTemplateField__Group__6__Impl ;
-    public final void rule__VTCTemplateField__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTCTEMPLATE.g:776:1: ( rule__VTCTemplateField__Group__6__Impl )
-            // InternalTCTEMPLATE.g:777:2: rule__VTCTemplateField__Group__6__Impl
-            {
-            pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCTemplateField__Group__6__Impl();
-
-            state._fsp--;
-            if (state.failed) return ;
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__VTCTemplateField__Group__6"
-
-
-    // $ANTLR start "rule__VTCTemplateField__Group__6__Impl"
-    // InternalTCTEMPLATE.g:783:1: rule__VTCTemplateField__Group__6__Impl : ( '</Field>' ) ;
-    public final void rule__VTCTemplateField__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTCTEMPLATE.g:787:1: ( ( '</Field>' ) )
-            // InternalTCTEMPLATE.g:788:1: ( '</Field>' )
-            {
-            // InternalTCTEMPLATE.g:788:1: ( '</Field>' )
-            // InternalTCTEMPLATE.g:789:2: '</Field>'
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_6()); 
-            }
-            match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_6()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__VTCTemplateField__Group__6__Impl"
-
-
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__0"
-    // InternalTCTEMPLATE.g:799:1: rule__TMTCIFFieldValueRaw__Group__0 : rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1 ;
+    // InternalTCTEMPLATE.g:772:1: rule__TMTCIFFieldValueRaw__Group__0 : rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1 ;
     public final void rule__TMTCIFFieldValueRaw__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:803:1: ( rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1 )
-            // InternalTCTEMPLATE.g:804:2: rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1
+            // InternalTCTEMPLATE.g:776:1: ( rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1 )
+            // InternalTCTEMPLATE.g:777:2: rule__TMTCIFFieldValueRaw__Group__0__Impl rule__TMTCIFFieldValueRaw__Group__1
             {
             pushFollow(FollowSets000.FOLLOW_15);
             rule__TMTCIFFieldValueRaw__Group__0__Impl();
@@ -2547,17 +2468,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__0__Impl"
-    // InternalTCTEMPLATE.g:811:1: rule__TMTCIFFieldValueRaw__Group__0__Impl : ( '<FieldValueRaw' ) ;
+    // InternalTCTEMPLATE.g:784:1: rule__TMTCIFFieldValueRaw__Group__0__Impl : ( '<FieldValueRaw' ) ;
     public final void rule__TMTCIFFieldValueRaw__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:815:1: ( ( '<FieldValueRaw' ) )
-            // InternalTCTEMPLATE.g:816:1: ( '<FieldValueRaw' )
+            // InternalTCTEMPLATE.g:788:1: ( ( '<FieldValueRaw' ) )
+            // InternalTCTEMPLATE.g:789:1: ( '<FieldValueRaw' )
             {
-            // InternalTCTEMPLATE.g:816:1: ( '<FieldValueRaw' )
-            // InternalTCTEMPLATE.g:817:2: '<FieldValueRaw'
+            // InternalTCTEMPLATE.g:789:1: ( '<FieldValueRaw' )
+            // InternalTCTEMPLATE.g:790:2: '<FieldValueRaw'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueRawAccess().getFieldValueRawKeyword_0()); 
@@ -2588,14 +2509,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__1"
-    // InternalTCTEMPLATE.g:826:1: rule__TMTCIFFieldValueRaw__Group__1 : rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2 ;
+    // InternalTCTEMPLATE.g:799:1: rule__TMTCIFFieldValueRaw__Group__1 : rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2 ;
     public final void rule__TMTCIFFieldValueRaw__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:830:1: ( rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2 )
-            // InternalTCTEMPLATE.g:831:2: rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2
+            // InternalTCTEMPLATE.g:803:1: ( rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2 )
+            // InternalTCTEMPLATE.g:804:2: rule__TMTCIFFieldValueRaw__Group__1__Impl rule__TMTCIFFieldValueRaw__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_16);
             rule__TMTCIFFieldValueRaw__Group__1__Impl();
@@ -2626,17 +2547,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__1__Impl"
-    // InternalTCTEMPLATE.g:838:1: rule__TMTCIFFieldValueRaw__Group__1__Impl : ( 'value=' ) ;
+    // InternalTCTEMPLATE.g:811:1: rule__TMTCIFFieldValueRaw__Group__1__Impl : ( 'value=' ) ;
     public final void rule__TMTCIFFieldValueRaw__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:842:1: ( ( 'value=' ) )
-            // InternalTCTEMPLATE.g:843:1: ( 'value=' )
+            // InternalTCTEMPLATE.g:815:1: ( ( 'value=' ) )
+            // InternalTCTEMPLATE.g:816:1: ( 'value=' )
             {
-            // InternalTCTEMPLATE.g:843:1: ( 'value=' )
-            // InternalTCTEMPLATE.g:844:2: 'value='
+            // InternalTCTEMPLATE.g:816:1: ( 'value=' )
+            // InternalTCTEMPLATE.g:817:2: 'value='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueRawAccess().getValueKeyword_1()); 
@@ -2667,16 +2588,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__2"
-    // InternalTCTEMPLATE.g:853:1: rule__TMTCIFFieldValueRaw__Group__2 : rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3 ;
+    // InternalTCTEMPLATE.g:826:1: rule__TMTCIFFieldValueRaw__Group__2 : rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3 ;
     public final void rule__TMTCIFFieldValueRaw__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:857:1: ( rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3 )
-            // InternalTCTEMPLATE.g:858:2: rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3
+            // InternalTCTEMPLATE.g:830:1: ( rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3 )
+            // InternalTCTEMPLATE.g:831:2: rule__TMTCIFFieldValueRaw__Group__2__Impl rule__TMTCIFFieldValueRaw__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__TMTCIFFieldValueRaw__Group__2__Impl();
 
             state._fsp--;
@@ -2705,23 +2626,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__2__Impl"
-    // InternalTCTEMPLATE.g:865:1: rule__TMTCIFFieldValueRaw__Group__2__Impl : ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) ) ;
+    // InternalTCTEMPLATE.g:838:1: rule__TMTCIFFieldValueRaw__Group__2__Impl : ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) ) ;
     public final void rule__TMTCIFFieldValueRaw__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:869:1: ( ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) ) )
-            // InternalTCTEMPLATE.g:870:1: ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) )
+            // InternalTCTEMPLATE.g:842:1: ( ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) ) )
+            // InternalTCTEMPLATE.g:843:1: ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) )
             {
-            // InternalTCTEMPLATE.g:870:1: ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) )
-            // InternalTCTEMPLATE.g:871:2: ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 )
+            // InternalTCTEMPLATE.g:843:1: ( ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 ) )
+            // InternalTCTEMPLATE.g:844:2: ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueRawAccess().getValueAssignment_2()); 
             }
-            // InternalTCTEMPLATE.g:872:2: ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 )
-            // InternalTCTEMPLATE.g:872:3: rule__TMTCIFFieldValueRaw__ValueAssignment_2
+            // InternalTCTEMPLATE.g:845:2: ( rule__TMTCIFFieldValueRaw__ValueAssignment_2 )
+            // InternalTCTEMPLATE.g:845:3: rule__TMTCIFFieldValueRaw__ValueAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueRaw__ValueAssignment_2();
@@ -2756,14 +2677,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__3"
-    // InternalTCTEMPLATE.g:880:1: rule__TMTCIFFieldValueRaw__Group__3 : rule__TMTCIFFieldValueRaw__Group__3__Impl ;
+    // InternalTCTEMPLATE.g:853:1: rule__TMTCIFFieldValueRaw__Group__3 : rule__TMTCIFFieldValueRaw__Group__3__Impl ;
     public final void rule__TMTCIFFieldValueRaw__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:884:1: ( rule__TMTCIFFieldValueRaw__Group__3__Impl )
-            // InternalTCTEMPLATE.g:885:2: rule__TMTCIFFieldValueRaw__Group__3__Impl
+            // InternalTCTEMPLATE.g:857:1: ( rule__TMTCIFFieldValueRaw__Group__3__Impl )
+            // InternalTCTEMPLATE.g:858:2: rule__TMTCIFFieldValueRaw__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueRaw__Group__3__Impl();
@@ -2789,17 +2710,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__Group__3__Impl"
-    // InternalTCTEMPLATE.g:891:1: rule__TMTCIFFieldValueRaw__Group__3__Impl : ( '/>' ) ;
+    // InternalTCTEMPLATE.g:864:1: rule__TMTCIFFieldValueRaw__Group__3__Impl : ( '/>' ) ;
     public final void rule__TMTCIFFieldValueRaw__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:895:1: ( ( '/>' ) )
-            // InternalTCTEMPLATE.g:896:1: ( '/>' )
+            // InternalTCTEMPLATE.g:868:1: ( ( '/>' ) )
+            // InternalTCTEMPLATE.g:869:1: ( '/>' )
             {
-            // InternalTCTEMPLATE.g:896:1: ( '/>' )
-            // InternalTCTEMPLATE.g:897:2: '/>'
+            // InternalTCTEMPLATE.g:869:1: ( '/>' )
+            // InternalTCTEMPLATE.g:870:2: '/>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueRawAccess().getSolidusGreaterThanSignKeyword_3()); 
@@ -2830,16 +2751,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__0"
-    // InternalTCTEMPLATE.g:907:1: rule__TMTCIFFieldValueFile__Group__0 : rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1 ;
+    // InternalTCTEMPLATE.g:880:1: rule__TMTCIFFieldValueFile__Group__0 : rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1 ;
     public final void rule__TMTCIFFieldValueFile__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:911:1: ( rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1 )
-            // InternalTCTEMPLATE.g:912:2: rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1
+            // InternalTCTEMPLATE.g:884:1: ( rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1 )
+            // InternalTCTEMPLATE.g:885:2: rule__TMTCIFFieldValueFile__Group__0__Impl rule__TMTCIFFieldValueFile__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_17);
+            pushFollow(FollowSets000.FOLLOW_18);
             rule__TMTCIFFieldValueFile__Group__0__Impl();
 
             state._fsp--;
@@ -2868,17 +2789,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__0__Impl"
-    // InternalTCTEMPLATE.g:919:1: rule__TMTCIFFieldValueFile__Group__0__Impl : ( '<FieldValueFile' ) ;
+    // InternalTCTEMPLATE.g:892:1: rule__TMTCIFFieldValueFile__Group__0__Impl : ( '<FieldValueFile' ) ;
     public final void rule__TMTCIFFieldValueFile__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:923:1: ( ( '<FieldValueFile' ) )
-            // InternalTCTEMPLATE.g:924:1: ( '<FieldValueFile' )
+            // InternalTCTEMPLATE.g:896:1: ( ( '<FieldValueFile' ) )
+            // InternalTCTEMPLATE.g:897:1: ( '<FieldValueFile' )
             {
-            // InternalTCTEMPLATE.g:924:1: ( '<FieldValueFile' )
-            // InternalTCTEMPLATE.g:925:2: '<FieldValueFile'
+            // InternalTCTEMPLATE.g:897:1: ( '<FieldValueFile' )
+            // InternalTCTEMPLATE.g:898:2: '<FieldValueFile'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueFileAccess().getFieldValueFileKeyword_0()); 
@@ -2909,14 +2830,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__1"
-    // InternalTCTEMPLATE.g:934:1: rule__TMTCIFFieldValueFile__Group__1 : rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2 ;
+    // InternalTCTEMPLATE.g:907:1: rule__TMTCIFFieldValueFile__Group__1 : rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2 ;
     public final void rule__TMTCIFFieldValueFile__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:938:1: ( rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2 )
-            // InternalTCTEMPLATE.g:939:2: rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2
+            // InternalTCTEMPLATE.g:911:1: ( rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2 )
+            // InternalTCTEMPLATE.g:912:2: rule__TMTCIFFieldValueFile__Group__1__Impl rule__TMTCIFFieldValueFile__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__TMTCIFFieldValueFile__Group__1__Impl();
@@ -2947,17 +2868,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__1__Impl"
-    // InternalTCTEMPLATE.g:946:1: rule__TMTCIFFieldValueFile__Group__1__Impl : ( 'filename=' ) ;
+    // InternalTCTEMPLATE.g:919:1: rule__TMTCIFFieldValueFile__Group__1__Impl : ( 'filename=' ) ;
     public final void rule__TMTCIFFieldValueFile__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:950:1: ( ( 'filename=' ) )
-            // InternalTCTEMPLATE.g:951:1: ( 'filename=' )
+            // InternalTCTEMPLATE.g:923:1: ( ( 'filename=' ) )
+            // InternalTCTEMPLATE.g:924:1: ( 'filename=' )
             {
-            // InternalTCTEMPLATE.g:951:1: ( 'filename=' )
-            // InternalTCTEMPLATE.g:952:2: 'filename='
+            // InternalTCTEMPLATE.g:924:1: ( 'filename=' )
+            // InternalTCTEMPLATE.g:925:2: 'filename='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameKeyword_1()); 
@@ -2988,16 +2909,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__2"
-    // InternalTCTEMPLATE.g:961:1: rule__TMTCIFFieldValueFile__Group__2 : rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3 ;
+    // InternalTCTEMPLATE.g:934:1: rule__TMTCIFFieldValueFile__Group__2 : rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3 ;
     public final void rule__TMTCIFFieldValueFile__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:965:1: ( rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3 )
-            // InternalTCTEMPLATE.g:966:2: rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3
+            // InternalTCTEMPLATE.g:938:1: ( rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3 )
+            // InternalTCTEMPLATE.g:939:2: rule__TMTCIFFieldValueFile__Group__2__Impl rule__TMTCIFFieldValueFile__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__TMTCIFFieldValueFile__Group__2__Impl();
 
             state._fsp--;
@@ -3026,23 +2947,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__2__Impl"
-    // InternalTCTEMPLATE.g:973:1: rule__TMTCIFFieldValueFile__Group__2__Impl : ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) ) ;
+    // InternalTCTEMPLATE.g:946:1: rule__TMTCIFFieldValueFile__Group__2__Impl : ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) ) ;
     public final void rule__TMTCIFFieldValueFile__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:977:1: ( ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) ) )
-            // InternalTCTEMPLATE.g:978:1: ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) )
+            // InternalTCTEMPLATE.g:950:1: ( ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) ) )
+            // InternalTCTEMPLATE.g:951:1: ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) )
             {
-            // InternalTCTEMPLATE.g:978:1: ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) )
-            // InternalTCTEMPLATE.g:979:2: ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 )
+            // InternalTCTEMPLATE.g:951:1: ( ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 ) )
+            // InternalTCTEMPLATE.g:952:2: ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameAssignment_2()); 
             }
-            // InternalTCTEMPLATE.g:980:2: ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 )
-            // InternalTCTEMPLATE.g:980:3: rule__TMTCIFFieldValueFile__FilenameAssignment_2
+            // InternalTCTEMPLATE.g:953:2: ( rule__TMTCIFFieldValueFile__FilenameAssignment_2 )
+            // InternalTCTEMPLATE.g:953:3: rule__TMTCIFFieldValueFile__FilenameAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueFile__FilenameAssignment_2();
@@ -3077,14 +2998,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__3"
-    // InternalTCTEMPLATE.g:988:1: rule__TMTCIFFieldValueFile__Group__3 : rule__TMTCIFFieldValueFile__Group__3__Impl ;
+    // InternalTCTEMPLATE.g:961:1: rule__TMTCIFFieldValueFile__Group__3 : rule__TMTCIFFieldValueFile__Group__3__Impl ;
     public final void rule__TMTCIFFieldValueFile__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:992:1: ( rule__TMTCIFFieldValueFile__Group__3__Impl )
-            // InternalTCTEMPLATE.g:993:2: rule__TMTCIFFieldValueFile__Group__3__Impl
+            // InternalTCTEMPLATE.g:965:1: ( rule__TMTCIFFieldValueFile__Group__3__Impl )
+            // InternalTCTEMPLATE.g:966:2: rule__TMTCIFFieldValueFile__Group__3__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueFile__Group__3__Impl();
@@ -3110,17 +3031,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__Group__3__Impl"
-    // InternalTCTEMPLATE.g:999:1: rule__TMTCIFFieldValueFile__Group__3__Impl : ( '/>' ) ;
+    // InternalTCTEMPLATE.g:972:1: rule__TMTCIFFieldValueFile__Group__3__Impl : ( '/>' ) ;
     public final void rule__TMTCIFFieldValueFile__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1003:1: ( ( '/>' ) )
-            // InternalTCTEMPLATE.g:1004:1: ( '/>' )
+            // InternalTCTEMPLATE.g:976:1: ( ( '/>' ) )
+            // InternalTCTEMPLATE.g:977:1: ( '/>' )
             {
-            // InternalTCTEMPLATE.g:1004:1: ( '/>' )
-            // InternalTCTEMPLATE.g:1005:2: '/>'
+            // InternalTCTEMPLATE.g:977:1: ( '/>' )
+            // InternalTCTEMPLATE.g:978:2: '/>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueFileAccess().getSolidusGreaterThanSignKeyword_3()); 
@@ -3151,16 +3072,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__0"
-    // InternalTCTEMPLATE.g:1015:1: rule__TMTCIFFieldValueEnum__Group__0 : rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1 ;
+    // InternalTCTEMPLATE.g:988:1: rule__TMTCIFFieldValueEnum__Group__0 : rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1 ;
     public final void rule__TMTCIFFieldValueEnum__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1019:1: ( rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1 )
-            // InternalTCTEMPLATE.g:1020:2: rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1
+            // InternalTCTEMPLATE.g:992:1: ( rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1 )
+            // InternalTCTEMPLATE.g:993:2: rule__TMTCIFFieldValueEnum__Group__0__Impl rule__TMTCIFFieldValueEnum__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_18);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__TMTCIFFieldValueEnum__Group__0__Impl();
 
             state._fsp--;
@@ -3189,17 +3110,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__0__Impl"
-    // InternalTCTEMPLATE.g:1027:1: rule__TMTCIFFieldValueEnum__Group__0__Impl : ( '<FieldValueEnum' ) ;
+    // InternalTCTEMPLATE.g:1000:1: rule__TMTCIFFieldValueEnum__Group__0__Impl : ( '<FieldValueEnum' ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1031:1: ( ( '<FieldValueEnum' ) )
-            // InternalTCTEMPLATE.g:1032:1: ( '<FieldValueEnum' )
+            // InternalTCTEMPLATE.g:1004:1: ( ( '<FieldValueEnum' ) )
+            // InternalTCTEMPLATE.g:1005:1: ( '<FieldValueEnum' )
             {
-            // InternalTCTEMPLATE.g:1032:1: ( '<FieldValueEnum' )
-            // InternalTCTEMPLATE.g:1033:2: '<FieldValueEnum'
+            // InternalTCTEMPLATE.g:1005:1: ( '<FieldValueEnum' )
+            // InternalTCTEMPLATE.g:1006:2: '<FieldValueEnum'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getFieldValueEnumKeyword_0()); 
@@ -3230,14 +3151,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__1"
-    // InternalTCTEMPLATE.g:1042:1: rule__TMTCIFFieldValueEnum__Group__1 : rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2 ;
+    // InternalTCTEMPLATE.g:1015:1: rule__TMTCIFFieldValueEnum__Group__1 : rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2 ;
     public final void rule__TMTCIFFieldValueEnum__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1046:1: ( rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2 )
-            // InternalTCTEMPLATE.g:1047:2: rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2
+            // InternalTCTEMPLATE.g:1019:1: ( rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2 )
+            // InternalTCTEMPLATE.g:1020:2: rule__TMTCIFFieldValueEnum__Group__1__Impl rule__TMTCIFFieldValueEnum__Group__2
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__TMTCIFFieldValueEnum__Group__1__Impl();
@@ -3268,17 +3189,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__1__Impl"
-    // InternalTCTEMPLATE.g:1054:1: rule__TMTCIFFieldValueEnum__Group__1__Impl : ( 'enumRef=' ) ;
+    // InternalTCTEMPLATE.g:1027:1: rule__TMTCIFFieldValueEnum__Group__1__Impl : ( 'enumRef=' ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1058:1: ( ( 'enumRef=' ) )
-            // InternalTCTEMPLATE.g:1059:1: ( 'enumRef=' )
+            // InternalTCTEMPLATE.g:1031:1: ( ( 'enumRef=' ) )
+            // InternalTCTEMPLATE.g:1032:1: ( 'enumRef=' )
             {
-            // InternalTCTEMPLATE.g:1059:1: ( 'enumRef=' )
-            // InternalTCTEMPLATE.g:1060:2: 'enumRef='
+            // InternalTCTEMPLATE.g:1032:1: ( 'enumRef=' )
+            // InternalTCTEMPLATE.g:1033:2: 'enumRef='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefKeyword_1()); 
@@ -3309,16 +3230,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__2"
-    // InternalTCTEMPLATE.g:1069:1: rule__TMTCIFFieldValueEnum__Group__2 : rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3 ;
+    // InternalTCTEMPLATE.g:1042:1: rule__TMTCIFFieldValueEnum__Group__2 : rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3 ;
     public final void rule__TMTCIFFieldValueEnum__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1073:1: ( rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3 )
-            // InternalTCTEMPLATE.g:1074:2: rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3
+            // InternalTCTEMPLATE.g:1046:1: ( rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3 )
+            // InternalTCTEMPLATE.g:1047:2: rule__TMTCIFFieldValueEnum__Group__2__Impl rule__TMTCIFFieldValueEnum__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__TMTCIFFieldValueEnum__Group__2__Impl();
 
             state._fsp--;
@@ -3347,23 +3268,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__2__Impl"
-    // InternalTCTEMPLATE.g:1081:1: rule__TMTCIFFieldValueEnum__Group__2__Impl : ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) ) ;
+    // InternalTCTEMPLATE.g:1054:1: rule__TMTCIFFieldValueEnum__Group__2__Impl : ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1085:1: ( ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) ) )
-            // InternalTCTEMPLATE.g:1086:1: ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) )
+            // InternalTCTEMPLATE.g:1058:1: ( ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) ) )
+            // InternalTCTEMPLATE.g:1059:1: ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) )
             {
-            // InternalTCTEMPLATE.g:1086:1: ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) )
-            // InternalTCTEMPLATE.g:1087:2: ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 )
+            // InternalTCTEMPLATE.g:1059:1: ( ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 ) )
+            // InternalTCTEMPLATE.g:1060:2: ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefAssignment_2()); 
             }
-            // InternalTCTEMPLATE.g:1088:2: ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 )
-            // InternalTCTEMPLATE.g:1088:3: rule__TMTCIFFieldValueEnum__EnumRefAssignment_2
+            // InternalTCTEMPLATE.g:1061:2: ( rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 )
+            // InternalTCTEMPLATE.g:1061:3: rule__TMTCIFFieldValueEnum__EnumRefAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueEnum__EnumRefAssignment_2();
@@ -3398,14 +3319,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__3"
-    // InternalTCTEMPLATE.g:1096:1: rule__TMTCIFFieldValueEnum__Group__3 : rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4 ;
+    // InternalTCTEMPLATE.g:1069:1: rule__TMTCIFFieldValueEnum__Group__3 : rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4 ;
     public final void rule__TMTCIFFieldValueEnum__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1100:1: ( rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4 )
-            // InternalTCTEMPLATE.g:1101:2: rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4
+            // InternalTCTEMPLATE.g:1073:1: ( rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4 )
+            // InternalTCTEMPLATE.g:1074:2: rule__TMTCIFFieldValueEnum__Group__3__Impl rule__TMTCIFFieldValueEnum__Group__4
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__TMTCIFFieldValueEnum__Group__3__Impl();
@@ -3436,17 +3357,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__3__Impl"
-    // InternalTCTEMPLATE.g:1108:1: rule__TMTCIFFieldValueEnum__Group__3__Impl : ( 'valueRef=' ) ;
+    // InternalTCTEMPLATE.g:1081:1: rule__TMTCIFFieldValueEnum__Group__3__Impl : ( 'valueRef=' ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1112:1: ( ( 'valueRef=' ) )
-            // InternalTCTEMPLATE.g:1113:1: ( 'valueRef=' )
+            // InternalTCTEMPLATE.g:1085:1: ( ( 'valueRef=' ) )
+            // InternalTCTEMPLATE.g:1086:1: ( 'valueRef=' )
             {
-            // InternalTCTEMPLATE.g:1113:1: ( 'valueRef=' )
-            // InternalTCTEMPLATE.g:1114:2: 'valueRef='
+            // InternalTCTEMPLATE.g:1086:1: ( 'valueRef=' )
+            // InternalTCTEMPLATE.g:1087:2: 'valueRef='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefKeyword_3()); 
@@ -3477,16 +3398,16 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__4"
-    // InternalTCTEMPLATE.g:1123:1: rule__TMTCIFFieldValueEnum__Group__4 : rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5 ;
+    // InternalTCTEMPLATE.g:1096:1: rule__TMTCIFFieldValueEnum__Group__4 : rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5 ;
     public final void rule__TMTCIFFieldValueEnum__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1127:1: ( rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5 )
-            // InternalTCTEMPLATE.g:1128:2: rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5
+            // InternalTCTEMPLATE.g:1100:1: ( rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5 )
+            // InternalTCTEMPLATE.g:1101:2: rule__TMTCIFFieldValueEnum__Group__4__Impl rule__TMTCIFFieldValueEnum__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_12);
+            pushFollow(FollowSets000.FOLLOW_17);
             rule__TMTCIFFieldValueEnum__Group__4__Impl();
 
             state._fsp--;
@@ -3515,23 +3436,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__4__Impl"
-    // InternalTCTEMPLATE.g:1135:1: rule__TMTCIFFieldValueEnum__Group__4__Impl : ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) ) ;
+    // InternalTCTEMPLATE.g:1108:1: rule__TMTCIFFieldValueEnum__Group__4__Impl : ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1139:1: ( ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) ) )
-            // InternalTCTEMPLATE.g:1140:1: ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) )
+            // InternalTCTEMPLATE.g:1112:1: ( ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) ) )
+            // InternalTCTEMPLATE.g:1113:1: ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) )
             {
-            // InternalTCTEMPLATE.g:1140:1: ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) )
-            // InternalTCTEMPLATE.g:1141:2: ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 )
+            // InternalTCTEMPLATE.g:1113:1: ( ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 ) )
+            // InternalTCTEMPLATE.g:1114:2: ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefAssignment_4()); 
             }
-            // InternalTCTEMPLATE.g:1142:2: ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 )
-            // InternalTCTEMPLATE.g:1142:3: rule__TMTCIFFieldValueEnum__ValueRefAssignment_4
+            // InternalTCTEMPLATE.g:1115:2: ( rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 )
+            // InternalTCTEMPLATE.g:1115:3: rule__TMTCIFFieldValueEnum__ValueRefAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueEnum__ValueRefAssignment_4();
@@ -3566,14 +3487,14 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__5"
-    // InternalTCTEMPLATE.g:1150:1: rule__TMTCIFFieldValueEnum__Group__5 : rule__TMTCIFFieldValueEnum__Group__5__Impl ;
+    // InternalTCTEMPLATE.g:1123:1: rule__TMTCIFFieldValueEnum__Group__5 : rule__TMTCIFFieldValueEnum__Group__5__Impl ;
     public final void rule__TMTCIFFieldValueEnum__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1154:1: ( rule__TMTCIFFieldValueEnum__Group__5__Impl )
-            // InternalTCTEMPLATE.g:1155:2: rule__TMTCIFFieldValueEnum__Group__5__Impl
+            // InternalTCTEMPLATE.g:1127:1: ( rule__TMTCIFFieldValueEnum__Group__5__Impl )
+            // InternalTCTEMPLATE.g:1128:2: rule__TMTCIFFieldValueEnum__Group__5__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueEnum__Group__5__Impl();
@@ -3599,17 +3520,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__Group__5__Impl"
-    // InternalTCTEMPLATE.g:1161:1: rule__TMTCIFFieldValueEnum__Group__5__Impl : ( '/>' ) ;
+    // InternalTCTEMPLATE.g:1134:1: rule__TMTCIFFieldValueEnum__Group__5__Impl : ( '/>' ) ;
     public final void rule__TMTCIFFieldValueEnum__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1165:1: ( ( '/>' ) )
-            // InternalTCTEMPLATE.g:1166:1: ( '/>' )
+            // InternalTCTEMPLATE.g:1138:1: ( ( '/>' ) )
+            // InternalTCTEMPLATE.g:1139:1: ( '/>' )
             {
-            // InternalTCTEMPLATE.g:1166:1: ( '/>' )
-            // InternalTCTEMPLATE.g:1167:2: '/>'
+            // InternalTCTEMPLATE.g:1139:1: ( '/>' )
+            // InternalTCTEMPLATE.g:1140:2: '/>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getSolidusGreaterThanSignKeyword_5()); 
@@ -3640,17 +3561,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplate__NameAssignment_2"
-    // InternalTCTEMPLATE.g:1177:1: rule__VTCTemplate__NameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTCTEMPLATE.g:1150:1: rule__VTCTemplate__NameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__VTCTemplate__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1181:1: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1182:2: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1154:1: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1155:2: ( RULE_STRING )
             {
-            // InternalTCTEMPLATE.g:1182:2: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1183:3: RULE_STRING
+            // InternalTCTEMPLATE.g:1155:2: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1156:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateAccess().getNameSTRINGTerminalRuleCall_2_0()); 
@@ -3681,23 +3602,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplate__TcInputAssignment_4"
-    // InternalTCTEMPLATE.g:1192:1: rule__VTCTemplate__TcInputAssignment_4 : ( ( RULE_STRING ) ) ;
+    // InternalTCTEMPLATE.g:1165:1: rule__VTCTemplate__TcInputAssignment_4 : ( ( RULE_STRING ) ) ;
     public final void rule__VTCTemplate__TcInputAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1196:1: ( ( ( RULE_STRING ) ) )
-            // InternalTCTEMPLATE.g:1197:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1169:1: ( ( ( RULE_STRING ) ) )
+            // InternalTCTEMPLATE.g:1170:2: ( ( RULE_STRING ) )
             {
-            // InternalTCTEMPLATE.g:1197:2: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1198:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1170:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1171:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateAccess().getTcInputTMTCIFTCCrossReference_4_0()); 
             }
-            // InternalTCTEMPLATE.g:1199:3: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1200:4: RULE_STRING
+            // InternalTCTEMPLATE.g:1172:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1173:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateAccess().getTcInputTMTCIFTCSTRINGTerminalRuleCall_4_0_1()); 
@@ -3734,17 +3655,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTCTemplate__FieldsAssignment_5_0_1_1"
-    // InternalTCTEMPLATE.g:1211:1: rule__VTCTemplate__FieldsAssignment_5_0_1_1 : ( ruleVTCTemplateField ) ;
+    // InternalTCTEMPLATE.g:1184:1: rule__VTCTemplate__FieldsAssignment_5_0_1_1 : ( ruleVTCTemplateField ) ;
     public final void rule__VTCTemplate__FieldsAssignment_5_0_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1215:1: ( ( ruleVTCTemplateField ) )
-            // InternalTCTEMPLATE.g:1216:2: ( ruleVTCTemplateField )
+            // InternalTCTEMPLATE.g:1188:1: ( ( ruleVTCTemplateField ) )
+            // InternalTCTEMPLATE.g:1189:2: ( ruleVTCTemplateField )
             {
-            // InternalTCTEMPLATE.g:1216:2: ( ruleVTCTemplateField )
-            // InternalTCTEMPLATE.g:1217:3: ruleVTCTemplateField
+            // InternalTCTEMPLATE.g:1189:2: ( ruleVTCTemplateField )
+            // InternalTCTEMPLATE.g:1190:3: ruleVTCTemplateField
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCTemplateAccess().getFieldsVTCTemplateFieldParserRuleCall_5_0_1_1_0()); 
@@ -3778,37 +3699,37 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__VTCTemplate__FieldsAssignment_5_0_1_1"
 
 
-    // $ANTLR start "rule__VTCTemplateField__FieldRefAssignment_3"
-    // InternalTCTEMPLATE.g:1226:1: rule__VTCTemplateField__FieldRefAssignment_3 : ( ( RULE_STRING ) ) ;
-    public final void rule__VTCTemplateField__FieldRefAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__VTCTemplateField__FieldRefAssignment_2"
+    // InternalTCTEMPLATE.g:1199:1: rule__VTCTemplateField__FieldRefAssignment_2 : ( ( RULE_STRING ) ) ;
+    public final void rule__VTCTemplateField__FieldRefAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1230:1: ( ( ( RULE_STRING ) ) )
-            // InternalTCTEMPLATE.g:1231:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1203:1: ( ( ( RULE_STRING ) ) )
+            // InternalTCTEMPLATE.g:1204:2: ( ( RULE_STRING ) )
             {
-            // InternalTCTEMPLATE.g:1231:2: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1232:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1204:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1205:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_3_0()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0()); 
             }
-            // InternalTCTEMPLATE.g:1233:3: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1234:4: RULE_STRING
+            // InternalTCTEMPLATE.g:1206:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1207:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_3_0()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0()); 
             }
 
             }
@@ -3828,24 +3749,24 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__VTCTemplateField__FieldRefAssignment_3"
+    // $ANTLR end "rule__VTCTemplateField__FieldRefAssignment_2"
 
 
-    // $ANTLR start "rule__VTCTemplateField__ValueAssignment_5"
-    // InternalTCTEMPLATE.g:1245:1: rule__VTCTemplateField__ValueAssignment_5 : ( ruleTMTCIFFieldValue ) ;
-    public final void rule__VTCTemplateField__ValueAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__VTCTemplateField__ValueAssignment_4"
+    // InternalTCTEMPLATE.g:1218:1: rule__VTCTemplateField__ValueAssignment_4 : ( ruleTMTCIFFieldValue ) ;
+    public final void rule__VTCTemplateField__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1249:1: ( ( ruleTMTCIFFieldValue ) )
-            // InternalTCTEMPLATE.g:1250:2: ( ruleTMTCIFFieldValue )
+            // InternalTCTEMPLATE.g:1222:1: ( ( ruleTMTCIFFieldValue ) )
+            // InternalTCTEMPLATE.g:1223:2: ( ruleTMTCIFFieldValue )
             {
-            // InternalTCTEMPLATE.g:1250:2: ( ruleTMTCIFFieldValue )
-            // InternalTCTEMPLATE.g:1251:3: ruleTMTCIFFieldValue
+            // InternalTCTEMPLATE.g:1223:2: ( ruleTMTCIFFieldValue )
+            // InternalTCTEMPLATE.g:1224:3: ruleTMTCIFFieldValue
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0()); 
+               before(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleTMTCIFFieldValue();
@@ -3853,7 +3774,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0()); 
+               after(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0()); 
             }
 
             }
@@ -3873,27 +3794,27 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__VTCTemplateField__ValueAssignment_5"
+    // $ANTLR end "rule__VTCTemplateField__ValueAssignment_4"
 
 
     // $ANTLR start "rule__TMTCIFFieldValueRaw__ValueAssignment_2"
-    // InternalTCTEMPLATE.g:1260:1: rule__TMTCIFFieldValueRaw__ValueAssignment_2 : ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) ) ;
+    // InternalTCTEMPLATE.g:1233:1: rule__TMTCIFFieldValueRaw__ValueAssignment_2 : ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) ) ;
     public final void rule__TMTCIFFieldValueRaw__ValueAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1264:1: ( ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) ) )
-            // InternalTCTEMPLATE.g:1265:2: ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) )
+            // InternalTCTEMPLATE.g:1237:1: ( ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) ) )
+            // InternalTCTEMPLATE.g:1238:2: ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) )
             {
-            // InternalTCTEMPLATE.g:1265:2: ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) )
-            // InternalTCTEMPLATE.g:1266:3: ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 )
+            // InternalTCTEMPLATE.g:1238:2: ( ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 ) )
+            // InternalTCTEMPLATE.g:1239:3: ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueRawAccess().getValueAlternatives_2_0()); 
             }
-            // InternalTCTEMPLATE.g:1267:3: ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 )
-            // InternalTCTEMPLATE.g:1267:4: rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0
+            // InternalTCTEMPLATE.g:1240:3: ( rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0 )
+            // InternalTCTEMPLATE.g:1240:4: rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__TMTCIFFieldValueRaw__ValueAlternatives_2_0();
@@ -3928,17 +3849,17 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueFile__FilenameAssignment_2"
-    // InternalTCTEMPLATE.g:1275:1: rule__TMTCIFFieldValueFile__FilenameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTCTEMPLATE.g:1248:1: rule__TMTCIFFieldValueFile__FilenameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TMTCIFFieldValueFile__FilenameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1279:1: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1280:2: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1252:1: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1253:2: ( RULE_STRING )
             {
-            // InternalTCTEMPLATE.g:1280:2: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1281:3: RULE_STRING
+            // InternalTCTEMPLATE.g:1253:2: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1254:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameSTRINGTerminalRuleCall_2_0()); 
@@ -3969,23 +3890,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__EnumRefAssignment_2"
-    // InternalTCTEMPLATE.g:1290:1: rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 : ( ( RULE_STRING ) ) ;
+    // InternalTCTEMPLATE.g:1263:1: rule__TMTCIFFieldValueEnum__EnumRefAssignment_2 : ( ( RULE_STRING ) ) ;
     public final void rule__TMTCIFFieldValueEnum__EnumRefAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1294:1: ( ( ( RULE_STRING ) ) )
-            // InternalTCTEMPLATE.g:1295:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1267:1: ( ( ( RULE_STRING ) ) )
+            // InternalTCTEMPLATE.g:1268:2: ( ( RULE_STRING ) )
             {
-            // InternalTCTEMPLATE.g:1295:2: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1296:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1268:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1269:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumCrossReference_2_0()); 
             }
-            // InternalTCTEMPLATE.g:1297:3: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1298:4: RULE_STRING
+            // InternalTCTEMPLATE.g:1270:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1271:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1()); 
@@ -4022,23 +3943,23 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TMTCIFFieldValueEnum__ValueRefAssignment_4"
-    // InternalTCTEMPLATE.g:1309:1: rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 : ( ( RULE_STRING ) ) ;
+    // InternalTCTEMPLATE.g:1282:1: rule__TMTCIFFieldValueEnum__ValueRefAssignment_4 : ( ( RULE_STRING ) ) ;
     public final void rule__TMTCIFFieldValueEnum__ValueRefAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCTEMPLATE.g:1313:1: ( ( ( RULE_STRING ) ) )
-            // InternalTCTEMPLATE.g:1314:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1286:1: ( ( ( RULE_STRING ) ) )
+            // InternalTCTEMPLATE.g:1287:2: ( ( RULE_STRING ) )
             {
-            // InternalTCTEMPLATE.g:1314:2: ( ( RULE_STRING ) )
-            // InternalTCTEMPLATE.g:1315:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1287:2: ( ( RULE_STRING ) )
+            // InternalTCTEMPLATE.g:1288:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueCrossReference_4_0()); 
             }
-            // InternalTCTEMPLATE.g:1316:3: ( RULE_STRING )
-            // InternalTCTEMPLATE.g:1317:4: RULE_STRING
+            // InternalTCTEMPLATE.g:1289:3: ( RULE_STRING )
+            // InternalTCTEMPLATE.g:1290:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1()); 
@@ -4091,14 +4012,15 @@ public class InternalTCTEMPLATEParser extends AbstractInternalContentAssistParse
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000100000L});
         public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000200002L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000020000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000015000000L});
         public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000002000000L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000030L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000002000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000040000000L});
     }
 
 

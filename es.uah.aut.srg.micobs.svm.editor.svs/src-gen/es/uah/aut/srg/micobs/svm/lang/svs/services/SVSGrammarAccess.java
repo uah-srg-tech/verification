@@ -4778,12 +4778,13 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final RuleCall cTMTCIFFieldValueRawParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cTMTCIFFieldValueFileParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		private final RuleCall cTMTCIFFieldValueEnumParserRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		//TMTCIFFieldValueTM fieldvalue::TMTCIFFieldValue:
-		//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
 		@Override public ParserRule getRule() { return rule; }
 		
-		//TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+		//TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//TMTCIFFieldValueRaw
@@ -4791,6 +4792,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//TMTCIFFieldValueFile
 		public RuleCall getTMTCIFFieldValueFileParserRuleCall_1() { return cTMTCIFFieldValueFileParserRuleCall_1; }
+		
+		//TMTCIFFieldValueEnum
+		public RuleCall getTMTCIFFieldValueEnumParserRuleCall_2() { return cTMTCIFFieldValueEnumParserRuleCall_2; }
 	}
 	public class QualifiedNameElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.QualifiedName");
@@ -6462,7 +6466,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TMTCIFFieldValueTM fieldvalue::TMTCIFFieldValue:
-	//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile
+	//	TMTCIFFieldValueRaw | TMTCIFFieldValueFile | TMTCIFFieldValueEnum
 	public TMTCIFFieldValueTMElements getTMTCIFFieldValueTMAccess() {
 		return pTMTCIFFieldValueTM;
 	}

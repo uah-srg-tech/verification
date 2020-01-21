@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TMTemplate'", "'name='", "'tmOutput='", "'>'", "'<Fields>'", "'</Fields>'", "'</TMTemplate>'", "'/>'", "'<Field>'", "'<fieldRef'", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TMTemplate'", "'name='", "'tmOutput='", "'>'", "'<Fields>'", "'</Fields>'", "'</TMTemplate>'", "'/>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -36,12 +36,15 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int EOF=-1;
+    public static final int T__30=30;
     public static final int RULE_ID=7;
     public static final int RULE_WS=11;
     public static final int RULE_ANY_OTHER=12;
     public static final int T__26=26;
     public static final int T__27=27;
+    public static final int T__28=28;
     public static final int RULE_INT=8;
+    public static final int T__29=29;
     public static final int T__22=22;
     public static final int RULE_ML_COMMENT=9;
     public static final int T__23=23;
@@ -450,7 +453,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTMTemplateField"
-    // InternalTMTEMPLATE.g:188:1: ruleVTMTemplateField returns [EObject current=null] : (otherlv_0= '<Field>' otherlv_1= '<fieldRef' otherlv_2= 'name=' ( (otherlv_3= RULE_STRING ) ) otherlv_4= '/>' ( (lv_value_5_0= ruleTMTCIFFieldValue ) ) otherlv_6= '</Field>' ) ;
+    // InternalTMTEMPLATE.g:188:1: ruleVTMTemplateField returns [EObject current=null] : (otherlv_0= '<Field' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValue ) ) otherlv_5= '</Field>' ) ;
     public final EObject ruleVTMTemplateField() throws RecognitionException {
         EObject current = null;
 
@@ -458,20 +461,19 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
-        Token otherlv_6=null;
-        EObject lv_value_5_0 = null;
+        Token otherlv_5=null;
+        EObject lv_value_4_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTMTEMPLATE.g:194:2: ( (otherlv_0= '<Field>' otherlv_1= '<fieldRef' otherlv_2= 'name=' ( (otherlv_3= RULE_STRING ) ) otherlv_4= '/>' ( (lv_value_5_0= ruleTMTCIFFieldValue ) ) otherlv_6= '</Field>' ) )
-            // InternalTMTEMPLATE.g:195:2: (otherlv_0= '<Field>' otherlv_1= '<fieldRef' otherlv_2= 'name=' ( (otherlv_3= RULE_STRING ) ) otherlv_4= '/>' ( (lv_value_5_0= ruleTMTCIFFieldValue ) ) otherlv_6= '</Field>' )
+            // InternalTMTEMPLATE.g:194:2: ( (otherlv_0= '<Field' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValue ) ) otherlv_5= '</Field>' ) )
+            // InternalTMTEMPLATE.g:195:2: (otherlv_0= '<Field' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValue ) ) otherlv_5= '</Field>' )
             {
-            // InternalTMTEMPLATE.g:195:2: (otherlv_0= '<Field>' otherlv_1= '<fieldRef' otherlv_2= 'name=' ( (otherlv_3= RULE_STRING ) ) otherlv_4= '/>' ( (lv_value_5_0= ruleTMTCIFFieldValue ) ) otherlv_6= '</Field>' )
-            // InternalTMTEMPLATE.g:196:3: otherlv_0= '<Field>' otherlv_1= '<fieldRef' otherlv_2= 'name=' ( (otherlv_3= RULE_STRING ) ) otherlv_4= '/>' ( (lv_value_5_0= ruleTMTCIFFieldValue ) ) otherlv_6= '</Field>'
+            // InternalTMTEMPLATE.g:195:2: (otherlv_0= '<Field' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValue ) ) otherlv_5= '</Field>' )
+            // InternalTMTEMPLATE.g:196:3: otherlv_0= '<Field' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValue ) ) otherlv_5= '</Field>'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_11); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -479,23 +481,17 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_0, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_0());
               		
             }
-            otherlv_1=(Token)match(input,22,FollowSets000.FOLLOW_3); if (state.failed) return current;
+            otherlv_1=(Token)match(input,22,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_1, grammarAccess.getVTMTemplateFieldAccess().getFieldRefKeyword_1());
               		
             }
-            otherlv_2=(Token)match(input,14,FollowSets000.FOLLOW_4); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			newLeafNode(otherlv_2, grammarAccess.getVTMTemplateFieldAccess().getNameKeyword_2());
-              		
-            }
-            // InternalTMTEMPLATE.g:208:3: ( (otherlv_3= RULE_STRING ) )
-            // InternalTMTEMPLATE.g:209:4: (otherlv_3= RULE_STRING )
+            // InternalTMTEMPLATE.g:204:3: ( (otherlv_2= RULE_STRING ) )
+            // InternalTMTEMPLATE.g:205:4: (otherlv_2= RULE_STRING )
             {
-            // InternalTMTEMPLATE.g:209:4: (otherlv_3= RULE_STRING )
-            // InternalTMTEMPLATE.g:210:5: otherlv_3= RULE_STRING
+            // InternalTMTEMPLATE.g:205:4: (otherlv_2= RULE_STRING )
+            // InternalTMTEMPLATE.g:206:5: otherlv_2= RULE_STRING
             {
             if ( state.backtracking==0 ) {
 
@@ -509,10 +505,10 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
               					}
               				
             }
-            otherlv_3=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            otherlv_2=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_3, grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldCrossReference_3_0());
+              					newLeafNode(otherlv_2, grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldCrossReference_2_0());
               				
             }
 
@@ -521,25 +517,25 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,20,FollowSets000.FOLLOW_13); if (state.failed) return current;
+            otherlv_3=(Token)match(input,16,FollowSets000.FOLLOW_13); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_4, grammarAccess.getVTMTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4());
+              			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateFieldAccess().getGreaterThanSignKeyword_3());
               		
             }
-            // InternalTMTEMPLATE.g:228:3: ( (lv_value_5_0= ruleTMTCIFFieldValue ) )
-            // InternalTMTEMPLATE.g:229:4: (lv_value_5_0= ruleTMTCIFFieldValue )
+            // InternalTMTEMPLATE.g:224:3: ( (lv_value_4_0= ruleTMTCIFFieldValue ) )
+            // InternalTMTEMPLATE.g:225:4: (lv_value_4_0= ruleTMTCIFFieldValue )
             {
-            // InternalTMTEMPLATE.g:229:4: (lv_value_5_0= ruleTMTCIFFieldValue )
-            // InternalTMTEMPLATE.g:230:5: lv_value_5_0= ruleTMTCIFFieldValue
+            // InternalTMTEMPLATE.g:225:4: (lv_value_4_0= ruleTMTCIFFieldValue )
+            // InternalTMTEMPLATE.g:226:5: lv_value_4_0= ruleTMTCIFFieldValue
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0());
+              					newCompositeNode(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_14);
-            lv_value_5_0=ruleTMTCIFFieldValue();
+            lv_value_4_0=ruleTMTCIFFieldValue();
 
             state._fsp--;
             if (state.failed) return current;
@@ -551,7 +547,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"value",
-              						lv_value_5_0,
+              						lv_value_4_0,
               						"es.uah.aut.srg.micobs.svm.lang.tmtemplate.TMTEMPLATE.TMTCIFFieldValue");
               					afterParserOrEnumRuleCall();
               				
@@ -562,10 +558,10 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_5=(Token)match(input,23,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_6, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_6());
+              			newLeafNode(otherlv_5, grammarAccess.getVTMTemplateFieldAccess().getFieldKeyword_5());
               		
             }
 
@@ -593,7 +589,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFFieldValue"
-    // InternalTMTEMPLATE.g:255:1: entryRuleTMTCIFFieldValue returns [EObject current=null] : iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF ;
+    // InternalTMTEMPLATE.g:251:1: entryRuleTMTCIFFieldValue returns [EObject current=null] : iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF ;
     public final EObject entryRuleTMTCIFFieldValue() throws RecognitionException {
         EObject current = null;
 
@@ -601,8 +597,8 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTMTEMPLATE.g:255:57: (iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF )
-            // InternalTMTEMPLATE.g:256:2: iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF
+            // InternalTMTEMPLATE.g:251:57: (iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF )
+            // InternalTMTEMPLATE.g:252:2: iv_ruleTMTCIFFieldValue= ruleTMTCIFFieldValue EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFFieldValueRule()); 
@@ -633,7 +629,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFFieldValue"
-    // InternalTMTEMPLATE.g:262:1: ruleTMTCIFFieldValue returns [EObject current=null] : (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile ) ;
+    // InternalTMTEMPLATE.g:258:1: ruleTMTCIFFieldValue returns [EObject current=null] : (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile | this_TMTCIFFieldValueEnum_2= ruleTMTCIFFieldValueEnum ) ;
     public final EObject ruleTMTCIFFieldValue() throws RecognitionException {
         EObject current = null;
 
@@ -641,34 +637,45 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
         EObject this_TMTCIFFieldValueFile_1 = null;
 
+        EObject this_TMTCIFFieldValueEnum_2 = null;
+
 
 
         	enterRule();
 
         try {
-            // InternalTMTEMPLATE.g:268:2: ( (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile ) )
-            // InternalTMTEMPLATE.g:269:2: (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile )
+            // InternalTMTEMPLATE.g:264:2: ( (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile | this_TMTCIFFieldValueEnum_2= ruleTMTCIFFieldValueEnum ) )
+            // InternalTMTEMPLATE.g:265:2: (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile | this_TMTCIFFieldValueEnum_2= ruleTMTCIFFieldValueEnum )
             {
-            // InternalTMTEMPLATE.g:269:2: (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile )
-            int alt4=2;
-            int LA4_0 = input.LA(1);
-
-            if ( (LA4_0==24) ) {
+            // InternalTMTEMPLATE.g:265:2: (this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw | this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile | this_TMTCIFFieldValueEnum_2= ruleTMTCIFFieldValueEnum )
+            int alt4=3;
+            switch ( input.LA(1) ) {
+            case 24:
+                {
                 alt4=1;
-            }
-            else if ( (LA4_0==26) ) {
+                }
+                break;
+            case 26:
+                {
                 alt4=2;
-            }
-            else {
+                }
+                break;
+            case 28:
+                {
+                alt4=3;
+                }
+                break;
+            default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 4, 0, input);
 
                 throw nvae;
             }
+
             switch (alt4) {
                 case 1 :
-                    // InternalTMTEMPLATE.g:270:3: this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw
+                    // InternalTMTEMPLATE.g:266:3: this_TMTCIFFieldValueRaw_0= ruleTMTCIFFieldValueRaw
                     {
                     if ( state.backtracking==0 ) {
 
@@ -695,7 +702,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTMTEMPLATE.g:282:3: this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile
+                    // InternalTMTEMPLATE.g:278:3: this_TMTCIFFieldValueFile_1= ruleTMTCIFFieldValueFile
                     {
                     if ( state.backtracking==0 ) {
 
@@ -715,6 +722,33 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
                     if ( state.backtracking==0 ) {
 
                       			current = this_TMTCIFFieldValueFile_1;
+                      			afterParserOrEnumRuleCall();
+                      		
+                    }
+
+                    }
+                    break;
+                case 3 :
+                    // InternalTMTEMPLATE.g:290:3: this_TMTCIFFieldValueEnum_2= ruleTMTCIFFieldValueEnum
+                    {
+                    if ( state.backtracking==0 ) {
+
+                      			/* */
+                      		
+                    }
+                    if ( state.backtracking==0 ) {
+
+                      			newCompositeNode(grammarAccess.getTMTCIFFieldValueAccess().getTMTCIFFieldValueEnumParserRuleCall_2());
+                      		
+                    }
+                    pushFollow(FollowSets000.FOLLOW_2);
+                    this_TMTCIFFieldValueEnum_2=ruleTMTCIFFieldValueEnum();
+
+                    state._fsp--;
+                    if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
+
+                      			current = this_TMTCIFFieldValueEnum_2;
                       			afterParserOrEnumRuleCall();
                       		
                     }
@@ -746,7 +780,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFFieldValueRaw"
-    // InternalTMTEMPLATE.g:297:1: entryRuleTMTCIFFieldValueRaw returns [EObject current=null] : iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF ;
+    // InternalTMTEMPLATE.g:305:1: entryRuleTMTCIFFieldValueRaw returns [EObject current=null] : iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF ;
     public final EObject entryRuleTMTCIFFieldValueRaw() throws RecognitionException {
         EObject current = null;
 
@@ -754,8 +788,8 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTMTEMPLATE.g:297:60: (iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF )
-            // InternalTMTEMPLATE.g:298:2: iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF
+            // InternalTMTEMPLATE.g:305:60: (iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF )
+            // InternalTMTEMPLATE.g:306:2: iv_ruleTMTCIFFieldValueRaw= ruleTMTCIFFieldValueRaw EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFFieldValueRawRule()); 
@@ -786,7 +820,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFFieldValueRaw"
-    // InternalTMTEMPLATE.g:304:1: ruleTMTCIFFieldValueRaw returns [EObject current=null] : (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' ) ;
+    // InternalTMTEMPLATE.g:312:1: ruleTMTCIFFieldValueRaw returns [EObject current=null] : (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' ) ;
     public final EObject ruleTMTCIFFieldValueRaw() throws RecognitionException {
         EObject current = null;
 
@@ -800,11 +834,11 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTMTEMPLATE.g:310:2: ( (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' ) )
-            // InternalTMTEMPLATE.g:311:2: (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' )
+            // InternalTMTEMPLATE.g:318:2: ( (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' ) )
+            // InternalTMTEMPLATE.g:319:2: (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' )
             {
-            // InternalTMTEMPLATE.g:311:2: (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' )
-            // InternalTMTEMPLATE.g:312:3: otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>'
+            // InternalTMTEMPLATE.g:319:2: (otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>' )
+            // InternalTMTEMPLATE.g:320:3: otherlv_0= '<FieldValueRaw' otherlv_1= 'value=' ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) ) otherlv_3= '/>'
             {
             otherlv_0=(Token)match(input,24,FollowSets000.FOLLOW_15); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -818,13 +852,13 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueRawAccess().getValueKeyword_1());
               		
             }
-            // InternalTMTEMPLATE.g:320:3: ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) )
-            // InternalTMTEMPLATE.g:321:4: ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) )
+            // InternalTMTEMPLATE.g:328:3: ( ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) ) )
+            // InternalTMTEMPLATE.g:329:4: ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) )
             {
-            // InternalTMTEMPLATE.g:321:4: ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) )
-            // InternalTMTEMPLATE.g:322:5: (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING )
+            // InternalTMTEMPLATE.g:329:4: ( (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING ) )
+            // InternalTMTEMPLATE.g:330:5: (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING )
             {
-            // InternalTMTEMPLATE.g:322:5: (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING )
+            // InternalTMTEMPLATE.g:330:5: (lv_value_2_1= RULE_UINT_STRING | lv_value_2_2= RULE_HEX_STRING )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -843,9 +877,9 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
             }
             switch (alt5) {
                 case 1 :
-                    // InternalTMTEMPLATE.g:323:6: lv_value_2_1= RULE_UINT_STRING
+                    // InternalTMTEMPLATE.g:331:6: lv_value_2_1= RULE_UINT_STRING
                     {
-                    lv_value_2_1=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+                    lv_value_2_1=(Token)match(input,RULE_UINT_STRING,FollowSets000.FOLLOW_17); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_value_2_1, grammarAccess.getTMTCIFFieldValueRawAccess().getValueUINT_STRINGTerminalRuleCall_2_0_0());
@@ -867,9 +901,9 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTMTEMPLATE.g:338:6: lv_value_2_2= RULE_HEX_STRING
+                    // InternalTMTEMPLATE.g:346:6: lv_value_2_2= RULE_HEX_STRING
                     {
-                    lv_value_2_2=(Token)match(input,RULE_HEX_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+                    lv_value_2_2=(Token)match(input,RULE_HEX_STRING,FollowSets000.FOLLOW_17); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       						newLeafNode(lv_value_2_2, grammarAccess.getTMTCIFFieldValueRawAccess().getValueHEX_STRINGTerminalRuleCall_2_0_1());
@@ -930,7 +964,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTMTCIFFieldValueFile"
-    // InternalTMTEMPLATE.g:363:1: entryRuleTMTCIFFieldValueFile returns [EObject current=null] : iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF ;
+    // InternalTMTEMPLATE.g:371:1: entryRuleTMTCIFFieldValueFile returns [EObject current=null] : iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF ;
     public final EObject entryRuleTMTCIFFieldValueFile() throws RecognitionException {
         EObject current = null;
 
@@ -938,8 +972,8 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTMTEMPLATE.g:363:61: (iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF )
-            // InternalTMTEMPLATE.g:364:2: iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF
+            // InternalTMTEMPLATE.g:371:61: (iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF )
+            // InternalTMTEMPLATE.g:372:2: iv_ruleTMTCIFFieldValueFile= ruleTMTCIFFieldValueFile EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getTMTCIFFieldValueFileRule()); 
@@ -970,7 +1004,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTMTCIFFieldValueFile"
-    // InternalTMTEMPLATE.g:370:1: ruleTMTCIFFieldValueFile returns [EObject current=null] : (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' ) ;
+    // InternalTMTEMPLATE.g:378:1: ruleTMTCIFFieldValueFile returns [EObject current=null] : (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' ) ;
     public final EObject ruleTMTCIFFieldValueFile() throws RecognitionException {
         EObject current = null;
 
@@ -983,13 +1017,13 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTMTEMPLATE.g:376:2: ( (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' ) )
-            // InternalTMTEMPLATE.g:377:2: (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' )
+            // InternalTMTEMPLATE.g:384:2: ( (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' ) )
+            // InternalTMTEMPLATE.g:385:2: (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' )
             {
-            // InternalTMTEMPLATE.g:377:2: (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' )
-            // InternalTMTEMPLATE.g:378:3: otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>'
+            // InternalTMTEMPLATE.g:385:2: (otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>' )
+            // InternalTMTEMPLATE.g:386:3: otherlv_0= '<FieldValueFile' otherlv_1= 'filename=' ( (lv_filename_2_0= RULE_STRING ) ) otherlv_3= '/>'
             {
-            otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_17); if (state.failed) return current;
+            otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_18); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueFileAccess().getFieldValueFileKeyword_0());
@@ -1001,13 +1035,13 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
               			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameKeyword_1());
               		
             }
-            // InternalTMTEMPLATE.g:386:3: ( (lv_filename_2_0= RULE_STRING ) )
-            // InternalTMTEMPLATE.g:387:4: (lv_filename_2_0= RULE_STRING )
+            // InternalTMTEMPLATE.g:394:3: ( (lv_filename_2_0= RULE_STRING ) )
+            // InternalTMTEMPLATE.g:395:4: (lv_filename_2_0= RULE_STRING )
             {
-            // InternalTMTEMPLATE.g:387:4: (lv_filename_2_0= RULE_STRING )
-            // InternalTMTEMPLATE.g:388:5: lv_filename_2_0= RULE_STRING
+            // InternalTMTEMPLATE.g:395:4: (lv_filename_2_0= RULE_STRING )
+            // InternalTMTEMPLATE.g:396:5: lv_filename_2_0= RULE_STRING
             {
-            lv_filename_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_12); if (state.failed) return current;
+            lv_filename_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_17); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_filename_2_0, grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameSTRINGTerminalRuleCall_2_0());
@@ -1060,6 +1094,176 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
     }
     // $ANTLR end "ruleTMTCIFFieldValueFile"
 
+
+    // $ANTLR start "entryRuleTMTCIFFieldValueEnum"
+    // InternalTMTEMPLATE.g:420:1: entryRuleTMTCIFFieldValueEnum returns [EObject current=null] : iv_ruleTMTCIFFieldValueEnum= ruleTMTCIFFieldValueEnum EOF ;
+    public final EObject entryRuleTMTCIFFieldValueEnum() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleTMTCIFFieldValueEnum = null;
+
+
+        try {
+            // InternalTMTEMPLATE.g:420:61: (iv_ruleTMTCIFFieldValueEnum= ruleTMTCIFFieldValueEnum EOF )
+            // InternalTMTEMPLATE.g:421:2: iv_ruleTMTCIFFieldValueEnum= ruleTMTCIFFieldValueEnum EOF
+            {
+            if ( state.backtracking==0 ) {
+               newCompositeNode(grammarAccess.getTMTCIFFieldValueEnumRule()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_1);
+            iv_ruleTMTCIFFieldValueEnum=ruleTMTCIFFieldValueEnum();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+               current =iv_ruleTMTCIFFieldValueEnum; 
+            }
+            match(input,EOF,FollowSets000.FOLLOW_2); if (state.failed) return current;
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleTMTCIFFieldValueEnum"
+
+
+    // $ANTLR start "ruleTMTCIFFieldValueEnum"
+    // InternalTMTEMPLATE.g:427:1: ruleTMTCIFFieldValueEnum returns [EObject current=null] : (otherlv_0= '<FieldValueEnum' otherlv_1= 'enumRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= 'valueRef=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' ) ;
+    public final EObject ruleTMTCIFFieldValueEnum() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalTMTEMPLATE.g:433:2: ( (otherlv_0= '<FieldValueEnum' otherlv_1= 'enumRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= 'valueRef=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' ) )
+            // InternalTMTEMPLATE.g:434:2: (otherlv_0= '<FieldValueEnum' otherlv_1= 'enumRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= 'valueRef=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' )
+            {
+            // InternalTMTEMPLATE.g:434:2: (otherlv_0= '<FieldValueEnum' otherlv_1= 'enumRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= 'valueRef=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>' )
+            // InternalTMTEMPLATE.g:435:3: otherlv_0= '<FieldValueEnum' otherlv_1= 'enumRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= 'valueRef=' ( (otherlv_4= RULE_STRING ) ) otherlv_5= '/>'
+            {
+            otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_19); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_0, grammarAccess.getTMTCIFFieldValueEnumAccess().getFieldValueEnumKeyword_0());
+              		
+            }
+            otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_1, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefKeyword_1());
+              		
+            }
+            // InternalTMTEMPLATE.g:443:3: ( (otherlv_2= RULE_STRING ) )
+            // InternalTMTEMPLATE.g:444:4: (otherlv_2= RULE_STRING )
+            {
+            // InternalTMTEMPLATE.g:444:4: (otherlv_2= RULE_STRING )
+            // InternalTMTEMPLATE.g:445:5: otherlv_2= RULE_STRING
+            {
+            if ( state.backtracking==0 ) {
+
+              					/* */
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+              					}
+              				
+            }
+            otherlv_2=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(otherlv_2, grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumCrossReference_2_0());
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_4); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_3, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefKeyword_3());
+              		
+            }
+            // InternalTMTEMPLATE.g:463:3: ( (otherlv_4= RULE_STRING ) )
+            // InternalTMTEMPLATE.g:464:4: (otherlv_4= RULE_STRING )
+            {
+            // InternalTMTEMPLATE.g:464:4: (otherlv_4= RULE_STRING )
+            // InternalTMTEMPLATE.g:465:5: otherlv_4= RULE_STRING
+            {
+            if ( state.backtracking==0 ) {
+
+              					/* */
+              				
+            }
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElement(grammarAccess.getTMTCIFFieldValueEnumRule());
+              					}
+              				
+            }
+            otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_17); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					newLeafNode(otherlv_4, grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueCrossReference_4_0());
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_5=(Token)match(input,20,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_5, grammarAccess.getTMTCIFFieldValueEnumAccess().getSolidusGreaterThanSignKeyword_5());
+              		
+            }
+
+            }
+
+
+            }
+
+            if ( state.backtracking==0 ) {
+
+              	leaveRule();
+
+            }
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleTMTCIFFieldValueEnum"
+
     // Delegated rules
 
 
@@ -1078,12 +1282,15 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_9 = new BitSet(new long[]{0x0000000000240000L});
         public static final BitSet FOLLOW_10 = new BitSet(new long[]{0x0000000000080000L});
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000100000L});
-        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000005000000L});
+        public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000010000L});
+        public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000015000000L});
         public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
         public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000002000000L});
         public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000060L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000000100000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000008000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000020000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000040000000L});
     }
 
 

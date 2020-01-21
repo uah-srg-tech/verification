@@ -626,7 +626,7 @@ rule__VTCTemplateField__Group__0__Impl
 :
 (
 	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_0()); }
-	'<Field>'
+	'<Field'
 	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_0()); }
 )
 ;
@@ -653,7 +653,7 @@ rule__VTCTemplateField__Group__1__Impl
 :
 (
 	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefKeyword_1()); }
-	'<fieldRef'
+	'fieldRef='
 	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefKeyword_1()); }
 )
 ;
@@ -679,9 +679,9 @@ rule__VTCTemplateField__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCTemplateFieldAccess().getNameKeyword_2()); }
-	'name='
-	{ after(grammarAccess.getVTCTemplateFieldAccess().getNameKeyword_2()); }
+	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2()); }
+	(rule__VTCTemplateField__FieldRefAssignment_2)
+	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2()); }
 )
 ;
 finally {
@@ -706,9 +706,9 @@ rule__VTCTemplateField__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_3()); }
-	(rule__VTCTemplateField__FieldRefAssignment_3)
-	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_3()); }
+	{ before(grammarAccess.getVTCTemplateFieldAccess().getGreaterThanSignKeyword_3()); }
+	'>'
+	{ after(grammarAccess.getVTCTemplateFieldAccess().getGreaterThanSignKeyword_3()); }
 )
 ;
 finally {
@@ -733,9 +733,9 @@ rule__VTCTemplateField__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4()); }
-	'/>'
-	{ after(grammarAccess.getVTCTemplateFieldAccess().getSolidusGreaterThanSignKeyword_4()); }
+	{ before(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4()); }
+	(rule__VTCTemplateField__ValueAssignment_4)
+	{ after(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4()); }
 )
 ;
 finally {
@@ -748,7 +748,6 @@ rule__VTCTemplateField__Group__5
 	}
 :
 	rule__VTCTemplateField__Group__5__Impl
-	rule__VTCTemplateField__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -760,35 +759,9 @@ rule__VTCTemplateField__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_5()); }
-	(rule__VTCTemplateField__ValueAssignment_5)
-	{ after(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTCTemplateField__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VTCTemplateField__Group__6__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTCTemplateField__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_6()); }
+	{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_5()); }
 	'</Field>'
-	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_6()); }
+	{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldKeyword_5()); }
 )
 ;
 finally {
@@ -1223,34 +1196,34 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTCTemplateField__FieldRefAssignment_3
+rule__VTCTemplateField__FieldRefAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_3_0()); }
+		{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0()); }
 		(
-			{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1()); }
+			{ before(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1()); }
 			RULE_STRING
-			{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_3_0_1()); }
+			{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldSTRINGTerminalRuleCall_2_0_1()); }
 		)
-		{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_3_0()); }
+		{ after(grammarAccess.getVTCTemplateFieldAccess().getFieldRefTMTCIFTCFieldCrossReference_2_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTCTemplateField__ValueAssignment_5
+rule__VTCTemplateField__ValueAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0()); }
+		{ before(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0()); }
 		ruleTMTCIFFieldValue
-		{ after(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0()); }
+		{ after(grammarAccess.getVTCTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0()); }
 	)
 ;
 finally {

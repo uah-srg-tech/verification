@@ -2363,6 +2363,12 @@ rule__TMTCIFFieldValueTM__Alternatives
 		ruleTMTCIFFieldValueFile
 		{ after(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueFileParserRuleCall_1()); }
 	)
+	|
+	(
+		{ before(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueEnumParserRuleCall_2()); }
+		ruleTMTCIFFieldValueEnum
+		{ after(grammarAccess.getTMTCIFFieldValueTMAccess().getTMTCIFFieldValueEnumParserRuleCall_2()); }
+	)
 ;
 finally {
 	restoreStackSize(stackSize);

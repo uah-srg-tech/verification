@@ -2,15 +2,15 @@
 '</Field>'=23
 '</Fields>'=20
 '</TCTemplate>'=18
-'<Field>'=21
+'<Field'=21
 '<FieldValueEnum'=28
 '<FieldValueFile'=26
 '<FieldValueRaw'=24
 '<Fields>'=19
 '<TCTemplate'=14
-'<fieldRef'=22
 '>'=17
 'enumRef='=29
+'fieldRef='=22
 'filename='=27
 'name='=15
 'tcInput='=16

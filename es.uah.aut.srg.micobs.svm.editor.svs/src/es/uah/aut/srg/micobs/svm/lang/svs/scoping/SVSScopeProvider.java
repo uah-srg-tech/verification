@@ -30,9 +30,11 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommand;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandDataField;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryData;
+import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryDataField;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
@@ -45,9 +47,14 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplateField;
 import es.uah.aut.srg.micobs.svm.vdm.VValidationDocument;
+import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate;
 import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplateField;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnumValue;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueEnum;
 import es.uah.aut.srg.tmtcif.tc.TMTCIFTCField;
 import es.uah.aut.srg.tmtcif.tcheader.TMTCIFTCHeaderField;
 import es.uah.aut.srg.tmtcif.tm.TMTCIFTMField;
@@ -340,6 +347,54 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		});
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
+	
+	public IScope scope_TMTCIFFieldValueEnum_enumRef(VSVSStepTelecommandDataField stepTcDataField, EReference reference) {
+		
+		Collection<TMTCIFEnum> enumRef = new HashSet<TMTCIFEnum>();
+		
+		String fieldName = stepTcDataField.getFieldRef().getName();
+		VTCTemplate tcTpl = ((VSVSStepTelecommandData)stepTcDataField.eContainer()).getTcTemplate();
+		for(TMTCIFTCField tcField : tcTpl.getTcInput().getFields()) {
+			if(tcField.getName().compareTo(fieldName) == 0) {
+				enumRef.add(tcField.getEnumRef());
+				break;
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(enumRef, new Function<TMTCIFEnum, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFEnum from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_TMTCIFFieldValueEnum_valueRef(TMTCIFFieldValueEnum tmtcEnum, EReference reference) {
+		
+		Collection<TMTCIFEnumValue> enumValue = new HashSet<TMTCIFEnumValue>();
+		enumValue.addAll(tmtcEnum.getEnumRef().getValues());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(enumValue, new Function<TMTCIFEnumValue, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFEnumValue from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
 
 	public IScope scope_VSVSStepTelecommandHeaderField_fieldRef(VSVSStepTelecommandHeader stepTcHeader, EReference reference) {
 
@@ -395,6 +450,34 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
+	public IScope scope_TMTCIFFieldValueEnum_enumRef(VSVSStepTelemetryDataField stepTmDataField, EReference reference) {
+		
+		Collection<TMTCIFEnum> enumRef = new HashSet<TMTCIFEnum>();
+		
+		String fieldName = stepTmDataField.getFieldRef().getName();
+		VTMTemplate tcTpl = ((VSVSStepTelemetryData)stepTmDataField.eContainer()).getTmTemplate();
+		for(TMTCIFTMField tcField : tcTpl.getTmOutput().getFields()) {
+			if(tcField.getName().compareTo(fieldName) == 0) {
+				enumRef.add(tcField.getEnumRef());
+				break;
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(enumRef, new Function<TMTCIFEnum, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFEnum from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
 	public IScope scope_VSVSStepTelemetryHeaderField_fieldRef(VSVSStepTelemetryHeader stepTmHeader, EReference reference) {
 
 		Collection<TMTCIFTMHeaderField> fields = new HashSet<TMTCIFTMHeaderField>();

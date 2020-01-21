@@ -44,13 +44,16 @@ public class TMTEMPLATEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTMTemplateFieldAccess().getGroup(), "rule__VTMTemplateField__Group__0");
 					put(grammarAccess.getTMTCIFFieldValueRawAccess().getGroup(), "rule__TMTCIFFieldValueRaw__Group__0");
 					put(grammarAccess.getTMTCIFFieldValueFileAccess().getGroup(), "rule__TMTCIFFieldValueFile__Group__0");
+					put(grammarAccess.getTMTCIFFieldValueEnumAccess().getGroup(), "rule__TMTCIFFieldValueEnum__Group__0");
 					put(grammarAccess.getVTMTemplateAccess().getNameAssignment_2(), "rule__VTMTemplate__NameAssignment_2");
 					put(grammarAccess.getVTMTemplateAccess().getTmOutputAssignment_4(), "rule__VTMTemplate__TmOutputAssignment_4");
 					put(grammarAccess.getVTMTemplateAccess().getFieldsAssignment_5_0_1_1(), "rule__VTMTemplate__FieldsAssignment_5_0_1_1");
-					put(grammarAccess.getVTMTemplateFieldAccess().getFieldRefAssignment_3(), "rule__VTMTemplateField__FieldRefAssignment_3");
-					put(grammarAccess.getVTMTemplateFieldAccess().getValueAssignment_5(), "rule__VTMTemplateField__ValueAssignment_5");
+					put(grammarAccess.getVTMTemplateFieldAccess().getFieldRefAssignment_2(), "rule__VTMTemplateField__FieldRefAssignment_2");
+					put(grammarAccess.getVTMTemplateFieldAccess().getValueAssignment_4(), "rule__VTMTemplateField__ValueAssignment_4");
 					put(grammarAccess.getTMTCIFFieldValueRawAccess().getValueAssignment_2(), "rule__TMTCIFFieldValueRaw__ValueAssignment_2");
 					put(grammarAccess.getTMTCIFFieldValueFileAccess().getFilenameAssignment_2(), "rule__TMTCIFFieldValueFile__FilenameAssignment_2");
+					put(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefAssignment_2(), "rule__TMTCIFFieldValueEnum__EnumRefAssignment_2");
+					put(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefAssignment_4(), "rule__TMTCIFFieldValueEnum__ValueRefAssignment_4");
 				}
 			};
 		}

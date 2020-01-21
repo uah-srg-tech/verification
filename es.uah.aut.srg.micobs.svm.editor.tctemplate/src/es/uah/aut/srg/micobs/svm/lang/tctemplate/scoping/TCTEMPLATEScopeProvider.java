@@ -25,8 +25,11 @@ import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate;
+import es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplateField;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnum;
+import es.uah.aut.srg.tmtcif.enum_.TMTCIFEnumValue;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueEnum;
 import es.uah.aut.srg.tmtcif.tc.TMTCIFTCField;
-
 
 /**
  * This class contains custom scoping description.
@@ -45,6 +48,54 @@ public class TCTEMPLATEScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(TMTCIFTCField from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_TMTCIFFieldValueEnum_enumRef(VTCTemplateField tcTplField, EReference reference) {
+		
+		Collection<TMTCIFEnum> enumRef = new HashSet<TMTCIFEnum>();
+		
+		String fieldName = tcTplField.getFieldRef().getName();
+		VTCTemplate tcTpl = (VTCTemplate)tcTplField.eContainer();
+		for(TMTCIFTCField tcField : tcTpl.getTcInput().getFields()) {
+			if(tcField.getName().compareTo(fieldName) == 0) {
+				enumRef.add(tcField.getEnumRef());
+				break;
+			}
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(enumRef, new Function<TMTCIFEnum, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFEnum from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_TMTCIFFieldValueEnum_valueRef(TMTCIFFieldValueEnum tcEnum, EReference reference) {
+		
+		Collection<TMTCIFEnumValue> enumValue = new HashSet<TMTCIFEnumValue>();
+		enumValue.addAll(tcEnum.getEnumRef().getValues());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(enumValue, new Function<TMTCIFEnumValue, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFEnumValue from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

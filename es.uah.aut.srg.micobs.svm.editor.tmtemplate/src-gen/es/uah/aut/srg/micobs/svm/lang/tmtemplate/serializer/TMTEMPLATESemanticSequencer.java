@@ -8,6 +8,7 @@ import es.uah.aut.srg.micobs.svm.lang.tmtemplate.services.TMTEMPLATEGrammarAcces
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplateField;
 import es.uah.aut.srg.micobs.svm.tmtemplate.tmtemplatePackage;
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueEnum;
 import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueFile;
 import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueRaw;
 import es.uah.aut.srg.tmtcif.fieldvalue.fieldvaluePackage;
@@ -36,6 +37,9 @@ public class TMTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 		Set<Parameter> parameters = context.getEnabledBooleanParameters();
 		if (epackage == fieldvaluePackage.eINSTANCE)
 			switch (semanticObject.eClass().getClassifierID()) {
+			case fieldvaluePackage.TMTCIF_FIELD_VALUE_ENUM:
+				sequence_TMTCIFFieldValueEnum(context, (TMTCIFFieldValueEnum) semanticObject); 
+				return; 
 			case fieldvaluePackage.TMTCIF_FIELD_VALUE_FILE:
 				sequence_TMTCIFFieldValueFile(context, (TMTCIFFieldValueFile) semanticObject); 
 				return; 
@@ -55,6 +59,28 @@ public class TMTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
+	
+	/**
+	 * Contexts:
+	 *     TMTCIFFieldValue returns TMTCIFFieldValueEnum
+	 *     TMTCIFFieldValueEnum returns TMTCIFFieldValueEnum
+	 *
+	 * Constraint:
+	 *     (enumRef=[TMTCIFEnum|STRING] valueRef=[TMTCIFEnumValue|STRING])
+	 */
+	protected void sequence_TMTCIFFieldValueEnum(ISerializationContext context, TMTCIFFieldValueEnum semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__ENUM_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__ENUM_REF));
+			if (transientValues.isValueTransient(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__VALUE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, fieldvaluePackage.Literals.TMTCIF_FIELD_VALUE_ENUM__VALUE_REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTMTCIFFieldValueEnumAccess().getEnumRefTMTCIFEnumSTRINGTerminalRuleCall_2_0_1(), semanticObject.getEnumRef());
+		feeder.accept(grammarAccess.getTMTCIFFieldValueEnumAccess().getValueRefTMTCIFEnumValueSTRINGTerminalRuleCall_4_0_1(), semanticObject.getValueRef());
+		feeder.finish();
+	}
+	
 	
 	/**
 	 * Contexts:
@@ -103,8 +129,8 @@ public class TMTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tmtemplatePackage.Literals.VTM_TEMPLATE_FIELD__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_3_0_1(), semanticObject.getFieldRef());
-		feeder.accept(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_5_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getVTMTemplateFieldAccess().getFieldRefTMTCIFTMFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
+		feeder.accept(grammarAccess.getVTMTemplateFieldAccess().getValueTMTCIFFieldValueParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
