@@ -147,7 +147,7 @@ public class TCTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     VTCTemplate returns VTCTemplate
 	 *
 	 * Constraint:
-	 *     (name=STRING tcInput=[TMTCIFTC|STRING] fields+=VTCTemplateField*)
+	 *     (name=STRING tc=[TMTCIFTC|STRING] fields+=VTCTemplateField*)
 	 */
 	protected void sequence_VTCTemplate(ISerializationContext context, VTCTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

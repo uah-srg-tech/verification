@@ -4,8 +4,7 @@
     nsPrefix="micobs.svm">
   <eClassifiers xsi:type="ecore:EClass" name="VTMTemplate">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="tmOutput" lowerBound="1"
-        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTM"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tm" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tm.ecore#//TMTCIFTM"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
         eType="#//VTMTemplateField" containment="true"/>
   </eClassifiers>

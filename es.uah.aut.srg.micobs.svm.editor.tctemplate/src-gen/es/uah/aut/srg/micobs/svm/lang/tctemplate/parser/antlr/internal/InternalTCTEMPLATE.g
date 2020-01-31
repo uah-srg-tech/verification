@@ -115,9 +115,9 @@ ruleVTCTemplate returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='tcInput='
+		otherlv_3='tc='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVTCTemplateAccess().getTcInputKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVTCTemplateAccess().getTcKeyword_3());
 		}
 		(
 			(
@@ -131,7 +131,7 @@ ruleVTCTemplate returns [EObject current=null]
 				}
 				otherlv_4=RULE_STRING
 				{
-					newLeafNode(otherlv_4, grammarAccess.getVTCTemplateAccess().getTcInputTMTCIFTCCrossReference_4_0());
+					newLeafNode(otherlv_4, grammarAccess.getVTCTemplateAccess().getTcTMTCIFTCCrossReference_4_0());
 				}
 			)
 		)

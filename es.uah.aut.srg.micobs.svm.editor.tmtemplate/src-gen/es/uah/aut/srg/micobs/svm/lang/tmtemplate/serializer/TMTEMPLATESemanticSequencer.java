@@ -140,7 +140,7 @@ public class TMTEMPLATESemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     VTMTemplate returns VTMTemplate
 	 *
 	 * Constraint:
-	 *     (name=STRING tmOutput=[TMTCIFTM|STRING] fields+=VTMTemplateField*)
+	 *     (name=STRING tm=[TMTCIFTM|STRING] fields+=VTMTemplateField*)
 	 */
 	protected void sequence_VTMTemplate(ISerializationContext context, VTMTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

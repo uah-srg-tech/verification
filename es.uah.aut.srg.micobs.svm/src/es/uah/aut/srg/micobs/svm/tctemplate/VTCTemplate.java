@@ -25,7 +25,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTcInput <em>Tc Input</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTc <em>Tc</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -61,30 +61,30 @@ public interface VTCTemplate extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Tc Input</b></em>' reference.
+	 * Returns the value of the '<em><b>Tc</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tc Input</em>' reference isn't clear,
+	 * If the meaning of the '<em>Tc</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tc Input</em>' reference.
-	 * @see #setTcInput(TMTCIFTC)
-	 * @see es.uah.aut.srg.micobs.svm.tctemplate.tctemplatePackage#getVTCTemplate_TcInput()
+	 * @return the value of the '<em>Tc</em>' reference.
+	 * @see #setTc(TMTCIFTC)
+	 * @see es.uah.aut.srg.micobs.svm.tctemplate.tctemplatePackage#getVTCTemplate_Tc()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFTC getTcInput();
+	TMTCIFTC getTc();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTcInput <em>Tc Input</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTc <em>Tc</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tc Input</em>' reference.
-	 * @see #getTcInput()
+	 * @param value the new value of the '<em>Tc</em>' reference.
+	 * @see #getTc()
 	 * @generated
 	 */
-	void setTcInput(TMTCIFTC value);
+	void setTc(TMTCIFTC value);
 
 	/**
 	 * Returns the value of the '<em><b>Fields</b></em>' containment reference list.

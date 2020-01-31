@@ -22,7 +22,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TMTemplate'", "'name='", "'tmOutput='", "'>'", "'<Fields>'", "'</Fields>'", "'</TMTemplate>'", "'/>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TMTemplate'", "'name='", "'tm='", "'>'", "'<Fields>'", "'</Fields>'", "'</TMTemplate>'", "'/>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -138,7 +138,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTMTemplate"
-    // InternalTMTEMPLATE.g:77:1: ruleVTMTemplate returns [EObject current=null] : (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tmOutput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) ) ;
+    // InternalTMTEMPLATE.g:77:1: ruleVTMTemplate returns [EObject current=null] : (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tm=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) ) ;
     public final EObject ruleVTMTemplate() throws RecognitionException {
         EObject current = null;
 
@@ -159,11 +159,11 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTMTEMPLATE.g:83:2: ( (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tmOutput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) ) )
-            // InternalTMTEMPLATE.g:84:2: (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tmOutput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) )
+            // InternalTMTEMPLATE.g:83:2: ( (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tm=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) ) )
+            // InternalTMTEMPLATE.g:84:2: (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tm=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) )
             {
-            // InternalTMTEMPLATE.g:84:2: (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tmOutput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) )
-            // InternalTMTEMPLATE.g:85:3: otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tmOutput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' )
+            // InternalTMTEMPLATE.g:84:2: (otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tm=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' ) )
+            // InternalTMTEMPLATE.g:85:3: otherlv_0= '<TMTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tm=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTMTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TMTemplate>' ) | otherlv_10= '/>' )
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -210,7 +210,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
             otherlv_3=(Token)match(input,15,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateAccess().getTmOutputKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateAccess().getTmKeyword_3());
               		
             }
             // InternalTMTEMPLATE.g:115:3: ( (otherlv_4= RULE_STRING ) )
@@ -234,7 +234,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalAntlrParser {
             otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_4, grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMCrossReference_4_0());
+              					newLeafNode(otherlv_4, grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMCrossReference_4_0());
               				
             }
 

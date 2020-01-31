@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.testsetup.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
@@ -81,8 +82,16 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	protected testsetupSwitch<Adapter> modelSwitch =
 		new testsetupSwitch<Adapter>() {
 			@Override
-			public Adapter caseVTestSetupTestSetup(VTestSetupTestSetup object) {
-				return createVTestSetupTestSetupAdapter();
+			public Adapter caseVTestSetupDocument(VTestSetupDocument object) {
+				return createVTestSetupDocumentAdapter();
+			}
+			@Override
+			public Adapter caseVTestSetupApplicableDocuments(VTestSetupApplicableDocuments object) {
+				return createVTestSetupApplicableDocumentsAdapter();
+			}
+			@Override
+			public Adapter caseVTestSetupReferenceDocuments(VTestSetupReferenceDocuments object) {
+				return createVTestSetupReferenceDocumentsAdapter();
 			}
 			@Override
 			public Adapter caseVTestSetupInterfacesSection(VTestSetupInterfacesSection object) {
@@ -117,8 +126,16 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 				return createVTestSetupScenarioSectionAdapter();
 			}
 			@Override
+			public Adapter caseVTestSetupSupportedInterface(VTestSetupSupportedInterface object) {
+				return createVTestSetupSupportedInterfaceAdapter();
+			}
+			@Override
 			public Adapter caseVTestSetupSelectedConfiguration(VTestSetupSelectedConfiguration object) {
 				return createVTestSetupSelectedConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
+				return createDDocumentTemplateAdapter();
 			}
 			@Override
 			public Adapter caseDAbstractSection(DAbstractSection object) {
@@ -157,16 +174,44 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTestSetup <em>VTest Setup Test Setup</em>}'.
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument <em>VTest Setup Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTestSetup
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument
 	 * @generated
 	 */
-	public Adapter createVTestSetupTestSetupAdapter() {
+	public Adapter createVTestSetupDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupApplicableDocuments <em>VTest Setup Applicable Documents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupApplicableDocuments
+	 * @generated
+	 */
+	public Adapter createVTestSetupApplicableDocumentsAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupReferenceDocuments <em>VTest Setup Reference Documents</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupReferenceDocuments
+	 * @generated
+	 */
+	public Adapter createVTestSetupReferenceDocumentsAdapter() {
 		return null;
 	}
 
@@ -283,6 +328,20 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface <em>VTest Setup Supported Interface</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface
+	 * @generated
+	 */
+	public Adapter createVTestSetupSupportedInterfaceAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration <em>VTest Setup Selected Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -293,6 +352,20 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTestSetupSelectedConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate <em>DDocument Template</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate
+	 * @generated
+	 */
+	public Adapter createDDocumentTemplateAdapter() {
 		return null;
 	}
 

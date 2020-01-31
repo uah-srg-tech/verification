@@ -15,8 +15,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandData;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelecommandHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTimeUnit;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
@@ -73,7 +72,7 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 	 * @generated
 	 * @ordered
 	 */
-	protected VTestSetupInterface interface_;
+	protected VTestSetupSupportedInterface interface_;
 
 	/**
 	 * The default value of the '{@link #getDelay_value() <em>Delay value</em>}' attribute.
@@ -198,10 +197,10 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupInterface getInterface() {
+	public VTestSetupSupportedInterface getInterface() {
 		if (interface_ != null && interface_.eIsProxy()) {
 			InternalEObject oldInterface = (InternalEObject)interface_;
-			interface_ = (VTestSetupInterface)eResolveProxy(oldInterface);
+			interface_ = (VTestSetupSupportedInterface)eResolveProxy(oldInterface);
 			if (interface_ != oldInterface) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE, oldInterface, interface_));
@@ -215,7 +214,7 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupInterface basicGetInterface() {
+	public VTestSetupSupportedInterface basicGetInterface() {
 		return interface_;
 	}
 
@@ -224,8 +223,8 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setInterface(VTestSetupInterface newInterface) {
-		VTestSetupInterface oldInterface = interface_;
+	public void setInterface(VTestSetupSupportedInterface newInterface) {
+		VTestSetupSupportedInterface oldInterface = interface_;
 		interface_ = newInterface;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE, oldInterface, interface_));
@@ -462,7 +461,7 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 				setName((String)newValue);
 				return;
 			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
-				setInterface((VTestSetupInterface)newValue);
+				setInterface((VTestSetupSupportedInterface)newValue);
 				return;
 			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				setDelay_value((String)newValue);
@@ -492,7 +491,7 @@ public class VSVSStepTelecommandImpl extends MinimalEObjectImpl.Container implem
 				setName(NAME_EDEFAULT);
 				return;
 			case svsPackage.VSVS_STEP_TELECOMMAND__INTERFACE:
-				setInterface((VTestSetupInterface)null);
+				setInterface((VTestSetupSupportedInterface)null);
 				return;
 			case svsPackage.VSVS_STEP_TELECOMMAND__DELAY_VALUE:
 				unsetDelay_value();

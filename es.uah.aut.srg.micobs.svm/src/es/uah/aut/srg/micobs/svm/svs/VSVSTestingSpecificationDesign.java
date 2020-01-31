@@ -13,7 +13,7 @@ package es.uah.aut.srg.micobs.svm.svs;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTestSetup;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -62,30 +62,30 @@ public interface VSVSTestingSpecificationDesign extends DFixedSection {
 	void setGeneral(VSVSFixedSection value);
 
 	/**
-	 * Returns the value of the '<em><b>Test Setup</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Test Setup</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Test Setup</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Test Setup</em>' containment reference.
-	 * @see #setTestSetup(VTestSetupTestSetup)
+	 * @return the value of the '<em>Test Setup</em>' reference.
+	 * @see #setTestSetup(VTestSetupDocument)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestingSpecificationDesign_TestSetup()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
-	VTestSetupTestSetup getTestSetup();
+	VTestSetupDocument getTestSetup();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup <em>Test Setup</em>}' containment reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup <em>Test Setup</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Test Setup</em>' containment reference.
+	 * @param value the new value of the '<em>Test Setup</em>' reference.
 	 * @see #getTestSetup()
 	 * @generated
 	 */
-	void setTestSetup(VTestSetupTestSetup value);
+	void setTestSetup(VTestSetupDocument value);
 
 	/**
 	 * Returns the value of the '<em><b>Test Designs</b></em>' containment reference list.

@@ -15,11 +15,12 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -43,6 +44,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getScenario <em>Scenario</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSupportedInterface <em>Supported Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSupportedAction <em>Supported Action</em>}</li>
@@ -53,14 +55,24 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl implements VTestSetupScenarioSection {
 	/**
-	 * The cached value of the '{@link #getSupportedInterface() <em>Supported Interface</em>}' reference list.
+	 * The cached value of the '{@link #getScenario() <em>Scenario</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScenario()
+	 * @generated
+	 * @ordered
+	 */
+	protected TMTCIFScenario scenario;
+
+	/**
+	 * The cached value of the '{@link #getSupportedInterface() <em>Supported Interface</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getSupportedInterface()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTestSetupInterface> supportedInterface;
+	protected EList<VTestSetupSupportedInterface> supportedInterface;
 
 	/**
 	 * The cached value of the '{@link #getSelectedConfiguration() <em>Selected Configuration</em>}' containment reference list.
@@ -116,9 +128,47 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTestSetupInterface> getSupportedInterface() {
+	public TMTCIFScenario getScenario() {
+		if (scenario != null && scenario.eIsProxy()) {
+			InternalEObject oldScenario = (InternalEObject)scenario;
+			scenario = (TMTCIFScenario)eResolveProxy(oldScenario);
+			if (scenario != oldScenario) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO, oldScenario, scenario));
+			}
+		}
+		return scenario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMTCIFScenario basicGetScenario() {
+		return scenario;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScenario(TMTCIFScenario newScenario) {
+		TMTCIFScenario oldScenario = scenario;
+		scenario = newScenario;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO, oldScenario, scenario));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EList<VTestSetupSupportedInterface> getSupportedInterface() {
 		if (supportedInterface == null) {
-			supportedInterface = new EObjectResolvingEList<VTestSetupInterface>(VTestSetupInterface.class, this, testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE);
+			supportedInterface = new EObjectContainmentEList<VTestSetupSupportedInterface>(VTestSetupSupportedInterface.class, this, testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE);
 		}
 		return supportedInterface;
 	}
@@ -198,6 +248,8 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE:
+				return ((InternalEList<?>)getSupportedInterface()).basicRemove(otherEnd, msgs);
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SELECTED_CONFIGURATION:
 				return ((InternalEList<?>)getSelectedConfiguration()).basicRemove(otherEnd, msgs);
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
@@ -214,6 +266,9 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO:
+				if (resolve) return getScenario();
+				return basicGetScenario();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE:
 				return getSupportedInterface();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SELECTED_CONFIGURATION:
@@ -235,9 +290,12 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO:
+				setScenario((TMTCIFScenario)newValue);
+				return;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE:
 				getSupportedInterface().clear();
-				getSupportedInterface().addAll((Collection<? extends VTestSetupInterface>)newValue);
+				getSupportedInterface().addAll((Collection<? extends VTestSetupSupportedInterface>)newValue);
 				return;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SELECTED_CONFIGURATION:
 				getSelectedConfiguration().clear();
@@ -262,6 +320,9 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO:
+				setScenario((TMTCIFScenario)null);
+				return;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE:
 				getSupportedInterface().clear();
 				return;
@@ -286,6 +347,8 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SCENARIO:
+				return scenario != null;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_INTERFACE:
 				return supportedInterface != null && !supportedInterface.isEmpty();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SELECTED_CONFIGURATION:

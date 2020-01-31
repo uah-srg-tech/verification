@@ -89,7 +89,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="general" lowerBound="1"
         eType="#//VSVSFixedSection" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testSetup" lowerBound="1"
-        eType="ecore:EClass testsetup.ecore#//VTestSetupTestSetup" containment="true"/>
+        eType="ecore:EClass testsetup.ecore#//VTestSetupDocument"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testDesigns" lowerBound="1"
         upperBound="-1" eType="#//VSVSTestDesign" containment="true"/>
   </eClassifiers>
@@ -200,7 +200,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelecommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
-        eType="ecore:EClass testsetup.ecore#//VTestSetupInterface"/>
+        eType="ecore:EClass testsetup.ecore#//VTestSetupSupportedInterface"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
         unsettable="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="delay_unit" eType="#//VSVSTimeUnit"
@@ -251,7 +251,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetry">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="interface" lowerBound="1"
-        eType="ecore:EClass testsetup.ecore#//VTestSetupInterface"/>
+        eType="ecore:EClass testsetup.ecore#//VTestSetupSupportedInterface"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tmData" lowerBound="1"
         eType="#//VSVSStepTelemetryData" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tmHeader" eType="#//VSVSStepTelemetryHeader"

@@ -84,13 +84,13 @@ public interface tctemplatePackage extends EPackage {
 	int VTC_TEMPLATE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tc Input</b></em>' reference.
+	 * The feature id for the '<em><b>Tc</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTC_TEMPLATE__TC_INPUT = 1;
+	int VTC_TEMPLATE__TC = 1;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -187,15 +187,15 @@ public interface tctemplatePackage extends EPackage {
 	EAttribute getVTCTemplate_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTcInput <em>Tc Input</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTc <em>Tc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tc Input</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTcInput()
+	 * @return the meta object for the reference '<em>Tc</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getTc()
 	 * @see #getVTCTemplate()
 	 * @generated
 	 */
-	EReference getVTCTemplate_TcInput();
+	EReference getVTCTemplate_Tc();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.tctemplate.VTCTemplate#getFields <em>Fields</em>}'.
@@ -282,12 +282,12 @@ public interface tctemplatePackage extends EPackage {
 		EAttribute VTC_TEMPLATE__NAME = eINSTANCE.getVTCTemplate_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Tc Input</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tc</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTC_TEMPLATE__TC_INPUT = eINSTANCE.getVTCTemplate_TcInput();
+		EReference VTC_TEMPLATE__TC = eINSTANCE.getVTCTemplate_Tc();
 
 		/**
 		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.

@@ -41,7 +41,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.impl.VTMTemplateImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.impl.VTMTemplateImpl#getTmOutput <em>Tm Output</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.impl.VTMTemplateImpl#getTm <em>Tm</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.impl.VTMTemplateImpl#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -69,14 +69,14 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTmOutput() <em>Tm Output</em>}' reference.
+	 * The cached value of the '{@link #getTm() <em>Tm</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTmOutput()
+	 * @see #getTm()
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFTM tmOutput;
+	protected TMTCIFTM tm;
 
 	/**
 	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
@@ -133,16 +133,16 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFTM getTmOutput() {
-		if (tmOutput != null && tmOutput.eIsProxy()) {
-			InternalEObject oldTmOutput = (InternalEObject)tmOutput;
-			tmOutput = (TMTCIFTM)eResolveProxy(oldTmOutput);
-			if (tmOutput != oldTmOutput) {
+	public TMTCIFTM getTm() {
+		if (tm != null && tm.eIsProxy()) {
+			InternalEObject oldTm = (InternalEObject)tm;
+			tm = (TMTCIFTM)eResolveProxy(oldTm);
+			if (tm != oldTm) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT, oldTmOutput, tmOutput));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, tmtemplatePackage.VTM_TEMPLATE__TM, oldTm, tm));
 			}
 		}
-		return tmOutput;
+		return tm;
 	}
 
 	/**
@@ -150,8 +150,8 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFTM basicGetTmOutput() {
-		return tmOutput;
+	public TMTCIFTM basicGetTm() {
+		return tm;
 	}
 
 	/**
@@ -159,11 +159,11 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTmOutput(TMTCIFTM newTmOutput) {
-		TMTCIFTM oldTmOutput = tmOutput;
-		tmOutput = newTmOutput;
+	public void setTm(TMTCIFTM newTm) {
+		TMTCIFTM oldTm = tm;
+		tm = newTm;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT, oldTmOutput, tmOutput));
+			eNotify(new ENotificationImpl(this, Notification.SET, tmtemplatePackage.VTM_TEMPLATE__TM, oldTm, tm));
 	}
 
 	/**
@@ -202,9 +202,9 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 		switch (featureID) {
 			case tmtemplatePackage.VTM_TEMPLATE__NAME:
 				return getName();
-			case tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT:
-				if (resolve) return getTmOutput();
-				return basicGetTmOutput();
+			case tmtemplatePackage.VTM_TEMPLATE__TM:
+				if (resolve) return getTm();
+				return basicGetTm();
 			case tmtemplatePackage.VTM_TEMPLATE__FIELDS:
 				return getFields();
 		}
@@ -223,8 +223,8 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 			case tmtemplatePackage.VTM_TEMPLATE__NAME:
 				setName((String)newValue);
 				return;
-			case tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT:
-				setTmOutput((TMTCIFTM)newValue);
+			case tmtemplatePackage.VTM_TEMPLATE__TM:
+				setTm((TMTCIFTM)newValue);
 				return;
 			case tmtemplatePackage.VTM_TEMPLATE__FIELDS:
 				getFields().clear();
@@ -245,8 +245,8 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 			case tmtemplatePackage.VTM_TEMPLATE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT:
-				setTmOutput((TMTCIFTM)null);
+			case tmtemplatePackage.VTM_TEMPLATE__TM:
+				setTm((TMTCIFTM)null);
 				return;
 			case tmtemplatePackage.VTM_TEMPLATE__FIELDS:
 				getFields().clear();
@@ -265,8 +265,8 @@ public class VTMTemplateImpl extends MinimalEObjectImpl.Container implements VTM
 		switch (featureID) {
 			case tmtemplatePackage.VTM_TEMPLATE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tmtemplatePackage.VTM_TEMPLATE__TM_OUTPUT:
-				return tmOutput != null;
+			case tmtemplatePackage.VTM_TEMPLATE__TM:
+				return tm != null;
 			case tmtemplatePackage.VTM_TEMPLATE__FIELDS:
 				return fields != null && !fields.isEmpty();
 		}

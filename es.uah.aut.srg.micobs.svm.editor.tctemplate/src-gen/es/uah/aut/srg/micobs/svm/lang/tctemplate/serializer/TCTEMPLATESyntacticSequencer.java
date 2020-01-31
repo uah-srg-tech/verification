@@ -60,7 +60,7 @@ public class TCTEMPLATESyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('>' '</TCTemplate>') | '/>'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     tcInput=[TMTCIFTC|STRING] (ambiguity) (rule end)
+	 *     tc=[TMTCIFTC|STRING] (ambiguity) (rule end)
 	 */
 	protected void emit_VTCTemplate_SolidusGreaterThanSignKeyword_5_1_or___GreaterThanSignKeyword_5_0_0_TCTemplateKeyword_5_0_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

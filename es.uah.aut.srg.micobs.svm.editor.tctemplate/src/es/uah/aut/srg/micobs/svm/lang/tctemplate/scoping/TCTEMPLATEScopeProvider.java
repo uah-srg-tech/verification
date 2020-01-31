@@ -42,7 +42,7 @@ public class TCTEMPLATEScopeProvider extends AbstractDeclarativeScopeProvider {
 	public IScope scope_VTCTemplateField_fieldRef(VTCTemplate tcTpl, EReference reference) {
 		
 		Collection<TMTCIFTCField> fields = new HashSet<TMTCIFTCField>();
-		fields.addAll(tcTpl.getTcInput().getFields());
+		fields.addAll(tcTpl.getTc().getFields());
 	
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(fields, new Function<TMTCIFTCField, IEObjectDescription>(){
 	
@@ -65,7 +65,7 @@ public class TCTEMPLATEScopeProvider extends AbstractDeclarativeScopeProvider {
 		
 		String fieldName = tcTplField.getFieldRef().getName();
 		VTCTemplate tcTpl = (VTCTemplate)tcTplField.eContainer();
-		for(TMTCIFTCField tcField : tcTpl.getTcInput().getFields()) {
+		for(TMTCIFTCField tcField : tcTpl.getTc().getFields()) {
 			if(tcField.getName().compareTo(fieldName) == 0) {
 				enumRef.add(tcField.getEnumRef());
 				break;

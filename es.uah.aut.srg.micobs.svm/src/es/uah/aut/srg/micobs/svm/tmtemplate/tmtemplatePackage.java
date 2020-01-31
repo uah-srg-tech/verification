@@ -84,13 +84,13 @@ public interface tmtemplatePackage extends EPackage {
 	int VTM_TEMPLATE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Tm Output</b></em>' reference.
+	 * The feature id for the '<em><b>Tm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTM_TEMPLATE__TM_OUTPUT = 1;
+	int VTM_TEMPLATE__TM = 1;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -188,15 +188,15 @@ public interface tmtemplatePackage extends EPackage {
 	EAttribute getVTMTemplate_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTmOutput <em>Tm Output</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTm <em>Tm</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Tm Output</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTmOutput()
+	 * @return the meta object for the reference '<em>Tm</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTm()
 	 * @see #getVTMTemplate()
 	 * @generated
 	 */
-	EReference getVTMTemplate_TmOutput();
+	EReference getVTMTemplate_Tm();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getFields <em>Fields</em>}'.
@@ -283,12 +283,12 @@ public interface tmtemplatePackage extends EPackage {
 		EAttribute VTM_TEMPLATE__NAME = eINSTANCE.getVTMTemplate_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Tm Output</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Tm</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTM_TEMPLATE__TM_OUTPUT = eINSTANCE.getVTMTemplate_TmOutput();
+		EReference VTM_TEMPLATE__TM = eINSTANCE.getVTMTemplate_Tm();
 
 		/**
 		 * The meta object literal for the '<em><b>Fields</b></em>' containment reference list feature.

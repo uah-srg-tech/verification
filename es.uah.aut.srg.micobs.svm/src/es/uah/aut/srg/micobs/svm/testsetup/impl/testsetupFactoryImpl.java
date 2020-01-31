@@ -65,7 +65,9 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case testsetupPackage.VTEST_SETUP_TEST_SETUP: return createVTestSetupTestSetup();
+			case testsetupPackage.VTEST_SETUP_DOCUMENT: return createVTestSetupDocument();
+			case testsetupPackage.VTEST_SETUP_APPLICABLE_DOCUMENTS: return createVTestSetupApplicableDocuments();
+			case testsetupPackage.VTEST_SETUP_REFERENCE_DOCUMENTS: return createVTestSetupReferenceDocuments();
 			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION: return createVTestSetupInterfacesSection();
 			case testsetupPackage.VTEST_SETUP_INTERFACE: return createVTestSetupInterface();
 			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION: return createVTestSetupPacketConfigurationsSection();
@@ -74,6 +76,7 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 			case testsetupPackage.VTEST_SETUP_ACTION: return createVTestSetupAction();
 			case testsetupPackage.VTEST_SETUP_SCENARIOS_SECTION: return createVTestSetupScenariosSection();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION: return createVTestSetupScenarioSection();
+			case testsetupPackage.VTEST_SETUP_SUPPORTED_INTERFACE: return createVTestSetupSupportedInterface();
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION: return createVTestSetupSelectedConfiguration();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -119,9 +122,29 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupTestSetup createVTestSetupTestSetup() {
-		VTestSetupTestSetupImpl vTestSetupTestSetup = new VTestSetupTestSetupImpl();
-		return vTestSetupTestSetup;
+	public VTestSetupDocument createVTestSetupDocument() {
+		VTestSetupDocumentImpl vTestSetupDocument = new VTestSetupDocumentImpl();
+		return vTestSetupDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupApplicableDocuments createVTestSetupApplicableDocuments() {
+		VTestSetupApplicableDocumentsImpl vTestSetupApplicableDocuments = new VTestSetupApplicableDocumentsImpl();
+		return vTestSetupApplicableDocuments;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupReferenceDocuments createVTestSetupReferenceDocuments() {
+		VTestSetupReferenceDocumentsImpl vTestSetupReferenceDocuments = new VTestSetupReferenceDocumentsImpl();
+		return vTestSetupReferenceDocuments;
 	}
 
 	/**
@@ -202,6 +225,16 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	public VTestSetupScenarioSection createVTestSetupScenarioSection() {
 		VTestSetupScenarioSectionImpl vTestSetupScenarioSection = new VTestSetupScenarioSectionImpl();
 		return vTestSetupScenarioSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupSupportedInterface createVTestSetupSupportedInterface() {
+		VTestSetupSupportedInterfaceImpl vTestSetupSupportedInterface = new VTestSetupSupportedInterfaceImpl();
+		return vTestSetupSupportedInterface;
 	}
 
 	/**

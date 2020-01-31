@@ -53,7 +53,7 @@ public class TCTEMPLATEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getTMTCIFFieldValueFileAccess().getGroup(), "rule__TMTCIFFieldValueFile__Group__0");
 					put(grammarAccess.getTMTCIFFieldValueEnumAccess().getGroup(), "rule__TMTCIFFieldValueEnum__Group__0");
 					put(grammarAccess.getVTCTemplateAccess().getNameAssignment_2(), "rule__VTCTemplate__NameAssignment_2");
-					put(grammarAccess.getVTCTemplateAccess().getTcInputAssignment_4(), "rule__VTCTemplate__TcInputAssignment_4");
+					put(grammarAccess.getVTCTemplateAccess().getTcAssignment_4(), "rule__VTCTemplate__TcAssignment_4");
 					put(grammarAccess.getVTCTemplateAccess().getFieldsAssignment_5_0_1_1(), "rule__VTCTemplate__FieldsAssignment_5_0_1_1");
 					put(grammarAccess.getVTCTemplateFieldAccess().getFieldRefAssignment_2(), "rule__VTCTemplateField__FieldRefAssignment_2");
 					put(grammarAccess.getVTCTemplateFieldAccess().getValueAssignment_4(), "rule__VTCTemplateField__ValueAssignment_4");

@@ -1011,7 +1011,7 @@ public interface svsPackage extends EPackage {
 	int VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Test Setup</b></em>' containment reference.
+	 * The feature id for the '<em><b>Test Setup</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -3133,10 +3133,10 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSTestingSpecificationDesign_General();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup <em>Test Setup</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup <em>Test Setup</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Test Setup</em>'.
+	 * @return the meta object for the reference '<em>Test Setup</em>'.
 	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign#getTestSetup()
 	 * @see #getVSVSTestingSpecificationDesign()
 	 * @generated
@@ -4625,7 +4625,7 @@ public interface svsPackage extends EPackage {
 		EReference VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL = eINSTANCE.getVSVSTestingSpecificationDesign_General();
 
 		/**
-		 * The meta object literal for the '<em><b>Test Setup</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Test Setup</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

@@ -37,7 +37,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getId <em>Id</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getDescription <em>Description</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getTcHeader <em>Tc Header</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupInterfaceImpl#getTmHeader <em>Tm Header</em>}</li>
@@ -65,26 +64,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
 
 	/**
 	 * The cached value of the '{@link #getDescription() <em>Description</em>}' containment reference.
@@ -154,27 +133,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_INTERFACE__ID, oldId, id));
 	}
 
 	/**
@@ -320,8 +278,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				return getName();
-			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
-				return getId();
 			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				return getDescription();
 			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
@@ -344,9 +300,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				setName((String)newValue);
-				return;
-			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
-				setId((String)newValue);
 				return;
 			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				setDescription((DRun)newValue);
@@ -372,9 +325,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
-				setId(ID_EDEFAULT);
-				return;
 			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				setDescription((DRun)null);
 				return;
@@ -398,8 +348,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 		switch (featureID) {
 			case testsetupPackage.VTEST_SETUP_INTERFACE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case testsetupPackage.VTEST_SETUP_INTERFACE__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
 			case testsetupPackage.VTEST_SETUP_INTERFACE__DESCRIPTION:
 				return description != null;
 			case testsetupPackage.VTEST_SETUP_INTERFACE__TC_HEADER:
@@ -422,8 +370,6 @@ public class VTestSetupInterfaceImpl extends MinimalEObjectImpl.Container implem
 		StringBuffer result = new StringBuffer(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", id: ");
-		result.append(id);
 		result.append(')');
 		return result.toString();
 	}

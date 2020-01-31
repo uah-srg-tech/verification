@@ -19,7 +19,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestDesign;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestingSpecificationDesign;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTestSetup;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -62,14 +62,14 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	protected VSVSFixedSection general;
 
 	/**
-	 * The cached value of the '{@link #getTestSetup() <em>Test Setup</em>}' containment reference.
+	 * The cached value of the '{@link #getTestSetup() <em>Test Setup</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getTestSetup()
 	 * @generated
 	 * @ordered
 	 */
-	protected VTestSetupTestSetup testSetup;
+	protected VTestSetupDocument testSetup;
 
 	/**
 	 * The cached value of the '{@link #getTestDesigns() <em>Test Designs</em>}' containment reference list.
@@ -148,7 +148,15 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupTestSetup getTestSetup() {
+	public VTestSetupDocument getTestSetup() {
+		if (testSetup != null && testSetup.eIsProxy()) {
+			InternalEObject oldTestSetup = (InternalEObject)testSetup;
+			testSetup = (VTestSetupDocument)eResolveProxy(oldTestSetup);
+			if (testSetup != oldTestSetup) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, oldTestSetup, testSetup));
+			}
+		}
 		return testSetup;
 	}
 
@@ -157,14 +165,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetTestSetup(VTestSetupTestSetup newTestSetup, NotificationChain msgs) {
-		VTestSetupTestSetup oldTestSetup = testSetup;
-		testSetup = newTestSetup;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, oldTestSetup, newTestSetup);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public VTestSetupDocument basicGetTestSetup() {
+		return testSetup;
 	}
 
 	/**
@@ -172,18 +174,11 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTestSetup(VTestSetupTestSetup newTestSetup) {
-		if (newTestSetup != testSetup) {
-			NotificationChain msgs = null;
-			if (testSetup != null)
-				msgs = ((InternalEObject)testSetup).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, null, msgs);
-			if (newTestSetup != null)
-				msgs = ((InternalEObject)newTestSetup).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, null, msgs);
-			msgs = basicSetTestSetup(newTestSetup, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, newTestSetup, newTestSetup));
+	public void setTestSetup(VTestSetupDocument newTestSetup) {
+		VTestSetupDocument oldTestSetup = testSetup;
+		testSetup = newTestSetup;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP, oldTestSetup, testSetup));
 	}
 
 	/**
@@ -208,8 +203,6 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 		switch (featureID) {
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return basicSetGeneral(null, msgs);
-			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP:
-				return basicSetTestSetup(null, msgs);
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				return ((InternalEList<?>)getTestDesigns()).basicRemove(otherEnd, msgs);
 		}
@@ -227,7 +220,8 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__GENERAL:
 				return getGeneral();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP:
-				return getTestSetup();
+				if (resolve) return getTestSetup();
+				return basicGetTestSetup();
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				return getTestDesigns();
 		}
@@ -247,7 +241,7 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 				setGeneral((VSVSFixedSection)newValue);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP:
-				setTestSetup((VTestSetupTestSetup)newValue);
+				setTestSetup((VTestSetupDocument)newValue);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				getTestDesigns().clear();
@@ -269,7 +263,7 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 				setGeneral((VSVSFixedSection)null);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_SETUP:
-				setTestSetup((VTestSetupTestSetup)null);
+				setTestSetup((VTestSetupDocument)null);
 				return;
 			case svsPackage.VSVS_TESTING_SPECIFICATION_DESIGN__TEST_DESIGNS:
 				getTestDesigns().clear();
@@ -300,7 +294,6 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 	public EList<DAbstractSection> getSubsections() {
 		EList<DAbstractSection> subsections = new BasicEList<DAbstractSection>();
 		subsections.add((DAbstractSection) getGeneral());
-		subsections.add((DAbstractSection) getTestSetup());
 		for(DFixedSection testDesign : getTestDesigns()) {
 			subsections.add(testDesign);
 		}
@@ -312,9 +305,6 @@ public class VSVSTestingSpecificationDesignImpl extends DFixedSectionImpl implem
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
 		objects.addAll(getGeneral().getReferenceableObjects(ReferenceableObjectType));
-		if(getTestSetup().getActions() != null)
-			objects.addAll(getTestSetup().getActions().getReferenceableObjects(ReferenceableObjectType));
-		objects.addAll(getTestSetup().getScenarios().getReferenceableObjects(ReferenceableObjectType));
 		for(VSVSTestDesign testDesign : getTestDesigns()) {
 			objects.addAll(testDesign.getReferenceableObjects(ReferenceableObjectType));
 		}

@@ -12,6 +12,7 @@ package es.uah.aut.srg.micobs.svm.testsetup.util;
 
 import es.uah.aut.srg.micobs.common.MCommonReferenceableObj;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DAbstractSection;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
@@ -79,11 +80,26 @@ public class testsetupSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case testsetupPackage.VTEST_SETUP_TEST_SETUP: {
-				VTestSetupTestSetup vTestSetupTestSetup = (VTestSetupTestSetup)theEObject;
-				T result = caseVTestSetupTestSetup(vTestSetupTestSetup);
-				if (result == null) result = caseDFixedSection(vTestSetupTestSetup);
-				if (result == null) result = caseDAbstractSection(vTestSetupTestSetup);
+			case testsetupPackage.VTEST_SETUP_DOCUMENT: {
+				VTestSetupDocument vTestSetupDocument = (VTestSetupDocument)theEObject;
+				T result = caseVTestSetupDocument(vTestSetupDocument);
+				if (result == null) result = caseDDocumentTemplate(vTestSetupDocument);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case testsetupPackage.VTEST_SETUP_APPLICABLE_DOCUMENTS: {
+				VTestSetupApplicableDocuments vTestSetupApplicableDocuments = (VTestSetupApplicableDocuments)theEObject;
+				T result = caseVTestSetupApplicableDocuments(vTestSetupApplicableDocuments);
+				if (result == null) result = caseDFixedSection(vTestSetupApplicableDocuments);
+				if (result == null) result = caseDAbstractSection(vTestSetupApplicableDocuments);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case testsetupPackage.VTEST_SETUP_REFERENCE_DOCUMENTS: {
+				VTestSetupReferenceDocuments vTestSetupReferenceDocuments = (VTestSetupReferenceDocuments)theEObject;
+				T result = caseVTestSetupReferenceDocuments(vTestSetupReferenceDocuments);
+				if (result == null) result = caseDFixedSection(vTestSetupReferenceDocuments);
+				if (result == null) result = caseDAbstractSection(vTestSetupReferenceDocuments);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -146,6 +162,12 @@ public class testsetupSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case testsetupPackage.VTEST_SETUP_SUPPORTED_INTERFACE: {
+				VTestSetupSupportedInterface vTestSetupSupportedInterface = (VTestSetupSupportedInterface)theEObject;
+				T result = caseVTestSetupSupportedInterface(vTestSetupSupportedInterface);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION: {
 				VTestSetupSelectedConfiguration vTestSetupSelectedConfiguration = (VTestSetupSelectedConfiguration)theEObject;
 				T result = caseVTestSetupSelectedConfiguration(vTestSetupSelectedConfiguration);
@@ -157,17 +179,47 @@ public class testsetupSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Test Setup</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Test Setup</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Document</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseVTestSetupTestSetup(VTestSetupTestSetup object) {
+	public T caseVTestSetupDocument(VTestSetupDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Applicable Documents</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Applicable Documents</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupApplicableDocuments(VTestSetupApplicableDocuments object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Reference Documents</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Reference Documents</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupReferenceDocuments(VTestSetupReferenceDocuments object) {
 		return null;
 	}
 
@@ -292,6 +344,21 @@ public class testsetupSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Supported Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Supported Interface</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupSupportedInterface(VTestSetupSupportedInterface object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Selected Configuration</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -303,6 +370,21 @@ public class testsetupSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTestSetupSelectedConfiguration(VTestSetupSelectedConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>DDocument Template</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseDDocumentTemplate(DDocumentTemplate object) {
 		return null;
 	}
 

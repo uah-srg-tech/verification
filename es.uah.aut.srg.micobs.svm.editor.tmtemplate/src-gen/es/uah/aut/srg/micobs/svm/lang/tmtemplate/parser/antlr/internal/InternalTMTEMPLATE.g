@@ -108,9 +108,9 @@ ruleVTMTemplate returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='tmOutput='
+		otherlv_3='tm='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateAccess().getTmOutputKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVTMTemplateAccess().getTmKeyword_3());
 		}
 		(
 			(
@@ -124,7 +124,7 @@ ruleVTMTemplate returns [EObject current=null]
 				}
 				otherlv_4=RULE_STRING
 				{
-					newLeafNode(otherlv_4, grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMCrossReference_4_0());
+					newLeafNode(otherlv_4, grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMCrossReference_4_0());
 				}
 			)
 		)

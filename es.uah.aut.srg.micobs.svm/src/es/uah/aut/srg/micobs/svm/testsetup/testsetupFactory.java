@@ -30,13 +30,31 @@ public interface testsetupFactory extends EFactory {
 	testsetupFactory eINSTANCE = es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupFactoryImpl.init();
 
 	/**
-	 * Returns a new object of class '<em>VTest Setup Test Setup</em>'.
+	 * Returns a new object of class '<em>VTest Setup Document</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VTest Setup Test Setup</em>'.
+	 * @return a new object of class '<em>VTest Setup Document</em>'.
 	 * @generated
 	 */
-	VTestSetupTestSetup createVTestSetupTestSetup();
+	VTestSetupDocument createVTestSetupDocument();
+
+	/**
+	 * Returns a new object of class '<em>VTest Setup Applicable Documents</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Applicable Documents</em>'.
+	 * @generated
+	 */
+	VTestSetupApplicableDocuments createVTestSetupApplicableDocuments();
+
+	/**
+	 * Returns a new object of class '<em>VTest Setup Reference Documents</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Reference Documents</em>'.
+	 * @generated
+	 */
+	VTestSetupReferenceDocuments createVTestSetupReferenceDocuments();
 
 	/**
 	 * Returns a new object of class '<em>VTest Setup Interfaces Section</em>'.
@@ -109,6 +127,15 @@ public interface testsetupFactory extends EFactory {
 	 * @generated
 	 */
 	VTestSetupScenarioSection createVTestSetupScenarioSection();
+
+	/**
+	 * Returns a new object of class '<em>VTest Setup Supported Interface</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Supported Interface</em>'.
+	 * @generated
+	 */
+	VTestSetupSupportedInterface createVTestSetupSupportedInterface();
 
 	/**
 	 * Returns a new object of class '<em>VTest Setup Selected Configuration</em>'.

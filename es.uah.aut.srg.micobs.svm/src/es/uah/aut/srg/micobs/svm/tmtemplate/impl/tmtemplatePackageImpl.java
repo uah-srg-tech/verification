@@ -135,7 +135,7 @@ public class tmtemplatePackageImpl extends EPackageImpl implements tmtemplatePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTMTemplate_TmOutput() {
+	public EReference getVTMTemplate_Tm() {
 		return (EReference)vtmTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -205,7 +205,7 @@ public class tmtemplatePackageImpl extends EPackageImpl implements tmtemplatePac
 		// Create classes and their features
 		vtmTemplateEClass = createEClass(VTM_TEMPLATE);
 		createEAttribute(vtmTemplateEClass, VTM_TEMPLATE__NAME);
-		createEReference(vtmTemplateEClass, VTM_TEMPLATE__TM_OUTPUT);
+		createEReference(vtmTemplateEClass, VTM_TEMPLATE__TM);
 		createEReference(vtmTemplateEClass, VTM_TEMPLATE__FIELDS);
 
 		vtmTemplateFieldEClass = createEClass(VTM_TEMPLATE_FIELD);
@@ -249,7 +249,7 @@ public class tmtemplatePackageImpl extends EPackageImpl implements tmtemplatePac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vtmTemplateEClass, VTMTemplate.class, "VTMTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTMTemplate_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVTMTemplate_TmOutput(), thetmPackage.getTMTCIFTM(), null, "tmOutput", null, 1, 1, VTMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTMTemplate_Tm(), thetmPackage.getTMTCIFTM(), null, "tm", null, 1, 1, VTMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTMTemplate_Fields(), this.getVTMTemplateField(), null, "fields", null, 0, -1, VTMTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vtmTemplateFieldEClass, VTMTemplateField.class, "VTMTemplateField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

@@ -39,7 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.impl.VTCTemplateImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.impl.VTCTemplateImpl#getTcInput <em>Tc Input</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.impl.VTCTemplateImpl#getTc <em>Tc</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tctemplate.impl.VTCTemplateImpl#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -67,14 +67,14 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getTcInput() <em>Tc Input</em>}' reference.
+	 * The cached value of the '{@link #getTc() <em>Tc</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getTcInput()
+	 * @see #getTc()
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFTC tcInput;
+	protected TMTCIFTC tc;
 
 	/**
 	 * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
@@ -131,16 +131,16 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFTC getTcInput() {
-		if (tcInput != null && tcInput.eIsProxy()) {
-			InternalEObject oldTcInput = (InternalEObject)tcInput;
-			tcInput = (TMTCIFTC)eResolveProxy(oldTcInput);
-			if (tcInput != oldTcInput) {
+	public TMTCIFTC getTc() {
+		if (tc != null && tc.eIsProxy()) {
+			InternalEObject oldTc = (InternalEObject)tc;
+			tc = (TMTCIFTC)eResolveProxy(oldTc);
+			if (tc != oldTc) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, tctemplatePackage.VTC_TEMPLATE__TC_INPUT, oldTcInput, tcInput));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, tctemplatePackage.VTC_TEMPLATE__TC, oldTc, tc));
 			}
 		}
-		return tcInput;
+		return tc;
 	}
 
 	/**
@@ -148,8 +148,8 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFTC basicGetTcInput() {
-		return tcInput;
+	public TMTCIFTC basicGetTc() {
+		return tc;
 	}
 
 	/**
@@ -157,11 +157,11 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setTcInput(TMTCIFTC newTcInput) {
-		TMTCIFTC oldTcInput = tcInput;
-		tcInput = newTcInput;
+	public void setTc(TMTCIFTC newTc) {
+		TMTCIFTC oldTc = tc;
+		tc = newTc;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, tctemplatePackage.VTC_TEMPLATE__TC_INPUT, oldTcInput, tcInput));
+			eNotify(new ENotificationImpl(this, Notification.SET, tctemplatePackage.VTC_TEMPLATE__TC, oldTc, tc));
 	}
 
 	/**
@@ -200,9 +200,9 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 		switch (featureID) {
 			case tctemplatePackage.VTC_TEMPLATE__NAME:
 				return getName();
-			case tctemplatePackage.VTC_TEMPLATE__TC_INPUT:
-				if (resolve) return getTcInput();
-				return basicGetTcInput();
+			case tctemplatePackage.VTC_TEMPLATE__TC:
+				if (resolve) return getTc();
+				return basicGetTc();
 			case tctemplatePackage.VTC_TEMPLATE__FIELDS:
 				return getFields();
 		}
@@ -221,8 +221,8 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 			case tctemplatePackage.VTC_TEMPLATE__NAME:
 				setName((String)newValue);
 				return;
-			case tctemplatePackage.VTC_TEMPLATE__TC_INPUT:
-				setTcInput((TMTCIFTC)newValue);
+			case tctemplatePackage.VTC_TEMPLATE__TC:
+				setTc((TMTCIFTC)newValue);
 				return;
 			case tctemplatePackage.VTC_TEMPLATE__FIELDS:
 				getFields().clear();
@@ -243,8 +243,8 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 			case tctemplatePackage.VTC_TEMPLATE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case tctemplatePackage.VTC_TEMPLATE__TC_INPUT:
-				setTcInput((TMTCIFTC)null);
+			case tctemplatePackage.VTC_TEMPLATE__TC:
+				setTc((TMTCIFTC)null);
 				return;
 			case tctemplatePackage.VTC_TEMPLATE__FIELDS:
 				getFields().clear();
@@ -263,8 +263,8 @@ public class VTCTemplateImpl extends MinimalEObjectImpl.Container implements VTC
 		switch (featureID) {
 			case tctemplatePackage.VTC_TEMPLATE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case tctemplatePackage.VTC_TEMPLATE__TC_INPUT:
-				return tcInput != null;
+			case tctemplatePackage.VTC_TEMPLATE__TC:
+				return tc != null;
 			case tctemplatePackage.VTC_TEMPLATE__FIELDS:
 				return fields != null && !fields.isEmpty();
 		}

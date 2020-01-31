@@ -30,10 +30,10 @@ public class TMTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cTmOutputKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTmOutputAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final CrossReference cTmOutputTMTCIFTMCrossReference_4_0 = (CrossReference)cTmOutputAssignment_4.eContents().get(0);
-		private final RuleCall cTmOutputTMTCIFTMSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cTmOutputTMTCIFTMCrossReference_4_0.eContents().get(1);
+		private final Keyword cTmKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTmAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cTmTMTCIFTMCrossReference_4_0 = (CrossReference)cTmAssignment_4.eContents().get(0);
+		private final RuleCall cTmTMTCIFTMSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cTmTMTCIFTMCrossReference_4_0.eContents().get(1);
 		private final Alternatives cAlternatives_5 = (Alternatives)cGroup.eContents().get(5);
 		private final Group cGroup_5_0 = (Group)cAlternatives_5.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_5_0_0 = (Keyword)cGroup_5_0.eContents().get(0);
@@ -48,11 +48,10 @@ public class TMTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 		//VTMTemplate:
 		//	'<TMTemplate'
 		//	'name=' name=STRING
-		//	'tmOutput=' tmOutput=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+ '</Fields>')? '</TMTemplate>' |
-		//	'/>');
+		//	'tm=' tm=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+ '</Fields>')? '</TMTemplate>' | '/>');
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<TMTemplate' 'name=' name=STRING 'tmOutput=' tmOutput=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+
+		//'<TMTemplate' 'name=' name=STRING 'tm=' tm=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+
 		//'</Fields>')? '</TMTemplate>' | '/>')
 		public Group getGroup() { return cGroup; }
 		
@@ -68,17 +67,17 @@ public class TMTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'tmOutput='
-		public Keyword getTmOutputKeyword_3() { return cTmOutputKeyword_3; }
+		//'tm='
+		public Keyword getTmKeyword_3() { return cTmKeyword_3; }
 		
-		//tmOutput=[tm::TMTCIFTM|STRING]
-		public Assignment getTmOutputAssignment_4() { return cTmOutputAssignment_4; }
+		//tm=[tm::TMTCIFTM|STRING]
+		public Assignment getTmAssignment_4() { return cTmAssignment_4; }
 		
 		//[tm::TMTCIFTM|STRING]
-		public CrossReference getTmOutputTMTCIFTMCrossReference_4_0() { return cTmOutputTMTCIFTMCrossReference_4_0; }
+		public CrossReference getTmTMTCIFTMCrossReference_4_0() { return cTmTMTCIFTMCrossReference_4_0; }
 		
 		//STRING
-		public RuleCall getTmOutputTMTCIFTMSTRINGTerminalRuleCall_4_0_1() { return cTmOutputTMTCIFTMSTRINGTerminalRuleCall_4_0_1; }
+		public RuleCall getTmTMTCIFTMSTRINGTerminalRuleCall_4_0_1() { return cTmTMTCIFTMSTRINGTerminalRuleCall_4_0_1; }
 		
 		//('>' ('<Fields>' fields+=VTMTemplateField+ '</Fields>')? '</TMTemplate>' | '/>')
 		public Alternatives getAlternatives_5() { return cAlternatives_5; }
@@ -366,8 +365,7 @@ public class TMTEMPLATEGrammarAccess extends AbstractGrammarElementFinder {
 	//VTMTemplate:
 	//	'<TMTemplate'
 	//	'name=' name=STRING
-	//	'tmOutput=' tmOutput=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+ '</Fields>')? '</TMTemplate>' |
-	//	'/>');
+	//	'tm=' tm=[tm::TMTCIFTM|STRING] ('>' ('<Fields>' fields+=VTMTemplateField+ '</Fields>')? '</TMTemplate>' | '/>');
 	public VTMTemplateElements getVTMTemplateAccess() {
 		return pVTMTemplate;
 	}

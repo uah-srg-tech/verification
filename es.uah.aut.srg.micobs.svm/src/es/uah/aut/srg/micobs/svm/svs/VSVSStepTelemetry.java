@@ -10,7 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -68,12 +68,12 @@ public interface VSVSStepTelemetry extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Interface</em>' reference.
-	 * @see #setInterface(VTestSetupInterface)
+	 * @see #setInterface(VTestSetupSupportedInterface)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepTelemetry_Interface()
 	 * @model required="true"
 	 * @generated
 	 */
-	VTestSetupInterface getInterface();
+	VTestSetupSupportedInterface getInterface();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetry#getInterface <em>Interface</em>}' reference.
@@ -83,7 +83,7 @@ public interface VSVSStepTelemetry extends EObject {
 	 * @see #getInterface()
 	 * @generated
 	 */
-	void setInterface(VTestSetupInterface value);
+	void setInterface(VTestSetupSupportedInterface value);
 
 	/**
 	 * Returns the value of the '<em><b>Tm Data</b></em>' containment reference.

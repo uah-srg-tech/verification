@@ -32,7 +32,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTCTEMPLATEParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TCTemplate'", "'name='", "'tcInput='", "'>'", "'<Fields>'", "'</Fields>'", "'</TCTemplate>'", "'/>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TCTemplate'", "'name='", "'tc='", "'>'", "'<Fields>'", "'</Fields>'", "'</TCTemplate>'", "'/>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -148,7 +148,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTCTemplate"
-    // InternalTCTEMPLATE.g:84:1: ruleVTCTemplate returns [EObject current=null] : (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tcInput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) ) ;
+    // InternalTCTEMPLATE.g:84:1: ruleVTCTemplate returns [EObject current=null] : (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tc=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) ) ;
     public final EObject ruleVTCTemplate() throws RecognitionException {
         EObject current = null;
 
@@ -169,11 +169,11 @@ public class InternalTCTEMPLATEParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCTEMPLATE.g:90:2: ( (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tcInput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) ) )
-            // InternalTCTEMPLATE.g:91:2: (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tcInput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) )
+            // InternalTCTEMPLATE.g:90:2: ( (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tc=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) ) )
+            // InternalTCTEMPLATE.g:91:2: (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tc=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) )
             {
-            // InternalTCTEMPLATE.g:91:2: (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tcInput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) )
-            // InternalTCTEMPLATE.g:92:3: otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tcInput=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' )
+            // InternalTCTEMPLATE.g:91:2: (otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tc=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' ) )
+            // InternalTCTEMPLATE.g:92:3: otherlv_0= '<TCTemplate' otherlv_1= 'name=' ( (lv_name_2_0= RULE_STRING ) ) otherlv_3= 'tc=' ( (otherlv_4= RULE_STRING ) ) ( (otherlv_5= '>' (otherlv_6= '<Fields>' ( (lv_fields_7_0= ruleVTCTemplateField ) )+ otherlv_8= '</Fields>' )? otherlv_9= '</TCTemplate>' ) | otherlv_10= '/>' )
             {
             otherlv_0=(Token)match(input,13,FollowSets000.FOLLOW_3); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -220,7 +220,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalAntlrParser {
             otherlv_3=(Token)match(input,15,FollowSets000.FOLLOW_4); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_3, grammarAccess.getVTCTemplateAccess().getTcInputKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getVTCTemplateAccess().getTcKeyword_3());
               		
             }
             // InternalTCTEMPLATE.g:122:3: ( (otherlv_4= RULE_STRING ) )
@@ -244,7 +244,7 @@ public class InternalTCTEMPLATEParser extends AbstractInternalAntlrParser {
             otherlv_4=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_6); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_4, grammarAccess.getVTCTemplateAccess().getTcInputTMTCIFTCCrossReference_4_0());
+              					newLeafNode(otherlv_4, grammarAccess.getVTCTemplateAccess().getTcTMTCIFTCCrossReference_4_0());
               				
             }
 

@@ -14,6 +14,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DBody;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DInstantiableSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenario;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -25,6 +26,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getScenario <em>Scenario</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedInterface <em>Supported Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedAction <em>Supported Action</em>}</li>
@@ -37,20 +39,46 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface VTestSetupScenarioSection extends DInstantiableSection {
 	/**
-	 * Returns the value of the '<em><b>Supported Interface</b></em>' reference list.
-	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface}.
+	 * Returns the value of the '<em><b>Scenario</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Scenario</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Scenario</em>' reference.
+	 * @see #setScenario(TMTCIFScenario)
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupScenarioSection_Scenario()
+	 * @model required="true"
+	 * @generated
+	 */
+	TMTCIFScenario getScenario();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getScenario <em>Scenario</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Scenario</em>' reference.
+	 * @see #getScenario()
+	 * @generated
+	 */
+	void setScenario(TMTCIFScenario value);
+
+	/**
+	 * Returns the value of the '<em><b>Supported Interface</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface}.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Supported Interface</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Supported Interface</em>' reference list.
+	 * @return the value of the '<em>Supported Interface</em>' containment reference list.
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupScenarioSection_SupportedInterface()
-	 * @model required="true"
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VTestSetupInterface> getSupportedInterface();
+	EList<VTestSetupSupportedInterface> getSupportedInterface();
 
 	/**
 	 * Returns the value of the '<em><b>Selected Configuration</b></em>' containment reference list.

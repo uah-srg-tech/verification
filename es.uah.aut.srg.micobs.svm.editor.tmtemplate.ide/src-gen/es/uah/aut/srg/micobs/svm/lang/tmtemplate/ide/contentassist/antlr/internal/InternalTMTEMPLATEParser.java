@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'/>'", "'<TMTemplate'", "'name='", "'tmOutput='", "'>'", "'</TMTemplate>'", "'<Fields>'", "'</Fields>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_UINT_STRING", "RULE_HEX_STRING", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'/>'", "'<TMTemplate'", "'name='", "'tm='", "'>'", "'</TMTemplate>'", "'<Fields>'", "'</Fields>'", "'<Field'", "'fieldRef='", "'</Field>'", "'<FieldValueRaw'", "'value='", "'<FieldValueFile'", "'filename='", "'<FieldValueEnum'", "'enumRef='", "'valueRef='"
     };
     public static final int RULE_STRING=6;
     public static final int RULE_UINT_STRING=4;
@@ -1175,24 +1175,24 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTMTemplate__Group__3__Impl"
-    // InternalTMTEMPLATE.g:365:1: rule__VTMTemplate__Group__3__Impl : ( 'tmOutput=' ) ;
+    // InternalTMTEMPLATE.g:365:1: rule__VTMTemplate__Group__3__Impl : ( 'tm=' ) ;
     public final void rule__VTMTemplate__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMTEMPLATE.g:369:1: ( ( 'tmOutput=' ) )
-            // InternalTMTEMPLATE.g:370:1: ( 'tmOutput=' )
+            // InternalTMTEMPLATE.g:369:1: ( ( 'tm=' ) )
+            // InternalTMTEMPLATE.g:370:1: ( 'tm=' )
             {
-            // InternalTMTEMPLATE.g:370:1: ( 'tmOutput=' )
-            // InternalTMTEMPLATE.g:371:2: 'tmOutput='
+            // InternalTMTEMPLATE.g:370:1: ( 'tm=' )
+            // InternalTMTEMPLATE.g:371:2: 'tm='
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTMTemplateAccess().getTmOutputKeyword_3()); 
+               before(grammarAccess.getVTMTemplateAccess().getTmKeyword_3()); 
             }
             match(input,16,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTMTemplateAccess().getTmOutputKeyword_3()); 
+               after(grammarAccess.getVTMTemplateAccess().getTmKeyword_3()); 
             }
 
             }
@@ -1254,26 +1254,26 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__VTMTemplate__Group__4__Impl"
-    // InternalTMTEMPLATE.g:392:1: rule__VTMTemplate__Group__4__Impl : ( ( rule__VTMTemplate__TmOutputAssignment_4 ) ) ;
+    // InternalTMTEMPLATE.g:392:1: rule__VTMTemplate__Group__4__Impl : ( ( rule__VTMTemplate__TmAssignment_4 ) ) ;
     public final void rule__VTMTemplate__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTMTEMPLATE.g:396:1: ( ( ( rule__VTMTemplate__TmOutputAssignment_4 ) ) )
-            // InternalTMTEMPLATE.g:397:1: ( ( rule__VTMTemplate__TmOutputAssignment_4 ) )
+            // InternalTMTEMPLATE.g:396:1: ( ( ( rule__VTMTemplate__TmAssignment_4 ) ) )
+            // InternalTMTEMPLATE.g:397:1: ( ( rule__VTMTemplate__TmAssignment_4 ) )
             {
-            // InternalTMTEMPLATE.g:397:1: ( ( rule__VTMTemplate__TmOutputAssignment_4 ) )
-            // InternalTMTEMPLATE.g:398:2: ( rule__VTMTemplate__TmOutputAssignment_4 )
+            // InternalTMTEMPLATE.g:397:1: ( ( rule__VTMTemplate__TmAssignment_4 ) )
+            // InternalTMTEMPLATE.g:398:2: ( rule__VTMTemplate__TmAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTMTemplateAccess().getTmOutputAssignment_4()); 
+               before(grammarAccess.getVTMTemplateAccess().getTmAssignment_4()); 
             }
-            // InternalTMTEMPLATE.g:399:2: ( rule__VTMTemplate__TmOutputAssignment_4 )
-            // InternalTMTEMPLATE.g:399:3: rule__VTMTemplate__TmOutputAssignment_4
+            // InternalTMTEMPLATE.g:399:2: ( rule__VTMTemplate__TmAssignment_4 )
+            // InternalTMTEMPLATE.g:399:3: rule__VTMTemplate__TmAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTMTemplate__TmOutputAssignment_4();
+            rule__VTMTemplate__TmAssignment_4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -1281,7 +1281,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTMTemplateAccess().getTmOutputAssignment_4()); 
+               after(grammarAccess.getVTMTemplateAccess().getTmAssignment_4()); 
             }
 
             }
@@ -3591,9 +3591,9 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__VTMTemplate__NameAssignment_2"
 
 
-    // $ANTLR start "rule__VTMTemplate__TmOutputAssignment_4"
-    // InternalTMTEMPLATE.g:1158:1: rule__VTMTemplate__TmOutputAssignment_4 : ( ( RULE_STRING ) ) ;
-    public final void rule__VTMTemplate__TmOutputAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__VTMTemplate__TmAssignment_4"
+    // InternalTMTEMPLATE.g:1158:1: rule__VTMTemplate__TmAssignment_4 : ( ( RULE_STRING ) ) ;
+    public final void rule__VTMTemplate__TmAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3605,23 +3605,23 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
             // InternalTMTEMPLATE.g:1164:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMCrossReference_4_0()); 
+               before(grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMCrossReference_4_0()); 
             }
             // InternalTMTEMPLATE.g:1165:3: ( RULE_STRING )
             // InternalTMTEMPLATE.g:1166:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMSTRINGTerminalRuleCall_4_0_1()); 
+               before(grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMSTRINGTerminalRuleCall_4_0_1()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMSTRINGTerminalRuleCall_4_0_1()); 
+               after(grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMSTRINGTerminalRuleCall_4_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTMTemplateAccess().getTmOutputTMTCIFTMCrossReference_4_0()); 
+               after(grammarAccess.getVTMTemplateAccess().getTmTMTCIFTMCrossReference_4_0()); 
             }
 
             }
@@ -3641,7 +3641,7 @@ public class InternalTMTEMPLATEParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__VTMTemplate__TmOutputAssignment_4"
+    // $ANTLR end "rule__VTMTemplate__TmAssignment_4"
 
 
     // $ANTLR start "rule__VTMTemplate__FieldsAssignment_5_0_1_1"

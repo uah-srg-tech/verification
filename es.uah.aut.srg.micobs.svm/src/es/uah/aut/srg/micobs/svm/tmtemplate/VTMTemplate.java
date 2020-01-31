@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTmOutput <em>Tm Output</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTm <em>Tm</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getFields <em>Fields</em>}</li>
  * </ul>
  *
@@ -62,30 +62,30 @@ public interface VTMTemplate extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Tm Output</b></em>' reference.
+	 * Returns the value of the '<em><b>Tm</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Tm Output</em>' reference isn't clear,
+	 * If the meaning of the '<em>Tm</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Tm Output</em>' reference.
-	 * @see #setTmOutput(TMTCIFTM)
-	 * @see es.uah.aut.srg.micobs.svm.tmtemplate.tmtemplatePackage#getVTMTemplate_TmOutput()
+	 * @return the value of the '<em>Tm</em>' reference.
+	 * @see #setTm(TMTCIFTM)
+	 * @see es.uah.aut.srg.micobs.svm.tmtemplate.tmtemplatePackage#getVTMTemplate_Tm()
 	 * @model required="true"
 	 * @generated
 	 */
-	TMTCIFTM getTmOutput();
+	TMTCIFTM getTm();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTmOutput <em>Tm Output</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate#getTm <em>Tm</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Tm Output</em>' reference.
-	 * @see #getTmOutput()
+	 * @param value the new value of the '<em>Tm</em>' reference.
+	 * @see #getTm()
 	 * @generated
 	 */
-	void setTmOutput(TMTCIFTM value);
+	void setTm(TMTCIFTM value);
 
 	/**
 	 * Returns the value of the '<em><b>Fields</b></em>' containment reference list.

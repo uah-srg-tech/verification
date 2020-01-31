@@ -132,7 +132,7 @@ public class tctemplatePackageImpl extends EPackageImpl implements tctemplatePac
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTCTemplate_TcInput() {
+	public EReference getVTCTemplate_Tc() {
 		return (EReference)vtcTemplateEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -202,7 +202,7 @@ public class tctemplatePackageImpl extends EPackageImpl implements tctemplatePac
 		// Create classes and their features
 		vtcTemplateEClass = createEClass(VTC_TEMPLATE);
 		createEAttribute(vtcTemplateEClass, VTC_TEMPLATE__NAME);
-		createEReference(vtcTemplateEClass, VTC_TEMPLATE__TC_INPUT);
+		createEReference(vtcTemplateEClass, VTC_TEMPLATE__TC);
 		createEReference(vtcTemplateEClass, VTC_TEMPLATE__FIELDS);
 
 		vtcTemplateFieldEClass = createEClass(VTC_TEMPLATE_FIELD);
@@ -246,7 +246,7 @@ public class tctemplatePackageImpl extends EPackageImpl implements tctemplatePac
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vtcTemplateEClass, VTCTemplate.class, "VTCTemplate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTCTemplate_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTCTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVTCTemplate_TcInput(), thetcPackage.getTMTCIFTC(), null, "tcInput", null, 1, 1, VTCTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTCTemplate_Tc(), thetcPackage.getTMTCIFTC(), null, "tc", null, 1, 1, VTCTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTCTemplate_Fields(), this.getVTCTemplateField(), null, "fields", null, 0, -1, VTCTemplate.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vtcTemplateFieldEClass, VTCTemplateField.class, "VTCTemplateField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

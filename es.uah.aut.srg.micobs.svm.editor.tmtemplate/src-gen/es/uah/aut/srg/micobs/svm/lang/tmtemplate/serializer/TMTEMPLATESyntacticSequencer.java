@@ -53,7 +53,7 @@ public class TMTEMPLATESyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ('>' '</TMTemplate>') | '/>'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     tmOutput=[TMTCIFTM|STRING] (ambiguity) (rule end)
+	 *     tm=[TMTCIFTM|STRING] (ambiguity) (rule end)
 	 */
 	protected void emit_VTMTemplate_SolidusGreaterThanSignKeyword_5_1_or___GreaterThanSignKeyword_5_0_0_TMTemplateKeyword_5_0_2__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
