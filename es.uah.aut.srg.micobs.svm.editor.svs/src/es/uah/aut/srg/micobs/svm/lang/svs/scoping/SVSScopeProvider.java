@@ -242,6 +242,8 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		objects.addAll(svsDoc.getFigures());
 		objects.addAll(svsDoc.getTables());
 		objects.addAll(svsDoc.getParagraphs());
+		objects.addAll(svsDoc.getTbcs());
+		objects.addAll(svsDoc.getTbds());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(objects, new Function<DReferenceableObject, IEObjectDescription>(){
 	

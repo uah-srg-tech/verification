@@ -129,6 +129,8 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 		objects.addAll(testSetupDoc.getFigures());
 		objects.addAll(testSetupDoc.getTables());
 		objects.addAll(testSetupDoc.getParagraphs());
+		objects.addAll(testSetupDoc.getTbcs());
+		objects.addAll(testSetupDoc.getTbds());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(objects, new Function<DReferenceableObject, IEObjectDescription>(){
 	
