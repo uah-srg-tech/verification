@@ -66,6 +66,7 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case svsPackage.VSVS_DOCUMENT: return createVSVSDocument();
+			case svsPackage.VSVSTB_CS_TB_DS: return createVSVSTBCsTBDs();
 			case svsPackage.VSVS_INSTANTIABLE_SECTION: return createVSVSInstantiableSection();
 			case svsPackage.VSVS_INTRODUCTION: return createVSVSIntroduction();
 			case svsPackage.VSVS_APPLICABLE_DOCUMENTS: return createVSVSApplicableDocuments();
@@ -152,6 +153,16 @@ public class svsFactoryImpl extends EFactoryImpl implements svsFactory {
 	public VSVSDocument createVSVSDocument() {
 		VSVSDocumentImpl vsvsDocument = new VSVSDocumentImpl();
 		return vsvsDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSTBCsTBDs createVSVSTBCsTBDs() {
+		VSVSTBCsTBDsImpl vsvstbCsTBDs = new VSVSTBCsTBDsImpl();
+		return vsvstbCsTBDs;
 	}
 
 	/**

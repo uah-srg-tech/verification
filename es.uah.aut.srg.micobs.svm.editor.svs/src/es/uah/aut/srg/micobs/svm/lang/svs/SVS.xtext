@@ -27,6 +27,7 @@ VSVSDocument returns VSVSDocument:
 		'date=' date=STRING
 		'>'
 		('<parent' 'name=' parents+=[tdm::VTraceableDocument|STRING] '/>')*
+		(tbcsTbdsSection=VSVSTBCsTBDs)?
 		introductionSection=VSVSIntroduction
 		applicableDocumentsSection=VSVSApplicableDocuments
 		referenceDocumentsSection=VSVSReferenceDocuments
@@ -40,6 +41,27 @@ VSVSDocument returns VSVSDocument:
 		testPlatformRequirementsSection=VSVSTestPlatformRequirements
 		additionalInformationSection=VSVSAdditionalInformation
 	'</SVS>';
+
+VSVSTBCsTBDs returns VSVSTBCsTBDs:
+	{VSVSTBCsTBDs}
+	'<TBCsTBDs>'
+		(tbcs+=DTBC)*
+		(tbds+=DTBD)*
+	'</TBCsTBDs>';
+
+DTBC returns doctpl::DTBC:
+	'<TBC'
+		'name=' name=STRING
+		('description=' description=STRING |
+		'parentTBC=' parentTBC=[doctpl::DTBC|STRING])
+	'/>';
+
+DTBD returns doctpl::DTBD:
+	'<TBD'
+		'name=' name=STRING
+		('description=' description=STRING |
+		'parentTBD=' parentTBD=[doctpl::DTBD|STRING])
+	'/>';
 
 DBody returns doctpl::DBody:
 	'<body>'
@@ -112,9 +134,7 @@ DRun returns doctpl::DRun:
 DHyperlink returns doctpl::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doctpl::DReferenceableObject|STRING]
-	'>'
-		(run=DRun)?
-	'</hyperlink>';
+	(('>' (run=DRun) '</hyperlink>') | ('/>'));
 
 DTab returns doctpl::DTab:
 {doctpl::DTab}
@@ -185,6 +205,7 @@ DApplicableDocument returns doctpl::DApplicableDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 DReferenceDocument returns doctpl::DReferenceDocument:
@@ -195,6 +216,7 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 VSVSTestInfo returns VSVSTestInfo:

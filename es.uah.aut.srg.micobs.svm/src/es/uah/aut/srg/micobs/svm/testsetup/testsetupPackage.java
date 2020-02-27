@@ -78,6 +78,69 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_DOCUMENT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__NAME = doctplPackage.DDOCUMENT_TEMPLATE__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__ID = doctplPackage.DDOCUMENT_TEMPLATE__ID;
+
+	/**
+	 * The feature id for the '<em><b>Issue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__ISSUE = doctplPackage.DDOCUMENT_TEMPLATE__ISSUE;
+
+	/**
+	 * The feature id for the '<em><b>Revision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__REVISION = doctplPackage.DDOCUMENT_TEMPLATE__REVISION;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__DATE = doctplPackage.DDOCUMENT_TEMPLATE__DATE;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__TBCS = doctplPackage.DDOCUMENT_TEMPLATE__TBCS;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__TBDS = doctplPackage.DDOCUMENT_TEMPLATE__TBDS;
+
+	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -132,49 +195,13 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_DOCUMENT__PARAGRAPHS = doctplPackage.DDOCUMENT_TEMPLATE__PARAGRAPHS;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * The feature id for the '<em><b>Tbcs Tbds Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__NAME = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTEST_SETUP_DOCUMENT__ID = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 1;
-
-	/**
-	 * The feature id for the '<em><b>Issue</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTEST_SETUP_DOCUMENT__ISSUE = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 2;
-
-	/**
-	 * The feature id for the '<em><b>Revision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTEST_SETUP_DOCUMENT__REVISION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 3;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTEST_SETUP_DOCUMENT__DATE = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 4;
+	int VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -183,7 +210,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 5;
+	int VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -192,7 +219,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 6;
+	int VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Interfaces</b></em>' containment reference.
@@ -201,7 +228,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__INTERFACES = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
+	int VTEST_SETUP_DOCUMENT__INTERFACES = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Configurations</b></em>' containment reference.
@@ -210,7 +237,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__CONFIGURATIONS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 8;
+	int VTEST_SETUP_DOCUMENT__CONFIGURATIONS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Actions</b></em>' containment reference.
@@ -219,7 +246,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__ACTIONS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 9;
+	int VTEST_SETUP_DOCUMENT__ACTIONS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference.
@@ -228,7 +255,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__SCENARIOS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 10;
+	int VTEST_SETUP_DOCUMENT__SCENARIOS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Document</em>' class.
@@ -237,7 +264,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 11;
+	int VTEST_SETUP_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>VTest Setup Document</em>' class.
@@ -249,6 +276,61 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_DOCUMENT_OPERATION_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupTBCsTBDsImpl <em>VTest Setup TB Cs TB Ds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupTBCsTBDsImpl
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupTBCsTBDs()
+	 * @generated
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS__TBCS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS__TBDS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VTest Setup TB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VTest Setup TB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_TB_CS_TB_DS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupApplicableDocumentsImpl <em>VTest Setup Applicable Documents</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,7 +338,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupApplicableDocuments()
 	 * @generated
 	 */
-	int VTEST_SETUP_APPLICABLE_DOCUMENTS = 1;
+	int VTEST_SETUP_APPLICABLE_DOCUMENTS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -302,7 +384,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupReferenceDocuments()
 	 * @generated
 	 */
-	int VTEST_SETUP_REFERENCE_DOCUMENTS = 2;
+	int VTEST_SETUP_REFERENCE_DOCUMENTS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -348,7 +430,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupInterfacesSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_INTERFACES_SECTION = 3;
+	int VTEST_SETUP_INTERFACES_SECTION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -394,7 +476,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupInterface()
 	 * @generated
 	 */
-	int VTEST_SETUP_INTERFACE = 4;
+	int VTEST_SETUP_INTERFACE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -458,7 +540,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupPacketConfigurationsSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION = 5;
+	int VTEST_SETUP_PACKET_CONFIGURATIONS_SECTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -504,7 +586,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupPacketConfiguration()
 	 * @generated
 	 */
-	int VTEST_SETUP_PACKET_CONFIGURATION = 6;
+	int VTEST_SETUP_PACKET_CONFIGURATION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -559,7 +641,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionsSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_ACTIONS_SECTION = 7;
+	int VTEST_SETUP_ACTIONS_SECTION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -605,7 +687,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupAction()
 	 * @generated
 	 */
-	int VTEST_SETUP_ACTION = 8;
+	int VTEST_SETUP_ACTION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -660,7 +742,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupScenariosSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_SCENARIOS_SECTION = 9;
+	int VTEST_SETUP_SCENARIOS_SECTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -706,7 +788,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupScenarioSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_SCENARIO_SECTION = 10;
+	int VTEST_SETUP_SCENARIO_SECTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -806,7 +888,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSupportedInterface()
 	 * @generated
 	 */
-	int VTEST_SETUP_SUPPORTED_INTERFACE = 11;
+	int VTEST_SETUP_SUPPORTED_INTERFACE = 12;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -861,7 +943,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSelectedConfiguration()
 	 * @generated
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION = 12;
+	int VTEST_SETUP_SELECTED_CONFIGURATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
@@ -916,7 +998,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionType()
 	 * @generated
 	 */
-	int VTEST_SETUP_ACTION_TYPE = 13;
+	int VTEST_SETUP_ACTION_TYPE = 14;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus <em>VTest Setup Configuration Status</em>}' enum.
@@ -926,7 +1008,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupConfigurationStatus()
 	 * @generated
 	 */
-	int VTEST_SETUP_CONFIGURATION_STATUS = 14;
+	int VTEST_SETUP_CONFIGURATION_STATUS = 15;
 
 
 	/**
@@ -940,59 +1022,15 @@ public interface testsetupPackage extends EPackage {
 	EClass getVTestSetupDocument();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getName <em>Name</em>}'.
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getName()
+	 * @return the meta object for the containment reference '<em>Tbcs Tbds Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getTbcsTbdsSection()
 	 * @see #getVTestSetupDocument()
 	 * @generated
 	 */
-	EAttribute getVTestSetupDocument_Name();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getId()
-	 * @see #getVTestSetupDocument()
-	 * @generated
-	 */
-	EAttribute getVTestSetupDocument_Id();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getIssue <em>Issue</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Issue</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getIssue()
-	 * @see #getVTestSetupDocument()
-	 * @generated
-	 */
-	EAttribute getVTestSetupDocument_Issue();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getRevision <em>Revision</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Revision</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getRevision()
-	 * @see #getVTestSetupDocument()
-	 * @generated
-	 */
-	EAttribute getVTestSetupDocument_Revision();
-
-	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getDate <em>Date</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Date</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getDate()
-	 * @see #getVTestSetupDocument()
-	 * @generated
-	 */
-	EAttribute getVTestSetupDocument_Date();
+	EReference getVTestSetupDocument_TbcsTbdsSection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}'.
@@ -1059,6 +1097,38 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVTestSetupDocument_Scenarios();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs <em>VTest Setup TB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTest Setup TB Cs TB Ds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs
+	 * @generated
+	 */
+	EClass getVTestSetupTBCsTBDs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs#getTbcs <em>Tbcs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbcs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs#getTbcs()
+	 * @see #getVTestSetupTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVTestSetupTBCsTBDs_Tbcs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs#getTbds <em>Tbds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs#getTbds()
+	 * @see #getVTestSetupTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVTestSetupTBCsTBDs_Tbds();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupApplicableDocuments <em>VTest Setup Applicable Documents</em>}'.
@@ -1531,44 +1601,12 @@ public interface testsetupPackage extends EPackage {
 		EClass VTEST_SETUP_DOCUMENT = eINSTANCE.getVTestSetupDocument();
 
 		/**
-		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * The meta object literal for the '<em><b>Tbcs Tbds Section</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute VTEST_SETUP_DOCUMENT__NAME = eINSTANCE.getVTestSetupDocument_Name();
-
-		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTEST_SETUP_DOCUMENT__ID = eINSTANCE.getVTestSetupDocument_Id();
-
-		/**
-		 * The meta object literal for the '<em><b>Issue</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTEST_SETUP_DOCUMENT__ISSUE = eINSTANCE.getVTestSetupDocument_Issue();
-
-		/**
-		 * The meta object literal for the '<em><b>Revision</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTEST_SETUP_DOCUMENT__REVISION = eINSTANCE.getVTestSetupDocument_Revision();
-
-		/**
-		 * The meta object literal for the '<em><b>Date</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTEST_SETUP_DOCUMENT__DATE = eINSTANCE.getVTestSetupDocument_Date();
+		EReference VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION = eINSTANCE.getVTestSetupDocument_TbcsTbdsSection();
 
 		/**
 		 * The meta object literal for the '<em><b>Applicable Documents Section</b></em>' containment reference feature.
@@ -1617,6 +1655,32 @@ public interface testsetupPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTEST_SETUP_DOCUMENT__SCENARIOS = eINSTANCE.getVTestSetupDocument_Scenarios();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupTBCsTBDsImpl <em>VTest Setup TB Cs TB Ds</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupTBCsTBDsImpl
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupTBCsTBDs()
+		 * @generated
+		 */
+		EClass VTEST_SETUP_TB_CS_TB_DS = eINSTANCE.getVTestSetupTBCsTBDs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbcs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_TB_CS_TB_DS__TBCS = eINSTANCE.getVTestSetupTBCsTBDs_Tbcs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbds</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_TB_CS_TB_DS__TBDS = eINSTANCE.getVTestSetupTBCsTBDs_Tbds();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupApplicableDocumentsImpl <em>VTest Setup Applicable Documents</em>}' class.

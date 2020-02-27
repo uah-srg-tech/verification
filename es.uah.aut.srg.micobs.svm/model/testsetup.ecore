@@ -3,12 +3,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="testsetup" nsURI="http://srg.aut.uah.es/micobs/svm/testsetup"
     nsPrefix="micobs.svm">
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupDocument" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DDocumentTemplate">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="issue" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="revision" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="date" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcsTbdsSection" eType="#//VTestSetupTBCsTBDs"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocumentsSection"
         lowerBound="1" eType="#//VTestSetupApplicableDocuments" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocumentsSection"
@@ -21,6 +17,12 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
         eType="#//VTestSetupScenariosSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupTBCsTBDs" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcs" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBC"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbds" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBD"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupApplicableDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"

@@ -14,6 +14,7 @@ VSSSDocument returns VSSSDocument:
 		'revision=' revision=UINT_STRING
 		'date=' date=STRING
 		'>'
+		(tbcsTbdsSection=VSSTBCsTBDs)?
 		introductionSection=VSSSIntroduction
 		applicableDocumentsSection=VSSSApplicableDocuments
 		referenceDocumentsSection=VSSSReferenceDocuments
@@ -23,6 +24,25 @@ VSSSDocument returns VSSSDocument:
 		verificationValidationIntegrationSection=VSSSVerificationValidationIntegrationRequirements
 		systemModelsSection=VSSSSystemModels
 	'</SSS>';
+
+VSSTBCsTBDs returns VSSSTBCsTBDs:
+	{VSSSTBCsTBDs}
+	'<TBCsTBDs>'
+		(tbcs+=DTBC)*
+		(tbds+=DTBD)*
+	'</TBCsTBDs>';
+
+DTBC returns doctpl::DTBC:
+	'<TBC'
+		'name=' name=STRING
+		'description=' description=STRING
+	'/>';
+
+DTBD returns doctpl::DTBD:
+	'<TBD'
+		'name=' name=STRING
+		'description=' description=STRING
+	'/>';
 
 DBody returns doctpl::DBody:
 	'<body>'
@@ -95,9 +115,7 @@ DRun returns doctpl::DRun:
 DHyperlink returns doctpl::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doctpl::DReferenceableObject|STRING]
-	'>'
-		(run=DRun)?
-	'</hyperlink>';
+	(('>' (run=DRun) '</hyperlink>') | ('/>'));
 	
 DText returns doctpl::DText:
 	content=RUNTEXT;
@@ -168,6 +186,7 @@ DApplicableDocument returns doctpl::DApplicableDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 DReferenceDocument returns doctpl::DReferenceDocument:
@@ -178,6 +197,7 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 VSSSFixedSection returns VSSSFixedSection:

@@ -54,29 +54,31 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cDateAssignment_10 = (Assignment)cGroup.eContents().get(10);
 		private final RuleCall cDateSTRINGTerminalRuleCall_10_0 = (RuleCall)cDateAssignment_10.eContents().get(0);
 		private final Keyword cGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
-		private final Assignment cApplicableDocumentsSectionAssignment_12 = (Assignment)cGroup.eContents().get(12);
-		private final RuleCall cApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_12_0 = (RuleCall)cApplicableDocumentsSectionAssignment_12.eContents().get(0);
-		private final Assignment cReferenceDocumentsSectionAssignment_13 = (Assignment)cGroup.eContents().get(13);
-		private final RuleCall cReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_13_0 = (RuleCall)cReferenceDocumentsSectionAssignment_13.eContents().get(0);
-		private final Keyword cInterfacesKeyword_14 = (Keyword)cGroup.eContents().get(14);
-		private final Assignment cInterfacesAssignment_15 = (Assignment)cGroup.eContents().get(15);
-		private final RuleCall cInterfacesVTestSetupInterfacesSectionParserRuleCall_15_0 = (RuleCall)cInterfacesAssignment_15.eContents().get(0);
-		private final Keyword cInterfacesKeyword_16 = (Keyword)cGroup.eContents().get(16);
-		private final Group cGroup_17 = (Group)cGroup.eContents().get(17);
-		private final Keyword cPacketConfigurationsKeyword_17_0 = (Keyword)cGroup_17.eContents().get(0);
-		private final Assignment cConfigurationsAssignment_17_1 = (Assignment)cGroup_17.eContents().get(1);
-		private final RuleCall cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_17_1_0 = (RuleCall)cConfigurationsAssignment_17_1.eContents().get(0);
-		private final Keyword cPacketConfigurationsKeyword_17_2 = (Keyword)cGroup_17.eContents().get(2);
+		private final Assignment cTbcsTbdsSectionAssignment_12 = (Assignment)cGroup.eContents().get(12);
+		private final RuleCall cTbcsTbdsSectionVTestSetupTBCsTBDsParserRuleCall_12_0 = (RuleCall)cTbcsTbdsSectionAssignment_12.eContents().get(0);
+		private final Assignment cApplicableDocumentsSectionAssignment_13 = (Assignment)cGroup.eContents().get(13);
+		private final RuleCall cApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_13_0 = (RuleCall)cApplicableDocumentsSectionAssignment_13.eContents().get(0);
+		private final Assignment cReferenceDocumentsSectionAssignment_14 = (Assignment)cGroup.eContents().get(14);
+		private final RuleCall cReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_14_0 = (RuleCall)cReferenceDocumentsSectionAssignment_14.eContents().get(0);
+		private final Keyword cInterfacesKeyword_15 = (Keyword)cGroup.eContents().get(15);
+		private final Assignment cInterfacesAssignment_16 = (Assignment)cGroup.eContents().get(16);
+		private final RuleCall cInterfacesVTestSetupInterfacesSectionParserRuleCall_16_0 = (RuleCall)cInterfacesAssignment_16.eContents().get(0);
+		private final Keyword cInterfacesKeyword_17 = (Keyword)cGroup.eContents().get(17);
 		private final Group cGroup_18 = (Group)cGroup.eContents().get(18);
-		private final Keyword cActionsKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
-		private final Assignment cActionsAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
-		private final RuleCall cActionsVTestSetupActionsSectionParserRuleCall_18_1_0 = (RuleCall)cActionsAssignment_18_1.eContents().get(0);
-		private final Keyword cActionsKeyword_18_2 = (Keyword)cGroup_18.eContents().get(2);
-		private final Keyword cScenariosKeyword_19 = (Keyword)cGroup.eContents().get(19);
-		private final Assignment cScenariosAssignment_20 = (Assignment)cGroup.eContents().get(20);
-		private final RuleCall cScenariosVTestSetupScenariosSectionParserRuleCall_20_0 = (RuleCall)cScenariosAssignment_20.eContents().get(0);
-		private final Keyword cScenariosKeyword_21 = (Keyword)cGroup.eContents().get(21);
-		private final Keyword cTestSetupKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cPacketConfigurationsKeyword_18_0 = (Keyword)cGroup_18.eContents().get(0);
+		private final Assignment cConfigurationsAssignment_18_1 = (Assignment)cGroup_18.eContents().get(1);
+		private final RuleCall cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_18_1_0 = (RuleCall)cConfigurationsAssignment_18_1.eContents().get(0);
+		private final Keyword cPacketConfigurationsKeyword_18_2 = (Keyword)cGroup_18.eContents().get(2);
+		private final Group cGroup_19 = (Group)cGroup.eContents().get(19);
+		private final Keyword cActionsKeyword_19_0 = (Keyword)cGroup_19.eContents().get(0);
+		private final Assignment cActionsAssignment_19_1 = (Assignment)cGroup_19.eContents().get(1);
+		private final RuleCall cActionsVTestSetupActionsSectionParserRuleCall_19_1_0 = (RuleCall)cActionsAssignment_19_1.eContents().get(0);
+		private final Keyword cActionsKeyword_19_2 = (Keyword)cGroup_19.eContents().get(2);
+		private final Keyword cScenariosKeyword_20 = (Keyword)cGroup.eContents().get(20);
+		private final Assignment cScenariosAssignment_21 = (Assignment)cGroup.eContents().get(21);
+		private final RuleCall cScenariosVTestSetupScenariosSectionParserRuleCall_21_0 = (RuleCall)cScenariosAssignment_21.eContents().get(0);
+		private final Keyword cScenariosKeyword_22 = (Keyword)cGroup.eContents().get(22);
+		private final Keyword cTestSetupKeyword_23 = (Keyword)cGroup.eContents().get(23);
 		
 		//VTestSetupDocument:
 		//	'<TestSetup'
@@ -86,6 +88,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//	'revision=' revision=UINT_STRING
 		//	'date=' date=STRING
 		//	'>'
+		//	tbcsTbdsSection=VTestSetupTBCsTBDs?
 		//	applicableDocumentsSection=VTestSetupApplicableDocuments
 		//	referenceDocumentsSection=VTestSetupReferenceDocuments
 		//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
@@ -96,7 +99,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<TestSetup' 'name=' name=STRING 'id=' id=STRING 'issue=' issue=UINT_STRING 'revision=' revision=UINT_STRING 'date='
-		//date=STRING '>' applicableDocumentsSection=VTestSetupApplicableDocuments
+		//date=STRING '>' tbcsTbdsSection=VTestSetupTBCsTBDs? applicableDocumentsSection=VTestSetupApplicableDocuments
 		//referenceDocumentsSection=VTestSetupReferenceDocuments '<Interfaces>' interfaces=VTestSetupInterfacesSection
 		//'</Interfaces>' ('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection
 		//'</PacketConfigurations>')? ('<Actions>' actions=VTestSetupActionsSection '</Actions>')? '<Scenarios>'
@@ -154,74 +157,215 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_11() { return cGreaterThanSignKeyword_11; }
 		
+		//tbcsTbdsSection=VTestSetupTBCsTBDs?
+		public Assignment getTbcsTbdsSectionAssignment_12() { return cTbcsTbdsSectionAssignment_12; }
+		
+		//VTestSetupTBCsTBDs
+		public RuleCall getTbcsTbdsSectionVTestSetupTBCsTBDsParserRuleCall_12_0() { return cTbcsTbdsSectionVTestSetupTBCsTBDsParserRuleCall_12_0; }
+		
 		//applicableDocumentsSection=VTestSetupApplicableDocuments
-		public Assignment getApplicableDocumentsSectionAssignment_12() { return cApplicableDocumentsSectionAssignment_12; }
+		public Assignment getApplicableDocumentsSectionAssignment_13() { return cApplicableDocumentsSectionAssignment_13; }
 		
 		//VTestSetupApplicableDocuments
-		public RuleCall getApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_12_0() { return cApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_12_0; }
+		public RuleCall getApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_13_0() { return cApplicableDocumentsSectionVTestSetupApplicableDocumentsParserRuleCall_13_0; }
 		
 		//referenceDocumentsSection=VTestSetupReferenceDocuments
-		public Assignment getReferenceDocumentsSectionAssignment_13() { return cReferenceDocumentsSectionAssignment_13; }
+		public Assignment getReferenceDocumentsSectionAssignment_14() { return cReferenceDocumentsSectionAssignment_14; }
 		
 		//VTestSetupReferenceDocuments
-		public RuleCall getReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_13_0() { return cReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_13_0; }
+		public RuleCall getReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_14_0() { return cReferenceDocumentsSectionVTestSetupReferenceDocumentsParserRuleCall_14_0; }
 		
 		//'<Interfaces>'
-		public Keyword getInterfacesKeyword_14() { return cInterfacesKeyword_14; }
+		public Keyword getInterfacesKeyword_15() { return cInterfacesKeyword_15; }
 		
 		//interfaces=VTestSetupInterfacesSection
-		public Assignment getInterfacesAssignment_15() { return cInterfacesAssignment_15; }
+		public Assignment getInterfacesAssignment_16() { return cInterfacesAssignment_16; }
 		
 		//VTestSetupInterfacesSection
-		public RuleCall getInterfacesVTestSetupInterfacesSectionParserRuleCall_15_0() { return cInterfacesVTestSetupInterfacesSectionParserRuleCall_15_0; }
+		public RuleCall getInterfacesVTestSetupInterfacesSectionParserRuleCall_16_0() { return cInterfacesVTestSetupInterfacesSectionParserRuleCall_16_0; }
 		
 		//'</Interfaces>'
-		public Keyword getInterfacesKeyword_16() { return cInterfacesKeyword_16; }
+		public Keyword getInterfacesKeyword_17() { return cInterfacesKeyword_17; }
 		
 		//('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')?
-		public Group getGroup_17() { return cGroup_17; }
-		
-		//'<PacketConfigurations>'
-		public Keyword getPacketConfigurationsKeyword_17_0() { return cPacketConfigurationsKeyword_17_0; }
-		
-		//configurations=VTestSetupPacketConfigurationsSection
-		public Assignment getConfigurationsAssignment_17_1() { return cConfigurationsAssignment_17_1; }
-		
-		//VTestSetupPacketConfigurationsSection
-		public RuleCall getConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_17_1_0() { return cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_17_1_0; }
-		
-		//'</PacketConfigurations>'
-		public Keyword getPacketConfigurationsKeyword_17_2() { return cPacketConfigurationsKeyword_17_2; }
-		
-		//('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
 		public Group getGroup_18() { return cGroup_18; }
 		
+		//'<PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_18_0() { return cPacketConfigurationsKeyword_18_0; }
+		
+		//configurations=VTestSetupPacketConfigurationsSection
+		public Assignment getConfigurationsAssignment_18_1() { return cConfigurationsAssignment_18_1; }
+		
+		//VTestSetupPacketConfigurationsSection
+		public RuleCall getConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_18_1_0() { return cConfigurationsVTestSetupPacketConfigurationsSectionParserRuleCall_18_1_0; }
+		
+		//'</PacketConfigurations>'
+		public Keyword getPacketConfigurationsKeyword_18_2() { return cPacketConfigurationsKeyword_18_2; }
+		
+		//('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
+		public Group getGroup_19() { return cGroup_19; }
+		
 		//'<Actions>'
-		public Keyword getActionsKeyword_18_0() { return cActionsKeyword_18_0; }
+		public Keyword getActionsKeyword_19_0() { return cActionsKeyword_19_0; }
 		
 		//actions=VTestSetupActionsSection
-		public Assignment getActionsAssignment_18_1() { return cActionsAssignment_18_1; }
+		public Assignment getActionsAssignment_19_1() { return cActionsAssignment_19_1; }
 		
 		//VTestSetupActionsSection
-		public RuleCall getActionsVTestSetupActionsSectionParserRuleCall_18_1_0() { return cActionsVTestSetupActionsSectionParserRuleCall_18_1_0; }
+		public RuleCall getActionsVTestSetupActionsSectionParserRuleCall_19_1_0() { return cActionsVTestSetupActionsSectionParserRuleCall_19_1_0; }
 		
 		//'</Actions>'
-		public Keyword getActionsKeyword_18_2() { return cActionsKeyword_18_2; }
+		public Keyword getActionsKeyword_19_2() { return cActionsKeyword_19_2; }
 		
 		//'<Scenarios>'
-		public Keyword getScenariosKeyword_19() { return cScenariosKeyword_19; }
+		public Keyword getScenariosKeyword_20() { return cScenariosKeyword_20; }
 		
 		//scenarios=VTestSetupScenariosSection
-		public Assignment getScenariosAssignment_20() { return cScenariosAssignment_20; }
+		public Assignment getScenariosAssignment_21() { return cScenariosAssignment_21; }
 		
 		//VTestSetupScenariosSection
-		public RuleCall getScenariosVTestSetupScenariosSectionParserRuleCall_20_0() { return cScenariosVTestSetupScenariosSectionParserRuleCall_20_0; }
+		public RuleCall getScenariosVTestSetupScenariosSectionParserRuleCall_21_0() { return cScenariosVTestSetupScenariosSectionParserRuleCall_21_0; }
 		
 		//'</Scenarios>'
-		public Keyword getScenariosKeyword_21() { return cScenariosKeyword_21; }
+		public Keyword getScenariosKeyword_22() { return cScenariosKeyword_22; }
 		
 		//'</TestSetup>'
-		public Keyword getTestSetupKeyword_22() { return cTestSetupKeyword_22; }
+		public Keyword getTestSetupKeyword_23() { return cTestSetupKeyword_23; }
+	}
+	public class VTestSetupTBCsTBDsElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupTBCsTBDs");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVTestSetupTBCsTBDsAction_0 = (Action)cGroup.eContents().get(0);
+		private final Keyword cTBCsTBDsKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cTbcsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTbcsDTBCParserRuleCall_2_0 = (RuleCall)cTbcsAssignment_2.eContents().get(0);
+		private final Assignment cTbdsAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTbdsDTBDParserRuleCall_3_0 = (RuleCall)cTbdsAssignment_3.eContents().get(0);
+		private final Keyword cTBCsTBDsKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//VTestSetupTBCsTBDs:
+		//	{VTestSetupTBCsTBDs}
+		//	'<TBCsTBDs>'
+		//	tbcs+=DTBC*
+		//	tbds+=DTBD*
+		//	'</TBCsTBDs>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VTestSetupTBCsTBDs} '<TBCsTBDs>' tbcs+=DTBC* tbds+=DTBD* '</TBCsTBDs>'
+		public Group getGroup() { return cGroup; }
+		
+		//{VTestSetupTBCsTBDs}
+		public Action getVTestSetupTBCsTBDsAction_0() { return cVTestSetupTBCsTBDsAction_0; }
+		
+		//'<TBCsTBDs>'
+		public Keyword getTBCsTBDsKeyword_1() { return cTBCsTBDsKeyword_1; }
+		
+		//tbcs+=DTBC*
+		public Assignment getTbcsAssignment_2() { return cTbcsAssignment_2; }
+		
+		//DTBC
+		public RuleCall getTbcsDTBCParserRuleCall_2_0() { return cTbcsDTBCParserRuleCall_2_0; }
+		
+		//tbds+=DTBD*
+		public Assignment getTbdsAssignment_3() { return cTbdsAssignment_3; }
+		
+		//DTBD
+		public RuleCall getTbdsDTBDParserRuleCall_3_0() { return cTbdsDTBDParserRuleCall_3_0; }
+		
+		//'</TBCsTBDs>'
+		public Keyword getTBCsTBDsKeyword_4() { return cTBCsTBDsKeyword_4; }
+	}
+	public class DTBCElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DTBC");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTBCKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cDescriptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//DTBC doctpl::DTBC:
+		//	'<TBC'
+		//	'name=' name=STRING
+		//	'description=' description=STRING
+		//	'/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TBC' 'name=' name=STRING 'description=' description=STRING '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<TBC'
+		public Keyword getTBCKeyword_0() { return cTBCKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'description='
+		public Keyword getDescriptionKeyword_3() { return cDescriptionKeyword_3; }
+		
+		//description=STRING
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
+		
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
+	}
+	public class DTBDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DTBD");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cTBDKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cDescriptionKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionSTRINGTerminalRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//DTBD doctpl::DTBD:
+		//	'<TBD'
+		//	'name=' name=STRING
+		//	'description=' description=STRING
+		//	'/>'
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<TBD' 'name=' name=STRING 'description=' description=STRING '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<TBD'
+		public Keyword getTBDKeyword_0() { return cTBDKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'description='
+		public Keyword getDescriptionKeyword_3() { return cDescriptionKeyword_3; }
+		
+		//description=STRING
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
+		
+		//STRING
+		public RuleCall getDescriptionSTRINGTerminalRuleCall_4_0() { return cDescriptionSTRINGTerminalRuleCall_4_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_5() { return cSolidusGreaterThanSignKeyword_5; }
 	}
 	public class VTestSetupApplicableDocumentsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupApplicableDocuments");
@@ -317,18 +461,23 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
 		private final RuleCall cDateSTRINGTerminalRuleCall_8_1_0 = (RuleCall)cDateAssignment_8_1.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cUrlKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cUrlAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cUrlSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cUrlAssignment_9_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//DApplicableDocument doctpl::DApplicableDocument:
 		//	'<ApplicableDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)? ('url='
+		//	url=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<ApplicableDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
-		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? ('url=' url=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ApplicableDocument'
@@ -397,8 +546,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDateSTRINGTerminalRuleCall_8_1_0() { return cDateSTRINGTerminalRuleCall_8_1_0; }
 		
+		//('url=' url=STRING)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'url='
+		public Keyword getUrlKeyword_9_0() { return cUrlKeyword_9_0; }
+		
+		//url=STRING
+		public Assignment getUrlAssignment_9_1() { return cUrlAssignment_9_1; }
+		
+		//STRING
+		public RuleCall getUrlSTRINGTerminalRuleCall_9_1_0() { return cUrlSTRINGTerminalRuleCall_9_1_0; }
+		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
+		public Keyword getSolidusGreaterThanSignKeyword_10() { return cSolidusGreaterThanSignKeyword_10; }
 	}
 	public class DReferenceDocumentElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DReferenceDocument");
@@ -425,18 +586,23 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cDateKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Assignment cDateAssignment_8_1 = (Assignment)cGroup_8.eContents().get(1);
 		private final RuleCall cDateSTRINGTerminalRuleCall_8_1_0 = (RuleCall)cDateAssignment_8_1.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
+		private final Keyword cUrlKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Assignment cUrlAssignment_9_1 = (Assignment)cGroup_9.eContents().get(1);
+		private final RuleCall cUrlSTRINGTerminalRuleCall_9_1_0 = (RuleCall)cUrlAssignment_9_1.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//DReferenceDocument doctpl::DReferenceDocument:
 		//	'<ReferenceDocument'
 		//	'name=' name=STRING
 		//	'title=' title=STRING
-		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
+		//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)? ('url='
+		//	url=STRING)?
 		//	'/>'
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<ReferenceDocument' 'name=' name=STRING 'title=' title=STRING 'id=' id=STRING ('issue=' issue=UINT_STRING ('revision='
-		//revision=UINT_STRING)?)? ('date=' date=STRING)? '/>'
+		//revision=UINT_STRING)?)? ('date=' date=STRING)? ('url=' url=STRING)? '/>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<ReferenceDocument'
@@ -505,8 +671,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDateSTRINGTerminalRuleCall_8_1_0() { return cDateSTRINGTerminalRuleCall_8_1_0; }
 		
+		//('url=' url=STRING)?
+		public Group getGroup_9() { return cGroup_9; }
+		
+		//'url='
+		public Keyword getUrlKeyword_9_0() { return cUrlKeyword_9_0; }
+		
+		//url=STRING
+		public Assignment getUrlAssignment_9_1() { return cUrlAssignment_9_1; }
+		
+		//STRING
+		public RuleCall getUrlSTRINGTerminalRuleCall_9_1_0() { return cUrlSTRINGTerminalRuleCall_9_1_0; }
+		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_9() { return cSolidusGreaterThanSignKeyword_9; }
+		public Keyword getSolidusGreaterThanSignKeyword_10() { return cSolidusGreaterThanSignKeyword_10; }
 	}
 	public class VTestSetupInterfacesSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupInterfacesSection");
@@ -1621,20 +1799,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cReferenceAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final CrossReference cReferenceDReferenceableObjectCrossReference_2_0 = (CrossReference)cReferenceAssignment_2.eContents().get(0);
 		private final RuleCall cReferenceDReferenceableObjectSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cReferenceDReferenceableObjectCrossReference_2_0.eContents().get(1);
-		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cRunAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cRunDRunParserRuleCall_4_0 = (RuleCall)cRunAssignment_4.eContents().get(0);
-		private final Keyword cHyperlinkKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_3_0_0 = (Keyword)cGroup_3_0.eContents().get(0);
+		private final Assignment cRunAssignment_3_0_1 = (Assignment)cGroup_3_0.eContents().get(1);
+		private final RuleCall cRunDRunParserRuleCall_3_0_1_0 = (RuleCall)cRunAssignment_3_0_1.eContents().get(0);
+		private final Keyword cHyperlinkKeyword_3_0_2 = (Keyword)cGroup_3_0.eContents().get(2);
+		private final Keyword cSolidusGreaterThanSignKeyword_3_1 = (Keyword)cAlternatives_3.eContents().get(1);
 		
 		//DHyperlink doctpl::DHyperlink:
 		//	'<hyperlink'
-		//	'reference=' reference=[doctpl::DReferenceableObject|STRING]
-		//	'>'
-		//	run=DRun?
-		//	'</hyperlink>'
+		//	'reference=' reference=[doctpl::DReferenceableObject|STRING] ('>' run=DRun '</hyperlink>' | '/>')
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<hyperlink' 'reference=' reference=[doctpl::DReferenceableObject|STRING] '>' run=DRun? '</hyperlink>'
+		//'<hyperlink' 'reference=' reference=[doctpl::DReferenceableObject|STRING] ('>' run=DRun '</hyperlink>' | '/>')
 		public Group getGroup() { return cGroup; }
 		
 		//'<hyperlink'
@@ -1652,17 +1830,26 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getReferenceDReferenceableObjectSTRINGTerminalRuleCall_2_0_1() { return cReferenceDReferenceableObjectSTRINGTerminalRuleCall_2_0_1; }
 		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
+		//('>' run=DRun '</hyperlink>' | '/>')
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 		
-		//run=DRun?
-		public Assignment getRunAssignment_4() { return cRunAssignment_4; }
+		//'>' run=DRun '</hyperlink>'
+		public Group getGroup_3_0() { return cGroup_3_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_3_0_0() { return cGreaterThanSignKeyword_3_0_0; }
+		
+		//run=DRun
+		public Assignment getRunAssignment_3_0_1() { return cRunAssignment_3_0_1; }
 		
 		//DRun
-		public RuleCall getRunDRunParserRuleCall_4_0() { return cRunDRunParserRuleCall_4_0; }
+		public RuleCall getRunDRunParserRuleCall_3_0_1_0() { return cRunDRunParserRuleCall_3_0_1_0; }
 		
 		//'</hyperlink>'
-		public Keyword getHyperlinkKeyword_5() { return cHyperlinkKeyword_5; }
+		public Keyword getHyperlinkKeyword_3_0_2() { return cHyperlinkKeyword_3_0_2; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_3_1() { return cSolidusGreaterThanSignKeyword_3_1; }
 	}
 	public class DTabElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DTab");
@@ -2362,6 +2549,9 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final VTestSetupDocumentElements pVTestSetupDocument;
+	private final VTestSetupTBCsTBDsElements pVTestSetupTBCsTBDs;
+	private final DTBCElements pDTBC;
+	private final DTBDElements pDTBD;
 	private final VTestSetupApplicableDocumentsElements pVTestSetupApplicableDocuments;
 	private final VTestSetupReferenceDocumentsElements pVTestSetupReferenceDocuments;
 	private final DApplicableDocumentElements pDApplicableDocument;
@@ -2411,6 +2601,9 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pVTestSetupDocument = new VTestSetupDocumentElements();
+		this.pVTestSetupTBCsTBDs = new VTestSetupTBCsTBDsElements();
+		this.pDTBC = new DTBCElements();
+		this.pDTBD = new DTBDElements();
 		this.pVTestSetupApplicableDocuments = new VTestSetupApplicableDocumentsElements();
 		this.pVTestSetupReferenceDocuments = new VTestSetupReferenceDocumentsElements();
 		this.pDApplicableDocument = new DApplicableDocumentElements();
@@ -2486,6 +2679,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//	'revision=' revision=UINT_STRING
 	//	'date=' date=STRING
 	//	'>'
+	//	tbcsTbdsSection=VTestSetupTBCsTBDs?
 	//	applicableDocumentsSection=VTestSetupApplicableDocuments
 	//	referenceDocumentsSection=VTestSetupReferenceDocuments
 	//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
@@ -2499,6 +2693,46 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVTestSetupDocumentRule() {
 		return getVTestSetupDocumentAccess().getRule();
+	}
+	
+	//VTestSetupTBCsTBDs:
+	//	{VTestSetupTBCsTBDs}
+	//	'<TBCsTBDs>'
+	//	tbcs+=DTBC*
+	//	tbds+=DTBD*
+	//	'</TBCsTBDs>';
+	public VTestSetupTBCsTBDsElements getVTestSetupTBCsTBDsAccess() {
+		return pVTestSetupTBCsTBDs;
+	}
+	
+	public ParserRule getVTestSetupTBCsTBDsRule() {
+		return getVTestSetupTBCsTBDsAccess().getRule();
+	}
+	
+	//DTBC doctpl::DTBC:
+	//	'<TBC'
+	//	'name=' name=STRING
+	//	'description=' description=STRING
+	//	'/>'
+	public DTBCElements getDTBCAccess() {
+		return pDTBC;
+	}
+	
+	public ParserRule getDTBCRule() {
+		return getDTBCAccess().getRule();
+	}
+	
+	//DTBD doctpl::DTBD:
+	//	'<TBD'
+	//	'name=' name=STRING
+	//	'description=' description=STRING
+	//	'/>'
+	public DTBDElements getDTBDAccess() {
+		return pDTBD;
+	}
+	
+	public ParserRule getDTBDRule() {
+		return getDTBDAccess().getRule();
 	}
 	
 	//VTestSetupApplicableDocuments:
@@ -2531,7 +2765,8 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ApplicableDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)? ('url='
+	//	url=STRING)?
 	//	'/>'
 	public DApplicableDocumentElements getDApplicableDocumentAccess() {
 		return pDApplicableDocument;
@@ -2545,7 +2780,8 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<ReferenceDocument'
 	//	'name=' name=STRING
 	//	'title=' title=STRING
-	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)?
+	//	'id=' id=STRING ('issue=' issue=UINT_STRING ('revision=' revision=UINT_STRING)?)? ('date=' date=STRING)? ('url='
+	//	url=STRING)?
 	//	'/>'
 	public DReferenceDocumentElements getDReferenceDocumentAccess() {
 		return pDReferenceDocument;
@@ -2841,10 +3077,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//DHyperlink doctpl::DHyperlink:
 	//	'<hyperlink'
-	//	'reference=' reference=[doctpl::DReferenceableObject|STRING]
-	//	'>'
-	//	run=DRun?
-	//	'</hyperlink>'
+	//	'reference=' reference=[doctpl::DReferenceableObject|STRING] ('>' run=DRun '</hyperlink>' | '/>')
 	public DHyperlinkElements getDHyperlinkAccess() {
 		return pDHyperlink;
 	}

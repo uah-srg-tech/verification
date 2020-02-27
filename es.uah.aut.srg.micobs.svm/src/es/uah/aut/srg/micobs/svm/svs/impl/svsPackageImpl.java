@@ -44,6 +44,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySetCheckmode;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTerm;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
@@ -89,6 +90,13 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * @generated
 	 */
 	private EClass vsvsDocumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vsvstbCsTBDsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -472,7 +480,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_IntroductionSection() {
+	public EReference getVSVSDocument_TbcsTbdsSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -481,7 +489,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_ApplicableDocumentsSection() {
+	public EReference getVSVSDocument_IntroductionSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -490,7 +498,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_ReferenceDocumentsSection() {
+	public EReference getVSVSDocument_ApplicableDocumentsSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -499,7 +507,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TermsDefinitionsAbbreviationsSection() {
+	public EReference getVSVSDocument_ReferenceDocumentsSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -508,7 +516,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_SoftwareOverviewSection() {
+	public EReference getVSVSDocument_TermsDefinitionsAbbreviationsSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -517,7 +525,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TaskIdentificationSection() {
+	public EReference getVSVSDocument_SoftwareOverviewSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -526,7 +534,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TestingSpecificationDesignSection() {
+	public EReference getVSVSDocument_TaskIdentificationSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -535,7 +543,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TestCasesSection() {
+	public EReference getVSVSDocument_TestingSpecificationDesignSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -544,7 +552,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TestProceduresSection() {
+	public EReference getVSVSDocument_TestCasesSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -553,7 +561,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_AnalysisInspectionReviewSection() {
+	public EReference getVSVSDocument_TestProceduresSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -562,7 +570,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_TestPlatformRequirementsSection() {
+	public EReference getVSVSDocument_AnalysisInspectionReviewSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -571,8 +579,44 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSDocument_AdditionalInformationSection() {
+	public EReference getVSVSDocument_TestPlatformRequirementsSection() {
 		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSDocument_AdditionalInformationSection() {
+		return (EReference)vsvsDocumentEClass.getEStructuralFeatures().get(12);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVSVSTBCsTBDs() {
+		return vsvstbCsTBDsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSTBCsTBDs_Tbcs() {
+		return (EReference)vsvstbCsTBDsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSTBCsTBDs_Tbds() {
+		return (EReference)vsvstbCsTBDsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1801,6 +1845,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Create classes and their features
 		vsvsDocumentEClass = createEClass(VSVS_DOCUMENT);
+		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__TBCS_TBDS_SECTION);
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__INTRODUCTION_SECTION);
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION);
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION);
@@ -1813,6 +1858,10 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__ANALYSIS_INSPECTION_REVIEW_SECTION);
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__TEST_PLATFORM_REQUIREMENTS_SECTION);
 		createEReference(vsvsDocumentEClass, VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION);
+
+		vsvstbCsTBDsEClass = createEClass(VSVSTB_CS_TB_DS);
+		createEReference(vsvstbCsTBDsEClass, VSVSTB_CS_TB_DS__TBCS);
+		createEReference(vsvstbCsTBDsEClass, VSVSTB_CS_TB_DS__TBDS);
 
 		vsvsInstantiableSectionEClass = createEClass(VSVS_INSTANTIABLE_SECTION);
 		createEReference(vsvsInstantiableSectionEClass, VSVS_INSTANTIABLE_SECTION__BODY);
@@ -2033,6 +2082,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		// Add supertypes to classes
 		vsvsDocumentEClass.getESuperTypes().add(thevdmPackage.getVValidationDocument());
 		vsvsDocumentEClass.getESuperTypes().add(thedoctplPackage.getDDocumentTemplate());
+		vsvstbCsTBDsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsInstantiableSectionEClass.getESuperTypes().add(thedoctplPackage.getDInstantiableSection());
 		vsvsIntroductionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvsApplicableDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
@@ -2062,6 +2112,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsvsDocumentEClass, VSVSDocument.class, "VSVSDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSDocument_TbcsTbdsSection(), this.getVSVSTBCsTBDs(), null, "tbcsTbdsSection", null, 0, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_IntroductionSection(), this.getVSVSIntroduction(), null, "introductionSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_ApplicableDocumentsSection(), this.getVSVSApplicableDocuments(), null, "applicableDocumentsSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_ReferenceDocumentsSection(), this.getVSVSReferenceDocuments(), null, "referenceDocumentsSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2074,6 +2125,10 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSDocument_AnalysisInspectionReviewSection(), this.getVSVSAnalysisInspectionReview(), null, "analysisInspectionReviewSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_TestPlatformRequirementsSection(), this.getVSVSTestPlatformRequirements(), null, "testPlatformRequirementsSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSDocument_AdditionalInformationSection(), this.getVSVSAdditionalInformation(), null, "additionalInformationSection", null, 1, 1, VSVSDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vsvstbCsTBDsEClass, VSVSTBCsTBDs.class, "VSVSTBCsTBDs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVSVSTBCsTBDs_Tbcs(), thedoctplPackage.getDTBC(), null, "tbcs", null, 0, -1, VSVSTBCsTBDs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTBCsTBDs_Tbds(), thedoctplPackage.getDTBD(), null, "tbds", null, 0, -1, VSVSTBCsTBDs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsInstantiableSectionEClass, VSVSInstantiableSection.class, "VSVSInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSInstantiableSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSVSInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

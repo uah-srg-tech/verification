@@ -24,6 +24,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
@@ -56,6 +58,7 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSSystemInterfaceRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModel;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemModels;
 import es.uah.aut.srg.micobs.svm.sss.VSSSSystemSoftwareObservabilityRequirements;
+import es.uah.aut.srg.micobs.svm.sss.VSSSTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.sss.VSSSTerm;
 import es.uah.aut.srg.micobs.svm.sss.VSSSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.sss.VSSSValidationApproach;
@@ -64,7 +67,6 @@ import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationIntegrationRequirements;
 import es.uah.aut.srg.micobs.svm.sss.VSSSVerificationValidationProcessRequirements;
 import es.uah.aut.srg.micobs.svm.sss.sssPackage;
-import es.uah.aut.srg.micobs.svm.tdm.tdmPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
@@ -128,6 +130,12 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
+				return; 
+			case doctplPackage.DTBC:
+				sequence_DTBC(context, (DTBC) semanticObject); 
+				return; 
+			case doctplPackage.DTBD:
+				sequence_DTBD(context, (DTBD) semanticObject); 
 				return; 
 			case doctplPackage.DTAB:
 				sequence_DTab(context, (DTab) semanticObject); 
@@ -222,6 +230,9 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case sssPackage.VSSS_SYSTEM_SOFTWARE_OBSERVABILITY_REQUIREMENTS:
 				sequence_VSSSSystemSoftwareObservabilityRequirements(context, (VSSSSystemSoftwareObservabilityRequirements) semanticObject); 
 				return; 
+			case sssPackage.VSSSTB_CS_TB_DS:
+				sequence_VSSTBCsTBDs(context, (VSSSTBCsTBDs) semanticObject); 
+				return; 
 			case sssPackage.VSSS_TERM:
 				sequence_VSSSTerm(context, (VSSSTerm) semanticObject); 
 				return; 
@@ -253,7 +264,14 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -398,7 +416,14 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -434,6 +459,48 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBC returns DTBC
+	 *
+	 * Constraint:
+	 *     (name=STRING description=STRING)
+	 */
+	protected void sequence_DTBC(ISerializationContext context, DTBC semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDTBCAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDTBCAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBD returns DTBD
+	 *
+	 * Constraint:
+	 *     (name=STRING description=STRING)
+	 */
+	protected void sequence_DTBD(ISerializationContext context, DTBD semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDTBDAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDTBDAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
+		feeder.finish();
 	}
 	
 	
@@ -614,6 +681,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         issue=UINT_STRING 
 	 *         revision=UINT_STRING 
 	 *         date=STRING 
+	 *         tbcsTbdsSection=VSSTBCsTBDs? 
 	 *         introductionSection=VSSSIntroduction 
 	 *         applicableDocumentsSection=VSSSApplicableDocuments 
 	 *         referenceDocumentsSection=VSSSReferenceDocuments 
@@ -625,49 +693,7 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_VSSSDocument(ISerializationContext context, VSSSDocument semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__NAME));
-			if (transientValues.isValueTransient(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__ID));
-			if (transientValues.isValueTransient(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__ISSUE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__ISSUE));
-			if (transientValues.isValueTransient(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__REVISION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__REVISION));
-			if (transientValues.isValueTransient(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__DATE) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tdmPackage.Literals.VTRACEABLE_DOCUMENT__DATE));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__INTRODUCTION_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__INTRODUCTION_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__GENERAL_DESCRIPTION_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__GENERAL_DESCRIPTION_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__SPECIFIC_REQUIREMENTS_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__VERIFICATION_VALIDATION_INTEGRATION_SECTION));
-			if (transientValues.isValueTransient(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, sssPackage.Literals.VSSS_DOCUMENT__SYSTEM_MODELS_SECTION));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIdSTRINGTerminalRuleCall_4_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIssueUINT_STRINGTerminalRuleCall_6_0(), semanticObject.getIssue());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0(), semanticObject.getRevision());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getDateSTRINGTerminalRuleCall_10_0(), semanticObject.getDate());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getIntroductionSectionVSSSIntroductionParserRuleCall_12_0(), semanticObject.getIntroductionSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getApplicableDocumentsSectionVSSSApplicableDocumentsParserRuleCall_13_0(), semanticObject.getApplicableDocumentsSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getReferenceDocumentsSectionVSSSReferenceDocumentsParserRuleCall_14_0(), semanticObject.getReferenceDocumentsSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSSSTermsDefinitionsAbbreviationsParserRuleCall_15_0(), semanticObject.getTermsDefinitionsAbbreviationsSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getGeneralDescriptionSectionVSSSGeneralDescriptionParserRuleCall_16_0(), semanticObject.getGeneralDescriptionSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getSpecificRequirementsSectionVSSSSpecificRequirementsParserRuleCall_17_0(), semanticObject.getSpecificRequirementsSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getVerificationValidationIntegrationSectionVSSSVerificationValidationIntegrationRequirementsParserRuleCall_18_0(), semanticObject.getVerificationValidationIntegrationSection());
-		feeder.accept(grammarAccess.getVSSSDocumentAccess().getSystemModelsSectionVSSSSystemModelsParserRuleCall_19_0(), semanticObject.getSystemModelsSection());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1021,6 +1047,18 @@ public class SSSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (sssItems+=VSSSDocumentItem* sssRequirementSubsections+=VSSSInstantiableRequirementSection*)
 	 */
 	protected void sequence_VSSSVerificationValidationProcessRequirements(ISerializationContext context, VSSSVerificationValidationProcessRequirements semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSSTBCsTBDs returns VSSSTBCsTBDs
+	 *
+	 * Constraint:
+	 *     (tbcs+=DTBC* tbds+=DTBD*)
+	 */
+	protected void sequence_VSSTBCsTBDs(ISerializationContext context, VSSSTBCsTBDs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

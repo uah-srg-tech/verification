@@ -2,6 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="sss" nsURI="http://srg.aut.uah.es/micobs/svm/sss" nsPrefix="micobs.svm">
   <eClassifiers xsi:type="ecore:EClass" name="VSSSDocument" eSuperTypes="tdm.ecore#//VTraceableDocument ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DDocumentTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcsTbdsSection" eType="#//VSSSTBCsTBDs"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="introductionSection" lowerBound="1"
         eType="#//VSSSIntroduction" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocumentsSection"
@@ -19,6 +21,12 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="systemModelsSection" lowerBound="1"
         eType="#//VSSSSystemModels" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSSSTBCsTBDs" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcs" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBC"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbds" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBD"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSSSIntroduction" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="sssInstatiableSubsections"

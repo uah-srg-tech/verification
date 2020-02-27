@@ -94,6 +94,14 @@ public class svsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case svsPackage.VSVSTB_CS_TB_DS: {
+				VSVSTBCsTBDs vsvstbCsTBDs = (VSVSTBCsTBDs)theEObject;
+				T result = caseVSVSTBCsTBDs(vsvstbCsTBDs);
+				if (result == null) result = caseDFixedSection(vsvstbCsTBDs);
+				if (result == null) result = caseDAbstractSection(vsvstbCsTBDs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case svsPackage.VSVS_INSTANTIABLE_SECTION: {
 				VSVSInstantiableSection vsvsInstantiableSection = (VSVSInstantiableSection)theEObject;
 				T result = caseVSVSInstantiableSection(vsvsInstantiableSection);
@@ -406,6 +414,21 @@ public class svsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVSDocument(VSVSDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSVSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSVSTB Cs TB Ds</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSVSTBCsTBDs(VSVSTBCsTBDs object) {
 		return null;
 	}
 

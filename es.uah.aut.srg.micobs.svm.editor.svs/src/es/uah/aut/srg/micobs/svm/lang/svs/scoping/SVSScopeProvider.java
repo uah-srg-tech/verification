@@ -24,7 +24,10 @@ import com.google.common.base.Function;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
@@ -428,6 +431,54 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(TMTCIFTMHeaderField from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_DTBC_parentTBC(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<DTBC> tbcs = new HashSet<DTBC>();
+		
+		for(VTraceableDocument docParent : svsDoc.getParents()) {
+			tbcs.addAll(((DDocumentTemplate)docParent).getTbcs());
+		}
+		tbcs.addAll(svsDoc.getTestingSpecificationDesignSection().getTestSetup().getTbcs());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(tbcs, new Function<DTBC, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(DTBC from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_DTBD_parentTBD(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<DTBD> tbds = new HashSet<DTBD>();
+		
+		for(VTraceableDocument docParent : svsDoc.getParents()) {
+			tbds.addAll(((DDocumentTemplate)docParent).getTbds());
+		}
+		tbds.addAll(svsDoc.getTestingSpecificationDesignSection().getTestSetup().getTbds());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(tbds, new Function<DTBD, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(DTBD from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

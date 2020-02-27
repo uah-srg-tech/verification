@@ -25,7 +25,10 @@ import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
 import com.google.common.collect.Iterables;
 
+import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.svm.srs.VSRSDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
@@ -122,11 +125,59 @@ public class SRSScopeProvider extends AbstractDeclarativeScopeProvider {
 		objects.addAll(srsDoc.getFigures());
 		objects.addAll(srsDoc.getTables());
 		objects.addAll(srsDoc.getParagraphs());
+		objects.addAll(srsDoc.getTbcs());
+		objects.addAll(srsDoc.getTbds());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(objects, new Function<DReferenceableObject, IEObjectDescription>(){
 	
 			@Override
 			public IEObjectDescription apply(DReferenceableObject from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_DTBC_parentTBC(VSRSDocument srsDoc, EReference reference) {
+		
+		Collection<DTBC> tbcs = new HashSet<DTBC>();
+		
+		for(VTraceableParentDocument docParent : srsDoc.getParents()) {
+			tbcs.addAll(((DDocumentTemplate)docParent.getDocument()).getTbcs());
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(tbcs, new Function<DTBC, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(DTBC from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_DTBD_parentTBD(VSRSDocument srsDoc, EReference reference) {
+		
+		Collection<DTBD> tbds = new HashSet<DTBD>();
+		
+		for(VTraceableParentDocument docParent : srsDoc.getParents()) {
+			tbds.addAll(((DDocumentTemplate)docParent.getDocument()).getTbds());
+		}
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(tbds, new Function<DTBD, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(DTBD from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

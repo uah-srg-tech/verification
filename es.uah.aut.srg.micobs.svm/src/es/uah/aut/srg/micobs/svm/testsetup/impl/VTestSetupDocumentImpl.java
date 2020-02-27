@@ -17,6 +17,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DApplicableDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl;
 
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection;
@@ -26,11 +28,13 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterfacesSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfigurationsSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -46,11 +50,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getName <em>Name</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getId <em>Id</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getIssue <em>Issue</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getRevision <em>Revision</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getInterfaces <em>Interfaces</em>}</li>
@@ -63,104 +63,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTestSetupDocument {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getTbcsTbdsSection() <em>Tbcs Tbds Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getTbcsTbdsSection()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getName()
-	 * @generated
-	 * @ordered
-	 */
-	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ID_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getId()
-	 * @generated
-	 * @ordered
-	 */
-	protected String id = ID_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getIssue() <em>Issue</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIssue()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String ISSUE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getIssue() <em>Issue</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getIssue()
-	 * @generated
-	 * @ordered
-	 */
-	protected String issue = ISSUE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getRevision() <em>Revision</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRevision()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String REVISION_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getRevision() <em>Revision</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getRevision()
-	 * @generated
-	 * @ordered
-	 */
-	protected String revision = REVISION_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String DATE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getDate()
-	 * @generated
-	 * @ordered
-	 */
-	protected String date = DATE_EDEFAULT;
+	protected VTestSetupTBCsTBDs tbcsTbdsSection;
 
 	/**
 	 * The cached value of the '{@link #getApplicableDocumentsSection() <em>Applicable Documents Section</em>}' containment reference.
@@ -246,8 +156,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public VTestSetupTBCsTBDs getTbcsTbdsSection() {
+		return tbcsTbdsSection;
 	}
 
 	/**
@@ -255,11 +165,14 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__NAME, oldName, name));
+	public NotificationChain basicSetTbcsTbdsSection(VTestSetupTBCsTBDs newTbcsTbdsSection, NotificationChain msgs) {
+		VTestSetupTBCsTBDs oldTbcsTbdsSection = tbcsTbdsSection;
+		tbcsTbdsSection = newTbcsTbdsSection;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION, oldTbcsTbdsSection, newTbcsTbdsSection);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -267,83 +180,18 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getId() {
-		return id;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setId(String newId) {
-		String oldId = id;
-		id = newId;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__ID, oldId, id));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getIssue() {
-		return issue;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setIssue(String newIssue) {
-		String oldIssue = issue;
-		issue = newIssue;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__ISSUE, oldIssue, issue));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getRevision() {
-		return revision;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setRevision(String newRevision) {
-		String oldRevision = revision;
-		revision = newRevision;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__REVISION, oldRevision, revision));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getDate() {
-		return date;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setDate(String newDate) {
-		String oldDate = date;
-		date = newDate;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__DATE, oldDate, date));
+	public void setTbcsTbdsSection(VTestSetupTBCsTBDs newTbcsTbdsSection) {
+		if (newTbcsTbdsSection != tbcsTbdsSection) {
+			NotificationChain msgs = null;
+			if (tbcsTbdsSection != null)
+				msgs = ((InternalEObject)tbcsTbdsSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION, null, msgs);
+			if (newTbcsTbdsSection != null)
+				msgs = ((InternalEObject)newTbcsTbdsSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION, null, msgs);
+			msgs = basicSetTbcsTbdsSection(newTbcsTbdsSection, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION, newTbcsTbdsSection, newTbcsTbdsSection));
 	}
 
 	/**
@@ -612,6 +460,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION:
+				return basicSetTbcsTbdsSection(null, msgs);
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return basicSetApplicableDocumentsSection(null, msgs);
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
@@ -636,16 +486,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__NAME:
-				return getName();
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ID:
-				return getId();
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ISSUE:
-				return getIssue();
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__REVISION:
-				return getRevision();
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__DATE:
-				return getDate();
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION:
+				return getTbcsTbdsSection();
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return getApplicableDocumentsSection();
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
@@ -670,20 +512,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__NAME:
-				setName((String)newValue);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ID:
-				setId((String)newValue);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ISSUE:
-				setIssue((String)newValue);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__REVISION:
-				setRevision((String)newValue);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__DATE:
-				setDate((String)newValue);
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION:
+				setTbcsTbdsSection((VTestSetupTBCsTBDs)newValue);
 				return;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				setApplicableDocumentsSection((VTestSetupApplicableDocuments)newValue);
@@ -715,20 +545,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__NAME:
-				setName(NAME_EDEFAULT);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ID:
-				setId(ID_EDEFAULT);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ISSUE:
-				setIssue(ISSUE_EDEFAULT);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__REVISION:
-				setRevision(REVISION_EDEFAULT);
-				return;
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__DATE:
-				setDate(DATE_EDEFAULT);
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION:
+				setTbcsTbdsSection((VTestSetupTBCsTBDs)null);
 				return;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				setApplicableDocumentsSection((VTestSetupApplicableDocuments)null);
@@ -760,16 +578,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ID:
-				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__ISSUE:
-				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__REVISION:
-				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
-			case testsetupPackage.VTEST_SETUP_DOCUMENT__DATE:
-				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION:
+				return tbcsTbdsSection != null;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
 				return applicableDocumentsSection != null;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION:
@@ -786,28 +596,30 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 		return super.eIsSet(featureID);
 	}
 
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
-	public String toString() {
-		if (eIsProxy()) return super.toString();
+	public EList<DTBC> getTbcs() {
+		if(getTbcsTbdsSection() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<DTBC> tbcs = new BasicEList<DTBC>();
+			for(DTBC tbc : getTbcsTbdsSection().getTbcs()) {
+				tbcs.add(tbc);
+			}
+			return tbcs;
+		}
+	}
 
-		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
-		result.append(", id: ");
-		result.append(id);
-		result.append(", issue: ");
-		result.append(issue);
-		result.append(", revision: ");
-		result.append(revision);
-		result.append(", date: ");
-		result.append(date);
-		result.append(')');
-		return result.toString();
+	@Override
+	public EList<DTBD> getTbds() {
+		if(getTbcsTbdsSection() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<DTBD> tbds = new BasicEList<DTBD>();
+			for(DTBD tbd : getTbcsTbdsSection().getTbds()) {
+				tbds.add(tbd);
+			};
+			return tbds;
+		}
 	}
 
 	@Override

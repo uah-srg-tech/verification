@@ -25,6 +25,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
@@ -39,6 +40,32 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
  * @generated
  */
 public interface VSRSDocument extends VTraceableDocument, DDocumentTemplate {
+	/**
+	 * Returns the value of the '<em><b>Tbcs Tbds Section</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Tbcs Tbds Section</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Tbcs Tbds Section</em>' containment reference.
+	 * @see #setTbcsTbdsSection(VSRSTBCsTBDs)
+	 * @see es.uah.aut.srg.micobs.svm.srs.srsPackage#getVSRSDocument_TbcsTbdsSection()
+	 * @model containment="true"
+	 * @generated
+	 */
+	VSRSTBCsTBDs getTbcsTbdsSection();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Tbcs Tbds Section</em>' containment reference.
+	 * @see #getTbcsTbdsSection()
+	 * @generated
+	 */
+	void setTbcsTbdsSection(VSRSTBCsTBDs value);
+
 	/**
 	 * Returns the value of the '<em><b>Introduction Section</b></em>' containment reference.
 	 * <!-- begin-user-doc -->

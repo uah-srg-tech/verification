@@ -27,6 +27,7 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupFactory;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
@@ -56,6 +57,13 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	private EClass vTestSetupDocumentEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass vTestSetupTBCsTBDsEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -236,44 +244,8 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTestSetupDocument_Name() {
-		return (EAttribute)vTestSetupDocumentEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVTestSetupDocument_Id() {
-		return (EAttribute)vTestSetupDocumentEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVTestSetupDocument_Issue() {
-		return (EAttribute)vTestSetupDocumentEClass.getEStructuralFeatures().get(2);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVTestSetupDocument_Revision() {
-		return (EAttribute)vTestSetupDocumentEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getVTestSetupDocument_Date() {
-		return (EAttribute)vTestSetupDocumentEClass.getEStructuralFeatures().get(4);
+	public EReference getVTestSetupDocument_TbcsTbdsSection() {
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -282,7 +254,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_ApplicableDocumentsSection() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(5);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -291,7 +263,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_ReferenceDocumentsSection() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(6);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -300,7 +272,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_Interfaces() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(7);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -309,7 +281,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_Configurations() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(8);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -318,7 +290,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_Actions() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(9);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -327,7 +299,34 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EReference getVTestSetupDocument_Scenarios() {
-		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(10);
+		return (EReference)vTestSetupDocumentEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getVTestSetupTBCsTBDs() {
+		return vTestSetupTBCsTBDsEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTestSetupTBCsTBDs_Tbcs() {
+		return (EReference)vTestSetupTBCsTBDsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTestSetupTBCsTBDs_Tbds() {
+		return (EReference)vTestSetupTBCsTBDsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -728,17 +727,17 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 
 		// Create classes and their features
 		vTestSetupDocumentEClass = createEClass(VTEST_SETUP_DOCUMENT);
-		createEAttribute(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__NAME);
-		createEAttribute(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__ID);
-		createEAttribute(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__ISSUE);
-		createEAttribute(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__REVISION);
-		createEAttribute(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__DATE);
+		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__TBCS_TBDS_SECTION);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__REFERENCE_DOCUMENTS_SECTION);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__INTERFACES);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__CONFIGURATIONS);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__ACTIONS);
 		createEReference(vTestSetupDocumentEClass, VTEST_SETUP_DOCUMENT__SCENARIOS);
+
+		vTestSetupTBCsTBDsEClass = createEClass(VTEST_SETUP_TB_CS_TB_DS);
+		createEReference(vTestSetupTBCsTBDsEClass, VTEST_SETUP_TB_CS_TB_DS__TBCS);
+		createEReference(vTestSetupTBCsTBDsEClass, VTEST_SETUP_TB_CS_TB_DS__TBDS);
 
 		vTestSetupApplicableDocumentsEClass = createEClass(VTEST_SETUP_APPLICABLE_DOCUMENTS);
 		createEReference(vTestSetupApplicableDocumentsEClass, VTEST_SETUP_APPLICABLE_DOCUMENTS__APPLICABLE_DOCUMENTS);
@@ -831,6 +830,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 
 		// Add supertypes to classes
 		vTestSetupDocumentEClass.getESuperTypes().add(thedoctplPackage.getDDocumentTemplate());
+		vTestSetupTBCsTBDsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vTestSetupApplicableDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vTestSetupReferenceDocumentsEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vTestSetupInterfacesSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
@@ -841,17 +841,17 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vTestSetupDocumentEClass, VTestSetupDocument.class, "VTestSetupDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getVTestSetupDocument_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTestSetupDocument_Id(), ecorePackage.getEString(), "id", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTestSetupDocument_Issue(), ecorePackage.getEString(), "issue", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTestSetupDocument_Revision(), ecorePackage.getEString(), "revision", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTestSetupDocument_Date(), ecorePackage.getEString(), "date", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTestSetupDocument_TbcsTbdsSection(), this.getVTestSetupTBCsTBDs(), null, "tbcsTbdsSection", null, 0, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_ApplicableDocumentsSection(), this.getVTestSetupApplicableDocuments(), null, "applicableDocumentsSection", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_ReferenceDocumentsSection(), this.getVTestSetupReferenceDocuments(), null, "referenceDocumentsSection", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_Interfaces(), this.getVTestSetupInterfacesSection(), null, "interfaces", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_Configurations(), this.getVTestSetupPacketConfigurationsSection(), null, "configurations", null, 0, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_Actions(), this.getVTestSetupActionsSection(), null, "actions", null, 0, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupDocument_Scenarios(), this.getVTestSetupScenariosSection(), null, "scenarios", null, 1, 1, VTestSetupDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(vTestSetupTBCsTBDsEClass, VTestSetupTBCsTBDs.class, "VTestSetupTBCsTBDs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getVTestSetupTBCsTBDs_Tbcs(), thedoctplPackage.getDTBC(), null, "tbcs", null, 0, -1, VTestSetupTBCsTBDs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTestSetupTBCsTBDs_Tbds(), thedoctplPackage.getDTBD(), null, "tbds", null, 0, -1, VTestSetupTBCsTBDs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupApplicableDocumentsEClass, VTestSetupApplicableDocuments.class, "VTestSetupApplicableDocuments", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVTestSetupApplicableDocuments_ApplicableDocuments(), thedoctplPackage.getDApplicableDocument(), null, "applicableDocuments", null, 0, -1, VTestSetupApplicableDocuments.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

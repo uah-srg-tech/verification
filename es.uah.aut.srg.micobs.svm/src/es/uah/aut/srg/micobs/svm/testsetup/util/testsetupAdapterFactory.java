@@ -86,6 +86,10 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 				return createVTestSetupDocumentAdapter();
 			}
 			@Override
+			public Adapter caseVTestSetupTBCsTBDs(VTestSetupTBCsTBDs object) {
+				return createVTestSetupTBCsTBDsAdapter();
+			}
+			@Override
 			public Adapter caseVTestSetupApplicableDocuments(VTestSetupApplicableDocuments object) {
 				return createVTestSetupApplicableDocumentsAdapter();
 			}
@@ -184,6 +188,20 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTestSetupDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs <em>VTest Setup TB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs
+	 * @generated
+	 */
+	public Adapter createVTestSetupTBCsTBDsAdapter() {
 		return null;
 	}
 

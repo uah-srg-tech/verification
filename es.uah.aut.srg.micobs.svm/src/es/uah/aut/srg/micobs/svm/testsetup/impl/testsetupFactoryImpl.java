@@ -66,6 +66,7 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case testsetupPackage.VTEST_SETUP_DOCUMENT: return createVTestSetupDocument();
+			case testsetupPackage.VTEST_SETUP_TB_CS_TB_DS: return createVTestSetupTBCsTBDs();
 			case testsetupPackage.VTEST_SETUP_APPLICABLE_DOCUMENTS: return createVTestSetupApplicableDocuments();
 			case testsetupPackage.VTEST_SETUP_REFERENCE_DOCUMENTS: return createVTestSetupReferenceDocuments();
 			case testsetupPackage.VTEST_SETUP_INTERFACES_SECTION: return createVTestSetupInterfacesSection();
@@ -125,6 +126,16 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	public VTestSetupDocument createVTestSetupDocument() {
 		VTestSetupDocumentImpl vTestSetupDocument = new VTestSetupDocumentImpl();
 		return vTestSetupDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupTBCsTBDs createVTestSetupTBCsTBDs() {
+		VTestSetupTBCsTBDsImpl vTestSetupTBCsTBDs = new VTestSetupTBCsTBDsImpl();
+		return vTestSetupTBCsTBDs;
 	}
 
 	/**

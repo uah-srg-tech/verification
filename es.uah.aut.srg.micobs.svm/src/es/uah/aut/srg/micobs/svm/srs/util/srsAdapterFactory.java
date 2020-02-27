@@ -91,6 +91,10 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 				return createVSRSDocumentAdapter();
 			}
 			@Override
+			public Adapter caseVSRSTBCsTBDs(VSRSTBCsTBDs object) {
+				return createVSRSTBCsTBDsAdapter();
+			}
+			@Override
 			public Adapter caseVSRSIntroduction(VSRSIntroduction object) {
 				return createVSRSIntroductionAdapter();
 			}
@@ -297,6 +301,20 @@ public class srsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSRSDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs <em>VSRSTB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs
+	 * @generated
+	 */
+	public Adapter createVSRSTBCsTBDsAdapter() {
 		return null;
 	}
 

@@ -39,6 +39,15 @@ public interface srsFactory extends EFactory {
 	VSRSDocument createVSRSDocument();
 
 	/**
+	 * Returns a new object of class '<em>VSRSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSRSTB Cs TB Ds</em>'.
+	 * @generated
+	 */
+	VSRSTBCsTBDs createVSRSTBCsTBDs();
+
+	/**
 	 * Returns a new object of class '<em>VSRS Introduction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

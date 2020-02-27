@@ -24,6 +24,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
@@ -60,6 +62,7 @@ import es.uah.aut.srg.micobs.svm.srs.VSRSSWReliabilityRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSWSafetyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSecurityPrivacyRequirements;
 import es.uah.aut.srg.micobs.svm.srs.VSRSSoftwareOverview;
+import es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTerm;
 import es.uah.aut.srg.micobs.svm.srs.VSRSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.srs.srsPackage;
@@ -128,6 +131,12 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
+				return; 
+			case doctplPackage.DTBC:
+				sequence_DTBC(context, (DTBC) semanticObject); 
+				return; 
+			case doctplPackage.DTBD:
+				sequence_DTBD(context, (DTBD) semanticObject); 
 				return; 
 			case doctplPackage.DTAB:
 				sequence_DTab(context, (DTab) semanticObject); 
@@ -234,6 +243,9 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case srsPackage.VSRS_SOFTWARE_OVERVIEW:
 				sequence_VSRSSoftwareOverview(context, (VSRSSoftwareOverview) semanticObject); 
 				return; 
+			case srsPackage.VSRSTB_CS_TB_DS:
+				sequence_VSRSTBCsTBDs(context, (VSRSTBCsTBDs) semanticObject); 
+				return; 
 			case srsPackage.VSRS_TERM:
 				sequence_VSRSTerm(context, (VSRSTerm) semanticObject); 
 				return; 
@@ -256,7 +268,14 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -401,7 +420,14 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -436,6 +462,30 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBC returns DTBC
+	 *
+	 * Constraint:
+	 *     (name=STRING (description=STRING | parentTBC=[DTBC|STRING]))
+	 */
+	protected void sequence_DTBC(ISerializationContext context, DTBC semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBD returns DTBD
+	 *
+	 * Constraint:
+	 *     (name=STRING (description=STRING | parentTBD=[DTBD|STRING]))
+	 */
+	protected void sequence_DTBD(ISerializationContext context, DTBD semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -613,6 +663,7 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         revision=UINT_STRING 
 	 *         date=STRING 
 	 *         parents+=VTraceableParentDocument* 
+	 *         tbcsTbdsSection=VSRSTBCsTBDs? 
 	 *         introductionSection=VSRSIntroduction 
 	 *         applicableDocumentsSection=VSRSApplicableDocuments 
 	 *         referenceDocumentsSection=VSRSReferenceDocuments 
@@ -939,6 +990,18 @@ public class SRSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getRelationOtherSystemsVSRSFixedSectionParserRuleCall_8_0(), semanticObject.getRelationOtherSystems());
 		feeder.accept(grammarAccess.getVSRSSoftwareOverviewAccess().getConstraintsVSRSFixedSectionParserRuleCall_11_0(), semanticObject.getConstraints());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSRSTBCsTBDs returns VSRSTBCsTBDs
+	 *
+	 * Constraint:
+	 *     (tbcs+=DTBC* tbds+=DTBD*)
+	 */
+	protected void sequence_VSRSTBCsTBDs(ISerializationContext context, VSRSTBCsTBDs semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

@@ -230,9 +230,28 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getIntroductionSectionVSRSIntroductionParserRuleCall_13_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getTbcsTbdsSectionVSRSTBCsTBDsParserRuleCall_13_0());
 				}
-				lv_introductionSection_13_0=ruleVSRSIntroduction
+				lv_tbcsTbdsSection_13_0=ruleVSRSTBCsTBDs
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
+					}
+					set(
+						$current,
+						"tbcsTbdsSection",
+						lv_tbcsTbdsSection_13_0,
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTBCsTBDs");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getIntroductionSectionVSRSIntroductionParserRuleCall_14_0());
+				}
+				lv_introductionSection_14_0=ruleVSRSIntroduction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -240,7 +259,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"introductionSection",
-						lv_introductionSection_13_0,
+						lv_introductionSection_14_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSIntroduction");
 					afterParserOrEnumRuleCall();
 				}
@@ -249,9 +268,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_14_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getApplicableDocumentsSectionVSRSApplicableDocumentsParserRuleCall_15_0());
 				}
-				lv_applicableDocumentsSection_14_0=ruleVSRSApplicableDocuments
+				lv_applicableDocumentsSection_15_0=ruleVSRSApplicableDocuments
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -259,7 +278,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"applicableDocumentsSection",
-						lv_applicableDocumentsSection_14_0,
+						lv_applicableDocumentsSection_15_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSApplicableDocuments");
 					afterParserOrEnumRuleCall();
 				}
@@ -268,9 +287,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_15_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getReferenceDocumentsSectionVSRSReferenceDocumentsParserRuleCall_16_0());
 				}
-				lv_referenceDocumentsSection_15_0=ruleVSRSReferenceDocuments
+				lv_referenceDocumentsSection_16_0=ruleVSRSReferenceDocuments
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -278,7 +297,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"referenceDocumentsSection",
-						lv_referenceDocumentsSection_15_0,
+						lv_referenceDocumentsSection_16_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSReferenceDocuments");
 					afterParserOrEnumRuleCall();
 				}
@@ -287,9 +306,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_16_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSRSTermsDefinitionsAbbreviationsParserRuleCall_17_0());
 				}
-				lv_termsDefinitionsAbbreviationsSection_16_0=ruleVSRSTermsDefinitionsAbbreviations
+				lv_termsDefinitionsAbbreviationsSection_17_0=ruleVSRSTermsDefinitionsAbbreviations
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -297,7 +316,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"termsDefinitionsAbbreviationsSection",
-						lv_termsDefinitionsAbbreviationsSection_16_0,
+						lv_termsDefinitionsAbbreviationsSection_17_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSTermsDefinitionsAbbreviations");
 					afterParserOrEnumRuleCall();
 				}
@@ -306,9 +325,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_17_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getSoftwareOverviewSectionVSRSSoftwareOverviewParserRuleCall_18_0());
 				}
-				lv_softwareOverviewSection_17_0=ruleVSRSSoftwareOverview
+				lv_softwareOverviewSection_18_0=ruleVSRSSoftwareOverview
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -316,7 +335,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"softwareOverviewSection",
-						lv_softwareOverviewSection_17_0,
+						lv_softwareOverviewSection_18_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSSoftwareOverview");
 					afterParserOrEnumRuleCall();
 				}
@@ -325,9 +344,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionVSRSRequirementsParserRuleCall_18_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getRequirementsSectionVSRSRequirementsParserRuleCall_19_0());
 				}
-				lv_requirementsSection_18_0=ruleVSRSRequirements
+				lv_requirementsSection_19_0=ruleVSRSRequirements
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -335,7 +354,7 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"requirementsSection",
-						lv_requirementsSection_18_0,
+						lv_requirementsSection_19_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSRequirements");
 					afterParserOrEnumRuleCall();
 				}
@@ -344,9 +363,9 @@ ruleVSRSDocument returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_19_0());
+					newCompositeNode(grammarAccess.getVSRSDocumentAccess().getLogicalModelsSectionVSRSLogicalModelsParserRuleCall_20_0());
 				}
-				lv_logicalModelsSection_19_0=ruleVSRSLogicalModels
+				lv_logicalModelsSection_20_0=ruleVSRSLogicalModels
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSRSDocumentRule());
@@ -354,15 +373,286 @@ ruleVSRSDocument returns [EObject current=null]
 					set(
 						$current,
 						"logicalModelsSection",
-						lv_logicalModelsSection_19_0,
+						lv_logicalModelsSection_20_0,
 						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.VSRSLogicalModels");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_20='</SRS>'
+		otherlv_21='</SRS>'
 		{
-			newLeafNode(otherlv_20, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_20());
+			newLeafNode(otherlv_21, grammarAccess.getVSRSDocumentAccess().getSRSKeyword_21());
+		}
+	)
+;
+
+// Entry rule entryRuleVSRSTBCsTBDs
+entryRuleVSRSTBCsTBDs returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVSRSTBCsTBDsRule()); }
+	iv_ruleVSRSTBCsTBDs=ruleVSRSTBCsTBDs
+	{ $current=$iv_ruleVSRSTBCsTBDs.current; }
+	EOF;
+
+// Rule VSRSTBCsTBDs
+ruleVSRSTBCsTBDs returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVSRSTBCsTBDsAccess().getVSRSTBCsTBDsAction_0(),
+					$current);
+			}
+		)
+		otherlv_1='<TBCsTBDs>'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVSRSTBCsTBDsAccess().getTBCsTBDsKeyword_1());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSRSTBCsTBDsAccess().getTbcsDTBCParserRuleCall_2_0());
+				}
+				lv_tbcs_2_0=ruleDTBC
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSRSTBCsTBDsRule());
+					}
+					add(
+						$current,
+						"tbcs",
+						lv_tbcs_2_0,
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DTBC");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVSRSTBCsTBDsAccess().getTbdsDTBDParserRuleCall_3_0());
+				}
+				lv_tbds_3_0=ruleDTBD
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVSRSTBCsTBDsRule());
+					}
+					add(
+						$current,
+						"tbds",
+						lv_tbds_3_0,
+						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DTBD");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_4='</TBCsTBDs>'
+		{
+			newLeafNode(otherlv_4, grammarAccess.getVSRSTBCsTBDsAccess().getTBCsTBDsKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleDTBC
+entryRuleDTBC returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTBCRule()); }
+	iv_ruleDTBC=ruleDTBC
+	{ $current=$iv_ruleDTBC.current; }
+	EOF;
+
+// Rule DTBC
+ruleDTBC returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TBC'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDTBCAccess().getTBCKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDTBCAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getDTBCAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDTBCRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		(
+			(
+				otherlv_3='description='
+				{
+					newLeafNode(otherlv_3, grammarAccess.getDTBCAccess().getDescriptionKeyword_3_0_0());
+				}
+				(
+					(
+						lv_description_4_0=RULE_STRING
+						{
+							newLeafNode(lv_description_4_0, grammarAccess.getDTBCAccess().getDescriptionSTRINGTerminalRuleCall_3_0_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDTBCRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"description",
+								lv_description_4_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
+				)
+			)
+			    |
+			(
+				otherlv_5='parentTBC='
+				{
+					newLeafNode(otherlv_5, grammarAccess.getDTBCAccess().getParentTBCKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							/* */
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDTBCRule());
+							}
+						}
+						otherlv_6=RULE_STRING
+						{
+							newLeafNode(otherlv_6, grammarAccess.getDTBCAccess().getParentTBCDTBCCrossReference_3_1_1_0());
+						}
+					)
+				)
+			)
+		)
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDTBCAccess().getSolidusGreaterThanSignKeyword_4());
+		}
+	)
+;
+
+// Entry rule entryRuleDTBD
+entryRuleDTBD returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDTBDRule()); }
+	iv_ruleDTBD=ruleDTBD
+	{ $current=$iv_ruleDTBD.current; }
+	EOF;
+
+// Rule DTBD
+ruleDTBD returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<TBD'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDTBDAccess().getTBDKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDTBDAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getDTBDAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDTBDRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		(
+			(
+				otherlv_3='description='
+				{
+					newLeafNode(otherlv_3, grammarAccess.getDTBDAccess().getDescriptionKeyword_3_0_0());
+				}
+				(
+					(
+						lv_description_4_0=RULE_STRING
+						{
+							newLeafNode(lv_description_4_0, grammarAccess.getDTBDAccess().getDescriptionSTRINGTerminalRuleCall_3_0_1_0());
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDTBDRule());
+							}
+							setWithLastConsumed(
+								$current,
+								"description",
+								lv_description_4_0,
+								"org.eclipse.xtext.common.Terminals.STRING");
+						}
+					)
+				)
+			)
+			    |
+			(
+				otherlv_5='parentTBD='
+				{
+					newLeafNode(otherlv_5, grammarAccess.getDTBDAccess().getParentTBDKeyword_3_1_0());
+				}
+				(
+					(
+						{
+							/* */
+						}
+						{
+							if ($current==null) {
+								$current = createModelElement(grammarAccess.getDTBDRule());
+							}
+						}
+						otherlv_6=RULE_STRING
+						{
+							newLeafNode(otherlv_6, grammarAccess.getDTBDAccess().getParentTBDDTBDCrossReference_3_1_1_0());
+						}
+					)
+				)
+			)
+		)
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDTBDAccess().getSolidusGreaterThanSignKeyword_4());
 		}
 	)
 ;
@@ -407,44 +697,53 @@ ruleVTraceableParentDocument returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVTraceableParentDocumentAccess().getGreaterThanSignKeyword_3());
-		}
 		(
-			otherlv_4='<notApplicableItem'
-			{
-				newLeafNode(otherlv_4, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemKeyword_4_0());
-			}
-			otherlv_5='item='
-			{
-				newLeafNode(otherlv_5, grammarAccess.getVTraceableParentDocumentAccess().getItemKeyword_4_1());
-			}
 			(
+				otherlv_3='>'
+				{
+					newLeafNode(otherlv_3, grammarAccess.getVTraceableParentDocumentAccess().getGreaterThanSignKeyword_3_0_0());
+				}
 				(
+					otherlv_4='<notApplicableItem'
 					{
-						/* */
+						newLeafNode(otherlv_4, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemKeyword_3_0_1_0());
 					}
+					otherlv_5='item='
 					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getVTraceableParentDocumentRule());
-						}
+						newLeafNode(otherlv_5, grammarAccess.getVTraceableParentDocumentAccess().getItemKeyword_3_0_1_1());
 					}
-					otherlv_6=RULE_STRING
+					(
+						(
+							{
+								/* */
+							}
+							{
+								if ($current==null) {
+									$current = createModelElement(grammarAccess.getVTraceableParentDocumentRule());
+								}
+							}
+							otherlv_6=RULE_STRING
+							{
+								newLeafNode(otherlv_6, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_3_0_1_2_0());
+							}
+						)
+					)
+					otherlv_7='/>'
 					{
-						newLeafNode(otherlv_6, grammarAccess.getVTraceableParentDocumentAccess().getNotApplicableItemVTraceableDocumentAbstractItemCrossReference_4_2_0());
+						newLeafNode(otherlv_7, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_3_0_1_3());
 					}
-				)
+				)+
+				otherlv_8='</parent>'
+				{
+					newLeafNode(otherlv_8, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_3_0_2());
+				}
 			)
-			otherlv_7='/>'
+			    |
+			otherlv_9='/>'
 			{
-				newLeafNode(otherlv_7, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_4_3());
+				newLeafNode(otherlv_9, grammarAccess.getVTraceableParentDocumentAccess().getSolidusGreaterThanSignKeyword_3_1());
 			}
-		)*
-		otherlv_8='</parent>'
-		{
-			newLeafNode(otherlv_8, grammarAccess.getVTraceableParentDocumentAccess().getParentKeyword_5());
-		}
+		)
 	)
 ;
 
@@ -1402,33 +1701,42 @@ ruleDHyperlink returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getDHyperlinkAccess().getGreaterThanSignKeyword_3());
-		}
 		(
 			(
+				otherlv_3='>'
 				{
-					newCompositeNode(grammarAccess.getDHyperlinkAccess().getRunDRunParserRuleCall_4_0());
+					newLeafNode(otherlv_3, grammarAccess.getDHyperlinkAccess().getGreaterThanSignKeyword_3_0_0());
 				}
-				lv_run_4_0=ruleDRun
+				(
+					(
+						{
+							newCompositeNode(grammarAccess.getDHyperlinkAccess().getRunDRunParserRuleCall_3_0_1_0());
+						}
+						lv_run_4_0=ruleDRun
+						{
+							if ($current==null) {
+								$current = createModelElementForParent(grammarAccess.getDHyperlinkRule());
+							}
+							set(
+								$current,
+								"run",
+								lv_run_4_0,
+								"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRun");
+							afterParserOrEnumRuleCall();
+						}
+					)
+				)
+				otherlv_5='</hyperlink>'
 				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getDHyperlinkRule());
-					}
-					set(
-						$current,
-						"run",
-						lv_run_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.srs.SRS.DRun");
-					afterParserOrEnumRuleCall();
+					newLeafNode(otherlv_5, grammarAccess.getDHyperlinkAccess().getHyperlinkKeyword_3_0_2());
 				}
 			)
-		)?
-		otherlv_5='</hyperlink>'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getDHyperlinkAccess().getHyperlinkKeyword_5());
-		}
+			    |
+			otherlv_6='/>'
+			{
+				newLeafNode(otherlv_6, grammarAccess.getDHyperlinkAccess().getSolidusGreaterThanSignKeyword_3_1());
+			}
+		)
 	)
 ;
 
@@ -2467,9 +2775,33 @@ ruleDApplicableDocument returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_13='/>'
+		(
+			otherlv_13='url='
+			{
+				newLeafNode(otherlv_13, grammarAccess.getDApplicableDocumentAccess().getUrlKeyword_9_0());
+			}
+			(
+				(
+					lv_url_14_0=RULE_STRING
+					{
+						newLeafNode(lv_url_14_0, grammarAccess.getDApplicableDocumentAccess().getUrlSTRINGTerminalRuleCall_9_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDApplicableDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"url",
+							lv_url_14_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_15='/>'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getDApplicableDocumentAccess().getSolidusGreaterThanSignKeyword_9());
+			newLeafNode(otherlv_15, grammarAccess.getDApplicableDocumentAccess().getSolidusGreaterThanSignKeyword_10());
 		}
 	)
 ;
@@ -2632,9 +2964,33 @@ ruleDReferenceDocument returns [EObject current=null]
 				)
 			)
 		)?
-		otherlv_13='/>'
+		(
+			otherlv_13='url='
+			{
+				newLeafNode(otherlv_13, grammarAccess.getDReferenceDocumentAccess().getUrlKeyword_9_0());
+			}
+			(
+				(
+					lv_url_14_0=RULE_STRING
+					{
+						newLeafNode(lv_url_14_0, grammarAccess.getDReferenceDocumentAccess().getUrlSTRINGTerminalRuleCall_9_1_0());
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getDReferenceDocumentRule());
+						}
+						setWithLastConsumed(
+							$current,
+							"url",
+							lv_url_14_0,
+							"org.eclipse.xtext.common.Terminals.STRING");
+					}
+				)
+			)
+		)?
+		otherlv_15='/>'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getDReferenceDocumentAccess().getSolidusGreaterThanSignKeyword_9());
+			newLeafNode(otherlv_15, grammarAccess.getDReferenceDocumentAccess().getSolidusGreaterThanSignKeyword_10());
 		}
 	)
 ;

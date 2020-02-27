@@ -144,6 +144,4 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 		});
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
-
-
 }

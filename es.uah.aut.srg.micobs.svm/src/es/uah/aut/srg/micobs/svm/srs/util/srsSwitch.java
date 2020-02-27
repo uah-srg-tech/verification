@@ -93,6 +93,14 @@ public class srsSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case srsPackage.VSRSTB_CS_TB_DS: {
+				VSRSTBCsTBDs vsrstbCsTBDs = (VSRSTBCsTBDs)theEObject;
+				T result = caseVSRSTBCsTBDs(vsrstbCsTBDs);
+				if (result == null) result = caseDFixedSection(vsrstbCsTBDs);
+				if (result == null) result = caseDAbstractSection(vsrstbCsTBDs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case srsPackage.VSRS_INTRODUCTION: {
 				VSRSIntroduction vsrsIntroduction = (VSRSIntroduction)theEObject;
 				T result = caseVSRSIntroduction(vsrsIntroduction);
@@ -430,6 +438,21 @@ public class srsSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSRSDocument(VSRSDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSRSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSRSTB Cs TB Ds</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSRSTBCsTBDs(VSRSTBCsTBDs object) {
 		return null;
 	}
 

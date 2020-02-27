@@ -80,51 +80,6 @@ public interface svsPackage extends EPackage {
 	int VSVS_DOCUMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__NAME = vdmPackage.VVALIDATION_DOCUMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__ID = vdmPackage.VVALIDATION_DOCUMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Issue</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__ISSUE = vdmPackage.VVALIDATION_DOCUMENT__ISSUE;
-
-	/**
-	 * The feature id for the '<em><b>Revision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__REVISION = vdmPackage.VVALIDATION_DOCUMENT__REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_DOCUMENT__DATE = vdmPackage.VVALIDATION_DOCUMENT__DATE;
-
-	/**
 	 * The feature id for the '<em><b>Parents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -143,13 +98,76 @@ public interface svsPackage extends EPackage {
 	int VSVS_DOCUMENT__GROUPS = vdmPackage.VVALIDATION_DOCUMENT__GROUPS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__NAME = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__ID = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Issue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__ISSUE = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Revision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__REVISION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__DATE = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__TBCS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__TBDS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 0;
+	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' reference list.
@@ -158,7 +176,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 1;
+	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Figures</b></em>' reference list.
@@ -167,7 +185,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__FIGURES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 2;
+	int VSVS_DOCUMENT__FIGURES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Tables</b></em>' reference list.
@@ -176,7 +194,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TABLES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 3;
+	int VSVS_DOCUMENT__TABLES = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Sections</b></em>' reference list.
@@ -185,7 +203,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__SECTIONS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 4;
+	int VSVS_DOCUMENT__SECTIONS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
@@ -194,7 +212,16 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__PARAGRAPHS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 5;
+	int VSVS_DOCUMENT__PARAGRAPHS = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs Tbds Section</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_DOCUMENT__TBCS_TBDS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Introduction Section</b></em>' containment reference.
@@ -203,7 +230,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__INTRODUCTION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 6;
+	int VSVS_DOCUMENT__INTRODUCTION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -212,7 +239,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 7;
+	int VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -221,7 +248,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 8;
+	int VSVS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
@@ -230,7 +257,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 9;
+	int VSVS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Software Overview Section</b></em>' containment reference.
@@ -239,7 +266,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 10;
+	int VSVS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Task Identification Section</b></em>' containment reference.
@@ -248,7 +275,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 11;
+	int VSVS_DOCUMENT__TASK_IDENTIFICATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Testing Specification Design Section</b></em>' containment reference.
@@ -257,7 +284,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TESTING_SPECIFICATION_DESIGN_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 12;
+	int VSVS_DOCUMENT__TESTING_SPECIFICATION_DESIGN_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The feature id for the '<em><b>Test Cases Section</b></em>' containment reference.
@@ -266,7 +293,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_CASES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 13;
+	int VSVS_DOCUMENT__TEST_CASES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The feature id for the '<em><b>Test Procedures Section</b></em>' containment reference.
@@ -275,7 +302,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_PROCEDURES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 14;
+	int VSVS_DOCUMENT__TEST_PROCEDURES_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 22;
 
 	/**
 	 * The feature id for the '<em><b>Analysis Inspection Review Section</b></em>' containment reference.
@@ -284,7 +311,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__ANALYSIS_INSPECTION_REVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 15;
+	int VSVS_DOCUMENT__ANALYSIS_INSPECTION_REVIEW_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 23;
 
 	/**
 	 * The feature id for the '<em><b>Test Platform Requirements Section</b></em>' containment reference.
@@ -293,7 +320,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__TEST_PLATFORM_REQUIREMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 16;
+	int VSVS_DOCUMENT__TEST_PLATFORM_REQUIREMENTS_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 24;
 
 	/**
 	 * The feature id for the '<em><b>Additional Information Section</b></em>' containment reference.
@@ -302,7 +329,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 17;
+	int VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 25;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Document</em>' class.
@@ -311,7 +338,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_DOCUMENT_FEATURE_COUNT = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 18;
+	int VSVS_DOCUMENT_FEATURE_COUNT = vdmPackage.VVALIDATION_DOCUMENT_FEATURE_COUNT + 26;
 
 	/**
 	 * The number of operations of the '<em>VSVS Document</em>' class.
@@ -323,6 +350,61 @@ public interface svsPackage extends EPackage {
 	int VSVS_DOCUMENT_OPERATION_COUNT = vdmPackage.VVALIDATION_DOCUMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTBCsTBDsImpl <em>VSVSTB Cs TB Ds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTBCsTBDsImpl
+	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTBCsTBDs()
+	 * @generated
+	 */
+	int VSVSTB_CS_TB_DS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVSTB_CS_TB_DS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVSTB_CS_TB_DS__TBCS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVSTB_CS_TB_DS__TBDS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSVSTB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVSTB_CS_TB_DS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSVSTB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVSTB_CS_TB_DS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInstantiableSectionImpl <em>VSVS Instantiable Section</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -330,7 +412,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSInstantiableSection()
 	 * @generated
 	 */
-	int VSVS_INSTANTIABLE_SECTION = 1;
+	int VSVS_INSTANTIABLE_SECTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -403,7 +485,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSIntroduction()
 	 * @generated
 	 */
-	int VSVS_INTRODUCTION = 2;
+	int VSVS_INTRODUCTION = 3;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -449,7 +531,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSApplicableDocuments()
 	 * @generated
 	 */
-	int VSVS_APPLICABLE_DOCUMENTS = 3;
+	int VSVS_APPLICABLE_DOCUMENTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -495,7 +577,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSReferenceDocuments()
 	 * @generated
 	 */
-	int VSVS_REFERENCE_DOCUMENTS = 4;
+	int VSVS_REFERENCE_DOCUMENTS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -541,7 +623,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTermsDefinitionsAbbreviations()
 	 * @generated
 	 */
-	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS = 5;
+	int VSVS_TERMS_DEFINITIONS_ABBREVIATIONS = 6;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -605,7 +687,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAbstractBriefDescription()
 	 * @generated
 	 */
-	int VSVS_ABSTRACT_BRIEF_DESCRIPTION = 6;
+	int VSVS_ABSTRACT_BRIEF_DESCRIPTION = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -651,7 +733,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTerm()
 	 * @generated
 	 */
-	int VSVS_TERM = 7;
+	int VSVS_TERM = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -697,7 +779,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSDefinition()
 	 * @generated
 	 */
-	int VSVS_DEFINITION = 8;
+	int VSVS_DEFINITION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -743,7 +825,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAbbreviation()
 	 * @generated
 	 */
-	int VSVS_ABBREVIATION = 9;
+	int VSVS_ABBREVIATION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -789,7 +871,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSFixedSection()
 	 * @generated
 	 */
-	int VSVS_FIXED_SECTION = 10;
+	int VSVS_FIXED_SECTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -844,7 +926,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSSoftwareOverview()
 	 * @generated
 	 */
-	int VSVS_SOFTWARE_OVERVIEW = 11;
+	int VSVS_SOFTWARE_OVERVIEW = 12;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -899,7 +981,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTaskIdentification()
 	 * @generated
 	 */
-	int VSVS_TASK_IDENTIFICATION = 12;
+	int VSVS_TASK_IDENTIFICATION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -990,7 +1072,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestingSpecificationDesign()
 	 * @generated
 	 */
-	int VSVS_TESTING_SPECIFICATION_DESIGN = 13;
+	int VSVS_TESTING_SPECIFICATION_DESIGN = 14;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1054,7 +1136,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestDesign()
 	 * @generated
 	 */
-	int VSVS_TEST_DESIGN = 14;
+	int VSVS_TEST_DESIGN = 15;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1127,7 +1209,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestInfo()
 	 * @generated
 	 */
-	int VSVS_TEST_INFO = 15;
+	int VSVS_TEST_INFO = 16;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
@@ -1164,7 +1246,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCases()
 	 * @generated
 	 */
-	int VSVS_TEST_CASES = 16;
+	int VSVS_TEST_CASES = 17;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1237,7 +1319,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestCase()
 	 * @generated
 	 */
-	int VSVS_TEST_CASE = 17;
+	int VSVS_TEST_CASE = 18;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1364,7 +1446,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedures()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURES = 18;
+	int VSVS_TEST_PROCEDURES = 19;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1419,7 +1501,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestProcedure()
 	 * @generated
 	 */
-	int VSVS_TEST_PROCEDURE = 19;
+	int VSVS_TEST_PROCEDURE = 20;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1519,7 +1601,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureSteps()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEPS = 20;
+	int VSVS_PROCEDURE_STEPS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1565,7 +1647,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSProcedureStep()
 	 * @generated
 	 */
-	int VSVS_PROCEDURE_STEP = 21;
+	int VSVS_PROCEDURE_STEP = 22;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1656,7 +1738,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepOutputs()
 	 * @generated
 	 */
-	int VSVS_STEP_OUTPUTS = 32;
+	int VSVS_STEP_OUTPUTS = 33;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationsImpl <em>VSVS Step Configurations</em>}' class.
@@ -1666,7 +1748,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConfigurations()
 	 * @generated
 	 */
-	int VSVS_STEP_CONFIGURATIONS = 22;
+	int VSVS_STEP_CONFIGURATIONS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' containment reference list.
@@ -1703,7 +1785,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepConfiguration()
 	 * @generated
 	 */
-	int VSVS_STEP_CONFIGURATION = 23;
+	int VSVS_STEP_CONFIGURATION = 24;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
@@ -1758,7 +1840,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepInputs()
 	 * @generated
 	 */
-	int VSVS_STEP_INPUTS = 24;
+	int VSVS_STEP_INPUTS = 25;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Step Inputs</em>' class.
@@ -1786,7 +1868,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepAction()
 	 * @generated
 	 */
-	int VSVS_STEP_ACTION = 25;
+	int VSVS_STEP_ACTION = 26;
 
 	/**
 	 * The feature id for the '<em><b>Selected Action</b></em>' reference.
@@ -1859,7 +1941,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandSequence()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_SEQUENCE = 26;
+	int VSVS_STEP_TELECOMMAND_SEQUENCE = 27;
 
 	/**
 	 * The feature id for the '<em><b>Telecommand</b></em>' containment reference list.
@@ -1896,7 +1978,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommand()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND = 27;
+	int VSVS_STEP_TELECOMMAND = 28;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1978,7 +2060,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandData()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_DATA = 28;
+	int VSVS_STEP_TELECOMMAND_DATA = 29;
 
 	/**
 	 * The feature id for the '<em><b>Tc Template</b></em>' reference.
@@ -2024,7 +2106,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandDataField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_DATA_FIELD = 29;
+	int VSVS_STEP_TELECOMMAND_DATA_FIELD = 30;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2070,7 +2152,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandHeader()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_HEADER = 30;
+	int VSVS_STEP_TELECOMMAND_HEADER = 31;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -2107,7 +2189,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelecommandHeaderField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELECOMMAND_HEADER_FIELD = 31;
+	int VSVS_STEP_TELECOMMAND_HEADER_FIELD = 32;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2171,7 +2253,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetrySet()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_SET = 33;
+	int VSVS_STEP_TELEMETRY_SET = 34;
 
 	/**
 	 * The feature id for the '<em><b>Checkmode</b></em>' attribute.
@@ -2235,7 +2317,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetry()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY = 34;
+	int VSVS_STEP_TELEMETRY = 35;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2299,7 +2381,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryData()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_DATA = 35;
+	int VSVS_STEP_TELEMETRY_DATA = 36;
 
 	/**
 	 * The feature id for the '<em><b>Tm Template</b></em>' reference.
@@ -2345,7 +2427,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryDataField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_DATA_FIELD = 36;
+	int VSVS_STEP_TELEMETRY_DATA_FIELD = 37;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2391,7 +2473,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryHeader()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_HEADER = 37;
+	int VSVS_STEP_TELEMETRY_HEADER = 38;
 
 	/**
 	 * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -2428,7 +2510,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetryHeaderField()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_HEADER_FIELD = 38;
+	int VSVS_STEP_TELEMETRY_HEADER_FIELD = 39;
 
 	/**
 	 * The feature id for the '<em><b>Field Ref</b></em>' reference.
@@ -2474,7 +2556,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAnalysisInspectionReview()
 	 * @generated
 	 */
-	int VSVS_ANALYSIS_INSPECTION_REVIEW = 39;
+	int VSVS_ANALYSIS_INSPECTION_REVIEW = 40;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2529,7 +2611,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTestPlatformRequirements()
 	 * @generated
 	 */
-	int VSVS_TEST_PLATFORM_REQUIREMENTS = 40;
+	int VSVS_TEST_PLATFORM_REQUIREMENTS = 41;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2584,7 +2666,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSAdditionalInformation()
 	 * @generated
 	 */
-	int VSVS_ADDITIONAL_INFORMATION = 41;
+	int VSVS_ADDITIONAL_INFORMATION = 42;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2639,7 +2721,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTimeUnit()
 	 * @generated
 	 */
-	int VSVS_TIME_UNIT = 42;
+	int VSVS_TIME_UNIT = 43;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySetCheckmode <em>VSVS Step Telemetry Set Checkmode</em>}' enum.
@@ -2649,7 +2731,7 @@ public interface svsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSStepTelemetrySetCheckmode()
 	 * @generated
 	 */
-	int VSVS_STEP_TELEMETRY_SET_CHECKMODE = 43;
+	int VSVS_STEP_TELEMETRY_SET_CHECKMODE = 44;
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument <em>VSVS Document</em>}'.
@@ -2660,6 +2742,17 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSVSDocument();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tbcs Tbds Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getTbcsTbdsSection()
+	 * @see #getVSVSDocument()
+	 * @generated
+	 */
+	EReference getVSVSDocument_TbcsTbdsSection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSDocument#getIntroductionSection <em>Introduction Section</em>}'.
@@ -2792,6 +2885,38 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVSDocument_AdditionalInformationSection();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs <em>VSVSTB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSVSTB Cs TB Ds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs
+	 * @generated
+	 */
+	EClass getVSVSTBCsTBDs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs#getTbcs <em>Tbcs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbcs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs#getTbcs()
+	 * @see #getVSVSTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVSVSTBCsTBDs_Tbcs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs#getTbds <em>Tbds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs#getTbds()
+	 * @see #getVSVSTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVSVSTBCsTBDs_Tbds();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSInstantiableSection <em>VSVS Instantiable Section</em>}'.
@@ -4247,6 +4372,14 @@ public interface svsPackage extends EPackage {
 		EClass VSVS_DOCUMENT = eINSTANCE.getVSVSDocument();
 
 		/**
+		 * The meta object literal for the '<em><b>Tbcs Tbds Section</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_DOCUMENT__TBCS_TBDS_SECTION = eINSTANCE.getVSVSDocument_TbcsTbdsSection();
+
+		/**
 		 * The meta object literal for the '<em><b>Introduction Section</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -4341,6 +4474,32 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_DOCUMENT__ADDITIONAL_INFORMATION_SECTION = eINSTANCE.getVSVSDocument_AdditionalInformationSection();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTBCsTBDsImpl <em>VSVSTB Cs TB Ds</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.VSVSTBCsTBDsImpl
+		 * @see es.uah.aut.srg.micobs.svm.svs.impl.svsPackageImpl#getVSVSTBCsTBDs()
+		 * @generated
+		 */
+		EClass VSVSTB_CS_TB_DS = eINSTANCE.getVSVSTBCsTBDs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbcs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVSTB_CS_TB_DS__TBCS = eINSTANCE.getVSVSTBCsTBDs_Tbcs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbds</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVSTB_CS_TB_DS__TBDS = eINSTANCE.getVSVSTBCsTBDs_Tbds();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSInstantiableSectionImpl <em>VSVS Instantiable Section</em>}' class.

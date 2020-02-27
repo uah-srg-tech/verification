@@ -39,6 +39,15 @@ public interface testsetupFactory extends EFactory {
 	VTestSetupDocument createVTestSetupDocument();
 
 	/**
+	 * Returns a new object of class '<em>VTest Setup TB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup TB Cs TB Ds</em>'.
+	 * @generated
+	 */
+	VTestSetupTBCsTBDs createVTestSetupTBCsTBDs();
+
+	/**
 	 * Returns a new object of class '<em>VTest Setup Applicable Documents</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

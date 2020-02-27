@@ -18,6 +18,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DDocumentTemplate;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAdditionalInformation;
 import es.uah.aut.srg.micobs.svm.svs.VSVSAnalysisInspectionReview;
@@ -26,6 +28,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSDocument;
 import es.uah.aut.srg.micobs.svm.svs.VSVSIntroduction;
 import es.uah.aut.srg.micobs.svm.svs.VSVSReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.svs.VSVSSoftwareOverview;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestCases;
@@ -41,6 +44,7 @@ import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.BasicEList;
+import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
@@ -56,12 +60,20 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getId <em>Id</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getIssue <em>Issue</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getRevision <em>Revision</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getDate <em>Date</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTbcs <em>Tbcs</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTbds <em>Tbds</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getApplicableDocuments <em>Applicable Documents</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getReferenceDocuments <em>Reference Documents</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getFigures <em>Figures</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTables <em>Tables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getSections <em>Sections</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getParagraphs <em>Paragraphs</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getIntroductionSection <em>Introduction Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
@@ -79,6 +91,116 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * @generated
  */
 public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDocument {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ID_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getId() <em>Id</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getId()
+	 * @generated
+	 * @ordered
+	 */
+	protected String id = ID_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getIssue() <em>Issue</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIssue()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ISSUE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getIssue() <em>Issue</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getIssue()
+	 * @generated
+	 * @ordered
+	 */
+	protected String issue = ISSUE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getRevision() <em>Revision</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevision()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String REVISION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getRevision() <em>Revision</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRevision()
+	 * @generated
+	 * @ordered
+	 */
+	protected String revision = REVISION_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String DATE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDate() <em>Date</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDate()
+	 * @generated
+	 * @ordered
+	 */
+	protected String date = DATE_EDEFAULT;
+
+	/**
+	 * The cached value of the '{@link #getTbcsTbdsSection() <em>Tbcs Tbds Section</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTbcsTbdsSection()
+	 * @generated
+	 * @ordered
+	 */
+	protected VSVSTBCsTBDs tbcsTbdsSection;
+
 	/**
 	 * The cached value of the '{@link #getIntroductionSection() <em>Introduction Section</em>}' containment reference.
 	 * <!-- begin-user-doc -->
@@ -218,6 +340,137 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		return svsPackage.Literals.VSVS_DOCUMENT;
 	}
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getId() {
+		return id;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setId(String newId) {
+		String oldId = id;
+		id = newId;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__ID, oldId, id));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getIssue() {
+		return issue;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIssue(String newIssue) {
+		String oldIssue = issue;
+		issue = newIssue;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__ISSUE, oldIssue, issue));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getRevision() {
+		return revision;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setRevision(String newRevision) {
+		String oldRevision = revision;
+		revision = newRevision;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__REVISION, oldRevision, revision));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getDate() {
+		return date;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setDate(String newDate) {
+		String oldDate = date;
+		date = newDate;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__DATE, oldDate, date));
+	}
+
+	@Override
+	public EList<DTBC> getTbcs() {
+		if(getTbcsTbdsSection() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<DTBC> tbcs = new BasicEList<DTBC>();
+			for(DTBC tbc : getTbcsTbdsSection().getTbcs()) {
+				tbcs.add(tbc);
+			}
+			return tbcs;
+		}
+	}
+
+	@Override
+	public EList<DTBD> getTbds() {
+		if(getTbcsTbdsSection() == null) {
+			return ECollections.emptyEList();
+		} else {
+			EList<DTBD> tbds = new BasicEList<DTBD>();
+			for(DTBD tbd : getTbcsTbdsSection().getTbds()) {
+				tbds.add(tbd);
+			};
+			return tbds;
+		}
+	}
+
 	@Override
 	public EList<DApplicableDocument> getApplicableDocuments() {
 		EList<DApplicableDocument> appdocs = new BasicEList<DApplicableDocument>();
@@ -282,6 +535,49 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			paragraphs.add((DParagraph)object);
 		};
 		return paragraphs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSVSTBCsTBDs getTbcsTbdsSection() {
+		return tbcsTbdsSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetTbcsTbdsSection(VSVSTBCsTBDs newTbcsTbdsSection, NotificationChain msgs) {
+		VSVSTBCsTBDs oldTbcsTbdsSection = tbcsTbdsSection;
+		tbcsTbdsSection = newTbcsTbdsSection;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION, oldTbcsTbdsSection, newTbcsTbdsSection);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setTbcsTbdsSection(VSVSTBCsTBDs newTbcsTbdsSection) {
+		if (newTbcsTbdsSection != tbcsTbdsSection) {
+			NotificationChain msgs = null;
+			if (tbcsTbdsSection != null)
+				msgs = ((InternalEObject)tbcsTbdsSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION, null, msgs);
+			if (newTbcsTbdsSection != null)
+				msgs = ((InternalEObject)newTbcsTbdsSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION, null, msgs);
+			msgs = basicSetTbcsTbdsSection(newTbcsTbdsSection, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION, newTbcsTbdsSection, newTbcsTbdsSection));
 	}
 
 	@Override
@@ -832,6 +1128,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION:
+				return basicSetTbcsTbdsSection(null, msgs);
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				return basicSetIntroductionSection(null, msgs);
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -868,6 +1166,20 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case svsPackage.VSVS_DOCUMENT__NAME:
+				return getName();
+			case svsPackage.VSVS_DOCUMENT__ID:
+				return getId();
+			case svsPackage.VSVS_DOCUMENT__ISSUE:
+				return getIssue();
+			case svsPackage.VSVS_DOCUMENT__REVISION:
+				return getRevision();
+			case svsPackage.VSVS_DOCUMENT__DATE:
+				return getDate();
+			case svsPackage.VSVS_DOCUMENT__TBCS:
+				return getTbcs();
+			case svsPackage.VSVS_DOCUMENT__TBDS:
+				return getTbds();
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				return getApplicableDocuments();
 			case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS:
@@ -880,6 +1192,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return getSections();
 			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
 				return getParagraphs();
+			case svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION:
+				return getTbcsTbdsSection();
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				return getIntroductionSection();
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -917,6 +1231,29 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case svsPackage.VSVS_DOCUMENT__NAME:
+				setName((String)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__ID:
+				setId((String)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__ISSUE:
+				setIssue((String)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__REVISION:
+				setRevision((String)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__DATE:
+				setDate((String)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBCS:
+				getTbcs().clear();
+				getTbcs().addAll((Collection<? extends DTBC>)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBDS:
+				getTbds().clear();
+				getTbds().addAll((Collection<? extends DTBD>)newValue);
+				return;
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
 				getApplicableDocuments().addAll((Collection<? extends DApplicableDocument>)newValue);
@@ -940,6 +1277,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
 				getParagraphs().clear();
 				getParagraphs().addAll((Collection<? extends DParagraph>)newValue);
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION:
+				setTbcsTbdsSection((VSVSTBCsTBDs)newValue);
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)newValue);
@@ -989,6 +1329,27 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_DOCUMENT__NAME:
+				setName(NAME_EDEFAULT);
+				return;
+			case svsPackage.VSVS_DOCUMENT__ID:
+				setId(ID_EDEFAULT);
+				return;
+			case svsPackage.VSVS_DOCUMENT__ISSUE:
+				setIssue(ISSUE_EDEFAULT);
+				return;
+			case svsPackage.VSVS_DOCUMENT__REVISION:
+				setRevision(REVISION_EDEFAULT);
+				return;
+			case svsPackage.VSVS_DOCUMENT__DATE:
+				setDate(DATE_EDEFAULT);
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBCS:
+				getTbcs().clear();
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBDS:
+				getTbds().clear();
+				return;
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				getApplicableDocuments().clear();
 				return;
@@ -1006,6 +1367,9 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return;
 			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
 				getParagraphs().clear();
+				return;
+			case svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION:
+				setTbcsTbdsSection((VSVSTBCsTBDs)null);
 				return;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				setIntroductionSection((VSVSIntroduction)null);
@@ -1055,6 +1419,20 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case svsPackage.VSVS_DOCUMENT__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+			case svsPackage.VSVS_DOCUMENT__ID:
+				return ID_EDEFAULT == null ? id != null : !ID_EDEFAULT.equals(id);
+			case svsPackage.VSVS_DOCUMENT__ISSUE:
+				return ISSUE_EDEFAULT == null ? issue != null : !ISSUE_EDEFAULT.equals(issue);
+			case svsPackage.VSVS_DOCUMENT__REVISION:
+				return REVISION_EDEFAULT == null ? revision != null : !REVISION_EDEFAULT.equals(revision);
+			case svsPackage.VSVS_DOCUMENT__DATE:
+				return DATE_EDEFAULT == null ? date != null : !DATE_EDEFAULT.equals(date);
+			case svsPackage.VSVS_DOCUMENT__TBCS:
+				return !getTbcs().isEmpty();
+			case svsPackage.VSVS_DOCUMENT__TBDS:
+				return !getTbds().isEmpty();
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS:
 				return !getApplicableDocuments().isEmpty();
 			case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS:
@@ -1067,6 +1445,8 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 				return !getSections().isEmpty();
 			case svsPackage.VSVS_DOCUMENT__PARAGRAPHS:
 				return !getParagraphs().isEmpty();
+			case svsPackage.VSVS_DOCUMENT__TBCS_TBDS_SECTION:
+				return tbcsTbdsSection != null;
 			case svsPackage.VSVS_DOCUMENT__INTRODUCTION_SECTION:
 				return introductionSection != null;
 			case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION:
@@ -1104,6 +1484,13 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass) {
 		if (baseClass == DDocumentTemplate.class) {
 			switch (derivedFeatureID) {
+				case svsPackage.VSVS_DOCUMENT__NAME: return doctplPackage.DDOCUMENT_TEMPLATE__NAME;
+				case svsPackage.VSVS_DOCUMENT__ID: return doctplPackage.DDOCUMENT_TEMPLATE__ID;
+				case svsPackage.VSVS_DOCUMENT__ISSUE: return doctplPackage.DDOCUMENT_TEMPLATE__ISSUE;
+				case svsPackage.VSVS_DOCUMENT__REVISION: return doctplPackage.DDOCUMENT_TEMPLATE__REVISION;
+				case svsPackage.VSVS_DOCUMENT__DATE: return doctplPackage.DDOCUMENT_TEMPLATE__DATE;
+				case svsPackage.VSVS_DOCUMENT__TBCS: return doctplPackage.DDOCUMENT_TEMPLATE__TBCS;
+				case svsPackage.VSVS_DOCUMENT__TBDS: return doctplPackage.DDOCUMENT_TEMPLATE__TBDS;
 				case svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS;
 				case svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS: return doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS;
 				case svsPackage.VSVS_DOCUMENT__FIGURES: return doctplPackage.DDOCUMENT_TEMPLATE__FIGURES;
@@ -1125,6 +1512,13 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 	public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass) {
 		if (baseClass == DDocumentTemplate.class) {
 			switch (baseFeatureID) {
+				case doctplPackage.DDOCUMENT_TEMPLATE__NAME: return svsPackage.VSVS_DOCUMENT__NAME;
+				case doctplPackage.DDOCUMENT_TEMPLATE__ID: return svsPackage.VSVS_DOCUMENT__ID;
+				case doctplPackage.DDOCUMENT_TEMPLATE__ISSUE: return svsPackage.VSVS_DOCUMENT__ISSUE;
+				case doctplPackage.DDOCUMENT_TEMPLATE__REVISION: return svsPackage.VSVS_DOCUMENT__REVISION;
+				case doctplPackage.DDOCUMENT_TEMPLATE__DATE: return svsPackage.VSVS_DOCUMENT__DATE;
+				case doctplPackage.DDOCUMENT_TEMPLATE__TBCS: return svsPackage.VSVS_DOCUMENT__TBCS;
+				case doctplPackage.DDOCUMENT_TEMPLATE__TBDS: return svsPackage.VSVS_DOCUMENT__TBDS;
 				case doctplPackage.DDOCUMENT_TEMPLATE__APPLICABLE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__APPLICABLE_DOCUMENTS;
 				case doctplPackage.DDOCUMENT_TEMPLATE__REFERENCE_DOCUMENTS: return svsPackage.VSVS_DOCUMENT__REFERENCE_DOCUMENTS;
 				case doctplPackage.DDOCUMENT_TEMPLATE__FIGURES: return svsPackage.VSVS_DOCUMENT__FIGURES;
@@ -1135,6 +1529,30 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 			}
 		}
 		return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy()) return super.toString();
+
+		StringBuffer result = new StringBuffer(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", id: ");
+		result.append(id);
+		result.append(", issue: ");
+		result.append(issue);
+		result.append(", revision: ");
+		result.append(revision);
+		result.append(", date: ");
+		result.append(date);
+		result.append(')');
+		return result.toString();
 	}
 
 } //VSVSDocumentImpl

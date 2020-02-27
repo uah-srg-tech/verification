@@ -66,6 +66,7 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case srsPackage.VSRS_DOCUMENT: return createVSRSDocument();
+			case srsPackage.VSRSTB_CS_TB_DS: return createVSRSTBCsTBDs();
 			case srsPackage.VSRS_INTRODUCTION: return createVSRSIntroduction();
 			case srsPackage.VSRS_APPLICABLE_DOCUMENTS: return createVSRSApplicableDocuments();
 			case srsPackage.VSRS_REFERENCE_DOCUMENTS: return createVSRSReferenceDocuments();
@@ -141,6 +142,16 @@ public class srsFactoryImpl extends EFactoryImpl implements srsFactory {
 	public VSRSDocument createVSRSDocument() {
 		VSRSDocumentImpl vsrsDocument = new VSRSDocumentImpl();
 		return vsrsDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSRSTBCsTBDs createVSRSTBCsTBDs() {
+		VSRSTBCsTBDsImpl vsrstbCsTBDs = new VSRSTBCsTBDsImpl();
+		return vsrstbCsTBDs;
 	}
 
 	/**

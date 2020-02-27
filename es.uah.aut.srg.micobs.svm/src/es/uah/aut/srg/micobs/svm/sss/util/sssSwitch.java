@@ -93,6 +93,14 @@ public class sssSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case sssPackage.VSSSTB_CS_TB_DS: {
+				VSSSTBCsTBDs vssstbCsTBDs = (VSSSTBCsTBDs)theEObject;
+				T result = caseVSSSTBCsTBDs(vssstbCsTBDs);
+				if (result == null) result = caseDFixedSection(vssstbCsTBDs);
+				if (result == null) result = caseDAbstractSection(vssstbCsTBDs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case sssPackage.VSSS_INTRODUCTION: {
 				VSSSIntroduction vsssIntroduction = (VSSSIntroduction)theEObject;
 				T result = caseVSSSIntroduction(vsssIntroduction);
@@ -438,6 +446,21 @@ public class sssSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSSSDocument(VSSSDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VSSSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VSSSTB Cs TB Ds</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVSSSTBCsTBDs(VSSSTBCsTBDs object) {
 		return null;
 	}
 

@@ -65,6 +65,7 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
 			case sssPackage.VSSS_DOCUMENT: return createVSSSDocument();
+			case sssPackage.VSSSTB_CS_TB_DS: return createVSSSTBCsTBDs();
 			case sssPackage.VSSS_INTRODUCTION: return createVSSSIntroduction();
 			case sssPackage.VSSS_APPLICABLE_DOCUMENTS: return createVSSSApplicableDocuments();
 			case sssPackage.VSSS_REFERENCE_DOCUMENTS: return createVSSSReferenceDocuments();
@@ -111,6 +112,16 @@ public class sssFactoryImpl extends EFactoryImpl implements sssFactory {
 	public VSSSDocument createVSSSDocument() {
 		VSSSDocumentImpl vsssDocument = new VSSSDocumentImpl();
 		return vsssDocument;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VSSSTBCsTBDs createVSSSTBCsTBDs() {
+		VSSSTBCsTBDsImpl vssstbCsTBDs = new VSSSTBCsTBDsImpl();
+		return vssstbCsTBDs;
 	}
 
 	/**

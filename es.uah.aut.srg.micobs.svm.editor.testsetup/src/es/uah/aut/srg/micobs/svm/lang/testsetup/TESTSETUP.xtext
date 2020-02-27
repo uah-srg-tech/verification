@@ -15,6 +15,7 @@ VTestSetupDocument returns VTestSetupDocument:
 		'revision=' revision=UINT_STRING
 		'date=' date=STRING
 		'>'
+		(tbcsTbdsSection=VTestSetupTBCsTBDs)?
 		applicableDocumentsSection=VTestSetupApplicableDocuments
 		referenceDocumentsSection=VTestSetupReferenceDocuments
 		'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>'
@@ -22,6 +23,25 @@ VTestSetupDocument returns VTestSetupDocument:
 		('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
 		'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
 	'</TestSetup>';
+
+VTestSetupTBCsTBDs returns VTestSetupTBCsTBDs:
+	{VTestSetupTBCsTBDs}
+	'<TBCsTBDs>'
+		(tbcs+=DTBC)*
+		(tbds+=DTBD)*
+	'</TBCsTBDs>';
+
+DTBC returns doctpl::DTBC:
+	'<TBC'
+		'name=' name=STRING
+		'description=' description=STRING
+	'/>';
+
+DTBD returns doctpl::DTBD:
+	'<TBD'
+		'name=' name=STRING
+		'description=' description=STRING
+	'/>';
 
 VTestSetupApplicableDocuments returns VTestSetupApplicableDocuments:
 	{VTestSetupApplicableDocuments}
@@ -43,6 +63,7 @@ DApplicableDocument returns doctpl::DApplicableDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 DReferenceDocument returns doctpl::DReferenceDocument:
@@ -53,6 +74,7 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 VTestSetupInterfacesSection returns VTestSetupInterfacesSection:
@@ -199,9 +221,7 @@ DRun returns doctpl::DRun:
 DHyperlink returns doctpl::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doctpl::DReferenceableObject|STRING]
-	'>'
-		(run=DRun)?
-	'</hyperlink>';
+	(('>' (run=DRun) '</hyperlink>') | ('/>'));
 
 DTab returns doctpl::DTab:
 {doctpl::DTab}

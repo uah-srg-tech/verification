@@ -91,6 +91,10 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 				return createVSSSDocumentAdapter();
 			}
 			@Override
+			public Adapter caseVSSSTBCsTBDs(VSSSTBCsTBDs object) {
+				return createVSSSTBCsTBDsAdapter();
+			}
+			@Override
 			public Adapter caseVSSSIntroduction(VSSSIntroduction object) {
 				return createVSSSIntroductionAdapter();
 			}
@@ -301,6 +305,20 @@ public class sssAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSSSDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.sss.VSSSTBCsTBDs <em>VSSSTB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.sss.VSSSTBCsTBDs
+	 * @generated
+	 */
+	public Adapter createVSSSTBCsTBDsAdapter() {
 		return null;
 	}
 

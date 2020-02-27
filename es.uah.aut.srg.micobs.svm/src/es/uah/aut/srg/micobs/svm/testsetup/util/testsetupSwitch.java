@@ -87,6 +87,14 @@ public class testsetupSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case testsetupPackage.VTEST_SETUP_TB_CS_TB_DS: {
+				VTestSetupTBCsTBDs vTestSetupTBCsTBDs = (VTestSetupTBCsTBDs)theEObject;
+				T result = caseVTestSetupTBCsTBDs(vTestSetupTBCsTBDs);
+				if (result == null) result = caseDFixedSection(vTestSetupTBCsTBDs);
+				if (result == null) result = caseDAbstractSection(vTestSetupTBCsTBDs);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case testsetupPackage.VTEST_SETUP_APPLICABLE_DOCUMENTS: {
 				VTestSetupApplicableDocuments vTestSetupApplicableDocuments = (VTestSetupApplicableDocuments)theEObject;
 				T result = caseVTestSetupApplicableDocuments(vTestSetupApplicableDocuments);
@@ -190,6 +198,21 @@ public class testsetupSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTestSetupDocument(VTestSetupDocument object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup TB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup TB Cs TB Ds</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupTBCsTBDs(VTestSetupTBCsTBDs object) {
 		return null;
 	}
 

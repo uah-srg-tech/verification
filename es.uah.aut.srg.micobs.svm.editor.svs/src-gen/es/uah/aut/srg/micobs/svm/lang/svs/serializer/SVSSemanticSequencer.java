@@ -24,6 +24,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
@@ -57,6 +59,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryDataField;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeader;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetrySet;
+import es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTaskIdentification;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTerm;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTermsDefinitionsAbbreviations;
@@ -136,6 +139,12 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
+				return; 
+			case doctplPackage.DTBC:
+				sequence_DTBC(context, (DTBC) semanticObject); 
+				return; 
+			case doctplPackage.DTBD:
+				sequence_DTBD(context, (DTBD) semanticObject); 
 				return; 
 			case doctplPackage.DTAB:
 				sequence_DTab(context, (DTab) semanticObject); 
@@ -245,6 +254,9 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case svsPackage.VSVS_STEP_TELEMETRY_SET:
 				sequence_VSVSStepTelemetrySet(context, (VSVSStepTelemetrySet) semanticObject); 
 				return; 
+			case svsPackage.VSVSTB_CS_TB_DS:
+				sequence_VSVSTBCsTBDs(context, (VSVSTBCsTBDs) semanticObject); 
+				return; 
 			case svsPackage.VSVS_TASK_IDENTIFICATION:
 				sequence_VSVSTaskIdentification(context, (VSVSTaskIdentification) semanticObject); 
 				return; 
@@ -288,7 +300,14 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -433,7 +452,14 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -468,6 +494,30 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     )
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBC returns DTBC
+	 *
+	 * Constraint:
+	 *     (name=STRING (description=STRING | parentTBC=[DTBC|STRING]))
+	 */
+	protected void sequence_DTBC(ISerializationContext context, DTBC semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBD returns DTBD
+	 *
+	 * Constraint:
+	 *     (name=STRING (description=STRING | parentTBD=[DTBD|STRING]))
+	 */
+	protected void sequence_DTBD(ISerializationContext context, DTBD semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -673,6 +723,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         revision=UINT_STRING 
 	 *         date=STRING 
 	 *         parents+=[VTraceableDocument|STRING]* 
+	 *         tbcsTbdsSection=VSVSTBCsTBDs? 
 	 *         introductionSection=VSVSIntroduction 
 	 *         applicableDocumentsSection=VSVSApplicableDocuments 
 	 *         referenceDocumentsSection=VSVSReferenceDocuments 
@@ -1009,6 +1060,18 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     (name=STRING interface=[VTestSetupSupportedInterface|STRING] tmData=VSVSStepTelemetryData tmHeader=VSVSStepTelemetryHeader?)
 	 */
 	protected void sequence_VSVSStepTelemetry(ISerializationContext context, VSVSStepTelemetry semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VSVSTBCsTBDs returns VSVSTBCsTBDs
+	 *
+	 * Constraint:
+	 *     (tbcs+=DTBC* tbds+=DTBD*)
+	 */
+	protected void sequence_VSVSTBCsTBDs(ISerializationContext context, VSVSTBCsTBDs semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

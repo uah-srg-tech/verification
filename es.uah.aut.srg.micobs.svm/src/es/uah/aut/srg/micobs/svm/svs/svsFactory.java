@@ -39,6 +39,15 @@ public interface svsFactory extends EFactory {
 	VSVSDocument createVSVSDocument();
 
 	/**
+	 * Returns a new object of class '<em>VSVSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSVSTB Cs TB Ds</em>'.
+	 * @generated
+	 */
+	VSVSTBCsTBDs createVSVSTBCsTBDs();
+
+	/**
 	 * Returns a new object of class '<em>VSVS Instantiable Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

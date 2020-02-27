@@ -24,6 +24,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DParagraph;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceDocument;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRow;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DRun;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
+import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTab;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTableFromFile;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
@@ -42,6 +44,7 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 import java.util.Set;
 import org.eclipse.emf.ecore.EObject;
@@ -107,6 +110,12 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case doctplPackage.DRUN:
 				sequence_DRun(context, (DRun) semanticObject); 
 				return; 
+			case doctplPackage.DTBC:
+				sequence_DTBC(context, (DTBC) semanticObject); 
+				return; 
+			case doctplPackage.DTBD:
+				sequence_DTBD(context, (DTBD) semanticObject); 
+				return; 
 			case doctplPackage.DTAB:
 				sequence_DTab(context, (DTab) semanticObject); 
 				return; 
@@ -158,6 +167,9 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case testsetupPackage.VTEST_SETUP_SUPPORTED_INTERFACE:
 				sequence_VTestSetupSupportedInterface(context, (VTestSetupSupportedInterface) semanticObject); 
 				return; 
+			case testsetupPackage.VTEST_SETUP_TB_CS_TB_DS:
+				sequence_VTestSetupTBCsTBDs(context, (VTestSetupTBCsTBDs) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null)
 			errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
@@ -168,7 +180,14 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     DApplicableDocument returns DApplicableDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DApplicableDocument(ISerializationContext context, DApplicableDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -313,7 +332,14 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     DReferenceDocument returns DReferenceDocument
 	 *
 	 * Constraint:
-	 *     (name=STRING title=STRING id=STRING (issue=UINT_STRING revision=UINT_STRING?)? date=STRING?)
+	 *     (
+	 *         name=STRING 
+	 *         title=STRING 
+	 *         id=STRING 
+	 *         (issue=UINT_STRING revision=UINT_STRING?)? 
+	 *         date=STRING? 
+	 *         url=STRING?
+	 *     )
 	 */
 	protected void sequence_DReferenceDocument(ISerializationContext context, DReferenceDocument semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -349,6 +375,48 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 */
 	protected void sequence_DRun(ISerializationContext context, DRun semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBC returns DTBC
+	 *
+	 * Constraint:
+	 *     (name=STRING description=STRING)
+	 */
+	protected void sequence_DTBC(ISerializationContext context, DTBC semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDTBCAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDTBCAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DTBD returns DTBD
+	 *
+	 * Constraint:
+	 *     (name=STRING description=STRING)
+	 */
+	protected void sequence_DTBD(ISerializationContext context, DTBD semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DREFERENCEABLE_OBJECT__NAME));
+			if (transientValues.isValueTransient(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, doctplPackage.Literals.DABSTRACT_PLACEHOLDER__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDTBDAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDTBDAccess().getDescriptionSTRINGTerminalRuleCall_4_0(), semanticObject.getDescription());
+		feeder.finish();
 	}
 	
 	
@@ -463,6 +531,7 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         issue=UINT_STRING 
 	 *         revision=UINT_STRING 
 	 *         date=STRING 
+	 *         tbcsTbdsSection=VTestSetupTBCsTBDs? 
 	 *         applicableDocumentsSection=VTestSetupApplicableDocuments 
 	 *         referenceDocumentsSection=VTestSetupReferenceDocuments 
 	 *         interfaces=VTestSetupInterfacesSection 
@@ -643,6 +712,18 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 		feeder.accept(grammarAccess.getVTestSetupSupportedInterfaceAccess().getInterfaceVTestSetupInterfaceSTRINGTerminalRuleCall_4_0_1(), semanticObject.getInterface());
 		feeder.accept(grammarAccess.getVTestSetupSupportedInterfaceAccess().getScenarioInterfaceTMTCIFScenarioInterfaceSTRINGTerminalRuleCall_6_0_1(), semanticObject.getScenarioInterface());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VTestSetupTBCsTBDs returns VTestSetupTBCsTBDs
+	 *
+	 * Constraint:
+	 *     (tbcs+=DTBC* tbds+=DTBD*)
+	 */
+	protected void sequence_VTestSetupTBCsTBDs(ISerializationContext context, VTestSetupTBCsTBDs semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

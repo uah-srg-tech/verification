@@ -79,51 +79,6 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT = 0;
 
 	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__NAME = tdmPackage.VTRACEABLE_DOCUMENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__ID = tdmPackage.VTRACEABLE_DOCUMENT__ID;
-
-	/**
-	 * The feature id for the '<em><b>Issue</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__ISSUE = tdmPackage.VTRACEABLE_DOCUMENT__ISSUE;
-
-	/**
-	 * The feature id for the '<em><b>Revision</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__REVISION = tdmPackage.VTRACEABLE_DOCUMENT__REVISION;
-
-	/**
-	 * The feature id for the '<em><b>Date</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSRS_DOCUMENT__DATE = tdmPackage.VTRACEABLE_DOCUMENT__DATE;
-
-	/**
 	 * The feature id for the '<em><b>Parents</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -142,13 +97,76 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT__GROUPS = tdmPackage.VTRACEABLE_DOCUMENT__GROUPS;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__NAME = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__ID = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Issue</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__ISSUE = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Revision</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__REVISION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Date</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__DATE = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__TBCS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__TBDS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Applicable Documents</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 0;
+	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents</b></em>' reference list.
@@ -157,7 +175,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 1;
+	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The feature id for the '<em><b>Figures</b></em>' reference list.
@@ -166,7 +184,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 2;
+	int VSRS_DOCUMENT__FIGURES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The feature id for the '<em><b>Tables</b></em>' reference list.
@@ -175,7 +193,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 3;
+	int VSRS_DOCUMENT__TABLES = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
 
 	/**
 	 * The feature id for the '<em><b>Sections</b></em>' reference list.
@@ -184,7 +202,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__SECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 4;
+	int VSRS_DOCUMENT__SECTIONS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
 
 	/**
 	 * The feature id for the '<em><b>Paragraphs</b></em>' reference list.
@@ -193,7 +211,16 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__PARAGRAPHS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 5;
+	int VSRS_DOCUMENT__PARAGRAPHS = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs Tbds Section</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRS_DOCUMENT__TBCS_TBDS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
 
 	/**
 	 * The feature id for the '<em><b>Introduction Section</b></em>' containment reference.
@@ -202,7 +229,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 6;
+	int VSRS_DOCUMENT__INTRODUCTION_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 14;
 
 	/**
 	 * The feature id for the '<em><b>Applicable Documents Section</b></em>' containment reference.
@@ -211,7 +238,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 7;
+	int VSRS_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 15;
 
 	/**
 	 * The feature id for the '<em><b>Reference Documents Section</b></em>' containment reference.
@@ -220,7 +247,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 8;
+	int VSRS_DOCUMENT__REFERENCE_DOCUMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 16;
 
 	/**
 	 * The feature id for the '<em><b>Terms Definitions Abbreviations Section</b></em>' containment reference.
@@ -229,7 +256,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 9;
+	int VSRS_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 17;
 
 	/**
 	 * The feature id for the '<em><b>Software Overview Section</b></em>' containment reference.
@@ -238,7 +265,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 10;
+	int VSRS_DOCUMENT__SOFTWARE_OVERVIEW_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 18;
 
 	/**
 	 * The feature id for the '<em><b>Requirements Section</b></em>' containment reference.
@@ -247,7 +274,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 11;
+	int VSRS_DOCUMENT__REQUIREMENTS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 19;
 
 	/**
 	 * The feature id for the '<em><b>Logical Models Section</b></em>' containment reference.
@@ -256,7 +283,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 12;
+	int VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 20;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Document</em>' class.
@@ -265,7 +292,7 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 13;
+	int VSRS_DOCUMENT_FEATURE_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_FEATURE_COUNT + 21;
 
 	/**
 	 * The number of operations of the '<em>VSRS Document</em>' class.
@@ -277,6 +304,61 @@ public interface srsPackage extends EPackage {
 	int VSRS_DOCUMENT_OPERATION_COUNT = tdmPackage.VTRACEABLE_DOCUMENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTBCsTBDsImpl <em>VSRSTB Cs TB Ds</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSTBCsTBDsImpl
+	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTBCsTBDs()
+	 * @generated
+	 */
+	int VSRSTB_CS_TB_DS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSTB_CS_TB_DS__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Tbcs</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSTB_CS_TB_DS__TBCS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Tbds</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSTB_CS_TB_DS__TBDS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of structural features of the '<em>VSRSTB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSTB_CS_TB_DS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
+
+	/**
+	 * The number of operations of the '<em>VSRSTB Cs TB Ds</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSRSTB_CS_TB_DS_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSIntroductionImpl <em>VSRS Introduction</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -284,7 +366,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSIntroduction()
 	 * @generated
 	 */
-	int VSRS_INTRODUCTION = 1;
+	int VSRS_INTRODUCTION = 2;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -330,7 +412,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSApplicableDocuments()
 	 * @generated
 	 */
-	int VSRS_APPLICABLE_DOCUMENTS = 2;
+	int VSRS_APPLICABLE_DOCUMENTS = 3;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -376,7 +458,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSReferenceDocuments()
 	 * @generated
 	 */
-	int VSRS_REFERENCE_DOCUMENTS = 3;
+	int VSRS_REFERENCE_DOCUMENTS = 4;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -422,7 +504,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTermsDefinitionsAbbreviations()
 	 * @generated
 	 */
-	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS = 4;
+	int VSRS_TERMS_DEFINITIONS_ABBREVIATIONS = 5;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -486,7 +568,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSAbstractBriefDescription()
 	 * @generated
 	 */
-	int VSRS_ABSTRACT_BRIEF_DESCRIPTION = 5;
+	int VSRS_ABSTRACT_BRIEF_DESCRIPTION = 6;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -532,7 +614,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTerm()
 	 * @generated
 	 */
-	int VSRS_TERM = 6;
+	int VSRS_TERM = 7;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -578,7 +660,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDefinition()
 	 * @generated
 	 */
-	int VSRS_DEFINITION = 7;
+	int VSRS_DEFINITION = 8;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -624,7 +706,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSAbbreviation()
 	 * @generated
 	 */
-	int VSRS_ABBREVIATION = 8;
+	int VSRS_ABBREVIATION = 9;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -670,7 +752,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSFixedSection()
 	 * @generated
 	 */
-	int VSRS_FIXED_SECTION = 9;
+	int VSRS_FIXED_SECTION = 10;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -725,7 +807,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSInstantiableSection()
 	 * @generated
 	 */
-	int VSRS_INSTANTIABLE_SECTION = 10;
+	int VSRS_INSTANTIABLE_SECTION = 11;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -798,7 +880,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSoftwareOverview()
 	 * @generated
 	 */
-	int VSRS_SOFTWARE_OVERVIEW = 11;
+	int VSRS_SOFTWARE_OVERVIEW = 12;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -871,7 +953,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSAbstractRequirementSection()
 	 * @generated
 	 */
-	int VSRS_ABSTRACT_REQUIREMENT_SECTION = 12;
+	int VSRS_ABSTRACT_REQUIREMENT_SECTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -953,7 +1035,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSInstantiableRequirementSection()
 	 * @generated
 	 */
-	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION = 13;
+	int VSRS_INSTANTIABLE_REQUIREMENT_SECTION = 14;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1044,7 +1126,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSRequirements()
 	 * @generated
 	 */
-	int VSRS_REQUIREMENTS = 14;
+	int VSRS_REQUIREMENTS = 15;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -1243,7 +1325,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSGeneralRequirements()
 	 * @generated
 	 */
-	int VSRS_GENERAL_REQUIREMENTS = 15;
+	int VSRS_GENERAL_REQUIREMENTS = 16;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1325,7 +1407,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSFunctionalRequirements()
 	 * @generated
 	 */
-	int VSRS_FUNCTIONAL_REQUIREMENTS = 16;
+	int VSRS_FUNCTIONAL_REQUIREMENTS = 17;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1407,7 +1489,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSPerformanceRequirements()
 	 * @generated
 	 */
-	int VSRS_PERFORMANCE_REQUIREMENTS = 17;
+	int VSRS_PERFORMANCE_REQUIREMENTS = 18;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1489,7 +1571,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSInterfaceRequirements()
 	 * @generated
 	 */
-	int VSRS_INTERFACE_REQUIREMENTS = 18;
+	int VSRS_INTERFACE_REQUIREMENTS = 19;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1571,7 +1653,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSOperationalRequirements()
 	 * @generated
 	 */
-	int VSRS_OPERATIONAL_REQUIREMENTS = 19;
+	int VSRS_OPERATIONAL_REQUIREMENTS = 20;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1653,7 +1735,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSResourcesRequirements()
 	 * @generated
 	 */
-	int VSRS_RESOURCES_REQUIREMENTS = 20;
+	int VSRS_RESOURCES_REQUIREMENTS = 21;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1735,7 +1817,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDesignRequirements()
 	 * @generated
 	 */
-	int VSRS_DESIGN_REQUIREMENTS = 21;
+	int VSRS_DESIGN_REQUIREMENTS = 22;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1817,7 +1899,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSecurityPrivacyRequirements()
 	 * @generated
 	 */
-	int VSRS_SECURITY_PRIVACY_REQUIREMENTS = 22;
+	int VSRS_SECURITY_PRIVACY_REQUIREMENTS = 23;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1899,7 +1981,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSPortabilityRequirements()
 	 * @generated
 	 */
-	int VSRS_PORTABILITY_REQUIREMENTS = 23;
+	int VSRS_PORTABILITY_REQUIREMENTS = 24;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -1981,7 +2063,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWQualityRequirements()
 	 * @generated
 	 */
-	int VSRSSW_QUALITY_REQUIREMENTS = 24;
+	int VSRSSW_QUALITY_REQUIREMENTS = 25;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2063,7 +2145,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWReliabilityRequirements()
 	 * @generated
 	 */
-	int VSRSSW_RELIABILITY_REQUIREMENTS = 25;
+	int VSRSSW_RELIABILITY_REQUIREMENTS = 26;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2145,7 +2227,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWMaintainabilityRequirements()
 	 * @generated
 	 */
-	int VSRSSW_MAINTAINABILITY_REQUIREMENTS = 26;
+	int VSRSSW_MAINTAINABILITY_REQUIREMENTS = 27;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2227,7 +2309,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWSafetyRequirements()
 	 * @generated
 	 */
-	int VSRSSW_SAFETY_REQUIREMENTS = 27;
+	int VSRSSW_SAFETY_REQUIREMENTS = 28;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2309,7 +2391,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSSWConfigurationDeliveryRequirements()
 	 * @generated
 	 */
-	int VSRSSW_CONFIGURATION_DELIVERY_REQUIREMENTS = 28;
+	int VSRSSW_CONFIGURATION_DELIVERY_REQUIREMENTS = 29;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2391,7 +2473,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDataDefinitionDBRequirements()
 	 * @generated
 	 */
-	int VSRS_DATA_DEFINITION_DB_REQUIREMENTS = 29;
+	int VSRS_DATA_DEFINITION_DB_REQUIREMENTS = 30;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2473,7 +2555,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSHumanFactorsRequirements()
 	 * @generated
 	 */
-	int VSRS_HUMAN_FACTORS_REQUIREMENTS = 30;
+	int VSRS_HUMAN_FACTORS_REQUIREMENTS = 31;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2555,7 +2637,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSAdaptationInstallationRequirements()
 	 * @generated
 	 */
-	int VSRS_ADAPTATION_INSTALLATION_REQUIREMENTS = 31;
+	int VSRS_ADAPTATION_INSTALLATION_REQUIREMENTS = 32;
 
 	/**
 	 * The feature id for the '<em><b>Items</b></em>' reference list.
@@ -2637,7 +2719,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDocumentItem()
 	 * @generated
 	 */
-	int VSRS_DOCUMENT_ITEM = 32;
+	int VSRS_DOCUMENT_ITEM = 33;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2728,7 +2810,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSLogicalModels()
 	 * @generated
 	 */
-	int VSRS_LOGICAL_MODELS = 33;
+	int VSRS_LOGICAL_MODELS = 34;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -2774,7 +2856,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSLogicalModel()
 	 * @generated
 	 */
-	int VSRS_LOGICAL_MODEL = 34;
+	int VSRS_LOGICAL_MODEL = 35;
 
 	/**
 	 * The number of structural features of the '<em>VSRS Logical Model</em>' class.
@@ -2802,7 +2884,7 @@ public interface srsPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSDocumentItemModes()
 	 * @generated
 	 */
-	int VSRS_DOCUMENT_ITEM_MODES = 35;
+	int VSRS_DOCUMENT_ITEM_MODES = 36;
 
 
 	/**
@@ -2814,6 +2896,17 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getVSRSDocument();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTbcsTbdsSection <em>Tbcs Tbds Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Tbcs Tbds Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getTbcsTbdsSection()
+	 * @see #getVSRSDocument()
+	 * @generated
+	 */
+	EReference getVSRSDocument_TbcsTbdsSection();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.srs.VSRSDocument#getIntroductionSection <em>Introduction Section</em>}'.
@@ -2891,6 +2984,38 @@ public interface srsPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSRSDocument_LogicalModelsSection();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs <em>VSRSTB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VSRSTB Cs TB Ds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs
+	 * @generated
+	 */
+	EClass getVSRSTBCsTBDs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs#getTbcs <em>Tbcs</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbcs</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs#getTbcs()
+	 * @see #getVSRSTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVSRSTBCsTBDs_Tbcs();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs#getTbds <em>Tbds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Tbds</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.srs.VSRSTBCsTBDs#getTbds()
+	 * @see #getVSRSTBCsTBDs()
+	 * @generated
+	 */
+	EReference getVSRSTBCsTBDs_Tbds();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.srs.VSRSIntroduction <em>VSRS Introduction</em>}'.
@@ -3749,6 +3874,14 @@ public interface srsPackage extends EPackage {
 		EClass VSRS_DOCUMENT = eINSTANCE.getVSRSDocument();
 
 		/**
+		 * The meta object literal for the '<em><b>Tbcs Tbds Section</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSRS_DOCUMENT__TBCS_TBDS_SECTION = eINSTANCE.getVSRSDocument_TbcsTbdsSection();
+
+		/**
 		 * The meta object literal for the '<em><b>Introduction Section</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -3803,6 +3936,32 @@ public interface srsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSRS_DOCUMENT__LOGICAL_MODELS_SECTION = eINSTANCE.getVSRSDocument_LogicalModelsSection();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSTBCsTBDsImpl <em>VSRSTB Cs TB Ds</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.srs.impl.VSRSTBCsTBDsImpl
+		 * @see es.uah.aut.srg.micobs.svm.srs.impl.srsPackageImpl#getVSRSTBCsTBDs()
+		 * @generated
+		 */
+		EClass VSRSTB_CS_TB_DS = eINSTANCE.getVSRSTBCsTBDs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbcs</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSRSTB_CS_TB_DS__TBCS = eINSTANCE.getVSRSTBCsTBDs_Tbcs();
+
+		/**
+		 * The meta object literal for the '<em><b>Tbds</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSRSTB_CS_TB_DS__TBDS = eINSTANCE.getVSRSTBCsTBDs_Tbds();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.srs.impl.VSRSIntroductionImpl <em>VSRS Introduction</em>}' class.

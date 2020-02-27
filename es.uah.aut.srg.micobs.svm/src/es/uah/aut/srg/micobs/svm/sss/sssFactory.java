@@ -39,6 +39,15 @@ public interface sssFactory extends EFactory {
 	VSSSDocument createVSSSDocument();
 
 	/**
+	 * Returns a new object of class '<em>VSSSTB Cs TB Ds</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VSSSTB Cs TB Ds</em>'.
+	 * @generated
+	 */
+	VSSSTBCsTBDs createVSSSTBCsTBDs();
+
+	/**
 	 * Returns a new object of class '<em>VSSS Introduction</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

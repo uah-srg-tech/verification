@@ -44,6 +44,8 @@ public class SSSScopeProvider extends AbstractDeclarativeScopeProvider {
 		objects.addAll(sssDoc.getFigures());
 		objects.addAll(sssDoc.getTables());
 		objects.addAll(sssDoc.getParagraphs());
+		objects.addAll(sssDoc.getTbcs());
+		objects.addAll(sssDoc.getTbds());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(objects, new Function<DReferenceableObject, IEObjectDescription>(){
 	

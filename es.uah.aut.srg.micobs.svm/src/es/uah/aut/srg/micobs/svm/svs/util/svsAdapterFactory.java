@@ -92,6 +92,10 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createVSVSDocumentAdapter();
 			}
 			@Override
+			public Adapter caseVSVSTBCsTBDs(VSVSTBCsTBDs object) {
+				return createVSVSTBCsTBDsAdapter();
+			}
+			@Override
 			public Adapter caseVSVSInstantiableSection(VSVSInstantiableSection object) {
 				return createVSVSInstantiableSectionAdapter();
 			}
@@ -268,16 +272,16 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 				return createDAbstractSectionAdapter();
 			}
 			@Override
+			public Adapter caseDFixedSection(DFixedSection object) {
+				return createDFixedSectionAdapter();
+			}
+			@Override
 			public Adapter caseMCommonReferenceableObj(MCommonReferenceableObj object) {
 				return createMCommonReferenceableObjAdapter();
 			}
 			@Override
 			public Adapter caseDInstantiableSection(DInstantiableSection object) {
 				return createDInstantiableSectionAdapter();
-			}
-			@Override
-			public Adapter caseDFixedSection(DFixedSection object) {
-				return createDFixedSectionAdapter();
 			}
 			@Override
 			public Adapter caseVValidationDocumentAbstractGroup(VValidationDocumentAbstractGroup object) {
@@ -322,6 +326,20 @@ public class svsAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVSDocumentAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs <em>VSVSTB Cs TB Ds</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSTBCsTBDs
+	 * @generated
+	 */
+	public Adapter createVSVSTBCsTBDsAdapter() {
 		return null;
 	}
 

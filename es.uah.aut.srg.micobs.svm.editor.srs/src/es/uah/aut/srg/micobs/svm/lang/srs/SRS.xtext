@@ -15,6 +15,7 @@ VSRSDocument returns VSRSDocument:
 		'date=' date=STRING
 		'>'
 		(parents+=VTraceableParentDocument)*
+		(tbcsTbdsSection=VSRSTBCsTBDs)?
 		introductionSection=VSRSIntroduction
 		applicableDocumentsSection=VSRSApplicableDocuments
 		referenceDocumentsSection=VSRSReferenceDocuments
@@ -24,11 +25,31 @@ VSRSDocument returns VSRSDocument:
 		logicalModelsSection=VSRSLogicalModels
 	'</SRS>';
 
-VTraceableParentDocument returns tdm::VTraceableParentDocument: 
-	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING] '>'
-	('<notApplicableItem' 'item=' notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')*
-	'</parent>';
+VSRSTBCsTBDs returns VSRSTBCsTBDs:
+	{VSRSTBCsTBDs}
+	'<TBCsTBDs>'
+		(tbcs+=DTBC)*
+		(tbds+=DTBD)*
+	'</TBCsTBDs>';
 
+DTBC returns doctpl::DTBC:
+	'<TBC'
+		'name=' name=STRING
+		('description=' description=STRING |
+		'parentTBC=' parentTBC=[doctpl::DTBC|STRING])
+	'/>';
+
+DTBD returns doctpl::DTBD:
+	'<TBD'
+		'name=' name=STRING
+		('description=' description=STRING |
+		'parentTBD=' parentTBD=[doctpl::DTBD|STRING])
+	'/>';
+
+VTraceableParentDocument returns tdm::VTraceableParentDocument: 
+	'<parent' 'document=' document=[tdm::VTraceableDocument|STRING]
+	(('>'('<notApplicableItem' 'item=' notApplicableItem+=[tdm::VTraceableDocumentAbstractItem|STRING] '/>')+ '</parent>') |
+	('/>'));
 
 DBody returns doctpl::DBody:
 	'<body>'
@@ -101,9 +122,7 @@ DRun returns doctpl::DRun:
 DHyperlink returns doctpl::DHyperlink:
 	'<hyperlink'
 		'reference=' reference=[doctpl::DReferenceableObject|STRING]
-	'>'
-		(run=DRun)?
-	'</hyperlink>';
+	(('>' (run=DRun) '</hyperlink>') | ('/>'));
 	
 DText returns doctpl::DText:
 	content=RUNTEXT;
@@ -174,6 +193,7 @@ DApplicableDocument returns doctpl::DApplicableDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 DReferenceDocument returns doctpl::DReferenceDocument:
@@ -184,6 +204,7 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('issue=' issue=UINT_STRING
 		('revision=' revision=UINT_STRING)?)?
 		('date=' date=STRING)?
+		('url=' url=STRING)?
 	'/>';
 
 VSRSFixedSection returns VSRSFixedSection:
