@@ -1,0 +1,57 @@
+grammar es.uah.aut.srg.micobs.svm.lang.tcr.TCR with org.eclipse.xtext.common.Terminals
+
+import "http://srg.aut.uah.es/micobs/svm/tcr" 
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+import "http://srg.aut.uah.es/micobs/doctpl/doctpl" as doctpl
+
+VTCRTestCampaignReport returns VTCRTestCampaignReport:
+	'<TestCampaignReport'
+		'name=' name=STRING
+		'id=' id=STRING
+		'issue=' issue=UINT_STRING
+		'revision=' revision=UINT_STRING
+		'date=' date=STRING
+		'>'
+		(testReports+=VTCRTestReport)+
+	'</TestCampaignReport>';
+
+VTCRTestReport returns VTCRTestReport:
+	'<VTCRTestReport'
+		'test_procedure=' test_procedure=STRING
+		'status=' status=VTCRTestStatus
+		'>'
+		evidence=DParagraphEvidence
+	'</VTCRTestReport>';
+
+enum VTCRTestStatus returns VTCRTestStatus:
+	Fail = '"Fail"' | Pass = '"Pass"' | NotTested = '"NotTested"';
+
+DParagraphEvidence returns doctpl::DParagraph:
+	'<evidence>'
+		(paragraphContent+=DParagraphContent)+ 
+	'</evidence>';
+
+DParagraphContent returns doctpl::DParagraphContent:
+	DRun;
+
+enum DRunAttributes returns doctpl::DRunAttributes:
+	TRUE = '"true"' | FALSE = '"false"';
+
+DRun returns doctpl::DRun:
+	'<run'
+		('bold=' bold=DRunAttributes)?
+		('italics=' italics=DRunAttributes)?
+		('underline=' underline=DRunAttributes)?
+		('color=' color=STRING)?
+	'>'
+		text=DText
+	'</run>';
+	
+DText returns doctpl::DText:
+	content=RUNTEXT;
+
+terminal RUNTEXT returns ecore::EString:
+    '<text>' -> '</text>';
+	
+terminal UINT_STRING returns ecore::EString:
+	('"' ('0'..'9')+ '"');
