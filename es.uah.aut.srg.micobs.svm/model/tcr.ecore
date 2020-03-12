@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="tcr" nsURI="http://srg.aut.uah.es/micobs/svm/tcr" nsPrefix="micobs.svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VTCRTestCampaignReport" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DDocumentTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testReports" lowerBound="1"
+        upperBound="-1" eType="#//VTCRTestReport" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTCRTestReport">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="test_procedure" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" lowerBound="1"
+        eType="#//VTCRTestStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="evidence" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DParagraph"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VTCRTestStatus">
+    <eLiterals name="Fail" literal="Fail"/>
+    <eLiterals name="Pass" value="1" literal="Pass"/>
+    <eLiterals name="NotTested" value="2" literal="NotTested"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -37,4 +37,7 @@ Export-Package: es.uah.aut.srg.micobs.svm.srs,
  es.uah.aut.srg.micobs.svm.tmtemplate.util,
  es.uah.aut.srg.micobs.svm.testsetup,
  es.uah.aut.srg.micobs.svm.testsetup.impl,
- es.uah.aut.srg.micobs.svm.testsetup.util
+ es.uah.aut.srg.micobs.svm.testsetup.util,
+ es.uah.aut.srg.micobs.svm.tcr,
+ es.uah.aut.srg.micobs.svm.tcr.impl,
+ es.uah.aut.srg.micobs.svm.tcr.util
