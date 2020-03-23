@@ -30,6 +30,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedInterface <em>Supported Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedAction <em>Supported Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedActionOverVariable <em>Supported Action Over Variable</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -111,6 +112,22 @@ public interface VTestSetupScenarioSection extends DInstantiableSection {
 	 * @generated
 	 */
 	EList<VTestSetupAction> getSupportedAction();
+
+	/**
+	 * Returns the value of the '<em><b>Supported Action Over Variable</b></em>' containment reference list.
+	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Supported Action Over Variable</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Supported Action Over Variable</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupScenarioSection_SupportedActionOverVariable()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<VTestSetupSupportedActionOverVariable> getSupportedActionOverVariable();
 
 	/**
 	 * Returns the value of the '<em><b>Body</b></em>' containment reference.

@@ -154,6 +154,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestProcedureAccess().getGroup(), "rule__VSVSTestProcedure__Group__0");
 					put(grammarAccess.getVSVSTestProcedureAccess().getGroup_14(), "rule__VSVSTestProcedure__Group_14__0");
 					put(grammarAccess.getVSVSProcedureStepsAccess().getGroup(), "rule__VSVSProcedureSteps__Group__0");
+					put(grammarAccess.getVSVSProcedureStepsAccess().getGroup_1(), "rule__VSVSProcedureSteps__Group_1__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup(), "rule__VSVSProcedureStep__Group__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup_3(), "rule__VSVSProcedureStep__Group_3__0");
 					put(grammarAccess.getVSVSProcedureStepAccess().getGroup_4(), "rule__VSVSProcedureStep__Group_4__0");
@@ -349,6 +350,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSTestProcedureAccess().getTestCaseAssignment_14_2(), "rule__VSVSTestProcedure__TestCaseAssignment_14_2");
 					put(grammarAccess.getVSVSTestProcedureAccess().getProcedureStepsAssignment_15(), "rule__VSVSTestProcedure__ProcedureStepsAssignment_15");
 					put(grammarAccess.getVSVSTestProcedureAccess().getTestScriptAssignment_17(), "rule__VSVSTestProcedure__TestScriptAssignment_17");
+					put(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableAssignment_1_2(), "rule__VSVSProcedureSteps__PriorActionOverVariableAssignment_1_2");
 					put(grammarAccess.getVSVSProcedureStepsAccess().getStepAssignment_2(), "rule__VSVSProcedureSteps__StepAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getNameAssignment_2(), "rule__VSVSProcedureStep__NameAssignment_2");
 					put(grammarAccess.getVSVSProcedureStepAccess().getPrev_stepAssignment_3_1(), "rule__VSVSProcedureStep__Prev_stepAssignment_3_1");

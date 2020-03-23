@@ -1165,15 +1165,6 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * @generated
 	 */
 	public EReference getVSVSTestProcedure_ProcedureSteps() {
-		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVSTestProcedure_TestScript() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -1182,8 +1173,17 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSTestProcedure_TestCase() {
+	public EReference getVSVSTestProcedure_TestScript() {
 		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSTestProcedure_TestCase() {
+		return (EReference)vsvsTestProcedureEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -1202,6 +1202,15 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 */
 	public EReference getVSVSProcedureSteps_Step() {
 		return (EReference)vsvsProcedureStepsEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVSVSProcedureSteps_PriorActionOverVariable() {
+		return (EReference)vsvsProcedureStepsEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -1941,12 +1950,13 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__IDENTIFIER);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__PURPOSE);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__SCENARIO);
+		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_CASE);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__PROCEDURE_STEPS);
 		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_SCRIPT);
-		createEReference(vsvsTestProcedureEClass, VSVS_TEST_PROCEDURE__TEST_CASE);
 
 		vsvsProcedureStepsEClass = createEClass(VSVS_PROCEDURE_STEPS);
 		createEReference(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__STEP);
+		createEReference(vsvsProcedureStepsEClass, VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE);
 
 		vsvsProcedureStepEClass = createEClass(VSVS_PROCEDURE_STEP);
 		createEAttribute(vsvsProcedureStepEClass, VSVS_PROCEDURE_STEP__NAME);
@@ -2208,12 +2218,13 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSTestProcedure_Identifier(), this.getVSVSTestInfo(), null, "identifier", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Purpose(), this.getVSVSTestInfo(), null, "purpose", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_Scenario(), thetestsetupPackage.getVTestSetupScenarioSection(), null, "scenario", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSTestProcedure_TestCase(), this.getVSVSTestCase(), null, "testCase", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_ProcedureSteps(), this.getVSVSProcedureSteps(), null, "procedureSteps", null, 1, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVSTestProcedure_TestScript(), this.getVSVSTestInfo(), null, "testScript", null, 0, 1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSTestProcedure_TestCase(), this.getVSVSTestCase(), null, "testCase", null, 1, -1, VSVSTestProcedure.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsProcedureStepsEClass, VSVSProcedureSteps.class, "VSVSProcedureSteps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSProcedureSteps_Step(), this.getVSVSProcedureStep(), null, "step", null, 1, 1900, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSProcedureSteps_PriorActionOverVariable(), thetestsetupPackage.getVTestSetupSupportedActionOverVariable(), null, "priorActionOverVariable", null, 0, 1, VSVSProcedureSteps.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsProcedureStepEClass, VSVSProcedureStep.class, "VSVSProcedureStep", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVSVSProcedureStep_Name(), ecorePackage.getEString(), "name", null, 1, 1, VSVSProcedureStep.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

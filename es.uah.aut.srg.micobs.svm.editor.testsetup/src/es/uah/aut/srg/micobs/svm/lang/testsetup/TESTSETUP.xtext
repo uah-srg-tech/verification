@@ -21,6 +21,7 @@ VTestSetupDocument returns VTestSetupDocument:
 		'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>'
 		('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')?
 		('<Actions>' actions=VTestSetupActionsSection '</Actions>')?
+		('<ActionsOverVariables>' actionsOverVariables=VTestSetupActionsOverVariablesSection '</ActionsOverVariables>')?
 		'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
 	'</TestSetup>';
 
@@ -115,7 +116,22 @@ VTestSetupAction returns VTestSetupAction:
 	'</Action>';
 
 enum VTestSetupActionType returns VTestSetupActionType:
-	checking = '"checking"' | instruction = '"instruction"';
+	instruction = '"instruction"' | tmtc_checking = '"tmtc_checking"' | checking = '"checking"';
+
+VTestSetupActionsOverVariablesSection returns VTestSetupActionsOverVariablesSection:
+{VTestSetupActionsOverVariablesSection}
+	(actionOverVariable+=VTestSetupActionOverVariable)+;
+
+VTestSetupActionOverVariable returns VTestSetupActionOverVariable:
+	'<ActionOverVariable'
+		'name=' name=STRING
+		'type=' type=VTestSetupActionOverVariableType
+		'>'
+		description=DBody
+	'</ActionOverVariable>';
+
+enum VTestSetupActionOverVariableType returns VTestSetupActionOverVariableType:
+	reset = '"reset"';
 
 VTestSetupScenariosSection returns VTestSetupScenariosSection:
 {VTestSetupScenariosSection}
@@ -129,6 +145,7 @@ VTestSetupScenarioSection returns VTestSetupScenarioSection:
 		(supportedInterface+=VTestSetupSupportedInterface)*
 		(selectedConfiguration+=VTestSetupSelectedConfiguration)*
 		('<Action' 'ref=' supportedAction+=[VTestSetupAction|STRING] '/>')*
+		(supportedActionOverVariable+=VTestSetupSupportedActionOverVariable)*
 		body=DBody
 	'</Scenario>';
 
@@ -144,8 +161,14 @@ VTestSetupSelectedConfiguration returns VTestSetupSelectedConfiguration:
 		'ref=' configuration=[VTestSetupPacketConfiguration|STRING]
 		'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
 		'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
-		'/>'
-;
+		'/>';
+
+VTestSetupSupportedActionOverVariable returns VTestSetupSupportedActionOverVariable:
+	'<ActionOverVariable'
+		'name=' name=STRING
+		'ref=' actionOverVariable=[VTestSetupActionOverVariable|STRING]
+		'scenarioVariable=' scenarioVariable=[scenario::TMTCIFScenarioVariable|STRING]
+		'/>';
 
 enum VTestSetupConfigurationStatus returns VTestSetupConfigurationStatus:
 	off = '"off"' | on = '"on"';

@@ -26,11 +26,13 @@ import com.google.common.collect.Iterables;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 
 /**
  * This class contains custom scoping description.
@@ -39,26 +41,6 @@ import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
  * on how and when to use it.
  */
 public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
-
-	public IScope scope_VTestSetupSupportedInterface_scenarioInterface(VTestSetupScenarioSection scenario, EReference reference) {
-
-		Collection<TMTCIFScenarioInterface> ifaces = new HashSet<TMTCIFScenarioInterface>();
-		ifaces.addAll(scenario.getScenario().getScenarioInterfaces());
-	
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(ifaces, new Function<TMTCIFScenarioInterface, IEObjectDescription>(){
-	
-			@Override
-			public IEObjectDescription apply(TMTCIFScenarioInterface from) {
-				if (from.getName() != null) {
-					return EObjectDescription.create(from.getName(), from);
-				}
-				else {
-					return null;
-				}
-			}
-		});
-		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
-	}
 
 	public IScope scope_VTestSetupSupportedInterface_interface(VTestSetupDocument testSetupDoc, EReference reference) {
 		
@@ -80,6 +62,26 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
+	public IScope scope_VTestSetupSupportedInterface_scenarioInterface(VTestSetupScenarioSection scenario, EReference reference) {
+
+		Collection<TMTCIFScenarioInterface> ifaces = new HashSet<TMTCIFScenarioInterface>();
+		ifaces.addAll(scenario.getScenario().getScenarioInterfaces());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(ifaces, new Function<TMTCIFScenarioInterface, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFScenarioInterface from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
 	public IScope scope_VTestSetupScenarioSection_supportedAction(VTestSetupDocument testSetupDoc, EReference reference) {
 		
 		Collection<VTestSetupAction> actions = new HashSet<VTestSetupAction>();
@@ -89,6 +91,46 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(VTestSetupAction from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+	
+	public IScope scope_VTestSetupSupportedActionOverVariable_actionOverVariable(VTestSetupDocument testSetupDoc, EReference reference) {
+
+		Collection<VTestSetupActionOverVariable> actionsOverVariable = new HashSet<VTestSetupActionOverVariable>();
+		actionsOverVariable.addAll(testSetupDoc.getActionsOverVariables().getActionOverVariable());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(actionsOverVariable, new Function<VTestSetupActionOverVariable, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTestSetupActionOverVariable from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VTestSetupSupportedActionOverVariable_scenarioVariable(VTestSetupScenarioSection scenario, EReference reference) {
+
+		Collection<TMTCIFScenarioVariable> vbles = new HashSet<TMTCIFScenarioVariable>();
+		vbles.addAll(scenario.getScenario().getScenarioVariables());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(vbles, new Function<TMTCIFScenarioVariable, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFScenarioVariable from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

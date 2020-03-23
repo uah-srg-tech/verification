@@ -350,16 +350,45 @@ ruleVTestSetupDocument returns [EObject current=null]
 				newLeafNode(otherlv_23, grammarAccess.getVTestSetupDocumentAccess().getActionsKeyword_19_2());
 			}
 		)?
-		otherlv_24='<Scenarios>'
+		(
+			otherlv_24='<ActionsOverVariables>'
+			{
+				newLeafNode(otherlv_24, grammarAccess.getVTestSetupDocumentAccess().getActionsOverVariablesKeyword_20_0());
+			}
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getVTestSetupDocumentAccess().getActionsOverVariablesVTestSetupActionsOverVariablesSectionParserRuleCall_20_1_0());
+					}
+					lv_actionsOverVariables_25_0=ruleVTestSetupActionsOverVariablesSection
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getVTestSetupDocumentRule());
+						}
+						set(
+							$current,
+							"actionsOverVariables",
+							lv_actionsOverVariables_25_0,
+							"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionsOverVariablesSection");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+			otherlv_26='</ActionsOverVariables>'
+			{
+				newLeafNode(otherlv_26, grammarAccess.getVTestSetupDocumentAccess().getActionsOverVariablesKeyword_20_2());
+			}
+		)?
+		otherlv_27='<Scenarios>'
 		{
-			newLeafNode(otherlv_24, grammarAccess.getVTestSetupDocumentAccess().getScenariosKeyword_20());
+			newLeafNode(otherlv_27, grammarAccess.getVTestSetupDocumentAccess().getScenariosKeyword_21());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupDocumentAccess().getScenariosVTestSetupScenariosSectionParserRuleCall_21_0());
+					newCompositeNode(grammarAccess.getVTestSetupDocumentAccess().getScenariosVTestSetupScenariosSectionParserRuleCall_22_0());
 				}
-				lv_scenarios_25_0=ruleVTestSetupScenariosSection
+				lv_scenarios_28_0=ruleVTestSetupScenariosSection
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupDocumentRule());
@@ -367,19 +396,19 @@ ruleVTestSetupDocument returns [EObject current=null]
 					set(
 						$current,
 						"scenarios",
-						lv_scenarios_25_0,
+						lv_scenarios_28_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupScenariosSection");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_26='</Scenarios>'
+		otherlv_29='</Scenarios>'
 		{
-			newLeafNode(otherlv_26, grammarAccess.getVTestSetupDocumentAccess().getScenariosKeyword_22());
+			newLeafNode(otherlv_29, grammarAccess.getVTestSetupDocumentAccess().getScenariosKeyword_23());
 		}
-		otherlv_27='</TestSetup>'
+		otherlv_30='</TestSetup>'
 		{
-			newLeafNode(otherlv_27, grammarAccess.getVTestSetupDocumentAccess().getTestSetupKeyword_23());
+			newLeafNode(otherlv_30, grammarAccess.getVTestSetupDocumentAccess().getTestSetupKeyword_24());
 		}
 	)
 ;
@@ -1536,6 +1565,149 @@ ruleVTestSetupAction returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleVTestSetupActionsOverVariablesSection
+entryRuleVTestSetupActionsOverVariablesSection returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionRule()); }
+	iv_ruleVTestSetupActionsOverVariablesSection=ruleVTestSetupActionsOverVariablesSection
+	{ $current=$iv_ruleVTestSetupActionsOverVariablesSection.current; }
+	EOF;
+
+// Rule VTestSetupActionsOverVariablesSection
+ruleVTestSetupActionsOverVariablesSection returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				/* */
+			}
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getVTestSetupActionsOverVariablesSectionAction_0(),
+					$current);
+			}
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0());
+				}
+				lv_actionOverVariable_1_0=ruleVTestSetupActionOverVariable
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVTestSetupActionsOverVariablesSectionRule());
+					}
+					add(
+						$current,
+						"actionOverVariable",
+						lv_actionOverVariable_1_0,
+						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariable");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)+
+	)
+;
+
+// Entry rule entryRuleVTestSetupActionOverVariable
+entryRuleVTestSetupActionOverVariable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVTestSetupActionOverVariableRule()); }
+	iv_ruleVTestSetupActionOverVariable=ruleVTestSetupActionOverVariable
+	{ $current=$iv_ruleVTestSetupActionOverVariable.current; }
+	EOF;
+
+// Rule VTestSetupActionOverVariable
+ruleVTestSetupActionOverVariable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<ActionOverVariable'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVTestSetupActionOverVariableAccess().getActionOverVariableKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVTestSetupActionOverVariableAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVTestSetupActionOverVariableAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupActionOverVariableRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='type='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVTestSetupActionOverVariableAccess().getTypeKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTestSetupActionOverVariableAccess().getTypeVTestSetupActionOverVariableTypeEnumRuleCall_4_0());
+				}
+				lv_type_4_0=ruleVTestSetupActionOverVariableType
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVTestSetupActionOverVariableRule());
+					}
+					set(
+						$current,
+						"type",
+						lv_type_4_0,
+						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariableType");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_5='>'
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVTestSetupActionOverVariableAccess().getGreaterThanSignKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTestSetupActionOverVariableAccess().getDescriptionDBodyParserRuleCall_6_0());
+				}
+				lv_description_6_0=ruleDBody
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVTestSetupActionOverVariableRule());
+					}
+					set(
+						$current,
+						"description",
+						lv_description_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DBody");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='</ActionOverVariable>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVTestSetupActionOverVariableAccess().getActionOverVariableKeyword_7());
+		}
+	)
+;
+
 // Entry rule entryRuleVTestSetupScenariosSection
 entryRuleVTestSetupScenariosSection returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getVTestSetupScenariosSectionRule()); }
@@ -1721,9 +1893,28 @@ ruleVTestSetupScenarioSection returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupScenarioSectionAccess().getBodyDBodyParserRuleCall_9_0());
+					newCompositeNode(grammarAccess.getVTestSetupScenarioSectionAccess().getSupportedActionOverVariableVTestSetupSupportedActionOverVariableParserRuleCall_9_0());
 				}
-				lv_body_12_0=ruleDBody
+				lv_supportedActionOverVariable_12_0=ruleVTestSetupSupportedActionOverVariable
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVTestSetupScenarioSectionRule());
+					}
+					add(
+						$current,
+						"supportedActionOverVariable",
+						lv_supportedActionOverVariable_12_0,
+						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupSupportedActionOverVariable");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTestSetupScenarioSectionAccess().getBodyDBodyParserRuleCall_10_0());
+				}
+				lv_body_13_0=ruleDBody
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupScenarioSectionRule());
@@ -1731,15 +1922,15 @@ ruleVTestSetupScenarioSection returns [EObject current=null]
 					set(
 						$current,
 						"body",
-						lv_body_12_0,
+						lv_body_13_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DBody");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_13='</Scenario>'
+		otherlv_14='</Scenario>'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getVTestSetupScenarioSectionAccess().getScenarioKeyword_10());
+			newLeafNode(otherlv_14, grammarAccess.getVTestSetupScenarioSectionAccess().getScenarioKeyword_11());
 		}
 	)
 ;
@@ -1922,6 +2113,95 @@ ruleVTestSetupSelectedConfiguration returns [EObject current=null]
 		otherlv_7='/>'
 		{
 			newLeafNode(otherlv_7, grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_7());
+		}
+	)
+;
+
+// Entry rule entryRuleVTestSetupSupportedActionOverVariable
+entryRuleVTestSetupSupportedActionOverVariable returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getVTestSetupSupportedActionOverVariableRule()); }
+	iv_ruleVTestSetupSupportedActionOverVariable=ruleVTestSetupSupportedActionOverVariable
+	{ $current=$iv_ruleVTestSetupSupportedActionOverVariable.current; }
+	EOF;
+
+// Rule VTestSetupSupportedActionOverVariable
+ruleVTestSetupSupportedActionOverVariable returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='<ActionOverVariable'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getActionOverVariableKeyword_0());
+		}
+		otherlv_1='name='
+		{
+			newLeafNode(otherlv_1, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupSupportedActionOverVariableRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ref='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getRefKeyword_3());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupSupportedActionOverVariableRule());
+					}
+				}
+				otherlv_4=RULE_STRING
+				{
+					newLeafNode(otherlv_4, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getActionOverVariableVTestSetupActionOverVariableCrossReference_4_0());
+				}
+			)
+		)
+		otherlv_5='scenarioVariable='
+		{
+			newLeafNode(otherlv_5, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getScenarioVariableKeyword_5());
+		}
+		(
+			(
+				{
+					/* */
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupSupportedActionOverVariableRule());
+					}
+				}
+				otherlv_6=RULE_STRING
+				{
+					newLeafNode(otherlv_6, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getScenarioVariableTMTCIFScenarioVariableCrossReference_6_0());
+				}
+			)
+		)
+		otherlv_7='/>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getSolidusGreaterThanSignKeyword_7());
 		}
 	)
 ;
@@ -3806,20 +4086,45 @@ ruleVTestSetupActionType returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='"checking"'
+			enumLiteral_0='"instruction"'
 			{
-				$current = grammarAccess.getVTestSetupActionTypeAccess().getCheckingEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_0, grammarAccess.getVTestSetupActionTypeAccess().getCheckingEnumLiteralDeclaration_0());
+				$current = grammarAccess.getVTestSetupActionTypeAccess().getInstructionEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_0, grammarAccess.getVTestSetupActionTypeAccess().getInstructionEnumLiteralDeclaration_0());
 			}
 		)
 		    |
 		(
-			enumLiteral_1='"instruction"'
+			enumLiteral_1='"tmtc_checking"'
 			{
-				$current = grammarAccess.getVTestSetupActionTypeAccess().getInstructionEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-				newLeafNode(enumLiteral_1, grammarAccess.getVTestSetupActionTypeAccess().getInstructionEnumLiteralDeclaration_1());
+				$current = grammarAccess.getVTestSetupActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_1, grammarAccess.getVTestSetupActionTypeAccess().getTmtc_checkingEnumLiteralDeclaration_1());
 			}
 		)
+		    |
+		(
+			enumLiteral_2='"checking"'
+			{
+				$current = grammarAccess.getVTestSetupActionTypeAccess().getCheckingEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getVTestSetupActionTypeAccess().getCheckingEnumLiteralDeclaration_2());
+			}
+		)
+	)
+;
+
+// Rule VTestSetupActionOverVariableType
+ruleVTestSetupActionOverVariableType returns [Enumerator current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		enumLiteral_0='"reset"'
+		{
+			$current = grammarAccess.getVTestSetupActionOverVariableTypeAccess().getResetEnumLiteralDeclaration().getEnumLiteral().getInstance();
+			newLeafNode(enumLiteral_0, grammarAccess.getVTestSetupActionOverVariableTypeAccess().getResetEnumLiteralDeclaration());
+		}
 	)
 ;
 

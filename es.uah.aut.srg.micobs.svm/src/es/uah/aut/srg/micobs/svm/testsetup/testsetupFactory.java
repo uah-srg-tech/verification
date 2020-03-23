@@ -120,6 +120,24 @@ public interface testsetupFactory extends EFactory {
 	VTestSetupAction createVTestSetupAction();
 
 	/**
+	 * Returns a new object of class '<em>VTest Setup Actions Over Variables Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Actions Over Variables Section</em>'.
+	 * @generated
+	 */
+	VTestSetupActionsOverVariablesSection createVTestSetupActionsOverVariablesSection();
+
+	/**
+	 * Returns a new object of class '<em>VTest Setup Action Over Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Action Over Variable</em>'.
+	 * @generated
+	 */
+	VTestSetupActionOverVariable createVTestSetupActionOverVariable();
+
+	/**
 	 * Returns a new object of class '<em>VTest Setup Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -154,6 +172,15 @@ public interface testsetupFactory extends EFactory {
 	 * @generated
 	 */
 	VTestSetupSelectedConfiguration createVTestSetupSelectedConfiguration();
+
+	/**
+	 * Returns a new object of class '<em>VTest Setup Supported Action Over Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>VTest Setup Supported Action Over Variable</em>'.
+	 * @generated
+	 */
+	VTestSetupSupportedActionOverVariable createVTestSetupSupportedActionOverVariable();
 
 	/**
 	 * Returns the package supported by this factory.

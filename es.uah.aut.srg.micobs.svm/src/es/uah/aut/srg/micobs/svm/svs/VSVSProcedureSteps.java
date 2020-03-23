@@ -11,6 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
 import org.eclipse.emf.common.util.EList;
 
 /**
@@ -23,6 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getStep <em>Step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getPriorActionOverVariable <em>Prior Action Over Variable</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureSteps()
@@ -45,5 +47,31 @@ public interface VSVSProcedureSteps extends DFixedSection {
 	 * @generated
 	 */
 	EList<VSVSProcedureStep> getStep();
+
+	/**
+	 * Returns the value of the '<em><b>Prior Action Over Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Prior Action Over Variable</em>' reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Prior Action Over Variable</em>' reference.
+	 * @see #setPriorActionOverVariable(VTestSetupSupportedActionOverVariable)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSProcedureSteps_PriorActionOverVariable()
+	 * @model
+	 * @generated
+	 */
+	VTestSetupSupportedActionOverVariable getPriorActionOverVariable();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getPriorActionOverVariable <em>Prior Action Over Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Prior Action Over Variable</em>' reference.
+	 * @see #getPriorActionOverVariable()
+	 * @generated
+	 */
+	void setPriorActionOverVariable(VTestSetupSupportedActionOverVariable value);
 
 } // VSVSProcedureSteps

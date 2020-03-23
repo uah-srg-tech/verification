@@ -249,13 +249,22 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_DOCUMENT__ACTIONS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 5;
 
 	/**
+	 * The feature id for the '<em><b>Actions Over Variables</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 6;
+
+	/**
 	 * The feature id for the '<em><b>Scenarios</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT__SCENARIOS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 6;
+	int VTEST_SETUP_DOCUMENT__SCENARIOS = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Document</em>' class.
@@ -264,7 +273,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
+	int VTEST_SETUP_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of operations of the '<em>VTest Setup Document</em>' class.
@@ -735,6 +744,107 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_ACTION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl <em>VTest Setup Actions Over Variables Section</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionsOverVariablesSection()
+	 * @generated
+	 */
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION = 10;
+
+	/**
+	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
+
+	/**
+	 * The feature id for the '<em><b>Action Over Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>VTest Setup Actions Over Variables Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>VTest Setup Actions Over Variables Section</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION_OPERATION_COUNT = doctplPackage.DFIXED_SECTION_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionOverVariableImpl <em>VTest Setup Action Over Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionOverVariableImpl
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionOverVariable()
+	 * @generated
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE = 11;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE__DESCRIPTION = 1;
+
+	/**
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE__TYPE = 2;
+
+	/**
+	 * The number of structural features of the '<em>VTest Setup Action Over Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>VTest Setup Action Over Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenariosSectionImpl <em>VTest Setup Scenarios Section</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -742,7 +852,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupScenariosSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_SCENARIOS_SECTION = 10;
+	int VTEST_SETUP_SCENARIOS_SECTION = 12;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -788,7 +898,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupScenarioSection()
 	 * @generated
 	 */
-	int VTEST_SETUP_SCENARIO_SECTION = 11;
+	int VTEST_SETUP_SCENARIO_SECTION = 13;
 
 	/**
 	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
@@ -854,13 +964,22 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Supported Action Over Variable</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SCENARIO_SECTION__BODY = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 4;
+	int VTEST_SETUP_SCENARIO_SECTION__BODY = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Scenario Section</em>' class.
@@ -869,7 +988,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SCENARIO_SECTION_FEATURE_COUNT = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 5;
+	int VTEST_SETUP_SCENARIO_SECTION_FEATURE_COUNT = doctplPackage.DINSTANTIABLE_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>VTest Setup Scenario Section</em>' class.
@@ -888,7 +1007,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSupportedInterface()
 	 * @generated
 	 */
-	int VTEST_SETUP_SUPPORTED_INTERFACE = 12;
+	int VTEST_SETUP_SUPPORTED_INTERFACE = 14;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -943,7 +1062,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSelectedConfiguration()
 	 * @generated
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION = 13;
+	int VTEST_SETUP_SELECTED_CONFIGURATION = 15;
 
 	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
@@ -991,6 +1110,61 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_SELECTED_CONFIGURATION_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSupportedActionOverVariableImpl <em>VTest Setup Supported Action Over Variable</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSupportedActionOverVariableImpl
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSupportedActionOverVariable()
+	 * @generated
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE = 16;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Action Over Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__ACTION_OVER_VARIABLE = 1;
+
+	/**
+	 * The feature id for the '<em><b>Scenario Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__SCENARIO_VARIABLE = 2;
+
+	/**
+	 * The number of structural features of the '<em>VTest Setup Supported Action Over Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE_FEATURE_COUNT = 3;
+
+	/**
+	 * The number of operations of the '<em>VTest Setup Supported Action Over Variable</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType <em>VTest Setup Action Type</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -998,7 +1172,17 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionType()
 	 * @generated
 	 */
-	int VTEST_SETUP_ACTION_TYPE = 14;
+	int VTEST_SETUP_ACTION_TYPE = 17;
+
+	/**
+	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType <em>VTest Setup Action Over Variable Type</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionOverVariableType()
+	 * @generated
+	 */
+	int VTEST_SETUP_ACTION_OVER_VARIABLE_TYPE = 18;
 
 	/**
 	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus <em>VTest Setup Configuration Status</em>}' enum.
@@ -1008,7 +1192,7 @@ public interface testsetupPackage extends EPackage {
 	 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupConfigurationStatus()
 	 * @generated
 	 */
-	int VTEST_SETUP_CONFIGURATION_STATUS = 15;
+	int VTEST_SETUP_CONFIGURATION_STATUS = 19;
 
 
 	/**
@@ -1086,6 +1270,17 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVTestSetupDocument_Actions();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getActionsOverVariables <em>Actions Over Variables</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Actions Over Variables</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getActionsOverVariables()
+	 * @see #getVTestSetupDocument()
+	 * @generated
+	 */
+	EReference getVTestSetupDocument_ActionsOverVariables();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getScenarios <em>Scenarios</em>}'.
@@ -1376,6 +1571,70 @@ public interface testsetupPackage extends EPackage {
 	EAttribute getVTestSetupAction_Type();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection <em>VTest Setup Actions Over Variables Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTest Setup Actions Over Variables Section</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection
+	 * @generated
+	 */
+	EClass getVTestSetupActionsOverVariablesSection();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionOverVariable <em>Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionOverVariable()
+	 * @see #getVTestSetupActionsOverVariablesSection()
+	 * @generated
+	 */
+	EReference getVTestSetupActionsOverVariablesSection_ActionOverVariable();
+
+	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable <em>VTest Setup Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTest Setup Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable
+	 * @generated
+	 */
+	EClass getVTestSetupActionOverVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getName()
+	 * @see #getVTestSetupActionOverVariable()
+	 * @generated
+	 */
+	EAttribute getVTestSetupActionOverVariable_Name();
+
+	/**
+	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference '<em>Description</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getDescription()
+	 * @see #getVTestSetupActionOverVariable()
+	 * @generated
+	 */
+	EReference getVTestSetupActionOverVariable_Description();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable#getType()
+	 * @see #getVTestSetupActionOverVariable()
+	 * @generated
+	 */
+	EAttribute getVTestSetupActionOverVariable_Type();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection <em>VTest Setup Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1449,6 +1708,17 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVTestSetupScenarioSection_SupportedAction();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedActionOverVariable <em>Supported Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Supported Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getSupportedActionOverVariable()
+	 * @see #getVTestSetupScenarioSection()
+	 * @generated
+	 */
+	EReference getVTestSetupScenarioSection_SupportedActionOverVariable();
 
 	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection#getBody <em>Body</em>}'.
@@ -1548,6 +1818,49 @@ public interface testsetupPackage extends EPackage {
 	EAttribute getVTestSetupSelectedConfiguration_DefaultPrintStatus();
 
 	/**
+	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable <em>VTest Setup Supported Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>VTest Setup Supported Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable
+	 * @generated
+	 */
+	EClass getVTestSetupSupportedActionOverVariable();
+
+	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getName()
+	 * @see #getVTestSetupSupportedActionOverVariable()
+	 * @generated
+	 */
+	EAttribute getVTestSetupSupportedActionOverVariable_Name();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getActionOverVariable <em>Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getActionOverVariable()
+	 * @see #getVTestSetupSupportedActionOverVariable()
+	 * @generated
+	 */
+	EReference getVTestSetupSupportedActionOverVariable_ActionOverVariable();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getScenarioVariable <em>Scenario Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scenario Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable#getScenarioVariable()
+	 * @see #getVTestSetupSupportedActionOverVariable()
+	 * @generated
+	 */
+	EReference getVTestSetupSupportedActionOverVariable_ScenarioVariable();
+
+	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType <em>VTest Setup Action Type</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1556,6 +1869,16 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 */
 	EEnum getVTestSetupActionType();
+
+	/**
+	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType <em>VTest Setup Action Over Variable Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>VTest Setup Action Over Variable Type</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType
+	 * @generated
+	 */
+	EEnum getVTestSetupActionOverVariableType();
 
 	/**
 	 * Returns the meta object for enum '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus <em>VTest Setup Configuration Status</em>}'.
@@ -1647,6 +1970,14 @@ public interface testsetupPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTEST_SETUP_DOCUMENT__ACTIONS = eINSTANCE.getVTestSetupDocument_Actions();
+
+		/**
+		 * The meta object literal for the '<em><b>Actions Over Variables</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES = eINSTANCE.getVTestSetupDocument_ActionsOverVariables();
 
 		/**
 		 * The meta object literal for the '<em><b>Scenarios</b></em>' containment reference feature.
@@ -1883,6 +2214,58 @@ public interface testsetupPackage extends EPackage {
 		EAttribute VTEST_SETUP_ACTION__TYPE = eINSTANCE.getVTestSetupAction_Type();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl <em>VTest Setup Actions Over Variables Section</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionsOverVariablesSection()
+		 * @generated
+		 */
+		EClass VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION = eINSTANCE.getVTestSetupActionsOverVariablesSection();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Over Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupActionsOverVariablesSection_ActionOverVariable();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionOverVariableImpl <em>VTest Setup Action Over Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionOverVariableImpl
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionOverVariable()
+		 * @generated
+		 */
+		EClass VTEST_SETUP_ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupActionOverVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTEST_SETUP_ACTION_OVER_VARIABLE__NAME = eINSTANCE.getVTestSetupActionOverVariable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_ACTION_OVER_VARIABLE__DESCRIPTION = eINSTANCE.getVTestSetupActionOverVariable_Description();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTEST_SETUP_ACTION_OVER_VARIABLE__TYPE = eINSTANCE.getVTestSetupActionOverVariable_Type();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenariosSectionImpl <em>VTest Setup Scenarios Section</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1941,6 +2324,14 @@ public interface testsetupPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION = eINSTANCE.getVTestSetupScenarioSection_SupportedAction();
+
+		/**
+		 * The meta object literal for the '<em><b>Supported Action Over Variable</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupScenarioSection_SupportedActionOverVariable();
 
 		/**
 		 * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
@@ -2019,6 +2410,40 @@ public interface testsetupPackage extends EPackage {
 		EAttribute VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = eINSTANCE.getVTestSetupSelectedConfiguration_DefaultPrintStatus();
 
 		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSupportedActionOverVariableImpl <em>VTest Setup Supported Action Over Variable</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSupportedActionOverVariableImpl
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupSupportedActionOverVariable()
+		 * @generated
+		 */
+		EClass VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupSupportedActionOverVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__NAME = eINSTANCE.getVTestSetupSupportedActionOverVariable_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Action Over Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupSupportedActionOverVariable_ActionOverVariable();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__SCENARIO_VARIABLE = eINSTANCE.getVTestSetupSupportedActionOverVariable_ScenarioVariable();
+
+		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionType <em>VTest Setup Action Type</em>}' enum.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2027,6 +2452,16 @@ public interface testsetupPackage extends EPackage {
 		 * @generated
 		 */
 		EEnum VTEST_SETUP_ACTION_TYPE = eINSTANCE.getVTestSetupActionType();
+
+		/**
+		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType <em>VTest Setup Action Over Variable Type</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariableType
+		 * @see es.uah.aut.srg.micobs.svm.testsetup.impl.testsetupPackageImpl#getVTestSetupActionOverVariableType()
+		 * @generated
+		 */
+		EEnum VTEST_SETUP_ACTION_OVER_VARIABLE_TYPE = eINSTANCE.getVTestSetupActionOverVariableType();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus <em>VTest Setup Configuration Status</em>}' enum.

@@ -153,6 +153,20 @@ public class testsetupSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION: {
+				VTestSetupActionsOverVariablesSection vTestSetupActionsOverVariablesSection = (VTestSetupActionsOverVariablesSection)theEObject;
+				T result = caseVTestSetupActionsOverVariablesSection(vTestSetupActionsOverVariablesSection);
+				if (result == null) result = caseDFixedSection(vTestSetupActionsOverVariablesSection);
+				if (result == null) result = caseDAbstractSection(vTestSetupActionsOverVariablesSection);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case testsetupPackage.VTEST_SETUP_ACTION_OVER_VARIABLE: {
+				VTestSetupActionOverVariable vTestSetupActionOverVariable = (VTestSetupActionOverVariable)theEObject;
+				T result = caseVTestSetupActionOverVariable(vTestSetupActionOverVariable);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
 			case testsetupPackage.VTEST_SETUP_SCENARIOS_SECTION: {
 				VTestSetupScenariosSection vTestSetupScenariosSection = (VTestSetupScenariosSection)theEObject;
 				T result = caseVTestSetupScenariosSection(vTestSetupScenariosSection);
@@ -179,6 +193,12 @@ public class testsetupSwitch<T> extends Switch<T> {
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION: {
 				VTestSetupSelectedConfiguration vTestSetupSelectedConfiguration = (VTestSetupSelectedConfiguration)theEObject;
 				T result = caseVTestSetupSelectedConfiguration(vTestSetupSelectedConfiguration);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case testsetupPackage.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE: {
+				VTestSetupSupportedActionOverVariable vTestSetupSupportedActionOverVariable = (VTestSetupSupportedActionOverVariable)theEObject;
+				T result = caseVTestSetupSupportedActionOverVariable(vTestSetupSupportedActionOverVariable);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -337,6 +357,36 @@ public class testsetupSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Actions Over Variables Section</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Actions Over Variables Section</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupActionsOverVariablesSection(VTestSetupActionsOverVariablesSection object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Action Over Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Action Over Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupActionOverVariable(VTestSetupActionOverVariable object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Scenarios Section</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -393,6 +443,21 @@ public class testsetupSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVTestSetupSelectedConfiguration(VTestSetupSelectedConfiguration object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>VTest Setup Supported Action Over Variable</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>VTest Setup Supported Action Over Variable</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseVTestSetupSupportedActionOverVariable(VTestSetupSupportedActionOverVariable object) {
 		return null;
 	}
 

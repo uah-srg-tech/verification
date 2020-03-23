@@ -150,16 +150,18 @@
         eType="#//VSVSTestInfo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenario" lowerBound="1"
         eType="ecore:EClass testsetup.ecore#//VTestSetupScenarioSection"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="testCase" lowerBound="1"
+        upperBound="-1" eType="#//VSVSTestCase"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="procedureSteps" lowerBound="1"
         eType="#//VSVSProcedureSteps" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="testScript" eType="#//VSVSTestInfo"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="testCase" lowerBound="1"
-        upperBound="-1" eType="#//VSVSTestCase"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureSteps" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="step" lowerBound="1" upperBound="1900"
         eType="#//VSVSProcedureStep" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="priorActionOverVariable"
+        eType="ecore:EClass testsetup.ecore#//VTestSetupSupportedActionOverVariable"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSProcedureStep">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

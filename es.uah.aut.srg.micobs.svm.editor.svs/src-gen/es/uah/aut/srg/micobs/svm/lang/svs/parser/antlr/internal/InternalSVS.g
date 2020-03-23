@@ -5050,20 +5050,46 @@ ruleVSVSProcedureSteps returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		otherlv_0='<ProcedureSteps'
+		otherlv_0='<ProcedureSteps>'
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_0());
 		}
-		otherlv_1='>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1());
-		}
+		(
+			otherlv_1='<PriorActionOverVariable'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableKeyword_1_0());
+			}
+			otherlv_2='ref='
+			{
+				newLeafNode(otherlv_2, grammarAccess.getVSVSProcedureStepsAccess().getRefKeyword_1_1());
+			}
+			(
+				(
+					{
+						/* */
+					}
+					{
+						if ($current==null) {
+							$current = createModelElement(grammarAccess.getVSVSProcedureStepsRule());
+						}
+					}
+					otherlv_3=RULE_STRING
+					{
+						newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0());
+					}
+				)
+			)
+			otherlv_4='/>'
+			{
+				newLeafNode(otherlv_4, grammarAccess.getVSVSProcedureStepsAccess().getSolidusGreaterThanSignKeyword_1_3());
+			}
+		)?
 		(
 			(
 				{
 					newCompositeNode(grammarAccess.getVSVSProcedureStepsAccess().getStepVSVSProcedureStepParserRuleCall_2_0());
 				}
-				lv_step_2_0=ruleVSVSProcedureStep
+				lv_step_5_0=ruleVSVSProcedureStep
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSProcedureStepsRule());
@@ -5071,15 +5097,15 @@ ruleVSVSProcedureSteps returns [EObject current=null]
 					add(
 						$current,
 						"step",
-						lv_step_2_0,
+						lv_step_5_0,
 						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureStep");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)+
-		otherlv_3='</ProcedureSteps>'
+		otherlv_6='</ProcedureSteps>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3());
+			newLeafNode(otherlv_6, grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3());
 		}
 	)
 ;

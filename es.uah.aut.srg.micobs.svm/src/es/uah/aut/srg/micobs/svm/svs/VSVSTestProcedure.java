@@ -12,7 +12,6 @@ package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.doctpl.doctpl.DFixedSection;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
-
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import org.eclipse.emf.common.util.EList;
 
@@ -29,9 +28,9 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getScenario <em>Scenario</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestCase <em>Test Case</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getProcedureSteps <em>Procedure Steps</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestScript <em>Test Script</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSTestProcedure()

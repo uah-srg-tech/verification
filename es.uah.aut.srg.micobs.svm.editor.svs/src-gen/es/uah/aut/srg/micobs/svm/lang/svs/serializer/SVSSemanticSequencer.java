@@ -803,7 +803,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSProcedureSteps returns VSVSProcedureSteps
 	 *
 	 * Constraint:
-	 *     step+=VSVSProcedureStep+
+	 *     (priorActionOverVariable=[VTestSetupSupportedActionOverVariable|STRING]? step+=VSVSProcedureStep+)
 	 */
 	protected void sequence_VSVSProcedureSteps(ISerializationContext context, VSVSProcedureSteps semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

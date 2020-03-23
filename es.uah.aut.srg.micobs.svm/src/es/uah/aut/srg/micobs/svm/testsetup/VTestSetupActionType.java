@@ -34,9 +34,15 @@ public enum VTestSetupActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	INSTRUCTION(0, "instruction", "instruction"),
-
-	/**
+	INSTRUCTION(0, "instruction", "instruction"), /**
+	 * The '<em><b>Tmtc checking</b></em>' literal object.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #TMTC_CHECKING_VALUE
+	 * @generated
+	 * @ordered
+	 */
+	TMTC_CHECKING(1, "tmtc_checking", "tmtc_checking"), /**
 	 * The '<em><b>Checking</b></em>' literal object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -44,7 +50,7 @@ public enum VTestSetupActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	CHECKING(1, "checking", "checking");
+	CHECKING(2, "checking", "checking");
 
 	/**
 	 * The '<em><b>Instruction</b></em>' literal value.
@@ -62,6 +68,21 @@ public enum VTestSetupActionType implements Enumerator {
 	public static final int INSTRUCTION_VALUE = 0;
 
 	/**
+	 * The '<em><b>Tmtc checking</b></em>' literal value.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of '<em><b>Tmtc checking</b></em>' literal object isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @see #TMTC_CHECKING
+	 * @model name="tmtc_checking"
+	 * @generated
+	 * @ordered
+	 */
+	public static final int TMTC_CHECKING_VALUE = 1;
+
+	/**
 	 * The '<em><b>Checking</b></em>' literal value.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -74,7 +95,7 @@ public enum VTestSetupActionType implements Enumerator {
 	 * @generated
 	 * @ordered
 	 */
-	public static final int CHECKING_VALUE = 1;
+	public static final int CHECKING_VALUE = 2;
 
 	/**
 	 * An array of all the '<em><b>VTest Setup Action Type</b></em>' enumerators.
@@ -85,6 +106,7 @@ public enum VTestSetupActionType implements Enumerator {
 	private static final VTestSetupActionType[] VALUES_ARRAY =
 		new VTestSetupActionType[] {
 			INSTRUCTION,
+			TMTC_CHECKING,
 			CHECKING,
 		};
 
@@ -143,6 +165,7 @@ public enum VTestSetupActionType implements Enumerator {
 	public static VTestSetupActionType get(int value) {
 		switch (value) {
 			case INSTRUCTION_VALUE: return INSTRUCTION;
+			case TMTC_CHECKING_VALUE: return TMTC_CHECKING;
 			case CHECKING_VALUE: return CHECKING;
 		}
 		return null;

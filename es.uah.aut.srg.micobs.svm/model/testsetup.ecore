@@ -15,6 +15,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//VTestSetupActionsSection"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionsOverVariables" eType="#//VTestSetupActionsOverVariablesSection"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
         eType="#//VTestSetupScenariosSection" containment="true"/>
   </eClassifiers>
@@ -72,8 +74,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VTestSetupActionType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="VTestSetupActionType">
-    <eLiterals name="instruction"/>
-    <eLiterals name="checking" value="1"/>
+    <eLiterals name="instruction" literal="instruction"/>
+    <eLiterals name="tmtc_checking" value="1" literal="tmtc_checking"/>
+    <eLiterals name="checking" value="2" literal="checking"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionsOverVariablesSection"
+      eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionOverVariable" lowerBound="1"
+        upperBound="-1" eType="#//VTestSetupActionOverVariable" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionOverVariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//VTestSetupActionOverVariableType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="VTestSetupActionOverVariableType">
+    <eLiterals name="reset" literal="reset"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupScenariosSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="scenarios" lowerBound="1"
@@ -88,6 +106,8 @@
         upperBound="-1" eType="#//VTestSetupSelectedConfiguration" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="supportedAction" upperBound="-1"
         eType="#//VTestSetupAction"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="supportedActionOverVariable"
+        upperBound="-1" eType="#//VTestSetupSupportedActionOverVariable" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
         containment="true"/>
   </eClassifiers>
@@ -110,5 +130,12 @@
         eType="#//VTestSetupConfigurationStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPrintStatus" lowerBound="1"
         eType="#//VTestSetupConfigurationStatus"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VTestSetupSupportedActionOverVariable">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionOverVariable" lowerBound="1"
+        eType="#//VTestSetupActionOverVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarioVariable" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/scenario.ecore#//TMTCIFScenarioVariable"/>
   </eClassifiers>
 </ecore:EPackage>

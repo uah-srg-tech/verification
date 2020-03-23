@@ -32,6 +32,8 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DText;
 import es.uah.aut.srg.micobs.doctpl.doctpl.doctplPackage;
 import es.uah.aut.srg.micobs.svm.lang.testsetup.services.TESTSETUPGrammarAccess;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument;
@@ -43,6 +45,7 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupReferenceDocuments;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
@@ -131,6 +134,12 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 			case testsetupPackage.VTEST_SETUP_ACTION:
 				sequence_VTestSetupAction(context, (VTestSetupAction) semanticObject); 
 				return; 
+			case testsetupPackage.VTEST_SETUP_ACTION_OVER_VARIABLE:
+				sequence_VTestSetupActionOverVariable(context, (VTestSetupActionOverVariable) semanticObject); 
+				return; 
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION:
+				sequence_VTestSetupActionsOverVariablesSection(context, (VTestSetupActionsOverVariablesSection) semanticObject); 
+				return; 
 			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION:
 				sequence_VTestSetupActionsSection(context, (VTestSetupActionsSection) semanticObject); 
 				return; 
@@ -163,6 +172,9 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 				return; 
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION:
 				sequence_VTestSetupSelectedConfiguration(context, (VTestSetupSelectedConfiguration) semanticObject); 
+				return; 
+			case testsetupPackage.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE:
+				sequence_VTestSetupSupportedActionOverVariable(context, (VTestSetupSupportedActionOverVariable) semanticObject); 
 				return; 
 			case testsetupPackage.VTEST_SETUP_SUPPORTED_INTERFACE:
 				sequence_VTestSetupSupportedInterface(context, (VTestSetupSupportedInterface) semanticObject); 
@@ -474,6 +486,30 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	
 	/**
 	 * Contexts:
+	 *     VTestSetupActionOverVariable returns VTestSetupActionOverVariable
+	 *
+	 * Constraint:
+	 *     (name=STRING type=VTestSetupActionOverVariableType description=DBody)
+	 */
+	protected void sequence_VTestSetupActionOverVariable(ISerializationContext context, VTestSetupActionOverVariable semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__NAME));
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__TYPE));
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__DESCRIPTION) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_ACTION_OVER_VARIABLE__DESCRIPTION));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVTestSetupActionOverVariableAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVTestSetupActionOverVariableAccess().getTypeVTestSetupActionOverVariableTypeEnumRuleCall_4_0(), semanticObject.getType());
+		feeder.accept(grammarAccess.getVTestSetupActionOverVariableAccess().getDescriptionDBodyParserRuleCall_6_0(), semanticObject.getDescription());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     VTestSetupAction returns VTestSetupAction
 	 *
 	 * Constraint:
@@ -493,6 +529,18 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 		feeder.accept(grammarAccess.getVTestSetupActionAccess().getTypeVTestSetupActionTypeEnumRuleCall_4_0(), semanticObject.getType());
 		feeder.accept(grammarAccess.getVTestSetupActionAccess().getDescriptionDBodyParserRuleCall_6_0(), semanticObject.getDescription());
 		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VTestSetupActionsOverVariablesSection returns VTestSetupActionsOverVariablesSection
+	 *
+	 * Constraint:
+	 *     actionOverVariable+=VTestSetupActionOverVariable+
+	 */
+	protected void sequence_VTestSetupActionsOverVariablesSection(ISerializationContext context, VTestSetupActionsOverVariablesSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -537,6 +585,7 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         interfaces=VTestSetupInterfacesSection 
 	 *         configurations=VTestSetupPacketConfigurationsSection? 
 	 *         actions=VTestSetupActionsSection? 
+	 *         actionsOverVariables=VTestSetupActionsOverVariablesSection? 
 	 *         scenarios=VTestSetupScenariosSection
 	 *     )
 	 */
@@ -643,6 +692,7 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *         supportedInterface+=VTestSetupSupportedInterface* 
 	 *         selectedConfiguration+=VTestSetupSelectedConfiguration* 
 	 *         supportedAction+=[VTestSetupAction|STRING]* 
+	 *         supportedActionOverVariable+=VTestSetupSupportedActionOverVariable* 
 	 *         body=DBody
 	 *     )
 	 */
@@ -687,6 +737,30 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1(), semanticObject.getConfiguration());
 		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0(), semanticObject.getDefaultFilterStatus());
 		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0(), semanticObject.getDefaultPrintStatus());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     VTestSetupSupportedActionOverVariable returns VTestSetupSupportedActionOverVariable
+	 *
+	 * Constraint:
+	 *     (name=STRING actionOverVariable=[VTestSetupActionOverVariable|STRING] scenarioVariable=[TMTCIFScenarioVariable|STRING])
+	 */
+	protected void sequence_VTestSetupSupportedActionOverVariable(ISerializationContext context, VTestSetupSupportedActionOverVariable semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__NAME));
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__ACTION_OVER_VARIABLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__ACTION_OVER_VARIABLE));
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__SCENARIO_VARIABLE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__SCENARIO_VARIABLE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getActionOverVariableVTestSetupActionOverVariableSTRINGTerminalRuleCall_4_0_1(), semanticObject.getActionOverVariable());
+		feeder.accept(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getScenarioVariableTMTCIFScenarioVariableSTRINGTerminalRuleCall_6_0_1(), semanticObject.getScenarioVariable());
 		feeder.finish();
 	}
 	

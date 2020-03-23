@@ -47,6 +47,7 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate;
@@ -95,12 +96,12 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
-	public IScope scope_VSVSTestCase(VSVSDocument svsDoc, EReference reference) {
+	public IScope scope_VSVSTestProcedure_testCase(VSVSDocument svsDoc, EReference reference) {
 		
-		Collection<VSVSTestCase> items = new HashSet<VSVSTestCase>();
-		items.addAll(svsDoc.getTestCasesSection().getTestCases());
+		Collection<VSVSTestCase> testCases = new HashSet<VSVSTestCase>();
+		testCases.addAll(svsDoc.getTestCasesSection().getTestCases());
 	
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSTestCase, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(testCases, new Function<VSVSTestCase, IEObjectDescription>(){
 	
 			@Override
 			public IEObjectDescription apply(VSVSTestCase from) {
@@ -115,15 +116,35 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
+	public IScope scope_VSVSTestProcedure_scenario(VSVSDocument svsDoc, EReference reference) {
+		
+		Collection<VTestSetupScenarioSection> scenarios = new HashSet<VTestSetupScenarioSection>();
+		scenarios.addAll(svsDoc.getTestingSpecificationDesignSection().getTestSetup().getScenarios().getScenarios());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(scenarios, new Function<VTestSetupScenarioSection, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTestSetupScenarioSection from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
 	public IScope scope_VSVSProcedureStep_prev_step(VSVSProcedureStep currStep, EReference reference) {
 		
-		Collection<VSVSProcedureStep> items = new HashSet<VSVSProcedureStep>();
+		Collection<VSVSProcedureStep> steps = new HashSet<VSVSProcedureStep>();
 		VSVSProcedureSteps currentProcedureSteps = (VSVSProcedureSteps)(currStep.eContainer());
 
 		if(currentProcedureSteps != null) {
-			items.addAll(currentProcedureSteps.getStep());
+			steps.addAll(currentProcedureSteps.getStep());
 			
-			Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSProcedureStep, IEObjectDescription>(){
+			Iterable<IEObjectDescription> fullQN = Iterables.transform(steps, new Function<VSVSProcedureStep, IEObjectDescription>(){
 		
 				@Override
 				public IEObjectDescription apply(VSVSProcedureStep from) {
@@ -143,7 +164,7 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 
 	public IScope scope_VSVSProcedureStep_prev_tm_from_prev_step(VSVSProcedureStep currStep, EReference reference) {
 		
-		Collection<VSVSStepTelemetry> items = new HashSet<VSVSStepTelemetry>();
+		Collection<VSVSStepTelemetry> tms = new HashSet<VSVSStepTelemetry>();
 
 		if((currStep.getPrev_step() != null) && 
 				(currStep.getPrev_step().getOutputs() != null) &&
@@ -151,9 +172,9 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 			
 			VSVSStepTelemetrySet tmSet = (VSVSStepTelemetrySet)currStep.getPrev_step().getOutputs();
 			
-			items.addAll(tmSet.getTelemetry());
+			tms.addAll(tmSet.getTelemetry());
 			
-			Iterable<IEObjectDescription> fullQN = Iterables.transform(items, new Function<VSVSStepTelemetry, IEObjectDescription>(){
+			Iterable<IEObjectDescription> fullQN = Iterables.transform(tms, new Function<VSVSStepTelemetry, IEObjectDescription>(){
 		
 				@Override
 				public IEObjectDescription apply(VSVSStepTelemetry from) {

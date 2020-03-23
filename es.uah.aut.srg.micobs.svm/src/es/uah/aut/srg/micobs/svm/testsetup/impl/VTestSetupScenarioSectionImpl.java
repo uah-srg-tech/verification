@@ -17,6 +17,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DInstantiableSectionImpl;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
@@ -48,6 +49,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSupportedInterface <em>Supported Interface</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSupportedAction <em>Supported Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getSupportedActionOverVariable <em>Supported Action Over Variable</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupScenarioSectionImpl#getBody <em>Body</em>}</li>
  * </ul>
  *
@@ -93,6 +95,16 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	 * @ordered
 	 */
 	protected EList<VTestSetupAction> supportedAction;
+
+	/**
+	 * The cached value of the '{@link #getSupportedActionOverVariable() <em>Supported Action Over Variable</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getSupportedActionOverVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VTestSetupSupportedActionOverVariable> supportedActionOverVariable;
 
 	/**
 	 * The cached value of the '{@link #getBody() <em>Body</em>}' containment reference.
@@ -202,6 +214,18 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<VTestSetupSupportedActionOverVariable> getSupportedActionOverVariable() {
+		if (supportedActionOverVariable == null) {
+			supportedActionOverVariable = new EObjectContainmentEList<VTestSetupSupportedActionOverVariable>(VTestSetupSupportedActionOverVariable.class, this, testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE);
+		}
+		return supportedActionOverVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public DBody getBody() {
 		return body;
 	}
@@ -252,6 +276,8 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 				return ((InternalEList<?>)getSupportedInterface()).basicRemove(otherEnd, msgs);
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SELECTED_CONFIGURATION:
 				return ((InternalEList<?>)getSelectedConfiguration()).basicRemove(otherEnd, msgs);
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE:
+				return ((InternalEList<?>)getSupportedActionOverVariable()).basicRemove(otherEnd, msgs);
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
 				return basicSetBody(null, msgs);
 		}
@@ -275,6 +301,8 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 				return getSelectedConfiguration();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION:
 				return getSupportedAction();
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE:
+				return getSupportedActionOverVariable();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
 				return getBody();
 		}
@@ -305,6 +333,10 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 				getSupportedAction().clear();
 				getSupportedAction().addAll((Collection<? extends VTestSetupAction>)newValue);
 				return;
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE:
+				getSupportedActionOverVariable().clear();
+				getSupportedActionOverVariable().addAll((Collection<? extends VTestSetupSupportedActionOverVariable>)newValue);
+				return;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
 				setBody((DBody)newValue);
 				return;
@@ -332,6 +364,9 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION:
 				getSupportedAction().clear();
 				return;
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE:
+				getSupportedActionOverVariable().clear();
+				return;
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
 				setBody((DBody)null);
 				return;
@@ -355,6 +390,8 @@ public class VTestSetupScenarioSectionImpl extends DInstantiableSectionImpl impl
 				return selectedConfiguration != null && !selectedConfiguration.isEmpty();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION:
 				return supportedAction != null && !supportedAction.isEmpty();
+			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__SUPPORTED_ACTION_OVER_VARIABLE:
+				return supportedActionOverVariable != null && !supportedActionOverVariable.isEmpty();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION__BODY:
 				return body != null;
 		}

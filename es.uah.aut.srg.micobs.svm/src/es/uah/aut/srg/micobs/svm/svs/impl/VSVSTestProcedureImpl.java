@@ -19,7 +19,6 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestCase;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestInfo;
 import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
-
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import java.util.Collection;
 
@@ -47,9 +46,9 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getIdentifier <em>Identifier</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getPurpose <em>Purpose</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getScenario <em>Scenario</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestCase <em>Test Case</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getProcedureSteps <em>Procedure Steps</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestScript <em>Test Script</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSTestProcedureImpl#getTestCase <em>Test Case</em>}</li>
  * </ul>
  *
  * @generated
@@ -106,6 +105,16 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	protected VTestSetupScenarioSection scenario;
 
 	/**
+	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTestCase()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<VSVSTestCase> testCase;
+
+	/**
 	 * The cached value of the '{@link #getProcedureSteps() <em>Procedure Steps</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -124,16 +133,6 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 	 * @ordered
 	 */
 	protected VSVSTestInfo testScript;
-
-	/**
-	 * The cached value of the '{@link #getTestCase() <em>Test Case</em>}' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getTestCase()
-	 * @generated
-	 * @ordered
-	 */
-	protected EList<VSVSTestCase> testCase;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -434,12 +433,12 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				if (resolve) return getScenario();
 				return basicGetScenario();
+			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
+				return getTestCase();
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				return getProcedureSteps();
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				return getTestScript();
-			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
-				return getTestCase();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -465,15 +464,15 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				setScenario((VTestSetupScenarioSection)newValue);
 				return;
+			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
+				getTestCase().clear();
+				getTestCase().addAll((Collection<? extends VSVSTestCase>)newValue);
+				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)newValue);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				setTestScript((VSVSTestInfo)newValue);
-				return;
-			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
-				getTestCase().clear();
-				getTestCase().addAll((Collection<? extends VSVSTestCase>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -499,14 +498,14 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				setScenario((VTestSetupScenarioSection)null);
 				return;
+			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
+				getTestCase().clear();
+				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				setProcedureSteps((VSVSProcedureSteps)null);
 				return;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				setTestScript((VSVSTestInfo)null);
-				return;
-			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
-				getTestCase().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -528,12 +527,12 @@ public class VSVSTestProcedureImpl extends DFixedSectionImpl implements VSVSTest
 				return purpose != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__SCENARIO:
 				return scenario != null;
+			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
+				return testCase != null && !testCase.isEmpty();
 			case svsPackage.VSVS_TEST_PROCEDURE__PROCEDURE_STEPS:
 				return procedureSteps != null;
 			case svsPackage.VSVS_TEST_PROCEDURE__TEST_SCRIPT:
 				return testScript != null;
-			case svsPackage.VSVS_TEST_PROCEDURE__TEST_CASE:
-				return testCase != null && !testCase.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

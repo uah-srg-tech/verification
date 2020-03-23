@@ -3220,26 +3220,53 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svs.SVS.VSVSProcedureSteps");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cProcedureStepsKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cPriorActionOverVariableKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cRefKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cPriorActionOverVariableAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0 = (CrossReference)cPriorActionOverVariableAssignment_1_2.eContents().get(0);
+		private final RuleCall cPriorActionOverVariableVTestSetupSupportedActionOverVariableSTRINGTerminalRuleCall_1_2_0_1 = (RuleCall)cPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		private final Assignment cStepAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cStepVSVSProcedureStepParserRuleCall_2_0 = (RuleCall)cStepAssignment_2.eContents().get(0);
 		private final Keyword cProcedureStepsKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
 		//VSVSProcedureSteps:
-		//	'<ProcedureSteps'
-		//	'>'
+		//	'<ProcedureSteps>' ('<PriorActionOverVariable' 'ref='
+		//	priorActionOverVariable=[testsetup::VTestSetupSupportedActionOverVariable|STRING] '/>')?
 		//	step+=VSVSProcedureStep+
 		//	'</ProcedureSteps>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<ProcedureSteps' '>' step+=VSVSProcedureStep+ '</ProcedureSteps>'
+		//'<ProcedureSteps>' ('<PriorActionOverVariable' 'ref='
+		//priorActionOverVariable=[testsetup::VTestSetupSupportedActionOverVariable|STRING] '/>')? step+=VSVSProcedureStep+
+		//'</ProcedureSteps>'
 		public Group getGroup() { return cGroup; }
 		
-		//'<ProcedureSteps'
+		//'<ProcedureSteps>'
 		public Keyword getProcedureStepsKeyword_0() { return cProcedureStepsKeyword_0; }
 		
-		//'>'
-		public Keyword getGreaterThanSignKeyword_1() { return cGreaterThanSignKeyword_1; }
+		//('<PriorActionOverVariable' 'ref=' priorActionOverVariable=[testsetup::VTestSetupSupportedActionOverVariable|STRING]
+		//'/>')?
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'<PriorActionOverVariable'
+		public Keyword getPriorActionOverVariableKeyword_1_0() { return cPriorActionOverVariableKeyword_1_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_1_1() { return cRefKeyword_1_1; }
+		
+		//priorActionOverVariable=[testsetup::VTestSetupSupportedActionOverVariable|STRING]
+		public Assignment getPriorActionOverVariableAssignment_1_2() { return cPriorActionOverVariableAssignment_1_2; }
+		
+		//[testsetup::VTestSetupSupportedActionOverVariable|STRING]
+		public CrossReference getPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0() { return cPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0; }
+		
+		//STRING
+		public RuleCall getPriorActionOverVariableVTestSetupSupportedActionOverVariableSTRINGTerminalRuleCall_1_2_0_1() { return cPriorActionOverVariableVTestSetupSupportedActionOverVariableSTRINGTerminalRuleCall_1_2_0_1; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_1_3() { return cSolidusGreaterThanSignKeyword_1_3; }
 		
 		//step+=VSVSProcedureStep+
 		public Assignment getStepAssignment_2() { return cStepAssignment_2; }
@@ -5655,8 +5682,8 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VSVSProcedureSteps:
-	//	'<ProcedureSteps'
-	//	'>'
+	//	'<ProcedureSteps>' ('<PriorActionOverVariable' 'ref='
+	//	priorActionOverVariable=[testsetup::VTestSetupSupportedActionOverVariable|STRING] '/>')?
 	//	step+=VSVSProcedureStep+
 	//	'</ProcedureSteps>';
 	public VSVSProcedureStepsElements getVSVSProcedureStepsAccess() {

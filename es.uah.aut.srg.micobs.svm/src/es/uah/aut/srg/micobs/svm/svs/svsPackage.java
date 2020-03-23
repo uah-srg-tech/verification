@@ -1549,13 +1549,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_TEST_PROCEDURE__SCENARIO = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 3;
 
 	/**
+	 * The feature id for the '<em><b>Test Case</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_TEST_PROCEDURE__TEST_CASE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+
+	/**
 	 * The feature id for the '<em><b>Procedure Steps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 4;
+	int VSVS_TEST_PROCEDURE__PROCEDURE_STEPS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Test Script</b></em>' containment reference.
@@ -1564,16 +1573,7 @@ public interface svsPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 5;
-
-	/**
-	 * The feature id for the '<em><b>Test Case</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVS_TEST_PROCEDURE__TEST_CASE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
+	int VSVS_TEST_PROCEDURE__TEST_SCRIPT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of structural features of the '<em>VSVS Test Procedure</em>' class.
@@ -1622,13 +1622,22 @@ public interface svsPackage extends EPackage {
 	int VSVS_PROCEDURE_STEPS__STEP = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Prior Action Over Variable</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>VSVS Procedure Steps</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 1;
+	int VSVS_PROCEDURE_STEPS_FEATURE_COUNT = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>VSVS Procedure Steps</em>' class.
@@ -3614,6 +3623,17 @@ public interface svsPackage extends EPackage {
 	EReference getVSVSProcedureSteps_Step();
 
 	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getPriorActionOverVariable <em>Prior Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prior Action Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps#getPriorActionOverVariable()
+	 * @see #getVSVSProcedureSteps()
+	 * @generated
+	 */
+	EReference getVSVSProcedureSteps_PriorActionOverVariable();
+
+	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep <em>VSVS Procedure Step</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -5060,6 +5080,14 @@ public interface svsPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVS_PROCEDURE_STEPS__STEP = eINSTANCE.getVSVSProcedureSteps_Step();
+
+		/**
+		 * The meta object literal for the '<em><b>Prior Action Over Variable</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE = eINSTANCE.getVSVSProcedureSteps_PriorActionOverVariable();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepImpl <em>VSVS Procedure Step</em>}' class.

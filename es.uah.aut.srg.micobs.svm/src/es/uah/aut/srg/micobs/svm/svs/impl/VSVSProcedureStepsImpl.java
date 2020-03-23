@@ -16,14 +16,17 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureStep;
 import es.uah.aut.srg.micobs.svm.svs.VSVSProcedureSteps;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.ECollections;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -36,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl#getStep <em>Step</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSProcedureStepsImpl#getPriorActionOverVariable <em>Prior Action Over Variable</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,6 +54,16 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 	 * @ordered
 	 */
 	protected EList<VSVSProcedureStep> step;
+
+	/**
+	 * The cached value of the '{@link #getPriorActionOverVariable() <em>Prior Action Over Variable</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPriorActionOverVariable()
+	 * @generated
+	 * @ordered
+	 */
+	protected VTestSetupSupportedActionOverVariable priorActionOverVariable;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -87,6 +101,44 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTestSetupSupportedActionOverVariable getPriorActionOverVariable() {
+		if (priorActionOverVariable != null && priorActionOverVariable.eIsProxy()) {
+			InternalEObject oldPriorActionOverVariable = (InternalEObject)priorActionOverVariable;
+			priorActionOverVariable = (VTestSetupSupportedActionOverVariable)eResolveProxy(oldPriorActionOverVariable);
+			if (priorActionOverVariable != oldPriorActionOverVariable) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE, oldPriorActionOverVariable, priorActionOverVariable));
+			}
+		}
+		return priorActionOverVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupSupportedActionOverVariable basicGetPriorActionOverVariable() {
+		return priorActionOverVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPriorActionOverVariable(VTestSetupSupportedActionOverVariable newPriorActionOverVariable) {
+		VTestSetupSupportedActionOverVariable oldPriorActionOverVariable = priorActionOverVariable;
+		priorActionOverVariable = newPriorActionOverVariable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE, oldPriorActionOverVariable, priorActionOverVariable));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -106,6 +158,9 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 		switch (featureID) {
 			case svsPackage.VSVS_PROCEDURE_STEPS__STEP:
 				return getStep();
+			case svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE:
+				if (resolve) return getPriorActionOverVariable();
+				return basicGetPriorActionOverVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,6 +178,9 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 				getStep().clear();
 				getStep().addAll((Collection<? extends VSVSProcedureStep>)newValue);
 				return;
+			case svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE:
+				setPriorActionOverVariable((VTestSetupSupportedActionOverVariable)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -138,6 +196,9 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 			case svsPackage.VSVS_PROCEDURE_STEPS__STEP:
 				getStep().clear();
 				return;
+			case svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE:
+				setPriorActionOverVariable((VTestSetupSupportedActionOverVariable)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -152,6 +213,8 @@ public class VSVSProcedureStepsImpl extends DFixedSectionImpl implements VSVSPro
 		switch (featureID) {
 			case svsPackage.VSVS_PROCEDURE_STEPS__STEP:
 				return step != null && !step.isEmpty();
+			case svsPackage.VSVS_PROCEDURE_STEPS__PRIOR_ACTION_OVER_VARIABLE:
+				return priorActionOverVariable != null;
 		}
 		return super.eIsSet(featureID);
 	}

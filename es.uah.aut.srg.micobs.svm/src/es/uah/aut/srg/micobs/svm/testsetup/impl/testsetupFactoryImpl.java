@@ -75,10 +75,13 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 			case testsetupPackage.VTEST_SETUP_PACKET_CONFIGURATION: return createVTestSetupPacketConfiguration();
 			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION: return createVTestSetupActionsSection();
 			case testsetupPackage.VTEST_SETUP_ACTION: return createVTestSetupAction();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION: return createVTestSetupActionsOverVariablesSection();
+			case testsetupPackage.VTEST_SETUP_ACTION_OVER_VARIABLE: return createVTestSetupActionOverVariable();
 			case testsetupPackage.VTEST_SETUP_SCENARIOS_SECTION: return createVTestSetupScenariosSection();
 			case testsetupPackage.VTEST_SETUP_SCENARIO_SECTION: return createVTestSetupScenarioSection();
 			case testsetupPackage.VTEST_SETUP_SUPPORTED_INTERFACE: return createVTestSetupSupportedInterface();
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION: return createVTestSetupSelectedConfiguration();
+			case testsetupPackage.VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE: return createVTestSetupSupportedActionOverVariable();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -94,6 +97,8 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 		switch (eDataType.getClassifierID()) {
 			case testsetupPackage.VTEST_SETUP_ACTION_TYPE:
 				return createVTestSetupActionTypeFromString(eDataType, initialValue);
+			case testsetupPackage.VTEST_SETUP_ACTION_OVER_VARIABLE_TYPE:
+				return createVTestSetupActionOverVariableTypeFromString(eDataType, initialValue);
 			case testsetupPackage.VTEST_SETUP_CONFIGURATION_STATUS:
 				return createVTestSetupConfigurationStatusFromString(eDataType, initialValue);
 			default:
@@ -111,6 +116,8 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 		switch (eDataType.getClassifierID()) {
 			case testsetupPackage.VTEST_SETUP_ACTION_TYPE:
 				return convertVTestSetupActionTypeToString(eDataType, instanceValue);
+			case testsetupPackage.VTEST_SETUP_ACTION_OVER_VARIABLE_TYPE:
+				return convertVTestSetupActionOverVariableTypeToString(eDataType, instanceValue);
 			case testsetupPackage.VTEST_SETUP_CONFIGURATION_STATUS:
 				return convertVTestSetupConfigurationStatusToString(eDataType, instanceValue);
 			default:
@@ -223,6 +230,26 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTestSetupActionsOverVariablesSection createVTestSetupActionsOverVariablesSection() {
+		VTestSetupActionsOverVariablesSectionImpl vTestSetupActionsOverVariablesSection = new VTestSetupActionsOverVariablesSectionImpl();
+		return vTestSetupActionsOverVariablesSection;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupActionOverVariable createVTestSetupActionOverVariable() {
+		VTestSetupActionOverVariableImpl vTestSetupActionOverVariable = new VTestSetupActionOverVariableImpl();
+		return vTestSetupActionOverVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VTestSetupScenariosSection createVTestSetupScenariosSection() {
 		VTestSetupScenariosSectionImpl vTestSetupScenariosSection = new VTestSetupScenariosSectionImpl();
 		return vTestSetupScenariosSection;
@@ -263,6 +290,16 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTestSetupSupportedActionOverVariable createVTestSetupSupportedActionOverVariable() {
+		VTestSetupSupportedActionOverVariableImpl vTestSetupSupportedActionOverVariable = new VTestSetupSupportedActionOverVariableImpl();
+		return vTestSetupSupportedActionOverVariable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VTestSetupActionType createVTestSetupActionTypeFromString(EDataType eDataType, String initialValue) {
 		VTestSetupActionType result = VTestSetupActionType.get(initialValue);
 		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
@@ -275,6 +312,26 @@ public class testsetupFactoryImpl extends EFactoryImpl implements testsetupFacto
 	 * @generated
 	 */
 	public String convertVTestSetupActionTypeToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VTestSetupActionOverVariableType createVTestSetupActionOverVariableTypeFromString(EDataType eDataType, String initialValue) {
+		VTestSetupActionOverVariableType result = VTestSetupActionOverVariableType.get(initialValue);
+		if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertVTestSetupActionOverVariableTypeToString(EDataType eDataType, Object instanceValue) {
 		return instanceValue == null ? null : instanceValue.toString();
 	}
 

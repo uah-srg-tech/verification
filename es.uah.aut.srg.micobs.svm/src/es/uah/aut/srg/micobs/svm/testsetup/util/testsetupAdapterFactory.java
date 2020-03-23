@@ -122,6 +122,14 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 				return createVTestSetupActionAdapter();
 			}
 			@Override
+			public Adapter caseVTestSetupActionsOverVariablesSection(VTestSetupActionsOverVariablesSection object) {
+				return createVTestSetupActionsOverVariablesSectionAdapter();
+			}
+			@Override
+			public Adapter caseVTestSetupActionOverVariable(VTestSetupActionOverVariable object) {
+				return createVTestSetupActionOverVariableAdapter();
+			}
+			@Override
 			public Adapter caseVTestSetupScenariosSection(VTestSetupScenariosSection object) {
 				return createVTestSetupScenariosSectionAdapter();
 			}
@@ -136,6 +144,10 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseVTestSetupSelectedConfiguration(VTestSetupSelectedConfiguration object) {
 				return createVTestSetupSelectedConfigurationAdapter();
+			}
+			@Override
+			public Adapter caseVTestSetupSupportedActionOverVariable(VTestSetupSupportedActionOverVariable object) {
+				return createVTestSetupSupportedActionOverVariableAdapter();
 			}
 			@Override
 			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
@@ -318,6 +330,34 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection <em>VTest Setup Actions Over Variables Section</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection
+	 * @generated
+	 */
+	public Adapter createVTestSetupActionsOverVariablesSectionAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable <em>VTest Setup Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable
+	 * @generated
+	 */
+	public Adapter createVTestSetupActionOverVariableAdapter() {
+		return null;
+	}
+
+	/**
 	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenariosSection <em>VTest Setup Scenarios Section</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
@@ -370,6 +410,20 @@ public class testsetupAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVTestSetupSelectedConfigurationAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable <em>VTest Setup Supported Action Over Variable</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable
+	 * @generated
+	 */
+	public Adapter createVTestSetupSupportedActionOverVariableAdapter() {
 		return null;
 	}
 

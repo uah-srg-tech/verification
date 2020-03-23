@@ -30,6 +30,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DReferenceableObject;
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getConfigurations <em>Configurations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getActions <em>Actions</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getActionsOverVariables <em>Actions Over Variables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
@@ -193,6 +194,32 @@ public interface VTestSetupDocument extends DDocumentTemplate {
 	 * @generated
 	 */
 	void setActions(VTestSetupActionsSection value);
+
+	/**
+	 * Returns the value of the '<em><b>Actions Over Variables</b></em>' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Actions Over Variables</em>' containment reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Actions Over Variables</em>' containment reference.
+	 * @see #setActionsOverVariables(VTestSetupActionsOverVariablesSection)
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupDocument_ActionsOverVariables()
+	 * @model containment="true"
+	 * @generated
+	 */
+	VTestSetupActionsOverVariablesSection getActionsOverVariables();
+
+	/**
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument#getActionsOverVariables <em>Actions Over Variables</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Actions Over Variables</em>' containment reference.
+	 * @see #getActionsOverVariables()
+	 * @generated
+	 */
+	void setActionsOverVariables(VTestSetupActionsOverVariablesSection value);
 
 	/**
 	 * Returns the value of the '<em><b>Scenarios</b></em>' containment reference.

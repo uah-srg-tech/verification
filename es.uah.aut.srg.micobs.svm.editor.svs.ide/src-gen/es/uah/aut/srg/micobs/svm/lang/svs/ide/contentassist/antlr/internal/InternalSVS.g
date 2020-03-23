@@ -14401,7 +14401,7 @@ rule__VSVSProcedureSteps__Group__0__Impl
 :
 (
 	{ before(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_0()); }
-	'<ProcedureSteps'
+	'<ProcedureSteps>'
 	{ after(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_0()); }
 )
 ;
@@ -14427,9 +14427,9 @@ rule__VSVSProcedureSteps__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1()); }
-	'>'
-	{ after(grammarAccess.getVSVSProcedureStepsAccess().getGreaterThanSignKeyword_1()); }
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getGroup_1()); }
+	(rule__VSVSProcedureSteps__Group_1__0)?
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getGroup_1()); }
 )
 ;
 finally {
@@ -14490,6 +14490,114 @@ rule__VSVSProcedureSteps__Group__3__Impl
 	{ before(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3()); }
 	'</ProcedureSteps>'
 	{ after(grammarAccess.getVSVSProcedureStepsAccess().getProcedureStepsKeyword_3()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__VSVSProcedureSteps__Group_1__0
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSProcedureSteps__Group_1__0__Impl
+	rule__VSVSProcedureSteps__Group_1__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__0__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableKeyword_1_0()); }
+	'<PriorActionOverVariable'
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableKeyword_1_0()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__1
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSProcedureSteps__Group_1__1__Impl
+	rule__VSVSProcedureSteps__Group_1__2
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__1__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getRefKeyword_1_1()); }
+	'ref='
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getRefKeyword_1_1()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSProcedureSteps__Group_1__2__Impl
+	rule__VSVSProcedureSteps__Group_1__3
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__2__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableAssignment_1_2()); }
+	(rule__VSVSProcedureSteps__PriorActionOverVariableAssignment_1_2)
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableAssignment_1_2()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__3
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VSVSProcedureSteps__Group_1__3__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__Group_1__3__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVSVSProcedureStepsAccess().getSolidusGreaterThanSignKeyword_1_3()); }
+	'/>'
+	{ after(grammarAccess.getVSVSProcedureStepsAccess().getSolidusGreaterThanSignKeyword_1_3()); }
 )
 ;
 finally {
@@ -21097,6 +21205,25 @@ rule__VSVSTestProcedure__TestScriptAssignment_17
 		{ before(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSTestInfoParserRuleCall_17_0()); }
 		ruleVSVSTestInfo
 		{ after(grammarAccess.getVSVSTestProcedureAccess().getTestScriptVSVSTestInfoParserRuleCall_17_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VSVSProcedureSteps__PriorActionOverVariableAssignment_1_2
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0()); }
+		(
+			{ before(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableVTestSetupSupportedActionOverVariableSTRINGTerminalRuleCall_1_2_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableVTestSetupSupportedActionOverVariableSTRINGTerminalRuleCall_1_2_0_1()); }
+		)
+		{ after(grammarAccess.getVSVSProcedureStepsAccess().getPriorActionOverVariableVTestSetupSupportedActionOverVariableCrossReference_1_2_0()); }
 	)
 ;
 finally {

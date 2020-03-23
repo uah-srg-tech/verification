@@ -74,11 +74,16 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cActionsAssignment_19_1 = (Assignment)cGroup_19.eContents().get(1);
 		private final RuleCall cActionsVTestSetupActionsSectionParserRuleCall_19_1_0 = (RuleCall)cActionsAssignment_19_1.eContents().get(0);
 		private final Keyword cActionsKeyword_19_2 = (Keyword)cGroup_19.eContents().get(2);
-		private final Keyword cScenariosKeyword_20 = (Keyword)cGroup.eContents().get(20);
-		private final Assignment cScenariosAssignment_21 = (Assignment)cGroup.eContents().get(21);
-		private final RuleCall cScenariosVTestSetupScenariosSectionParserRuleCall_21_0 = (RuleCall)cScenariosAssignment_21.eContents().get(0);
-		private final Keyword cScenariosKeyword_22 = (Keyword)cGroup.eContents().get(22);
-		private final Keyword cTestSetupKeyword_23 = (Keyword)cGroup.eContents().get(23);
+		private final Group cGroup_20 = (Group)cGroup.eContents().get(20);
+		private final Keyword cActionsOverVariablesKeyword_20_0 = (Keyword)cGroup_20.eContents().get(0);
+		private final Assignment cActionsOverVariablesAssignment_20_1 = (Assignment)cGroup_20.eContents().get(1);
+		private final RuleCall cActionsOverVariablesVTestSetupActionsOverVariablesSectionParserRuleCall_20_1_0 = (RuleCall)cActionsOverVariablesAssignment_20_1.eContents().get(0);
+		private final Keyword cActionsOverVariablesKeyword_20_2 = (Keyword)cGroup_20.eContents().get(2);
+		private final Keyword cScenariosKeyword_21 = (Keyword)cGroup.eContents().get(21);
+		private final Assignment cScenariosAssignment_22 = (Assignment)cGroup.eContents().get(22);
+		private final RuleCall cScenariosVTestSetupScenariosSectionParserRuleCall_22_0 = (RuleCall)cScenariosAssignment_22.eContents().get(0);
+		private final Keyword cScenariosKeyword_23 = (Keyword)cGroup.eContents().get(23);
+		private final Keyword cTestSetupKeyword_24 = (Keyword)cGroup.eContents().get(24);
 		
 		//VTestSetupDocument:
 		//	'<TestSetup'
@@ -93,7 +98,8 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//	referenceDocumentsSection=VTestSetupReferenceDocuments
 		//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
 		//	configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>'
-		//	actions=VTestSetupActionsSection '</Actions>')?
+		//	actions=VTestSetupActionsSection '</Actions>')? ('<ActionsOverVariables>'
+		//	actionsOverVariables=VTestSetupActionsOverVariablesSection '</ActionsOverVariables>')?
 		//	'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
 		//	'</TestSetup>';
 		@Override public ParserRule getRule() { return rule; }
@@ -102,7 +108,8 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//date=STRING '>' tbcsTbdsSection=VTestSetupTBCsTBDs? applicableDocumentsSection=VTestSetupApplicableDocuments
 		//referenceDocumentsSection=VTestSetupReferenceDocuments '<Interfaces>' interfaces=VTestSetupInterfacesSection
 		//'</Interfaces>' ('<PacketConfigurations>' configurations=VTestSetupPacketConfigurationsSection
-		//'</PacketConfigurations>')? ('<Actions>' actions=VTestSetupActionsSection '</Actions>')? '<Scenarios>'
+		//'</PacketConfigurations>')? ('<Actions>' actions=VTestSetupActionsSection '</Actions>')? ('<ActionsOverVariables>'
+		//actionsOverVariables=VTestSetupActionsOverVariablesSection '</ActionsOverVariables>')? '<Scenarios>'
 		//scenarios=VTestSetupScenariosSection '</Scenarios>' '</TestSetup>'
 		public Group getGroup() { return cGroup; }
 		
@@ -217,20 +224,35 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Actions>'
 		public Keyword getActionsKeyword_19_2() { return cActionsKeyword_19_2; }
 		
+		//('<ActionsOverVariables>' actionsOverVariables=VTestSetupActionsOverVariablesSection '</ActionsOverVariables>')?
+		public Group getGroup_20() { return cGroup_20; }
+		
+		//'<ActionsOverVariables>'
+		public Keyword getActionsOverVariablesKeyword_20_0() { return cActionsOverVariablesKeyword_20_0; }
+		
+		//actionsOverVariables=VTestSetupActionsOverVariablesSection
+		public Assignment getActionsOverVariablesAssignment_20_1() { return cActionsOverVariablesAssignment_20_1; }
+		
+		//VTestSetupActionsOverVariablesSection
+		public RuleCall getActionsOverVariablesVTestSetupActionsOverVariablesSectionParserRuleCall_20_1_0() { return cActionsOverVariablesVTestSetupActionsOverVariablesSectionParserRuleCall_20_1_0; }
+		
+		//'</ActionsOverVariables>'
+		public Keyword getActionsOverVariablesKeyword_20_2() { return cActionsOverVariablesKeyword_20_2; }
+		
 		//'<Scenarios>'
-		public Keyword getScenariosKeyword_20() { return cScenariosKeyword_20; }
+		public Keyword getScenariosKeyword_21() { return cScenariosKeyword_21; }
 		
 		//scenarios=VTestSetupScenariosSection
-		public Assignment getScenariosAssignment_21() { return cScenariosAssignment_21; }
+		public Assignment getScenariosAssignment_22() { return cScenariosAssignment_22; }
 		
 		//VTestSetupScenariosSection
-		public RuleCall getScenariosVTestSetupScenariosSectionParserRuleCall_21_0() { return cScenariosVTestSetupScenariosSectionParserRuleCall_21_0; }
+		public RuleCall getScenariosVTestSetupScenariosSectionParserRuleCall_22_0() { return cScenariosVTestSetupScenariosSectionParserRuleCall_22_0; }
 		
 		//'</Scenarios>'
-		public Keyword getScenariosKeyword_22() { return cScenariosKeyword_22; }
+		public Keyword getScenariosKeyword_23() { return cScenariosKeyword_23; }
 		
 		//'</TestSetup>'
-		public Keyword getTestSetupKeyword_23() { return cTestSetupKeyword_23; }
+		public Keyword getTestSetupKeyword_24() { return cTestSetupKeyword_24; }
 	}
 	public class VTestSetupTBCsTBDsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupTBCsTBDs");
@@ -957,6 +979,90 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Action>'
 		public Keyword getActionKeyword_7() { return cActionKeyword_7; }
 	}
+	public class VTestSetupActionsOverVariablesSectionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionsOverVariablesSection");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cVTestSetupActionsOverVariablesSectionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cActionOverVariableAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0 = (RuleCall)cActionOverVariableAssignment_1.eContents().get(0);
+		
+		//VTestSetupActionsOverVariablesSection:
+		//	{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+
+		public Group getGroup() { return cGroup; }
+		
+		//{VTestSetupActionsOverVariablesSection}
+		public Action getVTestSetupActionsOverVariablesSectionAction_0() { return cVTestSetupActionsOverVariablesSectionAction_0; }
+		
+		//actionOverVariable+=VTestSetupActionOverVariable+
+		public Assignment getActionOverVariableAssignment_1() { return cActionOverVariableAssignment_1; }
+		
+		//VTestSetupActionOverVariable
+		public RuleCall getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0() { return cActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0; }
+	}
+	public class VTestSetupActionOverVariableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariable");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActionOverVariableKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cTypeKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cTypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cTypeVTestSetupActionOverVariableTypeEnumRuleCall_4_0 = (RuleCall)cTypeAssignment_4.eContents().get(0);
+		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDescriptionDBodyParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
+		private final Keyword cActionOverVariableKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VTestSetupActionOverVariable:
+		//	'<ActionOverVariable'
+		//	'name=' name=STRING
+		//	'type=' type=VTestSetupActionOverVariableType
+		//	'>'
+		//	description=DBody
+		//	'</ActionOverVariable>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<ActionOverVariable' 'name=' name=STRING 'type=' type=VTestSetupActionOverVariableType '>' description=DBody
+		//'</ActionOverVariable>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<ActionOverVariable'
+		public Keyword getActionOverVariableKeyword_0() { return cActionOverVariableKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'type='
+		public Keyword getTypeKeyword_3() { return cTypeKeyword_3; }
+		
+		//type=VTestSetupActionOverVariableType
+		public Assignment getTypeAssignment_4() { return cTypeAssignment_4; }
+		
+		//VTestSetupActionOverVariableType
+		public RuleCall getTypeVTestSetupActionOverVariableTypeEnumRuleCall_4_0() { return cTypeVTestSetupActionOverVariableTypeEnumRuleCall_4_0; }
+		
+		//'>'
+		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		
+		//description=DBody
+		public Assignment getDescriptionAssignment_6() { return cDescriptionAssignment_6; }
+		
+		//DBody
+		public RuleCall getDescriptionDBodyParserRuleCall_6_0() { return cDescriptionDBodyParserRuleCall_6_0; }
+		
+		//'</ActionOverVariable>'
+		public Keyword getActionOverVariableKeyword_7() { return cActionOverVariableKeyword_7; }
+	}
 	public class VTestSetupScenariosSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupScenariosSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -1003,9 +1109,11 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final CrossReference cSupportedActionVTestSetupActionCrossReference_8_2_0 = (CrossReference)cSupportedActionAssignment_8_2.eContents().get(0);
 		private final RuleCall cSupportedActionVTestSetupActionSTRINGTerminalRuleCall_8_2_0_1 = (RuleCall)cSupportedActionVTestSetupActionCrossReference_8_2_0.eContents().get(1);
 		private final Keyword cSolidusGreaterThanSignKeyword_8_3 = (Keyword)cGroup_8.eContents().get(3);
-		private final Assignment cBodyAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cBodyDBodyParserRuleCall_9_0 = (RuleCall)cBodyAssignment_9.eContents().get(0);
-		private final Keyword cScenarioKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cSupportedActionOverVariableAssignment_9 = (Assignment)cGroup.eContents().get(9);
+		private final RuleCall cSupportedActionOverVariableVTestSetupSupportedActionOverVariableParserRuleCall_9_0 = (RuleCall)cSupportedActionOverVariableAssignment_9.eContents().get(0);
+		private final Assignment cBodyAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cBodyDBodyParserRuleCall_10_0 = (RuleCall)cBodyAssignment_10.eContents().get(0);
+		private final Keyword cScenarioKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//VTestSetupScenarioSection:
 		//	'<Scenario'
@@ -1015,13 +1123,15 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//	supportedInterface+=VTestSetupSupportedInterface*
 		//	selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VTestSetupAction|STRING]
 		//	'/>')*
+		//	supportedActionOverVariable+=VTestSetupSupportedActionOverVariable*
 		//	body=DBody
 		//	'</Scenario>';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'<Scenario' 'name=' name=STRING 'scenario=' scenario=[scenario::TMTCIFScenario|STRING] '>'
 		//supportedInterface+=VTestSetupSupportedInterface* selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action'
-		//'ref=' supportedAction+=[VTestSetupAction|STRING] '/>')* body=DBody '</Scenario>'
+		//'ref=' supportedAction+=[VTestSetupAction|STRING] '/>')*
+		//supportedActionOverVariable+=VTestSetupSupportedActionOverVariable* body=DBody '</Scenario>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<Scenario'
@@ -1084,14 +1194,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_8_3() { return cSolidusGreaterThanSignKeyword_8_3; }
 		
+		//supportedActionOverVariable+=VTestSetupSupportedActionOverVariable*
+		public Assignment getSupportedActionOverVariableAssignment_9() { return cSupportedActionOverVariableAssignment_9; }
+		
+		//VTestSetupSupportedActionOverVariable
+		public RuleCall getSupportedActionOverVariableVTestSetupSupportedActionOverVariableParserRuleCall_9_0() { return cSupportedActionOverVariableVTestSetupSupportedActionOverVariableParserRuleCall_9_0; }
+		
 		//body=DBody
-		public Assignment getBodyAssignment_9() { return cBodyAssignment_9; }
+		public Assignment getBodyAssignment_10() { return cBodyAssignment_10; }
 		
 		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_9_0() { return cBodyDBodyParserRuleCall_9_0; }
+		public RuleCall getBodyDBodyParserRuleCall_10_0() { return cBodyDBodyParserRuleCall_10_0; }
 		
 		//'</Scenario>'
-		public Keyword getScenarioKeyword_10() { return cScenarioKeyword_10; }
+		public Keyword getScenarioKeyword_11() { return cScenarioKeyword_11; }
 	}
 	public class VTestSetupSupportedInterfaceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupSupportedInterface");
@@ -1222,6 +1338,74 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VTestSetupConfigurationStatus
 		public RuleCall getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0() { return cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0; }
+		
+		//'/>'
+		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
+	}
+	public class VTestSetupSupportedActionOverVariableElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupSupportedActionOverVariable");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cActionOverVariableKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cActionOverVariableAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cActionOverVariableVTestSetupActionOverVariableCrossReference_4_0 = (CrossReference)cActionOverVariableAssignment_4.eContents().get(0);
+		private final RuleCall cActionOverVariableVTestSetupActionOverVariableSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cActionOverVariableVTestSetupActionOverVariableCrossReference_4_0.eContents().get(1);
+		private final Keyword cScenarioVariableKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cScenarioVariableAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cScenarioVariableTMTCIFScenarioVariableCrossReference_6_0 = (CrossReference)cScenarioVariableAssignment_6.eContents().get(0);
+		private final RuleCall cScenarioVariableTMTCIFScenarioVariableSTRINGTerminalRuleCall_6_0_1 = (RuleCall)cScenarioVariableTMTCIFScenarioVariableCrossReference_6_0.eContents().get(1);
+		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		
+		//VTestSetupSupportedActionOverVariable:
+		//	'<ActionOverVariable'
+		//	'name=' name=STRING
+		//	'ref=' actionOverVariable=[VTestSetupActionOverVariable|STRING]
+		//	'scenarioVariable=' scenarioVariable=[scenario::TMTCIFScenarioVariable|STRING]
+		//	'/>';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'<ActionOverVariable' 'name=' name=STRING 'ref=' actionOverVariable=[VTestSetupActionOverVariable|STRING]
+		//'scenarioVariable=' scenarioVariable=[scenario::TMTCIFScenarioVariable|STRING] '/>'
+		public Group getGroup() { return cGroup; }
+		
+		//'<ActionOverVariable'
+		public Keyword getActionOverVariableKeyword_0() { return cActionOverVariableKeyword_0; }
+		
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
+		
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//STRING
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_3() { return cRefKeyword_3; }
+		
+		//actionOverVariable=[VTestSetupActionOverVariable|STRING]
+		public Assignment getActionOverVariableAssignment_4() { return cActionOverVariableAssignment_4; }
+		
+		//[VTestSetupActionOverVariable|STRING]
+		public CrossReference getActionOverVariableVTestSetupActionOverVariableCrossReference_4_0() { return cActionOverVariableVTestSetupActionOverVariableCrossReference_4_0; }
+		
+		//STRING
+		public RuleCall getActionOverVariableVTestSetupActionOverVariableSTRINGTerminalRuleCall_4_0_1() { return cActionOverVariableVTestSetupActionOverVariableSTRINGTerminalRuleCall_4_0_1; }
+		
+		//'scenarioVariable='
+		public Keyword getScenarioVariableKeyword_5() { return cScenarioVariableKeyword_5; }
+		
+		//scenarioVariable=[scenario::TMTCIFScenarioVariable|STRING]
+		public Assignment getScenarioVariableAssignment_6() { return cScenarioVariableAssignment_6; }
+		
+		//[scenario::TMTCIFScenarioVariable|STRING]
+		public CrossReference getScenarioVariableTMTCIFScenarioVariableCrossReference_6_0() { return cScenarioVariableTMTCIFScenarioVariableCrossReference_6_0; }
+		
+		//STRING
+		public RuleCall getScenarioVariableTMTCIFScenarioVariableSTRINGTerminalRuleCall_6_0_1() { return cScenarioVariableTMTCIFScenarioVariableSTRINGTerminalRuleCall_6_0_1; }
 		
 		//'/>'
 		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
@@ -2426,29 +2610,52 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	public class VTestSetupActionTypeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionType");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
-		private final Keyword cCheckingCheckingKeyword_0_0 = (Keyword)cCheckingEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cInstructionInstructionKeyword_1_0 = (Keyword)cInstructionEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cInstructionEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cInstructionInstructionKeyword_0_0 = (Keyword)cInstructionEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cTmtc_checkingEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cTmtc_checkingTmtc_checkingKeyword_1_0 = (Keyword)cTmtc_checkingEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cCheckingEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cCheckingCheckingKeyword_2_0 = (Keyword)cCheckingEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum VTestSetupActionType:
-		//	checking='"checking"' | instruction='"instruction"';
+		//	instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"';
 		public EnumRule getRule() { return rule; }
 		
-		//checking='"checking"' | instruction='"instruction"'
+		//instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//checking='"checking"'
-		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_0() { return cCheckingEnumLiteralDeclaration_0; }
-		
-		//'"checking"'
-		public Keyword getCheckingCheckingKeyword_0_0() { return cCheckingCheckingKeyword_0_0; }
-		
 		//instruction='"instruction"'
-		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_1() { return cInstructionEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getInstructionEnumLiteralDeclaration_0() { return cInstructionEnumLiteralDeclaration_0; }
 		
 		//'"instruction"'
-		public Keyword getInstructionInstructionKeyword_1_0() { return cInstructionInstructionKeyword_1_0; }
+		public Keyword getInstructionInstructionKeyword_0_0() { return cInstructionInstructionKeyword_0_0; }
+		
+		//tmtc_checking='"tmtc_checking"'
+		public EnumLiteralDeclaration getTmtc_checkingEnumLiteralDeclaration_1() { return cTmtc_checkingEnumLiteralDeclaration_1; }
+		
+		//'"tmtc_checking"'
+		public Keyword getTmtc_checkingTmtc_checkingKeyword_1_0() { return cTmtc_checkingTmtc_checkingKeyword_1_0; }
+		
+		//checking='"checking"'
+		public EnumLiteralDeclaration getCheckingEnumLiteralDeclaration_2() { return cCheckingEnumLiteralDeclaration_2; }
+		
+		//'"checking"'
+		public Keyword getCheckingCheckingKeyword_2_0() { return cCheckingCheckingKeyword_2_0; }
+	}
+	public class VTestSetupActionOverVariableTypeElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariableType");
+		private final EnumLiteralDeclaration cResetEnumLiteralDeclaration = (EnumLiteralDeclaration)rule.eContents().get(1);
+		private final Keyword cResetResetKeyword_0 = (Keyword)cResetEnumLiteralDeclaration.eContents().get(0);
+		
+		//enum VTestSetupActionOverVariableType:
+		//	reset='"reset"';
+		public EnumRule getRule() { return rule; }
+		
+		//reset='"reset"'
+		public EnumLiteralDeclaration getResetEnumLiteralDeclaration() { return cResetEnumLiteralDeclaration; }
+		
+		//'"reset"'
+		public Keyword getResetResetKeyword_0() { return cResetResetKeyword_0; }
 	}
 	public class VTestSetupConfigurationStatusElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupConfigurationStatus");
@@ -2563,10 +2770,14 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	private final VTestSetupActionsSectionElements pVTestSetupActionsSection;
 	private final VTestSetupActionElements pVTestSetupAction;
 	private final VTestSetupActionTypeElements eVTestSetupActionType;
+	private final VTestSetupActionsOverVariablesSectionElements pVTestSetupActionsOverVariablesSection;
+	private final VTestSetupActionOverVariableElements pVTestSetupActionOverVariable;
+	private final VTestSetupActionOverVariableTypeElements eVTestSetupActionOverVariableType;
 	private final VTestSetupScenariosSectionElements pVTestSetupScenariosSection;
 	private final VTestSetupScenarioSectionElements pVTestSetupScenarioSection;
 	private final VTestSetupSupportedInterfaceElements pVTestSetupSupportedInterface;
 	private final VTestSetupSelectedConfigurationElements pVTestSetupSelectedConfiguration;
+	private final VTestSetupSupportedActionOverVariableElements pVTestSetupSupportedActionOverVariable;
 	private final VTestSetupConfigurationStatusElements eVTestSetupConfigurationStatus;
 	private final DBodyElements pDBody;
 	private final DBodyContentElements pDBodyContent;
@@ -2615,10 +2826,14 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVTestSetupActionsSection = new VTestSetupActionsSectionElements();
 		this.pVTestSetupAction = new VTestSetupActionElements();
 		this.eVTestSetupActionType = new VTestSetupActionTypeElements();
+		this.pVTestSetupActionsOverVariablesSection = new VTestSetupActionsOverVariablesSectionElements();
+		this.pVTestSetupActionOverVariable = new VTestSetupActionOverVariableElements();
+		this.eVTestSetupActionOverVariableType = new VTestSetupActionOverVariableTypeElements();
 		this.pVTestSetupScenariosSection = new VTestSetupScenariosSectionElements();
 		this.pVTestSetupScenarioSection = new VTestSetupScenarioSectionElements();
 		this.pVTestSetupSupportedInterface = new VTestSetupSupportedInterfaceElements();
 		this.pVTestSetupSelectedConfiguration = new VTestSetupSelectedConfigurationElements();
+		this.pVTestSetupSupportedActionOverVariable = new VTestSetupSupportedActionOverVariableElements();
 		this.eVTestSetupConfigurationStatus = new VTestSetupConfigurationStatusElements();
 		this.pDBody = new DBodyElements();
 		this.pDBodyContent = new DBodyContentElements();
@@ -2684,7 +2899,8 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//	referenceDocumentsSection=VTestSetupReferenceDocuments
 	//	'<Interfaces>' interfaces=VTestSetupInterfacesSection '</Interfaces>' ('<PacketConfigurations>'
 	//	configurations=VTestSetupPacketConfigurationsSection '</PacketConfigurations>')? ('<Actions>'
-	//	actions=VTestSetupActionsSection '</Actions>')?
+	//	actions=VTestSetupActionsSection '</Actions>')? ('<ActionsOverVariables>'
+	//	actionsOverVariables=VTestSetupActionsOverVariablesSection '</ActionsOverVariables>')?
 	//	'<Scenarios>' scenarios=VTestSetupScenariosSection '</Scenarios>'
 	//	'</TestSetup>';
 	public VTestSetupDocumentElements getVTestSetupDocumentAccess() {
@@ -2868,13 +3084,48 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum VTestSetupActionType:
-	//	checking='"checking"' | instruction='"instruction"';
+	//	instruction='"instruction"' | tmtc_checking='"tmtc_checking"' | checking='"checking"';
 	public VTestSetupActionTypeElements getVTestSetupActionTypeAccess() {
 		return eVTestSetupActionType;
 	}
 	
 	public EnumRule getVTestSetupActionTypeRule() {
 		return getVTestSetupActionTypeAccess().getRule();
+	}
+	
+	//VTestSetupActionsOverVariablesSection:
+	//	{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+;
+	public VTestSetupActionsOverVariablesSectionElements getVTestSetupActionsOverVariablesSectionAccess() {
+		return pVTestSetupActionsOverVariablesSection;
+	}
+	
+	public ParserRule getVTestSetupActionsOverVariablesSectionRule() {
+		return getVTestSetupActionsOverVariablesSectionAccess().getRule();
+	}
+	
+	//VTestSetupActionOverVariable:
+	//	'<ActionOverVariable'
+	//	'name=' name=STRING
+	//	'type=' type=VTestSetupActionOverVariableType
+	//	'>'
+	//	description=DBody
+	//	'</ActionOverVariable>';
+	public VTestSetupActionOverVariableElements getVTestSetupActionOverVariableAccess() {
+		return pVTestSetupActionOverVariable;
+	}
+	
+	public ParserRule getVTestSetupActionOverVariableRule() {
+		return getVTestSetupActionOverVariableAccess().getRule();
+	}
+	
+	//enum VTestSetupActionOverVariableType:
+	//	reset='"reset"';
+	public VTestSetupActionOverVariableTypeElements getVTestSetupActionOverVariableTypeAccess() {
+		return eVTestSetupActionOverVariableType;
+	}
+	
+	public EnumRule getVTestSetupActionOverVariableTypeRule() {
+		return getVTestSetupActionOverVariableTypeAccess().getRule();
 	}
 	
 	//VTestSetupScenariosSection:
@@ -2895,6 +3146,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//	supportedInterface+=VTestSetupSupportedInterface*
 	//	selectedConfiguration+=VTestSetupSelectedConfiguration* ('<Action' 'ref=' supportedAction+=[VTestSetupAction|STRING]
 	//	'/>')*
+	//	supportedActionOverVariable+=VTestSetupSupportedActionOverVariable*
 	//	body=DBody
 	//	'</Scenario>';
 	public VTestSetupScenarioSectionElements getVTestSetupScenarioSectionAccess() {
@@ -2931,6 +3183,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVTestSetupSelectedConfigurationRule() {
 		return getVTestSetupSelectedConfigurationAccess().getRule();
+	}
+	
+	//VTestSetupSupportedActionOverVariable:
+	//	'<ActionOverVariable'
+	//	'name=' name=STRING
+	//	'ref=' actionOverVariable=[VTestSetupActionOverVariable|STRING]
+	//	'scenarioVariable=' scenarioVariable=[scenario::TMTCIFScenarioVariable|STRING]
+	//	'/>';
+	public VTestSetupSupportedActionOverVariableElements getVTestSetupSupportedActionOverVariableAccess() {
+		return pVTestSetupSupportedActionOverVariable;
+	}
+	
+	public ParserRule getVTestSetupSupportedActionOverVariableRule() {
+		return getVTestSetupSupportedActionOverVariableAccess().getRule();
 	}
 	
 	//enum VTestSetupConfigurationStatus:

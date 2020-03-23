@@ -21,6 +21,7 @@ import es.uah.aut.srg.micobs.doctpl.doctpl.DTBC;
 import es.uah.aut.srg.micobs.doctpl.doctpl.DTBD;
 import es.uah.aut.srg.micobs.doctpl.doctpl.impl.DDocumentTemplateImpl;
 
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupDocument;
@@ -56,6 +57,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getInterfaces <em>Interfaces</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getConfigurations <em>Configurations</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getActions <em>Actions</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getActionsOverVariables <em>Actions Over Variables</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupDocumentImpl#getScenarios <em>Scenarios</em>}</li>
  * </ul>
  *
@@ -121,6 +123,16 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	 * @ordered
 	 */
 	protected VTestSetupActionsSection actions;
+
+	/**
+	 * The cached value of the '{@link #getActionsOverVariables() <em>Actions Over Variables</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getActionsOverVariables()
+	 * @generated
+	 * @ordered
+	 */
+	protected VTestSetupActionsOverVariablesSection actionsOverVariables;
 
 	/**
 	 * The cached value of the '{@link #getScenarios() <em>Scenarios</em>}' containment reference.
@@ -414,6 +426,49 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public VTestSetupActionsOverVariablesSection getActionsOverVariables() {
+		return actionsOverVariables;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetActionsOverVariables(VTestSetupActionsOverVariablesSection newActionsOverVariables, NotificationChain msgs) {
+		VTestSetupActionsOverVariablesSection oldActionsOverVariables = actionsOverVariables;
+		actionsOverVariables = newActionsOverVariables;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES, oldActionsOverVariables, newActionsOverVariables);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setActionsOverVariables(VTestSetupActionsOverVariablesSection newActionsOverVariables) {
+		if (newActionsOverVariables != actionsOverVariables) {
+			NotificationChain msgs = null;
+			if (actionsOverVariables != null)
+				msgs = ((InternalEObject)actionsOverVariables).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES, null, msgs);
+			if (newActionsOverVariables != null)
+				msgs = ((InternalEObject)newActionsOverVariables).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES, null, msgs);
+			msgs = basicSetActionsOverVariables(newActionsOverVariables, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES, newActionsOverVariables, newActionsOverVariables));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public VTestSetupScenariosSection getScenarios() {
 		return scenarios;
 	}
@@ -472,6 +527,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 				return basicSetConfigurations(null, msgs);
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS:
 				return basicSetActions(null, msgs);
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES:
+				return basicSetActionsOverVariables(null, msgs);
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__SCENARIOS:
 				return basicSetScenarios(null, msgs);
 		}
@@ -498,6 +555,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 				return getConfigurations();
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS:
 				return getActions();
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES:
+				return getActionsOverVariables();
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__SCENARIOS:
 				return getScenarios();
 		}
@@ -529,6 +588,9 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 				return;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS:
 				setActions((VTestSetupActionsSection)newValue);
+				return;
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES:
+				setActionsOverVariables((VTestSetupActionsOverVariablesSection)newValue);
 				return;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__SCENARIOS:
 				setScenarios((VTestSetupScenariosSection)newValue);
@@ -563,6 +625,9 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS:
 				setActions((VTestSetupActionsSection)null);
 				return;
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES:
+				setActionsOverVariables((VTestSetupActionsOverVariablesSection)null);
+				return;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__SCENARIOS:
 				setScenarios((VTestSetupScenariosSection)null);
 				return;
@@ -590,6 +655,8 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 				return configurations != null;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS:
 				return actions != null;
+			case testsetupPackage.VTEST_SETUP_DOCUMENT__ACTIONS_OVER_VARIABLES:
+				return actionsOverVariables != null;
 			case testsetupPackage.VTEST_SETUP_DOCUMENT__SCENARIOS:
 				return scenarios != null;
 		}
@@ -688,8 +755,12 @@ public class VTestSetupDocumentImpl extends DDocumentTemplateImpl implements VTe
 		sections.add((DAbstractSection) getApplicableDocumentsSection());
 		sections.add((DAbstractSection) getReferenceDocumentsSection());
 		sections.add((DAbstractSection) getInterfaces());
-		sections.add((DAbstractSection) getConfigurations());
-		sections.add((DAbstractSection) getActions());
+		if(getConfigurations() != null)
+			sections.add((DAbstractSection) getConfigurations());
+		if(getActions() != null)
+			sections.add((DAbstractSection) getActions());
+		if(getActionsOverVariables() != null)
+			sections.add((DAbstractSection) getActionsOverVariables());
 		sections.add((DAbstractSection) getScenarios());
 		return sections;
 	}
