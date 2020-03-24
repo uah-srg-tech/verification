@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTCRParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TestCampaignReport'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'</TestCampaignReport>'", "'<VTCRTestReport'", "'test_procedure='", "'status='", "'</VTCRTestReport>'", "'<evidence>'", "'</evidence>'", "'<run'", "'bold='", "'italics='", "'underline='", "'color='", "'</run>'", "'\"Fail\"'", "'\"Pass\"'", "'\"NotTested\"'", "'\"true\"'", "'\"false\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'<TestCampaignReport'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'</TestCampaignReport>'", "'<VTCRTestReport'", "'test_procedure='", "'<status>'", "'</status>'", "'</VTCRTestReport>'", "'<evidence>'", "'</evidence>'", "'<run'", "'bold='", "'italics='", "'underline='", "'color='", "'</run>'", "'Fail'", "'Pass'", "'NotTested'", "'\"true\"'", "'\"false\"'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -42,6 +42,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__33=33;
@@ -508,7 +509,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTCRTestReport"
-    // InternalTCR.g:245:1: ruleVTCRTestReport returns [EObject current=null] : (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= 'status=' ( (lv_status_4_0= ruleVTCRTestStatus ) ) otherlv_5= '>' ( (lv_evidence_6_0= ruleDParagraphEvidence ) ) otherlv_7= '</VTCRTestReport>' ) ;
+    // InternalTCR.g:245:1: ruleVTCRTestReport returns [EObject current=null] : (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_evidence_4_0= ruleDParagraphEvidence ) ) otherlv_5= '<status>' ( (lv_status_6_0= ruleVTCRTestStatus ) ) otherlv_7= '</status>' otherlv_8= '</VTCRTestReport>' ) ;
     public final EObject ruleVTCRTestReport() throws RecognitionException {
         EObject current = null;
 
@@ -518,20 +519,21 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         Token otherlv_3=null;
         Token otherlv_5=null;
         Token otherlv_7=null;
-        Enumerator lv_status_4_0 = null;
+        Token otherlv_8=null;
+        EObject lv_evidence_4_0 = null;
 
-        EObject lv_evidence_6_0 = null;
+        Enumerator lv_status_6_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTCR.g:251:2: ( (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= 'status=' ( (lv_status_4_0= ruleVTCRTestStatus ) ) otherlv_5= '>' ( (lv_evidence_6_0= ruleDParagraphEvidence ) ) otherlv_7= '</VTCRTestReport>' ) )
-            // InternalTCR.g:252:2: (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= 'status=' ( (lv_status_4_0= ruleVTCRTestStatus ) ) otherlv_5= '>' ( (lv_evidence_6_0= ruleDParagraphEvidence ) ) otherlv_7= '</VTCRTestReport>' )
+            // InternalTCR.g:251:2: ( (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_evidence_4_0= ruleDParagraphEvidence ) ) otherlv_5= '<status>' ( (lv_status_6_0= ruleVTCRTestStatus ) ) otherlv_7= '</status>' otherlv_8= '</VTCRTestReport>' ) )
+            // InternalTCR.g:252:2: (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_evidence_4_0= ruleDParagraphEvidence ) ) otherlv_5= '<status>' ( (lv_status_6_0= ruleVTCRTestStatus ) ) otherlv_7= '</status>' otherlv_8= '</VTCRTestReport>' )
             {
-            // InternalTCR.g:252:2: (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= 'status=' ( (lv_status_4_0= ruleVTCRTestStatus ) ) otherlv_5= '>' ( (lv_evidence_6_0= ruleDParagraphEvidence ) ) otherlv_7= '</VTCRTestReport>' )
-            // InternalTCR.g:253:3: otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= 'status=' ( (lv_status_4_0= ruleVTCRTestStatus ) ) otherlv_5= '>' ( (lv_evidence_6_0= ruleDParagraphEvidence ) ) otherlv_7= '</VTCRTestReport>'
+            // InternalTCR.g:252:2: (otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_evidence_4_0= ruleDParagraphEvidence ) ) otherlv_5= '<status>' ( (lv_status_6_0= ruleVTCRTestStatus ) ) otherlv_7= '</status>' otherlv_8= '</VTCRTestReport>' )
+            // InternalTCR.g:253:3: otherlv_0= '<VTCRTestReport' otherlv_1= 'test_procedure=' ( (lv_test_procedure_2_0= RULE_STRING ) ) otherlv_3= '>' ( (lv_evidence_4_0= ruleDParagraphEvidence ) ) otherlv_5= '<status>' ( (lv_status_6_0= ruleVTCRTestStatus ) ) otherlv_7= '</status>' otherlv_8= '</VTCRTestReport>'
             {
             otherlv_0=(Token)match(input,21,FollowSets000.FOLLOW_13); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -551,7 +553,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
             // InternalTCR.g:262:4: (lv_test_procedure_2_0= RULE_STRING )
             // InternalTCR.g:263:5: lv_test_procedure_2_0= RULE_STRING
             {
-            lv_test_procedure_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_14); if (state.failed) return current;
+            lv_test_procedure_2_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               					newLeafNode(lv_test_procedure_2_0, grammarAccess.getVTCRTestReportAccess().getTest_procedureSTRINGTerminalRuleCall_2_0());
@@ -575,66 +577,25 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,23,FollowSets000.FOLLOW_15); if (state.failed) return current;
+            otherlv_3=(Token)match(input,19,FollowSets000.FOLLOW_14); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_3, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3());
+              			newLeafNode(otherlv_3, grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3());
               		
             }
-            // InternalTCR.g:283:3: ( (lv_status_4_0= ruleVTCRTestStatus ) )
-            // InternalTCR.g:284:4: (lv_status_4_0= ruleVTCRTestStatus )
+            // InternalTCR.g:283:3: ( (lv_evidence_4_0= ruleDParagraphEvidence ) )
+            // InternalTCR.g:284:4: (lv_evidence_4_0= ruleDParagraphEvidence )
             {
-            // InternalTCR.g:284:4: (lv_status_4_0= ruleVTCRTestStatus )
-            // InternalTCR.g:285:5: lv_status_4_0= ruleVTCRTestStatus
+            // InternalTCR.g:284:4: (lv_evidence_4_0= ruleDParagraphEvidence )
+            // InternalTCR.g:285:5: lv_evidence_4_0= ruleDParagraphEvidence
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0());
+              					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_10);
-            lv_status_4_0=ruleVTCRTestStatus();
-
-            state._fsp--;
-            if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              					if (current==null) {
-              						current = createModelElementForParent(grammarAccess.getVTCRTestReportRule());
-              					}
-              					set(
-              						current,
-              						"status",
-              						lv_status_4_0,
-              						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.VTCRTestStatus");
-              					afterParserOrEnumRuleCall();
-              				
-            }
-
-            }
-
-
-            }
-
-            otherlv_5=(Token)match(input,19,FollowSets000.FOLLOW_16); if (state.failed) return current;
-            if ( state.backtracking==0 ) {
-
-              			newLeafNode(otherlv_5, grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5());
-              		
-            }
-            // InternalTCR.g:306:3: ( (lv_evidence_6_0= ruleDParagraphEvidence ) )
-            // InternalTCR.g:307:4: (lv_evidence_6_0= ruleDParagraphEvidence )
-            {
-            // InternalTCR.g:307:4: (lv_evidence_6_0= ruleDParagraphEvidence )
-            // InternalTCR.g:308:5: lv_evidence_6_0= ruleDParagraphEvidence
-            {
-            if ( state.backtracking==0 ) {
-
-              					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0());
-              				
-            }
-            pushFollow(FollowSets000.FOLLOW_17);
-            lv_evidence_6_0=ruleDParagraphEvidence();
+            pushFollow(FollowSets000.FOLLOW_15);
+            lv_evidence_4_0=ruleDParagraphEvidence();
 
             state._fsp--;
             if (state.failed) return current;
@@ -646,7 +607,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
               					set(
               						current,
               						"evidence",
-              						lv_evidence_6_0,
+              						lv_evidence_4_0,
               						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.DParagraphEvidence");
               					afterParserOrEnumRuleCall();
               				
@@ -657,10 +618,57 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_7=(Token)match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_5=(Token)match(input,23,FollowSets000.FOLLOW_16); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              			newLeafNode(otherlv_7, grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7());
+              			newLeafNode(otherlv_5, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5());
+              		
+            }
+            // InternalTCR.g:306:3: ( (lv_status_6_0= ruleVTCRTestStatus ) )
+            // InternalTCR.g:307:4: (lv_status_6_0= ruleVTCRTestStatus )
+            {
+            // InternalTCR.g:307:4: (lv_status_6_0= ruleVTCRTestStatus )
+            // InternalTCR.g:308:5: lv_status_6_0= ruleVTCRTestStatus
+            {
+            if ( state.backtracking==0 ) {
+
+              					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0());
+              				
+            }
+            pushFollow(FollowSets000.FOLLOW_17);
+            lv_status_6_0=ruleVTCRTestStatus();
+
+            state._fsp--;
+            if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              					if (current==null) {
+              						current = createModelElementForParent(grammarAccess.getVTCRTestReportRule());
+              					}
+              					set(
+              						current,
+              						"status",
+              						lv_status_6_0,
+              						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.VTCRTestStatus");
+              					afterParserOrEnumRuleCall();
+              				
+            }
+
+            }
+
+
+            }
+
+            otherlv_7=(Token)match(input,24,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_7, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7());
+              		
+            }
+            otherlv_8=(Token)match(input,25,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            if ( state.backtracking==0 ) {
+
+              			newLeafNode(otherlv_8, grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8());
               		
             }
 
@@ -688,7 +696,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDParagraphEvidence"
-    // InternalTCR.g:333:1: entryRuleDParagraphEvidence returns [EObject current=null] : iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF ;
+    // InternalTCR.g:337:1: entryRuleDParagraphEvidence returns [EObject current=null] : iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF ;
     public final EObject entryRuleDParagraphEvidence() throws RecognitionException {
         EObject current = null;
 
@@ -696,8 +704,8 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTCR.g:333:59: (iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF )
-            // InternalTCR.g:334:2: iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF
+            // InternalTCR.g:337:59: (iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF )
+            // InternalTCR.g:338:2: iv_ruleDParagraphEvidence= ruleDParagraphEvidence EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDParagraphEvidenceRule()); 
@@ -728,7 +736,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDParagraphEvidence"
-    // InternalTCR.g:340:1: ruleDParagraphEvidence returns [EObject current=null] : (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' ) ;
+    // InternalTCR.g:344:1: ruleDParagraphEvidence returns [EObject current=null] : (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' ) ;
     public final EObject ruleDParagraphEvidence() throws RecognitionException {
         EObject current = null;
 
@@ -741,43 +749,43 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:346:2: ( (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' ) )
-            // InternalTCR.g:347:2: (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' )
+            // InternalTCR.g:350:2: ( (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' ) )
+            // InternalTCR.g:351:2: (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' )
             {
-            // InternalTCR.g:347:2: (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' )
-            // InternalTCR.g:348:3: otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>'
+            // InternalTCR.g:351:2: (otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>' )
+            // InternalTCR.g:352:3: otherlv_0= '<evidence>' ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+ otherlv_2= '</evidence>'
             {
-            otherlv_0=(Token)match(input,25,FollowSets000.FOLLOW_18); if (state.failed) return current;
+            otherlv_0=(Token)match(input,26,FollowSets000.FOLLOW_19); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_0());
               		
             }
-            // InternalTCR.g:352:3: ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+
+            // InternalTCR.g:356:3: ( (lv_paragraphContent_1_0= ruleDParagraphContent ) )+
             int cnt2=0;
             loop2:
             do {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( (LA2_0==27) ) {
+                if ( (LA2_0==28) ) {
                     alt2=1;
                 }
 
 
                 switch (alt2) {
             	case 1 :
-            	    // InternalTCR.g:353:4: (lv_paragraphContent_1_0= ruleDParagraphContent )
+            	    // InternalTCR.g:357:4: (lv_paragraphContent_1_0= ruleDParagraphContent )
             	    {
-            	    // InternalTCR.g:353:4: (lv_paragraphContent_1_0= ruleDParagraphContent )
-            	    // InternalTCR.g:354:5: lv_paragraphContent_1_0= ruleDParagraphContent
+            	    // InternalTCR.g:357:4: (lv_paragraphContent_1_0= ruleDParagraphContent )
+            	    // InternalTCR.g:358:5: lv_paragraphContent_1_0= ruleDParagraphContent
             	    {
             	    if ( state.backtracking==0 ) {
 
             	      					newCompositeNode(grammarAccess.getDParagraphEvidenceAccess().getParagraphContentDParagraphContentParserRuleCall_1_0());
             	      				
             	    }
-            	    pushFollow(FollowSets000.FOLLOW_19);
+            	    pushFollow(FollowSets000.FOLLOW_20);
             	    lv_paragraphContent_1_0=ruleDParagraphContent();
 
             	    state._fsp--;
@@ -812,7 +820,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
                 cnt2++;
             } while (true);
 
-            otherlv_2=(Token)match(input,26,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_2=(Token)match(input,27,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_2, grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_2());
@@ -843,7 +851,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDParagraphContent"
-    // InternalTCR.g:379:1: entryRuleDParagraphContent returns [EObject current=null] : iv_ruleDParagraphContent= ruleDParagraphContent EOF ;
+    // InternalTCR.g:383:1: entryRuleDParagraphContent returns [EObject current=null] : iv_ruleDParagraphContent= ruleDParagraphContent EOF ;
     public final EObject entryRuleDParagraphContent() throws RecognitionException {
         EObject current = null;
 
@@ -851,8 +859,8 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTCR.g:379:58: (iv_ruleDParagraphContent= ruleDParagraphContent EOF )
-            // InternalTCR.g:380:2: iv_ruleDParagraphContent= ruleDParagraphContent EOF
+            // InternalTCR.g:383:58: (iv_ruleDParagraphContent= ruleDParagraphContent EOF )
+            // InternalTCR.g:384:2: iv_ruleDParagraphContent= ruleDParagraphContent EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDParagraphContentRule()); 
@@ -883,7 +891,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDParagraphContent"
-    // InternalTCR.g:386:1: ruleDParagraphContent returns [EObject current=null] : this_DRun_0= ruleDRun ;
+    // InternalTCR.g:390:1: ruleDParagraphContent returns [EObject current=null] : this_DRun_0= ruleDRun ;
     public final EObject ruleDParagraphContent() throws RecognitionException {
         EObject current = null;
 
@@ -894,8 +902,8 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:392:2: (this_DRun_0= ruleDRun )
-            // InternalTCR.g:393:2: this_DRun_0= ruleDRun
+            // InternalTCR.g:396:2: (this_DRun_0= ruleDRun )
+            // InternalTCR.g:397:2: this_DRun_0= ruleDRun
             {
             if ( state.backtracking==0 ) {
 
@@ -940,7 +948,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDRun"
-    // InternalTCR.g:407:1: entryRuleDRun returns [EObject current=null] : iv_ruleDRun= ruleDRun EOF ;
+    // InternalTCR.g:411:1: entryRuleDRun returns [EObject current=null] : iv_ruleDRun= ruleDRun EOF ;
     public final EObject entryRuleDRun() throws RecognitionException {
         EObject current = null;
 
@@ -948,8 +956,8 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTCR.g:407:45: (iv_ruleDRun= ruleDRun EOF )
-            // InternalTCR.g:408:2: iv_ruleDRun= ruleDRun EOF
+            // InternalTCR.g:411:45: (iv_ruleDRun= ruleDRun EOF )
+            // InternalTCR.g:412:2: iv_ruleDRun= ruleDRun EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDRunRule()); 
@@ -980,7 +988,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDRun"
-    // InternalTCR.g:414:1: ruleDRun returns [EObject current=null] : (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' ) ;
+    // InternalTCR.g:418:1: ruleDRun returns [EObject current=null] : (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' ) ;
     public final EObject ruleDRun() throws RecognitionException {
         EObject current = null;
 
@@ -1005,47 +1013,47 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:420:2: ( (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' ) )
-            // InternalTCR.g:421:2: (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' )
+            // InternalTCR.g:424:2: ( (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' ) )
+            // InternalTCR.g:425:2: (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' )
             {
-            // InternalTCR.g:421:2: (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' )
-            // InternalTCR.g:422:3: otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>'
+            // InternalTCR.g:425:2: (otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>' )
+            // InternalTCR.g:426:3: otherlv_0= '<run' (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )? (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )? (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )? (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )? otherlv_9= '>' ( (lv_text_10_0= ruleDText ) ) otherlv_11= '</run>'
             {
-            otherlv_0=(Token)match(input,27,FollowSets000.FOLLOW_20); if (state.failed) return current;
+            otherlv_0=(Token)match(input,28,FollowSets000.FOLLOW_21); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_0, grammarAccess.getDRunAccess().getRunKeyword_0());
               		
             }
-            // InternalTCR.g:426:3: (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )?
+            // InternalTCR.g:430:3: (otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) ) )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
-            if ( (LA3_0==28) ) {
+            if ( (LA3_0==29) ) {
                 alt3=1;
             }
             switch (alt3) {
                 case 1 :
-                    // InternalTCR.g:427:4: otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:431:4: otherlv_1= 'bold=' ( (lv_bold_2_0= ruleDRunAttributes ) )
                     {
-                    otherlv_1=(Token)match(input,28,FollowSets000.FOLLOW_21); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,29,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_1, grammarAccess.getDRunAccess().getBoldKeyword_1_0());
                       			
                     }
-                    // InternalTCR.g:431:4: ( (lv_bold_2_0= ruleDRunAttributes ) )
-                    // InternalTCR.g:432:5: (lv_bold_2_0= ruleDRunAttributes )
+                    // InternalTCR.g:435:4: ( (lv_bold_2_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:436:5: (lv_bold_2_0= ruleDRunAttributes )
                     {
-                    // InternalTCR.g:432:5: (lv_bold_2_0= ruleDRunAttributes )
-                    // InternalTCR.g:433:6: lv_bold_2_0= ruleDRunAttributes
+                    // InternalTCR.g:436:5: (lv_bold_2_0= ruleDRunAttributes )
+                    // InternalTCR.g:437:6: lv_bold_2_0= ruleDRunAttributes
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getDRunAccess().getBoldDRunAttributesEnumRuleCall_1_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_22);
+                    pushFollow(FollowSets000.FOLLOW_23);
                     lv_bold_2_0=ruleDRunAttributes();
 
                     state._fsp--;
@@ -1075,35 +1083,35 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTCR.g:451:3: (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )?
+            // InternalTCR.g:455:3: (otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) ) )?
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==29) ) {
+            if ( (LA4_0==30) ) {
                 alt4=1;
             }
             switch (alt4) {
                 case 1 :
-                    // InternalTCR.g:452:4: otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:456:4: otherlv_3= 'italics=' ( (lv_italics_4_0= ruleDRunAttributes ) )
                     {
-                    otherlv_3=(Token)match(input,29,FollowSets000.FOLLOW_21); if (state.failed) return current;
+                    otherlv_3=(Token)match(input,30,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_3, grammarAccess.getDRunAccess().getItalicsKeyword_2_0());
                       			
                     }
-                    // InternalTCR.g:456:4: ( (lv_italics_4_0= ruleDRunAttributes ) )
-                    // InternalTCR.g:457:5: (lv_italics_4_0= ruleDRunAttributes )
+                    // InternalTCR.g:460:4: ( (lv_italics_4_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:461:5: (lv_italics_4_0= ruleDRunAttributes )
                     {
-                    // InternalTCR.g:457:5: (lv_italics_4_0= ruleDRunAttributes )
-                    // InternalTCR.g:458:6: lv_italics_4_0= ruleDRunAttributes
+                    // InternalTCR.g:461:5: (lv_italics_4_0= ruleDRunAttributes )
+                    // InternalTCR.g:462:6: lv_italics_4_0= ruleDRunAttributes
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getDRunAccess().getItalicsDRunAttributesEnumRuleCall_2_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_23);
+                    pushFollow(FollowSets000.FOLLOW_24);
                     lv_italics_4_0=ruleDRunAttributes();
 
                     state._fsp--;
@@ -1133,35 +1141,35 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTCR.g:476:3: (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )?
+            // InternalTCR.g:480:3: (otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) ) )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==30) ) {
+            if ( (LA5_0==31) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalTCR.g:477:4: otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:481:4: otherlv_5= 'underline=' ( (lv_underline_6_0= ruleDRunAttributes ) )
                     {
-                    otherlv_5=(Token)match(input,30,FollowSets000.FOLLOW_21); if (state.failed) return current;
+                    otherlv_5=(Token)match(input,31,FollowSets000.FOLLOW_22); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_5, grammarAccess.getDRunAccess().getUnderlineKeyword_3_0());
                       			
                     }
-                    // InternalTCR.g:481:4: ( (lv_underline_6_0= ruleDRunAttributes ) )
-                    // InternalTCR.g:482:5: (lv_underline_6_0= ruleDRunAttributes )
+                    // InternalTCR.g:485:4: ( (lv_underline_6_0= ruleDRunAttributes ) )
+                    // InternalTCR.g:486:5: (lv_underline_6_0= ruleDRunAttributes )
                     {
-                    // InternalTCR.g:482:5: (lv_underline_6_0= ruleDRunAttributes )
-                    // InternalTCR.g:483:6: lv_underline_6_0= ruleDRunAttributes
+                    // InternalTCR.g:486:5: (lv_underline_6_0= ruleDRunAttributes )
+                    // InternalTCR.g:487:6: lv_underline_6_0= ruleDRunAttributes
                     {
                     if ( state.backtracking==0 ) {
 
                       						newCompositeNode(grammarAccess.getDRunAccess().getUnderlineDRunAttributesEnumRuleCall_3_1_0());
                       					
                     }
-                    pushFollow(FollowSets000.FOLLOW_24);
+                    pushFollow(FollowSets000.FOLLOW_25);
                     lv_underline_6_0=ruleDRunAttributes();
 
                     state._fsp--;
@@ -1191,28 +1199,28 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTCR.g:501:3: (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )?
+            // InternalTCR.g:505:3: (otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) ) )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==31) ) {
+            if ( (LA6_0==32) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // InternalTCR.g:502:4: otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) )
+                    // InternalTCR.g:506:4: otherlv_7= 'color=' ( (lv_color_8_0= RULE_STRING ) )
                     {
-                    otherlv_7=(Token)match(input,31,FollowSets000.FOLLOW_4); if (state.failed) return current;
+                    otherlv_7=(Token)match(input,32,FollowSets000.FOLLOW_4); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				newLeafNode(otherlv_7, grammarAccess.getDRunAccess().getColorKeyword_4_0());
                       			
                     }
-                    // InternalTCR.g:506:4: ( (lv_color_8_0= RULE_STRING ) )
-                    // InternalTCR.g:507:5: (lv_color_8_0= RULE_STRING )
+                    // InternalTCR.g:510:4: ( (lv_color_8_0= RULE_STRING ) )
+                    // InternalTCR.g:511:5: (lv_color_8_0= RULE_STRING )
                     {
-                    // InternalTCR.g:507:5: (lv_color_8_0= RULE_STRING )
-                    // InternalTCR.g:508:6: lv_color_8_0= RULE_STRING
+                    // InternalTCR.g:511:5: (lv_color_8_0= RULE_STRING )
+                    // InternalTCR.g:512:6: lv_color_8_0= RULE_STRING
                     {
                     lv_color_8_0=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_10); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -1244,24 +1252,24 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_9=(Token)match(input,19,FollowSets000.FOLLOW_25); if (state.failed) return current;
+            otherlv_9=(Token)match(input,19,FollowSets000.FOLLOW_26); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_9, grammarAccess.getDRunAccess().getGreaterThanSignKeyword_5());
               		
             }
-            // InternalTCR.g:529:3: ( (lv_text_10_0= ruleDText ) )
-            // InternalTCR.g:530:4: (lv_text_10_0= ruleDText )
+            // InternalTCR.g:533:3: ( (lv_text_10_0= ruleDText ) )
+            // InternalTCR.g:534:4: (lv_text_10_0= ruleDText )
             {
-            // InternalTCR.g:530:4: (lv_text_10_0= ruleDText )
-            // InternalTCR.g:531:5: lv_text_10_0= ruleDText
+            // InternalTCR.g:534:4: (lv_text_10_0= ruleDText )
+            // InternalTCR.g:535:5: lv_text_10_0= ruleDText
             {
             if ( state.backtracking==0 ) {
 
               					newCompositeNode(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_6_0());
               				
             }
-            pushFollow(FollowSets000.FOLLOW_26);
+            pushFollow(FollowSets000.FOLLOW_27);
             lv_text_10_0=ruleDText();
 
             state._fsp--;
@@ -1285,7 +1293,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_11=(Token)match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return current;
+            otherlv_11=(Token)match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_11, grammarAccess.getDRunAccess().getRunKeyword_7());
@@ -1316,7 +1324,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleDText"
-    // InternalTCR.g:556:1: entryRuleDText returns [EObject current=null] : iv_ruleDText= ruleDText EOF ;
+    // InternalTCR.g:560:1: entryRuleDText returns [EObject current=null] : iv_ruleDText= ruleDText EOF ;
     public final EObject entryRuleDText() throws RecognitionException {
         EObject current = null;
 
@@ -1324,8 +1332,8 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalTCR.g:556:46: (iv_ruleDText= ruleDText EOF )
-            // InternalTCR.g:557:2: iv_ruleDText= ruleDText EOF
+            // InternalTCR.g:560:46: (iv_ruleDText= ruleDText EOF )
+            // InternalTCR.g:561:2: iv_ruleDText= ruleDText EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getDTextRule()); 
@@ -1356,7 +1364,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDText"
-    // InternalTCR.g:563:1: ruleDText returns [EObject current=null] : ( (lv_content_0_0= RULE_RUNTEXT ) ) ;
+    // InternalTCR.g:567:1: ruleDText returns [EObject current=null] : ( (lv_content_0_0= RULE_RUNTEXT ) ) ;
     public final EObject ruleDText() throws RecognitionException {
         EObject current = null;
 
@@ -1366,14 +1374,14 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:569:2: ( ( (lv_content_0_0= RULE_RUNTEXT ) ) )
-            // InternalTCR.g:570:2: ( (lv_content_0_0= RULE_RUNTEXT ) )
+            // InternalTCR.g:573:2: ( ( (lv_content_0_0= RULE_RUNTEXT ) ) )
+            // InternalTCR.g:574:2: ( (lv_content_0_0= RULE_RUNTEXT ) )
             {
-            // InternalTCR.g:570:2: ( (lv_content_0_0= RULE_RUNTEXT ) )
-            // InternalTCR.g:571:3: (lv_content_0_0= RULE_RUNTEXT )
+            // InternalTCR.g:574:2: ( (lv_content_0_0= RULE_RUNTEXT ) )
+            // InternalTCR.g:575:3: (lv_content_0_0= RULE_RUNTEXT )
             {
-            // InternalTCR.g:571:3: (lv_content_0_0= RULE_RUNTEXT )
-            // InternalTCR.g:572:4: lv_content_0_0= RULE_RUNTEXT
+            // InternalTCR.g:575:3: (lv_content_0_0= RULE_RUNTEXT )
+            // InternalTCR.g:576:4: lv_content_0_0= RULE_RUNTEXT
             {
             lv_content_0_0=(Token)match(input,RULE_RUNTEXT,FollowSets000.FOLLOW_2); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -1421,7 +1429,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTCRTestStatus"
-    // InternalTCR.g:591:1: ruleVTCRTestStatus returns [Enumerator current=null] : ( (enumLiteral_0= '\"Fail\"' ) | (enumLiteral_1= '\"Pass\"' ) | (enumLiteral_2= '\"NotTested\"' ) ) ;
+    // InternalTCR.g:595:1: ruleVTCRTestStatus returns [Enumerator current=null] : ( (enumLiteral_0= 'Fail' ) | (enumLiteral_1= 'Pass' ) | (enumLiteral_2= 'NotTested' ) ) ;
     public final Enumerator ruleVTCRTestStatus() throws RecognitionException {
         Enumerator current = null;
 
@@ -1433,23 +1441,23 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:597:2: ( ( (enumLiteral_0= '\"Fail\"' ) | (enumLiteral_1= '\"Pass\"' ) | (enumLiteral_2= '\"NotTested\"' ) ) )
-            // InternalTCR.g:598:2: ( (enumLiteral_0= '\"Fail\"' ) | (enumLiteral_1= '\"Pass\"' ) | (enumLiteral_2= '\"NotTested\"' ) )
+            // InternalTCR.g:601:2: ( ( (enumLiteral_0= 'Fail' ) | (enumLiteral_1= 'Pass' ) | (enumLiteral_2= 'NotTested' ) ) )
+            // InternalTCR.g:602:2: ( (enumLiteral_0= 'Fail' ) | (enumLiteral_1= 'Pass' ) | (enumLiteral_2= 'NotTested' ) )
             {
-            // InternalTCR.g:598:2: ( (enumLiteral_0= '\"Fail\"' ) | (enumLiteral_1= '\"Pass\"' ) | (enumLiteral_2= '\"NotTested\"' ) )
+            // InternalTCR.g:602:2: ( (enumLiteral_0= 'Fail' ) | (enumLiteral_1= 'Pass' ) | (enumLiteral_2= 'NotTested' ) )
             int alt7=3;
             switch ( input.LA(1) ) {
-            case 33:
+            case 34:
                 {
                 alt7=1;
                 }
                 break;
-            case 34:
+            case 35:
                 {
                 alt7=2;
                 }
                 break;
-            case 35:
+            case 36:
                 {
                 alt7=3;
                 }
@@ -1464,12 +1472,12 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
             switch (alt7) {
                 case 1 :
-                    // InternalTCR.g:599:3: (enumLiteral_0= '\"Fail\"' )
+                    // InternalTCR.g:603:3: (enumLiteral_0= 'Fail' )
                     {
-                    // InternalTCR.g:599:3: (enumLiteral_0= '\"Fail\"' )
-                    // InternalTCR.g:600:4: enumLiteral_0= '\"Fail\"'
+                    // InternalTCR.g:603:3: (enumLiteral_0= 'Fail' )
+                    // InternalTCR.g:604:4: enumLiteral_0= 'Fail'
                     {
-                    enumLiteral_0=(Token)match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -1483,12 +1491,12 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTCR.g:607:3: (enumLiteral_1= '\"Pass\"' )
+                    // InternalTCR.g:611:3: (enumLiteral_1= 'Pass' )
                     {
-                    // InternalTCR.g:607:3: (enumLiteral_1= '\"Pass\"' )
-                    // InternalTCR.g:608:4: enumLiteral_1= '\"Pass\"'
+                    // InternalTCR.g:611:3: (enumLiteral_1= 'Pass' )
+                    // InternalTCR.g:612:4: enumLiteral_1= 'Pass'
                     {
-                    enumLiteral_1=(Token)match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -1502,12 +1510,12 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalTCR.g:615:3: (enumLiteral_2= '\"NotTested\"' )
+                    // InternalTCR.g:619:3: (enumLiteral_2= 'NotTested' )
                     {
-                    // InternalTCR.g:615:3: (enumLiteral_2= '\"NotTested\"' )
-                    // InternalTCR.g:616:4: enumLiteral_2= '\"NotTested\"'
+                    // InternalTCR.g:619:3: (enumLiteral_2= 'NotTested' )
+                    // InternalTCR.g:620:4: enumLiteral_2= 'NotTested'
                     {
-                    enumLiteral_2=(Token)match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -1545,7 +1553,7 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDRunAttributes"
-    // InternalTCR.g:626:1: ruleDRunAttributes returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
+    // InternalTCR.g:630:1: ruleDRunAttributes returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
     public final Enumerator ruleDRunAttributes() throws RecognitionException {
         Enumerator current = null;
 
@@ -1556,17 +1564,17 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalTCR.g:632:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
-            // InternalTCR.g:633:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            // InternalTCR.g:636:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
+            // InternalTCR.g:637:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
             {
-            // InternalTCR.g:633:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            // InternalTCR.g:637:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==36) ) {
+            if ( (LA8_0==37) ) {
                 alt8=1;
             }
-            else if ( (LA8_0==37) ) {
+            else if ( (LA8_0==38) ) {
                 alt8=2;
             }
             else {
@@ -1578,12 +1586,12 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
             }
             switch (alt8) {
                 case 1 :
-                    // InternalTCR.g:634:3: (enumLiteral_0= '\"true\"' )
+                    // InternalTCR.g:638:3: (enumLiteral_0= '\"true\"' )
                     {
-                    // InternalTCR.g:634:3: (enumLiteral_0= '\"true\"' )
-                    // InternalTCR.g:635:4: enumLiteral_0= '\"true\"'
+                    // InternalTCR.g:638:3: (enumLiteral_0= '\"true\"' )
+                    // InternalTCR.g:639:4: enumLiteral_0= '\"true\"'
                     {
-                    enumLiteral_0=(Token)match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getDRunAttributesAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -1597,12 +1605,12 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalTCR.g:642:3: (enumLiteral_1= '\"false\"' )
+                    // InternalTCR.g:646:3: (enumLiteral_1= '\"false\"' )
                     {
-                    // InternalTCR.g:642:3: (enumLiteral_1= '\"false\"' )
-                    // InternalTCR.g:643:4: enumLiteral_1= '\"false\"'
+                    // InternalTCR.g:646:3: (enumLiteral_1= '\"false\"' )
+                    // InternalTCR.g:647:4: enumLiteral_1= '\"false\"'
                     {
-                    enumLiteral_1=(Token)match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current = grammarAccess.getDRunAttributesAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -1658,19 +1666,20 @@ public class InternalTCRParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_11 = new BitSet(new long[]{0x0000000000200000L});
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000000300000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000000400000L});
-        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000000800000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000E00000000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000004000000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000000800000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000001C00000000L});
         public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000001000000L});
-        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x000000000C000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x00000000F0080000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000003000000000L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x00000000E0080000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x00000000C0080000L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000080080000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000002000000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000018000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x00000001E0080000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000006000000000L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x00000001C0080000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000180080000L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000100080000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000000200000000L});
     }
 
 

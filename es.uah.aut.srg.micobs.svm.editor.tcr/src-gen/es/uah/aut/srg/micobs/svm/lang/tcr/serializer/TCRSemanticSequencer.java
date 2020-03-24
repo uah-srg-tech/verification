@@ -134,21 +134,21 @@ public class TCRSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VTCRTestReport returns VTCRTestReport
 	 *
 	 * Constraint:
-	 *     (test_procedure=STRING status=VTCRTestStatus evidence=DParagraphEvidence)
+	 *     (test_procedure=STRING evidence=DParagraphEvidence status=VTCRTestStatus)
 	 */
 	protected void sequence_VTCRTestReport(ISerializationContext context, VTCRTestReport semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__TEST_PROCEDURE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__TEST_PROCEDURE));
-			if (transientValues.isValueTransient(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__STATUS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__STATUS));
 			if (transientValues.isValueTransient(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__EVIDENCE) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__EVIDENCE));
+			if (transientValues.isValueTransient(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__STATUS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, tcrPackage.Literals.VTCR_TEST_REPORT__STATUS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVTCRTestReportAccess().getTest_procedureSTRINGTerminalRuleCall_2_0(), semanticObject.getTest_procedure());
-		feeder.accept(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0(), semanticObject.getStatus());
-		feeder.accept(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0(), semanticObject.getEvidence());
+		feeder.accept(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0(), semanticObject.getEvidence());
+		feeder.accept(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0(), semanticObject.getStatus());
 		feeder.finish();
 	}
 	

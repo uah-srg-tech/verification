@@ -33,7 +33,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalTCRParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'\"Fail\"'", "'\"Pass\"'", "'\"NotTested\"'", "'\"true\"'", "'\"false\"'", "'<TestCampaignReport'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'</TestCampaignReport>'", "'<VTCRTestReport'", "'test_procedure='", "'status='", "'</VTCRTestReport>'", "'<evidence>'", "'</evidence>'", "'<run'", "'</run>'", "'bold='", "'italics='", "'underline='", "'color='"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_UINT_STRING", "RULE_RUNTEXT", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'Fail'", "'Pass'", "'NotTested'", "'\"true\"'", "'\"false\"'", "'<TestCampaignReport'", "'name='", "'id='", "'issue='", "'revision='", "'date='", "'>'", "'</TestCampaignReport>'", "'<VTCRTestReport'", "'test_procedure='", "'<status>'", "'</status>'", "'</VTCRTestReport>'", "'<evidence>'", "'</evidence>'", "'<run'", "'</run>'", "'bold='", "'italics='", "'underline='", "'color='"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_UINT_STRING=5;
@@ -42,6 +42,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
     public static final int T__15=15;
     public static final int T__37=37;
     public static final int T__16=16;
+    public static final int T__38=38;
     public static final int T__17=17;
     public static final int T__18=18;
     public static final int T__33=33;
@@ -713,13 +714,13 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestStatus__Alternatives"
-    // InternalTCR.g:242:1: rule__VTCRTestStatus__Alternatives : ( ( ( '\"Fail\"' ) ) | ( ( '\"Pass\"' ) ) | ( ( '\"NotTested\"' ) ) );
+    // InternalTCR.g:242:1: rule__VTCRTestStatus__Alternatives : ( ( ( 'Fail' ) ) | ( ( 'Pass' ) ) | ( ( 'NotTested' ) ) );
     public final void rule__VTCRTestStatus__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:246:1: ( ( ( '\"Fail\"' ) ) | ( ( '\"Pass\"' ) ) | ( ( '\"NotTested\"' ) ) )
+            // InternalTCR.g:246:1: ( ( ( 'Fail' ) ) | ( ( 'Pass' ) ) | ( ( 'NotTested' ) ) )
             int alt1=3;
             switch ( input.LA(1) ) {
             case 13:
@@ -747,16 +748,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
             switch (alt1) {
                 case 1 :
-                    // InternalTCR.g:247:2: ( ( '\"Fail\"' ) )
+                    // InternalTCR.g:247:2: ( ( 'Fail' ) )
                     {
-                    // InternalTCR.g:247:2: ( ( '\"Fail\"' ) )
-                    // InternalTCR.g:248:3: ( '\"Fail\"' )
+                    // InternalTCR.g:247:2: ( ( 'Fail' ) )
+                    // InternalTCR.g:248:3: ( 'Fail' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0()); 
                     }
-                    // InternalTCR.g:249:3: ( '\"Fail\"' )
-                    // InternalTCR.g:249:4: '\"Fail\"'
+                    // InternalTCR.g:249:3: ( 'Fail' )
+                    // InternalTCR.g:249:4: 'Fail'
                     {
                     match(input,13,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -772,16 +773,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // InternalTCR.g:253:2: ( ( '\"Pass\"' ) )
+                    // InternalTCR.g:253:2: ( ( 'Pass' ) )
                     {
-                    // InternalTCR.g:253:2: ( ( '\"Pass\"' ) )
-                    // InternalTCR.g:254:3: ( '\"Pass\"' )
+                    // InternalTCR.g:253:2: ( ( 'Pass' ) )
+                    // InternalTCR.g:254:3: ( 'Pass' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1()); 
                     }
-                    // InternalTCR.g:255:3: ( '\"Pass\"' )
-                    // InternalTCR.g:255:4: '\"Pass\"'
+                    // InternalTCR.g:255:3: ( 'Pass' )
+                    // InternalTCR.g:255:4: 'Pass'
                     {
                     match(input,14,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -797,16 +798,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // InternalTCR.g:259:2: ( ( '\"NotTested\"' ) )
+                    // InternalTCR.g:259:2: ( ( 'NotTested' ) )
                     {
-                    // InternalTCR.g:259:2: ( ( '\"NotTested\"' ) )
-                    // InternalTCR.g:260:3: ( '\"NotTested\"' )
+                    // InternalTCR.g:259:2: ( ( 'NotTested' ) )
+                    // InternalTCR.g:260:3: ( 'NotTested' )
                     {
                     if ( state.backtracking==0 ) {
                        before(grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2()); 
                     }
-                    // InternalTCR.g:261:3: ( '\"NotTested\"' )
-                    // InternalTCR.g:261:4: '\"NotTested\"'
+                    // InternalTCR.g:261:3: ( 'NotTested' )
+                    // InternalTCR.g:261:4: 'NotTested'
                     {
                     match(input,15,FollowSets000.FOLLOW_2); if (state.failed) return ;
 
@@ -2306,7 +2307,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             // InternalTCR.g:733:1: ( rule__VTCRTestReport__Group__2__Impl rule__VTCRTestReport__Group__3 )
             // InternalTCR.g:734:2: rule__VTCRTestReport__Group__2__Impl rule__VTCRTestReport__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_15);
+            pushFollow(FollowSets000.FOLLOW_10);
             rule__VTCRTestReport__Group__2__Impl();
 
             state._fsp--;
@@ -2395,7 +2396,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             // InternalTCR.g:760:1: ( rule__VTCRTestReport__Group__3__Impl rule__VTCRTestReport__Group__4 )
             // InternalTCR.g:761:2: rule__VTCRTestReport__Group__3__Impl rule__VTCRTestReport__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_16);
+            pushFollow(FollowSets000.FOLLOW_15);
             rule__VTCRTestReport__Group__3__Impl();
 
             state._fsp--;
@@ -2424,24 +2425,24 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__3__Impl"
-    // InternalTCR.g:768:1: rule__VTCRTestReport__Group__3__Impl : ( 'status=' ) ;
+    // InternalTCR.g:768:1: rule__VTCRTestReport__Group__3__Impl : ( '>' ) ;
     public final void rule__VTCRTestReport__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:772:1: ( ( 'status=' ) )
-            // InternalTCR.g:773:1: ( 'status=' )
+            // InternalTCR.g:772:1: ( ( '>' ) )
+            // InternalTCR.g:773:1: ( '>' )
             {
-            // InternalTCR.g:773:1: ( 'status=' )
-            // InternalTCR.g:774:2: 'status='
+            // InternalTCR.g:773:1: ( '>' )
+            // InternalTCR.g:774:2: '>'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3()); 
+               before(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3()); 
             }
-            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3()); 
+               after(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3()); 
             }
 
             }
@@ -2474,7 +2475,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             // InternalTCR.g:787:1: ( rule__VTCRTestReport__Group__4__Impl rule__VTCRTestReport__Group__5 )
             // InternalTCR.g:788:2: rule__VTCRTestReport__Group__4__Impl rule__VTCRTestReport__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_10);
+            pushFollow(FollowSets000.FOLLOW_16);
             rule__VTCRTestReport__Group__4__Impl();
 
             state._fsp--;
@@ -2503,26 +2504,26 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__4__Impl"
-    // InternalTCR.g:795:1: rule__VTCRTestReport__Group__4__Impl : ( ( rule__VTCRTestReport__StatusAssignment_4 ) ) ;
+    // InternalTCR.g:795:1: rule__VTCRTestReport__Group__4__Impl : ( ( rule__VTCRTestReport__EvidenceAssignment_4 ) ) ;
     public final void rule__VTCRTestReport__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:799:1: ( ( ( rule__VTCRTestReport__StatusAssignment_4 ) ) )
-            // InternalTCR.g:800:1: ( ( rule__VTCRTestReport__StatusAssignment_4 ) )
+            // InternalTCR.g:799:1: ( ( ( rule__VTCRTestReport__EvidenceAssignment_4 ) ) )
+            // InternalTCR.g:800:1: ( ( rule__VTCRTestReport__EvidenceAssignment_4 ) )
             {
-            // InternalTCR.g:800:1: ( ( rule__VTCRTestReport__StatusAssignment_4 ) )
-            // InternalTCR.g:801:2: ( rule__VTCRTestReport__StatusAssignment_4 )
+            // InternalTCR.g:800:1: ( ( rule__VTCRTestReport__EvidenceAssignment_4 ) )
+            // InternalTCR.g:801:2: ( rule__VTCRTestReport__EvidenceAssignment_4 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_4()); 
+               before(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_4()); 
             }
-            // InternalTCR.g:802:2: ( rule__VTCRTestReport__StatusAssignment_4 )
-            // InternalTCR.g:802:3: rule__VTCRTestReport__StatusAssignment_4
+            // InternalTCR.g:802:2: ( rule__VTCRTestReport__EvidenceAssignment_4 )
+            // InternalTCR.g:802:3: rule__VTCRTestReport__EvidenceAssignment_4
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCRTestReport__StatusAssignment_4();
+            rule__VTCRTestReport__EvidenceAssignment_4();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2530,7 +2531,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_4()); 
+               after(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_4()); 
             }
 
             }
@@ -2592,24 +2593,24 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__5__Impl"
-    // InternalTCR.g:822:1: rule__VTCRTestReport__Group__5__Impl : ( '>' ) ;
+    // InternalTCR.g:822:1: rule__VTCRTestReport__Group__5__Impl : ( '<status>' ) ;
     public final void rule__VTCRTestReport__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:826:1: ( ( '>' ) )
-            // InternalTCR.g:827:1: ( '>' )
+            // InternalTCR.g:826:1: ( ( '<status>' ) )
+            // InternalTCR.g:827:1: ( '<status>' )
             {
-            // InternalTCR.g:827:1: ( '>' )
-            // InternalTCR.g:828:2: '>'
+            // InternalTCR.g:827:1: ( '<status>' )
+            // InternalTCR.g:828:2: '<status>'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5()); 
+               before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5()); 
             }
-            match(input,24,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,28,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5()); 
+               after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5()); 
             }
 
             }
@@ -2671,26 +2672,26 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__6__Impl"
-    // InternalTCR.g:849:1: rule__VTCRTestReport__Group__6__Impl : ( ( rule__VTCRTestReport__EvidenceAssignment_6 ) ) ;
+    // InternalTCR.g:849:1: rule__VTCRTestReport__Group__6__Impl : ( ( rule__VTCRTestReport__StatusAssignment_6 ) ) ;
     public final void rule__VTCRTestReport__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:853:1: ( ( ( rule__VTCRTestReport__EvidenceAssignment_6 ) ) )
-            // InternalTCR.g:854:1: ( ( rule__VTCRTestReport__EvidenceAssignment_6 ) )
+            // InternalTCR.g:853:1: ( ( ( rule__VTCRTestReport__StatusAssignment_6 ) ) )
+            // InternalTCR.g:854:1: ( ( rule__VTCRTestReport__StatusAssignment_6 ) )
             {
-            // InternalTCR.g:854:1: ( ( rule__VTCRTestReport__EvidenceAssignment_6 ) )
-            // InternalTCR.g:855:2: ( rule__VTCRTestReport__EvidenceAssignment_6 )
+            // InternalTCR.g:854:1: ( ( rule__VTCRTestReport__StatusAssignment_6 ) )
+            // InternalTCR.g:855:2: ( rule__VTCRTestReport__StatusAssignment_6 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_6()); 
+               before(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_6()); 
             }
-            // InternalTCR.g:856:2: ( rule__VTCRTestReport__EvidenceAssignment_6 )
-            // InternalTCR.g:856:3: rule__VTCRTestReport__EvidenceAssignment_6
+            // InternalTCR.g:856:2: ( rule__VTCRTestReport__StatusAssignment_6 )
+            // InternalTCR.g:856:3: rule__VTCRTestReport__StatusAssignment_6
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VTCRTestReport__EvidenceAssignment_6();
+            rule__VTCRTestReport__StatusAssignment_6();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2698,7 +2699,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_6()); 
+               after(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_6()); 
             }
 
             }
@@ -2722,17 +2723,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__7"
-    // InternalTCR.g:864:1: rule__VTCRTestReport__Group__7 : rule__VTCRTestReport__Group__7__Impl ;
+    // InternalTCR.g:864:1: rule__VTCRTestReport__Group__7 : rule__VTCRTestReport__Group__7__Impl rule__VTCRTestReport__Group__8 ;
     public final void rule__VTCRTestReport__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:868:1: ( rule__VTCRTestReport__Group__7__Impl )
-            // InternalTCR.g:869:2: rule__VTCRTestReport__Group__7__Impl
+            // InternalTCR.g:868:1: ( rule__VTCRTestReport__Group__7__Impl rule__VTCRTestReport__Group__8 )
+            // InternalTCR.g:869:2: rule__VTCRTestReport__Group__7__Impl rule__VTCRTestReport__Group__8
             {
-            pushFollow(FollowSets000.FOLLOW_2);
+            pushFollow(FollowSets000.FOLLOW_19);
             rule__VTCRTestReport__Group__7__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VTCRTestReport__Group__8();
 
             state._fsp--;
             if (state.failed) return ;
@@ -2755,24 +2761,24 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Group__7__Impl"
-    // InternalTCR.g:875:1: rule__VTCRTestReport__Group__7__Impl : ( '</VTCRTestReport>' ) ;
+    // InternalTCR.g:876:1: rule__VTCRTestReport__Group__7__Impl : ( '</status>' ) ;
     public final void rule__VTCRTestReport__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:879:1: ( ( '</VTCRTestReport>' ) )
-            // InternalTCR.g:880:1: ( '</VTCRTestReport>' )
+            // InternalTCR.g:880:1: ( ( '</status>' ) )
+            // InternalTCR.g:881:1: ( '</status>' )
             {
-            // InternalTCR.g:880:1: ( '</VTCRTestReport>' )
-            // InternalTCR.g:881:2: '</VTCRTestReport>'
+            // InternalTCR.g:881:1: ( '</status>' )
+            // InternalTCR.g:882:2: '</status>'
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7()); 
+               before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7()); 
             }
             match(input,29,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7()); 
+               after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7()); 
             }
 
             }
@@ -2795,17 +2801,91 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VTCRTestReport__Group__7__Impl"
 
 
+    // $ANTLR start "rule__VTCRTestReport__Group__8"
+    // InternalTCR.g:891:1: rule__VTCRTestReport__Group__8 : rule__VTCRTestReport__Group__8__Impl ;
+    public final void rule__VTCRTestReport__Group__8() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTCR.g:895:1: ( rule__VTCRTestReport__Group__8__Impl )
+            // InternalTCR.g:896:2: rule__VTCRTestReport__Group__8__Impl
+            {
+            pushFollow(FollowSets000.FOLLOW_2);
+            rule__VTCRTestReport__Group__8__Impl();
+
+            state._fsp--;
+            if (state.failed) return ;
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VTCRTestReport__Group__8"
+
+
+    // $ANTLR start "rule__VTCRTestReport__Group__8__Impl"
+    // InternalTCR.g:902:1: rule__VTCRTestReport__Group__8__Impl : ( '</VTCRTestReport>' ) ;
+    public final void rule__VTCRTestReport__Group__8__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTCR.g:906:1: ( ( '</VTCRTestReport>' ) )
+            // InternalTCR.g:907:1: ( '</VTCRTestReport>' )
+            {
+            // InternalTCR.g:907:1: ( '</VTCRTestReport>' )
+            // InternalTCR.g:908:2: '</VTCRTestReport>'
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8()); 
+            }
+            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VTCRTestReport__Group__8__Impl"
+
+
     // $ANTLR start "rule__DParagraphEvidence__Group__0"
-    // InternalTCR.g:891:1: rule__DParagraphEvidence__Group__0 : rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1 ;
+    // InternalTCR.g:918:1: rule__DParagraphEvidence__Group__0 : rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1 ;
     public final void rule__DParagraphEvidence__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:895:1: ( rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1 )
-            // InternalTCR.g:896:2: rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1
+            // InternalTCR.g:922:1: ( rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1 )
+            // InternalTCR.g:923:2: rule__DParagraphEvidence__Group__0__Impl rule__DParagraphEvidence__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_19);
+            pushFollow(FollowSets000.FOLLOW_20);
             rule__DParagraphEvidence__Group__0__Impl();
 
             state._fsp--;
@@ -2834,22 +2914,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DParagraphEvidence__Group__0__Impl"
-    // InternalTCR.g:903:1: rule__DParagraphEvidence__Group__0__Impl : ( '<evidence>' ) ;
+    // InternalTCR.g:930:1: rule__DParagraphEvidence__Group__0__Impl : ( '<evidence>' ) ;
     public final void rule__DParagraphEvidence__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:907:1: ( ( '<evidence>' ) )
-            // InternalTCR.g:908:1: ( '<evidence>' )
+            // InternalTCR.g:934:1: ( ( '<evidence>' ) )
+            // InternalTCR.g:935:1: ( '<evidence>' )
             {
-            // InternalTCR.g:908:1: ( '<evidence>' )
-            // InternalTCR.g:909:2: '<evidence>'
+            // InternalTCR.g:935:1: ( '<evidence>' )
+            // InternalTCR.g:936:2: '<evidence>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_0()); 
             }
-            match(input,30,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_0()); 
             }
@@ -2875,16 +2955,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DParagraphEvidence__Group__1"
-    // InternalTCR.g:918:1: rule__DParagraphEvidence__Group__1 : rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2 ;
+    // InternalTCR.g:945:1: rule__DParagraphEvidence__Group__1 : rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2 ;
     public final void rule__DParagraphEvidence__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:922:1: ( rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2 )
-            // InternalTCR.g:923:2: rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2
+            // InternalTCR.g:949:1: ( rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2 )
+            // InternalTCR.g:950:2: rule__DParagraphEvidence__Group__1__Impl rule__DParagraphEvidence__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_20);
+            pushFollow(FollowSets000.FOLLOW_21);
             rule__DParagraphEvidence__Group__1__Impl();
 
             state._fsp--;
@@ -2913,28 +2993,28 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DParagraphEvidence__Group__1__Impl"
-    // InternalTCR.g:930:1: rule__DParagraphEvidence__Group__1__Impl : ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) ) ;
+    // InternalTCR.g:957:1: rule__DParagraphEvidence__Group__1__Impl : ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) ) ;
     public final void rule__DParagraphEvidence__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:934:1: ( ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) ) )
-            // InternalTCR.g:935:1: ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) )
+            // InternalTCR.g:961:1: ( ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) ) )
+            // InternalTCR.g:962:1: ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) )
             {
-            // InternalTCR.g:935:1: ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) )
-            // InternalTCR.g:936:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* )
+            // InternalTCR.g:962:1: ( ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* ) )
+            // InternalTCR.g:963:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) ) ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* )
             {
-            // InternalTCR.g:936:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) )
-            // InternalTCR.g:937:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )
+            // InternalTCR.g:963:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 ) )
+            // InternalTCR.g:964:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDParagraphEvidenceAccess().getParagraphContentAssignment_1()); 
             }
-            // InternalTCR.g:938:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )
-            // InternalTCR.g:938:4: rule__DParagraphEvidence__ParagraphContentAssignment_1
+            // InternalTCR.g:965:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )
+            // InternalTCR.g:965:4: rule__DParagraphEvidence__ParagraphContentAssignment_1
             {
-            pushFollow(FollowSets000.FOLLOW_21);
+            pushFollow(FollowSets000.FOLLOW_22);
             rule__DParagraphEvidence__ParagraphContentAssignment_1();
 
             state._fsp--;
@@ -2948,28 +3028,28 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
             }
 
-            // InternalTCR.g:941:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* )
-            // InternalTCR.g:942:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )*
+            // InternalTCR.g:968:2: ( ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )* )
+            // InternalTCR.g:969:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )*
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDParagraphEvidenceAccess().getParagraphContentAssignment_1()); 
             }
-            // InternalTCR.g:943:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )*
+            // InternalTCR.g:970:3: ( rule__DParagraphEvidence__ParagraphContentAssignment_1 )*
             loop4:
             do {
                 int alt4=2;
                 int LA4_0 = input.LA(1);
 
-                if ( (LA4_0==32) ) {
+                if ( (LA4_0==33) ) {
                     alt4=1;
                 }
 
 
                 switch (alt4) {
             	case 1 :
-            	    // InternalTCR.g:943:4: rule__DParagraphEvidence__ParagraphContentAssignment_1
+            	    // InternalTCR.g:970:4: rule__DParagraphEvidence__ParagraphContentAssignment_1
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_21);
+            	    pushFollow(FollowSets000.FOLLOW_22);
             	    rule__DParagraphEvidence__ParagraphContentAssignment_1();
 
             	    state._fsp--;
@@ -3011,14 +3091,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DParagraphEvidence__Group__2"
-    // InternalTCR.g:952:1: rule__DParagraphEvidence__Group__2 : rule__DParagraphEvidence__Group__2__Impl ;
+    // InternalTCR.g:979:1: rule__DParagraphEvidence__Group__2 : rule__DParagraphEvidence__Group__2__Impl ;
     public final void rule__DParagraphEvidence__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:956:1: ( rule__DParagraphEvidence__Group__2__Impl )
-            // InternalTCR.g:957:2: rule__DParagraphEvidence__Group__2__Impl
+            // InternalTCR.g:983:1: ( rule__DParagraphEvidence__Group__2__Impl )
+            // InternalTCR.g:984:2: rule__DParagraphEvidence__Group__2__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DParagraphEvidence__Group__2__Impl();
@@ -3044,22 +3124,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DParagraphEvidence__Group__2__Impl"
-    // InternalTCR.g:963:1: rule__DParagraphEvidence__Group__2__Impl : ( '</evidence>' ) ;
+    // InternalTCR.g:990:1: rule__DParagraphEvidence__Group__2__Impl : ( '</evidence>' ) ;
     public final void rule__DParagraphEvidence__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:967:1: ( ( '</evidence>' ) )
-            // InternalTCR.g:968:1: ( '</evidence>' )
+            // InternalTCR.g:994:1: ( ( '</evidence>' ) )
+            // InternalTCR.g:995:1: ( '</evidence>' )
             {
-            // InternalTCR.g:968:1: ( '</evidence>' )
-            // InternalTCR.g:969:2: '</evidence>'
+            // InternalTCR.g:995:1: ( '</evidence>' )
+            // InternalTCR.g:996:2: '</evidence>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_2()); 
             }
-            match(input,31,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDParagraphEvidenceAccess().getEvidenceKeyword_2()); 
             }
@@ -3085,16 +3165,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__0"
-    // InternalTCR.g:979:1: rule__DRun__Group__0 : rule__DRun__Group__0__Impl rule__DRun__Group__1 ;
+    // InternalTCR.g:1006:1: rule__DRun__Group__0 : rule__DRun__Group__0__Impl rule__DRun__Group__1 ;
     public final void rule__DRun__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:983:1: ( rule__DRun__Group__0__Impl rule__DRun__Group__1 )
-            // InternalTCR.g:984:2: rule__DRun__Group__0__Impl rule__DRun__Group__1
+            // InternalTCR.g:1010:1: ( rule__DRun__Group__0__Impl rule__DRun__Group__1 )
+            // InternalTCR.g:1011:2: rule__DRun__Group__0__Impl rule__DRun__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__DRun__Group__0__Impl();
 
             state._fsp--;
@@ -3123,22 +3203,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__0__Impl"
-    // InternalTCR.g:991:1: rule__DRun__Group__0__Impl : ( '<run' ) ;
+    // InternalTCR.g:1018:1: rule__DRun__Group__0__Impl : ( '<run' ) ;
     public final void rule__DRun__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:995:1: ( ( '<run' ) )
-            // InternalTCR.g:996:1: ( '<run' )
+            // InternalTCR.g:1022:1: ( ( '<run' ) )
+            // InternalTCR.g:1023:1: ( '<run' )
             {
-            // InternalTCR.g:996:1: ( '<run' )
-            // InternalTCR.g:997:2: '<run'
+            // InternalTCR.g:1023:1: ( '<run' )
+            // InternalTCR.g:1024:2: '<run'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getRunKeyword_0()); 
             }
-            match(input,32,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getRunKeyword_0()); 
             }
@@ -3164,16 +3244,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__1"
-    // InternalTCR.g:1006:1: rule__DRun__Group__1 : rule__DRun__Group__1__Impl rule__DRun__Group__2 ;
+    // InternalTCR.g:1033:1: rule__DRun__Group__1 : rule__DRun__Group__1__Impl rule__DRun__Group__2 ;
     public final void rule__DRun__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1010:1: ( rule__DRun__Group__1__Impl rule__DRun__Group__2 )
-            // InternalTCR.g:1011:2: rule__DRun__Group__1__Impl rule__DRun__Group__2
+            // InternalTCR.g:1037:1: ( rule__DRun__Group__1__Impl rule__DRun__Group__2 )
+            // InternalTCR.g:1038:2: rule__DRun__Group__1__Impl rule__DRun__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__DRun__Group__1__Impl();
 
             state._fsp--;
@@ -3202,31 +3282,31 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__1__Impl"
-    // InternalTCR.g:1018:1: rule__DRun__Group__1__Impl : ( ( rule__DRun__Group_1__0 )? ) ;
+    // InternalTCR.g:1045:1: rule__DRun__Group__1__Impl : ( ( rule__DRun__Group_1__0 )? ) ;
     public final void rule__DRun__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1022:1: ( ( ( rule__DRun__Group_1__0 )? ) )
-            // InternalTCR.g:1023:1: ( ( rule__DRun__Group_1__0 )? )
+            // InternalTCR.g:1049:1: ( ( ( rule__DRun__Group_1__0 )? ) )
+            // InternalTCR.g:1050:1: ( ( rule__DRun__Group_1__0 )? )
             {
-            // InternalTCR.g:1023:1: ( ( rule__DRun__Group_1__0 )? )
-            // InternalTCR.g:1024:2: ( rule__DRun__Group_1__0 )?
+            // InternalTCR.g:1050:1: ( ( rule__DRun__Group_1__0 )? )
+            // InternalTCR.g:1051:2: ( rule__DRun__Group_1__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getGroup_1()); 
             }
-            // InternalTCR.g:1025:2: ( rule__DRun__Group_1__0 )?
+            // InternalTCR.g:1052:2: ( rule__DRun__Group_1__0 )?
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==34) ) {
+            if ( (LA5_0==35) ) {
                 alt5=1;
             }
             switch (alt5) {
                 case 1 :
-                    // InternalTCR.g:1025:3: rule__DRun__Group_1__0
+                    // InternalTCR.g:1052:3: rule__DRun__Group_1__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__DRun__Group_1__0();
@@ -3264,16 +3344,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__2"
-    // InternalTCR.g:1033:1: rule__DRun__Group__2 : rule__DRun__Group__2__Impl rule__DRun__Group__3 ;
+    // InternalTCR.g:1060:1: rule__DRun__Group__2 : rule__DRun__Group__2__Impl rule__DRun__Group__3 ;
     public final void rule__DRun__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1037:1: ( rule__DRun__Group__2__Impl rule__DRun__Group__3 )
-            // InternalTCR.g:1038:2: rule__DRun__Group__2__Impl rule__DRun__Group__3
+            // InternalTCR.g:1064:1: ( rule__DRun__Group__2__Impl rule__DRun__Group__3 )
+            // InternalTCR.g:1065:2: rule__DRun__Group__2__Impl rule__DRun__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__DRun__Group__2__Impl();
 
             state._fsp--;
@@ -3302,31 +3382,31 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__2__Impl"
-    // InternalTCR.g:1045:1: rule__DRun__Group__2__Impl : ( ( rule__DRun__Group_2__0 )? ) ;
+    // InternalTCR.g:1072:1: rule__DRun__Group__2__Impl : ( ( rule__DRun__Group_2__0 )? ) ;
     public final void rule__DRun__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1049:1: ( ( ( rule__DRun__Group_2__0 )? ) )
-            // InternalTCR.g:1050:1: ( ( rule__DRun__Group_2__0 )? )
+            // InternalTCR.g:1076:1: ( ( ( rule__DRun__Group_2__0 )? ) )
+            // InternalTCR.g:1077:1: ( ( rule__DRun__Group_2__0 )? )
             {
-            // InternalTCR.g:1050:1: ( ( rule__DRun__Group_2__0 )? )
-            // InternalTCR.g:1051:2: ( rule__DRun__Group_2__0 )?
+            // InternalTCR.g:1077:1: ( ( rule__DRun__Group_2__0 )? )
+            // InternalTCR.g:1078:2: ( rule__DRun__Group_2__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getGroup_2()); 
             }
-            // InternalTCR.g:1052:2: ( rule__DRun__Group_2__0 )?
+            // InternalTCR.g:1079:2: ( rule__DRun__Group_2__0 )?
             int alt6=2;
             int LA6_0 = input.LA(1);
 
-            if ( (LA6_0==35) ) {
+            if ( (LA6_0==36) ) {
                 alt6=1;
             }
             switch (alt6) {
                 case 1 :
-                    // InternalTCR.g:1052:3: rule__DRun__Group_2__0
+                    // InternalTCR.g:1079:3: rule__DRun__Group_2__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__DRun__Group_2__0();
@@ -3364,16 +3444,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__3"
-    // InternalTCR.g:1060:1: rule__DRun__Group__3 : rule__DRun__Group__3__Impl rule__DRun__Group__4 ;
+    // InternalTCR.g:1087:1: rule__DRun__Group__3 : rule__DRun__Group__3__Impl rule__DRun__Group__4 ;
     public final void rule__DRun__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1064:1: ( rule__DRun__Group__3__Impl rule__DRun__Group__4 )
-            // InternalTCR.g:1065:2: rule__DRun__Group__3__Impl rule__DRun__Group__4
+            // InternalTCR.g:1091:1: ( rule__DRun__Group__3__Impl rule__DRun__Group__4 )
+            // InternalTCR.g:1092:2: rule__DRun__Group__3__Impl rule__DRun__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__DRun__Group__3__Impl();
 
             state._fsp--;
@@ -3402,31 +3482,31 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__3__Impl"
-    // InternalTCR.g:1072:1: rule__DRun__Group__3__Impl : ( ( rule__DRun__Group_3__0 )? ) ;
+    // InternalTCR.g:1099:1: rule__DRun__Group__3__Impl : ( ( rule__DRun__Group_3__0 )? ) ;
     public final void rule__DRun__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1076:1: ( ( ( rule__DRun__Group_3__0 )? ) )
-            // InternalTCR.g:1077:1: ( ( rule__DRun__Group_3__0 )? )
+            // InternalTCR.g:1103:1: ( ( ( rule__DRun__Group_3__0 )? ) )
+            // InternalTCR.g:1104:1: ( ( rule__DRun__Group_3__0 )? )
             {
-            // InternalTCR.g:1077:1: ( ( rule__DRun__Group_3__0 )? )
-            // InternalTCR.g:1078:2: ( rule__DRun__Group_3__0 )?
+            // InternalTCR.g:1104:1: ( ( rule__DRun__Group_3__0 )? )
+            // InternalTCR.g:1105:2: ( rule__DRun__Group_3__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getGroup_3()); 
             }
-            // InternalTCR.g:1079:2: ( rule__DRun__Group_3__0 )?
+            // InternalTCR.g:1106:2: ( rule__DRun__Group_3__0 )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==36) ) {
+            if ( (LA7_0==37) ) {
                 alt7=1;
             }
             switch (alt7) {
                 case 1 :
-                    // InternalTCR.g:1079:3: rule__DRun__Group_3__0
+                    // InternalTCR.g:1106:3: rule__DRun__Group_3__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__DRun__Group_3__0();
@@ -3464,16 +3544,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__4"
-    // InternalTCR.g:1087:1: rule__DRun__Group__4 : rule__DRun__Group__4__Impl rule__DRun__Group__5 ;
+    // InternalTCR.g:1114:1: rule__DRun__Group__4 : rule__DRun__Group__4__Impl rule__DRun__Group__5 ;
     public final void rule__DRun__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1091:1: ( rule__DRun__Group__4__Impl rule__DRun__Group__5 )
-            // InternalTCR.g:1092:2: rule__DRun__Group__4__Impl rule__DRun__Group__5
+            // InternalTCR.g:1118:1: ( rule__DRun__Group__4__Impl rule__DRun__Group__5 )
+            // InternalTCR.g:1119:2: rule__DRun__Group__4__Impl rule__DRun__Group__5
             {
-            pushFollow(FollowSets000.FOLLOW_22);
+            pushFollow(FollowSets000.FOLLOW_23);
             rule__DRun__Group__4__Impl();
 
             state._fsp--;
@@ -3502,31 +3582,31 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__4__Impl"
-    // InternalTCR.g:1099:1: rule__DRun__Group__4__Impl : ( ( rule__DRun__Group_4__0 )? ) ;
+    // InternalTCR.g:1126:1: rule__DRun__Group__4__Impl : ( ( rule__DRun__Group_4__0 )? ) ;
     public final void rule__DRun__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1103:1: ( ( ( rule__DRun__Group_4__0 )? ) )
-            // InternalTCR.g:1104:1: ( ( rule__DRun__Group_4__0 )? )
+            // InternalTCR.g:1130:1: ( ( ( rule__DRun__Group_4__0 )? ) )
+            // InternalTCR.g:1131:1: ( ( rule__DRun__Group_4__0 )? )
             {
-            // InternalTCR.g:1104:1: ( ( rule__DRun__Group_4__0 )? )
-            // InternalTCR.g:1105:2: ( rule__DRun__Group_4__0 )?
+            // InternalTCR.g:1131:1: ( ( rule__DRun__Group_4__0 )? )
+            // InternalTCR.g:1132:2: ( rule__DRun__Group_4__0 )?
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getGroup_4()); 
             }
-            // InternalTCR.g:1106:2: ( rule__DRun__Group_4__0 )?
+            // InternalTCR.g:1133:2: ( rule__DRun__Group_4__0 )?
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==37) ) {
+            if ( (LA8_0==38) ) {
                 alt8=1;
             }
             switch (alt8) {
                 case 1 :
-                    // InternalTCR.g:1106:3: rule__DRun__Group_4__0
+                    // InternalTCR.g:1133:3: rule__DRun__Group_4__0
                     {
                     pushFollow(FollowSets000.FOLLOW_2);
                     rule__DRun__Group_4__0();
@@ -3564,16 +3644,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__5"
-    // InternalTCR.g:1114:1: rule__DRun__Group__5 : rule__DRun__Group__5__Impl rule__DRun__Group__6 ;
+    // InternalTCR.g:1141:1: rule__DRun__Group__5 : rule__DRun__Group__5__Impl rule__DRun__Group__6 ;
     public final void rule__DRun__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1118:1: ( rule__DRun__Group__5__Impl rule__DRun__Group__6 )
-            // InternalTCR.g:1119:2: rule__DRun__Group__5__Impl rule__DRun__Group__6
+            // InternalTCR.g:1145:1: ( rule__DRun__Group__5__Impl rule__DRun__Group__6 )
+            // InternalTCR.g:1146:2: rule__DRun__Group__5__Impl rule__DRun__Group__6
             {
-            pushFollow(FollowSets000.FOLLOW_23);
+            pushFollow(FollowSets000.FOLLOW_24);
             rule__DRun__Group__5__Impl();
 
             state._fsp--;
@@ -3602,17 +3682,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__5__Impl"
-    // InternalTCR.g:1126:1: rule__DRun__Group__5__Impl : ( '>' ) ;
+    // InternalTCR.g:1153:1: rule__DRun__Group__5__Impl : ( '>' ) ;
     public final void rule__DRun__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1130:1: ( ( '>' ) )
-            // InternalTCR.g:1131:1: ( '>' )
+            // InternalTCR.g:1157:1: ( ( '>' ) )
+            // InternalTCR.g:1158:1: ( '>' )
             {
-            // InternalTCR.g:1131:1: ( '>' )
-            // InternalTCR.g:1132:2: '>'
+            // InternalTCR.g:1158:1: ( '>' )
+            // InternalTCR.g:1159:2: '>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getGreaterThanSignKeyword_5()); 
@@ -3643,16 +3723,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__6"
-    // InternalTCR.g:1141:1: rule__DRun__Group__6 : rule__DRun__Group__6__Impl rule__DRun__Group__7 ;
+    // InternalTCR.g:1168:1: rule__DRun__Group__6 : rule__DRun__Group__6__Impl rule__DRun__Group__7 ;
     public final void rule__DRun__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1145:1: ( rule__DRun__Group__6__Impl rule__DRun__Group__7 )
-            // InternalTCR.g:1146:2: rule__DRun__Group__6__Impl rule__DRun__Group__7
+            // InternalTCR.g:1172:1: ( rule__DRun__Group__6__Impl rule__DRun__Group__7 )
+            // InternalTCR.g:1173:2: rule__DRun__Group__6__Impl rule__DRun__Group__7
             {
-            pushFollow(FollowSets000.FOLLOW_24);
+            pushFollow(FollowSets000.FOLLOW_25);
             rule__DRun__Group__6__Impl();
 
             state._fsp--;
@@ -3681,23 +3761,23 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__6__Impl"
-    // InternalTCR.g:1153:1: rule__DRun__Group__6__Impl : ( ( rule__DRun__TextAssignment_6 ) ) ;
+    // InternalTCR.g:1180:1: rule__DRun__Group__6__Impl : ( ( rule__DRun__TextAssignment_6 ) ) ;
     public final void rule__DRun__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1157:1: ( ( ( rule__DRun__TextAssignment_6 ) ) )
-            // InternalTCR.g:1158:1: ( ( rule__DRun__TextAssignment_6 ) )
+            // InternalTCR.g:1184:1: ( ( ( rule__DRun__TextAssignment_6 ) ) )
+            // InternalTCR.g:1185:1: ( ( rule__DRun__TextAssignment_6 ) )
             {
-            // InternalTCR.g:1158:1: ( ( rule__DRun__TextAssignment_6 ) )
-            // InternalTCR.g:1159:2: ( rule__DRun__TextAssignment_6 )
+            // InternalTCR.g:1185:1: ( ( rule__DRun__TextAssignment_6 ) )
+            // InternalTCR.g:1186:2: ( rule__DRun__TextAssignment_6 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getTextAssignment_6()); 
             }
-            // InternalTCR.g:1160:2: ( rule__DRun__TextAssignment_6 )
-            // InternalTCR.g:1160:3: rule__DRun__TextAssignment_6
+            // InternalTCR.g:1187:2: ( rule__DRun__TextAssignment_6 )
+            // InternalTCR.g:1187:3: rule__DRun__TextAssignment_6
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__TextAssignment_6();
@@ -3732,14 +3812,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__7"
-    // InternalTCR.g:1168:1: rule__DRun__Group__7 : rule__DRun__Group__7__Impl ;
+    // InternalTCR.g:1195:1: rule__DRun__Group__7 : rule__DRun__Group__7__Impl ;
     public final void rule__DRun__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1172:1: ( rule__DRun__Group__7__Impl )
-            // InternalTCR.g:1173:2: rule__DRun__Group__7__Impl
+            // InternalTCR.g:1199:1: ( rule__DRun__Group__7__Impl )
+            // InternalTCR.g:1200:2: rule__DRun__Group__7__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__Group__7__Impl();
@@ -3765,22 +3845,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group__7__Impl"
-    // InternalTCR.g:1179:1: rule__DRun__Group__7__Impl : ( '</run>' ) ;
+    // InternalTCR.g:1206:1: rule__DRun__Group__7__Impl : ( '</run>' ) ;
     public final void rule__DRun__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1183:1: ( ( '</run>' ) )
-            // InternalTCR.g:1184:1: ( '</run>' )
+            // InternalTCR.g:1210:1: ( ( '</run>' ) )
+            // InternalTCR.g:1211:1: ( '</run>' )
             {
-            // InternalTCR.g:1184:1: ( '</run>' )
-            // InternalTCR.g:1185:2: '</run>'
+            // InternalTCR.g:1211:1: ( '</run>' )
+            // InternalTCR.g:1212:2: '</run>'
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getRunKeyword_7()); 
             }
-            match(input,33,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getRunKeyword_7()); 
             }
@@ -3806,16 +3886,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_1__0"
-    // InternalTCR.g:1195:1: rule__DRun__Group_1__0 : rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1 ;
+    // InternalTCR.g:1222:1: rule__DRun__Group_1__0 : rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1 ;
     public final void rule__DRun__Group_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1199:1: ( rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1 )
-            // InternalTCR.g:1200:2: rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1
+            // InternalTCR.g:1226:1: ( rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1 )
+            // InternalTCR.g:1227:2: rule__DRun__Group_1__0__Impl rule__DRun__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__DRun__Group_1__0__Impl();
 
             state._fsp--;
@@ -3844,22 +3924,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_1__0__Impl"
-    // InternalTCR.g:1207:1: rule__DRun__Group_1__0__Impl : ( 'bold=' ) ;
+    // InternalTCR.g:1234:1: rule__DRun__Group_1__0__Impl : ( 'bold=' ) ;
     public final void rule__DRun__Group_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1211:1: ( ( 'bold=' ) )
-            // InternalTCR.g:1212:1: ( 'bold=' )
+            // InternalTCR.g:1238:1: ( ( 'bold=' ) )
+            // InternalTCR.g:1239:1: ( 'bold=' )
             {
-            // InternalTCR.g:1212:1: ( 'bold=' )
-            // InternalTCR.g:1213:2: 'bold='
+            // InternalTCR.g:1239:1: ( 'bold=' )
+            // InternalTCR.g:1240:2: 'bold='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getBoldKeyword_1_0()); 
             }
-            match(input,34,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getBoldKeyword_1_0()); 
             }
@@ -3885,14 +3965,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_1__1"
-    // InternalTCR.g:1222:1: rule__DRun__Group_1__1 : rule__DRun__Group_1__1__Impl ;
+    // InternalTCR.g:1249:1: rule__DRun__Group_1__1 : rule__DRun__Group_1__1__Impl ;
     public final void rule__DRun__Group_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1226:1: ( rule__DRun__Group_1__1__Impl )
-            // InternalTCR.g:1227:2: rule__DRun__Group_1__1__Impl
+            // InternalTCR.g:1253:1: ( rule__DRun__Group_1__1__Impl )
+            // InternalTCR.g:1254:2: rule__DRun__Group_1__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__Group_1__1__Impl();
@@ -3918,23 +3998,23 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_1__1__Impl"
-    // InternalTCR.g:1233:1: rule__DRun__Group_1__1__Impl : ( ( rule__DRun__BoldAssignment_1_1 ) ) ;
+    // InternalTCR.g:1260:1: rule__DRun__Group_1__1__Impl : ( ( rule__DRun__BoldAssignment_1_1 ) ) ;
     public final void rule__DRun__Group_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1237:1: ( ( ( rule__DRun__BoldAssignment_1_1 ) ) )
-            // InternalTCR.g:1238:1: ( ( rule__DRun__BoldAssignment_1_1 ) )
+            // InternalTCR.g:1264:1: ( ( ( rule__DRun__BoldAssignment_1_1 ) ) )
+            // InternalTCR.g:1265:1: ( ( rule__DRun__BoldAssignment_1_1 ) )
             {
-            // InternalTCR.g:1238:1: ( ( rule__DRun__BoldAssignment_1_1 ) )
-            // InternalTCR.g:1239:2: ( rule__DRun__BoldAssignment_1_1 )
+            // InternalTCR.g:1265:1: ( ( rule__DRun__BoldAssignment_1_1 ) )
+            // InternalTCR.g:1266:2: ( rule__DRun__BoldAssignment_1_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getBoldAssignment_1_1()); 
             }
-            // InternalTCR.g:1240:2: ( rule__DRun__BoldAssignment_1_1 )
-            // InternalTCR.g:1240:3: rule__DRun__BoldAssignment_1_1
+            // InternalTCR.g:1267:2: ( rule__DRun__BoldAssignment_1_1 )
+            // InternalTCR.g:1267:3: rule__DRun__BoldAssignment_1_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__BoldAssignment_1_1();
@@ -3969,16 +4049,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_2__0"
-    // InternalTCR.g:1249:1: rule__DRun__Group_2__0 : rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1 ;
+    // InternalTCR.g:1276:1: rule__DRun__Group_2__0 : rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1 ;
     public final void rule__DRun__Group_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1253:1: ( rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1 )
-            // InternalTCR.g:1254:2: rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1
+            // InternalTCR.g:1280:1: ( rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1 )
+            // InternalTCR.g:1281:2: rule__DRun__Group_2__0__Impl rule__DRun__Group_2__1
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__DRun__Group_2__0__Impl();
 
             state._fsp--;
@@ -4007,22 +4087,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_2__0__Impl"
-    // InternalTCR.g:1261:1: rule__DRun__Group_2__0__Impl : ( 'italics=' ) ;
+    // InternalTCR.g:1288:1: rule__DRun__Group_2__0__Impl : ( 'italics=' ) ;
     public final void rule__DRun__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1265:1: ( ( 'italics=' ) )
-            // InternalTCR.g:1266:1: ( 'italics=' )
+            // InternalTCR.g:1292:1: ( ( 'italics=' ) )
+            // InternalTCR.g:1293:1: ( 'italics=' )
             {
-            // InternalTCR.g:1266:1: ( 'italics=' )
-            // InternalTCR.g:1267:2: 'italics='
+            // InternalTCR.g:1293:1: ( 'italics=' )
+            // InternalTCR.g:1294:2: 'italics='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getItalicsKeyword_2_0()); 
             }
-            match(input,35,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getItalicsKeyword_2_0()); 
             }
@@ -4048,14 +4128,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_2__1"
-    // InternalTCR.g:1276:1: rule__DRun__Group_2__1 : rule__DRun__Group_2__1__Impl ;
+    // InternalTCR.g:1303:1: rule__DRun__Group_2__1 : rule__DRun__Group_2__1__Impl ;
     public final void rule__DRun__Group_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1280:1: ( rule__DRun__Group_2__1__Impl )
-            // InternalTCR.g:1281:2: rule__DRun__Group_2__1__Impl
+            // InternalTCR.g:1307:1: ( rule__DRun__Group_2__1__Impl )
+            // InternalTCR.g:1308:2: rule__DRun__Group_2__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__Group_2__1__Impl();
@@ -4081,23 +4161,23 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_2__1__Impl"
-    // InternalTCR.g:1287:1: rule__DRun__Group_2__1__Impl : ( ( rule__DRun__ItalicsAssignment_2_1 ) ) ;
+    // InternalTCR.g:1314:1: rule__DRun__Group_2__1__Impl : ( ( rule__DRun__ItalicsAssignment_2_1 ) ) ;
     public final void rule__DRun__Group_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1291:1: ( ( ( rule__DRun__ItalicsAssignment_2_1 ) ) )
-            // InternalTCR.g:1292:1: ( ( rule__DRun__ItalicsAssignment_2_1 ) )
+            // InternalTCR.g:1318:1: ( ( ( rule__DRun__ItalicsAssignment_2_1 ) ) )
+            // InternalTCR.g:1319:1: ( ( rule__DRun__ItalicsAssignment_2_1 ) )
             {
-            // InternalTCR.g:1292:1: ( ( rule__DRun__ItalicsAssignment_2_1 ) )
-            // InternalTCR.g:1293:2: ( rule__DRun__ItalicsAssignment_2_1 )
+            // InternalTCR.g:1319:1: ( ( rule__DRun__ItalicsAssignment_2_1 ) )
+            // InternalTCR.g:1320:2: ( rule__DRun__ItalicsAssignment_2_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getItalicsAssignment_2_1()); 
             }
-            // InternalTCR.g:1294:2: ( rule__DRun__ItalicsAssignment_2_1 )
-            // InternalTCR.g:1294:3: rule__DRun__ItalicsAssignment_2_1
+            // InternalTCR.g:1321:2: ( rule__DRun__ItalicsAssignment_2_1 )
+            // InternalTCR.g:1321:3: rule__DRun__ItalicsAssignment_2_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__ItalicsAssignment_2_1();
@@ -4132,16 +4212,16 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_3__0"
-    // InternalTCR.g:1303:1: rule__DRun__Group_3__0 : rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1 ;
+    // InternalTCR.g:1330:1: rule__DRun__Group_3__0 : rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1 ;
     public final void rule__DRun__Group_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1307:1: ( rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1 )
-            // InternalTCR.g:1308:2: rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1
+            // InternalTCR.g:1334:1: ( rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1 )
+            // InternalTCR.g:1335:2: rule__DRun__Group_3__0__Impl rule__DRun__Group_3__1
             {
-            pushFollow(FollowSets000.FOLLOW_25);
+            pushFollow(FollowSets000.FOLLOW_26);
             rule__DRun__Group_3__0__Impl();
 
             state._fsp--;
@@ -4170,22 +4250,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_3__0__Impl"
-    // InternalTCR.g:1315:1: rule__DRun__Group_3__0__Impl : ( 'underline=' ) ;
+    // InternalTCR.g:1342:1: rule__DRun__Group_3__0__Impl : ( 'underline=' ) ;
     public final void rule__DRun__Group_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1319:1: ( ( 'underline=' ) )
-            // InternalTCR.g:1320:1: ( 'underline=' )
+            // InternalTCR.g:1346:1: ( ( 'underline=' ) )
+            // InternalTCR.g:1347:1: ( 'underline=' )
             {
-            // InternalTCR.g:1320:1: ( 'underline=' )
-            // InternalTCR.g:1321:2: 'underline='
+            // InternalTCR.g:1347:1: ( 'underline=' )
+            // InternalTCR.g:1348:2: 'underline='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getUnderlineKeyword_3_0()); 
             }
-            match(input,36,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getUnderlineKeyword_3_0()); 
             }
@@ -4211,14 +4291,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_3__1"
-    // InternalTCR.g:1330:1: rule__DRun__Group_3__1 : rule__DRun__Group_3__1__Impl ;
+    // InternalTCR.g:1357:1: rule__DRun__Group_3__1 : rule__DRun__Group_3__1__Impl ;
     public final void rule__DRun__Group_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1334:1: ( rule__DRun__Group_3__1__Impl )
-            // InternalTCR.g:1335:2: rule__DRun__Group_3__1__Impl
+            // InternalTCR.g:1361:1: ( rule__DRun__Group_3__1__Impl )
+            // InternalTCR.g:1362:2: rule__DRun__Group_3__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__Group_3__1__Impl();
@@ -4244,23 +4324,23 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_3__1__Impl"
-    // InternalTCR.g:1341:1: rule__DRun__Group_3__1__Impl : ( ( rule__DRun__UnderlineAssignment_3_1 ) ) ;
+    // InternalTCR.g:1368:1: rule__DRun__Group_3__1__Impl : ( ( rule__DRun__UnderlineAssignment_3_1 ) ) ;
     public final void rule__DRun__Group_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1345:1: ( ( ( rule__DRun__UnderlineAssignment_3_1 ) ) )
-            // InternalTCR.g:1346:1: ( ( rule__DRun__UnderlineAssignment_3_1 ) )
+            // InternalTCR.g:1372:1: ( ( ( rule__DRun__UnderlineAssignment_3_1 ) ) )
+            // InternalTCR.g:1373:1: ( ( rule__DRun__UnderlineAssignment_3_1 ) )
             {
-            // InternalTCR.g:1346:1: ( ( rule__DRun__UnderlineAssignment_3_1 ) )
-            // InternalTCR.g:1347:2: ( rule__DRun__UnderlineAssignment_3_1 )
+            // InternalTCR.g:1373:1: ( ( rule__DRun__UnderlineAssignment_3_1 ) )
+            // InternalTCR.g:1374:2: ( rule__DRun__UnderlineAssignment_3_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getUnderlineAssignment_3_1()); 
             }
-            // InternalTCR.g:1348:2: ( rule__DRun__UnderlineAssignment_3_1 )
-            // InternalTCR.g:1348:3: rule__DRun__UnderlineAssignment_3_1
+            // InternalTCR.g:1375:2: ( rule__DRun__UnderlineAssignment_3_1 )
+            // InternalTCR.g:1375:3: rule__DRun__UnderlineAssignment_3_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__UnderlineAssignment_3_1();
@@ -4295,14 +4375,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_4__0"
-    // InternalTCR.g:1357:1: rule__DRun__Group_4__0 : rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1 ;
+    // InternalTCR.g:1384:1: rule__DRun__Group_4__0 : rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1 ;
     public final void rule__DRun__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1361:1: ( rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1 )
-            // InternalTCR.g:1362:2: rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1
+            // InternalTCR.g:1388:1: ( rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1 )
+            // InternalTCR.g:1389:2: rule__DRun__Group_4__0__Impl rule__DRun__Group_4__1
             {
             pushFollow(FollowSets000.FOLLOW_4);
             rule__DRun__Group_4__0__Impl();
@@ -4333,22 +4413,22 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_4__0__Impl"
-    // InternalTCR.g:1369:1: rule__DRun__Group_4__0__Impl : ( 'color=' ) ;
+    // InternalTCR.g:1396:1: rule__DRun__Group_4__0__Impl : ( 'color=' ) ;
     public final void rule__DRun__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1373:1: ( ( 'color=' ) )
-            // InternalTCR.g:1374:1: ( 'color=' )
+            // InternalTCR.g:1400:1: ( ( 'color=' ) )
+            // InternalTCR.g:1401:1: ( 'color=' )
             {
-            // InternalTCR.g:1374:1: ( 'color=' )
-            // InternalTCR.g:1375:2: 'color='
+            // InternalTCR.g:1401:1: ( 'color=' )
+            // InternalTCR.g:1402:2: 'color='
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getColorKeyword_4_0()); 
             }
-            match(input,37,FollowSets000.FOLLOW_2); if (state.failed) return ;
+            match(input,38,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
                after(grammarAccess.getDRunAccess().getColorKeyword_4_0()); 
             }
@@ -4374,14 +4454,14 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_4__1"
-    // InternalTCR.g:1384:1: rule__DRun__Group_4__1 : rule__DRun__Group_4__1__Impl ;
+    // InternalTCR.g:1411:1: rule__DRun__Group_4__1 : rule__DRun__Group_4__1__Impl ;
     public final void rule__DRun__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1388:1: ( rule__DRun__Group_4__1__Impl )
-            // InternalTCR.g:1389:2: rule__DRun__Group_4__1__Impl
+            // InternalTCR.g:1415:1: ( rule__DRun__Group_4__1__Impl )
+            // InternalTCR.g:1416:2: rule__DRun__Group_4__1__Impl
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__Group_4__1__Impl();
@@ -4407,23 +4487,23 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__Group_4__1__Impl"
-    // InternalTCR.g:1395:1: rule__DRun__Group_4__1__Impl : ( ( rule__DRun__ColorAssignment_4_1 ) ) ;
+    // InternalTCR.g:1422:1: rule__DRun__Group_4__1__Impl : ( ( rule__DRun__ColorAssignment_4_1 ) ) ;
     public final void rule__DRun__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1399:1: ( ( ( rule__DRun__ColorAssignment_4_1 ) ) )
-            // InternalTCR.g:1400:1: ( ( rule__DRun__ColorAssignment_4_1 ) )
+            // InternalTCR.g:1426:1: ( ( ( rule__DRun__ColorAssignment_4_1 ) ) )
+            // InternalTCR.g:1427:1: ( ( rule__DRun__ColorAssignment_4_1 ) )
             {
-            // InternalTCR.g:1400:1: ( ( rule__DRun__ColorAssignment_4_1 ) )
-            // InternalTCR.g:1401:2: ( rule__DRun__ColorAssignment_4_1 )
+            // InternalTCR.g:1427:1: ( ( rule__DRun__ColorAssignment_4_1 ) )
+            // InternalTCR.g:1428:2: ( rule__DRun__ColorAssignment_4_1 )
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getColorAssignment_4_1()); 
             }
-            // InternalTCR.g:1402:2: ( rule__DRun__ColorAssignment_4_1 )
-            // InternalTCR.g:1402:3: rule__DRun__ColorAssignment_4_1
+            // InternalTCR.g:1429:2: ( rule__DRun__ColorAssignment_4_1 )
+            // InternalTCR.g:1429:3: rule__DRun__ColorAssignment_4_1
             {
             pushFollow(FollowSets000.FOLLOW_2);
             rule__DRun__ColorAssignment_4_1();
@@ -4458,17 +4538,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__NameAssignment_2"
-    // InternalTCR.g:1411:1: rule__VTCRTestCampaignReport__NameAssignment_2 : ( RULE_STRING ) ;
+    // InternalTCR.g:1438:1: rule__VTCRTestCampaignReport__NameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__VTCRTestCampaignReport__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1415:1: ( ( RULE_STRING ) )
-            // InternalTCR.g:1416:2: ( RULE_STRING )
+            // InternalTCR.g:1442:1: ( ( RULE_STRING ) )
+            // InternalTCR.g:1443:2: ( RULE_STRING )
             {
-            // InternalTCR.g:1416:2: ( RULE_STRING )
-            // InternalTCR.g:1417:3: RULE_STRING
+            // InternalTCR.g:1443:2: ( RULE_STRING )
+            // InternalTCR.g:1444:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getNameSTRINGTerminalRuleCall_2_0()); 
@@ -4499,17 +4579,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__IdAssignment_4"
-    // InternalTCR.g:1426:1: rule__VTCRTestCampaignReport__IdAssignment_4 : ( RULE_STRING ) ;
+    // InternalTCR.g:1453:1: rule__VTCRTestCampaignReport__IdAssignment_4 : ( RULE_STRING ) ;
     public final void rule__VTCRTestCampaignReport__IdAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1430:1: ( ( RULE_STRING ) )
-            // InternalTCR.g:1431:2: ( RULE_STRING )
+            // InternalTCR.g:1457:1: ( ( RULE_STRING ) )
+            // InternalTCR.g:1458:2: ( RULE_STRING )
             {
-            // InternalTCR.g:1431:2: ( RULE_STRING )
-            // InternalTCR.g:1432:3: RULE_STRING
+            // InternalTCR.g:1458:2: ( RULE_STRING )
+            // InternalTCR.g:1459:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getIdSTRINGTerminalRuleCall_4_0()); 
@@ -4540,17 +4620,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__IssueAssignment_6"
-    // InternalTCR.g:1441:1: rule__VTCRTestCampaignReport__IssueAssignment_6 : ( RULE_UINT_STRING ) ;
+    // InternalTCR.g:1468:1: rule__VTCRTestCampaignReport__IssueAssignment_6 : ( RULE_UINT_STRING ) ;
     public final void rule__VTCRTestCampaignReport__IssueAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1445:1: ( ( RULE_UINT_STRING ) )
-            // InternalTCR.g:1446:2: ( RULE_UINT_STRING )
+            // InternalTCR.g:1472:1: ( ( RULE_UINT_STRING ) )
+            // InternalTCR.g:1473:2: ( RULE_UINT_STRING )
             {
-            // InternalTCR.g:1446:2: ( RULE_UINT_STRING )
-            // InternalTCR.g:1447:3: RULE_UINT_STRING
+            // InternalTCR.g:1473:2: ( RULE_UINT_STRING )
+            // InternalTCR.g:1474:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getIssueUINT_STRINGTerminalRuleCall_6_0()); 
@@ -4581,17 +4661,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__RevisionAssignment_8"
-    // InternalTCR.g:1456:1: rule__VTCRTestCampaignReport__RevisionAssignment_8 : ( RULE_UINT_STRING ) ;
+    // InternalTCR.g:1483:1: rule__VTCRTestCampaignReport__RevisionAssignment_8 : ( RULE_UINT_STRING ) ;
     public final void rule__VTCRTestCampaignReport__RevisionAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1460:1: ( ( RULE_UINT_STRING ) )
-            // InternalTCR.g:1461:2: ( RULE_UINT_STRING )
+            // InternalTCR.g:1487:1: ( ( RULE_UINT_STRING ) )
+            // InternalTCR.g:1488:2: ( RULE_UINT_STRING )
             {
-            // InternalTCR.g:1461:2: ( RULE_UINT_STRING )
-            // InternalTCR.g:1462:3: RULE_UINT_STRING
+            // InternalTCR.g:1488:2: ( RULE_UINT_STRING )
+            // InternalTCR.g:1489:3: RULE_UINT_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getRevisionUINT_STRINGTerminalRuleCall_8_0()); 
@@ -4622,17 +4702,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__DateAssignment_10"
-    // InternalTCR.g:1471:1: rule__VTCRTestCampaignReport__DateAssignment_10 : ( RULE_STRING ) ;
+    // InternalTCR.g:1498:1: rule__VTCRTestCampaignReport__DateAssignment_10 : ( RULE_STRING ) ;
     public final void rule__VTCRTestCampaignReport__DateAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1475:1: ( ( RULE_STRING ) )
-            // InternalTCR.g:1476:2: ( RULE_STRING )
+            // InternalTCR.g:1502:1: ( ( RULE_STRING ) )
+            // InternalTCR.g:1503:2: ( RULE_STRING )
             {
-            // InternalTCR.g:1476:2: ( RULE_STRING )
-            // InternalTCR.g:1477:3: RULE_STRING
+            // InternalTCR.g:1503:2: ( RULE_STRING )
+            // InternalTCR.g:1504:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getDateSTRINGTerminalRuleCall_10_0()); 
@@ -4663,17 +4743,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestCampaignReport__TestReportsAssignment_12"
-    // InternalTCR.g:1486:1: rule__VTCRTestCampaignReport__TestReportsAssignment_12 : ( ruleVTCRTestReport ) ;
+    // InternalTCR.g:1513:1: rule__VTCRTestCampaignReport__TestReportsAssignment_12 : ( ruleVTCRTestReport ) ;
     public final void rule__VTCRTestCampaignReport__TestReportsAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1490:1: ( ( ruleVTCRTestReport ) )
-            // InternalTCR.g:1491:2: ( ruleVTCRTestReport )
+            // InternalTCR.g:1517:1: ( ( ruleVTCRTestReport ) )
+            // InternalTCR.g:1518:2: ( ruleVTCRTestReport )
             {
-            // InternalTCR.g:1491:2: ( ruleVTCRTestReport )
-            // InternalTCR.g:1492:3: ruleVTCRTestReport
+            // InternalTCR.g:1518:2: ( ruleVTCRTestReport )
+            // InternalTCR.g:1519:3: ruleVTCRTestReport
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestCampaignReportAccess().getTestReportsVTCRTestReportParserRuleCall_12_0()); 
@@ -4708,17 +4788,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VTCRTestReport__Test_procedureAssignment_2"
-    // InternalTCR.g:1501:1: rule__VTCRTestReport__Test_procedureAssignment_2 : ( RULE_STRING ) ;
+    // InternalTCR.g:1528:1: rule__VTCRTestReport__Test_procedureAssignment_2 : ( RULE_STRING ) ;
     public final void rule__VTCRTestReport__Test_procedureAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1505:1: ( ( RULE_STRING ) )
-            // InternalTCR.g:1506:2: ( RULE_STRING )
+            // InternalTCR.g:1532:1: ( ( RULE_STRING ) )
+            // InternalTCR.g:1533:2: ( RULE_STRING )
             {
-            // InternalTCR.g:1506:2: ( RULE_STRING )
-            // InternalTCR.g:1507:3: RULE_STRING
+            // InternalTCR.g:1533:2: ( RULE_STRING )
+            // InternalTCR.g:1534:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getVTCRTestReportAccess().getTest_procedureSTRINGTerminalRuleCall_2_0()); 
@@ -4748,66 +4828,21 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VTCRTestReport__Test_procedureAssignment_2"
 
 
-    // $ANTLR start "rule__VTCRTestReport__StatusAssignment_4"
-    // InternalTCR.g:1516:1: rule__VTCRTestReport__StatusAssignment_4 : ( ruleVTCRTestStatus ) ;
-    public final void rule__VTCRTestReport__StatusAssignment_4() throws RecognitionException {
+    // $ANTLR start "rule__VTCRTestReport__EvidenceAssignment_4"
+    // InternalTCR.g:1543:1: rule__VTCRTestReport__EvidenceAssignment_4 : ( ruleDParagraphEvidence ) ;
+    public final void rule__VTCRTestReport__EvidenceAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1520:1: ( ( ruleVTCRTestStatus ) )
-            // InternalTCR.g:1521:2: ( ruleVTCRTestStatus )
+            // InternalTCR.g:1547:1: ( ( ruleDParagraphEvidence ) )
+            // InternalTCR.g:1548:2: ( ruleDParagraphEvidence )
             {
-            // InternalTCR.g:1521:2: ( ruleVTCRTestStatus )
-            // InternalTCR.g:1522:3: ruleVTCRTestStatus
-            {
-            if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0()); 
-            }
-            pushFollow(FollowSets000.FOLLOW_2);
-            ruleVTCRTestStatus();
-
-            state._fsp--;
-            if (state.failed) return ;
-            if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0()); 
-            }
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__VTCRTestReport__StatusAssignment_4"
-
-
-    // $ANTLR start "rule__VTCRTestReport__EvidenceAssignment_6"
-    // InternalTCR.g:1531:1: rule__VTCRTestReport__EvidenceAssignment_6 : ( ruleDParagraphEvidence ) ;
-    public final void rule__VTCRTestReport__EvidenceAssignment_6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalTCR.g:1535:1: ( ( ruleDParagraphEvidence ) )
-            // InternalTCR.g:1536:2: ( ruleDParagraphEvidence )
-            {
-            // InternalTCR.g:1536:2: ( ruleDParagraphEvidence )
-            // InternalTCR.g:1537:3: ruleDParagraphEvidence
+            // InternalTCR.g:1548:2: ( ruleDParagraphEvidence )
+            // InternalTCR.g:1549:3: ruleDParagraphEvidence
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0()); 
+               before(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleDParagraphEvidence();
@@ -4815,7 +4850,7 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0()); 
+               after(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0()); 
             }
 
             }
@@ -4835,21 +4870,66 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__VTCRTestReport__EvidenceAssignment_6"
+    // $ANTLR end "rule__VTCRTestReport__EvidenceAssignment_4"
+
+
+    // $ANTLR start "rule__VTCRTestReport__StatusAssignment_6"
+    // InternalTCR.g:1558:1: rule__VTCRTestReport__StatusAssignment_6 : ( ruleVTCRTestStatus ) ;
+    public final void rule__VTCRTestReport__StatusAssignment_6() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalTCR.g:1562:1: ( ( ruleVTCRTestStatus ) )
+            // InternalTCR.g:1563:2: ( ruleVTCRTestStatus )
+            {
+            // InternalTCR.g:1563:2: ( ruleVTCRTestStatus )
+            // InternalTCR.g:1564:3: ruleVTCRTestStatus
+            {
+            if ( state.backtracking==0 ) {
+               before(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0()); 
+            }
+            pushFollow(FollowSets000.FOLLOW_2);
+            ruleVTCRTestStatus();
+
+            state._fsp--;
+            if (state.failed) return ;
+            if ( state.backtracking==0 ) {
+               after(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0()); 
+            }
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__VTCRTestReport__StatusAssignment_6"
 
 
     // $ANTLR start "rule__DParagraphEvidence__ParagraphContentAssignment_1"
-    // InternalTCR.g:1546:1: rule__DParagraphEvidence__ParagraphContentAssignment_1 : ( ruleDParagraphContent ) ;
+    // InternalTCR.g:1573:1: rule__DParagraphEvidence__ParagraphContentAssignment_1 : ( ruleDParagraphContent ) ;
     public final void rule__DParagraphEvidence__ParagraphContentAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1550:1: ( ( ruleDParagraphContent ) )
-            // InternalTCR.g:1551:2: ( ruleDParagraphContent )
+            // InternalTCR.g:1577:1: ( ( ruleDParagraphContent ) )
+            // InternalTCR.g:1578:2: ( ruleDParagraphContent )
             {
-            // InternalTCR.g:1551:2: ( ruleDParagraphContent )
-            // InternalTCR.g:1552:3: ruleDParagraphContent
+            // InternalTCR.g:1578:2: ( ruleDParagraphContent )
+            // InternalTCR.g:1579:3: ruleDParagraphContent
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDParagraphEvidenceAccess().getParagraphContentDParagraphContentParserRuleCall_1_0()); 
@@ -4884,17 +4964,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__BoldAssignment_1_1"
-    // InternalTCR.g:1561:1: rule__DRun__BoldAssignment_1_1 : ( ruleDRunAttributes ) ;
+    // InternalTCR.g:1588:1: rule__DRun__BoldAssignment_1_1 : ( ruleDRunAttributes ) ;
     public final void rule__DRun__BoldAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1565:1: ( ( ruleDRunAttributes ) )
-            // InternalTCR.g:1566:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1592:1: ( ( ruleDRunAttributes ) )
+            // InternalTCR.g:1593:2: ( ruleDRunAttributes )
             {
-            // InternalTCR.g:1566:2: ( ruleDRunAttributes )
-            // InternalTCR.g:1567:3: ruleDRunAttributes
+            // InternalTCR.g:1593:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1594:3: ruleDRunAttributes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getBoldDRunAttributesEnumRuleCall_1_1_0()); 
@@ -4929,17 +5009,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__ItalicsAssignment_2_1"
-    // InternalTCR.g:1576:1: rule__DRun__ItalicsAssignment_2_1 : ( ruleDRunAttributes ) ;
+    // InternalTCR.g:1603:1: rule__DRun__ItalicsAssignment_2_1 : ( ruleDRunAttributes ) ;
     public final void rule__DRun__ItalicsAssignment_2_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1580:1: ( ( ruleDRunAttributes ) )
-            // InternalTCR.g:1581:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1607:1: ( ( ruleDRunAttributes ) )
+            // InternalTCR.g:1608:2: ( ruleDRunAttributes )
             {
-            // InternalTCR.g:1581:2: ( ruleDRunAttributes )
-            // InternalTCR.g:1582:3: ruleDRunAttributes
+            // InternalTCR.g:1608:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1609:3: ruleDRunAttributes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getItalicsDRunAttributesEnumRuleCall_2_1_0()); 
@@ -4974,17 +5054,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__UnderlineAssignment_3_1"
-    // InternalTCR.g:1591:1: rule__DRun__UnderlineAssignment_3_1 : ( ruleDRunAttributes ) ;
+    // InternalTCR.g:1618:1: rule__DRun__UnderlineAssignment_3_1 : ( ruleDRunAttributes ) ;
     public final void rule__DRun__UnderlineAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1595:1: ( ( ruleDRunAttributes ) )
-            // InternalTCR.g:1596:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1622:1: ( ( ruleDRunAttributes ) )
+            // InternalTCR.g:1623:2: ( ruleDRunAttributes )
             {
-            // InternalTCR.g:1596:2: ( ruleDRunAttributes )
-            // InternalTCR.g:1597:3: ruleDRunAttributes
+            // InternalTCR.g:1623:2: ( ruleDRunAttributes )
+            // InternalTCR.g:1624:3: ruleDRunAttributes
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getUnderlineDRunAttributesEnumRuleCall_3_1_0()); 
@@ -5019,17 +5099,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__ColorAssignment_4_1"
-    // InternalTCR.g:1606:1: rule__DRun__ColorAssignment_4_1 : ( RULE_STRING ) ;
+    // InternalTCR.g:1633:1: rule__DRun__ColorAssignment_4_1 : ( RULE_STRING ) ;
     public final void rule__DRun__ColorAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1610:1: ( ( RULE_STRING ) )
-            // InternalTCR.g:1611:2: ( RULE_STRING )
+            // InternalTCR.g:1637:1: ( ( RULE_STRING ) )
+            // InternalTCR.g:1638:2: ( RULE_STRING )
             {
-            // InternalTCR.g:1611:2: ( RULE_STRING )
-            // InternalTCR.g:1612:3: RULE_STRING
+            // InternalTCR.g:1638:2: ( RULE_STRING )
+            // InternalTCR.g:1639:3: RULE_STRING
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getColorSTRINGTerminalRuleCall_4_1_0()); 
@@ -5060,17 +5140,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DRun__TextAssignment_6"
-    // InternalTCR.g:1621:1: rule__DRun__TextAssignment_6 : ( ruleDText ) ;
+    // InternalTCR.g:1648:1: rule__DRun__TextAssignment_6 : ( ruleDText ) ;
     public final void rule__DRun__TextAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1625:1: ( ( ruleDText ) )
-            // InternalTCR.g:1626:2: ( ruleDText )
+            // InternalTCR.g:1652:1: ( ( ruleDText ) )
+            // InternalTCR.g:1653:2: ( ruleDText )
             {
-            // InternalTCR.g:1626:2: ( ruleDText )
-            // InternalTCR.g:1627:3: ruleDText
+            // InternalTCR.g:1653:2: ( ruleDText )
+            // InternalTCR.g:1654:3: ruleDText
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDRunAccess().getTextDTextParserRuleCall_6_0()); 
@@ -5105,17 +5185,17 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__DText__ContentAssignment"
-    // InternalTCR.g:1636:1: rule__DText__ContentAssignment : ( RULE_RUNTEXT ) ;
+    // InternalTCR.g:1663:1: rule__DText__ContentAssignment : ( RULE_RUNTEXT ) ;
     public final void rule__DText__ContentAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTCR.g:1640:1: ( ( RULE_RUNTEXT ) )
-            // InternalTCR.g:1641:2: ( RULE_RUNTEXT )
+            // InternalTCR.g:1667:1: ( ( RULE_RUNTEXT ) )
+            // InternalTCR.g:1668:2: ( RULE_RUNTEXT )
             {
-            // InternalTCR.g:1641:2: ( RULE_RUNTEXT )
-            // InternalTCR.g:1642:3: RULE_RUNTEXT
+            // InternalTCR.g:1668:2: ( RULE_RUNTEXT )
+            // InternalTCR.g:1669:3: RULE_RUNTEXT
             {
             if ( state.backtracking==0 ) {
                before(grammarAccess.getDTextAccess().getContentRUNTEXTTerminalRuleCall_0()); 
@@ -5165,17 +5245,18 @@ public class InternalTCRParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_12 = new BitSet(new long[]{0x0000000002000000L});
         public static final BitSet FOLLOW_13 = new BitSet(new long[]{0x0000000004000002L});
         public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000008000000L});
-        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000010000000L});
-        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x000000000000E000L});
-        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000000080000000L});
+        public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000010000000L});
+        public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x000000000000E000L});
         public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000020000000L});
-        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000100000000L});
-        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000080000000L});
-        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000100000002L});
-        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000003C01000000L});
-        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000040L});
-        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000200000000L});
-        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000000030000L});
+        public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000040000000L});
+        public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000200000000L});
+        public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000100000000L});
+        public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000200000002L});
+        public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000007801000000L});
+        public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000000000040L});
+        public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000000400000000L});
+        public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000000000030000L});
     }
 
 

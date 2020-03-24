@@ -276,39 +276,16 @@ ruleVTCRTestReport returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='status='
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3());
+			newLeafNode(otherlv_3, grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0());
 				}
-				lv_status_4_0=ruleVTCRTestStatus
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVTCRTestReportRule());
-					}
-					set(
-						$current,
-						"status",
-						lv_status_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.VTCRTestStatus");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5='>'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0());
-				}
-				lv_evidence_6_0=ruleDParagraphEvidence
+				lv_evidence_4_0=ruleDParagraphEvidence
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTCRTestReportRule());
@@ -316,15 +293,42 @@ ruleVTCRTestReport returns [EObject current=null]
 					set(
 						$current,
 						"evidence",
-						lv_evidence_6_0,
+						lv_evidence_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.DParagraphEvidence");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='</VTCRTestReport>'
+		otherlv_5='<status>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7());
+			newLeafNode(otherlv_5, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0());
+				}
+				lv_status_6_0=ruleVTCRTestStatus
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getVTCRTestReportRule());
+					}
+					set(
+						$current,
+						"status",
+						lv_status_6_0,
+						"es.uah.aut.srg.micobs.svm.lang.tcr.TCR.VTCRTestStatus");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		otherlv_7='</status>'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7());
+		}
+		otherlv_8='</VTCRTestReport>'
+		{
+			newLeafNode(otherlv_8, grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8());
 		}
 	)
 ;
@@ -597,7 +601,7 @@ ruleVTCRTestStatus returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='"Fail"'
+			enumLiteral_0='Fail'
 			{
 				$current = grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_0, grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0());
@@ -605,7 +609,7 @@ ruleVTCRTestStatus returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='"Pass"'
+			enumLiteral_1='Pass'
 			{
 				$current = grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1());
@@ -613,7 +617,7 @@ ruleVTCRTestStatus returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_2='"NotTested"'
+			enumLiteral_2='NotTested'
 			{
 				$current = grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_2, grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2());

@@ -139,25 +139,26 @@ public class TCRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTest_procedureKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cTest_procedureAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTest_procedureSTRINGTerminalRuleCall_2_0 = (RuleCall)cTest_procedureAssignment_2.eContents().get(0);
-		private final Keyword cStatusKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cStatusAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cStatusVTCRTestStatusEnumRuleCall_4_0 = (RuleCall)cStatusAssignment_4.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cEvidenceAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cEvidenceDParagraphEvidenceParserRuleCall_6_0 = (RuleCall)cEvidenceAssignment_6.eContents().get(0);
-		private final Keyword cVTCRTestReportKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cEvidenceAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cEvidenceDParagraphEvidenceParserRuleCall_4_0 = (RuleCall)cEvidenceAssignment_4.eContents().get(0);
+		private final Keyword cStatusKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cStatusAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cStatusVTCRTestStatusEnumRuleCall_6_0 = (RuleCall)cStatusAssignment_6.eContents().get(0);
+		private final Keyword cStatusKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cVTCRTestReportKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//VTCRTestReport:
 		//	'<VTCRTestReport'
 		//	'test_procedure=' test_procedure=STRING
-		//	'status=' status=VTCRTestStatus
 		//	'>'
 		//	evidence=DParagraphEvidence
+		//	'<status>' status=VTCRTestStatus '</status>'
 		//	'</VTCRTestReport>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<VTCRTestReport' 'test_procedure=' test_procedure=STRING 'status=' status=VTCRTestStatus '>'
-		//evidence=DParagraphEvidence '</VTCRTestReport>'
+		//'<VTCRTestReport' 'test_procedure=' test_procedure=STRING '>' evidence=DParagraphEvidence '<status>'
+		//status=VTCRTestStatus '</status>' '</VTCRTestReport>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<VTCRTestReport'
@@ -172,26 +173,29 @@ public class TCRGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getTest_procedureSTRINGTerminalRuleCall_2_0() { return cTest_procedureSTRINGTerminalRuleCall_2_0; }
 		
-		//'status='
-		public Keyword getStatusKeyword_3() { return cStatusKeyword_3; }
-		
-		//status=VTCRTestStatus
-		public Assignment getStatusAssignment_4() { return cStatusAssignment_4; }
-		
-		//VTCRTestStatus
-		public RuleCall getStatusVTCRTestStatusEnumRuleCall_4_0() { return cStatusVTCRTestStatusEnumRuleCall_4_0; }
-		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
 		//evidence=DParagraphEvidence
-		public Assignment getEvidenceAssignment_6() { return cEvidenceAssignment_6; }
+		public Assignment getEvidenceAssignment_4() { return cEvidenceAssignment_4; }
 		
 		//DParagraphEvidence
-		public RuleCall getEvidenceDParagraphEvidenceParserRuleCall_6_0() { return cEvidenceDParagraphEvidenceParserRuleCall_6_0; }
+		public RuleCall getEvidenceDParagraphEvidenceParserRuleCall_4_0() { return cEvidenceDParagraphEvidenceParserRuleCall_4_0; }
+		
+		//'<status>'
+		public Keyword getStatusKeyword_5() { return cStatusKeyword_5; }
+		
+		//status=VTCRTestStatus
+		public Assignment getStatusAssignment_6() { return cStatusAssignment_6; }
+		
+		//VTCRTestStatus
+		public RuleCall getStatusVTCRTestStatusEnumRuleCall_6_0() { return cStatusVTCRTestStatusEnumRuleCall_6_0; }
+		
+		//'</status>'
+		public Keyword getStatusKeyword_7() { return cStatusKeyword_7; }
 		
 		//'</VTCRTestReport>'
-		public Keyword getVTCRTestReportKeyword_7() { return cVTCRTestReportKeyword_7; }
+		public Keyword getVTCRTestReportKeyword_8() { return cVTCRTestReportKeyword_8; }
 	}
 	public class DParagraphEvidenceElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.tcr.TCR.DParagraphEvidence");
@@ -360,28 +364,28 @@ public class TCRGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNotTestedNotTestedKeyword_2_0 = (Keyword)cNotTestedEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum VTCRTestStatus:
-		//	Fail='"Fail"' | Pass='"Pass"' | NotTested='"NotTested"';
+		//	Fail | Pass | NotTested;
 		public EnumRule getRule() { return rule; }
 		
-		//Fail='"Fail"' | Pass='"Pass"' | NotTested='"NotTested"'
+		//Fail | Pass | NotTested
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
-		//Fail='"Fail"'
+		//Fail
 		public EnumLiteralDeclaration getFailEnumLiteralDeclaration_0() { return cFailEnumLiteralDeclaration_0; }
 		
-		//'"Fail"'
+		//'Fail'
 		public Keyword getFailFailKeyword_0_0() { return cFailFailKeyword_0_0; }
 		
-		//Pass='"Pass"'
+		//Pass
 		public EnumLiteralDeclaration getPassEnumLiteralDeclaration_1() { return cPassEnumLiteralDeclaration_1; }
 		
-		//'"Pass"'
+		//'Pass'
 		public Keyword getPassPassKeyword_1_0() { return cPassPassKeyword_1_0; }
 		
-		//NotTested='"NotTested"'
+		//NotTested
 		public EnumLiteralDeclaration getNotTestedEnumLiteralDeclaration_2() { return cNotTestedEnumLiteralDeclaration_2; }
 		
-		//'"NotTested"'
+		//'NotTested'
 		public Keyword getNotTestedNotTestedKeyword_2_0() { return cNotTestedNotTestedKeyword_2_0; }
 	}
 	public class DRunAttributesElements extends AbstractEnumRuleElementFinder {
@@ -492,9 +496,9 @@ public class TCRGrammarAccess extends AbstractGrammarElementFinder {
 	//VTCRTestReport:
 	//	'<VTCRTestReport'
 	//	'test_procedure=' test_procedure=STRING
-	//	'status=' status=VTCRTestStatus
 	//	'>'
 	//	evidence=DParagraphEvidence
+	//	'<status>' status=VTCRTestStatus '</status>'
 	//	'</VTCRTestReport>';
 	public VTCRTestReportElements getVTCRTestReportAccess() {
 		return pVTCRTestReport;
@@ -505,7 +509,7 @@ public class TCRGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum VTCRTestStatus:
-	//	Fail='"Fail"' | Pass='"Pass"' | NotTested='"NotTested"';
+	//	Fail | Pass | NotTested;
 	public VTCRTestStatusElements getVTCRTestStatusAccess() {
 		return eVTCRTestStatus;
 	}

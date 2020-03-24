@@ -59,8 +59,8 @@ public class TCRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTCRTestCampaignReportAccess().getDateAssignment_10(), "rule__VTCRTestCampaignReport__DateAssignment_10");
 					put(grammarAccess.getVTCRTestCampaignReportAccess().getTestReportsAssignment_12(), "rule__VTCRTestCampaignReport__TestReportsAssignment_12");
 					put(grammarAccess.getVTCRTestReportAccess().getTest_procedureAssignment_2(), "rule__VTCRTestReport__Test_procedureAssignment_2");
-					put(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_4(), "rule__VTCRTestReport__StatusAssignment_4");
-					put(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_6(), "rule__VTCRTestReport__EvidenceAssignment_6");
+					put(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_4(), "rule__VTCRTestReport__EvidenceAssignment_4");
+					put(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_6(), "rule__VTCRTestReport__StatusAssignment_6");
 					put(grammarAccess.getDParagraphEvidenceAccess().getParagraphContentAssignment_1(), "rule__DParagraphEvidence__ParagraphContentAssignment_1");
 					put(grammarAccess.getDRunAccess().getBoldAssignment_1_1(), "rule__DRun__BoldAssignment_1_1");
 					put(grammarAccess.getDRunAccess().getItalicsAssignment_2_1(), "rule__DRun__ItalicsAssignment_2_1");

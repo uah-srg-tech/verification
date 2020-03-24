@@ -246,19 +246,19 @@ rule__VTCRTestStatus__Alternatives
 :
 	(
 		{ before(grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0()); }
-		('"Fail"')
+		('Fail')
 		{ after(grammarAccess.getVTCRTestStatusAccess().getFailEnumLiteralDeclaration_0()); }
 	)
 	|
 	(
 		{ before(grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1()); }
-		('"Pass"')
+		('Pass')
 		{ after(grammarAccess.getVTCRTestStatusAccess().getPassEnumLiteralDeclaration_1()); }
 	)
 	|
 	(
 		{ before(grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2()); }
-		('"NotTested"')
+		('NotTested')
 		{ after(grammarAccess.getVTCRTestStatusAccess().getNotTestedEnumLiteralDeclaration_2()); }
 	)
 ;
@@ -771,9 +771,9 @@ rule__VTCRTestReport__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3()); }
-	'status='
-	{ after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_3()); }
+	{ before(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3()); }
+	'>'
+	{ after(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_3()); }
 )
 ;
 finally {
@@ -798,9 +798,9 @@ rule__VTCRTestReport__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_4()); }
-	(rule__VTCRTestReport__StatusAssignment_4)
-	{ after(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_4()); }
+	{ before(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_4()); }
+	(rule__VTCRTestReport__EvidenceAssignment_4)
+	{ after(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_4()); }
 )
 ;
 finally {
@@ -825,9 +825,9 @@ rule__VTCRTestReport__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5()); }
-	'>'
-	{ after(grammarAccess.getVTCRTestReportAccess().getGreaterThanSignKeyword_5()); }
+	{ before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5()); }
+	'<status>'
+	{ after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_5()); }
 )
 ;
 finally {
@@ -852,9 +852,9 @@ rule__VTCRTestReport__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_6()); }
-	(rule__VTCRTestReport__EvidenceAssignment_6)
-	{ after(grammarAccess.getVTCRTestReportAccess().getEvidenceAssignment_6()); }
+	{ before(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_6()); }
+	(rule__VTCRTestReport__StatusAssignment_6)
+	{ after(grammarAccess.getVTCRTestReportAccess().getStatusAssignment_6()); }
 )
 ;
 finally {
@@ -867,6 +867,7 @@ rule__VTCRTestReport__Group__7
 	}
 :
 	rule__VTCRTestReport__Group__7__Impl
+	rule__VTCRTestReport__Group__8
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -878,9 +879,35 @@ rule__VTCRTestReport__Group__7__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7()); }
+	{ before(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7()); }
+	'</status>'
+	{ after(grammarAccess.getVTCRTestReportAccess().getStatusKeyword_7()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTCRTestReport__Group__8
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTCRTestReport__Group__8__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTCRTestReport__Group__8__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8()); }
 	'</VTCRTestReport>'
-	{ after(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_7()); }
+	{ after(grammarAccess.getVTCRTestReportAccess().getVTCRTestReportKeyword_8()); }
 )
 ;
 finally {
@@ -1513,30 +1540,30 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTCRTestReport__StatusAssignment_4
+rule__VTCRTestReport__EvidenceAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0()); }
-		ruleVTCRTestStatus
-		{ after(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_4_0()); }
+		{ before(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0()); }
+		ruleDParagraphEvidence
+		{ after(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_4_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTCRTestReport__EvidenceAssignment_6
+rule__VTCRTestReport__StatusAssignment_6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0()); }
-		ruleDParagraphEvidence
-		{ after(grammarAccess.getVTCRTestReportAccess().getEvidenceDParagraphEvidenceParserRuleCall_6_0()); }
+		{ before(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0()); }
+		ruleVTCRTestStatus
+		{ after(grammarAccess.getVTCRTestReportAccess().getStatusVTCRTestStatusEnumRuleCall_6_0()); }
 	)
 ;
 finally {

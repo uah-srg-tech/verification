@@ -18,13 +18,13 @@ VTCRTestCampaignReport returns VTCRTestCampaignReport:
 VTCRTestReport returns VTCRTestReport:
 	'<VTCRTestReport'
 		'test_procedure=' test_procedure=STRING
-		'status=' status=VTCRTestStatus
 		'>'
 		evidence=DParagraphEvidence
+		'<status>' status=VTCRTestStatus '</status>'
 	'</VTCRTestReport>';
 
 enum VTCRTestStatus returns VTCRTestStatus:
-	Fail = '"Fail"' | Pass = '"Pass"' | NotTested = '"NotTested"';
+	Fail = 'Fail' | Pass = 'Pass' | NotTested = 'NotTested';
 
 DParagraphEvidence returns doctpl::DParagraph:
 	'<evidence>'
