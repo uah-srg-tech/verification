@@ -45,10 +45,12 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSTestProcedure;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocument;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedInterface;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplate;
 import es.uah.aut.srg.micobs.svm.tmtemplate.VTMTemplateField;
@@ -243,6 +245,46 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(VTestSetupPacketConfiguration from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSStepAction_selectedAction(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VTestSetupAction> actions = new HashSet<VTestSetupAction>();
+		actions.addAll(currTP.getScenario().getSupportedAction());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(actions, new Function<VTestSetupAction, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTestSetupAction from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VSVSProcedureSteps_priorActionOverVariable(VSVSTestProcedure currTP, EReference reference) {
+		
+		Collection<VTestSetupSupportedActionOverVariable> actionsOverVariable = new HashSet<VTestSetupSupportedActionOverVariable>();
+		actionsOverVariable.addAll(currTP.getScenario().getSupportedActionOverVariable());
+		
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(actionsOverVariable, new Function<VTestSetupSupportedActionOverVariable, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(VTestSetupSupportedActionOverVariable from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

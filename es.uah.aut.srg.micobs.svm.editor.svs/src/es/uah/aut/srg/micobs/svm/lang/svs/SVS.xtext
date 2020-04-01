@@ -412,7 +412,7 @@ enum VTestSetupConfigurationStatus returns testsetup::VTestSetupConfigurationSta
 	off = '"off"' | on = '"on"';
 
 VSVSStepInputs returns VSVSStepInputs:
-VSVSStepAction | VSVSStepTelecommandSequence;
+	VSVSStepAction | VSVSStepTelecommandSequence;
 
 VSVSStepAction returns VSVSStepAction:
 	'<Action'
