@@ -286,7 +286,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepTelemetryHeaderField">
     <eStructuralFeatures xsi:type="ecore:EReference" name="fieldRef" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/tmheader.ecore#//TMTCIFTMHeaderField"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValueRaw"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="value" lowerBound="1" eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/fieldvalue.ecore#//TMTCIFFieldValue"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSAnalysisInspectionReview" eSuperTypes="#//VSVSFixedSection"/>

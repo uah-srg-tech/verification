@@ -537,7 +537,7 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     VTestSetupActionsOverVariablesSection returns VTestSetupActionsOverVariablesSection
 	 *
 	 * Constraint:
-	 *     actionOverVariable+=VTestSetupActionOverVariable+
+	 *     actionsOverVariable+=VTestSetupActionOverVariable+
 	 */
 	protected void sequence_VTestSetupActionsOverVariablesSection(ISerializationContext context, VTestSetupActionsOverVariablesSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -549,7 +549,7 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     VTestSetupActionsSection returns VTestSetupActionsSection
 	 *
 	 * Constraint:
-	 *     action+=VTestSetupAction+
+	 *     actions+=VTestSetupAction+
 	 */
 	protected void sequence_VTestSetupActionsSection(ISerializationContext context, VTestSetupActionsSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

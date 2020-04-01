@@ -662,13 +662,13 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_ACTIONS_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Action</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Actions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_ACTIONS_SECTION__ACTION = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VTEST_SETUP_ACTIONS_SECTION__ACTIONS = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Actions Section</em>' class.
@@ -763,13 +763,13 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__SUBSECTIONS = doctplPackage.DFIXED_SECTION__SUBSECTIONS;
 
 	/**
-	 * The feature id for the '<em><b>Action Over Variable</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Actions Over Variable</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
+	int VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE = doctplPackage.DFIXED_SECTION_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Actions Over Variables Section</em>' class.
@@ -1517,15 +1517,15 @@ public interface testsetupPackage extends EPackage {
 	EClass getVTestSetupActionsSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection#getAction <em>Action</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection#getActions <em>Actions</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Action</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection#getAction()
+	 * @return the meta object for the containment reference list '<em>Actions</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsSection#getActions()
 	 * @see #getVTestSetupActionsSection()
 	 * @generated
 	 */
-	EReference getVTestSetupActionsSection_Action();
+	EReference getVTestSetupActionsSection_Actions();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction <em>VTest Setup Action</em>}'.
@@ -1581,15 +1581,15 @@ public interface testsetupPackage extends EPackage {
 	EClass getVTestSetupActionsOverVariablesSection();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionOverVariable <em>Action Over Variable</em>}'.
+	 * Returns the meta object for the containment reference list '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionsOverVariable <em>Actions Over Variable</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Action Over Variable</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionOverVariable()
+	 * @return the meta object for the containment reference list '<em>Actions Over Variable</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionsOverVariable()
 	 * @see #getVTestSetupActionsOverVariablesSection()
 	 * @generated
 	 */
-	EReference getVTestSetupActionsOverVariablesSection_ActionOverVariable();
+	EReference getVTestSetupActionsOverVariablesSection_ActionsOverVariable();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable <em>VTest Setup Action Over Variable</em>}'.
@@ -2172,12 +2172,12 @@ public interface testsetupPackage extends EPackage {
 		EClass VTEST_SETUP_ACTIONS_SECTION = eINSTANCE.getVTestSetupActionsSection();
 
 		/**
-		 * The meta object literal for the '<em><b>Action</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Actions</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTEST_SETUP_ACTIONS_SECTION__ACTION = eINSTANCE.getVTestSetupActionsSection_Action();
+		EReference VTEST_SETUP_ACTIONS_SECTION__ACTIONS = eINSTANCE.getVTestSetupActionsSection_Actions();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionImpl <em>VTest Setup Action</em>}' class.
@@ -2224,12 +2224,12 @@ public interface testsetupPackage extends EPackage {
 		EClass VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION = eINSTANCE.getVTestSetupActionsOverVariablesSection();
 
 		/**
-		 * The meta object literal for the '<em><b>Action Over Variable</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Actions Over Variable</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE = eINSTANCE.getVTestSetupActionsOverVariablesSection_ActionOverVariable();
+		EReference VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE = eINSTANCE.getVTestSetupActionsOverVariablesSection_ActionsOverVariable();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionOverVariableImpl <em>VTest Setup Action Over Variable</em>}' class.

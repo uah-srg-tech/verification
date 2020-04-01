@@ -58894,7 +58894,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18333:1: ( rule__VSVSStepTelemetryHeaderField__Group__3__Impl rule__VSVSStepTelemetryHeaderField__Group__4 )
             // InternalSVS.g:18334:2: rule__VSVSStepTelemetryHeaderField__Group__3__Impl rule__VSVSStepTelemetryHeaderField__Group__4
             {
-            pushFollow(FollowSets000.FOLLOW_199);
+            pushFollow(FollowSets000.FOLLOW_181);
             rule__VSVSStepTelemetryHeaderField__Group__3__Impl();
 
             state._fsp--;
@@ -59136,7 +59136,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18414:1: ( rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1 )
             // InternalSVS.g:18415:2: rule__QualifiedName__Group__0__Impl rule__QualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_200);
+            pushFollow(FollowSets000.FOLLOW_199);
             rule__QualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -59269,7 +59269,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalSVS.g:18455:3: rule__QualifiedName__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_201);
+            	    pushFollow(FollowSets000.FOLLOW_200);
             	    rule__QualifiedName__Group_1__0();
 
             	    state._fsp--;
@@ -59317,7 +59317,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18468:1: ( rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1 )
             // InternalSVS.g:18469:2: rule__QualifiedName__Group_1__0__Impl rule__QualifiedName__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_202);
+            pushFollow(FollowSets000.FOLLOW_201);
             rule__QualifiedName__Group_1__0__Impl();
 
             state._fsp--;
@@ -59470,7 +59470,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18522:1: ( rule__Version__Group__0__Impl rule__Version__Group__1 )
             // InternalSVS.g:18523:2: rule__Version__Group__0__Impl rule__Version__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_200);
+            pushFollow(FollowSets000.FOLLOW_199);
             rule__Version__Group__0__Impl();
 
             state._fsp--;
@@ -59613,7 +59613,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             	case 1 :
             	    // InternalSVS.g:18563:3: rule__Version__Group_1__0
             	    {
-            	    pushFollow(FollowSets000.FOLLOW_201);
+            	    pushFollow(FollowSets000.FOLLOW_200);
             	    rule__Version__Group_1__0();
 
             	    state._fsp--;
@@ -59661,7 +59661,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18576:1: ( rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1 )
             // InternalSVS.g:18577:2: rule__Version__Group_0_1__0__Impl rule__Version__Group_0_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_202);
+            pushFollow(FollowSets000.FOLLOW_201);
             rule__Version__Group_0_1__0__Impl();
 
             state._fsp--;
@@ -59831,7 +59831,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18630:1: ( rule__Version__Group_1__0__Impl rule__Version__Group_1__1 )
             // InternalSVS.g:18631:2: rule__Version__Group_1__0__Impl rule__Version__Group_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_203);
+            pushFollow(FollowSets000.FOLLOW_202);
             rule__Version__Group_1__0__Impl();
 
             state._fsp--;
@@ -59994,7 +59994,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18684:1: ( rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1 )
             // InternalSVS.g:18685:2: rule__Version__Group_1_1_1__0__Impl rule__Version__Group_1_1_1__1
             {
-            pushFollow(FollowSets000.FOLLOW_203);
+            pushFollow(FollowSets000.FOLLOW_202);
             rule__Version__Group_1_1_1__0__Impl();
 
             state._fsp--;
@@ -60164,7 +60164,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18738:1: ( rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1 )
             // InternalSVS.g:18739:2: rule__VersionedQualifiedName__Group__0__Impl rule__VersionedQualifiedName__Group__1
             {
-            pushFollow(FollowSets000.FOLLOW_204);
+            pushFollow(FollowSets000.FOLLOW_203);
             rule__VersionedQualifiedName__Group__0__Impl();
 
             state._fsp--;
@@ -60247,7 +60247,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18765:1: ( rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2 )
             // InternalSVS.g:18766:2: rule__VersionedQualifiedName__Group__1__Impl rule__VersionedQualifiedName__Group__2
             {
-            pushFollow(FollowSets000.FOLLOW_203);
+            pushFollow(FollowSets000.FOLLOW_202);
             rule__VersionedQualifiedName__Group__1__Impl();
 
             state._fsp--;
@@ -60326,7 +60326,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:18792:1: ( rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3 )
             // InternalSVS.g:18793:2: rule__VersionedQualifiedName__Group__2__Impl rule__VersionedQualifiedName__Group__3
             {
-            pushFollow(FollowSets000.FOLLOW_205);
+            pushFollow(FollowSets000.FOLLOW_204);
             rule__VersionedQualifiedName__Group__2__Impl();
 
             state._fsp--;
@@ -69642,28 +69642,28 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VSVSStepTelemetryHeaderField__ValueAssignment_4"
-    // InternalSVS.g:22024:1: rule__VSVSStepTelemetryHeaderField__ValueAssignment_4 : ( ruleTMTCIFFieldValueRaw ) ;
+    // InternalSVS.g:22024:1: rule__VSVSStepTelemetryHeaderField__ValueAssignment_4 : ( ruleTMTCIFFieldValueHeader ) ;
     public final void rule__VSVSStepTelemetryHeaderField__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSVS.g:22028:1: ( ( ruleTMTCIFFieldValueRaw ) )
-            // InternalSVS.g:22029:2: ( ruleTMTCIFFieldValueRaw )
+            // InternalSVS.g:22028:1: ( ( ruleTMTCIFFieldValueHeader ) )
+            // InternalSVS.g:22029:2: ( ruleTMTCIFFieldValueHeader )
             {
-            // InternalSVS.g:22029:2: ( ruleTMTCIFFieldValueRaw )
-            // InternalSVS.g:22030:3: ruleTMTCIFFieldValueRaw
+            // InternalSVS.g:22029:2: ( ruleTMTCIFFieldValueHeader )
+            // InternalSVS.g:22030:3: ruleTMTCIFFieldValueHeader
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0()); 
+               before(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
-            ruleTMTCIFFieldValueRaw();
+            ruleTMTCIFFieldValueHeader();
 
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0()); 
+               after(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0()); 
             }
 
             }
@@ -69890,13 +69890,12 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
         public static final BitSet FOLLOW_196 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000001200000L});
         public static final BitSet FOLLOW_197 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000800000L});
         public static final BitSet FOLLOW_198 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-        public static final BitSet FOLLOW_199 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000100L});
-        public static final BitSet FOLLOW_200 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
-        public static final BitSet FOLLOW_201 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
-        public static final BitSet FOLLOW_202 = new BitSet(new long[]{0x0000000000000080L});
-        public static final BitSet FOLLOW_203 = new BitSet(new long[]{0x00000000000000C0L});
-        public static final BitSet FOLLOW_204 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
-        public static final BitSet FOLLOW_205 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000010000000L});
+        public static final BitSet FOLLOW_199 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+        public static final BitSet FOLLOW_200 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
+        public static final BitSet FOLLOW_201 = new BitSet(new long[]{0x0000000000000080L});
+        public static final BitSet FOLLOW_202 = new BitSet(new long[]{0x00000000000000C0L});
+        public static final BitSet FOLLOW_203 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+        public static final BitSet FOLLOW_204 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000010000000L});
     }
 
 

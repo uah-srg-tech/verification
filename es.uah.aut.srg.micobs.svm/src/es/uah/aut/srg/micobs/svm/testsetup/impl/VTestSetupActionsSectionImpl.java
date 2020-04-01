@@ -39,22 +39,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsSectionImpl#getAction <em>Action</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsSectionImpl#getActions <em>Actions</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements VTestSetupActionsSection {
 	/**
-	 * The cached value of the '{@link #getAction() <em>Action</em>}' containment reference list.
+	 * The cached value of the '{@link #getActions() <em>Actions</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAction()
+	 * @see #getActions()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTestSetupAction> action;
-
+	protected EList<VTestSetupAction> actions;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,11 +78,11 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTestSetupAction> getAction() {
-		if (action == null) {
-			action = new EObjectContainmentEList<VTestSetupAction>(VTestSetupAction.class, this, testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION);
+	public EList<VTestSetupAction> getActions() {
+		if (actions == null) {
+			actions = new EObjectContainmentEList<VTestSetupAction>(VTestSetupAction.class, this, testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS);
 		}
-		return action;
+		return actions;
 	}
 
 	/**
@@ -94,8 +93,8 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION:
-				return ((InternalEList<?>)getAction()).basicRemove(otherEnd, msgs);
+			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS:
+				return ((InternalEList<?>)getActions()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -108,8 +107,8 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION:
-				return getAction();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS:
+				return getActions();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,9 +122,9 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION:
-				getAction().clear();
-				getAction().addAll((Collection<? extends VTestSetupAction>)newValue);
+			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS:
+				getActions().clear();
+				getActions().addAll((Collection<? extends VTestSetupAction>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,8 +138,8 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION:
-				getAction().clear();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS:
+				getActions().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -154,8 +153,8 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTION:
-				return action != null && !action.isEmpty();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_SECTION__ACTIONS:
+				return actions != null && !actions.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -169,7 +168,7 @@ public class VTestSetupActionsSectionImpl extends DFixedSectionImpl implements V
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		for(VTestSetupAction action : getAction()) {
+		for(VTestSetupAction action : getActions()) {
 			objects.addAll(action.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;

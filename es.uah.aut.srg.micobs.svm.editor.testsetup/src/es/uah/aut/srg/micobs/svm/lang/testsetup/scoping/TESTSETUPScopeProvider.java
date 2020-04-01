@@ -85,7 +85,7 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 	public IScope scope_VTestSetupScenarioSection_supportedAction(VTestSetupDocument testSetupDoc, EReference reference) {
 		
 		Collection<VTestSetupAction> actions = new HashSet<VTestSetupAction>();
-		actions.addAll(testSetupDoc.getActions().getAction());
+		actions.addAll(testSetupDoc.getActions().getActions());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(actions, new Function<VTestSetupAction, IEObjectDescription>(){
 	
@@ -105,7 +105,7 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 	public IScope scope_VTestSetupSupportedActionOverVariable_actionOverVariable(VTestSetupDocument testSetupDoc, EReference reference) {
 
 		Collection<VTestSetupActionOverVariable> actionsOverVariable = new HashSet<VTestSetupActionOverVariable>();
-		actionsOverVariable.addAll(testSetupDoc.getActionsOverVariables().getActionOverVariable());
+		actionsOverVariable.addAll(testSetupDoc.getActionsOverVariables().getActionsOverVariable());
 		
 		Iterable<IEObjectDescription> fullQN = Iterables.transform(actionsOverVariable, new Function<VTestSetupActionOverVariable, IEObjectDescription>(){
 	

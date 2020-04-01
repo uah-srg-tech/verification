@@ -63,7 +63,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionsSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="action" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" lowerBound="1"
         upperBound="-1" eType="#//VTestSetupAction" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupAction">
@@ -80,7 +80,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionsOverVariablesSection"
       eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actionOverVariable" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionsOverVariable" lowerBound="1"
         upperBound="-1" eType="#//VTestSetupActionOverVariable" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupActionOverVariable">

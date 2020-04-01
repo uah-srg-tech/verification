@@ -24,7 +24,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionOverVariable <em>Action Over Variable</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionsOverVariablesSection#getActionsOverVariable <em>Actions Over Variable</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupActionsOverVariablesSection()
@@ -33,20 +33,20 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface VTestSetupActionsOverVariablesSection extends DFixedSection {
 	/**
-	 * Returns the value of the '<em><b>Action Over Variable</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Actions Over Variable</b></em>' containment reference list.
 	 * The list contents are of type {@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupActionOverVariable}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Action Over Variable</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Actions Over Variable</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Action Over Variable</em>' containment reference list.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupActionsOverVariablesSection_ActionOverVariable()
+	 * @return the value of the '<em>Actions Over Variable</em>' containment reference list.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage#getVTestSetupActionsOverVariablesSection_ActionsOverVariable()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<VTestSetupActionOverVariable> getActionOverVariable();
+	EList<VTestSetupActionOverVariable> getActionsOverVariable();
 
 	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 

@@ -175,11 +175,11 @@ public class TESTSETUPParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getNameAssignment_2(), "rule__VTestSetupPacketConfiguration__NameAssignment_2");
 					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdAssignment_4(), "rule__VTestSetupPacketConfiguration__IdAssignment_4");
 					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_6(), "rule__VTestSetupPacketConfiguration__DescriptionAssignment_6");
-					put(grammarAccess.getVTestSetupActionsSectionAccess().getActionAssignment_1(), "rule__VTestSetupActionsSection__ActionAssignment_1");
+					put(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1(), "rule__VTestSetupActionsSection__ActionsAssignment_1");
 					put(grammarAccess.getVTestSetupActionAccess().getNameAssignment_2(), "rule__VTestSetupAction__NameAssignment_2");
 					put(grammarAccess.getVTestSetupActionAccess().getTypeAssignment_4(), "rule__VTestSetupAction__TypeAssignment_4");
 					put(grammarAccess.getVTestSetupActionAccess().getDescriptionAssignment_6(), "rule__VTestSetupAction__DescriptionAssignment_6");
-					put(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableAssignment_1(), "rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1");
+					put(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableAssignment_1(), "rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1");
 					put(grammarAccess.getVTestSetupActionOverVariableAccess().getNameAssignment_2(), "rule__VTestSetupActionOverVariable__NameAssignment_2");
 					put(grammarAccess.getVTestSetupActionOverVariableAccess().getTypeAssignment_4(), "rule__VTestSetupActionOverVariable__TypeAssignment_4");
 					put(grammarAccess.getVTestSetupActionOverVariableAccess().getDescriptionAssignment_6(), "rule__VTestSetupActionOverVariable__DescriptionAssignment_6");

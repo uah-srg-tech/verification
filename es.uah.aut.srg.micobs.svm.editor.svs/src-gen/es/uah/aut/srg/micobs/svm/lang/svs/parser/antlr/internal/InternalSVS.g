@@ -6878,9 +6878,9 @@ ruleVSVSStepTelemetryHeaderField returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0());
 				}
-				lv_value_4_0=ruleTMTCIFFieldValueRaw
+				lv_value_4_0=ruleTMTCIFFieldValueHeader
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVSVSStepTelemetryHeaderFieldRule());
@@ -6889,7 +6889,7 @@ ruleVSVSStepTelemetryHeaderField returns [EObject current=null]
 						$current,
 						"value",
 						lv_value_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueRaw");
+						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueHeader");
 					afterParserOrEnumRuleCall();
 				}
 			)

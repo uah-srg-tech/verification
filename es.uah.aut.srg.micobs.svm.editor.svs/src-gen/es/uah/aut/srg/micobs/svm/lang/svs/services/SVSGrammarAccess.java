@@ -4428,18 +4428,18 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cFieldRefTMTCIFTMHeaderFieldCrossReference_2_0.eContents().get(1);
 		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cValueTMTCIFFieldValueRawParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final RuleCall cValueTMTCIFFieldValueHeaderParserRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
 		private final Keyword cHeaderFieldKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VSVSStepTelemetryHeaderField:
 		//	'<HeaderField'
 		//	'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
 		//	'>'
-		//	value=TMTCIFFieldValueRaw
+		//	value=TMTCIFFieldValueHeader
 		//	'</HeaderField>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<HeaderField' 'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING] '>' value=TMTCIFFieldValueRaw
+		//'<HeaderField' 'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING] '>' value=TMTCIFFieldValueHeader
 		//'</HeaderField>'
 		public Group getGroup() { return cGroup; }
 		
@@ -4461,11 +4461,11 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'>'
 		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
-		//value=TMTCIFFieldValueRaw
+		//value=TMTCIFFieldValueHeader
 		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
 		
-		//TMTCIFFieldValueRaw
-		public RuleCall getValueTMTCIFFieldValueRawParserRuleCall_4_0() { return cValueTMTCIFFieldValueRawParserRuleCall_4_0; }
+		//TMTCIFFieldValueHeader
+		public RuleCall getValueTMTCIFFieldValueHeaderParserRuleCall_4_0() { return cValueTMTCIFFieldValueHeaderParserRuleCall_4_0; }
 		
 		//'</HeaderField>'
 		public Keyword getHeaderFieldKeyword_5() { return cHeaderFieldKeyword_5; }
@@ -6008,7 +6008,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	//	'<HeaderField'
 	//	'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
 	//	'>'
-	//	value=TMTCIFFieldValueRaw
+	//	value=TMTCIFFieldValueHeader
 	//	'</HeaderField>';
 	public VSVSStepTelemetryHeaderFieldElements getVSVSStepTelemetryHeaderFieldAccess() {
 		return pVSVSStepTelemetryHeaderField;

@@ -900,24 +900,24 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionsSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVTestSetupActionsSectionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cActionAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActionVTestSetupActionParserRuleCall_1_0 = (RuleCall)cActionAssignment_1.eContents().get(0);
+		private final Assignment cActionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cActionsVTestSetupActionParserRuleCall_1_0 = (RuleCall)cActionsAssignment_1.eContents().get(0);
 		
 		//VTestSetupActionsSection:
-		//	{VTestSetupActionsSection} action+=VTestSetupAction+;
+		//	{VTestSetupActionsSection} actions+=VTestSetupAction+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VTestSetupActionsSection} action+=VTestSetupAction+
+		//{VTestSetupActionsSection} actions+=VTestSetupAction+
 		public Group getGroup() { return cGroup; }
 		
 		//{VTestSetupActionsSection}
 		public Action getVTestSetupActionsSectionAction_0() { return cVTestSetupActionsSectionAction_0; }
 		
-		//action+=VTestSetupAction+
-		public Assignment getActionAssignment_1() { return cActionAssignment_1; }
+		//actions+=VTestSetupAction+
+		public Assignment getActionsAssignment_1() { return cActionsAssignment_1; }
 		
 		//VTestSetupAction
-		public RuleCall getActionVTestSetupActionParserRuleCall_1_0() { return cActionVTestSetupActionParserRuleCall_1_0; }
+		public RuleCall getActionsVTestSetupActionParserRuleCall_1_0() { return cActionsVTestSetupActionParserRuleCall_1_0; }
 	}
 	public class VTestSetupActionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupAction");
@@ -983,24 +983,24 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionsOverVariablesSection");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cVTestSetupActionsOverVariablesSectionAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cActionOverVariableAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0 = (RuleCall)cActionOverVariableAssignment_1.eContents().get(0);
+		private final Assignment cActionsOverVariableAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0 = (RuleCall)cActionsOverVariableAssignment_1.eContents().get(0);
 		
 		//VTestSetupActionsOverVariablesSection:
-		//	{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+;
+		//	{VTestSetupActionsOverVariablesSection} actionsOverVariable+=VTestSetupActionOverVariable+;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+
+		//{VTestSetupActionsOverVariablesSection} actionsOverVariable+=VTestSetupActionOverVariable+
 		public Group getGroup() { return cGroup; }
 		
 		//{VTestSetupActionsOverVariablesSection}
 		public Action getVTestSetupActionsOverVariablesSectionAction_0() { return cVTestSetupActionsOverVariablesSectionAction_0; }
 		
-		//actionOverVariable+=VTestSetupActionOverVariable+
-		public Assignment getActionOverVariableAssignment_1() { return cActionOverVariableAssignment_1; }
+		//actionsOverVariable+=VTestSetupActionOverVariable+
+		public Assignment getActionsOverVariableAssignment_1() { return cActionsOverVariableAssignment_1; }
 		
 		//VTestSetupActionOverVariable
-		public RuleCall getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0() { return cActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0; }
+		public RuleCall getActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0() { return cActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0; }
 	}
 	public class VTestSetupActionOverVariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariable");
@@ -3059,7 +3059,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VTestSetupActionsSection:
-	//	{VTestSetupActionsSection} action+=VTestSetupAction+;
+	//	{VTestSetupActionsSection} actions+=VTestSetupAction+;
 	public VTestSetupActionsSectionElements getVTestSetupActionsSectionAccess() {
 		return pVTestSetupActionsSection;
 	}
@@ -3094,7 +3094,7 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//VTestSetupActionsOverVariablesSection:
-	//	{VTestSetupActionsOverVariablesSection} actionOverVariable+=VTestSetupActionOverVariable+;
+	//	{VTestSetupActionsOverVariablesSection} actionsOverVariable+=VTestSetupActionOverVariable+;
 	public VTestSetupActionsOverVariablesSectionElements getVTestSetupActionsOverVariablesSectionAccess() {
 		return pVTestSetupActionsOverVariablesSection;
 	}

@@ -22027,9 +22027,9 @@ rule__VSVSStepTelemetryHeaderField__ValueAssignment_4
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0()); }
-		ruleTMTCIFFieldValueRaw
-		{ after(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0()); }
+		{ before(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0()); }
+		ruleTMTCIFFieldValueHeader
+		{ after(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0()); }
 	)
 ;
 finally {

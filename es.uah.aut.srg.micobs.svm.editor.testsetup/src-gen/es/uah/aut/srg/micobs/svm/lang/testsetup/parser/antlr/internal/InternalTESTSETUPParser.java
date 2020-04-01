@@ -3491,22 +3491,22 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTestSetupActionsSection"
-    // InternalTESTSETUP.g:1433:1: ruleVTestSetupActionsSection returns [EObject current=null] : ( () ( (lv_action_1_0= ruleVTestSetupAction ) )+ ) ;
+    // InternalTESTSETUP.g:1433:1: ruleVTestSetupActionsSection returns [EObject current=null] : ( () ( (lv_actions_1_0= ruleVTestSetupAction ) )+ ) ;
     public final EObject ruleVTestSetupActionsSection() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_action_1_0 = null;
+        EObject lv_actions_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTESTSETUP.g:1439:2: ( ( () ( (lv_action_1_0= ruleVTestSetupAction ) )+ ) )
-            // InternalTESTSETUP.g:1440:2: ( () ( (lv_action_1_0= ruleVTestSetupAction ) )+ )
+            // InternalTESTSETUP.g:1439:2: ( ( () ( (lv_actions_1_0= ruleVTestSetupAction ) )+ ) )
+            // InternalTESTSETUP.g:1440:2: ( () ( (lv_actions_1_0= ruleVTestSetupAction ) )+ )
             {
-            // InternalTESTSETUP.g:1440:2: ( () ( (lv_action_1_0= ruleVTestSetupAction ) )+ )
-            // InternalTESTSETUP.g:1441:3: () ( (lv_action_1_0= ruleVTestSetupAction ) )+
+            // InternalTESTSETUP.g:1440:2: ( () ( (lv_actions_1_0= ruleVTestSetupAction ) )+ )
+            // InternalTESTSETUP.g:1441:3: () ( (lv_actions_1_0= ruleVTestSetupAction ) )+
             {
             // InternalTESTSETUP.g:1441:3: ()
             // InternalTESTSETUP.g:1442:4: 
@@ -3526,7 +3526,7 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTESTSETUP.g:1451:3: ( (lv_action_1_0= ruleVTestSetupAction ) )+
+            // InternalTESTSETUP.g:1451:3: ( (lv_actions_1_0= ruleVTestSetupAction ) )+
             int cnt19=0;
             loop19:
             do {
@@ -3540,18 +3540,18 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
                 switch (alt19) {
             	case 1 :
-            	    // InternalTESTSETUP.g:1452:4: (lv_action_1_0= ruleVTestSetupAction )
+            	    // InternalTESTSETUP.g:1452:4: (lv_actions_1_0= ruleVTestSetupAction )
             	    {
-            	    // InternalTESTSETUP.g:1452:4: (lv_action_1_0= ruleVTestSetupAction )
-            	    // InternalTESTSETUP.g:1453:5: lv_action_1_0= ruleVTestSetupAction
+            	    // InternalTESTSETUP.g:1452:4: (lv_actions_1_0= ruleVTestSetupAction )
+            	    // InternalTESTSETUP.g:1453:5: lv_actions_1_0= ruleVTestSetupAction
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      					newCompositeNode(grammarAccess.getVTestSetupActionsSectionAccess().getActionVTestSetupActionParserRuleCall_1_0());
+            	      					newCompositeNode(grammarAccess.getVTestSetupActionsSectionAccess().getActionsVTestSetupActionParserRuleCall_1_0());
             	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_47);
-            	    lv_action_1_0=ruleVTestSetupAction();
+            	    lv_actions_1_0=ruleVTestSetupAction();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -3562,8 +3562,8 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
             	      					}
             	      					add(
             	      						current,
-            	      						"action",
-            	      						lv_action_1_0,
+            	      						"actions",
+            	      						lv_actions_1_0,
             	      						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupAction");
             	      					afterParserOrEnumRuleCall();
             	      				
@@ -3870,22 +3870,22 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVTestSetupActionsOverVariablesSection"
-    // InternalTESTSETUP.g:1576:1: ruleVTestSetupActionsOverVariablesSection returns [EObject current=null] : ( () ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ ) ;
+    // InternalTESTSETUP.g:1576:1: ruleVTestSetupActionsOverVariablesSection returns [EObject current=null] : ( () ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ ) ;
     public final EObject ruleVTestSetupActionsOverVariablesSection() throws RecognitionException {
         EObject current = null;
 
-        EObject lv_actionOverVariable_1_0 = null;
+        EObject lv_actionsOverVariable_1_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalTESTSETUP.g:1582:2: ( ( () ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ ) )
-            // InternalTESTSETUP.g:1583:2: ( () ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ )
+            // InternalTESTSETUP.g:1582:2: ( ( () ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ ) )
+            // InternalTESTSETUP.g:1583:2: ( () ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ )
             {
-            // InternalTESTSETUP.g:1583:2: ( () ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ )
-            // InternalTESTSETUP.g:1584:3: () ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+
+            // InternalTESTSETUP.g:1583:2: ( () ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+ )
+            // InternalTESTSETUP.g:1584:3: () ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+
             {
             // InternalTESTSETUP.g:1584:3: ()
             // InternalTESTSETUP.g:1585:4: 
@@ -3905,7 +3905,7 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalTESTSETUP.g:1594:3: ( (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+
+            // InternalTESTSETUP.g:1594:3: ( (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable ) )+
             int cnt20=0;
             loop20:
             do {
@@ -3919,18 +3919,18 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
 
                 switch (alt20) {
             	case 1 :
-            	    // InternalTESTSETUP.g:1595:4: (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable )
+            	    // InternalTESTSETUP.g:1595:4: (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable )
             	    {
-            	    // InternalTESTSETUP.g:1595:4: (lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable )
-            	    // InternalTESTSETUP.g:1596:5: lv_actionOverVariable_1_0= ruleVTestSetupActionOverVariable
+            	    // InternalTESTSETUP.g:1595:4: (lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable )
+            	    // InternalTESTSETUP.g:1596:5: lv_actionsOverVariable_1_0= ruleVTestSetupActionOverVariable
             	    {
             	    if ( state.backtracking==0 ) {
 
-            	      					newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0());
+            	      					newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0());
             	      				
             	    }
             	    pushFollow(FollowSets000.FOLLOW_52);
-            	    lv_actionOverVariable_1_0=ruleVTestSetupActionOverVariable();
+            	    lv_actionsOverVariable_1_0=ruleVTestSetupActionOverVariable();
 
             	    state._fsp--;
             	    if (state.failed) return current;
@@ -3941,8 +3941,8 @@ public class InternalTESTSETUPParser extends AbstractInternalAntlrParser {
             	      					}
             	      					add(
             	      						current,
-            	      						"actionOverVariable",
-            	      						lv_actionOverVariable_1_0,
+            	      						"actionsOverVariable",
+            	      						lv_actionsOverVariable_1_0,
             	      						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariable");
             	      					afterParserOrEnumRuleCall();
             	      				

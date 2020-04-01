@@ -537,7 +537,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTestSetupActionsSection_Action() {
+	public EReference getVTestSetupActionsSection_Actions() {
 		return (EReference)vTestSetupActionsSectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -591,7 +591,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVTestSetupActionsOverVariablesSection_ActionOverVariable() {
+	public EReference getVTestSetupActionsOverVariablesSection_ActionsOverVariable() {
 		return (EReference)vTestSetupActionsOverVariablesSectionEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -913,7 +913,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		createEReference(vTestSetupPacketConfigurationEClass, VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION);
 
 		vTestSetupActionsSectionEClass = createEClass(VTEST_SETUP_ACTIONS_SECTION);
-		createEReference(vTestSetupActionsSectionEClass, VTEST_SETUP_ACTIONS_SECTION__ACTION);
+		createEReference(vTestSetupActionsSectionEClass, VTEST_SETUP_ACTIONS_SECTION__ACTIONS);
 
 		vTestSetupActionEClass = createEClass(VTEST_SETUP_ACTION);
 		createEAttribute(vTestSetupActionEClass, VTEST_SETUP_ACTION__NAME);
@@ -921,7 +921,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		createEAttribute(vTestSetupActionEClass, VTEST_SETUP_ACTION__TYPE);
 
 		vTestSetupActionsOverVariablesSectionEClass = createEClass(VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION);
-		createEReference(vTestSetupActionsOverVariablesSectionEClass, VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE);
+		createEReference(vTestSetupActionsOverVariablesSectionEClass, VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE);
 
 		vTestSetupActionOverVariableEClass = createEClass(VTEST_SETUP_ACTION_OVER_VARIABLE);
 		createEAttribute(vTestSetupActionOverVariableEClass, VTEST_SETUP_ACTION_OVER_VARIABLE__NAME);
@@ -1044,7 +1044,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		initEReference(getVTestSetupPacketConfiguration_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VTestSetupPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupActionsSectionEClass, VTestSetupActionsSection.class, "VTestSetupActionsSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVTestSetupActionsSection_Action(), this.getVTestSetupAction(), null, "action", null, 1, -1, VTestSetupActionsSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTestSetupActionsSection_Actions(), this.getVTestSetupAction(), null, "actions", null, 1, -1, VTestSetupActionsSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupActionEClass, VTestSetupAction.class, "VTestSetupAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTestSetupAction_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1052,7 +1052,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		initEAttribute(getVTestSetupAction_Type(), this.getVTestSetupActionType(), "type", null, 1, 1, VTestSetupAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupActionsOverVariablesSectionEClass, VTestSetupActionsOverVariablesSection.class, "VTestSetupActionsOverVariablesSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVTestSetupActionsOverVariablesSection_ActionOverVariable(), this.getVTestSetupActionOverVariable(), null, "actionOverVariable", null, 1, -1, VTestSetupActionsOverVariablesSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTestSetupActionsOverVariablesSection_ActionsOverVariable(), this.getVTestSetupActionOverVariable(), null, "actionsOverVariable", null, 1, -1, VTestSetupActionsOverVariablesSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupActionOverVariableEClass, VTestSetupActionOverVariable.class, "VTestSetupActionOverVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTestSetupActionOverVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupActionOverVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

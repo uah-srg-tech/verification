@@ -17780,7 +17780,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleVSVSStepTelemetryHeaderField"
-    // InternalSVS.g:6842:1: ruleVSVSStepTelemetryHeaderField returns [EObject current=null] : (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) ) otherlv_5= '</HeaderField>' ) ;
+    // InternalSVS.g:6842:1: ruleVSVSStepTelemetryHeaderField returns [EObject current=null] : (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) ) otherlv_5= '</HeaderField>' ) ;
     public final EObject ruleVSVSStepTelemetryHeaderField() throws RecognitionException {
         EObject current = null;
 
@@ -17796,11 +17796,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalSVS.g:6848:2: ( (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) ) otherlv_5= '</HeaderField>' ) )
-            // InternalSVS.g:6849:2: (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) ) otherlv_5= '</HeaderField>' )
+            // InternalSVS.g:6848:2: ( (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) ) otherlv_5= '</HeaderField>' ) )
+            // InternalSVS.g:6849:2: (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) ) otherlv_5= '</HeaderField>' )
             {
-            // InternalSVS.g:6849:2: (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) ) otherlv_5= '</HeaderField>' )
-            // InternalSVS.g:6850:3: otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) ) otherlv_5= '</HeaderField>'
+            // InternalSVS.g:6849:2: (otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) ) otherlv_5= '</HeaderField>' )
+            // InternalSVS.g:6850:3: otherlv_0= '<HeaderField' otherlv_1= 'fieldRef=' ( (otherlv_2= RULE_STRING ) ) otherlv_3= '>' ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) ) otherlv_5= '</HeaderField>'
             {
             otherlv_0=(Token)match(input,185,FollowSets000.FOLLOW_200); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -17844,25 +17844,25 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,22,FollowSets000.FOLLOW_223); if (state.failed) return current;
+            otherlv_3=(Token)match(input,22,FollowSets000.FOLLOW_205); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			newLeafNode(otherlv_3, grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getGreaterThanSignKeyword_3());
               		
             }
-            // InternalSVS.g:6878:3: ( (lv_value_4_0= ruleTMTCIFFieldValueRaw ) )
-            // InternalSVS.g:6879:4: (lv_value_4_0= ruleTMTCIFFieldValueRaw )
+            // InternalSVS.g:6878:3: ( (lv_value_4_0= ruleTMTCIFFieldValueHeader ) )
+            // InternalSVS.g:6879:4: (lv_value_4_0= ruleTMTCIFFieldValueHeader )
             {
-            // InternalSVS.g:6879:4: (lv_value_4_0= ruleTMTCIFFieldValueRaw )
-            // InternalSVS.g:6880:5: lv_value_4_0= ruleTMTCIFFieldValueRaw
+            // InternalSVS.g:6879:4: (lv_value_4_0= ruleTMTCIFFieldValueHeader )
+            // InternalSVS.g:6880:5: lv_value_4_0= ruleTMTCIFFieldValueHeader
             {
             if ( state.backtracking==0 ) {
 
-              					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0());
+              					newCompositeNode(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0());
               				
             }
             pushFollow(FollowSets000.FOLLOW_206);
-            lv_value_4_0=ruleTMTCIFFieldValueRaw();
+            lv_value_4_0=ruleTMTCIFFieldValueHeader();
 
             state._fsp--;
             if (state.failed) return current;
@@ -17875,7 +17875,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               						current,
               						"value",
               						lv_value_4_0,
-              						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueRaw");
+              						"es.uah.aut.srg.micobs.svm.lang.svs.SVS.TMTCIFFieldValueHeader");
               					afterParserOrEnumRuleCall();
               				
             }
@@ -18165,7 +18165,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             // InternalSVS.g:6973:2: (this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )* )
             // InternalSVS.g:6974:3: this_ID_0= RULE_ID (kw= '.' this_ID_2= RULE_ID )*
             {
-            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_224); if (state.failed) return current;
+            this_ID_0=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_223); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(this_ID_0);
@@ -18191,14 +18191,14 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalSVS.g:6982:4: kw= '.' this_ID_2= RULE_ID
             	    {
-            	    kw=(Token)match(input,205,FollowSets000.FOLLOW_225); if (state.failed) return current;
+            	    kw=(Token)match(input,205,FollowSets000.FOLLOW_224); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
             	      				newLeafNode(kw, grammarAccess.getQualifiedNameAccess().getFullStopKeyword_1_0());
             	      			
             	    }
-            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_224); if (state.failed) return current;
+            	    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_223); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(this_ID_2);
@@ -18340,7 +18340,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // InternalSVS.g:7015:4: this_INT_0= RULE_INT
                     {
-                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_224); if (state.failed) return current;
+                    this_INT_0=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_223); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       				current.merge(this_INT_0);
@@ -18371,7 +18371,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
                         case 1 :
                             // InternalSVS.g:7025:6: this_INT_1= RULE_INT
                             {
-                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_225); if (state.failed) return current;
+                            this_INT_1=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_224); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               						current.merge(this_INT_1);
@@ -18388,7 +18388,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_224); if (state.failed) return current;
+                    this_ID_2=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_223); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       					current.merge(this_ID_2);
@@ -18423,7 +18423,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // InternalSVS.g:7043:4: kw= '.' (this_INT_4= RULE_INT | ( (this_INT_5= RULE_INT )? this_ID_6= RULE_ID ) )
             	    {
-            	    kw=(Token)match(input,205,FollowSets000.FOLLOW_226); if (state.failed) return current;
+            	    kw=(Token)match(input,205,FollowSets000.FOLLOW_225); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
 
             	      				current.merge(kw);
@@ -18465,7 +18465,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	        case 1 :
             	            // InternalSVS.g:7049:5: this_INT_4= RULE_INT
             	            {
-            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_224); if (state.failed) return current;
+            	            this_INT_4=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_223); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              					current.merge(this_INT_4);
@@ -18496,7 +18496,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             	                case 1 :
             	                    // InternalSVS.g:7059:7: this_INT_5= RULE_INT
             	                    {
-            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_225); if (state.failed) return current;
+            	                    this_INT_5=(Token)match(input,RULE_INT,FollowSets000.FOLLOW_224); if (state.failed) return current;
             	                    if ( state.backtracking==0 ) {
 
             	                      							current.merge(this_INT_5);
@@ -18513,7 +18513,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
 
             	            }
 
-            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_224); if (state.failed) return current;
+            	            this_ID_6=(Token)match(input,RULE_ID,FollowSets000.FOLLOW_223); if (state.failed) return current;
             	            if ( state.backtracking==0 ) {
 
             	              						current.merge(this_ID_6);
@@ -18632,7 +18632,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getQualifiedNameParserRuleCall_0());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_227);
+            pushFollow(FollowSets000.FOLLOW_226);
             this_QualifiedName_0=ruleQualifiedName();
 
             state._fsp--;
@@ -18647,7 +18647,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			afterParserOrEnumRuleCall();
               		
             }
-            kw=(Token)match(input,206,FollowSets000.FOLLOW_226); if (state.failed) return current;
+            kw=(Token)match(input,206,FollowSets000.FOLLOW_225); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               			current.merge(kw);
@@ -18659,7 +18659,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
               			newCompositeNode(grammarAccess.getVersionedQualifiedNameAccess().getVersionParserRuleCall_2());
               		
             }
-            pushFollow(FollowSets000.FOLLOW_228);
+            pushFollow(FollowSets000.FOLLOW_227);
             this_Version_2=ruleVersion();
 
             state._fsp--;
@@ -19491,12 +19491,11 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
         public static final BitSet FOLLOW_220 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000100L});
         public static final BitSet FOLLOW_221 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0010000000000000L,0x0000000000000400L});
         public static final BitSet FOLLOW_222 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0200000000000000L,0x0000000000001000L});
-        public static final BitSet FOLLOW_223 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0800000000000000L});
-        public static final BitSet FOLLOW_224 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000002000L});
-        public static final BitSet FOLLOW_225 = new BitSet(new long[]{0x0000000000000200L});
-        public static final BitSet FOLLOW_226 = new BitSet(new long[]{0x0000000000000600L});
-        public static final BitSet FOLLOW_227 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
-        public static final BitSet FOLLOW_228 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+        public static final BitSet FOLLOW_223 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000002000L});
+        public static final BitSet FOLLOW_224 = new BitSet(new long[]{0x0000000000000200L});
+        public static final BitSet FOLLOW_225 = new BitSet(new long[]{0x0000000000000600L});
+        public static final BitSet FOLLOW_226 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+        public static final BitSet FOLLOW_227 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
     }
 
 

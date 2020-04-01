@@ -1451,17 +1451,17 @@ ruleVTestSetupActionsSection returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupActionsSectionAccess().getActionVTestSetupActionParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getVTestSetupActionsSectionAccess().getActionsVTestSetupActionParserRuleCall_1_0());
 				}
-				lv_action_1_0=ruleVTestSetupAction
+				lv_actions_1_0=ruleVTestSetupAction
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupActionsSectionRule());
 					}
 					add(
 						$current,
-						"action",
-						lv_action_1_0,
+						"actions",
+						lv_actions_1_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupAction");
 					afterParserOrEnumRuleCall();
 				}
@@ -1594,17 +1594,17 @@ ruleVTestSetupActionsOverVariablesSection returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0());
+					newCompositeNode(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0());
 				}
-				lv_actionOverVariable_1_0=ruleVTestSetupActionOverVariable
+				lv_actionsOverVariable_1_0=ruleVTestSetupActionOverVariable
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupActionsOverVariablesSectionRule());
 					}
 					add(
 						$current,
-						"actionOverVariable",
-						lv_actionOverVariable_1_0,
+						"actionsOverVariable",
+						lv_actionsOverVariable_1_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionOverVariable");
 					afterParserOrEnumRuleCall();
 				}

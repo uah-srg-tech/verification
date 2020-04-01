@@ -13,8 +13,7 @@ package es.uah.aut.srg.micobs.svm.svs.impl;
 import es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
-import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueRaw;
-
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValue;
 import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeaderField;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -58,7 +57,7 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 	 * @generated
 	 * @ordered
 	 */
-	protected TMTCIFFieldValueRaw value;
+	protected TMTCIFFieldValue value;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -122,7 +121,7 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public TMTCIFFieldValueRaw getValue() {
+	public TMTCIFFieldValue getValue() {
 		return value;
 	}
 
@@ -131,8 +130,8 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetValue(TMTCIFFieldValueRaw newValue, NotificationChain msgs) {
-		TMTCIFFieldValueRaw oldValue = value;
+	public NotificationChain basicSetValue(TMTCIFFieldValue newValue, NotificationChain msgs) {
+		TMTCIFFieldValue oldValue = value;
 		value = newValue;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD__VALUE, oldValue, newValue);
@@ -146,7 +145,7 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setValue(TMTCIFFieldValueRaw newValue) {
+	public void setValue(TMTCIFFieldValue newValue) {
 		if (newValue != value) {
 			NotificationChain msgs = null;
 			if (value != null)
@@ -203,7 +202,7 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 				setFieldRef((TMTCIFTMHeaderField)newValue);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD__VALUE:
-				setValue((TMTCIFFieldValueRaw)newValue);
+				setValue((TMTCIFFieldValue)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -221,7 +220,7 @@ public class VSVSStepTelemetryHeaderFieldImpl extends MinimalEObjectImpl.Contain
 				setFieldRef((TMTCIFTMHeaderField)null);
 				return;
 			case svsPackage.VSVS_STEP_TELEMETRY_HEADER_FIELD__VALUE:
-				setValue((TMTCIFFieldValueRaw)null);
+				setValue((TMTCIFFieldValue)null);
 				return;
 		}
 		super.eUnset(featureID);

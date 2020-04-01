@@ -15008,29 +15008,29 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VTestSetupActionsSection__Group__1__Impl"
-    // InternalTESTSETUP.g:4619:1: rule__VTestSetupActionsSection__Group__1__Impl : ( ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* ) ) ;
+    // InternalTESTSETUP.g:4619:1: rule__VTestSetupActionsSection__Group__1__Impl : ( ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* ) ) ;
     public final void rule__VTestSetupActionsSection__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTESTSETUP.g:4623:1: ( ( ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* ) ) )
-            // InternalTESTSETUP.g:4624:1: ( ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* ) )
+            // InternalTESTSETUP.g:4623:1: ( ( ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* ) ) )
+            // InternalTESTSETUP.g:4624:1: ( ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* ) )
             {
-            // InternalTESTSETUP.g:4624:1: ( ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* ) )
-            // InternalTESTSETUP.g:4625:2: ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* )
+            // InternalTESTSETUP.g:4624:1: ( ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* ) )
+            // InternalTESTSETUP.g:4625:2: ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) ) ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* )
             {
-            // InternalTESTSETUP.g:4625:2: ( ( rule__VTestSetupActionsSection__ActionAssignment_1 ) )
-            // InternalTESTSETUP.g:4626:3: ( rule__VTestSetupActionsSection__ActionAssignment_1 )
+            // InternalTESTSETUP.g:4625:2: ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 ) )
+            // InternalTESTSETUP.g:4626:3: ( rule__VTestSetupActionsSection__ActionsAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionAssignment_1()); 
+               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1()); 
             }
-            // InternalTESTSETUP.g:4627:3: ( rule__VTestSetupActionsSection__ActionAssignment_1 )
-            // InternalTESTSETUP.g:4627:4: rule__VTestSetupActionsSection__ActionAssignment_1
+            // InternalTESTSETUP.g:4627:3: ( rule__VTestSetupActionsSection__ActionsAssignment_1 )
+            // InternalTESTSETUP.g:4627:4: rule__VTestSetupActionsSection__ActionsAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_45);
-            rule__VTestSetupActionsSection__ActionAssignment_1();
+            rule__VTestSetupActionsSection__ActionsAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -15038,18 +15038,18 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionAssignment_1()); 
+               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1()); 
             }
 
             }
 
-            // InternalTESTSETUP.g:4630:2: ( ( rule__VTestSetupActionsSection__ActionAssignment_1 )* )
-            // InternalTESTSETUP.g:4631:3: ( rule__VTestSetupActionsSection__ActionAssignment_1 )*
+            // InternalTESTSETUP.g:4630:2: ( ( rule__VTestSetupActionsSection__ActionsAssignment_1 )* )
+            // InternalTESTSETUP.g:4631:3: ( rule__VTestSetupActionsSection__ActionsAssignment_1 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionAssignment_1()); 
+               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1()); 
             }
-            // InternalTESTSETUP.g:4632:3: ( rule__VTestSetupActionsSection__ActionAssignment_1 )*
+            // InternalTESTSETUP.g:4632:3: ( rule__VTestSetupActionsSection__ActionsAssignment_1 )*
             loop27:
             do {
                 int alt27=2;
@@ -15062,10 +15062,10 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
 
                 switch (alt27) {
             	case 1 :
-            	    // InternalTESTSETUP.g:4632:4: rule__VTestSetupActionsSection__ActionAssignment_1
+            	    // InternalTESTSETUP.g:4632:4: rule__VTestSetupActionsSection__ActionsAssignment_1
             	    {
             	    pushFollow(FollowSets000.FOLLOW_45);
-            	    rule__VTestSetupActionsSection__ActionAssignment_1();
+            	    rule__VTestSetupActionsSection__ActionsAssignment_1();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -15079,7 +15079,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionAssignment_1()); 
+               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1()); 
             }
 
             }
@@ -15875,29 +15875,29 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
 
 
     // $ANTLR start "rule__VTestSetupActionsOverVariablesSection__Group__1__Impl"
-    // InternalTESTSETUP.g:4896:1: rule__VTestSetupActionsOverVariablesSection__Group__1__Impl : ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* ) ) ;
+    // InternalTESTSETUP.g:4896:1: rule__VTestSetupActionsOverVariablesSection__Group__1__Impl : ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* ) ) ;
     public final void rule__VTestSetupActionsOverVariablesSection__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalTESTSETUP.g:4900:1: ( ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* ) ) )
-            // InternalTESTSETUP.g:4901:1: ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* ) )
+            // InternalTESTSETUP.g:4900:1: ( ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* ) ) )
+            // InternalTESTSETUP.g:4901:1: ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* ) )
             {
-            // InternalTESTSETUP.g:4901:1: ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* ) )
-            // InternalTESTSETUP.g:4902:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* )
+            // InternalTESTSETUP.g:4901:1: ( ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* ) )
+            // InternalTESTSETUP.g:4902:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) ) ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* )
             {
-            // InternalTESTSETUP.g:4902:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 ) )
-            // InternalTESTSETUP.g:4903:3: ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )
+            // InternalTESTSETUP.g:4902:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 ) )
+            // InternalTESTSETUP.g:4903:3: ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableAssignment_1()); 
+               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableAssignment_1()); 
             }
-            // InternalTESTSETUP.g:4904:3: ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )
-            // InternalTESTSETUP.g:4904:4: rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1
+            // InternalTESTSETUP.g:4904:3: ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )
+            // InternalTESTSETUP.g:4904:4: rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1
             {
             pushFollow(FollowSets000.FOLLOW_50);
-            rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1();
+            rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1();
 
             state._fsp--;
             if (state.failed) return ;
@@ -15905,18 +15905,18 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableAssignment_1()); 
+               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableAssignment_1()); 
             }
 
             }
 
-            // InternalTESTSETUP.g:4907:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )* )
-            // InternalTESTSETUP.g:4908:3: ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )*
+            // InternalTESTSETUP.g:4907:2: ( ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )* )
+            // InternalTESTSETUP.g:4908:3: ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )*
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableAssignment_1()); 
+               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableAssignment_1()); 
             }
-            // InternalTESTSETUP.g:4909:3: ( rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 )*
+            // InternalTESTSETUP.g:4909:3: ( rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 )*
             loop28:
             do {
                 int alt28=2;
@@ -15929,10 +15929,10 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
 
                 switch (alt28) {
             	case 1 :
-            	    // InternalTESTSETUP.g:4909:4: rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1
+            	    // InternalTESTSETUP.g:4909:4: rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1
             	    {
             	    pushFollow(FollowSets000.FOLLOW_50);
-            	    rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1();
+            	    rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1();
 
             	    state._fsp--;
             	    if (state.failed) return ;
@@ -15946,7 +15946,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             } while (true);
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableAssignment_1()); 
+               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableAssignment_1()); 
             }
 
             }
@@ -36844,9 +36844,9 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__VTestSetupPacketConfiguration__DescriptionAssignment_6"
 
 
-    // $ANTLR start "rule__VTestSetupActionsSection__ActionAssignment_1"
-    // InternalTESTSETUP.g:11556:1: rule__VTestSetupActionsSection__ActionAssignment_1 : ( ruleVTestSetupAction ) ;
-    public final void rule__VTestSetupActionsSection__ActionAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__VTestSetupActionsSection__ActionsAssignment_1"
+    // InternalTESTSETUP.g:11556:1: rule__VTestSetupActionsSection__ActionsAssignment_1 : ( ruleVTestSetupAction ) ;
+    public final void rule__VTestSetupActionsSection__ActionsAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -36858,7 +36858,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             // InternalTESTSETUP.g:11562:3: ruleVTestSetupAction
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionVTestSetupActionParserRuleCall_1_0()); 
+               before(grammarAccess.getVTestSetupActionsSectionAccess().getActionsVTestSetupActionParserRuleCall_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVTestSetupAction();
@@ -36866,7 +36866,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionVTestSetupActionParserRuleCall_1_0()); 
+               after(grammarAccess.getVTestSetupActionsSectionAccess().getActionsVTestSetupActionParserRuleCall_1_0()); 
             }
 
             }
@@ -36886,7 +36886,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__VTestSetupActionsSection__ActionAssignment_1"
+    // $ANTLR end "rule__VTestSetupActionsSection__ActionsAssignment_1"
 
 
     // $ANTLR start "rule__VTestSetupAction__NameAssignment_2"
@@ -37020,9 +37020,9 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
     // $ANTLR end "rule__VTestSetupAction__DescriptionAssignment_6"
 
 
-    // $ANTLR start "rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1"
-    // InternalTESTSETUP.g:11616:1: rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1 : ( ruleVTestSetupActionOverVariable ) ;
-    public final void rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1"
+    // InternalTESTSETUP.g:11616:1: rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1 : ( ruleVTestSetupActionOverVariable ) ;
+    public final void rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -37034,7 +37034,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             // InternalTESTSETUP.g:11622:3: ruleVTestSetupActionOverVariable
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0()); 
+               before(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0()); 
             }
             pushFollow(FollowSets000.FOLLOW_2);
             ruleVTestSetupActionOverVariable();
@@ -37042,7 +37042,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
             state._fsp--;
             if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionOverVariableVTestSetupActionOverVariableParserRuleCall_1_0()); 
+               after(grammarAccess.getVTestSetupActionsOverVariablesSectionAccess().getActionsOverVariableVTestSetupActionOverVariableParserRuleCall_1_0()); 
             }
 
             }
@@ -37062,7 +37062,7 @@ public class InternalTESTSETUPParser extends AbstractInternalContentAssistParser
         }
         return ;
     }
-    // $ANTLR end "rule__VTestSetupActionsOverVariablesSection__ActionOverVariableAssignment_1"
+    // $ANTLR end "rule__VTestSetupActionsOverVariablesSection__ActionsOverVariableAssignment_1"
 
 
     // $ANTLR start "rule__VTestSetupActionOverVariable__NameAssignment_2"

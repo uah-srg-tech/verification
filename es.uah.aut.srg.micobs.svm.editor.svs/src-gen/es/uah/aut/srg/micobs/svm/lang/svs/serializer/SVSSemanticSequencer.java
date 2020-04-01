@@ -1006,7 +1006,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepTelemetryHeaderField returns VSVSStepTelemetryHeaderField
 	 *
 	 * Constraint:
-	 *     (fieldRef=[TMTCIFTMHeaderField|STRING] value=TMTCIFFieldValueRaw)
+	 *     (fieldRef=[TMTCIFTMHeaderField|STRING] value=TMTCIFFieldValueHeader)
 	 */
 	protected void sequence_VSVSStepTelemetryHeaderField(ISerializationContext context, VSVSStepTelemetryHeaderField semanticObject) {
 		if (errorAcceptor != null) {
@@ -1017,7 +1017,7 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getFieldRefTMTCIFTMHeaderFieldSTRINGTerminalRuleCall_2_0_1(), semanticObject.getFieldRef());
-		feeder.accept(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueRawParserRuleCall_4_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getVSVSStepTelemetryHeaderFieldAccess().getValueTMTCIFFieldValueHeaderParserRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	

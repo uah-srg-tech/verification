@@ -537,7 +537,7 @@ VSVSStepTelemetryHeaderField returns VSVSStepTelemetryHeaderField:
 	'<HeaderField'
 		'fieldRef=' fieldRef=[tmheader::TMTCIFTMHeaderField|STRING]
 		'>'
-		value=TMTCIFFieldValueRaw
+		value=TMTCIFFieldValueHeader
 	'</HeaderField>'
 ;
 

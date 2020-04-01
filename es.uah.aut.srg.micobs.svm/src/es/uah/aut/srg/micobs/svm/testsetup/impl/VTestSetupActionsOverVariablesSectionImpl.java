@@ -39,22 +39,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl#getActionOverVariable <em>Action Over Variable</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupActionsOverVariablesSectionImpl#getActionsOverVariable <em>Actions Over Variable</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl implements VTestSetupActionsOverVariablesSection {
 	/**
-	 * The cached value of the '{@link #getActionOverVariable() <em>Action Over Variable</em>}' containment reference list.
+	 * The cached value of the '{@link #getActionsOverVariable() <em>Actions Over Variable</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getActionOverVariable()
+	 * @see #getActionsOverVariable()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<VTestSetupActionOverVariable> actionOverVariable;
-
+	protected EList<VTestSetupActionOverVariable> actionsOverVariable;
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -79,11 +78,11 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<VTestSetupActionOverVariable> getActionOverVariable() {
-		if (actionOverVariable == null) {
-			actionOverVariable = new EObjectContainmentEList<VTestSetupActionOverVariable>(VTestSetupActionOverVariable.class, this, testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE);
+	public EList<VTestSetupActionOverVariable> getActionsOverVariable() {
+		if (actionsOverVariable == null) {
+			actionsOverVariable = new EObjectContainmentEList<VTestSetupActionOverVariable>(VTestSetupActionOverVariable.class, this, testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE);
 		}
-		return actionOverVariable;
+		return actionsOverVariable;
 	}
 
 	/**
@@ -94,8 +93,8 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE:
-				return ((InternalEList<?>)getActionOverVariable()).basicRemove(otherEnd, msgs);
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE:
+				return ((InternalEList<?>)getActionsOverVariable()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -108,8 +107,8 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE:
-				return getActionOverVariable();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE:
+				return getActionsOverVariable();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -123,9 +122,9 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE:
-				getActionOverVariable().clear();
-				getActionOverVariable().addAll((Collection<? extends VTestSetupActionOverVariable>)newValue);
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE:
+				getActionsOverVariable().clear();
+				getActionsOverVariable().addAll((Collection<? extends VTestSetupActionOverVariable>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -139,8 +138,8 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE:
-				getActionOverVariable().clear();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE:
+				getActionsOverVariable().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -154,8 +153,8 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTION_OVER_VARIABLE:
-				return actionOverVariable != null && !actionOverVariable.isEmpty();
+			case testsetupPackage.VTEST_SETUP_ACTIONS_OVER_VARIABLES_SECTION__ACTIONS_OVER_VARIABLE:
+				return actionsOverVariable != null && !actionsOverVariable.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -169,7 +168,7 @@ public class VTestSetupActionsOverVariablesSectionImpl extends DFixedSectionImpl
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
-		for(VTestSetupActionOverVariable action : getActionOverVariable()) {
+		for(VTestSetupActionOverVariable action : getActionsOverVariable()) {
 			objects.addAll(action.getReferenceableObjects(ReferenceableObjectType));
 		}
 		return objects;

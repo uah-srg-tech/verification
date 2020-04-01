@@ -105,7 +105,7 @@ VTestSetupPacketConfiguration returns VTestSetupPacketConfiguration:
 
 VTestSetupActionsSection returns VTestSetupActionsSection:
 {VTestSetupActionsSection}
-	(action+=VTestSetupAction)+;
+	(actions+=VTestSetupAction)+;
 
 VTestSetupAction returns VTestSetupAction:
 	'<Action'
@@ -120,7 +120,7 @@ enum VTestSetupActionType returns VTestSetupActionType:
 
 VTestSetupActionsOverVariablesSection returns VTestSetupActionsOverVariablesSection:
 {VTestSetupActionsOverVariablesSection}
-	(actionOverVariable+=VTestSetupActionOverVariable)+;
+	(actionsOverVariable+=VTestSetupActionOverVariable)+;
 
 VTestSetupActionOverVariable returns VTestSetupActionOverVariable:
 	'<ActionOverVariable'

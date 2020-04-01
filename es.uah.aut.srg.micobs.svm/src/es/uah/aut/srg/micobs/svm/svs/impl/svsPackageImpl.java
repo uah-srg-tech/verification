@@ -2305,7 +2305,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 
 		initEClass(vsvsStepTelemetryHeaderFieldEClass, VSVSStepTelemetryHeaderField.class, "VSVSStepTelemetryHeaderField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVSStepTelemetryHeaderField_FieldRef(), thetmheaderPackage.getTMTCIFTMHeaderField(), null, "fieldRef", null, 1, 1, VSVSStepTelemetryHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVSStepTelemetryHeaderField_Value(), thefieldvaluePackage.getTMTCIFFieldValueRaw(), null, "value", null, 1, 1, VSVSStepTelemetryHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepTelemetryHeaderField_Value(), thefieldvaluePackage.getTMTCIFFieldValue(), null, "value", null, 1, 1, VSVSStepTelemetryHeaderField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsAnalysisInspectionReviewEClass, VSVSAnalysisInspectionReview.class, "VSVSAnalysisInspectionReview", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 

@@ -10,8 +10,7 @@
  */
 package es.uah.aut.srg.micobs.svm.svs;
 
-import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValueRaw;
-
+import es.uah.aut.srg.tmtcif.fieldvalue.TMTCIFFieldValue;
 import es.uah.aut.srg.tmtcif.tmheader.TMTCIFTMHeaderField;
 import org.eclipse.emf.ecore.EObject;
 
@@ -68,12 +67,12 @@ public interface VSVSStepTelemetryHeaderField extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Value</em>' containment reference.
-	 * @see #setValue(TMTCIFFieldValueRaw)
+	 * @see #setValue(TMTCIFFieldValue)
 	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepTelemetryHeaderField_Value()
 	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	TMTCIFFieldValueRaw getValue();
+	TMTCIFFieldValue getValue();
 
 	/**
 	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepTelemetryHeaderField#getValue <em>Value</em>}' containment reference.
@@ -83,6 +82,6 @@ public interface VSVSStepTelemetryHeaderField extends EObject {
 	 * @see #getValue()
 	 * @generated
 	 */
-	void setValue(TMTCIFFieldValueRaw value);
+	void setValue(TMTCIFFieldValue value);
 
 } // VSVSStepTelemetryHeaderField
