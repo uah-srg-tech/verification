@@ -13760,7 +13760,7 @@ public class InternalSVSParser extends AbstractInternalAntlrParser {
             otherlv_2=(Token)match(input,RULE_STRING,FollowSets000.FOLLOW_181); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
-              					newLeafNode(otherlv_2, grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0());
+              					newLeafNode(otherlv_2, grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0());
               				
             }
 

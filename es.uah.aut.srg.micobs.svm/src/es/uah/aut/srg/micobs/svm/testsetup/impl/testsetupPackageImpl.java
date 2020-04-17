@@ -510,17 +510,8 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getVTestSetupPacketConfiguration_Id() {
-		return (EAttribute)vTestSetupPacketConfigurationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public EReference getVTestSetupPacketConfiguration_Description() {
-		return (EReference)vTestSetupPacketConfigurationEClass.getEStructuralFeatures().get(2);
+		return (EReference)vTestSetupPacketConfigurationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -762,8 +753,17 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getVTestSetupSelectedConfiguration_Name() {
+		return (EAttribute)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EReference getVTestSetupSelectedConfiguration_Configuration() {
-		return (EReference)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(0);
+		return (EReference)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -772,7 +772,7 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EAttribute getVTestSetupSelectedConfiguration_DefaultFilterStatus() {
-		return (EAttribute)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(1);
+		return (EAttribute)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -781,7 +781,16 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 	 * @generated
 	 */
 	public EAttribute getVTestSetupSelectedConfiguration_DefaultPrintStatus() {
-		return (EAttribute)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(2);
+		return (EAttribute)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getVTestSetupSelectedConfiguration_ScenarioPacketConfig() {
+		return (EReference)vTestSetupSelectedConfigurationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -909,7 +918,6 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 
 		vTestSetupPacketConfigurationEClass = createEClass(VTEST_SETUP_PACKET_CONFIGURATION);
 		createEAttribute(vTestSetupPacketConfigurationEClass, VTEST_SETUP_PACKET_CONFIGURATION__NAME);
-		createEAttribute(vTestSetupPacketConfigurationEClass, VTEST_SETUP_PACKET_CONFIGURATION__ID);
 		createEReference(vTestSetupPacketConfigurationEClass, VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION);
 
 		vTestSetupActionsSectionEClass = createEClass(VTEST_SETUP_ACTIONS_SECTION);
@@ -945,9 +953,11 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		createEReference(vTestSetupSupportedInterfaceEClass, VTEST_SETUP_SUPPORTED_INTERFACE__SCENARIO_INTERFACE);
 
 		vTestSetupSelectedConfigurationEClass = createEClass(VTEST_SETUP_SELECTED_CONFIGURATION);
+		createEAttribute(vTestSetupSelectedConfigurationEClass, VTEST_SETUP_SELECTED_CONFIGURATION__NAME);
 		createEReference(vTestSetupSelectedConfigurationEClass, VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION);
 		createEAttribute(vTestSetupSelectedConfigurationEClass, VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS);
 		createEAttribute(vTestSetupSelectedConfigurationEClass, VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS);
+		createEReference(vTestSetupSelectedConfigurationEClass, VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG);
 
 		vTestSetupSupportedActionOverVariableEClass = createEClass(VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE);
 		createEAttribute(vTestSetupSupportedActionOverVariableEClass, VTEST_SETUP_SUPPORTED_ACTION_OVER_VARIABLE__NAME);
@@ -1040,7 +1050,6 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 
 		initEClass(vTestSetupPacketConfigurationEClass, VTestSetupPacketConfiguration.class, "VTestSetupPacketConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTestSetupPacketConfiguration_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getVTestSetupPacketConfiguration_Id(), ecorePackage.getEString(), "id", null, 1, 1, VTestSetupPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupPacketConfiguration_Description(), thedoctplPackage.getDRun(), null, "description", null, 1, 1, VTestSetupPacketConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupActionsSectionEClass, VTestSetupActionsSection.class, "VTestSetupActionsSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1076,9 +1085,11 @@ public class testsetupPackageImpl extends EPackageImpl implements testsetupPacka
 		initEReference(getVTestSetupSupportedInterface_ScenarioInterface(), thescenarioPackage.getTMTCIFScenarioInterface(), null, "scenarioInterface", null, 1, 1, VTestSetupSupportedInterface.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupSelectedConfigurationEClass, VTestSetupSelectedConfiguration.class, "VTestSetupSelectedConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getVTestSetupSelectedConfiguration_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVTestSetupSelectedConfiguration_Configuration(), this.getVTestSetupPacketConfiguration(), null, "configuration", null, 1, 1, VTestSetupSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTestSetupSelectedConfiguration_DefaultFilterStatus(), this.getVTestSetupConfigurationStatus(), "defaultFilterStatus", null, 1, 1, VTestSetupSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVTestSetupSelectedConfiguration_DefaultPrintStatus(), this.getVTestSetupConfigurationStatus(), "defaultPrintStatus", null, 1, 1, VTestSetupSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVTestSetupSelectedConfiguration_ScenarioPacketConfig(), thescenarioPackage.getTMTCIFScenarioPacketConfig(), null, "scenarioPacketConfig", null, 1, 1, VTestSetupSelectedConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vTestSetupSupportedActionOverVariableEClass, VTestSetupSupportedActionOverVariable.class, "VTestSetupSupportedActionOverVariable", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getVTestSetupSupportedActionOverVariable_Name(), ecorePackage.getEString(), "name", null, 1, 1, VTestSetupSupportedActionOverVariable.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

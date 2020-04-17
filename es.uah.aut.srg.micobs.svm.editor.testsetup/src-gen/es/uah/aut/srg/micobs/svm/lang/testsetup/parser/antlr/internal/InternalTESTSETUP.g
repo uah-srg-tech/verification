@@ -1370,38 +1370,16 @@ ruleVTestSetupPacketConfiguration returns [EObject current=null]
 				}
 			)
 		)
-		otherlv_3='id='
+		otherlv_3='>'
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVTestSetupPacketConfigurationAccess().getIdKeyword_3());
-		}
-		(
-			(
-				lv_id_4_0=RULE_UINT_STRING
-				{
-					newLeafNode(lv_id_4_0, grammarAccess.getVTestSetupPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0());
-				}
-				{
-					if ($current==null) {
-						$current = createModelElement(grammarAccess.getVTestSetupPacketConfigurationRule());
-					}
-					setWithLastConsumed(
-						$current,
-						"id",
-						lv_id_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.UINT_STRING");
-				}
-			)
-		)
-		otherlv_5='>'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_5());
+			newLeafNode(otherlv_3, grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_3());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_4_0());
 				}
-				lv_description_6_0=ruleDRun
+				lv_description_4_0=ruleDRun
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupPacketConfigurationRule());
@@ -1409,15 +1387,15 @@ ruleVTestSetupPacketConfiguration returns [EObject current=null]
 					set(
 						$current,
 						"description",
-						lv_description_6_0,
+						lv_description_4_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.DRun");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='</PacketConfiguration>'
+		otherlv_5='</PacketConfiguration>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_7());
+			newLeafNode(otherlv_5, grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_5());
 		}
 	)
 ;
@@ -2044,9 +2022,31 @@ ruleVTestSetupSelectedConfiguration returns [EObject current=null]
 		{
 			newLeafNode(otherlv_0, grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationKeyword_0());
 		}
-		otherlv_1='ref='
+		otherlv_1='name='
 		{
-			newLeafNode(otherlv_1, grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_1());
+			newLeafNode(otherlv_1, grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_STRING
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupSelectedConfigurationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+		otherlv_3='ref='
+		{
+			newLeafNode(otherlv_3, grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_3());
 		}
 		(
 			(
@@ -2058,22 +2058,42 @@ ruleVTestSetupSelectedConfiguration returns [EObject current=null]
 						$current = createModelElement(grammarAccess.getVTestSetupSelectedConfigurationRule());
 					}
 				}
-				otherlv_2=RULE_STRING
+				otherlv_4=RULE_STRING
 				{
-					newLeafNode(otherlv_2, grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0());
+					newLeafNode(otherlv_4, grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_4_0());
 				}
 			)
 		)
-		otherlv_3='defaultFilterStatus='
+		otherlv_5='scenarioPacketConfig='
 		{
-			newLeafNode(otherlv_3, grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigKeyword_5());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0());
+					/* */
 				}
-				lv_defaultFilterStatus_4_0=ruleVTestSetupConfigurationStatus
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getVTestSetupSelectedConfigurationRule());
+					}
+				}
+				otherlv_6=RULE_STRING
+				{
+					newLeafNode(otherlv_6, grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0());
+				}
+			)
+		)
+		otherlv_7='defaultFilterStatus='
+		{
+			newLeafNode(otherlv_7, grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_7());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0());
+				}
+				lv_defaultFilterStatus_8_0=ruleVTestSetupConfigurationStatus
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupSelectedConfigurationRule());
@@ -2081,22 +2101,22 @@ ruleVTestSetupSelectedConfiguration returns [EObject current=null]
 					set(
 						$current,
 						"defaultFilterStatus",
-						lv_defaultFilterStatus_4_0,
+						lv_defaultFilterStatus_8_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupConfigurationStatus");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_5='defaultPrintStatus='
+		otherlv_9='defaultPrintStatus='
 		{
-			newLeafNode(otherlv_5, grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_5());
+			newLeafNode(otherlv_9, grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_9());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0());
+					newCompositeNode(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0());
 				}
-				lv_defaultPrintStatus_6_0=ruleVTestSetupConfigurationStatus
+				lv_defaultPrintStatus_10_0=ruleVTestSetupConfigurationStatus
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getVTestSetupSelectedConfigurationRule());
@@ -2104,15 +2124,15 @@ ruleVTestSetupSelectedConfiguration returns [EObject current=null]
 					set(
 						$current,
 						"defaultPrintStatus",
-						lv_defaultPrintStatus_6_0,
+						lv_defaultPrintStatus_10_0,
 						"es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupConfigurationStatus");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
-		otherlv_7='/>'
+		otherlv_11='/>'
 		{
-			newLeafNode(otherlv_7, grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_7());
+			newLeafNode(otherlv_11, grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_11());
 		}
 	)
 ;

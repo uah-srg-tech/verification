@@ -57,7 +57,6 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupPacketConfiguration">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
         eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
         containment="true"/>
@@ -124,12 +123,15 @@
         eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/scenario.ecore#//TMTCIFScenarioInterface"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupSelectedConfiguration">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
         eType="#//VTestSetupPacketConfiguration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultFilterStatus" lowerBound="1"
         eType="#//VTestSetupConfigurationStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="defaultPrintStatus" lowerBound="1"
         eType="#//VTestSetupConfigurationStatus"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="scenarioPacketConfig" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.tmtcif/model/scenario.ecore#//TMTCIFScenarioPacketConfig"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VTestSetupSupportedActionOverVariable">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

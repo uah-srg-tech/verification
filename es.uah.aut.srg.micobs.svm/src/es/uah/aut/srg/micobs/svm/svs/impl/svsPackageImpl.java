@@ -1515,7 +1515,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getVSVSStepConfiguration_Configuration() {
+	public EReference getVSVSStepConfiguration_SelectedConfiguration() {
 		return (EReference)vsvsStepConfigurationEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -1971,7 +1971,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		createEReference(vsvsStepConfigurationsEClass, VSVS_STEP_CONFIGURATIONS__CONFIGURATION);
 
 		vsvsStepConfigurationEClass = createEClass(VSVS_STEP_CONFIGURATION);
-		createEReference(vsvsStepConfigurationEClass, VSVS_STEP_CONFIGURATION__CONFIGURATION);
+		createEReference(vsvsStepConfigurationEClass, VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION);
 		createEAttribute(vsvsStepConfigurationEClass, VSVS_STEP_CONFIGURATION__FILTER_STATUS);
 		createEAttribute(vsvsStepConfigurationEClass, VSVS_STEP_CONFIGURATION__PRINT_STATUS);
 
@@ -2239,7 +2239,7 @@ public class svsPackageImpl extends EPackageImpl implements svsPackage {
 		initEReference(getVSVSStepConfigurations_Configuration(), this.getVSVSStepConfiguration(), null, "configuration", null, 1, -1, VSVSStepConfigurations.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvsStepConfigurationEClass, VSVSStepConfiguration.class, "VSVSStepConfiguration", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVSStepConfiguration_Configuration(), thetestsetupPackage.getVTestSetupPacketConfiguration(), null, "configuration", null, 1, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getVSVSStepConfiguration_SelectedConfiguration(), thetestsetupPackage.getVTestSetupSelectedConfiguration(), null, "selectedConfiguration", null, 1, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepConfiguration_FilterStatus(), thetestsetupPackage.getVTestSetupConfigurationStatus(), "filterStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getVSVSStepConfiguration_PrintStatus(), thetestsetupPackage.getVTestSetupConfigurationStatus(), "printStatus", null, 0, 1, VSVSStepConfiguration.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

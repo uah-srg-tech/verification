@@ -638,21 +638,18 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *     VTestSetupPacketConfiguration returns VTestSetupPacketConfiguration
 	 *
 	 * Constraint:
-	 *     (name=STRING id=UINT_STRING description=DRun)
+	 *     (name=STRING description=DRun)
 	 */
 	protected void sequence_VTestSetupPacketConfiguration(ISerializationContext context, VTestSetupPacketConfiguration semanticObject) {
 		if (errorAcceptor != null) {
 			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__NAME));
-			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__ID) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__ID));
 			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getVTestSetupPacketConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0(), semanticObject.getId());
-		feeder.accept(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0(), semanticObject.getDescription());
+		feeder.accept(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_4_0(), semanticObject.getDescription());
 		feeder.finish();
 	}
 	
@@ -719,24 +716,32 @@ public class TESTSETUPSemanticSequencer extends AbstractDelegatingSemanticSequen
 	 *
 	 * Constraint:
 	 *     (
+	 *         name=STRING 
 	 *         configuration=[VTestSetupPacketConfiguration|STRING] 
+	 *         scenarioPacketConfig=[TMTCIFScenarioPacketConfig|STRING] 
 	 *         defaultFilterStatus=VTestSetupConfigurationStatus 
 	 *         defaultPrintStatus=VTestSetupConfigurationStatus
 	 *     )
 	 */
 	protected void sequence_VTestSetupSelectedConfiguration(ISerializationContext context, VTestSetupSelectedConfiguration semanticObject) {
 		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__NAME));
 			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION));
+			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG));
 			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS));
 			if (transientValues.isValueTransient(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1(), semanticObject.getConfiguration());
-		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0(), semanticObject.getDefaultFilterStatus());
-		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0(), semanticObject.getDefaultPrintStatus());
+		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1(), semanticObject.getConfiguration());
+		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1(), semanticObject.getScenarioPacketConfig());
+		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0(), semanticObject.getDefaultFilterStatus());
+		feeder.accept(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0(), semanticObject.getDefaultPrintStatus());
 		feeder.finish();
 	}
 	

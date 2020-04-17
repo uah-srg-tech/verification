@@ -15,6 +15,7 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.testsetupPackage;
 
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig;
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
@@ -31,14 +32,36 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getName <em>Name</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getConfiguration <em>Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getDefaultFilterStatus <em>Default Filter Status</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getDefaultPrintStatus <em>Default Print Status</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSelectedConfigurationImpl#getScenarioPacketConfig <em>Scenario Packet Config</em>}</li>
  * </ul>
  *
  * @generated
  */
 public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Container implements VTestSetupSelectedConfiguration {
+	/**
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
+
 	/**
 	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -90,6 +113,16 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	protected VTestSetupConfigurationStatus defaultPrintStatus = DEFAULT_PRINT_STATUS_EDEFAULT;
 
 	/**
+	 * The cached value of the '{@link #getScenarioPacketConfig() <em>Scenario Packet Config</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getScenarioPacketConfig()
+	 * @generated
+	 * @ordered
+	 */
+	protected TMTCIFScenarioPacketConfig scenarioPacketConfig;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -106,6 +139,27 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	@Override
 	protected EClass eStaticClass() {
 		return testsetupPackage.Literals.VTEST_SETUP_SELECTED_CONFIGURATION;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__NAME, oldName, name));
 	}
 
 	/**
@@ -193,9 +247,49 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public TMTCIFScenarioPacketConfig getScenarioPacketConfig() {
+		if (scenarioPacketConfig != null && scenarioPacketConfig.eIsProxy()) {
+			InternalEObject oldScenarioPacketConfig = (InternalEObject)scenarioPacketConfig;
+			scenarioPacketConfig = (TMTCIFScenarioPacketConfig)eResolveProxy(oldScenarioPacketConfig);
+			if (scenarioPacketConfig != oldScenarioPacketConfig) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG, oldScenarioPacketConfig, scenarioPacketConfig));
+			}
+		}
+		return scenarioPacketConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TMTCIFScenarioPacketConfig basicGetScenarioPacketConfig() {
+		return scenarioPacketConfig;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setScenarioPacketConfig(TMTCIFScenarioPacketConfig newScenarioPacketConfig) {
+		TMTCIFScenarioPacketConfig oldScenarioPacketConfig = scenarioPacketConfig;
+		scenarioPacketConfig = newScenarioPacketConfig;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG, oldScenarioPacketConfig, scenarioPacketConfig));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__NAME:
+				return getName();
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				if (resolve) return getConfiguration();
 				return basicGetConfiguration();
@@ -203,6 +297,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 				return getDefaultFilterStatus();
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				return getDefaultPrintStatus();
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG:
+				if (resolve) return getScenarioPacketConfig();
+				return basicGetScenarioPacketConfig();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -215,6 +312,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__NAME:
+				setName((String)newValue);
+				return;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				setConfiguration((VTestSetupPacketConfiguration)newValue);
 				return;
@@ -223,6 +323,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 				return;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				setDefaultPrintStatus((VTestSetupConfigurationStatus)newValue);
+				return;
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG:
+				setScenarioPacketConfig((TMTCIFScenarioPacketConfig)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -236,6 +339,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__NAME:
+				setName(NAME_EDEFAULT);
+				return;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				setConfiguration((VTestSetupPacketConfiguration)null);
 				return;
@@ -244,6 +350,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 				return;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				setDefaultPrintStatus(DEFAULT_PRINT_STATUS_EDEFAULT);
+				return;
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG:
+				setScenarioPacketConfig((TMTCIFScenarioPacketConfig)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -257,12 +366,16 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__NAME:
+				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION:
 				return configuration != null;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS:
 				return defaultFilterStatus != DEFAULT_FILTER_STATUS_EDEFAULT;
 			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS:
 				return defaultPrintStatus != DEFAULT_PRINT_STATUS_EDEFAULT;
+			case testsetupPackage.VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG:
+				return scenarioPacketConfig != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -277,7 +390,9 @@ public class VTestSetupSelectedConfigurationImpl extends MinimalEObjectImpl.Cont
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (defaultFilterStatus: ");
+		result.append(" (name: ");
+		result.append(name);
+		result.append(", defaultFilterStatus: ");
 		result.append(defaultFilterStatus);
 		result.append(", defaultPrintStatus: ");
 		result.append(defaultPrintStatus);

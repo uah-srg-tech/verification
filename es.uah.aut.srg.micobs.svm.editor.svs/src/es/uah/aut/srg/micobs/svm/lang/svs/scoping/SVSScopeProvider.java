@@ -47,7 +47,6 @@ import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractGroup;
 import es.uah.aut.srg.micobs.svm.tdm.VTraceableDocumentAbstractItem;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupAction;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable;
@@ -234,17 +233,15 @@ public class SVSScopeProvider extends AbstractDeclarativeScopeProvider {
 		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
 	}
 
-	public IScope scope_VSVSStepConfiguration_configuration(VSVSTestProcedure currTP, EReference reference) {
+	public IScope scope_VSVSStepConfiguration_selectedConfiguration(VSVSTestProcedure currTP, EReference reference) {
 		
-		Collection<VTestSetupPacketConfiguration> configurations = new HashSet<VTestSetupPacketConfiguration>();
-		for(VTestSetupSelectedConfiguration selectedConfiguration : currTP.getScenario().getSelectedConfiguration()) {
-			configurations.add(selectedConfiguration.getConfiguration());
-		}
+		Collection<VTestSetupSelectedConfiguration> configurations = new HashSet<VTestSetupSelectedConfiguration>();
+		configurations.addAll(currTP.getScenario().getSelectedConfiguration());
 		
-		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VTestSetupPacketConfiguration, IEObjectDescription>(){
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(configurations, new Function<VTestSetupSelectedConfiguration, IEObjectDescription>(){
 	
 			@Override
-			public IEObjectDescription apply(VTestSetupPacketConfiguration from) {
+			public IEObjectDescription apply(VTestSetupSelectedConfiguration from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

@@ -3437,9 +3437,9 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cConfigurationVTestSetupPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
-		private final RuleCall cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVTestSetupPacketConfigurationCrossReference_2_0.eContents().get(1);
+		private final Assignment cSelectedConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0 = (CrossReference)cSelectedConfigurationAssignment_2.eContents().get(0);
+		private final RuleCall cSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0.eContents().get(1);
 		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
 		private final Keyword cFilterStatusKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
 		private final Assignment cFilterStatusAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
@@ -3452,12 +3452,12 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//VSVSStepConfiguration:
 		//	'<Configuration'
-		//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+		//	'ref=' selectedConfiguration=[testsetup::VTestSetupSelectedConfiguration|STRING] ('filterStatus='
 		//	filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Configuration' 'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+		//'<Configuration' 'ref=' selectedConfiguration=[testsetup::VTestSetupSelectedConfiguration|STRING] ('filterStatus='
 		//filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)? '/>'
 		public Group getGroup() { return cGroup; }
 		
@@ -3467,14 +3467,14 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 		//'ref='
 		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
 		
-		//configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
-		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
+		//selectedConfiguration=[testsetup::VTestSetupSelectedConfiguration|STRING]
+		public Assignment getSelectedConfigurationAssignment_2() { return cSelectedConfigurationAssignment_2; }
 		
-		//[testsetup::VTestSetupPacketConfiguration|STRING]
-		public CrossReference getConfigurationVTestSetupPacketConfigurationCrossReference_2_0() { return cConfigurationVTestSetupPacketConfigurationCrossReference_2_0; }
+		//[testsetup::VTestSetupSelectedConfiguration|STRING]
+		public CrossReference getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0() { return cSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0; }
 		
 		//STRING
-		public RuleCall getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		public RuleCall getSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1() { return cSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1; }
 		
 		//('filterStatus=' filterStatus=VTestSetupConfigurationStatus)?
 		public Group getGroup_3() { return cGroup_3; }
@@ -5736,7 +5736,7 @@ public class SVSGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VSVSStepConfiguration:
 	//	'<Configuration'
-	//	'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING] ('filterStatus='
+	//	'ref=' selectedConfiguration=[testsetup::VTestSetupSelectedConfiguration|STRING] ('filterStatus='
 	//	filterStatus=VTestSetupConfigurationStatus)? ('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 	//	'/>';
 	public VSVSStepConfigurationElements getVSVSStepConfigurationAccess() {

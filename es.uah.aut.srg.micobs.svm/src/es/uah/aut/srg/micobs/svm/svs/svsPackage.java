@@ -1797,13 +1797,13 @@ public interface svsPackage extends EPackage {
 	int VSVS_STEP_CONFIGURATION = 24;
 
 	/**
-	 * The feature id for the '<em><b>Configuration</b></em>' reference.
+	 * The feature id for the '<em><b>Selected Configuration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVS_STEP_CONFIGURATION__CONFIGURATION = 0;
+	int VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION = 0;
 
 	/**
 	 * The feature id for the '<em><b>Filter Status</b></em>' attribute.
@@ -3987,15 +3987,15 @@ public interface svsPackage extends EPackage {
 	EClass getVSVSStepConfiguration();
 
 	/**
-	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getConfiguration <em>Configuration</em>}'.
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getSelectedConfiguration <em>Selected Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Configuration</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getConfiguration()
+	 * @return the meta object for the reference '<em>Selected Configuration</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getSelectedConfiguration()
 	 * @see #getVSVSStepConfiguration()
 	 * @generated
 	 */
-	EReference getVSVSStepConfiguration_Configuration();
+	EReference getVSVSStepConfiguration_SelectedConfiguration();
 
 	/**
 	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getFilterStatus <em>Filter Status</em>}'.
@@ -5374,12 +5374,12 @@ public interface svsPackage extends EPackage {
 		EClass VSVS_STEP_CONFIGURATION = eINSTANCE.getVSVSStepConfiguration();
 
 		/**
-		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Selected Configuration</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference VSVS_STEP_CONFIGURATION__CONFIGURATION = eINSTANCE.getVSVSStepConfiguration_Configuration();
+		EReference VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION = eINSTANCE.getVSVSStepConfiguration_SelectedConfiguration();
 
 		/**
 		 * The meta object literal for the '<em><b>Filter Status</b></em>' attribute feature.

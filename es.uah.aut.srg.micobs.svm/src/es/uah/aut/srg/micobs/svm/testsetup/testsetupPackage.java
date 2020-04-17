@@ -607,22 +607,13 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_PACKET_CONFIGURATION__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Id</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VTEST_SETUP_PACKET_CONFIGURATION__ID = 1;
-
-	/**
 	 * The feature id for the '<em><b>Description</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION = 2;
+	int VTEST_SETUP_PACKET_CONFIGURATION__DESCRIPTION = 1;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Packet Configuration</em>' class.
@@ -631,7 +622,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_PACKET_CONFIGURATION_FEATURE_COUNT = 3;
+	int VTEST_SETUP_PACKET_CONFIGURATION_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>VTest Setup Packet Configuration</em>' class.
@@ -1065,13 +1056,22 @@ public interface testsetupPackage extends EPackage {
 	int VTEST_SETUP_SELECTED_CONFIGURATION = 15;
 
 	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SELECTED_CONFIGURATION__NAME = 0;
+
+	/**
 	 * The feature id for the '<em><b>Configuration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION = 0;
+	int VTEST_SETUP_SELECTED_CONFIGURATION__CONFIGURATION = 1;
 
 	/**
 	 * The feature id for the '<em><b>Default Filter Status</b></em>' attribute.
@@ -1080,7 +1080,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS = 1;
+	int VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_FILTER_STATUS = 2;
 
 	/**
 	 * The feature id for the '<em><b>Default Print Status</b></em>' attribute.
@@ -1089,7 +1089,16 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = 2;
+	int VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Scenario Packet Config</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG = 4;
 
 	/**
 	 * The number of structural features of the '<em>VTest Setup Selected Configuration</em>' class.
@@ -1098,7 +1107,7 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int VTEST_SETUP_SELECTED_CONFIGURATION_FEATURE_COUNT = 3;
+	int VTEST_SETUP_SELECTED_CONFIGURATION_FEATURE_COUNT = 5;
 
 	/**
 	 * The number of operations of the '<em>VTest Setup Selected Configuration</em>' class.
@@ -1485,17 +1494,6 @@ public interface testsetupPackage extends EPackage {
 	EAttribute getVTestSetupPacketConfiguration_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getId <em>Id</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getId()
-	 * @see #getVTestSetupPacketConfiguration()
-	 * @generated
-	 */
-	EAttribute getVTestSetupPacketConfiguration_Id();
-
-	/**
 	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration#getDescription <em>Description</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1785,6 +1783,17 @@ public interface testsetupPackage extends EPackage {
 	EClass getVTestSetupSelectedConfiguration();
 
 	/**
+	 * Returns the meta object for the attribute '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration#getName()
+	 * @see #getVTestSetupSelectedConfiguration()
+	 * @generated
+	 */
+	EAttribute getVTestSetupSelectedConfiguration_Name();
+
+	/**
 	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration#getConfiguration <em>Configuration</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1816,6 +1825,17 @@ public interface testsetupPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getVTestSetupSelectedConfiguration_DefaultPrintStatus();
+
+	/**
+	 * Returns the meta object for the reference '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration#getScenarioPacketConfig <em>Scenario Packet Config</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Scenario Packet Config</em>'.
+	 * @see es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration#getScenarioPacketConfig()
+	 * @see #getVTestSetupSelectedConfiguration()
+	 * @generated
+	 */
+	EReference getVTestSetupSelectedConfiguration_ScenarioPacketConfig();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSupportedActionOverVariable <em>VTest Setup Supported Action Over Variable</em>}'.
@@ -2146,14 +2166,6 @@ public interface testsetupPackage extends EPackage {
 		EAttribute VTEST_SETUP_PACKET_CONFIGURATION__NAME = eINSTANCE.getVTestSetupPacketConfiguration_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Id</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute VTEST_SETUP_PACKET_CONFIGURATION__ID = eINSTANCE.getVTestSetupPacketConfiguration_Id();
-
-		/**
 		 * The meta object literal for the '<em><b>Description</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2386,6 +2398,14 @@ public interface testsetupPackage extends EPackage {
 		EClass VTEST_SETUP_SELECTED_CONFIGURATION = eINSTANCE.getVTestSetupSelectedConfiguration();
 
 		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute VTEST_SETUP_SELECTED_CONFIGURATION__NAME = eINSTANCE.getVTestSetupSelectedConfiguration_Name();
+
+		/**
 		 * The meta object literal for the '<em><b>Configuration</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -2408,6 +2428,14 @@ public interface testsetupPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute VTEST_SETUP_SELECTED_CONFIGURATION__DEFAULT_PRINT_STATUS = eINSTANCE.getVTestSetupSelectedConfiguration_DefaultPrintStatus();
+
+		/**
+		 * The meta object literal for the '<em><b>Scenario Packet Config</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference VTEST_SETUP_SELECTED_CONFIGURATION__SCENARIO_PACKET_CONFIG = eINSTANCE.getVTestSetupSelectedConfiguration_ScenarioPacketConfig();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.testsetup.impl.VTestSetupSupportedActionOverVariableImpl <em>VTest Setup Supported Action Over Variable</em>}' class.

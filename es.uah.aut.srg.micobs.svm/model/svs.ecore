@@ -181,8 +181,8 @@
         upperBound="-1" eType="#//VSVSStepConfiguration" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVSStepConfiguration">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="configuration" lowerBound="1"
-        eType="ecore:EClass testsetup.ecore#//VTestSetupPacketConfiguration"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedConfiguration"
+        lowerBound="1" eType="ecore:EClass testsetup.ecore#//VTestSetupSelectedConfiguration"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="filterStatus" eType="ecore:EEnum testsetup.ecore#//VTestSetupConfigurationStatus"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="printStatus" eType="ecore:EEnum testsetup.ecore#//VTestSetupConfigurationStatus"/>
   </eClassifiers>

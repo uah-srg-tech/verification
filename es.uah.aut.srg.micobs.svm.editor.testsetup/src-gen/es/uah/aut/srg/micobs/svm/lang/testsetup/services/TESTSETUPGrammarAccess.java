@@ -843,24 +843,20 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cIdKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cIdAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cIdUINT_STRINGTerminalRuleCall_4_0 = (RuleCall)cIdAssignment_4.eContents().get(0);
-		private final Keyword cGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDescriptionAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDescriptionDRunParserRuleCall_6_0 = (RuleCall)cDescriptionAssignment_6.eContents().get(0);
-		private final Keyword cPacketConfigurationKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cGreaterThanSignKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDescriptionAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDescriptionDRunParserRuleCall_4_0 = (RuleCall)cDescriptionAssignment_4.eContents().get(0);
+		private final Keyword cPacketConfigurationKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//VTestSetupPacketConfiguration:
 		//	'<PacketConfiguration'
 		//	'name=' name=STRING
-		//	'id=' id=UINT_STRING
 		//	'>'
 		//	description=DRun
 		//	'</PacketConfiguration>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<PacketConfiguration' 'name=' name=STRING 'id=' id=UINT_STRING '>' description=DRun '</PacketConfiguration>'
+		//'<PacketConfiguration' 'name=' name=STRING '>' description=DRun '</PacketConfiguration>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<PacketConfiguration'
@@ -875,26 +871,17 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
 		
-		//'id='
-		public Keyword getIdKeyword_3() { return cIdKeyword_3; }
-		
-		//id=UINT_STRING
-		public Assignment getIdAssignment_4() { return cIdAssignment_4; }
-		
-		//UINT_STRING
-		public RuleCall getIdUINT_STRINGTerminalRuleCall_4_0() { return cIdUINT_STRINGTerminalRuleCall_4_0; }
-		
 		//'>'
-		public Keyword getGreaterThanSignKeyword_5() { return cGreaterThanSignKeyword_5; }
+		public Keyword getGreaterThanSignKeyword_3() { return cGreaterThanSignKeyword_3; }
 		
 		//description=DRun
-		public Assignment getDescriptionAssignment_6() { return cDescriptionAssignment_6; }
+		public Assignment getDescriptionAssignment_4() { return cDescriptionAssignment_4; }
 		
 		//DRun
-		public RuleCall getDescriptionDRunParserRuleCall_6_0() { return cDescriptionDRunParserRuleCall_6_0; }
+		public RuleCall getDescriptionDRunParserRuleCall_4_0() { return cDescriptionDRunParserRuleCall_4_0; }
 		
 		//'</PacketConfiguration>'
-		public Keyword getPacketConfigurationKeyword_7() { return cPacketConfigurationKeyword_7; }
+		public Keyword getPacketConfigurationKeyword_5() { return cPacketConfigurationKeyword_5; }
 	}
 	public class VTestSetupActionsSectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupActionsSection");
@@ -1281,27 +1268,37 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupSelectedConfiguration");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cConfigurationKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cRefKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cConfigurationAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cConfigurationVTestSetupPacketConfigurationCrossReference_2_0 = (CrossReference)cConfigurationAssignment_2.eContents().get(0);
-		private final RuleCall cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1 = (RuleCall)cConfigurationVTestSetupPacketConfigurationCrossReference_2_0.eContents().get(1);
-		private final Keyword cDefaultFilterStatusKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cDefaultFilterStatusAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0 = (RuleCall)cDefaultFilterStatusAssignment_4.eContents().get(0);
-		private final Keyword cDefaultPrintStatusKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDefaultPrintStatusAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0 = (RuleCall)cDefaultPrintStatusAssignment_6.eContents().get(0);
-		private final Keyword cSolidusGreaterThanSignKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Keyword cNameKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameSTRINGTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cRefKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cConfigurationAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final CrossReference cConfigurationVTestSetupPacketConfigurationCrossReference_4_0 = (CrossReference)cConfigurationAssignment_4.eContents().get(0);
+		private final RuleCall cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1 = (RuleCall)cConfigurationVTestSetupPacketConfigurationCrossReference_4_0.eContents().get(1);
+		private final Keyword cScenarioPacketConfigKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Assignment cScenarioPacketConfigAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final CrossReference cScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0 = (CrossReference)cScenarioPacketConfigAssignment_6.eContents().get(0);
+		private final RuleCall cScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1 = (RuleCall)cScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0.eContents().get(1);
+		private final Keyword cDefaultFilterStatusKeyword_7 = (Keyword)cGroup.eContents().get(7);
+		private final Assignment cDefaultFilterStatusAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0 = (RuleCall)cDefaultFilterStatusAssignment_8.eContents().get(0);
+		private final Keyword cDefaultPrintStatusKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cDefaultPrintStatusAssignment_10 = (Assignment)cGroup.eContents().get(10);
+		private final RuleCall cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0 = (RuleCall)cDefaultPrintStatusAssignment_10.eContents().get(0);
+		private final Keyword cSolidusGreaterThanSignKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//VTestSetupSelectedConfiguration:
 		//	'<Configuration'
+		//	'name=' name=STRING
 		//	'ref=' configuration=[VTestSetupPacketConfiguration|STRING]
+		//	'scenarioPacketConfig=' scenarioPacketConfig=[scenario::TMTCIFScenarioPacketConfig|STRING]
 		//	'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
 		//	'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
 		//	'/>';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'<Configuration' 'ref=' configuration=[VTestSetupPacketConfiguration|STRING] 'defaultFilterStatus='
+		//'<Configuration' 'name=' name=STRING 'ref=' configuration=[VTestSetupPacketConfiguration|STRING] 'scenarioPacketConfig='
+		//scenarioPacketConfig=[scenario::TMTCIFScenarioPacketConfig|STRING] 'defaultFilterStatus='
 		//defaultFilterStatus=VTestSetupConfigurationStatus 'defaultPrintStatus='
 		//defaultPrintStatus=VTestSetupConfigurationStatus '/>'
 		public Group getGroup() { return cGroup; }
@@ -1309,38 +1306,59 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 		//'<Configuration'
 		public Keyword getConfigurationKeyword_0() { return cConfigurationKeyword_0; }
 		
-		//'ref='
-		public Keyword getRefKeyword_1() { return cRefKeyword_1; }
+		//'name='
+		public Keyword getNameKeyword_1() { return cNameKeyword_1; }
 		
-		//configuration=[VTestSetupPacketConfiguration|STRING]
-		public Assignment getConfigurationAssignment_2() { return cConfigurationAssignment_2; }
-		
-		//[VTestSetupPacketConfiguration|STRING]
-		public CrossReference getConfigurationVTestSetupPacketConfigurationCrossReference_2_0() { return cConfigurationVTestSetupPacketConfigurationCrossReference_2_0; }
+		//name=STRING
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
 		
 		//STRING
-		public RuleCall getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1() { return cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1; }
+		public RuleCall getNameSTRINGTerminalRuleCall_2_0() { return cNameSTRINGTerminalRuleCall_2_0; }
+		
+		//'ref='
+		public Keyword getRefKeyword_3() { return cRefKeyword_3; }
+		
+		//configuration=[VTestSetupPacketConfiguration|STRING]
+		public Assignment getConfigurationAssignment_4() { return cConfigurationAssignment_4; }
+		
+		//[VTestSetupPacketConfiguration|STRING]
+		public CrossReference getConfigurationVTestSetupPacketConfigurationCrossReference_4_0() { return cConfigurationVTestSetupPacketConfigurationCrossReference_4_0; }
+		
+		//STRING
+		public RuleCall getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1() { return cConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1; }
+		
+		//'scenarioPacketConfig='
+		public Keyword getScenarioPacketConfigKeyword_5() { return cScenarioPacketConfigKeyword_5; }
+		
+		//scenarioPacketConfig=[scenario::TMTCIFScenarioPacketConfig|STRING]
+		public Assignment getScenarioPacketConfigAssignment_6() { return cScenarioPacketConfigAssignment_6; }
+		
+		//[scenario::TMTCIFScenarioPacketConfig|STRING]
+		public CrossReference getScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0() { return cScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0; }
+		
+		//STRING
+		public RuleCall getScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1() { return cScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1; }
 		
 		//'defaultFilterStatus='
-		public Keyword getDefaultFilterStatusKeyword_3() { return cDefaultFilterStatusKeyword_3; }
+		public Keyword getDefaultFilterStatusKeyword_7() { return cDefaultFilterStatusKeyword_7; }
 		
 		//defaultFilterStatus=VTestSetupConfigurationStatus
-		public Assignment getDefaultFilterStatusAssignment_4() { return cDefaultFilterStatusAssignment_4; }
+		public Assignment getDefaultFilterStatusAssignment_8() { return cDefaultFilterStatusAssignment_8; }
 		
 		//VTestSetupConfigurationStatus
-		public RuleCall getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0() { return cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0; }
+		public RuleCall getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0() { return cDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0; }
 		
 		//'defaultPrintStatus='
-		public Keyword getDefaultPrintStatusKeyword_5() { return cDefaultPrintStatusKeyword_5; }
+		public Keyword getDefaultPrintStatusKeyword_9() { return cDefaultPrintStatusKeyword_9; }
 		
 		//defaultPrintStatus=VTestSetupConfigurationStatus
-		public Assignment getDefaultPrintStatusAssignment_6() { return cDefaultPrintStatusAssignment_6; }
+		public Assignment getDefaultPrintStatusAssignment_10() { return cDefaultPrintStatusAssignment_10; }
 		
 		//VTestSetupConfigurationStatus
-		public RuleCall getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0() { return cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0; }
+		public RuleCall getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0() { return cDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0; }
 		
 		//'/>'
-		public Keyword getSolidusGreaterThanSignKeyword_7() { return cSolidusGreaterThanSignKeyword_7; }
+		public Keyword getSolidusGreaterThanSignKeyword_11() { return cSolidusGreaterThanSignKeyword_11; }
 	}
 	public class VTestSetupSupportedActionOverVariableElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.testsetup.TESTSETUP.VTestSetupSupportedActionOverVariable");
@@ -3046,7 +3064,6 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	//VTestSetupPacketConfiguration:
 	//	'<PacketConfiguration'
 	//	'name=' name=STRING
-	//	'id=' id=UINT_STRING
 	//	'>'
 	//	description=DRun
 	//	'</PacketConfiguration>';
@@ -3173,7 +3190,9 @@ public class TESTSETUPGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//VTestSetupSelectedConfiguration:
 	//	'<Configuration'
+	//	'name=' name=STRING
 	//	'ref=' configuration=[VTestSetupPacketConfiguration|STRING]
+	//	'scenarioPacketConfig=' scenarioPacketConfig=[scenario::TMTCIFScenarioPacketConfig|STRING]
 	//	'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
 	//	'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
 	//	'/>';

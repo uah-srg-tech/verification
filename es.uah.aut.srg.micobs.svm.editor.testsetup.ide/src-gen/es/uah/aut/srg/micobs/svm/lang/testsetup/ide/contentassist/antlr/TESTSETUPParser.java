@@ -173,8 +173,7 @@ public class TESTSETUPParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTestSetupInterfaceAccess().getDescriptionAssignment_8(), "rule__VTestSetupInterface__DescriptionAssignment_8");
 					put(grammarAccess.getVTestSetupPacketConfigurationsSectionAccess().getPacketConfigurationsAssignment_1(), "rule__VTestSetupPacketConfigurationsSection__PacketConfigurationsAssignment_1");
 					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getNameAssignment_2(), "rule__VTestSetupPacketConfiguration__NameAssignment_2");
-					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdAssignment_4(), "rule__VTestSetupPacketConfiguration__IdAssignment_4");
-					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_6(), "rule__VTestSetupPacketConfiguration__DescriptionAssignment_6");
+					put(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_4(), "rule__VTestSetupPacketConfiguration__DescriptionAssignment_4");
 					put(grammarAccess.getVTestSetupActionsSectionAccess().getActionsAssignment_1(), "rule__VTestSetupActionsSection__ActionsAssignment_1");
 					put(grammarAccess.getVTestSetupActionAccess().getNameAssignment_2(), "rule__VTestSetupAction__NameAssignment_2");
 					put(grammarAccess.getVTestSetupActionAccess().getTypeAssignment_4(), "rule__VTestSetupAction__TypeAssignment_4");
@@ -194,9 +193,11 @@ public class TESTSETUPParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVTestSetupSupportedInterfaceAccess().getNameAssignment_2(), "rule__VTestSetupSupportedInterface__NameAssignment_2");
 					put(grammarAccess.getVTestSetupSupportedInterfaceAccess().getInterfaceAssignment_4(), "rule__VTestSetupSupportedInterface__InterfaceAssignment_4");
 					put(grammarAccess.getVTestSetupSupportedInterfaceAccess().getScenarioInterfaceAssignment_6(), "rule__VTestSetupSupportedInterface__ScenarioInterfaceAssignment_6");
-					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_2(), "rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_2");
-					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_4(), "rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_4");
-					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_6(), "rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_6");
+					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameAssignment_2(), "rule__VTestSetupSelectedConfiguration__NameAssignment_2");
+					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_4(), "rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_4");
+					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigAssignment_6(), "rule__VTestSetupSelectedConfiguration__ScenarioPacketConfigAssignment_6");
+					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_8(), "rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_8");
+					put(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_10(), "rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_10");
 					put(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getNameAssignment_2(), "rule__VTestSetupSupportedActionOverVariable__NameAssignment_2");
 					put(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getActionOverVariableAssignment_4(), "rule__VTestSetupSupportedActionOverVariable__ActionOverVariableAssignment_4");
 					put(grammarAccess.getVTestSetupSupportedActionOverVariableAccess().getScenarioVariableAssignment_6(), "rule__VTestSetupSupportedActionOverVariable__ScenarioVariableAssignment_6");

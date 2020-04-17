@@ -10,9 +10,18 @@
  ******************************************************************************/
 package es.uah.aut.srg.micobs.svm.lang.svs;
 
+import org.eclipse.xtext.naming.IQualifiedNameConverter;
+
+import es.uah.aut.srg.micobs.xtext.MICOBSQualifiedNameProvider.MICOBSDefaultNameConverter;
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 public class SVSRuntimeModule extends AbstractSVSRuntimeModule {
+
+	//added MICOBS qualifier (using :: instead of . for segments) for allowing using . in ref. names
+	public Class<? extends IQualifiedNameConverter> bindIQualifiedNameConverter() {
+		return MICOBSDefaultNameConverter.class;
+	}
 	
 }

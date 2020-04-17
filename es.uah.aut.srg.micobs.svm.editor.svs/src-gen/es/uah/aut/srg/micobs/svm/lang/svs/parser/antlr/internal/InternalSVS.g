@@ -5378,7 +5378,7 @@ ruleVSVSStepConfiguration returns [EObject current=null]
 				}
 				otherlv_2=RULE_STRING
 				{
-					newLeafNode(otherlv_2, grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0());
+					newLeafNode(otherlv_2, grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0());
 				}
 			)
 		)

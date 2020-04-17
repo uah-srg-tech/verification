@@ -11,7 +11,7 @@
 package es.uah.aut.srg.micobs.svm.svs;
 
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus;
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getFilterStatus <em>Filter Status</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getPrintStatus <em>Print Status</em>}</li>
  * </ul>
@@ -35,30 +35,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface VSVSStepConfiguration extends EObject {
 
 	/**
-	 * Returns the value of the '<em><b>Configuration</b></em>' reference.
+	 * Returns the value of the '<em><b>Selected Configuration</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Configuration</em>' reference isn't clear,
+	 * If the meaning of the '<em>Selected Configuration</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Configuration</em>' reference.
-	 * @see #setConfiguration(VTestSetupPacketConfiguration)
-	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepConfiguration_Configuration()
+	 * @return the value of the '<em>Selected Configuration</em>' reference.
+	 * @see #setSelectedConfiguration(VTestSetupSelectedConfiguration)
+	 * @see es.uah.aut.srg.micobs.svm.svs.svsPackage#getVSVSStepConfiguration_SelectedConfiguration()
 	 * @model required="true"
 	 * @generated
 	 */
-	VTestSetupPacketConfiguration getConfiguration();
+	VTestSetupSelectedConfiguration getSelectedConfiguration();
 
 	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getConfiguration <em>Configuration</em>}' reference.
+	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration#getSelectedConfiguration <em>Selected Configuration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Configuration</em>' reference.
-	 * @see #getConfiguration()
+	 * @param value the new value of the '<em>Selected Configuration</em>' reference.
+	 * @see #getSelectedConfiguration()
 	 * @generated
 	 */
-	void setConfiguration(VTestSetupPacketConfiguration value);
+	void setSelectedConfiguration(VTestSetupSelectedConfiguration value);
 
 	/**
 	 * Returns the value of the '<em><b>Filter Status</b></em>' attribute.

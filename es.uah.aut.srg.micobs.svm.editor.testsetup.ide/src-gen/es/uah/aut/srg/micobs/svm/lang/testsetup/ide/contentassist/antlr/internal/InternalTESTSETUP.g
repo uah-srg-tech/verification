@@ -4461,9 +4461,9 @@ rule__VTestSetupPacketConfiguration__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdKeyword_3()); }
-	'id='
-	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdKeyword_3()); }
+	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_3()); }
+	'>'
+	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_3()); }
 )
 ;
 finally {
@@ -4488,9 +4488,9 @@ rule__VTestSetupPacketConfiguration__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdAssignment_4()); }
-	(rule__VTestSetupPacketConfiguration__IdAssignment_4)
-	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdAssignment_4()); }
+	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_4()); }
+	(rule__VTestSetupPacketConfiguration__DescriptionAssignment_4)
+	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_4()); }
 )
 ;
 finally {
@@ -4503,7 +4503,6 @@ rule__VTestSetupPacketConfiguration__Group__5
 	}
 :
 	rule__VTestSetupPacketConfiguration__Group__5__Impl
-	rule__VTestSetupPacketConfiguration__Group__6
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -4515,62 +4514,9 @@ rule__VTestSetupPacketConfiguration__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_5()); }
-	'>'
-	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getGreaterThanSignKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTestSetupPacketConfiguration__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VTestSetupPacketConfiguration__Group__6__Impl
-	rule__VTestSetupPacketConfiguration__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTestSetupPacketConfiguration__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_6()); }
-	(rule__VTestSetupPacketConfiguration__DescriptionAssignment_6)
-	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionAssignment_6()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTestSetupPacketConfiguration__Group__7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VTestSetupPacketConfiguration__Group__7__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTestSetupPacketConfiguration__Group__7__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_7()); }
+	{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_5()); }
 	'</PacketConfiguration>'
-	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_7()); }
+	{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getPacketConfigurationKeyword_5()); }
 )
 ;
 finally {
@@ -5886,9 +5832,9 @@ rule__VTestSetupSelectedConfiguration__Group__1__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_1()); }
-	'ref='
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_1()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameKeyword_1()); }
+	'name='
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameKeyword_1()); }
 )
 ;
 finally {
@@ -5913,9 +5859,9 @@ rule__VTestSetupSelectedConfiguration__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_2()); }
-	(rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_2)
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_2()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameAssignment_2()); }
+	(rule__VTestSetupSelectedConfiguration__NameAssignment_2)
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameAssignment_2()); }
 )
 ;
 finally {
@@ -5940,9 +5886,9 @@ rule__VTestSetupSelectedConfiguration__Group__3__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_3()); }
-	'defaultFilterStatus='
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_3()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_3()); }
+	'ref='
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getRefKeyword_3()); }
 )
 ;
 finally {
@@ -5967,9 +5913,9 @@ rule__VTestSetupSelectedConfiguration__Group__4__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_4()); }
-	(rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_4)
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_4()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_4()); }
+	(rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_4)
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationAssignment_4()); }
 )
 ;
 finally {
@@ -5994,9 +5940,9 @@ rule__VTestSetupSelectedConfiguration__Group__5__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_5()); }
-	'defaultPrintStatus='
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_5()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigKeyword_5()); }
+	'scenarioPacketConfig='
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigKeyword_5()); }
 )
 ;
 finally {
@@ -6021,9 +5967,9 @@ rule__VTestSetupSelectedConfiguration__Group__6__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_6()); }
-	(rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_6)
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_6()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigAssignment_6()); }
+	(rule__VTestSetupSelectedConfiguration__ScenarioPacketConfigAssignment_6)
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigAssignment_6()); }
 )
 ;
 finally {
@@ -6036,6 +5982,7 @@ rule__VTestSetupSelectedConfiguration__Group__7
 	}
 :
 	rule__VTestSetupSelectedConfiguration__Group__7__Impl
+	rule__VTestSetupSelectedConfiguration__Group__8
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -6047,9 +5994,116 @@ rule__VTestSetupSelectedConfiguration__Group__7__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_7()); }
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_7()); }
+	'defaultFilterStatus='
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusKeyword_7()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__8
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTestSetupSelectedConfiguration__Group__8__Impl
+	rule__VTestSetupSelectedConfiguration__Group__9
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__8__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_8()); }
+	(rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_8)
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusAssignment_8()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__9
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTestSetupSelectedConfiguration__Group__9__Impl
+	rule__VTestSetupSelectedConfiguration__Group__10
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__9__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_9()); }
+	'defaultPrintStatus='
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusKeyword_9()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__10
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTestSetupSelectedConfiguration__Group__10__Impl
+	rule__VTestSetupSelectedConfiguration__Group__11
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__10__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_10()); }
+	(rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_10)
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusAssignment_10()); }
+)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__11
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	rule__VTestSetupSelectedConfiguration__Group__11__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__Group__11__Impl
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+(
+	{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_11()); }
 	'/>'
-	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_7()); }
+	{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getSolidusGreaterThanSignKeyword_11()); }
 )
 ;
 finally {
@@ -11523,30 +11577,15 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTestSetupPacketConfiguration__IdAssignment_4
+rule__VTestSetupPacketConfiguration__DescriptionAssignment_4
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0()); }
-		RULE_UINT_STRING
-		{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getIdUINT_STRINGTerminalRuleCall_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VTestSetupPacketConfiguration__DescriptionAssignment_6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0()); }
+		{ before(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_4_0()); }
 		ruleDRun
-		{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_6_0()); }
+		{ after(grammarAccess.getVTestSetupPacketConfigurationAccess().getDescriptionDRunParserRuleCall_4_0()); }
 	)
 ;
 finally {
@@ -11854,49 +11893,83 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_2
+rule__VTestSetupSelectedConfiguration__NameAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); }
+		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0()); }
+		RULE_STRING
+		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getNameSTRINGTerminalRuleCall_2_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__ConfigurationAssignment_4
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_4_0()); }
 		(
-			{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); }
+			{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1()); }
 			RULE_STRING
-			{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); }
+			{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_4_0_1()); }
 		)
-		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); }
+		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_4_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_4
+rule__VTestSetupSelectedConfiguration__ScenarioPacketConfigAssignment_6
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0()); }
-		ruleVTestSetupConfigurationStatus
-		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_4_0()); }
+		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0()); }
+		(
+			{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1()); }
+			RULE_STRING
+			{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigSTRINGTerminalRuleCall_6_0_1()); }
+		)
+		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getScenarioPacketConfigTMTCIFScenarioPacketConfigCrossReference_6_0()); }
 	)
 ;
 finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_6
+rule__VTestSetupSelectedConfiguration__DefaultFilterStatusAssignment_8
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0()); }
+		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0()); }
 		ruleVTestSetupConfigurationStatus
-		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_6_0()); }
+		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultFilterStatusVTestSetupConfigurationStatusEnumRuleCall_8_0()); }
+	)
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__VTestSetupSelectedConfiguration__DefaultPrintStatusAssignment_10
+	@init {
+		int stackSize = keepStackSize();
+	}
+:
+	(
+		{ before(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0()); }
+		ruleVTestSetupConfigurationStatus
+		{ after(grammarAccess.getVTestSetupSelectedConfigurationAccess().getDefaultPrintStatusVTestSetupConfigurationStatusEnumRuleCall_10_0()); }
 	)
 ;
 finally {

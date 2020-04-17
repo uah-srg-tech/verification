@@ -360,7 +360,7 @@ public class SVSParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVSProcedureStepAccess().getInputsAssignment_7(), "rule__VSVSProcedureStep__InputsAssignment_7");
 					put(grammarAccess.getVSVSProcedureStepAccess().getOutputsAssignment_8(), "rule__VSVSProcedureStep__OutputsAssignment_8");
 					put(grammarAccess.getVSVSStepConfigurationsAccess().getConfigurationAssignment_2(), "rule__VSVSStepConfigurations__ConfigurationAssignment_2");
-					put(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationAssignment_2(), "rule__VSVSStepConfiguration__ConfigurationAssignment_2");
+					put(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationAssignment_2(), "rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2");
 					put(grammarAccess.getVSVSStepConfigurationAccess().getFilterStatusAssignment_3_1(), "rule__VSVSStepConfiguration__FilterStatusAssignment_3_1");
 					put(grammarAccess.getVSVSStepConfigurationAccess().getPrintStatusAssignment_4_1(), "rule__VSVSStepConfiguration__PrintStatusAssignment_4_1");
 					put(grammarAccess.getVSVSStepActionAccess().getSelectedActionAssignment_2(), "rule__VSVSStepAction__SelectedActionAssignment_2");

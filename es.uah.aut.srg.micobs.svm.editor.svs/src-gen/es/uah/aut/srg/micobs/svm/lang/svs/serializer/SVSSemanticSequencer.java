@@ -852,7 +852,11 @@ public class SVSSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     VSVSStepConfiguration returns VSVSStepConfiguration
 	 *
 	 * Constraint:
-	 *     (configuration=[VTestSetupPacketConfiguration|STRING] filterStatus=VTestSetupConfigurationStatus? printStatus=VTestSetupConfigurationStatus?)
+	 *     (
+	 *         selectedConfiguration=[VTestSetupSelectedConfiguration|STRING] 
+	 *         filterStatus=VTestSetupConfigurationStatus? 
+	 *         printStatus=VTestSetupConfigurationStatus?
+	 *     )
 	 */
 	protected void sequence_VSVSStepConfiguration(ISerializationContext context, VSVSStepConfiguration semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

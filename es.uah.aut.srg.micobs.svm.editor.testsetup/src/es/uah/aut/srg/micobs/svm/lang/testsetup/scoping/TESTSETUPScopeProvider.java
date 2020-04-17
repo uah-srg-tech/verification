@@ -32,6 +32,7 @@ import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupInterface;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupScenarioSection;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioInterface;
+import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioPacketConfig;
 import es.uah.aut.srg.tmtcif.scenario.TMTCIFScenarioVariable;
 
 /**
@@ -151,6 +152,26 @@ public class TESTSETUPScopeProvider extends AbstractDeclarativeScopeProvider {
 	
 			@Override
 			public IEObjectDescription apply(VTestSetupPacketConfiguration from) {
+				if (from.getName() != null) {
+					return EObjectDescription.create(from.getName(), from);
+				}
+				else {
+					return null;
+				}
+			}
+		});
+		return new SimpleScope(Iterables.filter(fullQN, Predicates.notNull()));
+	}
+
+	public IScope scope_VTestSetupSelectedConfiguration_scenarioPacketConfig(VTestSetupScenarioSection scenario, EReference reference) {
+
+		Collection<TMTCIFScenarioPacketConfig> pktConfigs = new HashSet<TMTCIFScenarioPacketConfig>();
+		pktConfigs.addAll(scenario.getScenario().getScenarioPacketConfigs());
+	
+		Iterable<IEObjectDescription> fullQN = Iterables.transform(pktConfigs, new Function<TMTCIFScenarioPacketConfig, IEObjectDescription>(){
+	
+			@Override
+			public IEObjectDescription apply(TMTCIFScenarioPacketConfig from) {
 				if (from.getName() != null) {
 					return EObjectDescription.create(from.getName(), from);
 				}

@@ -49203,26 +49203,26 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__VSVSStepConfiguration__Group__2__Impl"
-    // InternalSVS.g:15221:1: rule__VSVSStepConfiguration__Group__2__Impl : ( ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 ) ) ;
+    // InternalSVS.g:15221:1: rule__VSVSStepConfiguration__Group__2__Impl : ( ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 ) ) ;
     public final void rule__VSVSStepConfiguration__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalSVS.g:15225:1: ( ( ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 ) ) )
-            // InternalSVS.g:15226:1: ( ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 ) )
+            // InternalSVS.g:15225:1: ( ( ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 ) ) )
+            // InternalSVS.g:15226:1: ( ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 ) )
             {
-            // InternalSVS.g:15226:1: ( ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 ) )
-            // InternalSVS.g:15227:2: ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 )
+            // InternalSVS.g:15226:1: ( ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 ) )
+            // InternalSVS.g:15227:2: ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationAssignment_2()); 
+               before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationAssignment_2()); 
             }
-            // InternalSVS.g:15228:2: ( rule__VSVSStepConfiguration__ConfigurationAssignment_2 )
-            // InternalSVS.g:15228:3: rule__VSVSStepConfiguration__ConfigurationAssignment_2
+            // InternalSVS.g:15228:2: ( rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 )
+            // InternalSVS.g:15228:3: rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2
             {
             pushFollow(FollowSets000.FOLLOW_2);
-            rule__VSVSStepConfiguration__ConfigurationAssignment_2();
+            rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2();
 
             state._fsp--;
             if (state.failed) return ;
@@ -49230,7 +49230,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationAssignment_2()); 
+               after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationAssignment_2()); 
             }
 
             }
@@ -67767,9 +67767,9 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
     // $ANTLR end "rule__VSVSStepConfigurations__ConfigurationAssignment_2"
 
 
-    // $ANTLR start "rule__VSVSStepConfiguration__ConfigurationAssignment_2"
-    // InternalSVS.g:21376:1: rule__VSVSStepConfiguration__ConfigurationAssignment_2 : ( ( RULE_STRING ) ) ;
-    public final void rule__VSVSStepConfiguration__ConfigurationAssignment_2() throws RecognitionException {
+    // $ANTLR start "rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2"
+    // InternalSVS.g:21376:1: rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2 : ( ( RULE_STRING ) ) ;
+    public final void rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -67781,23 +67781,23 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
             // InternalSVS.g:21382:3: ( RULE_STRING )
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); 
+               before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0()); 
             }
             // InternalSVS.g:21383:3: ( RULE_STRING )
             // InternalSVS.g:21384:4: RULE_STRING
             {
             if ( state.backtracking==0 ) {
-               before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); 
+               before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1()); 
             }
             match(input,RULE_STRING,FollowSets000.FOLLOW_2); if (state.failed) return ;
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); 
+               after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1()); 
             }
 
             }
 
             if ( state.backtracking==0 ) {
-               after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); 
+               after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0()); 
             }
 
             }
@@ -67817,7 +67817,7 @@ public class InternalSVSParser extends AbstractInternalContentAssistParser {
         }
         return ;
     }
-    // $ANTLR end "rule__VSVSStepConfiguration__ConfigurationAssignment_2"
+    // $ANTLR end "rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2"
 
 
     // $ANTLR start "rule__VSVSStepConfiguration__FilterStatusAssignment_3_1"

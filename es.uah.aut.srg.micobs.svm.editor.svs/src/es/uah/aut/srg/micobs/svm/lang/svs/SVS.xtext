@@ -402,7 +402,7 @@ VSVSStepConfigurations returns VSVSStepConfigurations:
 
 VSVSStepConfiguration returns VSVSStepConfiguration:
 	'<Configuration'
-		'ref=' configuration=[testsetup::VTestSetupPacketConfiguration|STRING]
+		'ref=' selectedConfiguration=[testsetup::VTestSetupSelectedConfiguration|STRING]
 		('filterStatus=' filterStatus=VTestSetupConfigurationStatus)?
 		('printStatus=' printStatus=VTestSetupConfigurationStatus)?
 		'/>'

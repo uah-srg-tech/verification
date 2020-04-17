@@ -98,7 +98,6 @@ VTestSetupPacketConfigurationsSection returns VTestSetupPacketConfigurationsSect
 VTestSetupPacketConfiguration returns VTestSetupPacketConfiguration:
 	'<PacketConfiguration'
 		'name=' name=STRING
-		'id=' id=UINT_STRING
 		'>'
 		description=DRun
 	'</PacketConfiguration>';
@@ -158,7 +157,9 @@ VTestSetupSupportedInterface returns VTestSetupSupportedInterface:
 
 VTestSetupSelectedConfiguration returns VTestSetupSelectedConfiguration:
 	'<Configuration'
+		'name=' name=STRING
 		'ref=' configuration=[VTestSetupPacketConfiguration|STRING]
+		'scenarioPacketConfig=' scenarioPacketConfig=[scenario::TMTCIFScenarioPacketConfig|STRING]
 		'defaultFilterStatus=' defaultFilterStatus=VTestSetupConfigurationStatus
 		'defaultPrintStatus=' defaultPrintStatus=VTestSetupConfigurationStatus
 		'/>';

@@ -14,7 +14,7 @@ import es.uah.aut.srg.micobs.svm.svs.VSVSStepConfiguration;
 import es.uah.aut.srg.micobs.svm.svs.svsPackage;
 
 import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupConfigurationStatus;
-import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupPacketConfiguration;
+import es.uah.aut.srg.micobs.svm.testsetup.VTestSetupSelectedConfiguration;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationImpl#getConfiguration <em>Configuration</em>}</li>
+ *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationImpl#getSelectedConfiguration <em>Selected Configuration</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationImpl#getFilterStatus <em>Filter Status</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svs.impl.VSVSStepConfigurationImpl#getPrintStatus <em>Print Status</em>}</li>
  * </ul>
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container implements VSVSStepConfiguration {
 	/**
-	 * The cached value of the '{@link #getConfiguration() <em>Configuration</em>}' reference.
+	 * The cached value of the '{@link #getSelectedConfiguration() <em>Selected Configuration</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getConfiguration()
+	 * @see #getSelectedConfiguration()
 	 * @generated
 	 * @ordered
 	 */
-	protected VTestSetupPacketConfiguration configuration;
+	protected VTestSetupSelectedConfiguration selectedConfiguration;
 	/**
 	 * The default value of the '{@link #getFilterStatus() <em>Filter Status</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -106,16 +106,16 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupPacketConfiguration getConfiguration() {
-		if (configuration != null && configuration.eIsProxy()) {
-			InternalEObject oldConfiguration = (InternalEObject)configuration;
-			configuration = (VTestSetupPacketConfiguration)eResolveProxy(oldConfiguration);
-			if (configuration != oldConfiguration) {
+	public VTestSetupSelectedConfiguration getSelectedConfiguration() {
+		if (selectedConfiguration != null && selectedConfiguration.eIsProxy()) {
+			InternalEObject oldSelectedConfiguration = (InternalEObject)selectedConfiguration;
+			selectedConfiguration = (VTestSetupSelectedConfiguration)eResolveProxy(oldSelectedConfiguration);
+			if (selectedConfiguration != oldSelectedConfiguration) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION, oldSelectedConfiguration, selectedConfiguration));
 			}
 		}
-		return configuration;
+		return selectedConfiguration;
 	}
 
 	/**
@@ -123,8 +123,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VTestSetupPacketConfiguration basicGetConfiguration() {
-		return configuration;
+	public VTestSetupSelectedConfiguration basicGetSelectedConfiguration() {
+		return selectedConfiguration;
 	}
 
 	/**
@@ -132,11 +132,11 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setConfiguration(VTestSetupPacketConfiguration newConfiguration) {
-		VTestSetupPacketConfiguration oldConfiguration = configuration;
-		configuration = newConfiguration;
+	public void setSelectedConfiguration(VTestSetupSelectedConfiguration newSelectedConfiguration) {
+		VTestSetupSelectedConfiguration oldSelectedConfiguration = selectedConfiguration;
+		selectedConfiguration = newSelectedConfiguration;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION, oldConfiguration, configuration));
+			eNotify(new ENotificationImpl(this, Notification.SET, svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION, oldSelectedConfiguration, selectedConfiguration));
 	}
 
 	/**
@@ -189,9 +189,9 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				if (resolve) return getConfiguration();
-				return basicGetConfiguration();
+			case svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION:
+				if (resolve) return getSelectedConfiguration();
+				return basicGetSelectedConfiguration();
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
 				return getFilterStatus();
 			case svsPackage.VSVS_STEP_CONFIGURATION__PRINT_STATUS:
@@ -208,8 +208,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VTestSetupPacketConfiguration)newValue);
+			case svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION:
+				setSelectedConfiguration((VTestSetupSelectedConfiguration)newValue);
 				return;
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
 				setFilterStatus((VTestSetupConfigurationStatus)newValue);
@@ -229,8 +229,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				setConfiguration((VTestSetupPacketConfiguration)null);
+			case svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION:
+				setSelectedConfiguration((VTestSetupSelectedConfiguration)null);
 				return;
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
 				setFilterStatus(FILTER_STATUS_EDEFAULT);
@@ -250,8 +250,8 @@ public class VSVSStepConfigurationImpl extends MinimalEObjectImpl.Container impl
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case svsPackage.VSVS_STEP_CONFIGURATION__CONFIGURATION:
-				return configuration != null;
+			case svsPackage.VSVS_STEP_CONFIGURATION__SELECTED_CONFIGURATION:
+				return selectedConfiguration != null;
 			case svsPackage.VSVS_STEP_CONFIGURATION__FILTER_STATUS:
 				return filterStatus != FILTER_STATUS_EDEFAULT;
 			case svsPackage.VSVS_STEP_CONFIGURATION__PRINT_STATUS:

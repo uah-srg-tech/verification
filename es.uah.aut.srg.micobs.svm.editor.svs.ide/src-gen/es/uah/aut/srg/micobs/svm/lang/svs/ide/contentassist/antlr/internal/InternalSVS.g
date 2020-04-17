@@ -15224,9 +15224,9 @@ rule__VSVSStepConfiguration__Group__2__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationAssignment_2()); }
-	(rule__VSVSStepConfiguration__ConfigurationAssignment_2)
-	{ after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationAssignment_2()); }
+	{ before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationAssignment_2()); }
+	(rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2)
+	{ after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationAssignment_2()); }
 )
 ;
 finally {
@@ -21373,19 +21373,19 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSVSStepConfiguration__ConfigurationAssignment_2
+rule__VSVSStepConfiguration__SelectedConfigurationAssignment_2
 	@init {
 		int stackSize = keepStackSize();
 	}
 :
 	(
-		{ before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); }
+		{ before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0()); }
 		(
-			{ before(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); }
+			{ before(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1()); }
 			RULE_STRING
-			{ after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationSTRINGTerminalRuleCall_2_0_1()); }
+			{ after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationSTRINGTerminalRuleCall_2_0_1()); }
 		)
-		{ after(grammarAccess.getVSVSStepConfigurationAccess().getConfigurationVTestSetupPacketConfigurationCrossReference_2_0()); }
+		{ after(grammarAccess.getVSVSStepConfigurationAccess().getSelectedConfigurationVTestSetupSelectedConfigurationCrossReference_2_0()); }
 	)
 ;
 finally {
