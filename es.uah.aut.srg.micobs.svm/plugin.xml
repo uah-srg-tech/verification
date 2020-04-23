@@ -85,5 +85,15 @@
             class="es.uah.aut.srg.micobs.svm.tcr.tcrPackage"
             genModel="model/tcr.genmodel"/>
    </extension>
+   
+	<extension point="org.eclipse.core.contenttype.contentTypes">
+      <content-type
+            base-type="org.eclipse.emf.compare.content.type"
+			file-extensions="svm_sss,svm_srs,svm_svs,svm_testsetup,svm_tcr,svm_tctemplate,svm_tmtemplate"
+            id="es.uah.aut.srg.micobs.svm.contenttype.svm"
+            name="ContentTypeSVM"
+            priority="normal">
+      </content-type>
+   </extension>
 
 </plugin>
