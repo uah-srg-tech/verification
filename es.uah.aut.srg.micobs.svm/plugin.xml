@@ -95,5 +95,14 @@
             priority="normal">
       </content-type>
    </extension>
+   
+	<extension point="org.eclipse.ui.editors">
+	    <editor
+	          class="org.eclipse.emfforms.spi.editor.GenericEditor"
+	          default="true"
+	          id="es.uah.aut.srg.micobs.svm.editor"
+	          name="SVM Editor">
+	    </editor>
+	 </extension>
 
 </plugin>

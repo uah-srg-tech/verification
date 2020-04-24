@@ -11,7 +11,9 @@ Require-Bundle: org.eclipse.core.runtime,
  es.uah.aut.srg.tmtcif;visibility:=reexport,
  es.uah.aut.srg.micobs.doctpl;visibility:=reexport,
  es.uah.aut.srg.micobs;visibility:=reexport,
- es.uah.aut.srg.micobs.svm;visibility:=reexport
+ es.uah.aut.srg.micobs.svm;visibility:=reexport,
+ org.eclipse.ui,
+ org.eclipse.emfforms.editor
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: es.uah.aut.srg.micobs.svm.srs,
