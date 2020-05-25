@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="svr" nsURI="http://srg.aut.uah.es/micobs/svm/svr" nsPrefix="micobs.svm">
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRDocument" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DDocumentTemplate">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svsParent" lowerBound="1"
+        eType="ecore:EClass svs.ecore#//VSVSDocument"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tcrParent" lowerBound="1"
+        upperBound="-1" eType="ecore:EClass tcr.ecore#//VTCRTestCampaignReport"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcsTbdsSection" eType="#//VSVRTBCsTBDs"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="introductionSection" lowerBound="1"
+        eType="#//VSVRIntroduction" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocumentsSection"
+        lowerBound="1" eType="#//VSVRApplicableDocuments" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocumentsSection"
+        lowerBound="1" eType="#//VSVRReferenceDocuments" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="termsDefinitionsAbbreviationsSection"
+        lowerBound="1" eType="#//VSVRTermsDefinitionsAbbreviations" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="swValProcessVerificationSection"
+        lowerBound="1" eType="#//VSVRSWValProcessVerification" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRTBCsTBDs" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbcs" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBC"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tbds" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBD"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRIntroduction" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svrInstatiableSubsections"
+        lowerBound="1" upperBound="-1" eType="#//VSVRInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRApplicableDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="applicableDocuments" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DApplicableDocument"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRReferenceDocuments" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="referenceDocuments" upperBound="-1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DReferenceDocument"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRTermsDefinitionsAbbreviations" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="terms" upperBound="-1"
+        eType="#//VSVRTerm" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="definitions" upperBound="-1"
+        eType="#//VSVRDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="abbreviations" upperBound="-1"
+        eType="#//VSVRAbbreviation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRAbstractBriefDescription" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="description" lowerBound="1"
+        eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DRun"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRTerm" eSuperTypes="#//VSVRAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRDefinition" eSuperTypes="#//VSVRAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRAbbreviation" eSuperTypes="#//VSVRAbstractBriefDescription"/>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRFixedSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svrInstatiableSubsections"
+        upperBound="-1" eType="#//VSVRInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRInstantiableSection" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DInstantiableSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="body" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DBody"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="svrInstatiableSubsections"
+        upperBound="-1" eType="#//VSVRInstantiableSection" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VSVRSWValProcessVerification" eSuperTypes="#//VSVRFixedSection">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="traceability" lowerBound="1"
+        eType="#//VSVRFixedSection" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feasibility" lowerBound="1"
+        eType="#//VSVRFixedSection" containment="true"/>
+  </eClassifiers>
+</ecore:EPackage>

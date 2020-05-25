@@ -218,10 +218,6 @@ DReferenceDocument returns doctpl::DReferenceDocument:
 		('url=' url=STRING)?
 	'/>';
 
-VSVSTestInfo returns VSVSTestInfo:
-{VSVSTestInfo}
-	(body=DBody)?;
-
 VSVSFixedSection returns VSVSFixedSection:
 {VSVSFixedSection}
 	(body=DBody)?
@@ -259,6 +255,33 @@ VSVSTermsDefinitionsAbbreviations returns VSVSTermsDefinitionsAbbreviations:
 		(definitions+=VSVSDefinition)*
 		(abbreviations+=VSVSAbbreviation)*
 	'</TermsDefinitionsAbbreviations>';
+
+VSVSTerm returns VSVSTerm:
+	'<Term'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Term>';
+
+VSVSDefinition returns VSVSDefinition:
+	'<Definition'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Definition>';
+
+VSVSAbbreviation returns VSVSAbbreviation:
+	'<Abbreviation'
+		'name=' name=STRING '>'
+		description=DRun
+	'</Abbreviation>';
+
+VSVSTestDesign returns VSVSTestDesign:
+	'<TestDesign'
+		'name=' name=STRING
+		'>'
+		'<General>' general=VSVSFixedSection '</General>'
+		'<FeaturesToBeTested>' featuresToBeTested=VSVSFixedSection '</FeaturesToBeTested>'
+		'<ApproachRefinements>' approachRefinements=VSVSFixedSection '</ApproachRefinements>'
+	'</TestDesign>';
 
 VSVSSoftwareOverview returns VSVSSoftwareOverview:
 	{VSVSSoftwareOverview}
@@ -318,32 +341,9 @@ VSVSAdditionalInformation returns VSVSAdditionalInformation:
 		(svsInstatiableSubsections+=VSVSInstantiableSection)*
 	'</AdditionalInformation>';
 
-VSVSTerm returns VSVSTerm:
-	'<Term'
-		'name=' name=STRING '>'
-		description=DRun
-	'</Term>';
-
-VSVSDefinition returns VSVSDefinition:
-	'<Definition'
-		'name=' name=STRING '>'
-		description=DRun
-	'</Definition>';
-
-VSVSAbbreviation returns VSVSAbbreviation:
-	'<Abbreviation'
-		'name=' name=STRING '>'
-		description=DRun
-	'</Abbreviation>';
-
-VSVSTestDesign returns VSVSTestDesign:
-	'<TestDesign'
-		'name=' name=STRING
-		'>'
-		'<General>' general=VSVSFixedSection '</General>'
-		'<FeaturesToBeTested>' featuresToBeTested=VSVSFixedSection '</FeaturesToBeTested>'
-		'<ApproachRefinements>' approachRefinements=VSVSFixedSection '</ApproachRefinements>'
-	'</TestDesign>';
+VSVSTestInfo returns VSVSTestInfo:
+{VSVSTestInfo}
+	(body=DBody)?;
 
 VSVSTestCase returns VSVSTestCase:
 	'<TestCase'

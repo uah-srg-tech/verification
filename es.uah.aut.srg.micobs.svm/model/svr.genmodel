@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" copyrightText="Copyright (c) 2020 UAH Space Research Group.&#xD;&#xA;All rights reserved. This program and the accompanying materials&#xD;&#xA;are made available under the terms of the Eclipse Public License v2.0&#xD;&#xA;which accompanies this distribution, and is available at&#xD;&#xA;http://www.eclipse.org/legal/epl-v20.html&#xD;&#xA;&#xD;&#xA;Contributors:&#xD;&#xA;    SRG Team - Initial API and implementation"
+    modelDirectory="/es.uah.aut.srg.micobs.svm/src" modelPluginID="es.uah.aut.srg.micobs.svm"
+    modelName="Svr" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../es.uah.aut.srg.micobs/model/common.genmodel#//common ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.genmodel#//doctpl ../../es.uah.aut.srg.tmtcif/model/enum.genmodel#//enum ../../es.uah.aut.srg.tmtcif/model/fieldvalue.genmodel#//fieldvalue ../../es.uah.aut.srg.tmtcif/model/scenario.genmodel#//scenario svs.genmodel#//svs ../../es.uah.aut.srg.tmtcif/model/tc.genmodel#//tc ../../es.uah.aut.srg.tmtcif/model/tcheader.genmodel#//tcheader tcr.genmodel#//tcr tctemplate.genmodel#//tctemplate tdm.genmodel#//tdm testsetup.genmodel#//testsetup ../../es.uah.aut.srg.tmtcif/model/tm.genmodel#//tm ../../es.uah.aut.srg.tmtcif/model/tmheader.genmodel#//tmheader tmtemplate.genmodel#//tmtemplate vdm.genmodel#//vdm"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>svr.ecore</foreignModel>
+  <genPackages prefix="svr" basePackage="es.uah.aut.srg.micobs.svm" disposableProviderFactory="true"
+      ecorePackage="svr.ecore#/">
+    <genClasses ecoreClass="svr.ecore#//VSVRDocument">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/svsParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/tcrParent"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/tbcsTbdsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/introductionSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/applicableDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/referenceDocumentsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/termsDefinitionsAbbreviationsSection"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRDocument/swValProcessVerificationSection"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRTBCsTBDs">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRTBCsTBDs/tbcs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRTBCsTBDs/tbds"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRIntroduction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRIntroduction/svrInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRApplicableDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRApplicableDocuments/applicableDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRReferenceDocuments">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRReferenceDocuments/referenceDocuments"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRTermsDefinitionsAbbreviations">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRTermsDefinitionsAbbreviations/terms"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRTermsDefinitionsAbbreviations/definitions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRTermsDefinitionsAbbreviations/abbreviations"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="svr.ecore#//VSVRAbstractBriefDescription">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute svr.ecore#//VSVRAbstractBriefDescription/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRAbstractBriefDescription/description"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRTerm"/>
+    <genClasses ecoreClass="svr.ecore#//VSVRDefinition"/>
+    <genClasses ecoreClass="svr.ecore#//VSVRAbbreviation"/>
+    <genClasses ecoreClass="svr.ecore#//VSVRFixedSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRFixedSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRFixedSection/svrInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRInstantiableSection">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRInstantiableSection/body"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRInstantiableSection/svrInstatiableSubsections"/>
+    </genClasses>
+    <genClasses ecoreClass="svr.ecore#//VSVRSWValProcessVerification">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRSWValProcessVerification/traceability"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference svr.ecore#//VSVRSWValProcessVerification/feasibility"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

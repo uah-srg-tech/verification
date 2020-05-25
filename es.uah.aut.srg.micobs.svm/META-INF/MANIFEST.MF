@@ -13,7 +13,10 @@ Require-Bundle: org.eclipse.core.runtime,
  es.uah.aut.srg.micobs;visibility:=reexport,
  es.uah.aut.srg.micobs.svm;visibility:=reexport,
  org.eclipse.ui,
- org.eclipse.emfforms.editor
+ org.eclipse.emfforms.editor,
+ org.eclipse.core.resources,
+ org.eclipse.compare,
+ org.eclipse.emf.compare
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: es.uah.aut.srg.micobs.svm.srs,
@@ -42,4 +45,7 @@ Export-Package: es.uah.aut.srg.micobs.svm.srs,
  es.uah.aut.srg.micobs.svm.testsetup.util,
  es.uah.aut.srg.micobs.svm.tcr,
  es.uah.aut.srg.micobs.svm.tcr.impl,
- es.uah.aut.srg.micobs.svm.tcr.util
+ es.uah.aut.srg.micobs.svm.tcr.util,
+ es.uah.aut.srg.micobs.svm.svr,
+ es.uah.aut.srg.micobs.svm.svr.impl,
+ es.uah.aut.srg.micobs.svm.svr.util

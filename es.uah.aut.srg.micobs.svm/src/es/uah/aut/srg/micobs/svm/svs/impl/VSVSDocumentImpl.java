@@ -498,6 +498,7 @@ public class VSVSDocumentImpl extends VValidationDocumentImpl implements VSVSDoc
 		objects.addAll(getTestingSpecificationDesignSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getTestCasesSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getTestProceduresSection().getReferenceableObjects(ReferenceableObjectType));
+		objects.addAll(getAnalysisInspectionReviewSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getTestPlatformRequirementsSection().getReferenceableObjects(ReferenceableObjectType));
 		objects.addAll(getAdditionalInformationSection().getReferenceableObjects(ReferenceableObjectType));
 		return objects;
