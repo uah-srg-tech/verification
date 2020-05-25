@@ -86,33 +86,6 @@
             genModel="model/tcr.genmodel"/>
    </extension>
    
-	<extension point="org.eclipse.core.contenttype.contentTypes">
-      <content-type
-            base-type="org.eclipse.emf.compare.content.type"
-			file-extensions="svm_sss,svm_srs,svm_svs,svm_testsetup,svm_tcr,svm_tctemplate,svm_tmtemplate"
-            id="es.uah.aut.srg.micobs.svm.contenttype.svm"
-            name="ContentTypeSVM"
-            priority="normal">
-      </content-type>
-   </extension>
-   
-	<extension point="org.eclipse.ui.editors">
-	    <editor
-	          class="org.eclipse.emfforms.spi.editor.GenericEditor"
-	          default="true"
-	          id="es.uah.aut.srg.micobs.svm.editor"
-	          name="SVM Editor">
-	    </editor>
-	 </extension>
-
-   <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated svr -->
-      <package
-            uri="http://srg.aut.uah.es/micobs/svm/svr"
-            class="es.uah.aut.srg.micobs.svm.svr.svrPackage"
-            genModel="model/svr.genmodel"/>
-   </extension>
-   
    <extension point="org.eclipse.core.contenttype.contentTypes">
       <content-type
             base-type="org.eclipse.emf.compare.content.type"
@@ -130,6 +103,14 @@
 	          id="es.uah.aut.srg.micobs.svm.editor"
 	          name="SVM Editor">
 	    </editor>
-	 </extension>
+   </extension>
+   
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <!-- @generated svr -->
+      <package
+            uri="http://srg.aut.uah.es/micobs/svm/svr"
+            class="es.uah.aut.srg.micobs.svm.svr.svrPackage"
+            genModel="model/svr.genmodel"/>
+   </extension>
 
 </plugin>
