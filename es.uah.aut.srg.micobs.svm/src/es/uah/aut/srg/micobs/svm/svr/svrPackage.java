@@ -257,22 +257,13 @@ public interface svrPackage extends EPackage {
 	int VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 6;
 
 	/**
-	 * The feature id for the '<em><b>Sw Val Process Verification Section</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
-
-	/**
 	 * The number of structural features of the '<em>VSVR Document</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int VSVR_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 8;
+	int VSVR_DOCUMENT_FEATURE_COUNT = doctplPackage.DDOCUMENT_TEMPLATE_FEATURE_COUNT + 7;
 
 	/**
 	 * The number of operations of the '<em>VSVR Document</em>' class.
@@ -853,80 +844,6 @@ public interface svrPackage extends EPackage {
 	int VSVR_INSTANTIABLE_SECTION_OPERATION_COUNT = doctplPackage.DINSTANTIABLE_SECTION_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRSWValProcessVerificationImpl <em>VSVRSW Val Process Verification</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see es.uah.aut.srg.micobs.svm.svr.impl.VSVRSWValProcessVerificationImpl
-	 * @see es.uah.aut.srg.micobs.svm.svr.impl.svrPackageImpl#getVSVRSWValProcessVerification()
-	 * @generated
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION = 12;
-
-	/**
-	 * The feature id for the '<em><b>Subsections</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION__SUBSECTIONS = VSVR_FIXED_SECTION__SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Body</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION__BODY = VSVR_FIXED_SECTION__BODY;
-
-	/**
-	 * The feature id for the '<em><b>Svr Instatiable Subsections</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION__SVR_INSTATIABLE_SUBSECTIONS = VSVR_FIXED_SECTION__SVR_INSTATIABLE_SUBSECTIONS;
-
-	/**
-	 * The feature id for the '<em><b>Traceability</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION__TRACEABILITY = VSVR_FIXED_SECTION_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Feasibility</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION__FEASIBILITY = VSVR_FIXED_SECTION_FEATURE_COUNT + 1;
-
-	/**
-	 * The number of structural features of the '<em>VSVRSW Val Process Verification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION_FEATURE_COUNT = VSVR_FIXED_SECTION_FEATURE_COUNT + 2;
-
-	/**
-	 * The number of operations of the '<em>VSVRSW Val Process Verification</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int VSVRSW_VAL_PROCESS_VERIFICATION_OPERATION_COUNT = VSVR_FIXED_SECTION_OPERATION_COUNT + 0;
-
-
-	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument <em>VSVR Document</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1012,17 +929,6 @@ public interface svrPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getVSVRDocument_TermsDefinitionsAbbreviationsSection();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getSwValProcessVerificationSection <em>Sw Val Process Verification Section</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Sw Val Process Verification Section</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getSwValProcessVerificationSection()
-	 * @see #getVSVRDocument()
-	 * @generated
-	 */
-	EReference getVSVRDocument_SwValProcessVerificationSection();
 
 	/**
 	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svr.VSVRTBCsTBDs <em>VSVRTB Cs TB Ds</em>}'.
@@ -1289,38 +1195,6 @@ public interface svrPackage extends EPackage {
 	EReference getVSVRInstantiableSection_SvrInstatiableSubsections();
 
 	/**
-	 * Returns the meta object for class '{@link es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification <em>VSVRSW Val Process Verification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>VSVRSW Val Process Verification</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification
-	 * @generated
-	 */
-	EClass getVSVRSWValProcessVerification();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification#getTraceability <em>Traceability</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Traceability</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification#getTraceability()
-	 * @see #getVSVRSWValProcessVerification()
-	 * @generated
-	 */
-	EReference getVSVRSWValProcessVerification_Traceability();
-
-	/**
-	 * Returns the meta object for the containment reference '{@link es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification#getFeasibility <em>Feasibility</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Feasibility</em>'.
-	 * @see es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification#getFeasibility()
-	 * @see #getVSVRSWValProcessVerification()
-	 * @generated
-	 */
-	EReference getVSVRSWValProcessVerification_Feasibility();
-
-	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1408,14 +1282,6 @@ public interface svrPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION = eINSTANCE.getVSVRDocument_TermsDefinitionsAbbreviationsSection();
-
-		/**
-		 * The meta object literal for the '<em><b>Sw Val Process Verification Section</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION = eINSTANCE.getVSVRDocument_SwValProcessVerificationSection();
 
 		/**
 		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRTBCsTBDsImpl <em>VSVRTB Cs TB Ds</em>}' class.
@@ -1638,32 +1504,6 @@ public interface svrPackage extends EPackage {
 		 * @generated
 		 */
 		EReference VSVR_INSTANTIABLE_SECTION__SVR_INSTATIABLE_SUBSECTIONS = eINSTANCE.getVSVRInstantiableSection_SvrInstatiableSubsections();
-
-		/**
-		 * The meta object literal for the '{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRSWValProcessVerificationImpl <em>VSVRSW Val Process Verification</em>}' class.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @see es.uah.aut.srg.micobs.svm.svr.impl.VSVRSWValProcessVerificationImpl
-		 * @see es.uah.aut.srg.micobs.svm.svr.impl.svrPackageImpl#getVSVRSWValProcessVerification()
-		 * @generated
-		 */
-		EClass VSVRSW_VAL_PROCESS_VERIFICATION = eINSTANCE.getVSVRSWValProcessVerification();
-
-		/**
-		 * The meta object literal for the '<em><b>Traceability</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVRSW_VAL_PROCESS_VERIFICATION__TRACEABILITY = eINSTANCE.getVSVRSWValProcessVerification_Traceability();
-
-		/**
-		 * The meta object literal for the '<em><b>Feasibility</b></em>' containment reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference VSVRSW_VAL_PROCESS_VERIFICATION__FEASIBILITY = eINSTANCE.getVSVRSWValProcessVerification_Feasibility();
 
 	}
 

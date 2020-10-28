@@ -34,7 +34,6 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getSwValProcessVerificationSection <em>Sw Val Process Verification Section</em>}</li>
  * </ul>
  *
  * @see es.uah.aut.srg.micobs.svm.svr.svrPackage#getVSVRDocument()
@@ -213,32 +212,6 @@ public interface VSVRDocument extends DDocumentTemplate {
 	 * @generated
 	 */
 	void setTermsDefinitionsAbbreviationsSection(VSVRTermsDefinitionsAbbreviations value);
-
-	/**
-	 * Returns the value of the '<em><b>Sw Val Process Verification Section</b></em>' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Sw Val Process Verification Section</em>' containment reference isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Sw Val Process Verification Section</em>' containment reference.
-	 * @see #setSwValProcessVerificationSection(VSVRSWValProcessVerification)
-	 * @see es.uah.aut.srg.micobs.svm.svr.svrPackage#getVSVRDocument_SwValProcessVerificationSection()
-	 * @model containment="true" required="true"
-	 * @generated
-	 */
-	VSVRSWValProcessVerification getSwValProcessVerificationSection();
-
-	/**
-	 * Sets the value of the '{@link es.uah.aut.srg.micobs.svm.svr.VSVRDocument#getSwValProcessVerificationSection <em>Sw Val Process Verification Section</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Sw Val Process Verification Section</em>' containment reference.
-	 * @see #getSwValProcessVerificationSection()
-	 * @generated
-	 */
-	void setSwValProcessVerificationSection(VSVRSWValProcessVerification value);
 
 	EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType);
 

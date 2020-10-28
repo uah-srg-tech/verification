@@ -75,7 +75,6 @@ public class svrFactoryImpl extends EFactoryImpl implements svrFactory {
 			case svrPackage.VSVR_ABBREVIATION: return createVSVRAbbreviation();
 			case svrPackage.VSVR_FIXED_SECTION: return createVSVRFixedSection();
 			case svrPackage.VSVR_INSTANTIABLE_SECTION: return createVSVRInstantiableSection();
-			case svrPackage.VSVRSW_VAL_PROCESS_VERIFICATION: return createVSVRSWValProcessVerification();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -189,16 +188,6 @@ public class svrFactoryImpl extends EFactoryImpl implements svrFactory {
 	public VSVRInstantiableSection createVSVRInstantiableSection() {
 		VSVRInstantiableSectionImpl vsvrInstantiableSection = new VSVRInstantiableSectionImpl();
 		return vsvrInstantiableSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public VSVRSWValProcessVerification createVSVRSWValProcessVerification() {
-		VSVRSWValProcessVerificationImpl vsvrswValProcessVerification = new VSVRSWValProcessVerificationImpl();
-		return vsvrswValProcessVerification;
 	}
 
 	/**

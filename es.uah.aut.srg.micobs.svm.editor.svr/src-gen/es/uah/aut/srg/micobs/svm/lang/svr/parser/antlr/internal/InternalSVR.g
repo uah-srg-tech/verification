@@ -361,28 +361,9 @@ ruleVSVRDocument returns [EObject current=null]
 				}
 			)
 		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0());
-				}
-				lv_swValProcessVerificationSection_25_0=ruleVSVRSWValProcessVerification
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRDocumentRule());
-					}
-					set(
-						$current,
-						"swValProcessVerificationSection",
-						lv_swValProcessVerificationSection_25_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRSWValProcessVerification");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_26='</SVR>'
+		otherlv_25='</SVR>'
 		{
-			newLeafNode(otherlv_26, grammarAccess.getVSVRDocumentAccess().getSVRKeyword_23());
+			newLeafNode(otherlv_25, grammarAccess.getVSVRDocumentAccess().getSVRKeyword_22());
 		}
 	)
 ;
@@ -2906,73 +2887,6 @@ ruleDReferenceDocument returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleVSVRFixedSection
-entryRuleVSVRFixedSection returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSVRFixedSectionRule()); }
-	iv_ruleVSVRFixedSection=ruleVSVRFixedSection
-	{ $current=$iv_ruleVSVRFixedSection.current; }
-	EOF;
-
-// Rule VSVRFixedSection
-ruleVSVRFixedSection returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getVSVRFixedSectionAccess().getVSVRFixedSectionAction_0(),
-					$current);
-			}
-		)
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRFixedSectionAccess().getBodyDBodyParserRuleCall_1_0());
-				}
-				lv_body_1_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRFixedSectionRule());
-					}
-					set(
-						$current,
-						"body",
-						lv_body_1_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.DBody");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRFixedSectionAccess().getSvrInstatiableSubsectionsVSVRInstantiableSectionParserRuleCall_2_0());
-				}
-				lv_svrInstatiableSubsections_2_0=ruleVSVRInstantiableSection
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRFixedSectionRule());
-					}
-					add(
-						$current,
-						"svrInstatiableSubsections",
-						lv_svrInstatiableSubsections_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRInstantiableSection");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)*
-	)
-;
-
 // Entry rule entryRuleVSVRInstantiableSection
 entryRuleVSVRInstantiableSection returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getVSVRInstantiableSectionRule()); }
@@ -3528,116 +3442,6 @@ ruleVSVRAbbreviation returns [EObject current=null]
 		otherlv_5='</Abbreviation>'
 		{
 			newLeafNode(otherlv_5, grammarAccess.getVSVRAbbreviationAccess().getAbbreviationKeyword_5());
-		}
-	)
-;
-
-// Entry rule entryRuleVSVRSWValProcessVerification
-entryRuleVSVRSWValProcessVerification returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getVSVRSWValProcessVerificationRule()); }
-	iv_ruleVSVRSWValProcessVerification=ruleVSVRSWValProcessVerification
-	{ $current=$iv_ruleVSVRSWValProcessVerification.current; }
-	EOF;
-
-// Rule VSVRSWValProcessVerification
-ruleVSVRSWValProcessVerification returns [EObject current=null]
-@init {
-	enterRule();
-}
-@after {
-	leaveRule();
-}:
-	(
-		(
-			{
-				/* */
-			}
-			{
-				$current = forceCreateModelElement(
-					grammarAccess.getVSVRSWValProcessVerificationAccess().getVSVRSWValProcessVerificationAction_0(),
-					$current);
-			}
-		)
-		otherlv_1='<SWValProcessVerification>'
-		{
-			newLeafNode(otherlv_1, grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_1());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyDBodyParserRuleCall_2_0());
-				}
-				lv_body_2_0=ruleDBody
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRSWValProcessVerificationRule());
-					}
-					set(
-						$current,
-						"body",
-						lv_body_2_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.DBody");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)?
-		otherlv_3='<Traceability>'
-		{
-			newLeafNode(otherlv_3, grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_3());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityVSVRFixedSectionParserRuleCall_4_0());
-				}
-				lv_traceability_4_0=ruleVSVRFixedSection
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRSWValProcessVerificationRule());
-					}
-					set(
-						$current,
-						"traceability",
-						lv_traceability_4_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRFixedSection");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_5='</Traceability>'
-		{
-			newLeafNode(otherlv_5, grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_5());
-		}
-		otherlv_6='<Feasibility>'
-		{
-			newLeafNode(otherlv_6, grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_6());
-		}
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityVSVRFixedSectionParserRuleCall_7_0());
-				}
-				lv_feasibility_7_0=ruleVSVRFixedSection
-				{
-					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getVSVRSWValProcessVerificationRule());
-					}
-					set(
-						$current,
-						"feasibility",
-						lv_feasibility_7_0,
-						"es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRFixedSection");
-					afterParserOrEnumRuleCall();
-				}
-			)
-		)
-		otherlv_8='</Feasibility>'
-		{
-			newLeafNode(otherlv_8, grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_8());
-		}
-		otherlv_9='</SWValProcessVerification>'
-		{
-			newLeafNode(otherlv_9, grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_9());
 		}
 	)
 ;

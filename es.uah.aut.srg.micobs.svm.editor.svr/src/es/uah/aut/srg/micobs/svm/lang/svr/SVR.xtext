@@ -22,7 +22,6 @@ VSVRDocument returns VSVRDocument:
 		applicableDocumentsSection=VSVRApplicableDocuments
 		referenceDocumentsSection=VSVRReferenceDocuments
 		termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations
-		swValProcessVerificationSection=VSVRSWValProcessVerification
 	'</SVR>';
 
 VSVRTBCsTBDs returns VSVRTBCsTBDs:
@@ -257,14 +256,6 @@ VSVRAbbreviation returns VSVRAbbreviation:
 		'name=' name=STRING '>'
 		description=DRun
 	'</Abbreviation>';
-
-VSVRSWValProcessVerification returns VSVRSWValProcessVerification:
-	{VSVRSWValProcessVerification}
-	'<SWValProcessVerification>'
-		(body=DBody)?
-		'<Traceability>' traceability=VSVRFixedSection '</Traceability>'
-		'<Feasibility>' feasibility=VSVRFixedSection '</Feasibility>'
-	'</SWValProcessVerification>';
 
 terminal HEXADECIMAL returns ecore::EString:
 	('0x' (('0'..'9') | ('a'..'f') | ('A'..'F'))+);

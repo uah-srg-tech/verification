@@ -131,10 +131,6 @@ public class svrAdapterFactory extends AdapterFactoryImpl {
 				return createVSVRInstantiableSectionAdapter();
 			}
 			@Override
-			public Adapter caseVSVRSWValProcessVerification(VSVRSWValProcessVerification object) {
-				return createVSVRSWValProcessVerificationAdapter();
-			}
-			@Override
 			public Adapter caseDDocumentTemplate(DDocumentTemplate object) {
 				return createDDocumentTemplateAdapter();
 			}
@@ -339,20 +335,6 @@ public class svrAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createVSVRInstantiableSectionAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification <em>VSVRSW Val Process Verification</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification
-	 * @generated
-	 */
-	public Adapter createVSVRSWValProcessVerificationAdapter() {
 		return null;
 	}
 

@@ -77,9 +77,7 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cReferenceDocumentsSectionVSVRReferenceDocumentsParserRuleCall_20_0 = (RuleCall)cReferenceDocumentsSectionAssignment_20.eContents().get(0);
 		private final Assignment cTermsDefinitionsAbbreviationsSectionAssignment_21 = (Assignment)cGroup.eContents().get(21);
 		private final RuleCall cTermsDefinitionsAbbreviationsSectionVSVRTermsDefinitionsAbbreviationsParserRuleCall_21_0 = (RuleCall)cTermsDefinitionsAbbreviationsSectionAssignment_21.eContents().get(0);
-		private final Assignment cSwValProcessVerificationSectionAssignment_22 = (Assignment)cGroup.eContents().get(22);
-		private final RuleCall cSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0 = (RuleCall)cSwValProcessVerificationSectionAssignment_22.eContents().get(0);
-		private final Keyword cSVRKeyword_23 = (Keyword)cGroup.eContents().get(23);
+		private final Keyword cSVRKeyword_22 = (Keyword)cGroup.eContents().get(22);
 		
 		//VSVRDocument:
 		//	'<SVR'
@@ -96,7 +94,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		//	applicableDocumentsSection=VSVRApplicableDocuments
 		//	referenceDocumentsSection=VSVRReferenceDocuments
 		//	termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations
-		//	swValProcessVerificationSection=VSVRSWValProcessVerification
 		//	'</SVR>';
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -105,8 +102,7 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		//tcrParent+=[tcr::VTCRTestCampaignReport|STRING] '/>')* tbcsTbdsSection=VSVRTBCsTBDs?
 		//introductionSection=VSVRIntroduction applicableDocumentsSection=VSVRApplicableDocuments
 		//referenceDocumentsSection=VSVRReferenceDocuments
-		//termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations
-		//swValProcessVerificationSection=VSVRSWValProcessVerification '</SVR>'
+		//termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations '</SVR>'
 		public Group getGroup() { return cGroup; }
 		
 		//'<SVR'
@@ -229,14 +225,8 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		//VSVRTermsDefinitionsAbbreviations
 		public RuleCall getTermsDefinitionsAbbreviationsSectionVSVRTermsDefinitionsAbbreviationsParserRuleCall_21_0() { return cTermsDefinitionsAbbreviationsSectionVSVRTermsDefinitionsAbbreviationsParserRuleCall_21_0; }
 		
-		//swValProcessVerificationSection=VSVRSWValProcessVerification
-		public Assignment getSwValProcessVerificationSectionAssignment_22() { return cSwValProcessVerificationSectionAssignment_22; }
-		
-		//VSVRSWValProcessVerification
-		public RuleCall getSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0() { return cSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0; }
-		
 		//'</SVR>'
-		public Keyword getSVRKeyword_23() { return cSVRKeyword_23; }
+		public Keyword getSVRKeyword_22() { return cSVRKeyword_22; }
 	}
 	public class VSVRTBCsTBDsElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRTBCsTBDs");
@@ -2251,75 +2241,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		//'</Abbreviation>'
 		public Keyword getAbbreviationKeyword_5() { return cAbbreviationKeyword_5; }
 	}
-	public class VSVRSWValProcessVerificationElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svr.SVR.VSVRSWValProcessVerification");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Action cVSVRSWValProcessVerificationAction_0 = (Action)cGroup.eContents().get(0);
-		private final Keyword cSWValProcessVerificationKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cBodyAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cBodyDBodyParserRuleCall_2_0 = (RuleCall)cBodyAssignment_2.eContents().get(0);
-		private final Keyword cTraceabilityKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cTraceabilityAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cTraceabilityVSVRFixedSectionParserRuleCall_4_0 = (RuleCall)cTraceabilityAssignment_4.eContents().get(0);
-		private final Keyword cTraceabilityKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Keyword cFeasibilityKeyword_6 = (Keyword)cGroup.eContents().get(6);
-		private final Assignment cFeasibilityAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFeasibilityVSVRFixedSectionParserRuleCall_7_0 = (RuleCall)cFeasibilityAssignment_7.eContents().get(0);
-		private final Keyword cFeasibilityKeyword_8 = (Keyword)cGroup.eContents().get(8);
-		private final Keyword cSWValProcessVerificationKeyword_9 = (Keyword)cGroup.eContents().get(9);
-		
-		//VSVRSWValProcessVerification:
-		//	{VSVRSWValProcessVerification}
-		//	'<SWValProcessVerification>'
-		//	body=DBody?
-		//	'<Traceability>' traceability=VSVRFixedSection '</Traceability>'
-		//	'<Feasibility>' feasibility=VSVRFixedSection '</Feasibility>'
-		//	'</SWValProcessVerification>';
-		@Override public ParserRule getRule() { return rule; }
-		
-		//{VSVRSWValProcessVerification} '<SWValProcessVerification>' body=DBody? '<Traceability>' traceability=VSVRFixedSection
-		//'</Traceability>' '<Feasibility>' feasibility=VSVRFixedSection '</Feasibility>' '</SWValProcessVerification>'
-		public Group getGroup() { return cGroup; }
-		
-		//{VSVRSWValProcessVerification}
-		public Action getVSVRSWValProcessVerificationAction_0() { return cVSVRSWValProcessVerificationAction_0; }
-		
-		//'<SWValProcessVerification>'
-		public Keyword getSWValProcessVerificationKeyword_1() { return cSWValProcessVerificationKeyword_1; }
-		
-		//body=DBody?
-		public Assignment getBodyAssignment_2() { return cBodyAssignment_2; }
-		
-		//DBody
-		public RuleCall getBodyDBodyParserRuleCall_2_0() { return cBodyDBodyParserRuleCall_2_0; }
-		
-		//'<Traceability>'
-		public Keyword getTraceabilityKeyword_3() { return cTraceabilityKeyword_3; }
-		
-		//traceability=VSVRFixedSection
-		public Assignment getTraceabilityAssignment_4() { return cTraceabilityAssignment_4; }
-		
-		//VSVRFixedSection
-		public RuleCall getTraceabilityVSVRFixedSectionParserRuleCall_4_0() { return cTraceabilityVSVRFixedSectionParserRuleCall_4_0; }
-		
-		//'</Traceability>'
-		public Keyword getTraceabilityKeyword_5() { return cTraceabilityKeyword_5; }
-		
-		//'<Feasibility>'
-		public Keyword getFeasibilityKeyword_6() { return cFeasibilityKeyword_6; }
-		
-		//feasibility=VSVRFixedSection
-		public Assignment getFeasibilityAssignment_7() { return cFeasibilityAssignment_7; }
-		
-		//VSVRFixedSection
-		public RuleCall getFeasibilityVSVRFixedSectionParserRuleCall_7_0() { return cFeasibilityVSVRFixedSectionParserRuleCall_7_0; }
-		
-		//'</Feasibility>'
-		public Keyword getFeasibilityKeyword_8() { return cFeasibilityKeyword_8; }
-		
-		//'</SWValProcessVerification>'
-		public Keyword getSWValProcessVerificationKeyword_9() { return cSWValProcessVerificationKeyword_9; }
-	}
 	public class INTEGERElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svr.SVR.INTEGER");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -2454,7 +2375,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 	private final VSVRTermElements pVSVRTerm;
 	private final VSVRDefinitionElements pVSVRDefinition;
 	private final VSVRAbbreviationElements pVSVRAbbreviation;
-	private final VSVRSWValProcessVerificationElements pVSVRSWValProcessVerification;
 	private final TerminalRule tHEXADECIMAL;
 	private final INTEGERElements pINTEGER;
 	private final TerminalRule tUINT_STRING;
@@ -2505,7 +2425,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 		this.pVSVRTerm = new VSVRTermElements();
 		this.pVSVRDefinition = new VSVRDefinitionElements();
 		this.pVSVRAbbreviation = new VSVRAbbreviationElements();
-		this.pVSVRSWValProcessVerification = new VSVRSWValProcessVerificationElements();
 		this.tHEXADECIMAL = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svr.SVR.HEXADECIMAL");
 		this.pINTEGER = new INTEGERElements();
 		this.tUINT_STRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "es.uah.aut.srg.micobs.svm.lang.svr.SVR.UINT_STRING");
@@ -2555,7 +2474,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 	//	applicableDocumentsSection=VSVRApplicableDocuments
 	//	referenceDocumentsSection=VSVRReferenceDocuments
 	//	termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations
-	//	swValProcessVerificationSection=VSVRSWValProcessVerification
 	//	'</SVR>';
 	public VSVRDocumentElements getVSVRDocumentAccess() {
 		return pVSVRDocument;
@@ -2994,21 +2912,6 @@ public class SVRGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getVSVRAbbreviationRule() {
 		return getVSVRAbbreviationAccess().getRule();
-	}
-	
-	//VSVRSWValProcessVerification:
-	//	{VSVRSWValProcessVerification}
-	//	'<SWValProcessVerification>'
-	//	body=DBody?
-	//	'<Traceability>' traceability=VSVRFixedSection '</Traceability>'
-	//	'<Feasibility>' feasibility=VSVRFixedSection '</Feasibility>'
-	//	'</SWValProcessVerification>';
-	public VSVRSWValProcessVerificationElements getVSVRSWValProcessVerificationAccess() {
-		return pVSVRSWValProcessVerification;
-	}
-	
-	public ParserRule getVSVRSWValProcessVerificationRule() {
-		return getVSVRSWValProcessVerificationAccess().getRule();
 	}
 	
 	//terminal HEXADECIMAL:

@@ -39,7 +39,6 @@ import es.uah.aut.srg.micobs.svm.svr.VSVRFixedSection;
 import es.uah.aut.srg.micobs.svm.svr.VSVRInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svr.VSVRIntroduction;
 import es.uah.aut.srg.micobs.svm.svr.VSVRReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTerm;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTermsDefinitionsAbbreviations;
@@ -149,9 +148,6 @@ public class SVRSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 				return; 
 			case svrPackage.VSVR_REFERENCE_DOCUMENTS:
 				sequence_VSVRReferenceDocuments(context, (VSVRReferenceDocuments) semanticObject); 
-				return; 
-			case svrPackage.VSVRSW_VAL_PROCESS_VERIFICATION:
-				sequence_VSVRSWValProcessVerification(context, (VSVRSWValProcessVerification) semanticObject); 
 				return; 
 			case svrPackage.VSVRTB_CS_TB_DS:
 				sequence_VSVRTBCsTBDs(context, (VSVRTBCsTBDs) semanticObject); 
@@ -517,8 +513,7 @@ public class SVRSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *         introductionSection=VSVRIntroduction 
 	 *         applicableDocumentsSection=VSVRApplicableDocuments 
 	 *         referenceDocumentsSection=VSVRReferenceDocuments 
-	 *         termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations 
-	 *         swValProcessVerificationSection=VSVRSWValProcessVerification
+	 *         termsDefinitionsAbbreviationsSection=VSVRTermsDefinitionsAbbreviations
 	 *     )
 	 */
 	protected void sequence_VSVRDocument(ISerializationContext context, VSVRDocument semanticObject) {
@@ -570,18 +565,6 @@ public class SVRSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 *     referenceDocuments+=DReferenceDocument*
 	 */
 	protected void sequence_VSVRReferenceDocuments(ISerializationContext context, VSVRReferenceDocuments semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     VSVRSWValProcessVerification returns VSVRSWValProcessVerification
-	 *
-	 * Constraint:
-	 *     (body=DBody? traceability=VSVRFixedSection feasibility=VSVRFixedSection)
-	 */
-	protected void sequence_VSVRSWValProcessVerification(ISerializationContext context, VSVRSWValProcessVerification semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

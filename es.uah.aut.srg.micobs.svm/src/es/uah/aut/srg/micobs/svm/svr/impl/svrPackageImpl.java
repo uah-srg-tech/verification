@@ -21,7 +21,6 @@ import es.uah.aut.srg.micobs.svm.svr.VSVRFixedSection;
 import es.uah.aut.srg.micobs.svm.svr.VSVRInstantiableSection;
 import es.uah.aut.srg.micobs.svm.svr.VSVRIntroduction;
 import es.uah.aut.srg.micobs.svm.svr.VSVRReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTerm;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTermsDefinitionsAbbreviations;
@@ -129,13 +128,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 	 * @generated
 	 */
 	private EClass vsvrInstantiableSectionEClass = null;
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	private EClass vsvrswValProcessVerificationEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -272,15 +264,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 	 */
 	public EReference getVSVRDocument_TermsDefinitionsAbbreviationsSection() {
 		return (EReference)vsvrDocumentEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVRDocument_SwValProcessVerificationSection() {
-		return (EReference)vsvrDocumentEClass.getEStructuralFeatures().get(7);
 	}
 
 	/**
@@ -513,33 +496,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getVSVRSWValProcessVerification() {
-		return vsvrswValProcessVerificationEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVRSWValProcessVerification_Traceability() {
-		return (EReference)vsvrswValProcessVerificationEClass.getEStructuralFeatures().get(0);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getVSVRSWValProcessVerification_Feasibility() {
-		return (EReference)vsvrswValProcessVerificationEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public svrFactory getsvrFactory() {
 		return (svrFactory)getEFactoryInstance();
 	}
@@ -571,7 +527,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 		createEReference(vsvrDocumentEClass, VSVR_DOCUMENT__APPLICABLE_DOCUMENTS_SECTION);
 		createEReference(vsvrDocumentEClass, VSVR_DOCUMENT__REFERENCE_DOCUMENTS_SECTION);
 		createEReference(vsvrDocumentEClass, VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION);
-		createEReference(vsvrDocumentEClass, VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION);
 
 		vsvrtbCsTBDsEClass = createEClass(VSVRTB_CS_TB_DS);
 		createEReference(vsvrtbCsTBDsEClass, VSVRTB_CS_TB_DS__TBCS);
@@ -608,10 +563,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 		vsvrInstantiableSectionEClass = createEClass(VSVR_INSTANTIABLE_SECTION);
 		createEReference(vsvrInstantiableSectionEClass, VSVR_INSTANTIABLE_SECTION__BODY);
 		createEReference(vsvrInstantiableSectionEClass, VSVR_INSTANTIABLE_SECTION__SVR_INSTATIABLE_SUBSECTIONS);
-
-		vsvrswValProcessVerificationEClass = createEClass(VSVRSW_VAL_PROCESS_VERIFICATION);
-		createEReference(vsvrswValProcessVerificationEClass, VSVRSW_VAL_PROCESS_VERIFICATION__TRACEABILITY);
-		createEReference(vsvrswValProcessVerificationEClass, VSVRSW_VAL_PROCESS_VERIFICATION__FEASIBILITY);
 	}
 
 	/**
@@ -658,7 +609,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 		vsvrAbbreviationEClass.getESuperTypes().add(this.getVSVRAbstractBriefDescription());
 		vsvrFixedSectionEClass.getESuperTypes().add(thedoctplPackage.getDFixedSection());
 		vsvrInstantiableSectionEClass.getESuperTypes().add(thedoctplPackage.getDInstantiableSection());
-		vsvrswValProcessVerificationEClass.getESuperTypes().add(this.getVSVRFixedSection());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(vsvrDocumentEClass, VSVRDocument.class, "VSVRDocument", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -669,7 +619,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 		initEReference(getVSVRDocument_ApplicableDocumentsSection(), this.getVSVRApplicableDocuments(), null, "applicableDocumentsSection", null, 1, 1, VSVRDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVRDocument_ReferenceDocumentsSection(), this.getVSVRReferenceDocuments(), null, "referenceDocumentsSection", null, 1, 1, VSVRDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVRDocument_TermsDefinitionsAbbreviationsSection(), this.getVSVRTermsDefinitionsAbbreviations(), null, "termsDefinitionsAbbreviationsSection", null, 1, 1, VSVRDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVRDocument_SwValProcessVerificationSection(), this.getVSVRSWValProcessVerification(), null, "swValProcessVerificationSection", null, 1, 1, VSVRDocument.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(vsvrtbCsTBDsEClass, VSVRTBCsTBDs.class, "VSVRTBCsTBDs", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVRTBCsTBDs_Tbcs(), thedoctplPackage.getDTBC(), null, "tbcs", null, 0, -1, VSVRTBCsTBDs.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -706,10 +655,6 @@ public class svrPackageImpl extends EPackageImpl implements svrPackage {
 		initEClass(vsvrInstantiableSectionEClass, VSVRInstantiableSection.class, "VSVRInstantiableSection", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getVSVRInstantiableSection_Body(), thedoctplPackage.getDBody(), null, "body", null, 0, 1, VSVRInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getVSVRInstantiableSection_SvrInstatiableSubsections(), this.getVSVRInstantiableSection(), null, "svrInstatiableSubsections", null, 0, -1, VSVRInstantiableSection.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-		initEClass(vsvrswValProcessVerificationEClass, VSVRSWValProcessVerification.class, "VSVRSWValProcessVerification", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getVSVRSWValProcessVerification_Traceability(), this.getVSVRFixedSection(), null, "traceability", null, 1, 1, VSVRSWValProcessVerification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getVSVRSWValProcessVerification_Feasibility(), this.getVSVRFixedSection(), null, "feasibility", null, 1, 1, VSVRSWValProcessVerification.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

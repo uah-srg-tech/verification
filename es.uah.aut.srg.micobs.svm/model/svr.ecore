@@ -16,8 +16,6 @@
         lowerBound="1" eType="#//VSVRReferenceDocuments" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="termsDefinitionsAbbreviationsSection"
         lowerBound="1" eType="#//VSVRTermsDefinitionsAbbreviations" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="swValProcessVerificationSection"
-        lowerBound="1" eType="#//VSVRSWValProcessVerification" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VSVRTBCsTBDs" eSuperTypes="../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DFixedSection">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tbcs" upperBound="-1" eType="ecore:EClass ../../es.uah.aut.srg.micobs.doctpl/model/doctpl.ecore#//DTBC"
@@ -67,11 +65,5 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="svrInstatiableSubsections"
         upperBound="-1" eType="#//VSVRInstantiableSection" containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="VSVRSWValProcessVerification" eSuperTypes="#//VSVRFixedSection">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="traceability" lowerBound="1"
-        eType="#//VSVRFixedSection" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="feasibility" lowerBound="1"
-        eType="#//VSVRFixedSection" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

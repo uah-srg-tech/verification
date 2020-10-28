@@ -127,7 +127,6 @@ public class SVRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVRTermAccess().getGroup(), "rule__VSVRTerm__Group__0");
 					put(grammarAccess.getVSVRDefinitionAccess().getGroup(), "rule__VSVRDefinition__Group__0");
 					put(grammarAccess.getVSVRAbbreviationAccess().getGroup(), "rule__VSVRAbbreviation__Group__0");
-					put(grammarAccess.getVSVRSWValProcessVerificationAccess().getGroup(), "rule__VSVRSWValProcessVerification__Group__0");
 					put(grammarAccess.getINTEGERAccess().getGroup_0(), "rule__INTEGER__Group_0__0");
 					put(grammarAccess.getVSVRDocumentAccess().getNameAssignment_2(), "rule__VSVRDocument__NameAssignment_2");
 					put(grammarAccess.getVSVRDocumentAccess().getIdAssignment_4(), "rule__VSVRDocument__IdAssignment_4");
@@ -141,7 +140,6 @@ public class SVRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVRDocumentAccess().getApplicableDocumentsSectionAssignment_19(), "rule__VSVRDocument__ApplicableDocumentsSectionAssignment_19");
 					put(grammarAccess.getVSVRDocumentAccess().getReferenceDocumentsSectionAssignment_20(), "rule__VSVRDocument__ReferenceDocumentsSectionAssignment_20");
 					put(grammarAccess.getVSVRDocumentAccess().getTermsDefinitionsAbbreviationsSectionAssignment_21(), "rule__VSVRDocument__TermsDefinitionsAbbreviationsSectionAssignment_21");
-					put(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionAssignment_22(), "rule__VSVRDocument__SwValProcessVerificationSectionAssignment_22");
 					put(grammarAccess.getVSVRTBCsTBDsAccess().getTbcsAssignment_2(), "rule__VSVRTBCsTBDs__TbcsAssignment_2");
 					put(grammarAccess.getVSVRTBCsTBDsAccess().getTbdsAssignment_3(), "rule__VSVRTBCsTBDs__TbdsAssignment_3");
 					put(grammarAccess.getDTBCAccess().getNameAssignment_2(), "rule__DTBC__NameAssignment_2");
@@ -237,9 +235,6 @@ public class SVRParser extends AbstractContentAssistParser {
 					put(grammarAccess.getVSVRDefinitionAccess().getDescriptionAssignment_4(), "rule__VSVRDefinition__DescriptionAssignment_4");
 					put(grammarAccess.getVSVRAbbreviationAccess().getNameAssignment_2(), "rule__VSVRAbbreviation__NameAssignment_2");
 					put(grammarAccess.getVSVRAbbreviationAccess().getDescriptionAssignment_4(), "rule__VSVRAbbreviation__DescriptionAssignment_4");
-					put(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyAssignment_2(), "rule__VSVRSWValProcessVerification__BodyAssignment_2");
-					put(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityAssignment_4(), "rule__VSVRSWValProcessVerification__TraceabilityAssignment_4");
-					put(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityAssignment_7(), "rule__VSVRSWValProcessVerification__FeasibilityAssignment_7");
 				}
 			};
 		}

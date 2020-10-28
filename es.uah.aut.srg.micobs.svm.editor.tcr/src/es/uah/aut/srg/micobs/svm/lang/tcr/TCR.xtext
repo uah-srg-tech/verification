@@ -6,11 +6,6 @@ import "http://srg.aut.uah.es/micobs/doctpl/doctpl" as doctpl
 
 VTCRTestCampaignReport returns VTCRTestCampaignReport:
 	'<TestCampaignReport'
-		'name=' name=STRING
-		'id=' id=STRING
-		'issue=' issue=UINT_STRING
-		'revision=' revision=UINT_STRING
-		'date=' date=STRING
 		'>'
 		(testReports+=VTCRTestReport)+
 	'</TestCampaignReport>';

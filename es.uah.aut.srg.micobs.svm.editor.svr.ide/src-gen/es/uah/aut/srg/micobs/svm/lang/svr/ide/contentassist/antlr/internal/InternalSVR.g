@@ -632,31 +632,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-// Entry rule entryRuleVSVRFixedSection
-entryRuleVSVRFixedSection
-:
-{ before(grammarAccess.getVSVRFixedSectionRule()); }
-	 ruleVSVRFixedSection
-{ after(grammarAccess.getVSVRFixedSectionRule()); } 
-	 EOF 
-;
-
-// Rule VSVRFixedSection
-ruleVSVRFixedSection 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getVSVRFixedSectionAccess().getGroup()); }
-		(rule__VSVRFixedSection__Group__0)
-		{ after(grammarAccess.getVSVRFixedSectionAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 // Entry rule entryRuleVSVRInstantiableSection
 entryRuleVSVRInstantiableSection
 :
@@ -851,31 +826,6 @@ ruleVSVRAbbreviation
 		{ before(grammarAccess.getVSVRAbbreviationAccess().getGroup()); }
 		(rule__VSVRAbbreviation__Group__0)
 		{ after(grammarAccess.getVSVRAbbreviationAccess().getGroup()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-// Entry rule entryRuleVSVRSWValProcessVerification
-entryRuleVSVRSWValProcessVerification
-:
-{ before(grammarAccess.getVSVRSWValProcessVerificationRule()); }
-	 ruleVSVRSWValProcessVerification
-{ after(grammarAccess.getVSVRSWValProcessVerificationRule()); } 
-	 EOF 
-;
-
-// Rule VSVRSWValProcessVerification
-ruleVSVRSWValProcessVerification 
-	@init {
-		int stackSize = keepStackSize();
-	}
-	:
-	(
-		{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getGroup()); }
-		(rule__VSVRSWValProcessVerification__Group__0)
-		{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getGroup()); }
 	)
 ;
 finally {
@@ -1718,7 +1668,6 @@ rule__VSVRDocument__Group__22
 	}
 :
 	rule__VSVRDocument__Group__22__Impl
-	rule__VSVRDocument__Group__23
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -1730,35 +1679,9 @@ rule__VSVRDocument__Group__22__Impl
 	}
 :
 (
-	{ before(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionAssignment_22()); }
-	(rule__VSVRDocument__SwValProcessVerificationSectionAssignment_22)
-	{ after(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionAssignment_22()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRDocument__Group__23
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRDocument__Group__23__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRDocument__Group__23__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRDocumentAccess().getSVRKeyword_23()); }
+	{ before(grammarAccess.getVSVRDocumentAccess().getSVRKeyword_22()); }
 	'</SVR>'
-	{ after(grammarAccess.getVSVRDocumentAccess().getSVRKeyword_23()); }
+	{ after(grammarAccess.getVSVRDocumentAccess().getSVRKeyword_22()); }
 )
 ;
 finally {
@@ -8187,87 +8110,6 @@ finally {
 }
 
 
-rule__VSVRFixedSection__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRFixedSection__Group__0__Impl
-	rule__VSVRFixedSection__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRFixedSectionAccess().getVSVRFixedSectionAction_0()); }
-	()
-	{ after(grammarAccess.getVSVRFixedSectionAccess().getVSVRFixedSectionAction_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRFixedSection__Group__1__Impl
-	rule__VSVRFixedSection__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRFixedSectionAccess().getBodyAssignment_1()); }
-	(rule__VSVRFixedSection__BodyAssignment_1)?
-	{ after(grammarAccess.getVSVRFixedSectionAccess().getBodyAssignment_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRFixedSection__Group__2__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRFixedSectionAccess().getSvrInstatiableSubsectionsAssignment_2()); }
-	(rule__VSVRFixedSection__SvrInstatiableSubsectionsAssignment_2)*
-	{ after(grammarAccess.getVSVRFixedSectionAccess().getSvrInstatiableSubsectionsAssignment_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__VSVRInstantiableSection__Group__0
 	@init {
 		int stackSize = keepStackSize();
@@ -9409,276 +9251,6 @@ finally {
 }
 
 
-rule__VSVRSWValProcessVerification__Group__0
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__0__Impl
-	rule__VSVRSWValProcessVerification__Group__1
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__0__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getVSVRSWValProcessVerificationAction_0()); }
-	()
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getVSVRSWValProcessVerificationAction_0()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__1__Impl
-	rule__VSVRSWValProcessVerification__Group__2
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__1__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_1()); }
-	'<SWValProcessVerification>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_1()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__2__Impl
-	rule__VSVRSWValProcessVerification__Group__3
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__2__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyAssignment_2()); }
-	(rule__VSVRSWValProcessVerification__BodyAssignment_2)?
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyAssignment_2()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__3
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__3__Impl
-	rule__VSVRSWValProcessVerification__Group__4
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__3__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_3()); }
-	'<Traceability>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_3()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__4__Impl
-	rule__VSVRSWValProcessVerification__Group__5
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__4__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityAssignment_4()); }
-	(rule__VSVRSWValProcessVerification__TraceabilityAssignment_4)
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityAssignment_4()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__5
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__5__Impl
-	rule__VSVRSWValProcessVerification__Group__6
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__5__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_5()); }
-	'</Traceability>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityKeyword_5()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__6
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__6__Impl
-	rule__VSVRSWValProcessVerification__Group__7
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__6__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_6()); }
-	'<Feasibility>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_6()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__7__Impl
-	rule__VSVRSWValProcessVerification__Group__8
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__7__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityAssignment_7()); }
-	(rule__VSVRSWValProcessVerification__FeasibilityAssignment_7)
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityAssignment_7()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__8
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__8__Impl
-	rule__VSVRSWValProcessVerification__Group__9
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__8__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_8()); }
-	'</Feasibility>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityKeyword_8()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__9
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	rule__VSVRSWValProcessVerification__Group__9__Impl
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__Group__9__Impl
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-(
-	{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_9()); }
-	'</SWValProcessVerification>'
-	{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getSWValProcessVerificationKeyword_9()); }
-)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-
 rule__VSVRDocument__NameAssignment_2
 	@init {
 		int stackSize = keepStackSize();
@@ -9861,21 +9433,6 @@ rule__VSVRDocument__TermsDefinitionsAbbreviationsSectionAssignment_21
 		{ before(grammarAccess.getVSVRDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSVRTermsDefinitionsAbbreviationsParserRuleCall_21_0()); }
 		ruleVSVRTermsDefinitionsAbbreviations
 		{ after(grammarAccess.getVSVRDocumentAccess().getTermsDefinitionsAbbreviationsSectionVSVRTermsDefinitionsAbbreviationsParserRuleCall_21_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRDocument__SwValProcessVerificationSectionAssignment_22
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0()); }
-		ruleVSVRSWValProcessVerification
-		{ after(grammarAccess.getVSVRDocumentAccess().getSwValProcessVerificationSectionVSVRSWValProcessVerificationParserRuleCall_22_0()); }
 	)
 ;
 finally {
@@ -11064,36 +10621,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__VSVRFixedSection__BodyAssignment_1
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRFixedSectionAccess().getBodyDBodyParserRuleCall_1_0()); }
-		ruleDBody
-		{ after(grammarAccess.getVSVRFixedSectionAccess().getBodyDBodyParserRuleCall_1_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRFixedSection__SvrInstatiableSubsectionsAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRFixedSectionAccess().getSvrInstatiableSubsectionsVSVRInstantiableSectionParserRuleCall_2_0()); }
-		ruleVSVRInstantiableSection
-		{ after(grammarAccess.getVSVRFixedSectionAccess().getSvrInstatiableSubsectionsVSVRInstantiableSectionParserRuleCall_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__VSVRInstantiableSection__NameAssignment_2
 	@init {
 		int stackSize = keepStackSize();
@@ -11313,51 +10840,6 @@ rule__VSVRAbbreviation__DescriptionAssignment_4
 		{ before(grammarAccess.getVSVRAbbreviationAccess().getDescriptionDRunParserRuleCall_4_0()); }
 		ruleDRun
 		{ after(grammarAccess.getVSVRAbbreviationAccess().getDescriptionDRunParserRuleCall_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__BodyAssignment_2
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyDBodyParserRuleCall_2_0()); }
-		ruleDBody
-		{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getBodyDBodyParserRuleCall_2_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__TraceabilityAssignment_4
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityVSVRFixedSectionParserRuleCall_4_0()); }
-		ruleVSVRFixedSection
-		{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getTraceabilityVSVRFixedSectionParserRuleCall_4_0()); }
-	)
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
-rule__VSVRSWValProcessVerification__FeasibilityAssignment_7
-	@init {
-		int stackSize = keepStackSize();
-	}
-:
-	(
-		{ before(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityVSVRFixedSectionParserRuleCall_7_0()); }
-		ruleVSVRFixedSection
-		{ after(grammarAccess.getVSVRSWValProcessVerificationAccess().getFeasibilityVSVRFixedSectionParserRuleCall_7_0()); }
 	)
 ;
 finally {

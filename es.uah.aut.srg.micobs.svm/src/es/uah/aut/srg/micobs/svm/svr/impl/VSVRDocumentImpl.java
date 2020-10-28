@@ -25,7 +25,6 @@ import es.uah.aut.srg.micobs.svm.svr.VSVRApplicableDocuments;
 import es.uah.aut.srg.micobs.svm.svr.VSVRDocument;
 import es.uah.aut.srg.micobs.svm.svr.VSVRIntroduction;
 import es.uah.aut.srg.micobs.svm.svr.VSVRReferenceDocuments;
-import es.uah.aut.srg.micobs.svm.svr.VSVRSWValProcessVerification;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTBCsTBDs;
 import es.uah.aut.srg.micobs.svm.svr.VSVRTermsDefinitionsAbbreviations;
 import es.uah.aut.srg.micobs.svm.svr.svrPackage;
@@ -64,7 +63,6 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRDocumentImpl#getApplicableDocumentsSection <em>Applicable Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRDocumentImpl#getReferenceDocumentsSection <em>Reference Documents Section</em>}</li>
  *   <li>{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRDocumentImpl#getTermsDefinitionsAbbreviationsSection <em>Terms Definitions Abbreviations Section</em>}</li>
- *   <li>{@link es.uah.aut.srg.micobs.svm.svr.impl.VSVRDocumentImpl#getSwValProcessVerificationSection <em>Sw Val Process Verification Section</em>}</li>
  * </ul>
  *
  * @generated
@@ -139,16 +137,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 	 * @ordered
 	 */
 	protected VSVRTermsDefinitionsAbbreviations termsDefinitionsAbbreviationsSection;
-
-	/**
-	 * The cached value of the '{@link #getSwValProcessVerificationSection() <em>Sw Val Process Verification Section</em>}' containment reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getSwValProcessVerificationSection()
-	 * @generated
-	 * @ordered
-	 */
-	protected VSVRSWValProcessVerification swValProcessVerificationSection;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -439,49 +427,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public VSVRSWValProcessVerification getSwValProcessVerificationSection() {
-		return swValProcessVerificationSection;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public NotificationChain basicSetSwValProcessVerificationSection(VSVRSWValProcessVerification newSwValProcessVerificationSection, NotificationChain msgs) {
-		VSVRSWValProcessVerification oldSwValProcessVerificationSection = swValProcessVerificationSection;
-		swValProcessVerificationSection = newSwValProcessVerificationSection;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION, oldSwValProcessVerificationSection, newSwValProcessVerificationSection);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setSwValProcessVerificationSection(VSVRSWValProcessVerification newSwValProcessVerificationSection) {
-		if (newSwValProcessVerificationSection != swValProcessVerificationSection) {
-			NotificationChain msgs = null;
-			if (swValProcessVerificationSection != null)
-				msgs = ((InternalEObject)swValProcessVerificationSection).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION, null, msgs);
-			if (newSwValProcessVerificationSection != null)
-				msgs = ((InternalEObject)newSwValProcessVerificationSection).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION, null, msgs);
-			msgs = basicSetSwValProcessVerificationSection(newSwValProcessVerificationSection, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION, newSwValProcessVerificationSection, newSwValProcessVerificationSection));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -495,8 +440,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 				return basicSetReferenceDocumentsSection(null, msgs);
 			case svrPackage.VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return basicSetTermsDefinitionsAbbreviationsSection(null, msgs);
-			case svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION:
-				return basicSetSwValProcessVerificationSection(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -524,8 +467,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 				return getReferenceDocumentsSection();
 			case svrPackage.VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return getTermsDefinitionsAbbreviationsSection();
-			case svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION:
-				return getSwValProcessVerificationSection();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -561,9 +502,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 			case svrPackage.VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				setTermsDefinitionsAbbreviationsSection((VSVRTermsDefinitionsAbbreviations)newValue);
 				return;
-			case svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION:
-				setSwValProcessVerificationSection((VSVRSWValProcessVerification)newValue);
-				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -597,9 +535,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 			case svrPackage.VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				setTermsDefinitionsAbbreviationsSection((VSVRTermsDefinitionsAbbreviations)null);
 				return;
-			case svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION:
-				setSwValProcessVerificationSection((VSVRSWValProcessVerification)null);
-				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -626,8 +561,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 				return referenceDocumentsSection != null;
 			case svrPackage.VSVR_DOCUMENT__TERMS_DEFINITIONS_ABBREVIATIONS_SECTION:
 				return termsDefinitionsAbbreviationsSection != null;
-			case svrPackage.VSVR_DOCUMENT__SW_VAL_PROCESS_VERIFICATION_SECTION:
-				return swValProcessVerificationSection != null;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -680,7 +613,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 	public EList<DReferenceableObject> getReferenceableObjects(String ReferenceableObjectType) {
 		EList<DReferenceableObject> objects = new BasicEList<DReferenceableObject>();
 		objects.addAll(getIntroductionSection().getReferenceableObjects(ReferenceableObjectType));
-		objects.addAll(getSwValProcessVerificationSection().getReferenceableObjects(ReferenceableObjectType));
 		return objects;
 	}
 	
@@ -725,7 +657,6 @@ public class VSVRDocumentImpl extends DDocumentTemplateImpl implements VSVRDocum
 		sections.add((DAbstractSection) getApplicableDocumentsSection());
 		sections.add((DAbstractSection) getReferenceDocumentsSection());
 		sections.add((DAbstractSection) getTermsDefinitionsAbbreviationsSection());
-		sections.add((DAbstractSection) getSwValProcessVerificationSection());
 		return sections;
 	}
 

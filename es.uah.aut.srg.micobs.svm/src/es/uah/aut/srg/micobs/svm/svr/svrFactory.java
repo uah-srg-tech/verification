@@ -129,15 +129,6 @@ public interface svrFactory extends EFactory {
 	VSVRInstantiableSection createVSVRInstantiableSection();
 
 	/**
-	 * Returns a new object of class '<em>VSVRSW Val Process Verification</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>VSVRSW Val Process Verification</em>'.
-	 * @generated
-	 */
-	VSVRSWValProcessVerification createVSVRSWValProcessVerification();
-
-	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

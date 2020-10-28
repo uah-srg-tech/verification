@@ -172,15 +172,6 @@ public class svrSwitch<T> extends Switch<T> {
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case svrPackage.VSVRSW_VAL_PROCESS_VERIFICATION: {
-				VSVRSWValProcessVerification vsvrswValProcessVerification = (VSVRSWValProcessVerification)theEObject;
-				T result = caseVSVRSWValProcessVerification(vsvrswValProcessVerification);
-				if (result == null) result = caseVSVRFixedSection(vsvrswValProcessVerification);
-				if (result == null) result = caseDFixedSection(vsvrswValProcessVerification);
-				if (result == null) result = caseDAbstractSection(vsvrswValProcessVerification);
-				if (result == null) result = defaultCase(theEObject);
-				return result;
-			}
 			default: return defaultCase(theEObject);
 		}
 	}
@@ -362,21 +353,6 @@ public class svrSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseVSVRInstantiableSection(VSVRInstantiableSection object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>VSVRSW Val Process Verification</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>VSVRSW Val Process Verification</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseVSVRSWValProcessVerification(VSVRSWValProcessVerification object) {
 		return null;
 	}
 
